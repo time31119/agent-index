@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" role="img" aria-label="沙漠玫瑰封面">
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8b58a"/>
+      <stop offset=".55" stop-color="#bd9068"/>
+      <stop offset="1" stop-color="#956b4b"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#f4c9a1"/>
+      <stop offset=".6" stop-color="#d8856e"/>
+      <stop offset="1" stop-color="#8f3f42"/>
+    </radialGradient>
+    <filter id="grain4">
+      <feTurbulence type="fractalNoise" baseFrequency=".68" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+    </filter>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#2d1917" fill-opacity=".28"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="420" fill="url(#sand)"/>
+  <rect width="320" height="420" fill="url(#dots)" opacity=".45"/>
+  <path d="M56 350V158a104 104 0 0 1 208 0v192" fill="#2b1918" fill-opacity=".9"/>
+  <path d="M74 350V162a86 86 0 0 1 172 0v188" fill="#b98265"/>
+  <path d="M74 350V162a86 86 0 0 1 172 0v188" fill="none" stroke="#e8c6a9" stroke-opacity=".3"/>
+  <circle cx="160" cy="226" r="55" fill="url(#sun)"/>
+  <circle cx="160" cy="226" r="72" fill="none" stroke="#2b1918" stroke-opacity=".4"/>
+  <path d="M88 292c38-27 70-24 98-8s46 9 46 9" fill="none" stroke="#2b1918" stroke-opacity=".26"/>
+  <path d="M0 366c59-26 103 8 157-8s107-7 163 12v50H0Z" fill="#7e4d3b" fill-opacity=".5"/>
+  <g stroke="#f0d7bc" stroke-opacity=".38" stroke-width=".7">
+    <path d="M0 54h320M0 64h320M0 74h320"/>
+  </g>
+  <rect x="22" y="20" width="276" height="380" fill="none" stroke="#2b1918" stroke-opacity=".33"/>
+  <rect width="320" height="420" filter="url(#grain4)" opacity=".45"/>
+</svg>
