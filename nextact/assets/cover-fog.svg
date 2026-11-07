@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" role="img" aria-label="雾港来信封面">
+  <defs>
+    <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#203039"/>
+      <stop offset=".52" stop-color="#354a50"/>
+      <stop offset="1" stop-color="#101a1f"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f2dfb6" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#f2dfb6" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#f2dfb6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="grain6">
+      <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="320" height="420" fill="url(#fog)"/>
+  <g filter="url(#blur)" fill="#bac8c7">
+    <ellipse cx="86" cy="244" rx="134" ry="26" fill-opacity=".18"/>
+    <ellipse cx="248" cy="302" rx="154" ry="22" fill-opacity=".16"/>
+    <ellipse cx="120" cy="338" rx="190" ry="30" fill-opacity=".12"/>
+    <ellipse cx="260" cy="176" rx="118" ry="18" fill-opacity=".1"/>
+  </g>
+  <path d="M256 92L80 350h64L276 118Z" fill="url(#beam)"/>
+  <path d="M256 92L80 350h64L276 118Z" fill="none" stroke="#f2dfb6" stroke-opacity=".13"/>
+  <circle cx="256" cy="92" r="3.6" fill="#f7e5bd"/>
+  <circle cx="256" cy="92" r="14" fill="none" stroke="#f7e5bd" stroke-opacity=".22"/>
+  <g stroke="#d8e0db" stroke-opacity=".28" stroke-width=".7">
+    <path d="M0 214h320M0 226h320M0 238h320M0 250h320M0 262h320"/>
+  </g>
+  <path d="M0 364h320v56H0Z" fill="#0a1317" fill-opacity=".65"/>
+  <path d="M0 364c52-8 88 8 142 1s118-11 178 0" fill="none" stroke="#aebfbd" stroke-opacity=".2"/>
+  <g fill="#dce5e1">
+    <circle cx="56" cy="74" r="1" fill-opacity=".5"/>
+    <circle cx="118" cy="108" r=".8" fill-opacity=".4"/>
+    <circle cx="286" cy="196" r="1" fill-opacity=".35"/>
+  </g>
+  <rect x="20" y="20" width="280" height="380" fill="none" stroke="#d8e2dd" stroke-opacity=".14"/>
+  <rect width="320" height="420" filter="url(#grain6)" opacity=".45"/>
+</svg>
