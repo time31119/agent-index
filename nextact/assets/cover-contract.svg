@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" role="img" aria-label="合约情人封面">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1116"/>
+      <stop offset=".6" stop-color="#24151b"/>
+      <stop offset="1" stop-color="#100b0e"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1c6cb"/>
+      <stop offset="1" stop-color="#c98e9a"/>
+    </linearGradient>
+    <filter id="grain5">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".18"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="320" height="420" fill="url(#ink)"/>
+  <path d="M0 0h108v420H0Z" fill="#2e1b22" fill-opacity=".55"/>
+  <g fill="none" stroke="url(#pink)">
+    <ellipse cx="160" cy="198" rx="94" ry="124" stroke-opacity=".62" stroke-width="1.2"/>
+    <ellipse cx="160" cy="198" rx="70" ry="124" stroke-opacity=".32" stroke-width=".8"/>
+    <ellipse cx="160" cy="198" rx="118" ry="124" stroke-opacity=".18" stroke-width=".7"/>
+  </g>
+  <circle cx="160" cy="198" r="27" fill="#d59aa5"/>
+  <circle cx="160" cy="198" r="27" fill="none" stroke="#f0d3d7" stroke-opacity=".55"/>
+  <path d="M160 32v64M160 300v88" stroke="#e4bac2" stroke-opacity=".3"/>
+  <path d="M48 370h224" stroke="#d6a7b0" stroke-opacity=".35"/>
+  <g fill="#e8c2c9">
+    <rect x="48" y="370" width="1.2" height="22"/>
+    <rect x="60" y="370" width="1.2" height="30"/>
+    <rect x="72" y="370" width="1.2" height="18"/>
+    <rect x="84" y="370" width="1.2" height="25"/>
+    <rect x="96" y="370" width="1.2" height="12"/>
+  </g>
+  <text x="48" y="56" fill="#e9cbd0" fill-opacity=".65" font-family="monospace" font-size="7" letter-spacing="3">TERMS APPLY</text>
+  <rect x="20" y="20" width="280" height="380" fill="none" stroke="#efcbd1" stroke-opacity=".16"/>
+  <rect width="320" height="420" filter="url(#grain5)" opacity=".42"/>
+</svg>
