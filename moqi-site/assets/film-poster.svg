@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img" aria-label="默契 MOQI 品牌故事片海报：有些话，说完就消失了。">
+  <rect width="1080" height="1920" fill="#F4EFE4"/>
+  <g opacity=".13" stroke="#171713" fill="none">
+    <path d="M70 0v1920M1010 0v1920M0 82h1080M0 1838h1080"/>
+  </g>
+  <g font-family="'IBM Plex Mono','Consolas',monospace" fill="#726D61">
+    <text x="76" y="74" font-size="15" letter-spacing="2">MOQI / THE MEMORY FILM</text>
+    <text x="1004" y="74" font-size="15" text-anchor="end" letter-spacing="2">48 SEC / 2026</text>
+  </g>
+  <g transform="translate(76 132)">
+    <rect width="46" height="46" rx="10" fill="#C8402C"/>
+    <path d="M17 12.5c-4 2.6-6 5.8-6 10.4s2 7.8 6 10.4" fill="none" stroke="#F4EFE4" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M29 12.5c4 2.6 6 5.8 6 10.4s-2 7.8-6 10.4" fill="none" stroke="#F4EFE4" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="23" cy="23" r="2.2" fill="#F4EFE4"/>
+  </g>
+  <text x="136" y="164" font-family="'Noto Serif SC','Songti SC',serif" font-size="30" font-weight="700" letter-spacing="2" fill="#171713">默契</text>
+  <text x="138" y="185" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="4.4" fill="#C8402C">MOQI</text>
+
+  <text x="76" y="400" font-family="'IBM Plex Mono',monospace" font-size="15" letter-spacing="3" fill="#C8402C">A FILM ABOUT “可以吗”</text>
+  <text x="76" y="530" font-family="'Noto Serif SC','Songti SC',serif" font-size="94" font-weight="600" letter-spacing="-4" fill="#171713">有些话，</text>
+  <text x="76" y="645" font-family="'Noto Serif SC','Songti SC',serif" font-size="94" font-weight="600" letter-spacing="-4" fill="#171713">说完就消失了。</text>
+
+  <text x="76" y="760" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="24" font-weight="300" fill="#726D61">但有些话，会在第二天决定一件事。</text>
+
+  <g transform="translate(322 900) rotate(-7)">
+    <rect x="0" y="0" width="436" height="275" rx="18" fill="#E7DECE" stroke="#C9BCA6"/>
+    <rect x="18" y="18" width="400" height="239" rx="12" fill="none" stroke="#B7AA93"/>
+    <rect x="40" y="76" width="226" height="144" rx="6" fill="#DDE1D5" stroke="#AEB6A8"/>
+    <circle cx="346" cy="140" r="48" fill="#C8402C"/>
+    <circle cx="346" cy="140" r="34" fill="none" stroke="#F4EFE4" stroke-opacity=".5"/>
+    <text x="326" y="147" font-family="'Noto Serif SC',serif" font-size="18" fill="#F4EFE4">共识</text>
+    <text x="54" y="100" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="1" fill="#3C443B">● WAITING / 1 OF 2</text>
+    <text x="54" y="138" font-family="'IBM Plex Mono',monospace" font-size="25" fill="#171713">00:00:00</text>
+    <path d="M54 190h9v18h-9zM70 181h9v27h-9zM86 186h9v22h-9zM102 174h9v34h-9zM118 184h9v24h-9zM134 178h9v30h-9zM150 188h9v20h-9z" fill="#4D5D4B"/>
+    <text x="54" y="232" font-family="'Noto Sans SC',sans-serif" font-size="11" fill="#4D4A42">先问一句：可以吗？</text>
+    <text x="40" y="253" font-family="'IBM Plex Mono',monospace" font-size="8" letter-spacing="1" fill="#726D61">85.6 × 54 × 3.2 MM / LOCAL VAULT</text>
+  </g>
+
+  <g transform="translate(76 1590)">
+    <line x1="0" y1="0" x2="928" y2="0" stroke="#171713" opacity=".25"/>
+    <text x="0" y="46" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="2" fill="#726D61">CONSENT BEFORE CAPTURE / LOCAL BY DEFAULT</text>
+    <text x="0" y="126" font-family="'Noto Serif SC','Songti SC',serif" font-size="56" font-weight="600" letter-spacing="-2" fill="#171713">记得住，也懂分寸。</text>
+    <text x="0" y="174" font-family="'IBM Plex Mono',monospace" font-size="12" letter-spacing="3" fill="#C8402C">FOUNDING 500 / MOQI.STUDIO</text>
+  </g>
+</svg>

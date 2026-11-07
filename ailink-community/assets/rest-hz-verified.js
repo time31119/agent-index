@@ -1,0 +1,72 @@
+/* 杭州 批量抽取评分 >=7 的记录 */
+window.BULK_VERIFIED = Object.assign(window.BULK_VERIFIED || {}, {
+  "新华三（H3C）": {
+    "name": "新华三（H3C）",
+    "city": "杭州",
+    "district": "杭州",
+    "website": "https://www.h3c.com/cn/",
+    "description": "新华三集团作为数字化及AI解决方案领导者，致力于成为客户业务创新、数字化转型值得信赖的合作伙伴。作为新紫光集团旗下的核心企业，新华三提供覆盖“算-网-存-云-安-维”全方位的数字化基础设施产品和解决方案，以及端到端的技术服务",
+    "sector": "",
+    "founded": 0,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "400-810-0504",
+    "email": "",
+    "address": "",
+    "confidence": 0.6,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：https://www.h3c.com/cn/"
+  },
+  "半云科技": {
+    "name": "半云科技",
+    "city": "杭州",
+    "district": "杭州",
+    "website": "https://www.saasruanjian.com/t_16703.html",
+    "description": "半云科技是一家大数据解决方案提供商，专业从事新型智慧城市等顶层设计行业解决方案及相关服务。核心产品包括ET城市数据大脑、大数据集成管控平台、大数据深度学习与开放平台和可视分析展现平台，可服务于交通综合服务管理、中小企业上云服务、气象系统服务等领域。",
+    "sector": "大数据解决方案",
+    "founded": 0,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "15673187032",
+    "email": "",
+    "address": "",
+    "confidence": 0.6,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：https://www.saasruanjian.com/t_16703.html"
+  },
+  "讯酷科技": {
+    "name": "讯酷科技",
+    "city": "杭州",
+    "district": "杭州",
+    "website": "http://xunkuyun.com/",
+    "description": "基于“低代码 + 精准AI”大模型，提供制造业可持续发展系统解决方案。",
+    "sector": "制造业数字化服务",
+    "founded": 0,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "",
+    "email": "",
+    "address": "",
+    "confidence": 0.7,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：http://xunkuyun.com/"
+  },
+  "南方中金": {
+    "name": "南方中金",
+    "city": "杭州",
+    "district": "余杭区",
+    "website": "http://www.nanfangzj.com/",
+    "description": "公司是一家专业从事水泵、给水设备、水处理设备研发、生产、销售的企业。",
+    "sector": "",
+    "founded": 0,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "400-6565892",
+    "email": "",
+    "address": "浙江省平湖市当湖街道兴平路23106号",
+    "confidence": 0.6,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：http://www.nanfangzj.com/"
+  }
+});
+window.PILOT_VERIFIED = Object.assign(window.PILOT_VERIFIED || {}, window.BULK_VERIFIED);

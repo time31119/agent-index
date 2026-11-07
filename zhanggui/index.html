@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>掌柜 ZHANGGUI — 你打烊，它开张</title>
+  <meta name="description" content="掌柜是一套面向中文生意场景的 AI 经营系统：从选品、门面、内容、投流到客服复购，7 位 Agent 轮班执行，你只在花钱与对外发布前点头。">
+  <meta name="theme-color" content="#08090d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="掌柜 ZHANGGUI — 你打烊，它开张">
+  <meta property="og:description" content="把一间店，交给一个不睡觉的掌柜。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/base.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="掌柜 首页">
+        <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3.5 10.2 12 3.6l8.5 6.6"/>
+          <path d="M5.7 10.4V20h12.6v-9.6"/>
+          <path d="M10 20v-4.5h4V20"/>
+        </svg>
+        <span class="brand-word">掌柜</span>
+        <span class="brand-sub">AI 经营合伙人</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="主导航">
+        <a href="#night">夜班</a>
+        <a href="agents.html">Agent 团队</a>
+        <a href="#model">怎么收费</a>
+        <a href="#trust">合规</a>
+        <a href="pricing.html">定价</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-login" href="console.html">登录</a>
+        <a class="btn btn--primary btn--sm" href="console.html">
+          <span>免费开一间</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">夜间经营系统 <em>/ 7×24</em></p>
+          <h1 class="hero-title">你打烊，<br><em>它开张</em>。</h1>
+          <p class="hero-sub">
+            掌柜是一套面向中文生意场景的 AI 经营系统。给它一个想法，它还你一间能自己运转的店——
+            选品、门面、内容、投流、客服，七位 Agent 轮班干活。你只在两件事上点头：<strong>花大钱</strong>和<strong>对外说话</strong>。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="console.html">
+              免费开一间 <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn--ghost" href="#night">看它夜里在干什么</a>
+          </div>
+          <div class="hero-meta">
+            <span>已托管 <b>1,284</b> 间店</span>
+            <span>昨夜完成 <b>37,460</b> 次经营动作</span>
+            <span>首个正 ROI 计划平均 <b>14</b> 天</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="nightcard">
+            <div class="nc-head">
+              <span class="t"><i class="live-dot" aria-hidden="true"></i> 夜班日志</span>
+              <span class="d">11.02 / 03:12 运行中</span>
+            </div>
+            <div class="nc-body">
+              <div class="night-row">
+                <span class="night-time">23:41</span>
+                <span class="night-text"><b>察</b> 抓到竞品调价，<span class="ok">3 个 SKU</span> 出现 8% 让利空间</span>
+              </div>
+              <div class="night-row">
+                <span class="night-time">00:26</span>
+                <span class="night-text"><b>言</b> 生成 12 条短视频脚本，等发布闸放行</span>
+              </div>
+              <div class="night-row">
+                <span class="night-time">01:08</span>
+                <span class="night-text"><b>引</b> 新建 4 条投放计划，日预算 ¥600，预估 ROI 2.4</span>
+              </div>
+              <div class="night-row">
+                <span class="night-time">02:35</span>
+                <span class="night-text"><b>应</b> 回完 87 条咨询，转人工 3 条（涉及退款）</span>
+              </div>
+              <div class="night-row">
+                <span class="night-time">06:00</span>
+                <span class="night-text"><b>账</b> 晨报已生成，两处异常待你确认</span>
+              </div>
+            </div>
+            <div class="nc-foot">
+              <div>
+                <div class="lbl">昨夜净利（演示数据）</div>
+                <div class="val">¥4,180</div>
+              </div>
+              <span class="chip chip--jade">较前日 +12.4%</span>
+            </div>
+          </div>
+          <div class="stamp stamp--float" aria-hidden="true">已<br>核</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 平台 ============ -->
+    <div class="wrap">
+      <div class="platforms">
+        <span class="cap">已接渠道</span>
+        <span>抖音 / 抖店</span>
+        <span>小红书</span>
+        <span>微信小店</span>
+        <span>视频号</span>
+        <span>巨量引擎</span>
+        <span>腾讯广告</span>
+        <span>淘宝</span>
+        <span>美团</span>
+        <span class="cap" style="margin-left:auto">+ 企业微信私域</span>
+      </div>
+    </div>
+
+    <!-- ============ 夜班 ============ -->
+    <section class="section" id="night">
+      <div class="wrap">
+        <div class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow">01 — 夜班 <em>/ 23:00 — 07:00</em></p>
+            <h2 class="h2">你睡着的那八小时，<br>是一间店最值钱的八小时。</h2>
+          </div>
+          <p class="lede">
+            大多数人做不成生意，不是因为不努力，而是因为一天只有 24 小时。
+            掌柜把重复的判断、琐碎的执行、临时的应对，全部挪到夜里——
+            第二天你打开手机，看到的不是待办清单，是一份已经跑完的账。
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">23:41</div>
+            <div class="tl-rail"><i class="tl-dot"></i></div>
+            <div class="tl-body">
+              <h4>比价与调价<span class="tl-agent">察 · 市场侦察</span></h4>
+              <p>扫完 42 个竞品链接，发现对手在晚间下调了主推款价格。掌柜不建议跟降，而是把 <b>赠品组合</b>调成"买二送一"，保住毛利。</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">00:26</div>
+            <div class="tl-rail"><i class="tl-dot"></i></div>
+            <div class="tl-body">
+              <h4>内容备料<span class="tl-agent">言 · 内容掌柜</span></h4>
+              <p>按白天跑出的爆款结构，写了 12 条口播脚本、6 组图文，全部过一遍违禁词与 AI 生成标识，<b>进入发布闸等一个人点头</b>——通常是你早上刷牙的三分钟。</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">01:08</div>
+            <div class="tl-rail"><i class="tl-dot"></i></div>
+            <div class="tl-body">
+              <h4>小额试投<span class="tl-agent">引 · 投流掌柜</span></h4>
+              <p>凌晨流量便宜，先用 <b>日预算 ¥600</b> 开 4 条小计划测素材。任何一条跑过 2.5 的 ROI 才允许自动加预算，且每次加幅不超过 30%。</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">02:35</div>
+            <div class="tl-rail"><i class="tl-dot tl-dot--jade"></i></div>
+            <div class="tl-body">
+              <h4>把客诉挡在夜里<span class="tl-agent">应 · 跑堂掌柜</span></h4>
+              <p>回完 87 条咨询，其中 3 条涉及退款与发票，主动转人工并附上订单上下文。夜里的差评，比早上的十条广告更贵。</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">06:00</div>
+            <div class="tl-rail"><i class="tl-dot"></i></div>
+            <div class="tl-body">
+              <h4>交账<span class="tl-agent">账 · 账房</span></h4>
+              <p>一份晨报：昨天卖了多少、钱花在哪、哪条计划该停、哪句话术在转化。<b>只写结论和下一步，不写过程。</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Agent 团队 ============ -->
+    <section class="section section--line" id="agents">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">02 — 班底 <em>/ 六位掌柜</em></p>
+          <h2 class="h2">不是六个工具，<br>是一间店里的六个岗位。</h2>
+          <p class="lede">
+            每个 Agent 都对应真实生意里的一个角色，有自己的目标、权限和交接单。
+            它们共享同一份店铺记忆：你卖什么、谁来买、说过什么话、亏过哪笔钱。
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="glyph" aria-hidden="true">察</div>
+            <h3>市场侦察 <small>RECON</small></h3>
+            <p>盯竞品、盯价格、盯平台热词与评论区。只回答三个问题：还有没有空位、对手的软肋在哪、这周该押哪个卖点。</p>
+            <div class="card-tags">
+              <span class="tag">竞品抓取</span>
+              <span class="tag">评论挖掘</span>
+              <span class="tag">需求验证</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="glyph" aria-hidden="true">选</div>
+            <h3>货品掌柜 <small>MERCH</small></h3>
+            <p>选品、定价、组货盘、算毛利。会主动劝你砍掉那 70% 卖不动的 SKU——这件事，供应商不会告诉你。</p>
+            <div class="card-tags">
+              <span class="tag">选品评分</span>
+              <span class="tag">价格带</span>
+              <span class="tag">毛利模型</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="glyph" aria-hidden="true">筑</div>
+            <h3>门面掌柜 <small>STORE</small></h3>
+            <p>落地页、详情页、小程序、公众号菜单。手机端三秒能看懂你卖什么，才算过关；加载超过 2 秒自己重做。</p>
+            <div class="card-tags">
+              <span class="tag">落地页</span>
+              <span class="tag">详情页</span>
+              <span class="tag">小程序</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="glyph" aria-hidden="true">言</div>
+            <h3>内容掌柜 <small>VOICE</small></h3>
+            <p>短视频脚本、图文笔记、直播话术、私域朋友圈。同一条卖点，会写三个版本去测，而不是写一版自我感动。</p>
+            <div class="card-tags">
+              <span class="tag">短视频</span>
+              <span class="tag">图文</span>
+              <span class="tag">直播话术</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="glyph" aria-hidden="true">引</div>
+            <h3>投流掌柜 <small>MEDIA</small></h3>
+            <p>建计划、换素材、控出价、砍无效消耗。规则写死：单条计划日耗上限、ROI 熔断线、加预算幅度，全部可查。</p>
+            <div class="card-tags">
+              <span class="tag tag--gold">巨量引擎</span>
+              <span class="tag tag--gold">腾讯广告</span>
+              <span class="tag tag--gold">聚光</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="glyph" aria-hidden="true">应</div>
+            <h3>跑堂掌柜 <small>SERVICE</small></h3>
+            <p>客服、催付、售后、复购。知道什么时候该闭嘴，什么时候该转人。涉及退款、投诉、发票，一律交回给你。</p>
+            <div class="card-tags">
+              <span class="tag">IM 客服</span>
+              <span class="tag">私域</span>
+              <span class="tag">复购唤醒</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="card" style="margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;gap:22px">
+          <div class="glyph" aria-hidden="true" style="margin:0">账</div>
+          <div style="flex:1;min-width:260px">
+            <h3 style="margin-bottom:4px">账房 <small>LEDGER</small></h3>
+            <p>每天早上六点，把六个人的活汇总成一页账：收入、成本、投放、异常。它不汇报工作量，只汇报结果。</p>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="agents.html">看编排与权限 <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 三道闸门 ============ -->
+    <section class="section section--line" id="gates">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">03 — 分寸 <em>/ Human in the loop</em></p>
+          <h2 class="h2">全自动很性感，<br>但封号、罚款、差评，都是你在扛。</h2>
+          <p class="lede">
+            我们刻意没有做"一键开公司"。中文生意场的风控比硅谷严得多：一个违规词、一次资质缺失、一笔来源不明的钱，
+            代价都远高于省下的那点人力。所以掌柜设了三道闸——AI 可以自己跑，但不能自己越界。
+          </p>
+        </div>
+
+        <div class="gates">
+          <div class="gate" data-num="01">
+            <h3><span>预算闸</span> · 钱</h3>
+            <p>所有花钱的动作都在额度里发生。超出额度不是"失败"，是"排队等你"。</p>
+            <ul>
+              <li>单计划日耗上限，默认 ¥300</li>
+              <li>加预算单次不超过 30%</li>
+              <li>ROI 低于熔断线自动停投</li>
+              <li>超额动作推送到微信，一句话批复</li>
+            </ul>
+          </div>
+          <div class="gate" data-num="02">
+            <h3><span>发布闸</span> · 话</h3>
+            <p>任何对外内容——商品页、广告素材、私信话术——必须过审才能见人。</p>
+            <ul>
+              <li>广告法禁用词实时标注</li>
+              <li>AI 生成内容显式标识（依据现行标识办法）</li>
+              <li>价格、折扣、赠品表述一致性校验</li>
+              <li>素材版本留档，可回溯到生成时刻</li>
+            </ul>
+          </div>
+          <div class="gate" data-num="03">
+            <h3><span>合规闸</span> · 证</h3>
+            <p>类目资质、平台规则、资金路径，在开店第一天就对齐，而不是等出事。</p>
+            <ul>
+              <li>食品、美妆、医疗等类目资质预检</li>
+              <li>不做资金池，投流账单直连媒体账户</li>
+              <li>分成通过持牌机构分账，明细可查</li>
+              <li>数据境内存储，最小必要采集</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:44px">
+          <div class="compare">
+            <div class="compare-row compare-head">
+              <div>维度</div>
+              <div>常见"全自动 AI 开公司"</div>
+              <div>掌柜</div>
+            </div>
+            <div class="compare-row">
+              <div>谁做决定</div>
+              <div>AI 全权，人只负责收结果</div>
+              <div>人定边界，AI 在边界内自主</div>
+            </div>
+            <div class="compare-row">
+              <div>花钱之前</div>
+              <div>自动扣费、自动加预算</div>
+              <div>额度内自动，超额等你一句话</div>
+            </div>
+            <div class="compare-row">
+              <div>对外说话</div>
+              <div>自动发布内容与广告</div>
+              <div>先过发布闸与合规闸，再上线</div>
+            </div>
+            <div class="compare-row">
+              <div>出问题</div>
+              <div>封号、罚款由店主承担</div>
+              <div>平台承担投放资质、审核与事故响应</div>
+            </div>
+            <div class="compare-row">
+              <div>怎么收费</div>
+              <div>订阅 + 高比例抽成</div>
+              <div>订阅 + 透明服务费 + 只对增量成交分成</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 商业模式 ============ -->
+    <section class="section section--line" id="model">
+      <div class="wrap">
+        <div class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow">04 — 账 <em>/ Business model</em></p>
+            <h2 class="h2">我们不靠"卖梦想"赚钱，<br>靠真的帮你卖出货。</h2>
+          </div>
+          <p class="lede">
+            三笔收入，全部与"这间店有没有跑起来"绑定。订阅只覆盖算力与基础服务，
+            剩下两块，要等你先赚到钱，我们才赚得到钱。
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="card-tags" style="margin:0 0 16px"><span class="tag tag--gold">01 / 订阅</span></div>
+            <h3>租一支团队 <small>¥299 起</small></h3>
+            <p>按月付，包含六位 Agent 的日常执行、店铺记忆、晨报与合规检查。年付相当于打八折。</p>
+            <div class="card-tags"><span class="tag">毛利覆盖算力</span><span class="tag">可随时停</span></div>
+          </article>
+          <article class="card">
+            <div class="card-tags" style="margin:0 0 16px"><span class="tag tag--gold">02 / 投放服务费</span></div>
+            <h3>按消耗收 8% <small>行业常见 10–15%</small></h3>
+            <p>代投、素材、优化、报表。账单直连媒体账户，我们不经手你的广告费，也不吃返点差价。</p>
+            <div class="card-tags"><span class="tag">不赚差价</span><span class="tag">明细可对账</span></div>
+          </article>
+          <article class="card">
+            <div class="card-tags" style="margin:0 0 16px"><span class="tag tag--gold">03 / 增量分成</span></div>
+            <h3>只分新客 <small>3% / 首单</small></h3>
+            <p>只对"由掌柜带来"的新客首单抽 3%，复购不抽、老客不抽、单店月封顶 ¥3,000。</p>
+            <div class="card-tags"><span class="tag">归因可查</span><span class="tag">有封顶</span></div>
+          </article>
+        </div>
+
+        <div class="calc" style="margin-top:22px">
+          <div class="calc-controls" style="gap:18px">
+            <p class="eyebrow" style="margin:0">一个典型客户的一笔账</p>
+            <p style="font-size:13.5px;color:var(--dim);line-height:1.9">
+              位于杭州的一家女装小店，月投放 ¥50,000，其中掌柜带来的成交额 ¥120,000（新客首单口径）。
+              这间店每月付给我们多少钱？
+            </p>
+            <a class="btn btn--ghost btn--sm" href="pricing.html" style="justify-self:start">用计算器自己算 <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="calc-out">
+            <div class="calc-line"><span>订阅（掌柜版）</span><span>¥299</span></div>
+            <div class="calc-line"><span>投放服务费 8% × ¥50,000</span><span>¥4,000</span></div>
+            <div class="calc-line"><span>增量分成 3% × ¥120,000（封顶）</span><span>¥3,000</span></div>
+            <div class="calc-line calc-line--total"><span>平台月收入</span><span>¥7,299</span></div>
+            <p class="calc-note">对应成本约 ¥2,300（模型与算力、人工复核与合规），毛利率约 69%。<br>演示口径，实际以合同为准。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 场景 ============ -->
+    <section class="section section--line" id="scenes">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">05 — 从哪开始 <em>/ 先做窄</em></p>
+          <h2 class="h2">不服务"所有想创业的人"，<br>只服务四种已经在做生意的人。</h2>
+          <p class="lede">
+            通用型"AI 开公司"听上去更大，但落地时无一例外会变成内容农场。
+            我们把第一个版本压到四个具体场景，因为只有具体场景才有可验证的 ROI。
+          </p>
+        </div>
+
+        <div class="grid grid--4">
+          <div class="scene">
+            <span class="scene-tag">SCENE 01</span>
+            <h3>本地生活</h3>
+            <p>餐饮、美业、教培门店。做团购页、探店脚本、周边三公里投放与到店核销。</p>
+            <div class="metric">单店月增量 <b>+38</b> 单</div>
+          </div>
+          <div class="scene">
+            <span class="scene-tag">SCENE 02</span>
+            <h3>产业带白牌</h3>
+            <p>有货没品牌。做卖点提炼、详情页、素材矩阵与千川小步快跑测款。</p>
+            <div class="metric">测款周期 <b>7</b> 天</div>
+          </div>
+          <div class="scene">
+            <span class="scene-tag">SCENE 03</span>
+            <h3>跨境小包</h3>
+            <p>独立站 + TikTok Shop。多语种素材、本地化定价、退货话术与合规披露。</p>
+            <div class="metric">素材产出 <b>×6</b></div>
+          </div>
+          <div class="scene">
+            <span class="scene-tag">SCENE 04</span>
+            <h3>专业服务</h3>
+            <p>咨询、设计、法律、财税。做案例页、内容获客、预约转化与私域跟进。</p>
+            <div class="metric">线索成本 <b>-31%</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 合规 ============ -->
+    <section class="section section--line" id="trust">
+      <div class="wrap">
+        <div class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow">06 — 合规 <em>/ 在中国做生意的前提</em></p>
+            <h2 class="h2">把合规做进流程，<br>而不是做成一份免责声明。</h2>
+          </div>
+          <p class="lede">
+            这是中文版与海外同类产品最大的分水岭：那边最大的风险是"产品不好用"，
+            这边最大的风险是"用着用着号没了"。以下六件事，是产品设计的一部分。
+          </p>
+        </div>
+
+        <div class="checks">
+          <div class="check">
+            <span class="ico" aria-hidden="true">✓</span>
+            <div>
+              <h4>生成式 AI 服务合规</h4>
+              <p>面向公众提供服务前完成算法与生成式 AI 相关备案；内容安全策略按现行规定配置并留痕。</p>
+            </div>
+          </div>
+          <div class="check">
+            <span class="ico" aria-hidden="true">✓</span>
+            <div>
+              <h4>AI 生成内容标识</h4>
+              <p>按现行《人工智能生成合成内容标识办法》做显式标识（画面/文本提示）与隐式标识（元数据），导出与分发环节均保留。</p>
+            </div>
+          </div>
+          <div class="check">
+            <span class="ico" aria-hidden="true">✓</span>
+            <div>
+              <h4>广告与类目资质</h4>
+              <p>违禁词库按《广告法》维护；医疗、金融、教育、保健食品等类目先验资质再接单，无法提供则不出方案。</p>
+            </div>
+          </div>
+          <div class="check">
+            <span class="ico" aria-hidden="true">✓</span>
+            <div>
+              <h4>资金不落池</h4>
+              <p>广告费由客户直付媒体账户，平台不设资金池；分成与订阅款经持牌支付机构分账，T+1 可对账。</p>
+            </div>
+          </div>
+          <div class="check">
+            <span class="ico" aria-hidden="true">✓</span>
+            <div>
+              <h4>个人信息保护</h4>
+              <p>客户与消费者数据境内存储，最小必要采集；客服 Agent 不落盘敏感字段，导出需二次确认。</p>
+            </div>
+          </div>
+          <div class="check">
+            <span class="ico" aria-hidden="true">✓</span>
+            <div>
+              <h4>发票与税务</h4>
+              <p>订阅开票自动化；与灵活用工/集群注册服务商合作，解决个人店主的开票与合规用工问题。</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:22px;font-size:11.5px;color:var(--faint);line-height:1.9;max-width:72ch">
+          以上为产品设计说明，不构成法律意见。具体资质与义务需按经营主体、类目与所在地法规逐一确认。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--line" id="faq">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">07 — 你可能想问</p>
+          <h2 class="h2">丑话说在前面。</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary>这和"AI 一键开公司"有什么区别？<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">
+              <p>他们卖的是"你不用管了"，我们卖的是"你不用亲手干"。区别在执行权和责任：掌柜不会替你签字、不会替你花钱超限、不会替你对监管说话。所有对外动作都有一个人点过头的记录。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>会不会自动把我的钱花掉？<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">
+              <p>广告费永远从你自己的媒体账户扣，掌柜只拿到"操作权限"，拿不到"支付权限"。额度内它可以自主加减预算，超出额度就排队等你批复，不批就一直不动。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>店铺账号和数据安全吗？<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">
+              <p>平台通过官方开放接口授权，不使用账号密码代登录；授权可随时一键回收。经营数据境内存储，训练用途默认关闭，需要你显式勾选才会用于改进模型。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>抽成会不会重复收？<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">
+              <p>订阅、服务费、分成是三笔不同口径的钱：订阅买的是"团队在场"，服务费买的是"投放操盘"，分成只在产生新客首单时收 3%，复购与老客不重复计费，单店每月封顶 ¥3,000。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>多久能跑起来？<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body">
+              <p>如果已有货源和店铺，门面与首批素材通常 24 小时内可上线；投放进入稳定期平均 14 天。什么都没有、只有一个想法的话，我们会先让你做 7 天的需求验证，再决定要不要开店——这一周不收费。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="band">
+          <div>
+            <h2>今晚，让掌柜替你值一次班。</h2>
+            <p>免费开一间，7 天需求验证不收费。跑不出数据，我们不劝你开店。</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn--primary" href="console.html">免费开一间 <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="btn btn--ghost" href="pricing.html">先看价格</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="index.html" aria-label="掌柜 首页">
+            <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3.5 10.2 12 3.6l8.5 6.6"/>
+              <path d="M5.7 10.4V20h12.6v-9.6"/>
+              <path d="M10 20v-4.5h4V20"/>
+            </svg>
+            <span class="brand-word">掌柜</span>
+          </a>
+          <p>你打烊，它开张。<br>面向中文生意场景的 AI 经营系统。</p>
+        </div>
+        <div class="foot-col">
+          <h4>产品</h4>
+          <a href="console.html">工作台</a>
+          <a href="agents.html">Agent 团队</a>
+          <a href="pricing.html">定价与抽成</a>
+          <a href="#night">夜班机制</a>
+        </div>
+        <div class="foot-col">
+          <h4>资源</h4>
+          <a href="#trust">合规说明</a>
+          <a href="#faq">常见问题</a>
+          <a href="#scenes">适用场景</a>
+          <a href="README.md">设计说明</a>
+        </div>
+        <div class="foot-col">
+          <h4>公司</h4>
+          <span>关于我们</span>
+          <span>加入我们</span>
+          <span>联系合作</span>
+          <span>媒体资料</span>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 掌柜 ZHANGGUI · 概念设计作品</span>
+        <span class="legal">
+          <span>本页为演示站点，数据均为虚构</span>
+          <span>不构成投资或法律意见</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

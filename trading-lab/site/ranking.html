@@ -1,0 +1,823 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>收益率排名 · 28 个技术指标回测排行 · 技术分析研究实验室</title><meta name="description" content="28个技术指标在沪深300、上证指数、标普500、纳斯达克100上的收益率排名，可按全样本超额、样本外超额、夏普比率、最大回撤切换排序。">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9b26a%22/><text x=%2216%22 y=%2222%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23151009%22 font-family=%22Arial%22 font-weight=%22bold%22>T</text></svg>">
+
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="logo" href="index.html"><span class="mark">T</span>技术分析研究实验室</a>
+  <div class="nav-links">
+    <a href="index.html" class="">首页</a>
+    <a href="books.html" class="">权威书单</a>
+    <a href="indicators.html" class="">指标测试</a>
+    <a href="ranking.html" class="on">收益率排名</a>
+    <a href="summary.html" class="">归纳总结</a>
+    <a href="method.html" class="">方法与数据</a>
+  </div>
+</div></nav>
+<header class="hero" style="padding-bottom:26px"><div class="wrap">
+  <div class="kicker">RETURN RANKING · 2005–2026</div>
+  <h1>用同一把尺子，<br>给 <span class="n">28</span> 个指标排名</h1>
+  <p class="lede">所有指标使用标准参数（不做样本外优化）、同一交易成本（单边 5bp）、同一执行规则（T 日收盘决策、T+1 开盘成交）、四个市场同步检验。默认按“跨市场全样本年化超额收益”排序，可一键切换样本外、夏普与回撤口径。</p>
+</div></header>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="grid g4" style="margin-bottom:22px">
+    <div class="card"><div class="dim" style="font-size:12px">全样本跑赢基准</div><div style="font-size:30px;font-family:var(--mono);margin:6px 0"><b class="up">2</b><span class="dim" style="font-size:15px"> / 28</span></div>
+      <div class="dim" style="font-size:12px">跨市场年化超额中位数为正</div></div>
+    <div class="card"><div class="dim" style="font-size:12px">样本外跑赢基准</div><div style="font-size:30px;font-family:var(--mono);margin:6px 0"><b class="down">0</b><span class="dim" style="font-size:15px"> / 28</span></div>
+      <div class="dim" style="font-size:12px">2016 年起，检验过拟合的硬指标</div></div>
+    <div class="card"><div class="dim" style="font-size:12px">回撤最小</div><div style="font-size:30px;font-family:var(--mono);margin:6px 0">-8.5%</div>
+      <div class="dim" style="font-size:12px">量比 · 四市场回撤中位 -64.4%</div></div>
+    <div class="card"><div class="dim" style="font-size:12px">最佳全样本</div><div style="font-size:30px;font-family:var(--mono);margin:6px 0">+0.8%</div>
+      <div class="dim" style="font-size:12px">Aroon · 样本外 -1.5%</div></div>
+  </div>
+
+  <div class="cat-tabs" id="modes"><button data-mode="full" class="on">全样本超额收益</button><button data-mode="oos" class="">样本外超额收益</button><button data-mode="sharpe" class="">夏普比率</button><button data-mode="dd" class="">回撤控制</button></div>
+  <div class="note" id="mode-desc" style="margin-bottom:16px">跨市场全样本年化 − 同窗口买入持有（2005–2026）。切换排序会实时重排下表，并保留每个指标的完整统计。</div>
+
+  <div class="table-wrap"><table id="rank-table"><thead><tr>
+    <th class="l">#</th><th class="l">指标</th>
+    <th>全样本超额</th><th>样本外超额</th>
+    <th>沪深300年化</th><th>基准年化</th>
+    <th>最大回撤</th><th>基准回撤</th><th>夏普</th>
+    <th>市场一致性</th><th>参数稳定性</th><th>稳健分</th><th class="l">判定</th>
+  </tr></thead><tbody id="rank-body"><tr data-id="aroon"
+      data-full="0.0078" data-oos="-0.015" data-sharpe="0.606" data-dd="-0.2444">
+      <td class="l"><span class="rank-cell">1</span></td>
+      <td class="l name"><a href="ind-aroon.html" style="font-weight:600">Aroon</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">趋势与系统交易 · Aroon 阿隆指标</div></td>
+      <td class="up">+0.8%</td>
+      <td class="down">-1.5%</td>
+      <td class="up">13.7%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-24.4%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.61</td>
+      <td>50%</td>
+      <td>13%</td>
+      <td class="mono">-0.10</td>
+      <td class="l"><span class="eff" style="background:rgba(217,178,106,.14);color:#f0d49a">部分有效</span></td>
+    </tr><tr data-id="sma"
+      data-full="0.0061" data-oos="-0.0306" data-sharpe="0.557" data-dd="-0.3481">
+      <td class="l"><span class="rank-cell">2</span></td>
+      <td class="l name"><a href="ind-sma.html" style="font-weight:600">SMA 均线</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">趋势与系统交易 · SMA 简单移动平均</div></td>
+      <td class="up">+0.6%</td>
+      <td class="down">-3.1%</td>
+      <td class="up">12.1%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-34.8%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.56</td>
+      <td>50%</td>
+      <td>6%</td>
+      <td class="mono">-0.14</td>
+      <td class="l"><span class="eff" style="background:rgba(217,178,106,.14);color:#f0d49a">部分有效</span></td>
+    </tr><tr data-id="ichimoku"
+      data-full="-0.0043" data-oos="-0.0309" data-sharpe="0.546" data-dd="-0.2369">
+      <td class="l"><span class="rank-cell">3</span></td>
+      <td class="l name"><a href="ind-ichimoku.html" style="font-weight:600">一目均衡表</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">趋势与系统交易 · 一目均衡表</div></td>
+      <td class="down">-0.4%</td>
+      <td class="down">-3.1%</td>
+      <td class="up">10.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-23.7%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.55</td>
+      <td>0%</td>
+      <td>8%</td>
+      <td class="mono">-0.35</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="ema"
+      data-full="-0.006" data-oos="-0.0409" data-sharpe="0.466" data-dd="-0.3635">
+      <td class="l"><span class="rank-cell">4</span></td>
+      <td class="l name"><a href="ind-ema.html" style="font-weight:600">EMA 均线</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">趋势与系统交易 · EMA 指数移动平均</div></td>
+      <td class="down">-0.6%</td>
+      <td class="down">-4.1%</td>
+      <td class="up">9.8%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-36.4%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.47</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td class="mono">-0.39</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="donchian"
+      data-full="-0.0072" data-oos="-0.0234" data-sharpe="0.487" data-dd="-0.2609">
+      <td class="l"><span class="rank-cell">5</span></td>
+      <td class="l name"><a href="ind-donchian.html" style="font-weight:600">唐奇安通道</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">突破与趋势启动 · 唐奇安通道 / 海龟突破</div></td>
+      <td class="down">-0.7%</td>
+      <td class="down">-2.3%</td>
+      <td class="up">9.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-26.1%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.49</td>
+      <td>25%</td>
+      <td>13%</td>
+      <td class="mono">-0.23</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="supertrend"
+      data-full="-0.0076" data-oos="-0.0281" data-sharpe="0.457" data-dd="-0.319">
+      <td class="l"><span class="rank-cell">6</span></td>
+      <td class="l name"><a href="ind-supertrend.html" style="font-weight:600">Supertrend</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">趋势与系统交易 · Supertrend 超级趋势</div></td>
+      <td class="down">-0.8%</td>
+      <td class="down">-2.8%</td>
+      <td class="up">10.4%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-31.9%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.46</td>
+      <td>25%</td>
+      <td>0%</td>
+      <td class="mono">-0.26</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="roc"
+      data-full="-0.0088" data-oos="-0.029" data-sharpe="0.443" data-dd="-0.3772">
+      <td class="l"><span class="rank-cell">7</span></td>
+      <td class="l name"><a href="ind-roc.html" style="font-weight:600">ROC 动量</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">动量与相对强弱 · ROC 变动率 / 动量</div></td>
+      <td class="down">-0.9%</td>
+      <td class="down">-2.9%</td>
+      <td class="up">8.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-37.7%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.44</td>
+      <td>0%</td>
+      <td>13%</td>
+      <td class="mono">-0.34</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="voltarget"
+      data-full="-0.0088" data-oos="-0.0298" data-sharpe="0.513" data-dd="-0.2701">
+      <td class="l"><span class="rank-cell">8</span></td>
+      <td class="l name"><a href="ind-voltarget.html" style="font-weight:600">波动率择时</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">组合与自适应 · 波动率择时</div></td>
+      <td class="down">-0.9%</td>
+      <td class="down">-3.0%</td>
+      <td class="up">8.6%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-27.0%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.51</td>
+      <td>25%</td>
+      <td>19%</td>
+      <td class="mono">-0.23</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="cci"
+      data-full="-0.0106" data-oos="-0.0272" data-sharpe="0.488" data-dd="-0.3042">
+      <td class="l"><span class="rank-cell">9</span></td>
+      <td class="l name"><a href="ind-cci.html" style="font-weight:600">CCI</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">震荡与均值回归 · CCI 顺势指标</div></td>
+      <td class="down">-1.1%</td>
+      <td class="down">-2.7%</td>
+      <td class="up">10.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-30.4%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.49</td>
+      <td>0%</td>
+      <td>21%</td>
+      <td class="mono">-0.32</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="tsmom"
+      data-full="-0.0113" data-oos="-0.0304" data-sharpe="0.38" data-dd="-0.487">
+      <td class="l"><span class="rank-cell">10</span></td>
+      <td class="l name"><a href="ind-tsmom.html" style="font-weight:600">时序动量</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">动量与相对强弱 · 时序动量</div></td>
+      <td class="down">-1.1%</td>
+      <td class="down">-3.0%</td>
+      <td class="up">5.8%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-48.7%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.38</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td class="mono">-0.37</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="boll"
+      data-full="-0.0122" data-oos="-0.0436" data-sharpe="0.474" data-dd="-0.4276">
+      <td class="l"><span class="rank-cell">11</span></td>
+      <td class="l name"><a href="ind-boll.html" style="font-weight:600">布林带</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">波动率与通道 · 布林带</div></td>
+      <td class="down">-1.2%</td>
+      <td class="down">-4.4%</td>
+      <td class="up">9.8%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-42.8%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.47</td>
+      <td>0%</td>
+      <td>13%</td>
+      <td class="mono">-0.37</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="adx"
+      data-full="-0.0136" data-oos="-0.0504" data-sharpe="0.502" data-dd="-0.2063">
+      <td class="l"><span class="rank-cell">12</span></td>
+      <td class="l name"><a href="ind-adx.html" style="font-weight:600">ADX 趋向</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">趋势与系统交易 · ADX / DMI 趋向系统</div></td>
+      <td class="down">-1.4%</td>
+      <td class="down">-5.0%</td>
+      <td class="up">12.9%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-20.6%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.50</td>
+      <td>50%</td>
+      <td>42%</td>
+      <td class="mono">-0.13</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="pivot"
+      data-full="-0.0166" data-oos="-0.0535" data-sharpe="0.297" data-dd="-0.3814">
+      <td class="l"><span class="rank-cell">13</span></td>
+      <td class="l name"><a href="ind-pivot.html" style="font-weight:600">结构突破</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">结构与心理价位 · 摆动高低点</div></td>
+      <td class="down">-1.7%</td>
+      <td class="down">-5.3%</td>
+      <td class="up">11.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-38.1%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.30</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td class="mono">-0.42</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="keltner"
+      data-full="-0.0184" data-oos="-0.0442" data-sharpe="0.447" data-dd="-0.1735">
+      <td class="l"><span class="rank-cell">14</span></td>
+      <td class="l name"><a href="ind-keltner.html" style="font-weight:600">肯特纳通道</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">波动率与通道 · 肯特纳通道突破</div></td>
+      <td class="down">-1.8%</td>
+      <td class="down">-4.4%</td>
+      <td class="up">10.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-17.3%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.45</td>
+      <td>50%</td>
+      <td>46%</td>
+      <td class="mono">-0.11</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="high52"
+      data-full="-0.0191" data-oos="-0.0514" data-sharpe="0.372" data-dd="-0.26">
+      <td class="l"><span class="rank-cell">15</span></td>
+      <td class="l name"><a href="ind-high52.html" style="font-weight:600">52周新高</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">突破与趋势启动 · 52 周新高突破</div></td>
+      <td class="down">-1.9%</td>
+      <td class="down">-5.1%</td>
+      <td class="up">8.9%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-26.0%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.37</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td class="mono">-0.42</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="macd"
+      data-full="-0.02" data-oos="-0.0367" data-sharpe="0.337" data-dd="-0.3476">
+      <td class="l"><span class="rank-cell">16</span></td>
+      <td class="l name"><a href="ind-macd.html" style="font-weight:600">MACD</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">动量与相对强弱 · MACD 指数平滑异同移动平均</div></td>
+      <td class="down">-2.0%</td>
+      <td class="down">-3.7%</td>
+      <td class="up">8.0%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-34.8%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.34</td>
+      <td>0%</td>
+      <td>11%</td>
+      <td class="mono">-0.37</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="trendmom"
+      data-full="-0.0217" data-oos="-0.0556" data-sharpe="0.37" data-dd="-0.2221">
+      <td class="l"><span class="rank-cell">17</span></td>
+      <td class="l name"><a href="ind-trendmom.html" style="font-weight:600">趋势+动量</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">组合与自适应 · 双确认：趋势 + 动量</div></td>
+      <td class="down">-2.2%</td>
+      <td class="down">-5.6%</td>
+      <td class="up">10.7%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-22.2%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.37</td>
+      <td>25%</td>
+      <td>15%</td>
+      <td class="mono">-0.30</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="atr"
+      data-full="-0.0226" data-oos="-0.0475" data-sharpe="0.394" data-dd="-0.2024">
+      <td class="l"><span class="rank-cell">18</span></td>
+      <td class="l name"><a href="ind-atr.html" style="font-weight:600">ATR 波动过滤</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">波动率与通道 · ATR 波动率过滤趋势</div></td>
+      <td class="down">-2.3%</td>
+      <td class="down">-4.8%</td>
+      <td class="up">9.8%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-20.2%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.39</td>
+      <td>50%</td>
+      <td>29%</td>
+      <td class="mono">-0.15</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="obv"
+      data-full="-0.0278" data-oos="-0.052" data-sharpe="0.337" data-dd="-0.4652">
+      <td class="l"><span class="rank-cell">19</span></td>
+      <td class="l name"><a href="ind-obv.html" style="font-weight:600">OBV 能量潮</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">量价与订单流 · OBV 能量潮</div></td>
+      <td class="down">-2.8%</td>
+      <td class="down">-5.2%</td>
+      <td class="up">6.7%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-46.5%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.34</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td class="mono">-0.43</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="volratio"
+      data-full="-0.041" data-oos="-0.0365" data-sharpe="0.272" data-dd="-0.0851">
+      <td class="l"><span class="rank-cell">20</span></td>
+      <td class="l name"><a href="ind-volratio.html" style="font-weight:600">量比</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">量价与订单流 · 量比 + 价格趋势</div></td>
+      <td class="down">-4.1%</td>
+      <td class="down">-3.6%</td>
+      <td class="up">5.6%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-8.5%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.27</td>
+      <td>50%</td>
+      <td>29%</td>
+      <td class="mono">-0.15</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="psar"
+      data-full="-0.0422" data-oos="-0.0438" data-sharpe="0.236" data-dd="-0.4384">
+      <td class="l"><span class="rank-cell">21</span></td>
+      <td class="l name"><a href="ind-psar.html" style="font-weight:600">抛物线 SAR</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">趋势与系统交易 · 抛物线 SAR</div></td>
+      <td class="down">-4.2%</td>
+      <td class="down">-4.4%</td>
+      <td class="up">8.5%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-43.8%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.24</td>
+      <td>0%</td>
+      <td>6%</td>
+      <td class="mono">-0.41</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="stoch"
+      data-full="-0.0438" data-oos="-0.03" data-sharpe="0.213" data-dd="-0.4866">
+      <td class="l"><span class="rank-cell">22</span></td>
+      <td class="l name"><a href="ind-stoch.html" style="font-weight:600">KDJ 随机指标</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">震荡与均值回归 · KDJ / 随机指标</div></td>
+      <td class="down">-4.4%</td>
+      <td class="down">-3.0%</td>
+      <td class="up">1.7%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-48.7%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.21</td>
+      <td>50%</td>
+      <td>23%</td>
+      <td class="mono">-0.15</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="round"
+      data-full="-0.047" data-oos="-0.0738" data-sharpe="0.107" data-dd="-0.4495">
+      <td class="l"><span class="rank-cell">23</span></td>
+      <td class="l name"><a href="ind-round.html" style="font-weight:600">整数关口</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">结构与心理价位 · 整数关口 / 心理价位</div></td>
+      <td class="down">-4.7%</td>
+      <td class="down">-7.4%</td>
+      <td class="up">3.3%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-45.0%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.11</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td class="mono">-0.48</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="mfi"
+      data-full="-0.0523" data-oos="-0.0134" data-sharpe="0.158" data-dd="-0.4877">
+      <td class="l"><span class="rank-cell">24</span></td>
+      <td class="l name"><a href="ind-mfi.html" style="font-weight:600">MFI</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">量价与订单流 · MFI 资金流量指标</div></td>
+      <td class="down">-5.2%</td>
+      <td class="down">-1.3%</td>
+      <td class="up">0.1%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-48.8%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.16</td>
+      <td>50%</td>
+      <td>44%</td>
+      <td class="mono">-0.08</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="rsi"
+      data-full="-0.0524" data-oos="-0.0134" data-sharpe="0.164" data-dd="-0.5663">
+      <td class="l"><span class="rank-cell">25</span></td>
+      <td class="l name"><a href="ind-rsi.html" style="font-weight:600">RSI</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">震荡与均值回归 · RSI 相对强弱指标</div></td>
+      <td class="down">-5.2%</td>
+      <td class="down">-1.3%</td>
+      <td class="down">-0.1%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-56.6%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.16</td>
+      <td>50%</td>
+      <td>34%</td>
+      <td class="mono">-0.10</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="willr"
+      data-full="-0.0541" data-oos="-0.0392" data-sharpe="0.141" data-dd="-0.5535">
+      <td class="l"><span class="rank-cell">26</span></td>
+      <td class="l name"><a href="ind-willr.html" style="font-weight:600">Williams %R</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">震荡与均值回归 · Williams %R 威廉指标</div></td>
+      <td class="down">-5.4%</td>
+      <td class="down">-3.9%</td>
+      <td class="down">-2.4%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-55.4%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.14</td>
+      <td>25%</td>
+      <td>19%</td>
+      <td class="mono">-0.28</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="bollrev"
+      data-full="-0.0578" data-oos="-0.0265" data-sharpe="0.133" data-dd="-0.4884">
+      <td class="l"><span class="rank-cell">27</span></td>
+      <td class="l name"><a href="ind-bollrev.html" style="font-weight:600">布林带回归</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">波动率与通道 · 布林带均值回归</div></td>
+      <td class="down">-5.8%</td>
+      <td class="down">-2.6%</td>
+      <td class="down">-0.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-48.8%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.13</td>
+      <td>50%</td>
+      <td>50%</td>
+      <td class="mono">-0.10</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr><tr data-id="stochrsi"
+      data-full="-0.0672" data-oos="-0.0445" data-sharpe="0.077" data-dd="-0.5107">
+      <td class="l"><span class="rank-cell">28</span></td>
+      <td class="l name"><a href="ind-stochrsi.html" style="font-weight:600">StochRSI</a>
+        <div class="dim" style="font-size:11.5px;font-family:var(--font)">震荡与均值回归 · Stochastic RSI</div></td>
+      <td class="down">-6.7%</td>
+      <td class="down">-4.5%</td>
+      <td class="up">0.2%</td>
+      <td class="dim">7.0%</td>
+      <td class="down">-51.1%</td>
+      <td class="dim">-64.4%</td>
+      <td>0.08</td>
+      <td>0%</td>
+      <td>4%</td>
+      <td class="mono">-0.43</td>
+      <td class="l"><span class="eff" style="background:rgba(255,255,255,.06);color:#94a3b8">无效</span></td>
+    </tr></tbody></table></div>
+  <div class="dim" style="font-size:12.5px;margin-top:10px">“市场一致性”= 样本外跑赢买入持有的市场占比；“参数稳定性”= 参数网格中样本外仍跑赢的参数占比（跨市场中位）；“稳健分”综合超额、一致性、稳定性，范围 −1~1。</div>
+</div></section>
+
+<section style="padding-top:16px"><div class="wrap">
+  <div class="sec-head"><div><h2 style="font-size:24px">全样本超额收益一览</h2><p>横轴为“策略年化 − 买入持有年化”。柱子向右为跑赢，向左为跑输；中位数为 0 的虚线是分水岭。</p></div></div>
+  <div class="card"><div style="display:grid;gap:5px"><a href="ind-aroon.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">Aroon</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;left:50%;width:5.339285714285714%;background:rgba(240,86,74,.75);border-radius:3px"></span>
+      </span>
+      <span class="mono up" style="text-align:right">+0.8%</span>
+    </a><a href="ind-sma.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">SMA 均线</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;left:50%;width:4.175595238095239%;background:rgba(240,86,74,.75);border-radius:3px"></span>
+      </span>
+      <span class="mono up" style="text-align:right">+0.6%</span>
+    </a><a href="ind-ichimoku.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">一目均衡表</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:2.9434523809523814%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-0.4%</span>
+    </a><a href="ind-ema.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">EMA 均线</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:4.107142857142858%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-0.6%</span>
+    </a><a href="ind-donchian.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">唐奇安通道</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:4.928571428571429%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-0.7%</span>
+    </a><a href="ind-supertrend.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">Supertrend</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:5.2023809523809526%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-0.8%</span>
+    </a><a href="ind-roc.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">ROC 动量</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:6.023809523809524%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-0.9%</span>
+    </a><a href="ind-voltarget.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">波动率择时</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:6.023809523809524%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-0.9%</span>
+    </a><a href="ind-cci.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">CCI</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:7.255952380952382%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-1.1%</span>
+    </a><a href="ind-tsmom.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">时序动量</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:7.735119047619048%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-1.1%</span>
+    </a><a href="ind-boll.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">布林带</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:8.351190476190478%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-1.2%</span>
+    </a><a href="ind-adx.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">ADX 趋向</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:9.30952380952381%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-1.4%</span>
+    </a><a href="ind-pivot.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">结构突破</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:11.363095238095239%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-1.7%</span>
+    </a><a href="ind-keltner.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">肯特纳通道</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:12.595238095238097%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-1.8%</span>
+    </a><a href="ind-high52.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">52周新高</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:13.074404761904761%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-1.9%</span>
+    </a><a href="ind-macd.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">MACD</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:13.69047619047619%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-2.0%</span>
+    </a><a href="ind-trendmom.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">趋势+动量</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:14.854166666666668%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-2.2%</span>
+    </a><a href="ind-atr.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">ATR 波动过滤</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:15.470238095238097%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-2.3%</span>
+    </a><a href="ind-obv.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">OBV 能量潮</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:19.029761904761905%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-2.8%</span>
+    </a><a href="ind-volratio.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">量比</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:28.065476190476193%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-4.1%</span>
+    </a><a href="ind-psar.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">抛物线 SAR</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:28.886904761904766%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-4.2%</span>
+    </a><a href="ind-stoch.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">KDJ 随机指标</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:29.982142857142858%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-4.4%</span>
+    </a><a href="ind-round.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">整数关口</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:32.17261904761905%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-4.7%</span>
+    </a><a href="ind-mfi.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">MFI</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:35.80059523809524%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-5.2%</span>
+    </a><a href="ind-rsi.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">RSI</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:35.86904761904763%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-5.2%</span>
+    </a><a href="ind-willr.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">Williams %R</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:37.0327380952381%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-5.4%</span>
+    </a><a href="ind-bollrev.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">布林带回归</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:39.56547619047619%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-5.8%</span>
+    </a><a href="ind-stochrsi.html" style="display:grid;grid-template-columns:120px 1fr 62px;align-items:center;gap:10px;font-size:12.5px">
+      <span style="color:var(--muted);text-align:right">StochRSI</span>
+      <span style="position:relative;height:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.04));border-radius:3px">
+        <span style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:rgba(255,255,255,.18)"></span>
+        <span style="position:absolute;top:1px;bottom:1px;right:50%;width:46%;background:rgba(46,204,143,.7);border-radius:3px"></span>
+      </span>
+      <span class="mono down" style="text-align:right">-6.7%</span>
+    </a></div></div>
+</div></section>
+
+<section style="padding-top:16px"><div class="wrap">
+  <div class="sec-head"><div><h2 style="font-size:24px">跨市场矩阵</h2><p>每个指标在四个市场的全样本年化超额收益。绿色 = 跑赢买入持有，红色 = 跑输。</p></div></div>
+  <div class="table-wrap"><table><thead><tr><th class="l">指标</th><th>沪深300</th><th>上证指数</th><th>标普500</th><th>纳指100</th><th>跨市场中位</th><th class="l">结论</th></tr></thead>
+    <tbody><tr><td class="l name"><a href="ind-aroon.html">Aroon</a></td><td class="up">+6.7%</td><td class="up">+4.8%</td><td class="down">-3.2%</td><td class="down">-3.5%</td>
+        <td class="up"><b>+0.8%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-sma.html">SMA 均线</a></td><td class="up">+5.1%</td><td class="up">+5.3%</td><td class="down">-5.3%</td><td class="down">-3.9%</td>
+        <td class="up"><b>+0.6%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-ichimoku.html">一目均衡表</a></td><td class="up">+3.2%</td><td class="up">+3.0%</td><td class="down">-4.5%</td><td class="down">-3.9%</td>
+        <td class="down"><b>-0.4%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-ema.html">EMA 均线</a></td><td class="up">+2.8%</td><td class="up">+2.1%</td><td class="down">-4.8%</td><td class="down">-3.4%</td>
+        <td class="down"><b>-0.6%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-donchian.html">唐奇安通道</a></td><td class="up">+2.1%</td><td class="up">+3.3%</td><td class="down">-3.6%</td><td class="down">-5.4%</td>
+        <td class="down"><b>-0.7%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-supertrend.html">Supertrend</a></td><td class="up">+3.4%</td><td class="up">+1.2%</td><td class="down">-3.6%</td><td class="down">-2.7%</td>
+        <td class="down"><b>-0.8%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-roc.html">ROC 动量</a></td><td class="up">+1.2%</td><td class="up">+3.0%</td><td class="down">-4.6%</td><td class="down">-2.9%</td>
+        <td class="down"><b>-0.9%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-voltarget.html">波动率择时</a></td><td class="up">+1.6%</td><td class="up">+1.9%</td><td class="down">-3.4%</td><td class="down">-4.3%</td>
+        <td class="down"><b>-0.9%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-cci.html">CCI</a></td><td class="up">+3.2%</td><td class="up">+5.4%</td><td class="down">-5.3%</td><td class="down">-5.8%</td>
+        <td class="down"><b>-1.1%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-tsmom.html">时序动量</a></td><td class="down">-1.2%</td><td class="down">-1.0%</td><td class="down">-0.7%</td><td class="down">-2.4%</td>
+        <td class="down"><b>-1.1%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-boll.html">布林带</a></td><td class="up">+2.8%</td><td class="up">+5.0%</td><td class="down">-7.0%</td><td class="down">-5.2%</td>
+        <td class="down"><b>-1.2%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-adx.html">ADX 趋向</a></td><td class="up">+5.9%</td><td class="up">+4.5%</td><td class="down">-7.6%</td><td class="down">-7.2%</td>
+        <td class="down"><b>-1.4%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-pivot.html">结构突破</a></td><td class="up">+4.1%</td><td class="up">+1.9%</td><td class="down">-5.2%</td><td class="down">-8.5%</td>
+        <td class="down"><b>-1.7%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-keltner.html">肯特纳通道</a></td><td class="up">+3.1%</td><td class="up">+5.6%</td><td class="down">-6.8%</td><td class="down">-8.4%</td>
+        <td class="down"><b>-1.8%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-high52.html">52周新高</a></td><td class="up">+1.9%</td><td class="up">+3.0%</td><td class="down">-5.8%</td><td class="down">-8.2%</td>
+        <td class="down"><b>-1.9%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-macd.html">MACD</a></td><td class="up">+0.9%</td><td class="up">+2.7%</td><td class="down">-4.9%</td><td class="down">-7.6%</td>
+        <td class="down"><b>-2.0%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-trendmom.html">趋势+动量</a></td><td class="up">+3.7%</td><td class="up">+2.8%</td><td class="down">-7.1%</td><td class="down">-8.8%</td>
+        <td class="down"><b>-2.2%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-atr.html">ATR 波动过滤</a></td><td class="up">+2.7%</td><td class="up">+3.6%</td><td class="down">-7.3%</td><td class="down">-9.3%</td>
+        <td class="down"><b>-2.3%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag gold">部分市场有效</span></td></tr><tr><td class="l name"><a href="ind-obv.html">OBV 能量潮</a></td><td class="down">-0.3%</td><td class="up">+1.4%</td><td class="down">-5.2%</td><td class="down">-6.1%</td>
+        <td class="down"><b>-2.8%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag">仅单一市场</span></td></tr><tr><td class="l name"><a href="ind-volratio.html">量比</a></td><td class="down">-1.4%</td><td class="down">-0.4%</td><td class="down">-6.8%</td><td class="down">-10.3%</td>
+        <td class="down"><b>-4.1%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-psar.html">抛物线 SAR</a></td><td class="up">+1.5%</td><td class="down">-0.4%</td><td class="down">-9.0%</td><td class="down">-8.0%</td>
+        <td class="down"><b>-4.2%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag">仅单一市场</span></td></tr><tr><td class="l name"><a href="ind-stoch.html">KDJ 随机指标</a></td><td class="down">-5.3%</td><td class="down">-3.8%</td><td class="down">-2.6%</td><td class="down">-5.0%</td>
+        <td class="down"><b>-4.4%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-round.html">整数关口</a></td><td class="down">-3.7%</td><td class="down">-4.6%</td><td class="down">-4.8%</td><td class="down">-10.4%</td>
+        <td class="down"><b>-4.7%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-mfi.html">MFI</a></td><td class="down">-6.9%</td><td class="down">-3.5%</td><td class="down">-2.6%</td><td class="down">-7.0%</td>
+        <td class="down"><b>-5.2%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-rsi.html">RSI</a></td><td class="down">-7.2%</td><td class="down">-7.0%</td><td class="down">-2.1%</td><td class="down">-3.5%</td>
+        <td class="down"><b>-5.2%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-willr.html">Williams %R</a></td><td class="down">-9.4%</td><td class="down">-5.9%</td><td class="down">-2.4%</td><td class="down">-4.9%</td>
+        <td class="down"><b>-5.4%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-bollrev.html">布林带回归</a></td><td class="down">-7.2%</td><td class="down">-5.4%</td><td class="down">-2.8%</td><td class="down">-6.1%</td>
+        <td class="down"><b>-5.8%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr><tr><td class="l name"><a href="ind-stochrsi.html">StochRSI</a></td><td class="down">-6.8%</td><td class="down">-6.7%</td><td class="down">-5.5%</td><td class="down">-6.9%</td>
+        <td class="down"><b>-6.7%</b></td>
+        <td class="l" style="font-family:var(--font);font-size:12.5px"><span class="tag red">全部跑输</span></td></tr></tbody></table></div>
+</div></section>
+
+<section style="padding-top:16px"><div class="wrap">
+  <div class="sec-head"><div><h2 style="font-size:24px">四个维度的前五名</h2><p>同一个指标在不同维度下的排名差异，本身就是最重要的信息。</p></div></div>
+  <div class="grid g4"><div class="card"><div class="tag gold">全样本超额收益</div><div style="margin-top:12px;display:grid;gap:8px">
+      <a href="ind-aroon.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">1.</span> Aroon</span>
+        <span class="mono up">+0.8%</span></a><a href="ind-sma.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">2.</span> SMA 均线</span>
+        <span class="mono up">+0.6%</span></a><a href="ind-ichimoku.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">3.</span> 一目均衡表</span>
+        <span class="mono down">-0.4%</span></a><a href="ind-ema.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">4.</span> EMA 均线</span>
+        <span class="mono down">-0.6%</span></a><a href="ind-donchian.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">5.</span> 唐奇安通道</span>
+        <span class="mono down">-0.7%</span></a>
+    </div></div><div class="card"><div class="tag gold">样本外超额收益</div><div style="margin-top:12px;display:grid;gap:8px">
+      <a href="ind-mfi.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">1.</span> MFI</span>
+        <span class="mono down">-1.3%</span></a><a href="ind-rsi.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">2.</span> RSI</span>
+        <span class="mono down">-1.3%</span></a><a href="ind-aroon.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">3.</span> Aroon</span>
+        <span class="mono down">-1.5%</span></a><a href="ind-donchian.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">4.</span> 唐奇安通道</span>
+        <span class="mono down">-2.3%</span></a><a href="ind-bollrev.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">5.</span> 布林带回归</span>
+        <span class="mono down">-2.6%</span></a>
+    </div></div><div class="card"><div class="tag gold">夏普比率</div><div style="margin-top:12px;display:grid;gap:8px">
+      <a href="ind-aroon.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">1.</span> Aroon</span>
+        <span class="mono up">0.61</span></a><a href="ind-sma.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">2.</span> SMA 均线</span>
+        <span class="mono up">0.56</span></a><a href="ind-ichimoku.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">3.</span> 一目均衡表</span>
+        <span class="mono up">0.55</span></a><a href="ind-voltarget.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">4.</span> 波动率择时</span>
+        <span class="mono up">0.51</span></a><a href="ind-adx.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">5.</span> ADX 趋向</span>
+        <span class="mono up">0.50</span></a>
+    </div></div><div class="card"><div class="tag gold">回撤控制</div><div style="margin-top:12px;display:grid;gap:8px">
+      <a href="ind-volratio.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">1.</span> 量比</span>
+        <span class="mono down">-8.5%</span></a><a href="ind-keltner.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">2.</span> 肯特纳通道</span>
+        <span class="mono down">-17.3%</span></a><a href="ind-atr.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">3.</span> ATR 波动过滤</span>
+        <span class="mono down">-20.2%</span></a><a href="ind-adx.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">4.</span> ADX 趋向</span>
+        <span class="mono down">-20.6%</span></a><a href="ind-trendmom.html" style="display:flex;justify-content:space-between;gap:8px;font-size:13.5px"><span><span class="dim mono">5.</span> 趋势+动量</span>
+        <span class="mono down">-22.2%</span></a>
+    </div></div></div>
+</div></section>
+
+<section style="padding-top:16px"><div class="wrap">
+  <div class="note" style="border-left-color:var(--up);background:rgba(240,86,74,.06);color:#ffd0cc">
+    <b>读排名的三个提醒：</b>① 排名靠前不等于未来有效，只是“历史上亏得少”；② 任何单一市场、单一区间的第一名都可能是运气，请看“样本外”与“市场一致性”；③ 技术指标的最大价值往往在<b>控制回撤</b>，而不是提高收益——这一点在回撤列比在收益列更明显。
+  </div>
+</div></section>
+
+<script>
+(function(){
+  const modes = {"full":{"label":"全样本超额收益","desc":"跨市场全样本年化 − 同窗口买入持有（2005–2026）"},"oos":{"label":"样本外超额收益","desc":"2016 年至今的年化超额，检验是否过拟合"},"sharpe":{"label":"夏普比率","desc":"跨市场全样本夏普中位数，衡量风险调整后收益"},"dd":{"label":"回撤控制","desc":"跨市场最大回撤中位数（越接近 0 越好）"}};
+  const tb = document.getElementById('rank-body');
+  function resort(mode){
+    const rows = [...tb.querySelectorAll('tr')];
+    rows.sort((a,b) => (+b.dataset[mode]) - (+a.dataset[mode]));
+    rows.forEach((r,i) => {
+      tb.appendChild(r);
+      const rc = r.querySelector('.rank-cell');
+      rc.textContent = i+1;
+      rc.classList.toggle('top', i<3);
+    });
+  }
+  document.getElementById('modes').addEventListener('click', e => {
+    const b = e.target.closest('button'); if(!b) return;
+    document.querySelectorAll('#modes button').forEach(x => x.classList.toggle('on', x===b));
+    const m = b.dataset.mode;
+    document.getElementById('mode-desc').textContent = modes[m].desc + '。切换排序会实时重排下表，并保留每个指标的完整统计。';
+    resort(m);
+  });
+})();
+</script><footer class="footer"><div class="wrap"><div class="row">
+  <div><b style="color:var(--muted)">技术分析研究实验室</b> · 33 本权威著作 × 28 个技术指标 × 4 大市场 × 21 年历史数据</div>
+  <div>数据：东方财富公开日线 · 回测口径见 <a href="method.html" style="color:var(--gold)">方法与数据</a></div>
+</div><div style="margin-top:14px;max-width:900px">风险声明：本站所有回测结果均为历史统计，不构成任何投资建议。历史表现不代表未来收益；技术指标在样本外经常失效，实盘还需考虑流动性、税费、涨跌停与执行滑点。市场有风险，决策需独立。</div></div></footer></body></html>

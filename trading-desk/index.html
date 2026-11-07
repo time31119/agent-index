@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>值班交易台 · 24 小时自动化交易流程</title>
+<meta name="description" content="一套 7×24 交易运维流程：风险闸、资金阶梯、确定性执行，AI 只在研究、监控与复盘中出现。">
+<meta name="theme-color" content="#07080b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect width='20' height='20' rx='5' fill='%230d1015'/%3E%3Cpath d='M3 14l4-4 3 3 4-6 3 3' fill='none' stroke='%23e8b45a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#07080b; --panel:#0d1015; --panel2:#12161d;
+  --line:rgba(230,234,241,.08); --line2:rgba(230,234,241,.16);
+  --text:#e6e9f0; --dim:#949aa6; --faint:#6a707c;
+  --amber:#e8b45a; --green:#4ed3a3; --red:#ef5f52; --blue:#7aa7ff;
+  --mono:"SF Mono","JetBrains Mono","Cascadia Mono",Consolas,monospace;
+  --sans:"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --wrap:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:dark}
+body{
+  margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+  font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(760px 420px at 8% -8%, rgba(232,180,90,.08), transparent 62%),
+    radial-gradient(700px 400px at 96% 0%, rgba(122,167,255,.05), transparent 60%);
+  background-repeat:no-repeat;
+}
+h1,h2,h3,h4{margin:0;font-weight:600}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+::selection{background:var(--amber);color:#171208}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* 顶栏 */
+.bar{position:sticky;top:0;z-index:50;background:rgba(7,8,11,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar-inner{max-width:var(--wrap);margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.04em}
+.brand svg{width:20px;height:20px;color:var(--amber)}
+.brand span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--faint);border-left:1px solid var(--line2);padding-left:10px;font-weight:400}
+.bar-right{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--dim);background:rgba(255,255,255,.02);white-space:nowrap}
+.chip.ok{color:var(--green);border-color:rgba(78,211,163,.28);background:rgba(78,211,163,.07)}
+.dot{width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block}
+.dot--live{animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(78,211,163,.5)}70%{box-shadow:0 0 0 8px rgba(78,211,163,0)}100%{box-shadow:0 0 0 0 rgba(78,211,163,0)}}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:48px;align-items:center;padding:64px 0 44px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--amber);text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:"";width:24px;height:1px;background:currentColor;opacity:.7}
+h1{font-size:clamp(30px,3.9vw,46px);line-height:1.22;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--amber)}
+.sub{margin-top:18px;color:var(--dim);font-size:14.5px;line-height:1.9;max-width:36em}
+.sub b{color:var(--text);font-weight:500}
+.hero-meta{display:flex;flex-wrap:wrap;gap:20px;margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:11.5px;color:var(--faint)}
+.hero-meta b{font-family:var(--mono);color:var(--text);font-weight:500}
+
+.account{position:relative;border:1px solid var(--line2);border-radius:16px;padding:22px;overflow:hidden;
+  background:linear-gradient(180deg,#10141b,#0a0d12);box-shadow:0 30px 70px -40px rgba(0,0,0,.9)}
+.account::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(300px 160px at 85% 0%,rgba(78,211,163,.10),transparent 70%)}
+.account>*{position:relative}
+.acct-top{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--faint);font-family:var(--mono);letter-spacing:.06em}
+.acct-value{font-family:var(--mono);font-size:32px;letter-spacing:-.01em;margin-top:10px}
+.acct-value small{font-size:13px;color:var(--faint);margin-left:6px}
+.spark{display:block;width:100%;height:66px;margin:10px 0 2px;overflow:visible}
+.acct-rows{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px;padding-top:14px;border-top:1px solid var(--line)}
+.acct-rows div{font-size:11px;color:var(--faint)}
+.acct-rows b{display:block;font-family:var(--mono);font-size:14px;color:var(--text);margin-top:3px;font-weight:500}
+.up{color:var(--green)!important}
+.down{color:var(--red)!important}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-bottom:8px}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--panel)}
+.kpi .k{font-size:11px;color:var(--faint);letter-spacing:.06em;display:flex;justify-content:space-between;gap:8px}
+.kpi .v{font-family:var(--mono);font-size:23px;margin-top:8px;letter-spacing:-.01em}
+.kpi .m{font-size:11px;color:var(--faint);margin-top:4px}
+
+/* 通用 section */
+.section{padding:56px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:26px}
+.sec-head .idx{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--faint);display:block;margin-bottom:8px}
+.sec-head h2{font-size:20px;letter-spacing:.01em}
+.sec-head p{font-size:12.5px;color:var(--faint);max-width:46ch;line-height:1.8;text-align:right}
+
+/* 风险 */
+.risk-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:14px}
+.risk-panel{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--panel)}
+.risk-row+.risk-row{margin-top:20px}
+.risk-top{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;margin-bottom:8px;gap:12px}
+.risk-top span{color:var(--dim)}
+.risk-top b{font-family:var(--mono);font-weight:500;font-size:12.5px}
+.track{position:relative;height:6px;border-radius:6px;background:rgba(255,255,255,.06)}
+.track i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:6px;background:var(--green);transition:width 1.1s var(--ease)}
+.track i.warn{background:var(--amber)}
+.track i.bad{background:var(--red)}
+.track .limit{position:absolute;top:-4px;bottom:-4px;width:2px;background:rgba(239,95,82,.75);border-radius:2px}
+.risk-note{font-size:11px;color:var(--faint);margin-top:7px}
+.risk-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:var(--faint);line-height:1.8}
+
+.kill{border:1px solid rgba(239,95,82,.24);border-radius:14px;padding:22px;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,rgba(239,95,82,.05),rgba(13,16,21,.9));transition:border-color .3s,background .3s}
+.kill.is-paused{border-color:rgba(232,180,90,.45);background:linear-gradient(180deg,rgba(232,180,90,.07),rgba(13,16,21,.92))}
+.kill.is-halted{border-color:rgba(239,95,82,.6);background:linear-gradient(180deg,rgba(239,95,82,.12),rgba(13,16,21,.94))}
+.kill .lbl{font-size:11px;color:var(--faint);font-family:var(--mono);letter-spacing:.14em}
+.kill .state{font-family:var(--mono);font-size:26px;color:var(--green);margin-top:8px;letter-spacing:.02em}
+.kill.is-paused .state{color:var(--amber)}
+.kill.is-halted .state{color:var(--red)}
+.kill .hint{font-size:11.5px;color:var(--dim);margin-top:6px;line-height:1.7}
+.kill-btns{display:grid;gap:8px;margin-top:auto;padding-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:9px;
+  border:1px solid var(--line2);background:transparent;color:var(--text);font-size:12.5px;font-family:inherit;cursor:pointer;
+  transition:background .2s,border-color .2s,transform .2s var(--ease)}
+.btn:hover{background:rgba(255,255,255,.05);transform:translateY(-1px)}
+.btn--danger{border-color:rgba(239,95,82,.4);color:#ffb3ac;background:rgba(239,95,82,.08)}
+.btn--danger:hover{background:rgba(239,95,82,.16)}
+.btn--hard{border-color:rgba(239,95,82,.75);background:rgba(239,95,82,.2);color:#fff}
+.btn--hard:hover{background:rgba(239,95,82,.32)}
+.btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.kill-reset{background:none;border:0;color:var(--faint);font-size:11.5px;text-decoration:underline;cursor:pointer;margin-top:10px;font-family:inherit}
+
+/* 闸门 */
+.gates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gate{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--panel)}
+.gate .n{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--amber)}
+.gate h3{font-size:16px;margin:8px 0 8px;letter-spacing:.02em}
+.gate p{font-size:12.5px;color:var(--dim);line-height:1.8}
+.gate ul{margin-top:14px}
+.gate li{font-size:12px;color:var(--faint);padding:6px 0;border-top:1px dashed rgba(255,255,255,.07);display:flex;gap:8px}
+.gate li::before{content:"—";color:var(--amber);opacity:.6;flex:none}
+
+/* 阶梯 */
+.ladder{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.step{border:1px solid var(--line);border-radius:12px;padding:16px 14px;background:var(--panel);position:relative}
+.step .idx{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.1em}
+.step h4{font-size:13.5px;margin:6px 0 6px}
+.step p{font-size:11px;color:var(--faint);line-height:1.65}
+.step.on{border-color:rgba(232,180,90,.38);background:rgba(232,180,90,.05)}
+.step.on::after{content:"";position:absolute;top:14px;right:14px;width:5px;height:5px;border-radius:50%;background:var(--amber)}
+.step .cap{font-family:var(--mono);font-size:10.5px;color:var(--dim);margin-top:8px}
+
+/* 表格 */
+.table-wrap{border:1px solid var(--line);border-radius:14px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:660px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);
+  text-align:left;padding:12px 16px;background:rgba(255,255,255,.02);border-bottom:1px solid var(--line);white-space:nowrap;font-weight:400}
+td{padding:13px 16px;border-bottom:1px solid var(--line);color:var(--dim);line-height:1.6}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--text)}
+td .num{font-family:var(--mono)}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid;white-space:nowrap}
+.pill.live{color:var(--green);border-color:rgba(78,211,163,.3);background:rgba(78,211,163,.07)}
+.pill.canary{color:var(--amber);border-color:rgba(232,180,90,.32);background:rgba(232,180,90,.07)}
+.pill.paper{color:var(--blue);border-color:rgba(122,167,255,.3);background:rgba(122,167,255,.07)}
+.pill.research{color:var(--faint);border-color:var(--line2);background:rgba(255,255,255,.03)}
+
+/* 日志 */
+.log{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+.log-row{display:grid;grid-template-columns:62px 78px minmax(0,1fr);gap:14px;padding:11px 18px;
+  border-bottom:1px solid rgba(255,255,255,.05);font-family:var(--mono);font-size:11.5px;color:var(--dim);align-items:baseline}
+.log-row:last-child{border-bottom:0}
+.log-row:hover{background:rgba(255,255,255,.02)}
+.log-t{color:var(--faint)}
+.log-tag{color:var(--amber);font-size:10.5px;letter-spacing:.06em}
+.log-tag.ok{color:var(--green)}
+.log-tag.warn{color:var(--red)}
+.log-msg b{color:var(--text);font-weight:500}
+.log-new{animation:flash 2.4s ease-out}
+@keyframes flash{0%{background:rgba(232,180,90,.16)}100%{background:transparent}}
+
+/* 失败模式 */
+.failures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fail{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--panel)}
+.fail .no{font-family:var(--mono);font-size:12px;color:var(--red);opacity:.8;padding-top:1px}
+.fail h4{font-size:13.5px;margin-bottom:4px}
+.fail p{font-size:12px;color:var(--faint);line-height:1.75}
+
+/* 结语 */
+.band{margin:0 0 8px;border:1px solid var(--line2);border-radius:16px;padding:34px;
+  background:radial-gradient(520px 260px at 88% 0%,rgba(232,180,90,.12),transparent 68%),linear-gradient(180deg,rgba(20,24,31,.9),rgba(10,12,17,.9));
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.band h2{font-size:clamp(20px,2.4vw,28px);line-height:1.4}
+.band p{margin-top:10px;color:var(--dim);font-size:13px}
+
+footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 56px;font-size:11.5px;color:var(--faint)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;line-height:1.9}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,14px);z-index:99;
+  padding:11px 20px;border-radius:999px;border:1px solid rgba(232,180,90,.35);background:rgba(18,22,29,.97);
+  color:var(--text);font-size:12.5px;opacity:0;pointer-events:none;transition:.3s var(--ease);box-shadow:0 20px 50px -20px #000}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;gap:34px;padding-top:44px}
+  .account{max-width:520px}
+  .risk-grid{grid-template-columns:1fr}
+  .gates{grid-template-columns:1fr}
+  .ladder{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .sec-head p{text-align:left}
+  .band{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .bar-inner{padding:0 18px}
+  .bar-right .chip:nth-child(n+3){display:none}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ladder{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .failures{grid-template-columns:1fr}
+  .log-row{grid-template-columns:52px 64px minmax(0,1fr);gap:10px;font-size:11px;padding:10px 14px}
+  .acct-rows{grid-template-columns:1fr 1fr}
+  .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 14.5 7.2 10l3 3L15 6l2.5 2.6"/>
+      </svg>
+      值班交易台 <span>DESK OS</span>
+    </a>
+    <div class="bar-right">
+      <span class="chip ok"><i class="dot dot--live"></i> 系统正常</span>
+      <span class="chip">心跳 0.4s</span>
+      <span class="chip">BTC 永续 · 资金费 <span class="mono">+0.011%</span></span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <p class="eyebrow">24h Trading Operations</p>
+        <h1>让规则值夜班，<br>不让模型<em>赌方向</em>。</h1>
+        <p class="sub">
+          市场是零和且对抗的，所以这套流程的重心不是"更聪明的信号"，而是<b>让任何一次错误都无法致命</b>：
+          确定性执行、可量化的风险额度、一条走完才能上钱的资金阶梯。
+        </p>
+        <div class="hero-meta">
+          <span>运行 <b>412</b> 天</span>
+          <span>策略 <b>4</b> 个 · 在跑 <b>2</b></span>
+          <span>最大回撤 <b>4.1%</b></span>
+          <span>今日成交 <b>1,284</b> 笔</span>
+        </div>
+      </div>
+
+      <div class="account" aria-label="账户概览">
+        <div class="acct-top"><span>权益 / EQUITY</span><span class="up">▲ 1.84% 今日</span></div>
+        <div class="acct-value">248,610<small>USDT</small></div>
+        <svg class="spark" viewBox="0 0 320 66" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#4ed3a3" stop-opacity=".28"/>
+              <stop offset="100%" stop-color="#4ed3a3" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 52 L22 48 L44 50 L66 42 L88 45 L110 36 L132 38 L154 30 L176 33 L198 26 L220 28 L242 20 L264 23 L286 14 L308 16 L320 12 L320 66 L0 66 Z" fill="url(#sparkFill)"/>
+          <path d="M0 52 L22 48 L44 50 L66 42 L88 45 L110 36 L132 38 L154 30 L176 33 L198 26 L220 28 L242 20 L264 23 L286 14 L308 16 L320 12"
+                fill="none" stroke="#4ed3a3" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="320" cy="12" r="3" fill="#0a0d12" stroke="#4ed3a3" stroke-width="1.8"/>
+        </svg>
+        <div class="acct-rows">
+          <div>今日盈亏<b class="up">+4,492</b></div>
+          <div>本周<b class="up">+6.21%</b></div>
+          <div>当前回撤<b class="down">-1.9%</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KPI -->
+    <section class="kpis" aria-label="关键指标">
+      <div class="kpi">
+        <div class="k"><span>组合名义敞口</span><span>/ 上限 60%</span></div>
+        <div class="v">38.2%</div>
+        <div class="m">现货 + 永续，delta 中性策略不计方向</div>
+      </div>
+      <div class="kpi">
+        <div class="k"><span>保证金占用</span><span>/ 上限 40%</span></div>
+        <div class="v">21.0%</div>
+        <div class="m">两所合计，单所不超过 50% 资金</div>
+      </div>
+      <div class="kpi">
+        <div class="k"><span>今日已实现</span><span>8h 结算</span></div>
+        <div class="v up">+4,492</div>
+        <div class="m">资金费 +2,110 / alpha +2,382</div>
+      </div>
+      <div class="kpi">
+        <div class="k"><span>滑点偏离</span><span>模型 3bp</span></div>
+        <div class="v">3.4bp</div>
+        <div class="m">超过 1.5 倍即触发策略复核</div>
+      </div>
+    </section>
+
+    <!-- 风险闸 -->
+    <section class="section" id="risk">
+      <div class="sec-head">
+        <div>
+          <span class="idx">01 / RISK GATE</span>
+          <h2>先定亏多少，再谈赚多少</h2>
+        </div>
+        <p>所有额度在盘中不可绕过。人可以改额度，但不能在亏损发生时修改正在生效的额度。</p>
+      </div>
+
+      <div class="risk-grid">
+        <div class="risk-panel">
+          <div class="risk-row">
+            <div class="risk-top"><span>日内亏损（触发即全平停机）</span><b><span class="mono">0.62%</span> / 2.0%</b></div>
+            <div class="track"><i class="warn" data-w="31"></i><span class="limit" style="left:100%"></span></div>
+            <p class="risk-note">红线：日亏 2.0% → 全部平仓 + 停止新开仓，次日需人工重启</p>
+          </div>
+          <div class="risk-row">
+            <div class="risk-top"><span>组合名义敞口</span><b><span class="mono">38.2%</span> / 60%</b></div>
+            <div class="track"><i class="warn" data-w="64"></i><span class="limit" style="left:100%"></span></div>
+            <p class="risk-note">对冲仓位按净额计算，防止"四个仓位其实赌同一个方向"</p>
+          </div>
+          <div class="risk-row">
+            <div class="risk-top"><span>保证金占用</span><b><span class="mono">21.0%</span> / 40%</b></div>
+            <div class="track"><i data-w="52"></i><span class="limit" style="left:100%"></span></div>
+            <p class="risk-note">预留 60% 缓冲，用于极端行情下的追保</p>
+          </div>
+          <div class="risk-row">
+            <div class="risk-top"><span>单策略杠杆</span><b><span class="mono">3.0x</span> / 5.0x</b></div>
+            <div class="track"><i data-w="60"></i><span class="limit" style="left:100%"></span></div>
+            <p class="risk-note">方向性策略上限 2x，套利策略单列，不得超过 5x</p>
+          </div>
+          <p class="risk-foot">回撤阶梯：<b class="mono">-5%</b> 仓位减半 · <b class="mono">-8%</b> 只减仓 · <b class="mono">-12%</b> 停机复盘 —— 全部自动执行，不询问。</p>
+        </div>
+
+        <div class="kill" id="kill">
+          <span class="lbl">KILL SWITCH · 人工闸</span>
+          <div class="state" id="killState">运行中</div>
+          <p class="hint" id="killHint">所有策略按额度自主运行。以下三个按钮会立即生效，不需要二次确认——因为它们只用于刹车，不用于加速。</p>
+          <div class="kill-btns">
+            <button class="btn btn--danger" type="button" data-kill="pause">暂停新开仓（保留持仓）</button>
+            <button class="btn btn--danger" type="button" data-kill="reduce">切换只减仓模式</button>
+            <button class="btn btn--hard" type="button" data-kill="halt">全部平仓并停机</button>
+            <button class="kill-reset" type="button" data-kill="reset">恢复运行（演示）</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 三道闸 -->
+    <section class="section" id="gates">
+      <div class="sec-head">
+        <div>
+          <span class="idx">02 / THREE GATES</span>
+          <h2>三道闸：管住钱、管住上线、管住资格</h2>
+        </div>
+        <p>交易里的闸不是审批流程，而是三种硬约束——过不去就停，不讨论。</p>
+      </div>
+      <div class="gates">
+        <article class="gate">
+          <span class="n">GATE 01</span>
+          <h3>风险闸 · 钱</h3>
+          <p>每一笔订单在发出前，都要过一遍单笔、单策略、组合三级校验。过不去就拒单，不讨论。</p>
+          <ul>
+            <li>单笔风险 ≤ 权益 0.25%（按止损距离折算）</li>
+            <li>单笔 ≤ 1% 价格带内挂单量的 5%</li>
+            <li>同相关性簇 ≤ 40% 敞口</li>
+            <li>止损由系统执行，人不参与</li>
+          </ul>
+        </article>
+        <article class="gate">
+          <span class="n">GATE 02</span>
+          <h3>上线闸 · 钱能不能进来</h3>
+          <p>策略写完不等于能实盘。必须先证明它在"没见过的数据"上成立，再证明它在"真实的成交"上成立。</p>
+          <ul>
+            <li>回测 ≥ 2 年，含牛熊各一轮</li>
+            <li>样本外 ≥ 30%，成本按悲观口径</li>
+            <li>纸面 4 周，偏差 &lt; 25%</li>
+            <li>金丝雀 1% 资金，4 周达标才扩仓</li>
+          </ul>
+        </article>
+        <article class="gate">
+          <span class="n">GATE 03</span>
+          <h3>合规闸 · 证</h3>
+          <p>这一层不是法律免责声明，是工程配置：密钥权限、资金分布、辖区资格，全都要能被审计。</p>
+          <ul>
+            <li>API Key 禁止提币，绑定 IP 白名单</li>
+            <li>单所资金 ≤ 50%，盈利定期提出</li>
+            <li>不代客理财、不承诺收益、不喊单</li>
+            <li>辖区合法是前置条件，不是选项</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 资金阶梯 -->
+    <section class="section" id="ladder">
+      <div class="sec-head">
+        <div>
+          <span class="idx">03 / CAPITAL LADDER</span>
+          <h2>钱是一级一级加上去的</h2>
+        </div>
+        <p>任何一步不达标就退回上一步，不许"再观察一周"。这是整套流程里最值钱的一条。</p>
+      </div>
+      <div class="ladder">
+        <div class="step">
+          <div class="idx">01</div>
+          <h4>研究</h4>
+          <p>假设必须可证伪，并写明"什么情况下它失效"。</p>
+          <div class="cap">资金 0</div>
+        </div>
+        <div class="step">
+          <div class="idx">02</div>
+          <h4>回测</h4>
+          <p>样本外、成本、滑点全部按悲观口径，限制试验次数防过拟合。</p>
+          <div class="cap">资金 0</div>
+        </div>
+        <div class="step">
+          <div class="idx">03</div>
+          <h4>纸面</h4>
+          <p>实时行情，模拟成交，跑 4 周，校准延迟与滑点。</p>
+          <div class="cap">资金 0</div>
+        </div>
+        <div class="step on">
+          <div class="idx">04</div>
+          <h4>金丝雀</h4>
+          <p>用真实资金、极小仓位，验证"回测与实盘的差距"。</p>
+          <div class="cap">风险预算 1%</div>
+        </div>
+        <div class="step on">
+          <div class="idx">05</div>
+          <h4>实盘</h4>
+          <p>达标后按月扩仓，每次最多翻倍，同时监控衰减。</p>
+          <div class="cap">10% → 容量上限</div>
+        </div>
+        <div class="step">
+          <div class="idx">06</div>
+          <h4>淘汰</h4>
+          <p>连续 30 天低于回测一半，或滑点超标 1.5 倍，下线复盘。</p>
+          <div class="cap">回到研究</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 策略台账 -->
+    <section class="section" id="strategies">
+      <div class="sec-head">
+        <div>
+          <span class="idx">04 / BOOK</span>
+          <h2>策略台账：现在谁在花钱</h2>
+        </div>
+        <p>收益不来自"预测涨跌"，而来自结构性错价：资金费、基差、点差。说不清钱从谁口袋来的，大概率是过拟合。</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>策略</th><th>类型</th><th>阶段</th><th>样本外夏普</th><th>最大回撤</th><th>容量</th><th>状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>永续资金费（BTC / ETH）</td>
+              <td>delta 中性</td>
+              <td><span class="pill live"><i class="dot"></i>实盘 10%</span></td>
+              <td class="num">2.10</td>
+              <td class="num">3.2%</td>
+              <td>大</td>
+              <td>运行中 · 412 天</td>
+            </tr>
+            <tr>
+              <td>跨所基差（Binance ↔ OKX）</td>
+              <td>统计套利</td>
+              <td><span class="pill canary"><i class="dot"></i>金丝雀 1%</span></td>
+              <td class="num">1.60</td>
+              <td class="num">2.4%</td>
+              <td>中</td>
+              <td>运行中 · 23 天</td>
+            </tr>
+            <tr>
+              <td>趋势跟随 4h（BTC / ETH）</td>
+              <td>动量</td>
+              <td><span class="pill paper"><i class="dot"></i>纸面</span></td>
+              <td class="num">0.90</td>
+              <td class="num">12.0%</td>
+              <td>中</td>
+              <td>观察 · 第 2 周</td>
+            </tr>
+            <tr>
+              <td>长尾做市（市值 100–500）</td>
+              <td>做市</td>
+              <td><span class="pill research"><i class="dot"></i>研究</span></td>
+              <td class="num">—</td>
+              <td class="num">—</td>
+              <td>小</td>
+              <td>未上线 · 库存风险待解</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 日志 -->
+    <section class="section" id="log">
+      <div class="sec-head">
+        <div>
+          <span class="idx">05 / RUNBOOK</span>
+          <h2>夜班日志</h2>
+        </div>
+        <p>每一条都可回溯到订单号、模型版本与审批人。异常不进"待办"，直接进处置流程。</p>
+      </div>
+      <div class="log" id="logBox">
+        <div class="log-row"><span class="log-t">21:40</span><span class="log-tag ok">心跳</span><span class="log-msg">两所 WS 正常，序列号连续，本地与交易所仓位对账一致</span></div>
+        <div class="log-row"><span class="log-t">19:12</span><span class="log-tag">风控</span><span class="log-msg">组合名义敞口 <b>38.2%</b>，距 60% 上限仍有空间；保证金占用 21%</span></div>
+        <div class="log-row"><span class="log-t">16:45</span><span class="log-tag warn">告警</span><span class="log-msg">趋势策略回撤 <b>-12.4%</b> 越过 10% 阈值 → 自动减半仓，已通知</span></div>
+        <div class="log-row"><span class="log-t">11:20</span><span class="log-tag">执行</span><span class="log-msg">基差触发 -0.18%，限价建仓 0.6%，成交滑点 <b>1.2bp</b></span></div>
+        <div class="log-row"><span class="log-t">08:00</span><span class="log-tag warn">告警</span><span class="log-msg">Binance API P99 由 85ms 升至 240ms → 执行层自动降档为限价单</span></div>
+        <div class="log-row"><span class="log-t">05:41</span><span class="log-tag ok">恢复</span><span class="log-msg">OKX WS 断连 1.2s，自动重连，无丢包，无重复下单</span></div>
+        <div class="log-row"><span class="log-t">03:12</span><span class="log-tag ok">结算</span><span class="log-msg">资金费结算，年化 <b>+11.4%</b>，carry 仓位按规则续持</span></div>
+        <div class="log-row"><span class="log-t">00:00</span><span class="log-tag">系统</span><span class="log-msg">夜班启动：加载 4 个策略、12 个风控规则，时钟漂移 12ms</span></div>
+      </div>
+    </section>
+
+    <!-- 平台 -->
+    <section class="section" id="platforms">
+      <div class="sec-head">
+        <div>
+          <span class="idx">06 / VENUES</span>
+          <h2>为什么选加密永续，以及选哪两家</h2>
+        </div>
+        <p>不是为了"好赚"，而是因为 7×24、API 成熟、无 T+1。代价是杠杆、资金费、对手方与监管。</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>维度</th><th>Binance</th><th>OKX</th><th>IBKR</th><th>Alpaca</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>交易时段</td>
+              <td>7×24</td><td>7×24</td><td>股票 6.5h；期货近 24×5</td><td>美股 6.5h</td>
+            </tr>
+            <tr>
+              <td>API / 模拟环境</td>
+              <td>成熟，测试网稳定性一般</td>
+              <td>成熟，模拟盘贴近实盘</td>
+              <td>稳定但笨重（TWS / WebAPI）</td>
+              <td>最易接入</td>
+            </tr>
+            <tr>
+              <td>账户结构</td>
+              <td>现货 / 合约分仓</td>
+              <td>统一账户 + 组合保证金</td>
+              <td>多资产、多币种</td>
+              <td>单一美股账户</td>
+            </tr>
+            <tr>
+              <td>适合的策略</td>
+              <td>主流币、跨所基差</td>
+              <td>delta 中性、基差、跨品种</td>
+              <td>全球多资产对冲</td>
+              <td>美股日内 / 事件驱动</td>
+            </tr>
+            <tr>
+              <td>境内可用性</td>
+              <td>虚拟货币业务属非法金融活动</td>
+              <td>同左</td>
+              <td>需境外账户，受外汇管制</td>
+              <td>需境外账户</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px;font-size:11.5px;color:var(--faint);line-height:1.9">
+        建议组合：主账户 OKX（统一账户适合对冲与组合保证金），备账户 Binance（流动性最好，且跨所基差需要两家）。
+        开两家不是为了分散信仰，是为了做价差和故障切换。费率、限额以官方最新公告为准。
+      </p>
+    </section>
+
+    <!-- 失败模式 -->
+    <section class="section" id="failure">
+      <div class="sec-head">
+        <div>
+          <span class="idx">07 / WHAT KILLS YOU</span>
+          <h2>会杀死你的八件事</h2>
+        </div>
+        <p>这七条里的任何一条，都比"信号不够聪明"更常见。</p>
+      </div>
+      <div class="failures">
+        <div class="fail"><span class="no">01</span><div><h4>过拟合</h4><p>试了 500 组参数挑出最好的一组。用 deflated Sharpe、保留样本外、限制试验次数。</p></div></div>
+        <div class="fail"><span class="no">02</span><div><h4>前视偏差</h4><p>用了当时还拿不到的数据：资金费、收盘价、上币公告。回测必须 point-in-time。</p></div></div>
+        <div class="fail"><span class="no">03</span><div><h4>交易所风险</h4><p>宕机、插针、强平引擎异常、提币暂停。FTX 不是黑天鹅，是常态风险。</p></div></div>
+        <div class="fail"><span class="no">04</span><div><h4>流动性幻觉</h4><p>回测按中间价成交，实盘打穿三层盘口。单笔不得超过盘口深度的 5%。</p></div></div>
+        <div class="fail"><span class="no">05</span><div><h4>杠杆与伪分散</h4><p>以为分散了，其实四个仓位都在赌同一个方向。按相关性簇计算敞口。</p></div></div>
+        <div class="fail"><span class="no">06</span><div><h4>运维事故</h4><p>密钥泄露、重复下单、断线后状态不一致。幂等 ID + 对账 + 死手开关。</p></div></div>
+        <div class="fail"><span class="no">07</span><div><h4>监管与身份</h4><p>辖区不允许、代客无牌照、税务未申报。合法是前置条件，不是上线后再补。</p></div></div>
+        <div class="fail"><span class="no">08</span><div><h4>AI 自我感动</h4><p>把"模型很复杂"当成"策略有优势"。复杂度不是 alpha，成本才是敌人。</p></div></div>
+      </div>
+    </section>
+
+    <!-- 结语 -->
+    <section class="section" style="border-top:0;padding-top:0">
+      <div class="band">
+        <div>
+          <h2>验收标准不是"赚了多少"，<br>而是"最坏的那天，系统有没有按设计停下来"。</h2>
+          <p>如果你要把它做成产品：卖工具，不卖收益。碰客户资金、代客下单、收益承诺，是三件不同性质的牌照问题。</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn--hard" href="PRODUCTION.md" style="white-space:nowrap">实盘上线清单 →</a>
+          <a class="btn" href="DESIGN.md" style="white-space:nowrap">完整设计说明 →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span>值班交易台 · 概念设计原型 · 与 Binance / OKX / IBKR / Alpaca 无关联</span>
+      <span>页面数据均为演示，不构成投资建议</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* 风险条动画 */
+  var bars = document.querySelectorAll('.track i[data-w]');
+  requestAnimationFrame(function () {
+    setTimeout(function () {
+      bars.forEach(function (b) { b.style.width = b.getAttribute('data-w') + '%'; });
+    }, 120);
+  });
+
+  /* 杀开关 */
+  var kill = document.getElementById('kill');
+  var state = document.getElementById('killState');
+  var hint = document.getElementById('killHint');
+  var toast = document.getElementById('toast');
+  var logBox = document.getElementById('logBox');
+
+  var COPY = {
+    running: {
+      text: '运行中',
+      hint: '所有策略按额度自主运行。以下三个按钮会立即生效，不需要二次确认——因为它们只用于刹车，不用于加速。'
+    },
+    paused: {
+      text: '已暂停新开仓',
+      hint: '现有持仓继续按止损管理，但不再建立新仓位。恢复需要人工确认。'
+    },
+    reduce: {
+      text: '只减仓',
+      hint: '所有新开仓被拒绝，仅允许 reduce-only 订单。适用于策略失效但不想一次性砸盘的场景。'
+    },
+    halted: {
+      text: '已停机 · 全部平仓',
+      hint: '已撤销全部挂单并平掉可平仓位。系统进入只读状态，需人工排查后重启。'
+    }
+  };
+
+  function say(msg) {
+    toast.textContent = msg;
+    toast.classList.add('on');
+    clearTimeout(say._t);
+    say._t = setTimeout(function () { toast.classList.remove('on'); }, 2800);
+  }
+
+  function addLog(tag, msg, tone) {
+    var now = new Date();
+    var hh = String(now.getHours()).padStart(2, '0');
+    var mm = String(now.getMinutes()).padStart(2, '0');
+    var row = document.createElement('div');
+    row.className = 'log-row log-new';
+    row.innerHTML = '<span class="log-t">' + hh + ':' + mm + '</span>' +
+      '<span class="log-tag ' + (tone || '') + '">' + tag + '</span>' +
+      '<span class="log-msg">' + msg + '</span>';
+    logBox.insertBefore(row, logBox.firstChild);
+  }
+
+  function setMode(mode) {
+    kill.classList.remove('is-paused', 'is-halted');
+    if (mode === 'paused' || mode === 'reduce') kill.classList.add('is-paused');
+    if (mode === 'halted') kill.classList.add('is-halted');
+    state.textContent = COPY[mode].text;
+    hint.textContent = COPY[mode].hint;
+
+    document.querySelectorAll('[data-kill]').forEach(function (b) {
+      if (b.tagName === 'BUTTON' && b.classList.contains('kill-reset')) return;
+      b.disabled = mode === 'halted';
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-kill]');
+    if (!btn) return;
+    var action = btn.getAttribute('data-kill');
+
+    if (action === 'pause') {
+      setMode('paused');
+      addLog('人工闸', '操作员暂停新开仓；持仓保留，止损继续生效', 'warn');
+      say('已暂停新开仓（演示）');
+    } else if (action === 'reduce') {
+      setMode('reduce');
+      addLog('人工闸', '切换为只减仓模式；后续订单仅允许 reduce-only', 'warn');
+      say('已切换为只减仓（演示）');
+    } else if (action === 'halt') {
+      setMode('halted');
+      addLog('人工闸', '<b>全部平仓并停机</b>：撤销挂单 14 笔，平仓 6 个仓位', 'warn');
+      say('已全部平仓并停机（演示）');
+    } else if (action === 'reset') {
+      setMode('running');
+      addLog('人工闸', '人工复核完成，恢复运行', 'ok');
+      say('已恢复运行（演示）');
+    }
+  });
+})();
+</script>
+</body>
+</html>

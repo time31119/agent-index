@@ -1,0 +1,4389 @@
+[
+  {
+    "company": "Memobase",
+    "url": "https://ai-bot.cn/memobase/",
+    "pages": [
+      {
+        "url": "https://ai-bot.cn/memobase/",
+        "title": "memobase - 基于用户画像的长期记忆系统 | AI工具集",
+        "chars": 3141,
+        "error": null
+      },
+      {
+        "url": "https://ai-bot.cn/about-us/",
+        "title": "关于AI工具集 | AI工具集",
+        "chars": 1847,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "Memobase",
+      "city": null,
+      "district": null,
+      "website": "https://www.memobase.io",
+      "description": "开源的基于用户画像的长期记忆系统，专为生成式人工智能（GenAI）应用设计，能为虚拟助手、教育工具等应用提供用户记忆功能，帮助AI记住、理解和与用户共同成长。提供结构化的用户信息存储，支持时间感知记忆、灵活配置和快速批处理，易于基于API和多种SDK集成到现有系统中。",
+      "sector": "AI",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "用户记忆管理",
+        "时间感知记忆",
+        "灵活的配置",
+        "易于集成",
+        "批量处理与高效性能"
+      ],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "独角兽玩具科技",
+    "url": "https://chinese.alibaba.com/g/unicorn-toy_100.html",
+    "pages": [
+      {
+        "url": "https://chinese.alibaba.com/g/unicorn-toy_100.html",
+        "title": "404-Error",
+        "chars": 5621,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "独角兽玩具科技",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "黑画科技",
+    "url": "https://tech.china.com/article/20240903/092024_1570395.html",
+    "pages": [
+      {
+        "url": "https://tech.china.com/article/20240903/092024_1570395.html",
+        "title": "首发跨平台XR物理仿真技术！黑画科技开启工业模拟时代！_中华网",
+        "chars": 7630,
+        "error": null
+      },
+      {
+        "url": "http://tech.china.com/abouts/contactus/",
+        "title": "404 Not Found",
+        "chars": 33,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "黑画科技",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": "黑画科技（Hacker&Artist Technology）是一家提供工业级物理仿真算法与高仿真物理模型的企业级XR高仿真解决方案提供商，首发跨平台XR物理仿真技术，并推出面向C端消费者的体验级APP「印刻万物/Inktoys」。",
+      "sector": "XR/空间计算",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "工业级物理仿真算法",
+        "高仿真物理模型",
+        "跨平台3D内容协作技术",
+        "跨设备的XR内容协同技术",
+        "印刻万物/Inktoys"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "深圳慧影未来文化创意",
+    "url": "https://www.bidizhaobiao.com/company_813099182179659776.html",
+    "pages": [
+      {
+        "url": "https://www.bidizhaobiao.com/company_813099182179659776.html",
+        "title": "",
+        "chars": 36,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳慧影未来文化创意",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳灵予科技",
+    "url": "http://www.linkric.com/",
+    "pages": [
+      {
+        "url": "https://www.linkric.com/",
+        "title": "",
+        "chars": 2,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳灵予科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.linkric.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳电仔羊科技",
+    "url": "http://www.ehpro.cn/",
+    "pages": [
+      {
+        "url": "https://ehpro.cn/",
+        "title": "主页 - 首页 | 深圳东灏兴科技有限公司 | 电子烟 | 电子烟厂商 | 电子烟品牌",
+        "chars": 623,
+        "error": null
+      },
+      {
+        "url": "https://ehpro.cn/about/",
+        "title": "关于我们 - 首页 | 深圳东灏兴科技有限公司 | 电子烟 | 电子烟厂商 | 电子烟品牌",
+        "chars": 896,
+        "error": null
+      },
+      {
+        "url": "https://ehpro.cn/about/#about_us",
+        "title": "关于我们 - 首页 | 深圳东灏兴科技有限公司 | 电子烟 | 电子烟厂商 | 电子烟品牌",
+        "chars": 896,
+        "error": null
+      },
+      {
+        "url": "https://ehpro.cn/about/#our_culture",
+        "title": "关于我们 - 首页 | 深圳东灏兴科技有限公司 | 电子烟 | 电子烟厂商 | 电子烟品牌",
+        "chars": 896,
+        "error": null
+      },
+      {
+        "url": "https://ehpro.cn/contact_us/",
+        "title": "联系我们 - 首页 | 深圳东灏兴科技有限公司 | 电子烟 | 电子烟厂商 | 电子烟品牌",
+        "chars": 588,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳东灏兴科技有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://ehpro.cn/",
+      "description": "自2011年成立以来，深圳东灏兴科技有限公司（EHPRO）已发展为中国领先的ODM/OEM电子烟制造商。专注于电子烟器件及配件的研发、生产、销售和服务，涵盖盒子、开放、封闭式电子烟系统以及一次性电子烟。",
+      "sector": "电子烟制造",
+      "founded_year": 2011,
+      "team_size": 2500,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-23729079",
+      "email": "INFO@SZEHPRO.COM",
+      "address": "深圳市宝安区沙井街道南环路366号星展广场B座1302-1303",
+      "products": [
+        "盒子电子烟",
+        "开放式电子烟系统",
+        "封闭式电子烟系统",
+        "一次性电子烟",
+        "雾化器"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深圳晌午不眠科技",
+    "url": "http://noonwake.cn/",
+    "pages": [
+      {
+        "url": "https://noonwake.cn/",
+        "title": "晌午不眠 | 万象有灵 5.0、Starot 2.0.0 与星运日历",
+        "chars": 2205,
+        "error": null
+      },
+      {
+        "url": "https://noonwake.cn/gywm/",
+        "title": "关于我们 | Noonwake.AI 晌午不眠",
+        "chars": 1321,
+        "error": null
+      },
+      {
+        "url": "https://noonwake.cn/lxwm/",
+        "title": "联系我们 | Noonwake.AI 晌午不眠",
+        "chars": 490,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市晌午不眠科技有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": "https://noonwake.com/",
+      "description": "NoonWake AI 专注个人 AI、长期记忆、情绪陪伴与软硬一体消费产品，构建具备长期记忆、多视角交互与内容组织能力的个人 AI 引擎，产品覆盖国内万象有灵、海外 Starot，以及星运日历软硬一体系统。",
+      "sector": "个人 AI、长期记忆、情绪陪伴与软硬一体消费产品",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "support@noonwake.com",
+      "address": null,
+      "products": [
+        "万象有灵 5.0",
+        "Starot 2.0.0",
+        "星运日历",
+        "日历机",
+        "电子纸手机壳",
+        "Luma 手环"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深圳司普科技",
+    "url": "http://www.sipuai.com/",
+    "pages": [
+      {
+        "url": "http://www.sipuai.com/",
+        "title": "司普科技",
+        "chars": 238,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳司普科技",
+      "city": "深圳",
+      "district": null,
+      "website": "http://www.sipuai.com/",
+      "description": "专门针对医疗领域开发和训练的OCR模型，对医疗常见的字词，缩写，标识以及单位等情况有效识别了超过90%",
+      "sector": "医疗",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "司普大语言模型",
+        "司普智能数采平台",
+        "OCR通用内容识别",
+        "OCR医疗专业内容识别",
+        "司普智能核保行业解决方案",
+        "司普智能理赔解决方案",
+        "司普智能专家写作系统",
+        "司普智能教学助手"
+      ],
+      "customers": [
+        "金融保险行业",
+        "医药行业",
+        "教育行业",
+        "电力行业"
+      ],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳智驭未来机器人",
+    "url": "https://dynacorebike.com/index.php/zh/",
+    "pages": [
+      {
+        "url": "https://dynacorebike.com/index.php/zh/",
+        "title": "智驭未来",
+        "chars": 152,
+        "error": null
+      },
+      {
+        "url": "https://dynacorebike.com/index.php/zh/%e5%85%b3%e4%ba%8e%e6%88%91%e4%bb%ac/",
+        "title": "关于我们-智驭未来",
+        "chars": 708,
+        "error": null
+      },
+      {
+        "url": "https://dynacorebike.com/index.php/zh/%e8%81%94%e7%b3%bb%e6%88%91%e4%bb%ac/",
+        "title": "联系我们-智驭未来",
+        "chars": 176,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "智驭未来",
+      "city": "深圳",
+      "district": null,
+      "website": "https://dynacorebike.com/index.php/zh/",
+      "description": "北京大学多体动力学研究团队（刘才山教授团队）相关网站，长期从事多体系统动力学与控制方面的研究。",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "dynamotor@163.com",
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0.3
+    },
+    "error": null
+  },
+  {
+    "company": "水杉智云AI大模型",
+    "url": "http://www.zhiyun-tech.com/",
+    "pages": [
+      {
+        "url": "https://www.zhiyun-tech.com/",
+        "title": "智云官网首页",
+        "chars": 1104,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "水杉智云AI大模型",
+      "city": null,
+      "district": null,
+      "website": "https://www.zhiyun-tech.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "智蕊数据",
+    "url": "https://tags.eeworld.com.cn/tags/%E6%99%BA%E8%8A%AF%E6%95%B0%E6%8D%AE/tiezi/3",
+    "pages": [
+      {
+        "url": "https://tags.eeworld.com.cn/tags/%E6%99%BA%E8%8A%AF%E6%95%B0%E6%8D%AE/tiezi/3",
+        "title": "",
+        "chars": 153,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "智蕊数据",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "广东微寻科技",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "深圳比特涌现科技",
+    "url": "http://www.emergetech.com.cn/",
+    "pages": [
+      {
+        "url": "http://www.emergetech.com.cn/",
+        "title": "涌现科技",
+        "chars": 1578,
+        "error": null
+      },
+      {
+        "url": "http://www.emergetech.com.cn/index.php?c=category&id=6",
+        "title": "关于涌现_涌现科技",
+        "chars": 2156,
+        "error": null
+      },
+      {
+        "url": "http://www.emergetech.com.cn/index.php?c=category&id=19",
+        "title": "关于涌现_涌现科技",
+        "chars": 2156,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳比特涌现科技",
+      "city": null,
+      "district": null,
+      "website": "http://www.emergetech.com.cn/",
+      "description": "涌现科技（EMERGETECH）是一家聚焦视频编码与人眼及机器视觉处理融合的高新技术企业，提供端到端结构化智构编码方案，通过平衡算法和芯片设计优化，为行业提供高性能、低功耗、低成本的专用芯片、模组、软件工具及针对特定场景的全栈应用解决方案。",
+      "sector": "视频编码与机器视觉处理芯片",
+      "founded_year": 2018,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "(8610)62873245",
+      "email": "business@emergetech.com.cn",
+      "address": null,
+      "products": [
+        "视频处理芯片",
+        "Seirios视频加速卡",
+        "高性能服务器",
+        "轻量化边缘加速工作站"
+      ],
+      "customers": [
+        "互联网视频平台",
+        "云桌面/云手机/云游戏",
+        "广电超高清",
+        "智慧城市",
+        "安防监控",
+        "数据中心",
+        "边缘计算节点"
+      ],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深圳大览科技",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "深圳可触未来创新科技",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "深圳成渊科技",
+    "url": "https://www.zhengzhaoxi.com/",
+    "pages": [
+      {
+        "url": "https://www.zhengzhaoxi.com/",
+        "title": "专注目标---争朝夕",
+        "chars": 184,
+        "error": null
+      },
+      {
+        "url": "https://www.zhengzhaoxi.com/product",
+        "title": "专注目标---争朝夕",
+        "chars": 222,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳成渊科技",
+      "city": "深圳",
+      "district": null,
+      "website": "https://www.zhengzhaoxi.com/",
+      "description": "专注目标---争朝夕",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "争朝夕 App"
+      ],
+      "customers": [],
+      "confidence": 0.3
+    },
+    "error": null
+  },
+  {
+    "company": "深圳乐谱兰斯科技",
+    "url": "https://www.leanplans.com/",
+    "pages": [
+      {
+        "url": "https://www.leanplans.com/",
+        "title": "立谱智造-垂类大模型驱动零部件智能制造",
+        "chars": 2428,
+        "error": null
+      },
+      {
+        "url": "https://www.leanplans.com/aboutus/",
+        "title": "公司介绍 - 立谱智造",
+        "chars": 873,
+        "error": null
+      },
+      {
+        "url": "https://www.leanplans.com/contact-us/",
+        "title": "联系我们 - 立谱智造 - AI时代工业零部件智造基础设施",
+        "chars": 1025,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市乐谱兰斯科技有限公司",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": "https://www.leanplans.com/",
+      "description": "立谱智造是哈工大科技成果转化、力合科创联袂投资孵化的高新技术企业，专注AI与制造深度融合应用。由哈工大教授领衔自研「混合专家垂类大模型」赋能工业零部件设计、交易、生产全场景，为全球客户提供一站式零部件智造AI解决方案，端到端以AI驱动直接交付成果。",
+      "sector": "工业AI/智能制造",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "service@leanplans.com",
+      "address": "广东省深圳市南山区科技园北区松坪山新东路1号清华信息港科研楼1204H（模力营AI生态社区）",
+      "products": [
+        "AI多智能体",
+        "AI-DFx解决方案",
+        "零部件定制平台",
+        "AMES",
+        "AI供应链服务"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深圳深佰信息科技",
+    "url": "https://www.bws-tech.com/",
+    "pages": [
+      {
+        "url": "https://www.bws-tech.com/",
+        "title": "佰为深科技_光纤传感技术研究和产品研发",
+        "chars": 1073,
+        "error": null
+      },
+      {
+        "url": "https://www.bws-tech.com/page79.html",
+        "title": "佰为深科技公司_光纤传感技术前沿企业",
+        "chars": 1701,
+        "error": null
+      },
+      {
+        "url": "https://www.bws-tech.com/page94.html",
+        "title": "佰为深科技_光纤传感技术研究和产品研发",
+        "chars": 820,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "北京佰为深科技发展有限公司",
+      "city": "北京市",
+      "district": "通州区",
+      "website": "https://www.bws-tech.com/",
+      "description": "聚焦光纤传感领域的国家级高新技术企业，深耕点式光纤传感器及解调技术的研发、生产与市场推广，自主掌握MEMS法珀腔光纤传感器技术、光纤布拉格光栅（FBG）传感器技术、基于白光干涉和扫描光谱的光纤传感解调技术，可提供从核心器件到系统集成的全套点式光纤传感解决方案。",
+      "sector": "光纤传感",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "010-82890879",
+      "email": "market@bws-tech.com",
+      "address": "北京市通州区联东U谷永乐产业园三期33号楼",
+      "products": [
+        "法帕腔压力传感器（S200）",
+        "法帕腔力传感器（S400）",
+        "法帕腔温度压力传感器（S520）",
+        "法帕腔温度传感器（S900）",
+        "法帕腔压力传感器（S100）",
+        "光纤光栅温度传感器（S300）",
+        "光纤光栅微应变传感器（S600）",
+        "光纤光栅加速度传感器（S700）",
+        "解调模块X100",
+        "解调模块X500",
+        "解调仪Y2000",
+        "解调仪Y3000"
+      ],
+      "customers": [
+        "复旦大学附属华东医院",
+        "中国医学科学院阜外医院",
+        "中国人民解放军总医院",
+        "中国地质调查局水文地质环境地质调查中心",
+        "通号集团"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深圳哇哈哈智慧科技",
+    "url": "https://www.wahaha.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.wahaha.com.cn/",
+        "title": "娃哈哈官网",
+        "chars": 2826,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳哇哈哈智慧科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.wahaha.com.cn/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-86032866",
+      "email": null,
+      "address": "中国浙江杭州市清泰街160号（310009）",
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳渊维科技",
+    "url": "https://www.shuididp.cn/yp-c4b16eeeaf5965cb9c5bba9c4b8dd001.html",
+    "pages": [
+      {
+        "url": "https://www.shuididp.cn/yp-c4b16eeeaf5965cb9c5bba9c4b8dd001.html",
+        "title": "深圳市渊维科技有限公司",
+        "chars": 2665,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市渊维科技有限公司",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": null,
+      "description": "软件开发；人工智能应用软件开发；网络与信息安全软件开发；软件销售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；信息系统集成服务；信息咨询服务（不含许可类信息咨询服务）；信息技术咨询服务；人工智能公共服务平台技术咨询服务；教育咨询服务（不含涉许可审批的教育培训活动）；数据处理服务；数据处理和存储支持服务；工业互联网数据服务；互联网数据服务；大数据服务；企业管理咨询；科技中介服务；计算机系统服务；智能控制系统集成；咨询策划服务；数字内容制作服务（不含出版发行）；数字文化创意内容应用服务；创业投资（限投资未上市企业）；以自有资金从事投资活动。",
+      "sector": "软件和信息技术服务业",
+      "founded_year": 2024,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "深圳市南山区西丽街道云城社区兴科一街深圳国际创新谷5栋C座406",
+      "products": [],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深圳跃然创新科技",
+    "url": "https://m.qixin.com/company/4252fccb-e27f-4794-ba85-44900987f83b",
+    "pages": [
+      {
+        "url": "https://m.qixin.com/company/4252fccb-e27f-4794-ba85-44900987f83b",
+        "title": "启信宝-企业信息查询_工商信息查询-企业信用信息查询平台",
+        "chars": 210,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳跃然创新科技",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "达而观智能",
+    "url": "https://foundation.ecnu.edu.cn/0d/b6/c21771a265654/page.htm",
+    "pages": [
+      {
+        "url": "https://foundation.ecnu.edu.cn/0d/b6/c21771a265654/page.htm",
+        "title": "达而观信息科技（上海）有限公司",
+        "chars": 493,
+        "error": null
+      },
+      {
+        "url": "https://foundation.ecnu.edu.cn/3398/list.htm",
+        "title": "组织简介",
+        "chars": 964,
+        "error": null
+      },
+      {
+        "url": "https://foundation.ecnu.edu.cn/3401/list.htm",
+        "title": "联系我们",
+        "chars": 594,
+        "error": null
+      },
+      {
+        "url": "http://foundation.ecnu.edu.cn/3401/list.htm",
+        "title": "联系我们",
+        "chars": 594,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "达而观信息科技（上海）有限公司",
+      "city": "上海",
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "广东爱简艺人",
+    "url": "https://qy.zhaobiao.cn/enterprise_v_9b4c1506264dc0d4d69f5d7efa3d9e9f.html",
+    "pages": [
+      {
+        "url": "https://qy.zhaobiao.cn/enterprise_v_9b4c1506264dc0d4d69f5d7efa3d9e9f.html",
+        "title": "广东爱简艺人工智能科技有限公司企业信息",
+        "chars": 2021,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "广东爱简艺人工智能科技有限公司",
+      "city": "广州市",
+      "district": "海珠区",
+      "website": null,
+      "description": "软件开发；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；图文设计制作；云计算设备销售；人工智能通用应用系统；咨询策划服务；人工智能行业应用系统集成服务；云计算装备技术服务；互联网设备制造；信息系统集成服务；通信设备制造；人工智能基础软件开发；网络技术服务；人工智能应用软件开发；5G通信技术服务；计算机系统服务；数字文化创意软件开发；网络与信息安全软件开发；企业管理；知识产权服务（专利代理服务除外）；通信传输设备专业修理；广告设计、代理；数字技术服务；云计算设备制造；组织文化艺术交流活动；信息技术咨询服务；园林绿化工程施工；体育场地设施工程施工",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "广州市海珠区艺景路240号302室（部位:之1）",
+      "products": [],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "幻世技术",
+    "url": "http://www.4578.cn/",
+    "pages": [
+      {
+        "url": "http://www.4578.cn/",
+        "title": "",
+        "chars": 88,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "重庆市幻世网络科技有限公司",
+      "city": "重庆市",
+      "district": null,
+      "website": "http://www.4578.cn/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0.3
+    },
+    "error": null
+  },
+  {
+    "company": "积广科技",
+    "url": "http://www.gkong.com/weekly/084/iBase.htm",
+    "pages": [
+      {
+        "url": "http://www.gkong.com/weekly/084/iBase.htm",
+        "title": "Ƽ--Ƕʽϵͳר",
+        "chars": 896,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "积广科技",
+      "city": "上海",
+      "district": null,
+      "website": "http://www.ibase-china.com",
+      "description": "嵌入式系统专业厂商，主要产品包括单板电脑(SBC)、嵌入式板卡(Embedded Board)、接口卡(Interface Card)、网络应用平台(Network Appliance)、数字视频录像系统(DVR)等，主要用途为工业自动化、通讯网络、金融、医疗等领域。",
+      "sector": "嵌入式系统",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "021-51501588",
+      "email": "sales@ibase-china.com",
+      "address": "上海市定路108816A",
+      "products": [
+        "单板电脑(SBC)",
+        "嵌入式板卡(Embedded Board)",
+        "接口卡(Interface Card)",
+        "网络应用平台(Network Appliance)",
+        "数字视频录像系统(DVR)",
+        "IB882",
+        "MB930GF",
+        "IB866",
+        "MI945"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "霁米科技",
+    "url": "https://www.xgimi.com/index.html",
+    "pages": [
+      {
+        "url": "https://www.xgimi.com/index.html",
+        "title": "极米科技官方网站",
+        "chars": 13,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "极米科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.xgimi.com/index.html",
+      "description": "极米科技专注于智能投影和激光电视领域。公司主要产品包含RS系列投影、H系列投影、Z系列投影、便携系列投影和激光电视系列等。",
+      "sector": "智能投影和激光电视",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "RS系列投影",
+        "H系列投影",
+        "Z系列投影",
+        "便携系列投影",
+        "激光电视系列"
+      ],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "库博生物",
+    "url": "http://www.unihopper.biz/",
+    "pages": [
+      {
+        "url": "http://www.unihopper.biz/",
+        "title": "广东库博精密科技集团股份有限公司",
+        "chars": 4693,
+        "error": null
+      },
+      {
+        "url": "http://www.unihopper.biz/about-us.html",
+        "title": "库博-广东库博精密科技集团股份有限公司",
+        "chars": 2887,
+        "error": null
+      },
+      {
+        "url": "http://www.unihopper.biz/contact-us.html",
+        "title": "联系我们-广东库博精密科技集团股份有限公司",
+        "chars": 1163,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "广东库博精密科技集团股份有限公司",
+      "city": "肇庆",
+      "district": null,
+      "website": "http://www.unihopper.biz/",
+      "description": "Unihopper库博是一家设计与文化理念源于欧洲的全球化家居五金品牌，融合欧洲精髓，服务全球市场。",
+      "sector": "家居五金",
+      "founded_year": 2003,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0758-3212900",
+      "email": "sales@unihopper.biz",
+      "address": "肇庆高新技术产业开发区创业路9号库博工业园",
+      "products": [
+        "铰链系列",
+        "导轨系列",
+        "骑马抽系列",
+        "衣柜收纳",
+        "橱柜收纳",
+        "水槽龙头",
+        "灯光照明系统",
+        "分隔系统",
+        "卫浴与阳台收纳"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "奇迪健康科技",
+    "url": "https://www.51miit.com/details/90a8e8501ad74b7bbcdcb468bb3ec8af/",
+    "pages": [
+      {
+        "url": "https://www.51miit.com/details/90a8e8501ad74b7bbcdcb468bb3ec8af/",
+        "title": "奇迪健康科技（深圳）有限公司 合字B2-20250099 许可证信息-增值电信业务经营许可证验证档案库",
+        "chars": 1027,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "奇迪健康科技（深圳）有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0.3
+    },
+    "error": null
+  },
+  {
+    "company": "轻量化AR眼镜项目",
+    "url": "http://www.weseeing.com/index.html",
+    "pages": [
+      {
+        "url": "http://www.weseeing.com/index.html",
+        "title": "看见智能 | AI眼镜·AR眼镜·音视频解决方案｜智能眼镜ODM定制厂家",
+        "chars": 2944,
+        "error": null
+      },
+      {
+        "url": "http://www.weseeing.com/about.html",
+        "title": "关于我们｜深圳市看见智能科技有限公司 - 智能眼镜与AR眼镜研发制造 | 音视频产品解决方案",
+        "chars": 1403,
+        "error": null
+      },
+      {
+        "url": "http://www.weseeing.com/contact.html",
+        "title": "联系我们｜智能眼镜与AR眼镜方案咨询 - 看见智能",
+        "chars": 1089,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市看见智能科技有限公司",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": "http://www.weseeing.com",
+      "description": "深圳市看见智能科技有限公司成立于2015年，专注AI眼镜、AR眼镜、智能头盔与音视频采集终端的研发与制造，提供AI眼镜解决方案、AR眼镜解决方案、音视频解决方案，支持ODM/OEM整机定制与量产交付。",
+      "sector": "AI眼镜、AR眼镜、智能头盔与音视频采集终端",
+      "founded_year": 2015,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "18929364955",
+      "email": "yunzhou@weseeing.com",
+      "address": "深圳市南山区深圳湾科技生态园9栋B3座14楼",
+      "products": [
+        "AR眼镜 G1",
+        "智能眼镜 X1",
+        "UVC眼镜 SH0002",
+        "智能安全帽 H2"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "人才很忙",
+    "url": "http://www.qichamao.com/orgcompany/searchitemdtl/8148ba14dbb94dfcc129948260041d51.html",
+    "pages": [
+      {
+        "url": "http://www.qichamao.com/orgcompany/searchitemdtl/8148ba14dbb94dfcc129948260041d51.html",
+        "title": "企查猫（企业查询宝）-一键查询全国企业工商信用信息_公司查询_工商查询_国家企业信用信息查询",
+        "chars": 105,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "人才很忙",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳发发智行",
+    "url": "https://apps.apple.com/cn/app/%E5%B7%B4%E5%A3%AB%E5%8F%91%E5%8F%91%E8%BD%A6%E9%98%9F/id6745144587",
+    "pages": [
+      {
+        "url": "https://apps.apple.com/cn/app/%E5%B7%B4%E5%A3%AB%E5%8F%91%E5%8F%91%E8%BD%A6%E9%98%9F/id6745144587",
+        "title": "‎巴士发发车队 App - App Store",
+        "chars": 4931,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳发发智行科技有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": null,
+      "description": "嘟嘟巴士针对企业出行难点，推出了企业班车、企业用车、班车系统三类服务，场景覆盖企业上下班用车、跨境用车、高端商务接待、展会赛事、用车业务管理等。同时通过上下游资源整合，推出受众精准覆盖的巴士广告业务",
+      "sector": "企业出行服务",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "企业班车",
+        "企业用车",
+        "班车系统",
+        "巴士广告业务",
+        "巴士发发车队 App"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "深圳斐颂信息",
+    "url": "https://cloud.tencent.com/developer/article/2517008",
+    "pages": [
+      {
+        "url": "https://cloud.tencent.com/developer/article/2517008",
+        "title": "2025零代码建站平台大比拼：Fixon、WordPress、Wix与Weebly，一站式指南！-腾讯云开发者社区-腾讯云",
+        "chars": 2888,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳斐颂信息技术有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": null,
+      "description": "由深圳斐颂信息技术有限公司与加拿大团队联合开发的全能型无代码建站平台Fixon曜约，支持PC、移动与平板端自适应展示，集日程调度、在线预订、物业托管、电子商务、加密货币支付于一体，并提供实时数据分析与AI QR码生成功能。",
+      "sector": "零代码建站平台",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "Fixon曜约"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "深圳机智引擎",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "深圳聚渲信息",
+    "url": "http://www.joyrender.com/",
+    "pages": [
+      {
+        "url": "http://www.joyrender.com/",
+        "title": "",
+        "chars": 10078,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳聚渲信息",
+      "city": "深圳",
+      "district": null,
+      "website": "http://www.joyrender.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳聚源视芯",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "深圳灵图创新",
+    "url": "http://wydb.leshanvc.com/wap/company.php?id=47473",
+    "pages": [
+      {
+        "url": "http://wydb.leshanvc.com/wap/company.php?id=47473",
+        "title": "深圳灵图创新科技有限公司_灵图创新",
+        "chars": 761,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳灵图创新科技有限公司",
+      "city": "深圳市",
+      "district": "前海深港合作区",
+      "website": null,
+      "description": "灵图创新科技是一家影视游戏创作发布平台服务商，搭建无门槛影视游戏创作发布平台“言出法随”，利用多模态AI，实现一句话到多种数字媒体内容(图像、视频、VR/AR、3D)的一键式生成，将创作能力和权利下放到每个人，实现内容原生。",
+      "sector": "影视制作",
+      "founded_year": 2020,
+      "team_size": null,
+      "funding_stage": "天使轮",
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "深圳市前海深港合作区南山街道前海深港合作区前湾一路63号万科前海企业公馆1栋A单元2层KB11",
+      "products": [
+        "言出法随"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深圳绿茵邦",
+    "url": "http://szslyhbkj963.dayinmao.com/",
+    "pages": [
+      {
+        "url": "http://szslyhbkj963.dayinmao.com/",
+        "title": "深圳市绿茵环保科技有限公司",
+        "chars": 1115,
+        "error": null
+      },
+      {
+        "url": "https://szslyhbkj963.dayinmao.com/contact/",
+        "title": "联系方式_深圳市绿茵环保科技有限公司",
+        "chars": 823,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市绿茵环保科技有限公司",
+      "city": "深圳",
+      "district": "龙华区",
+      "website": "http://szslyhbkj963.dayinmao.com/",
+      "description": "环境科学技术研究；清洁服务；建筑工程施工；建筑装饰工程施工；公共设施上门维护；物业管理；建材的销售；白蚁防治、农业、林业有害生物防治工程施工、石材上蜡工程、养护工程施工的设计与施工。",
+      "sector": "环保",
+      "founded_year": 2019,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "深圳市龙华区龙华街道清华社区新业一路6号厂房3层B栋311",
+      "products": [],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深圳深思未来教育",
+    "url": "http://www.bidizhaobiao.com/gongsi_267511715516211200.html",
+    "pages": [
+      {
+        "url": "http://www.bidizhaobiao.com/gongsi_267511715516211200.html",
+        "title": "",
+        "chars": 36,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳深思未来教育",
+      "city": "深圳",
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳埃睿智慧",
+    "url": "http://www.airelay.com.cn/",
+    "pages": [
+      {
+        "url": "http://www.airelay.com.cn/",
+        "title": "埃睿智能(AIRELAY) - 物联网软硬件整体解决方案服务商 - 官方网站",
+        "chars": 1048,
+        "error": null
+      },
+      {
+        "url": "http://www.airelay.com.cn/about.html",
+        "title": "关于我们 - -埃睿智能(AIRELAY) - 物联网软硬件整体解决方案服务商 - 官方网站",
+        "chars": 894,
+        "error": null
+      },
+      {
+        "url": "http://www.airelay.com.cn/about.html#jianjie",
+        "title": "关于我们 - -埃睿智能(AIRELAY) - 物联网软硬件整体解决方案服务商 - 官方网站",
+        "chars": 894,
+        "error": null
+      },
+      {
+        "url": "http://www.airelay.com.cn/about.html#rongyu",
+        "title": "关于我们 - -埃睿智能(AIRELAY) - 物联网软硬件整体解决方案服务商 - 官方网站",
+        "chars": 894,
+        "error": null
+      },
+      {
+        "url": "http://www.airelay.com.cn/about.html#huoban",
+        "title": "关于我们 - -埃睿智能(AIRELAY) - 物联网软硬件整体解决方案服务商 - 官方网站",
+        "chars": 894,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "青岛埃睿智能科技有限公司",
+      "city": "青岛",
+      "district": "崂山区",
+      "website": "http://www.airelay.com.cn/",
+      "description": "集智能软硬件研发与生产为一体的高新技术企业，物联网整体解决方案服务商，专注于物联网新零售领域，拥有从硬件设计、PCBA、嵌入式系统、智能联网模块、SaaS管理软件、App及小程序终端应用到物联网云平台及人工智能的全部自主技术。",
+      "sector": "物联网",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "4000-96-8838",
+      "email": "airelay@163.com",
+      "address": "山东省青岛市崂山区科苑纬一路1号青岛国际创新园D2座2307",
+      "products": [
+        "社区自动售水机系统",
+        "净水器租赁系统",
+        "电子烟自动售货机系统",
+        "社区自动碾米机系统",
+        "自动洗车机系统",
+        "管道直饮水系统",
+        "物联网电控板",
+        "水表产品",
+        "主板产品",
+        "整机产品",
+        "人人水站",
+        "智饮云",
+        "睿洗车",
+        "人人米站"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深圳爱定智时代",
+    "url": "http://aidiyage.com/",
+    "pages": [
+      {
+        "url": "http://aidiyage.com/",
+        "title": "爱定智 - aidiyage.com",
+        "chars": 54,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳爱定智时代",
+      "city": "深圳",
+      "district": null,
+      "website": "http://aidiyage.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0.2
+    },
+    "error": null
+  },
+  {
+    "company": "深圳布尔量",
+    "url": "http://qydb.leshanvc.com/wap/company.php?id=46327",
+    "pages": [
+      {
+        "url": "http://qydb.leshanvc.com/wap/company.php?id=46327",
+        "title": "深圳市布尔量科技有限公司_布尔向量BOOLV",
+        "chars": 1030,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市布尔量科技有限公司",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": "https://boolv.tech/",
+      "description": "布尔向量BOOLV是一家AI视频生成SaaS服务商。聚焦AI与数据挖掘技术，自动生成营销短视频。并以此为切入点，打造完整链路的全球短视频平台。目前，主要服务对象为服装出海品牌和海外DTC品牌。",
+      "sector": "人工智能",
+      "founded_year": 2021,
+      "team_size": null,
+      "funding_stage": "A轮",
+      "funding_amount": "近千万美元",
+      "phone": null,
+      "email": null,
+      "address": "深圳市南山区招商街道水湾社区太子路111号水湾壹玖柒玖广场(二期)19H",
+      "products": [],
+      "customers": [
+        "服装出海品牌",
+        "海外DTC品牌"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深圳晨风红外",
+    "url": "http://www.szcf.net.cn/",
+    "pages": [
+      {
+        "url": "http://www.szcf.net.cn/",
+        "title": "ڳܿƼ",
+        "chars": 442,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳晨风红外",
+      "city": "深圳",
+      "district": null,
+      "website": "http://www.szcf.net.cn/",
+      "description": "深圳晨风红外科技有限公司是一家以红外技术应用、微波技术应用等为核心的高科技企业，一直从事IC/ID一卡通系统、智能通道闸、智能门禁等产品的研发与生产。",
+      "sector": "安防/一卡通系统",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "深圳市宝安区沙井街道安泰路泰然科技园2132C-217J",
+      "products": [
+        "一卡通系统",
+        "智能通道闸",
+        "智能门禁",
+        "考勤系统",
+        "消费系统",
+        "水控系统",
+        "电梯控制系统",
+        "停车场系统",
+        "图书管理系统",
+        "会议签到系统",
+        "校园一卡通系统",
+        "楼宇对讲系统"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "深圳利豹",
+    "url": "https://detail.zol.com.cn/manufacturer/index34799.html",
+    "pages": [
+      {
+        "url": "https://detail.zol.com.cn/manufacturer/index34799.html",
+        "title": "ܡԴɢ_(й)˾-ZOLйش߳Ƶ",
+        "chars": 81,
+        "error": null
+      },
+      {
+        "url": "https://detail.zol.com.cn/manufacturer/index34799_about.html",
+        "title": "(й)˾-ZOLйش߳Ƶ",
+        "chars": 81,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳利豹",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳流一未来",
+    "url": "http://m.iask.sina.com.cn/b/newQ0TiNHoMXWD.html",
+    "pages": [
+      {
+        "url": "http://m.iask.sina.com.cn/b/newQ0TiNHoMXWD.html",
+        "title": "403 Forbidden",
+        "chars": 37,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳流一未来",
+      "city": "深圳",
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳迁星智能",
+    "url": "https://www.shuididp.cn/yp-020391c72361f3ba35f76227f0978c01.html",
+    "pages": [
+      {
+        "url": "https://www.shuididp.cn/yp-020391c72361f3ba35f76227f0978c01.html",
+        "title": "深圳市迁星智能科技有限公司",
+        "chars": 2878,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市迁星智能科技有限公司",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": null,
+      "description": "智能机器人的研发；智能机器人销售；人工智能硬件销售；人工智能公共服务平台技术咨询服务；软件销售；软件开发；通讯设备销售；人工智能基础资源与技术平台；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；玩具销售；工业机器人销售；环境保护专用设备销售；日用化学产品销售；国内贸易代理；电子元器件批发；电子元器件与机电组件设备销售；电力电子元器件销售；信息咨询服务（不含许可类信息咨询服务）；知识产权服务（专利代理服务除外）；版权代理；商标代理；货物进出口；技术进出口；进出口代理；游艺用品及室内游艺器材制造；游艺用品及室内游艺器材销售；游艺及娱乐用品销售。",
+      "sector": "软件和信息技术服务业",
+      "founded_year": 2024,
+      "team_size": 11,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "深圳市南山区西丽街道西丽社区兴科一街万科云城一期八栋C座205",
+      "products": [],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深圳智软通",
+    "url": "https://www.mxgent.cn/news/2025/24765/",
+    "pages": [
+      {
+        "url": "https://www.mxgent.cn/news/2025/24765/",
+        "title": "智能电话营销：重构客户沟通，逆袭销售难题 - 智软通科技 MXgent",
+        "chars": 2812,
+        "error": null
+      },
+      {
+        "url": "https://www.mxgent.cn/about/",
+        "title": "MXgent-公司介绍 智软通科技 MXgent",
+        "chars": 1612,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市智软通科技有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": "https://www.mxgent.cn",
+      "description": "一家专注于人工智能技术研发与应用的高科技企业，致力于通过自主创新的AI解决方案，赋能各行业客户实现智能化升级和业务增长。团队汇聚了来自海外博士，在Agent、RAG调优、图像检测等方向有多项核心技术和丰富的项目经验。",
+      "sector": "人工智能",
+      "founded_year": 2024,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "business@clonebot.ai",
+      "address": null,
+      "products": [
+        "行业Agent",
+        "AI模型工具",
+        "AI模型调优",
+        "智能电话营销系统",
+        "数智员工",
+        "语音通话",
+        "图像检测"
+      ],
+      "customers": [
+        "金融行业的某大型银行"
+      ],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深圳算海",
+    "url": "https://m.qixin.com/company/6706e8a4-cd61-444d-8574-f5e47edfb7fd",
+    "pages": [
+      {
+        "url": "https://m.qixin.com/company/6706e8a4-cd61-444d-8574-f5e47edfb7fd",
+        "title": "启信宝-企业信息查询_工商信息查询-企业信用信息查询平台",
+        "chars": 210,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳算海",
+      "city": "深圳",
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "深圳腾语互动",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "深圳星灿智能机器人",
+    "url": "https://city.sina.com.cn/city_tech/2025-06-06/detail-ineyyzve3529839.shtml",
+    "pages": [
+      {
+        "url": "https://city.sina.com.cn/city_tech/2025-06-06/detail-ineyyzve3529839.shtml",
+        "title": "深圳星灿完成千万级天使轮融资  专注家庭智能机器人|融资|智能机器人|机器人_新浪科技_新浪网",
+        "chars": 2165,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳星灿智能机器人有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": null,
+      "description": "聚焦无人驾驶与具身智能技术研发，目标成为家庭智能机器人领域全球领军品牌，以割草机器人作为市场切入点。",
+      "sector": "家庭智能机器人",
+      "founded_year": 2025,
+      "team_size": null,
+      "funding_stage": "天使轮",
+      "funding_amount": "千万级人民币",
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "割草机器人",
+        "智能轮椅"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深圳星辰通用机器人",
+    "url": "https://x-eai.com/",
+    "pages": [
+      {
+        "url": "https://x-eai.com/",
+        "title": "星辰通用机器人",
+        "chars": 427,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳星辰通用机器人",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": "https://x-eai.com/",
+      "description": "星辰通用机器人有限公司，具身智能机器人商业化落地专家。",
+      "sector": "具身智能机器人",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "159-8200-3551",
+      "email": "sale@x-eai.com",
+      "address": "深圳市南山区深圳国际创新谷5栋B座2012",
+      "products": [
+        "SR-1 轮式双臂机器人"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深圳元伴",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "网境智能",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "新磁超导",
+    "url": "http://www.sensors-ic.com/",
+    "pages": [
+      {
+        "url": "http://www.sensors-ic.com/",
+        "title": "新磁（上海）电子有限公司  MEMS传感器|采集|IoT|惯性姿态罗盘|压力红外|半导体",
+        "chars": 984,
+        "error": null
+      },
+      {
+        "url": "http://www.sensors-ic.com/about.asp",
+        "title": "新磁（上海）电子有限公司  MEMS传感器|采集|IoT|惯性姿态罗盘|压力红外|半导体",
+        "chars": 586,
+        "error": null
+      },
+      {
+        "url": "http://www.sensors-ic.com/contact.asp",
+        "title": "新磁（上海）电子有限公司  MEMS传感器|采集|IoT|惯性姿态罗盘|压力红外|半导体",
+        "chars": 467,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "新磁（上海）电子有限公司",
+      "city": "上海",
+      "district": "浦东新区",
+      "website": "http://www.sensors-ic.com/",
+      "description": "新磁（上海）电子有限公司于2013年成立于上海张江高新技术开发区，用自主研发+高端进口模式，专业提供探测磁场、转速、角度、位移、电流、压力、流量、姿态等有关的芯片,组件及小系统方案。",
+      "sector": "半导体/传感器",
+      "founded_year": 2013,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "15601837360",
+      "email": "info@sensors-ic.com",
+      "address": "上海浦东新区张江高新技术产业开发区上丰路/977号/1幢B座",
+      "products": [
+        "集成压力传感器",
+        "可见光红外双光三光吊舱产品",
+        "磁通门传感器",
+        "磁化率仪",
+        "数字三轴梯度磁力仪",
+        "亥姆霍兹和梅里特线圈",
+        "数据转换器",
+        "三轴磁场探头",
+        "汽车陀螺仪",
+        "MEMS加速度计",
+        "MotionTracking加速度传感器",
+        "超声波飞行时间传感器",
+        "高精度非接触光纤高温计",
+        "金属零部件Metal Heater",
+        "质量流量控制器MFC",
+        "压力控制器PC",
+        "压力传感器",
+        "微波电源",
+        "陶瓷结构件",
+        "陶瓷基板",
+        "PZT压电陶瓷致动器",
+        "陶瓷管壳",
+        "ASIC芯片定制设计及IP",
+        "磁传感器MR磁通门GMI光泵",
+        "高斯计",
+        "特斯拉计",
+        "磁强计",
+        "磁场发生装置",
+        "线圈",
+        "磁记忆诊断仪",
+        "漏磁检测仪",
+        "变送器",
+        "IoT无线监测终端"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "贞观创新",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "光鉴科技",
+    "url": "https://www.deptrum.com/",
+    "pages": [
+      {
+        "url": "https://www.deptrum.com/zh/",
+        "title": "&#20809;&#37492;&#31185;&#25216;&#65372;&#21019;&#36896;&#26032;&#32500;&#24230;",
+        "chars": 3297,
+        "error": null
+      },
+      {
+        "url": "https://www.deptrum.com/zh/contact.html",
+        "title": "联系我们｜光鉴科技",
+        "chars": 701,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "光鉴科技",
+      "city": "深圳",
+      "district": "福田区",
+      "website": "https://www.deptrum.com/zh/",
+      "description": "聚焦视觉感知，助力物理AI进入真实世界，提供视觉感知产品、解决方案与技术体系，覆盖生物识别、机器人和具身智能应用。",
+      "sector": "3D视觉感知",
+      "founded_year": 2018,
+      "team_size": "100+核心研发团队",
+      "funding_stage": "B轮",
+      "funding_amount": "2亿元",
+      "phone": "021-60743227",
+      "email": "bd@deptrum.com",
+      "address": "深圳市福田区滨河大道中洲湾西座",
+      "products": [
+        "Libra 系列 AI双目视觉模组",
+        "Nebula 411",
+        "Nebula 410",
+        "Nebula 400",
+        "Nebula 220",
+        "Aurora 940",
+        "Aurora 900 系列",
+        "Aurora 930 系列",
+        "Veinshine 系列",
+        "刷掌支付整机系列",
+        "刷掌验证整机系列",
+        "Pisca 系列",
+        "Libra 2000 系列",
+        "Libra 1000＆3000 系列"
+      ],
+      "customers": [
+        "追觅",
+        "易启未来",
+        "具身风暴",
+        "松延动力",
+        "穹彻智能",
+        "英飞凌",
+        "梁溪科技城数发集团",
+        "沙特BioPrints"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "李未可科技",
+    "url": "https://lawaken.com/",
+    "pages": [
+      {
+        "url": "https://lawaken.com/",
+        "title": "李未可",
+        "chars": 2848,
+        "error": null
+      },
+      {
+        "url": "https://lawaken.com/#about",
+        "title": "李未可",
+        "chars": 2848,
+        "error": null
+      },
+      {
+        "url": "https://lawaken.com/#contact",
+        "title": "李未可",
+        "chars": 2848,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "李未可科技",
+      "city": "合肥",
+      "district": "包河区",
+      "website": "https://lawaken.com/",
+      "description": "李未可,李未可AR眼镜,AR眼镜,AR智能眼镜,运动眼镜,AR运动眼镜",
+      "sector": "AR智能眼镜",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "jiangshuwen@lawaken.com",
+      "address": "安徽省合肥市包河区淝河镇龙川路99号中国视界A4楼1201",
+      "products": [
+        "李未可View AI眼镜 旅拍版",
+        "李未可City AI眼镜 时尚版",
+        "李未可City Air AI眼镜 商务版",
+        "李未可 S1 Pro 专业运动版",
+        "李未可 S1 潮流运动版",
+        "李未可AI App"
+      ],
+      "customers": [],
+      "confidence": 0.7
+    },
+    "error": null
+  },
+  {
+    "company": "万魔声学",
+    "url": "http://www.1more.com/",
+    "pages": [
+      {
+        "url": "https://www.1more.com/index.html",
+        "title": "1MORE官网_1MORE万魔官方网站",
+        "chars": 850,
+        "error": null
+      },
+      {
+        "url": "https://www.1more.com/aboutus.html",
+        "title": "1MORE万魔耳机_中国十大耳机品牌",
+        "chars": 1426,
+        "error": null
+      },
+      {
+        "url": "https://www.1more.com/news/newIndex",
+        "title": "万魔声学-耳机资讯_耳机评测_蓝牙耳机资讯_圈铁耳机-万魔公司资讯中心",
+        "chars": 1332,
+        "error": null
+      },
+      {
+        "url": "https://www.1more.com/contactus.html",
+        "title": "如何联系我们1MORE_1MORE官网",
+        "chars": 655,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "万魔声学股份有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.1more.com/index.html",
+      "description": "1MORE是一个专注于耳机领域的国际化品牌，1MORE官网提供1MORE降噪耳机、真无线耳机、蓝牙耳机等全系列产品信息、在线购买及客户售后服务。",
+      "sector": "耳机音频产品",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-992-0909",
+      "email": "1moreservice@1more.com",
+      "address": null,
+      "products": [
+        "降噪耳机",
+        "真无线耳机",
+        "蓝牙耳机",
+        "圈铁耳机",
+        "HiFi耳机",
+        "音箱",
+        "配件"
+      ],
+      "customers": [],
+      "confidence": 0.7
+    },
+    "error": null
+  },
+  {
+    "company": "招商银行金融科技",
+    "url": "http://www.cmbchina.com/",
+    "pages": [
+      {
+        "url": "https://www.cmbchina.com/",
+        "title": "一网通主页 -- 招商银行官方网站",
+        "chars": 3804,
+        "error": null
+      },
+      {
+        "url": "https://www.cmbchina.com/privatebank/privateBankInfo?guid=70f150f1-12d2-48f1-a454-fa23051c1bd4",
+        "title": "",
+        "chars": 2989,
+        "error": null
+      },
+      {
+        "url": "https://www.cmbchina.com/privatebank/privateBankInfo?guid=6c740abc-6e86-4484-8d2f-f7d0b2f99a13",
+        "title": "",
+        "chars": 3552,
+        "error": null
+      },
+      {
+        "url": "https://www.cmbchina.com/Personal/CGJR/CGJRInfo?guid=1756df6a-2e9a-4f63-a839-5389a4c71382",
+        "title": "",
+        "chars": 6083,
+        "error": null
+      },
+      {
+        "url": "https://www.cmbchina.com/corporate/firmbank/firmbankInfo?guid=22ea5cf0-8727-45b7-93f8-e21f4d6e0d54",
+        "title": "",
+        "chars": 3017,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "招商银行金融科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.cmbchina.com/",
+      "description": "招商银行官方网站，提供个人业务、公司业务、信用卡等一站式综合金融服务。",
+      "sector": "金融",
+      "founded_year": 1987,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "95555",
+      "email": null,
+      "address": null,
+      "products": [
+        "一卡通",
+        "金葵花卡",
+        "一网通",
+        "招商银行App",
+        "掌上生活App",
+        "招贷App",
+        "企业银行U-BANK",
+        "招商银行财资管理云(CBS)",
+        "产品一点通小程序",
+        "掌上托管App"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "深圳征信",
+    "url": "https://www.szscredit.com/",
+    "pages": [
+      {
+        "url": "https://www.szscredit.com/",
+        "title": "深圳征信官网",
+        "chars": 770,
+        "error": null
+      },
+      {
+        "url": "https://www.szscredit.com/contactUs.html",
+        "title": "深圳征信官网",
+        "chars": 1000,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳征信服务有限公司",
+      "city": "深圳",
+      "district": "福田区",
+      "website": "https://www.szscredit.com/",
+      "description": "深圳信用（征信）服务平台立足深圳、面向湾区，致力于服务中小企业，推动实体经济发展，打造湾区数字经济先行示范。",
+      "sector": "征信服务",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-993-3056",
+      "email": "service@szscredit.com",
+      "address": "广东省深圳市福田区深业上城A座10层",
+      "products": [
+        "信用风控产品",
+        "信用服务"
+      ],
+      "customers": [
+        "中小企业"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "微民保险",
+    "url": "https://www.wesure.cn/",
+    "pages": [
+      {
+        "url": "https://www.wesure.cn/",
+        "title": "腾讯微保 - 腾讯官方保险代理平台",
+        "chars": 10358,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "微民保险",
+      "city": null,
+      "district": null,
+      "website": "https://www.wesure.cn/",
+      "description": "腾讯微保，是腾讯官方保险代理平台，成立于2017年11月，携手国内知名保险公司为用户提供专业的医疗险、车险、财产险等保险选购及理赔服务，累计服务用户 1 亿+。",
+      "sector": "保险代理",
+      "founded_year": 2017,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "医疗险",
+        "车险",
+        "财产险",
+        "增额终身寿险"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "中付支付",
+    "url": "https://www.qtopay.cn/",
+    "pages": [
+      {
+        "url": "https://www.qtopay.cn/",
+        "title": "中付支付科技有限公司 -",
+        "chars": 725,
+        "error": null
+      },
+      {
+        "url": "https://www.qtopay.cn/?page_id=152",
+        "title": "关于我们 | 中付支付科技有限公司",
+        "chars": 1147,
+        "error": null
+      },
+      {
+        "url": "https://www.qtopay.cn/?page_id=254",
+        "title": "联系我们 | 中付支付科技有限公司",
+        "chars": 800,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "中付支付科技有限公司",
+      "city": "深圳市",
+      "district": "罗湖区",
+      "website": "https://www.qtopay.cn/",
+      "description": "国内领先的独立第三方支付企业，为各类企业及个人提供安全、便捷和保密的综合电子支付服务。",
+      "sector": "第三方支付",
+      "founded_year": 2007,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-7006-889",
+      "email": null,
+      "address": "深圳市罗湖区笋岗街道笋西社区红岭北路1068号城脉金融中心大厦21层07单元",
+      "products": [
+        "银行卡收单",
+        "互联网支付",
+        "聚合支付",
+        "电子发票"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "赢时胜",
+    "url": "https://www.zbytb.com/c-EHZkm/",
+    "pages": [
+      {
+        "url": "https://www.zbytb.com/c-EHZkm/",
+        "title": "",
+        "chars": 3560,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "赢时胜",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "金证股份",
+    "url": "https://www.szkingdom.com/",
+    "pages": [
+      {
+        "url": "https://www.szkingdom.com/",
+        "title": "金证股份--国内领军的金融科技全领域服务商",
+        "chars": 8921,
+        "error": null
+      },
+      {
+        "url": "https://www.szkingdom.com/about",
+        "title": "金证股份--国内领军的金融科技全领域服务商",
+        "chars": 8785,
+        "error": null
+      },
+      {
+        "url": "https://www.szkingdom.com/contact",
+        "title": "金证股份--国内领军的金融科技全领域服务商",
+        "chars": 2525,
+        "error": null
+      },
+      {
+        "url": "https://www.szkingdom.com/about#gongsijieshao",
+        "title": "金证股份--国内领军的金融科技全领域服务商",
+        "chars": 8785,
+        "error": null
+      },
+      {
+        "url": "https://www.szkingdom.com/about#fazhanlicheng",
+        "title": "金证股份--国内领军的金融科技全领域服务商",
+        "chars": 8785,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "金证股份",
+      "city": "深圳",
+      "district": "南山区",
+      "website": "https://www.szkingdom.com/",
+      "description": "国内领军的金融科技全领域服务商，主业聚焦金融科技，深化布局财富科技、投资科技基石业务板块，为证券、基金、银行、保险、信托、期货、支付结算机构、金控集团、交易所、监管单位等行业客户提供全技术栈、全产品线的数智化转型解决方案。",
+      "sector": "金融科技",
+      "founded_year": 1998,
+      "team_size": "6800余人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-83172999",
+      "email": "jzservice@szkingdom.com",
+      "address": "深圳市南山区高新南五道金证科技大楼(8-9楼)",
+      "products": [
+        "FS2.5新一代核心交易系统",
+        "A8新一代投资交易系统",
+        "KOCA开放云原生平台",
+        "KOCA-AI大模型应用平台",
+        "IBOR3.0投资簿记系统",
+        "MTA份额登记系统",
+        "估值核算系统",
+        "OP与运营管理平台",
+        "RPA业务流程自动化系统",
+        "新一代FICC固收综合交易系统",
+        "全渠道客服中心系统",
+        "区域股权市场综合服务平台"
+      ],
+      "customers": [
+        "中信证券",
+        "中金财富证券",
+        "华福证券",
+        "华兴证券",
+        "平安证券",
+        "申万宏源证券",
+        "国投证券",
+        "银河证券",
+        "华泰国际",
+        "国元证券",
+        "博时基金",
+        "鹏扬基金",
+        "华润信托",
+        "中国人寿",
+        "财通证券",
+        "海通证券",
+        "国泰海通",
+        "中国证监会",
+        "湖南股权交易所",
+        "网联支付清算平台",
+        "邮储银行",
+        "中邮邮惠万家银行",
+        "山东城商联盟",
+        "国银金租"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "财富趋势",
+    "url": "https://www.tdx.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.tdx.com.cn/",
+        "title": "通达信软件 - 深圳市财富趋势科技股份有限公司",
+        "chars": 1489,
+        "error": null
+      },
+      {
+        "url": "https://www.tdx.com.cn/article/198.html",
+        "title": "通达信关于2026年自动控制程序TdxCon添加节假日例外的通知 - 通达信软件 - 深圳市财富趋势科技股份有限公司",
+        "chars": 1442,
+        "error": null
+      },
+      {
+        "url": "https://www.tdx.com.cn/article/194.html",
+        "title": "关于防范不法分子冒用我公司名义进行诈骗的严正声明 - 通达信软件 - 深圳市财富趋势科技股份有限公司",
+        "chars": 2008,
+        "error": null
+      },
+      {
+        "url": "https://www.tdx.com.cn/article/176.html",
+        "title": "关于2025年自动控制程序添加节假日例外的通知 - 通达信软件 - 深圳市财富趋势科技股份有限公司",
+        "chars": 1257,
+        "error": null
+      },
+      {
+        "url": "https://www.tdx.com.cn/article/168.html",
+        "title": "关于2024年自动控制程序添加节假日例外的通知 - 通达信软件 - 深圳市财富趋势科技股份有限公司",
+        "chars": 1131,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市财富趋势科技股份有限公司",
+      "city": "深圳市",
+      "district": "福田区",
+      "website": "https://www.tdx.com.cn/",
+      "description": "一家资深的证券业高科技企业，致力于证券分析系统和计算机通讯系统的研究开发，在证券行业的著名品牌是“通达信”。",
+      "sector": "证券业软件",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "027-87788668",
+      "email": "tousu@tdx.com.cn",
+      "address": "深圳市福田区梅林街道梅都社区中康路136号深圳新一代产业园5栋1801",
+      "products": [
+        "通达信软件",
+        "券商系统",
+        "网上交易产品",
+        "券商移动平台",
+        "复合资讯平台",
+        "全品类数据库",
+        "研究终端",
+        "债券终端",
+        "问小达AI",
+        "通达信MCP Skills 广场",
+        "TdxClaw",
+        "TdxQuant数据"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "长亮科技",
+    "url": "https://www.sunline.cn/",
+    "pages": [
+      {
+        "url": "https://www.sunline.cn/",
+        "title": "长亮科技—全球领先的金融科技解决方案服务商",
+        "chars": 4643,
+        "error": null
+      },
+      {
+        "url": "https://www.sunline.cn/aboutus.html",
+        "title": "公司介绍",
+        "chars": 6788,
+        "error": null
+      },
+      {
+        "url": "https://www.sunline.cn/contactus.html",
+        "title": "联系我们",
+        "chars": 3260,
+        "error": null
+      },
+      {
+        "url": "https://www.sunline.cn/contact-office.html",
+        "title": "投资者服务",
+        "chars": 2184,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市长亮科技股份有限公司",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": "https://www.sunline.cn/",
+      "description": "深圳市长亮科技股份有限公司（股票代码300348），专注金融科技创新、坚持科技自立自强，致力于以创新产品和解决方案，为金融行业数字化转型及安全发展提供强大动能，并将智慧金融能力输出海外，志在让中国金融科技具有世界影响力。",
+      "sector": "金融科技",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-86168118",
+      "email": "invest@sunline.cn",
+      "address": "深圳市南山区沙河西路深圳湾科技生态园一区2栋A座5层",
+      "products": [
+        "银行核心业务系统SunLTTS",
+        "数字人民币核心业务系统",
+        "海外分行核心",
+        "智能存款业务系统",
+        "银行贷款业务系统",
+        "银行汇款业务系统",
+        "现金管理业务系统",
+        "消费金融新核心系统",
+        "新一代智能催收业务管理系统",
+        "新一代消费信贷业务管理系统",
+        "新一代小微企业信贷管理系统",
+        "网络信贷业务管理系统",
+        "新一代综合信贷业务管理系统",
+        "新一代零售信贷业务管理系统",
+        "互联网核心业务平台",
+        "互联网金融业务平台",
+        "业务中台",
+        "开放平台",
+        "统一支付平台",
+        "数据仓库",
+        "外部数据管理平台",
+        "财务数据集市",
+        "风险数据集市",
+        "标签管理平台",
+        "智慧营销中台",
+        "数据服务平台",
+        "指标管理平台",
+        "决策引擎",
+        "统一监管报送平台",
+        "市场风险管理系统",
+        "大额风险暴露系统",
+        "内部资本充足评估程序系统（ICAAP）",
+        "风险加权资产计量及应用管理系统（RWA）",
+        "智能风控平台",
+        "企业级调度监控平台",
+        "数据交换平台",
+        "数据资产管理平台",
+        "智能报账/财务系统SunFI",
+        "会计核算平台SUN-AP",
+        "绩效管理系统",
+        "资产管理核心业务系统",
+        "管理会计系统",
+        "实物管理系统",
+        "资产负债管理系统",
+        "全面税务系统SunTAX",
+        "APStack云原生数字生产力平台",
+        "DataMind数智一体化平台",
+        "Luban AI SDLC数字生产力平台"
+      ],
+      "customers": [
+        "国有大型商业银行",
+        "政策及开发性银行",
+        "股份制商业银行",
+        "省级农商行及农信社",
+        "城市商业银行",
+        "民营银行",
+        "证券公司",
+        "基金公司",
+        "消费金融公司",
+        "金控平台",
+        "财务公司",
+        "资产管理公司"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "四方精创",
+    "url": "https://www.formssi.com/",
+    "pages": [
+      {
+        "url": "https://www.formssi.com/",
+        "title": "四方精创",
+        "chars": 803,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "四方精创",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": "https://www.formssi.com/",
+      "description": "技术领先的金融科技公司，以中国智慧为全球金融机构提供新一代分布式基础平台",
+      "sector": "金融科技",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86-18664305738",
+      "email": "Business_center@formssi.com",
+      "address": "深圳市南山区高新南七道8号四方精创资讯大厦",
+      "products": [
+        "金融核心级分布式架构",
+        "区块链+银行",
+        "AI+银行",
+        "区块链解决方案",
+        "核心系统产品与解决方案",
+        "渠道类产品与解决方案",
+        "管理类产品与解决方案",
+        "工具类产品"
+      ],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "招联金融",
+    "url": "https://www.mucfc.com/",
+    "pages": [
+      {
+        "url": "https://www.mucfc.com/",
+        "title": "招联金融官网-招行与联通共同组建的持牌金融机构",
+        "chars": 23,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "招联金融",
+      "city": null,
+      "district": null,
+      "website": "https://www.mucfc.com/",
+      "description": "招联金融是由招商银行与中国联通两家世界500强公司共同组建的持牌消费金融公司，旗下拥有“好期贷”、“信用付”两大消费金融产品体系，为用户提供信用借款及分期消费的普惠消费信贷服务。",
+      "sector": "消费金融",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "好期贷",
+        "信用付"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "中信银行信用卡中心",
+    "url": "https://creditcard.ecitic.com/index.html",
+    "pages": [
+      {
+        "url": "https://creditcard.ecitic.com/index.html",
+        "title": "中信银行信用卡快速申请_中信银行信用卡_中信银行信用卡办理-中信银行信用卡中心",
+        "chars": 3184,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "中信银行信用卡中心",
+      "city": "深圳市",
+      "district": "福田区",
+      "website": "https://creditcard.ecitic.com/",
+      "description": "中信银行信用卡中心为您提供中信银行信用卡申请、中信银行信用卡快速申请、还款、积分、权益兑换、额度等服务。",
+      "sector": "金融",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "40088-95558",
+      "email": "4008895558@citicbank.com",
+      "address": "深圳市福田区福华一路121号中信银行大厦（邮政编码：518029）",
+      "products": [
+        "中信银行颜·标准白金信用卡",
+        "中信银行i白金信用卡",
+        "中信银行万豪旅享家®精逸白金卡",
+        "中信银行颜卡马到成功银联i白金卡",
+        "中信银行悦卡（金卡）",
+        "中信银行悦卡（白金卡）",
+        "中信银行易卡（金卡）",
+        "中信银行颜卡-开运锦鲤",
+        "中信银行颜卡宠物主题信用卡",
+        "中信银行i车Pro银联i白金信用卡",
+        "中信银行魔力爱白金卡（潘多拉）",
+        "中信银行VISA逍遥卡（白金卡）",
+        "中信银行国航携程联名卡（金卡）",
+        "中信银行VISA逍遥白金信用卡（少年行版）",
+        "中信银行南航明珠信用卡（金卡）"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "招商局金融科技",
+    "url": "https://www.zbytb.com/c-HBV1e/",
+    "pages": [
+      {
+        "url": "https://www.zbytb.com/c-HBV1e/",
+        "title": "",
+        "chars": 3560,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "招商局金融科技",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "斯坦德机器人",
+    "url": "http://www.robotsj.cn/brand/1131.html",
+    "pages": [
+      {
+        "url": "http://www.robotsj.cn/brand/1131.html",
+        "title": "斯坦德 - 机器人世界",
+        "chars": 1982,
+        "error": null
+      },
+      {
+        "url": "http://www.robotsj.cn/p/aboutus.html",
+        "title": "关于我们 - 机器人世界",
+        "chars": 917,
+        "error": null
+      },
+      {
+        "url": "http://www.robotsj.cn/p/contact.html",
+        "title": "联系我们 - 机器人世界",
+        "chars": 654,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "斯坦德机器人（深圳）有限公司",
+      "city": "深圳市",
+      "district": null,
+      "website": null,
+      "description": "斯坦德机器人是全球领先的工业智能移动机器人解决方案提供商和提供工业具身智能机器人解决方案的先驱。公司主营工业级移动机器人及柔性物流解决方案的研发生产，核心产品包括激光导航AGV（如Oasis300、Oasis600等机型）及其调度系统（FMS管理系统），应用于3C电子、汽配等领域的物料搬运场景。",
+      "sector": "工业智能移动机器人",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-800-7908",
+      "email": "hello@standard-robots.com",
+      "address": null,
+      "products": [
+        "激光导航AGV（Oasis300、Oasis600等机型）",
+        "FMS管理系统",
+        "移动机器人",
+        "功能型机器人",
+        "具身人形机器人"
+      ],
+      "customers": [
+        "系统集成商",
+        "终端制造工厂"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华成工控",
+    "url": "https://www.hc-system.com/about/",
+    "pages": [
+      {
+        "url": "https://www.hc-system.com/about/",
+        "title": "公司简介机器人控制系统厂家_华成工控｜注塑自动化｜机床上下料｜具身智能解决方案",
+        "chars": 2262,
+        "error": null
+      },
+      {
+        "url": "https://www.hc-system.com/contact/",
+        "title": "联系方式机器人控制系统厂家_华成工控｜注塑自动化｜机床上下料｜具身智能解决方案",
+        "chars": 2173,
+        "error": null
+      },
+      {
+        "url": "https://www.hc-system.com/contact/index.html",
+        "title": "联系方式机器人控制系统厂家_华成工控｜注塑自动化｜机床上下料｜具身智能解决方案",
+        "chars": 2173,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市华成工业控制股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://www.hc-system.com",
+      "description": "深圳市华成工业控制股份有限公司(简称:华成工控)(股票代码:873553)，创立于2005年，是以研发运动控制为核心的国家高新技术企业，专精特新“小巨人”企业，目前拥有自主知识产权近1000项。公司自主研发的驱控一体集成技术，让机器人变成即插即用的一体式自动化装置，促进了国产机器人的发展。",
+      "sector": "工业自动化/运动控制",
+      "founded_year": 2005,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-158-1606",
+      "email": "sales@hc-system.com",
+      "address": "深圳市宝安区固戍一路108号正奇隆大厦8楼",
+      "products": [
+        "注塑线性机器人控制系统",
+        "机床线性机器人控制系统",
+        "多关节机器人控制系统",
+        "具身机器人控制系统",
+        "关节模组驱动器",
+        "灵巧手控制系统",
+        "冲压线性机器人控制系统",
+        "伺服系统",
+        "通用PLC",
+        "云通讯模块",
+        "全电动注塑机驱动系统方案"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "劲拓股份",
+    "url": "http://www.jt-ele.com/",
+    "pages": [
+      {
+        "url": "http://www.jt-ele.com/",
+        "title": "劲拓自动化设备股份有限公司",
+        "chars": 2790,
+        "error": null
+      },
+      {
+        "url": "http://www.jt-ele.com/about.html",
+        "title": "公司简介-劲拓自动化设备股份有限公司",
+        "chars": 2241,
+        "error": null
+      },
+      {
+        "url": "https://www.jt-ele.com/contact.html",
+        "title": "联系我们-劲拓自动化设备股份有限公司",
+        "chars": 1737,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市劲拓自动化设备股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "http://www.jt-ele.com/",
+      "description": "集研发、生产、销售和服务于一体的SMT精密装备制造行业龙头企业，主要产品按大类可划分为电子热工设备、检测设备、自动化设备等，旗下产品广泛应用于通信、手机、汽车电子、家电、可穿戴、航空航天等领域的精密制造。",
+      "sector": "SMT精密装备制造",
+      "founded_year": 1997,
+      "team_size": "约1000人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-29586211",
+      "email": "shenzhen@jt-ele.com",
+      "address": "深圳市宝安区鹤洲工业区北八路劲拓自动化工业园",
+      "products": [
+        "电子热工设备",
+        "视觉检测设备",
+        "检测设备",
+        "自动化设备",
+        "回流焊",
+        "波峰焊",
+        "选择焊",
+        "固化炉",
+        "AOI",
+        "SPI",
+        "真空炉",
+        "插件机"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "深科达",
+    "url": "http://www.szskd.com/",
+    "pages": [
+      {
+        "url": "https://www.szskd.com/",
+        "title": "深科达_3C面板智能设备_半导体封测设备_自动化核心部件",
+        "chars": 2352,
+        "error": null
+      },
+      {
+        "url": "https://www.szskd.com/about.html",
+        "title": "深圳市深科达智能装备股份有限公司-公司简介",
+        "chars": 1165,
+        "error": null
+      },
+      {
+        "url": "https://www.szskd.com/aboutus/13909022.html",
+        "title": "产业布局_深圳市深科达智能装备股份有限公司",
+        "chars": 747,
+        "error": null
+      },
+      {
+        "url": "https://www.szskd.com/aboutus/2672.html",
+        "title": "组织机构_深圳市深科达智能装备股份有限公司",
+        "chars": 747,
+        "error": null
+      },
+      {
+        "url": "https://www.szskd.com/aboutus/2671.html",
+        "title": "企业文化_深圳市深科达智能装备股份有限公司",
+        "chars": 747,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市深科达智能装备股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://www.szskd.com/",
+      "description": "深科达智能装备股份有限公司于2004年成立，2021年在科创板成功上市（股票代码：688328），主要业务为3C面板智能设备、半导体封测设备、自动化核心部件。",
+      "sector": "半导体设备、智能显示装备、自动化核心零部件",
+      "founded_year": 2004,
+      "team_size": "700+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-27889869",
+      "email": "swt@szskd.com",
+      "address": "深圳市宝安区西乡街道龙腾社区汇智研发中心BC座B1001",
+      "products": [
+        "半导体测试分选",
+        "转塔式测试分选",
+        "平移式测试分选",
+        "重力式测试分选",
+        "智能显示装备",
+        "自动化直线电机",
+        "电机及模组",
+        "定位工作台",
+        "非标平台"
+      ],
+      "customers": [
+        "通富微电",
+        "日月新集团"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "联得装备",
+    "url": "http://cn.liande-china.com/",
+    "pages": [
+      {
+        "url": "https://www.liande-china.com/",
+        "title": "深圳市联得自动化装备股份有限公司",
+        "chars": 2881,
+        "error": null
+      },
+      {
+        "url": "https://www.liande-china.com/about.html",
+        "title": "关于我们",
+        "chars": 6574,
+        "error": null
+      },
+      {
+        "url": "https://www.liande-china.com/contact.html",
+        "title": "联系我们",
+        "chars": 1963,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市联得自动化装备股份有限公司",
+      "city": "深圳市",
+      "district": "龙华区",
+      "website": "https://www.liande-china.com/",
+      "description": "国内领先的LCD/OLED整线模组、柔性制造及非标自动化设备专业解决方案提供商；在新型半导体显示、汽车智能座舱系统、半导体封测、新能源等领域，致力为客户提供整套解决方案。",
+      "sector": "工业自动化设备制造",
+      "founded_year": 1998,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0769-89994888、15989416339",
+      "email": "szliande@szliande.com",
+      "address": "深圳市龙华区观湖街道求知东路6号“联得大厦”",
+      "products": [
+        "小尺寸贴合设备",
+        "中小尺寸贴合设备",
+        "中大尺寸贴合设备",
+        "中小尺寸绑定线",
+        "大尺寸/超大尺寸绑定线",
+        "VR/MR绑定线",
+        "小尺寸绑定线",
+        "COG/COF/FOG压痕+阻抗检测机",
+        "LCD画面缺陷检测机",
+        "OTP/CTP程序烧录",
+        "OLED 曲面覆膜机",
+        "LCD/OLED 平面覆膜机",
+        "曲面铜箔覆膜机",
+        "分选机",
+        "中小尺寸巨量转移设备",
+        "大尺寸巨量转移设备",
+        "M-LED PCB绑定线",
+        "LED芯片扩晶机",
+        "真空预压贴膜机",
+        "高精度拼接设备",
+        "晶圆检测类",
+        "M-LED COF绑定线",
+        "手机组装整线",
+        "TP组装",
+        "定制化设备",
+        "折弯设备",
+        "背光叠片整线",
+        "车载OCA/OCR贴合整线",
+        "背光组装整线",
+        "车载背光叠片整线",
+        "车载绑定整线",
+        "座舱组装/C柱",
+        "共晶固晶机",
+        "软焊料固晶机",
+        "COF倒装共晶机",
+        "QFN框架前贴膜机",
+        "QFN框架后贴膜机",
+        "QFN框架贴膜一体机",
+        "框架/基板AOI自动检测机",
+        "模切机",
+        "切叠一体机",
+        "高速叠片机",
+        "方形铝壳电芯装配线",
+        "真空干燥线",
+        "注液线",
+        "包蓝膜分选线",
+        "方形电芯模组Pack线",
+        "圆柱电芯模组Pack线",
+        "光伏装备",
+        "CCS自动组装线"
+      ],
+      "customers": [
+        "华为",
+        "苹果",
+        "Meta",
+        "京东方",
+        "维信诺",
+        "天马微电子",
+        "华星光电",
+        "惠科",
+        "和辉光电",
+        "比亚迪",
+        "大陆汽车电子",
+        "博世",
+        "富士康",
+        "友达",
+        "蓝思科技",
+        "TPK",
+        "长信科技",
+        "JDI",
+        "欧菲光",
+        "信利国际",
+        "瀚宇彩晶",
+        "纬创",
+        "南玻",
+        "莱宝高科",
+        "帝晶",
+        "镭亚"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "智立方",
+    "url": "https://www.incubecn.com/",
+    "pages": [
+      {
+        "url": "https://www.incubecn.com/",
+        "title": "深圳市智立方自动化设备股份有限公司",
+        "chars": 3603,
+        "error": null
+      },
+      {
+        "url": "https://www.incubecn.com/cn/page-64105.html",
+        "title": "深圳市智立方自动化设备股份有限公司",
+        "chars": 1443,
+        "error": null
+      },
+      {
+        "url": "https://www.incubecn.com/cn/page-72370.html",
+        "title": "深圳市智立方自动化设备股份有限公司",
+        "chars": 1443,
+        "error": null
+      },
+      {
+        "url": "https://www.incubecn.com/page-64103.html",
+        "title": "深圳市智立方自动化设备股份有限公司",
+        "chars": 1064,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市智立方自动化设备股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://www.incubecn.com/",
+      "description": "深圳市智立方自动化设备股份有限公司成立于2011年，于2022年7月11日在创业板上市，股票代码301312。属于高端装备制造行业，是一家专注于半导体及工业自动化设备研发、生产、销售及相关技术服务的高新技术企业，为下游客户的半导体工艺制程，精密检测，智能制造系统、精益和自动化生产体系提供专业解决方案。",
+      "sector": "高端装备制造",
+      "founded_year": 2011,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86 0755 3352 5952",
+      "email": "ir@incubecn.com",
+      "address": "深圳市宝安区石岩镇塘头路口宏发科技园A栋1层至5层",
+      "products": [
+        "LED探针测试一体机",
+        "全自动共晶设备",
+        "FT 平移式分选设备",
+        "全自动LED芯片高速分选设备",
+        "平移式翻转分选设备",
+        "全自动巴条排列设备（双工位）",
+        "高精度多芯片倒装贴片设备",
+        "全自动巴条四面外观检测设备",
+        "施耐博格精密运动系统"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "兆威机电",
+    "url": "https://guba.eastmoney.com/list,003021.html",
+    "pages": [
+      {
+        "url": "https://guba.eastmoney.com/list,003021.html",
+        "title": "兆威机电(003021)股吧_兆威机电怎么样_分析讨论社区—东方财富网",
+        "chars": 4522,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "兆威机电",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "长盈精密",
+    "url": "http://www.ewpt.com/",
+    "pages": [
+      {
+        "url": "https://www.ewpt.com/",
+        "title": "深圳市长盈精密技术股份有限公司",
+        "chars": 748,
+        "error": null
+      },
+      {
+        "url": "https://www.ewpt.com/AboutStd.html",
+        "title": "关于长盈 - 深圳市长盈精密技术股份有限公司",
+        "chars": 811,
+        "error": null
+      },
+      {
+        "url": "https://www.ewpt.com/ContactSt_ljfs.html",
+        "title": "联系方式 - 深圳市长盈精密技术股份有限公司",
+        "chars": 1223,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市长盈精密技术股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://www.ewpt.com/",
+      "description": "长盈精密成立于2001年7月，是一家研发、生产、销售智能终端手机零组件，新能源汽车零组件，工业机器人及自动化系统集成的规模化制造企业。",
+      "sector": "智能制造",
+      "founded_year": 2001,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "86-755-27343066",
+      "email": "sales@ewpt.com",
+      "address": "深圳市宝安区燕罗街道罗田社区罗昌路88号",
+      "products": [
+        "金属外观件",
+        "传动装置",
+        "组件",
+        "冲压件",
+        "连接器",
+        "注塑件",
+        "天线",
+        "滤波器",
+        "精密LED支架",
+        "电池结构件",
+        "电力分配系统",
+        "氢燃料电池金属双极板",
+        "精密汽车电子",
+        "工业机器人",
+        "工业自动化",
+        "工业互联网"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "鹏鼎控股",
+    "url": "http://www.avaryholding.com/",
+    "pages": [],
+    "extracted": null,
+    "error": "HTTP Error 503: Service Unavailable; curl failed: curl: (28) Failed to connect to www.avaryholding.com:80 after 21058 ms: Could not connect to server\r\n"
+  },
+  {
+    "company": "景旺电子",
+    "url": "https://www.kinwong.com/",
+    "pages": [
+      {
+        "url": "https://www.kinwong.com/",
+        "title": "景旺电子 | 全球领先的印制电路板制造商",
+        "chars": 1301,
+        "error": null
+      },
+      {
+        "url": "https://www.kinwong.com/about-us/quick-facts/",
+        "title": "集团简介 | 深圳市景旺电子股份有限公司 | Kinwong官网",
+        "chars": 1951,
+        "error": null
+      },
+      {
+        "url": "https://www.kinwong.com/about-us/enterprise-architecture/",
+        "title": "组织架构 | 深圳市景旺电子股份有限公司 | Kinwong官网",
+        "chars": 627,
+        "error": null
+      },
+      {
+        "url": "https://www.kinwong.com/about-us/technical-strength/",
+        "title": "技术实力 | 深圳市景旺电子股份有限公司 | Kinwong官网",
+        "chars": 1185,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "景旺电子",
+      "city": "深圳",
+      "district": null,
+      "website": "https://www.kinwong.com/",
+      "description": "全球领先的印制电路板及高端电子材料研发、生产和销售的国家高新技术企业，为客户提供完整的PCB解决方案。",
+      "sector": "印制电路板制造",
+      "founded_year": 1993,
+      "team_size": "23000",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "常规电路板",
+        "柔性电路板",
+        "金属基板",
+        "软硬结合板",
+        "高密度互连板",
+        "高多层电路板",
+        "射频电路板",
+        "埋铜块",
+        "类载板",
+        "工程与设计服务"
+      ],
+      "customers": [
+        "汽车",
+        "通信",
+        "智能终端",
+        "工控医疗",
+        "消费类",
+        "服务器",
+        "电源",
+        "计算机"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "拓邦股份",
+    "url": "https://www.topband.com/cn/",
+    "pages": [
+      {
+        "url": "https://www.topband.com/cn/",
+        "title": "TOPBAND，全球领先的智能控制方案提供商!",
+        "chars": 3455,
+        "error": null
+      },
+      {
+        "url": "https://www.topband.com/cn/contact-us/",
+        "title": "TOPBAND，全球领先的智能控制方案提供商!",
+        "chars": 1973,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳拓邦股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://www.topband.com/cn/",
+      "description": "全球领先的智能控制方案提供商，以“四电一网+AI”技术体系为核心，深度服务工具和家电、汽车和高端装备、新能源三大行业，为全球客户提供定制化智能控制产品和自主智能产品解决方案。",
+      "sector": "智能控制",
+      "founded_year": 1996,
+      "team_size": "逾1.3万人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-27651888",
+      "email": "topband@topband.com.cn",
+      "address": "深圳市宝安区石岩塘头大道梨园工业区拓邦工业园",
+      "products": [
+        "储能系统",
+        "逆变器",
+        "房车, 船载, 高尔夫球车电池",
+        "充电桩",
+        "BMS/PCS/EMS",
+        "电芯",
+        "充电器",
+        "整机",
+        "数码充电",
+        "智能控制器",
+        "电池包",
+        "电机",
+        "工业车辆电源",
+        "激光雷达转镜电机",
+        "汽车水泵",
+        "空心杯电机",
+        "驱动",
+        "厨纪炒菜机器人",
+        "拓邦智能制造系统"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "英威腾",
+    "url": "https://www.invt.com.cn/index.html",
+    "pages": [
+      {
+        "url": "https://www.invt.com.cn/",
+        "title": "INVT英威腾-引领智慧工业，共建零碳未来 | 深圳市英威腾电气股份有限公司",
+        "chars": 4774,
+        "error": null
+      },
+      {
+        "url": "https://www.invt.com.cn/contact-25",
+        "title": "联系我们 - INVT英威腾-引领智慧工业，共建零碳未来 | 深圳市英威腾电气股份有限公司",
+        "chars": 3609,
+        "error": null
+      },
+      {
+        "url": "https://www.invt.com.cn/company-introdution-32",
+        "title": "英威腾 - INVT英威腾-引领智慧工业，共建零碳未来 | 深圳市英威腾电气股份有限公司",
+        "chars": 5142,
+        "error": null
+      },
+      {
+        "url": "https://www.invt.com.cn/contact-25",
+        "title": "联系我们 - INVT英威腾-引领智慧工业，共建零碳未来 | 深圳市英威腾电气股份有限公司",
+        "chars": 3609,
+        "error": null
+      },
+      {
+        "url": "https://www.invt.com.cn/newsinfo3095.html",
+        "title": "关于英威腾网络能源产品价格调整的通知 - INVT英威腾-引领智慧工业，共建零碳未来 | 深圳市英威腾电气股份有限公司",
+        "chars": 3240,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市英威腾电气股份有限公司",
+      "city": "深圳市",
+      "district": "光明区",
+      "website": "https://www.invt.com.cn/",
+      "description": "深圳市英威腾电气股份有限公司（股票代码：002334），2002年在深圳成立，现已形成工业自动化、网络能源、光伏储能、新能源动力四大业务板块的产业布局，为全球客户提供差异化、专业化的产品与解决方案及定制化的技术服务。",
+      "sector": "工业自动化、网络能源、光伏储能、新能源动力",
+      "founded_year": 2002,
+      "team_size": "6000+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-700-9997",
+      "email": "invt@invt.com",
+      "address": "深圳市光明区马田街道松白路英威腾光明科技大厦",
+      "products": [
+        "变频器",
+        "电梯控制系统",
+        "伺服",
+        "PLC",
+        "I/O",
+        "HMI",
+        "物联网",
+        "数据中心微模块",
+        "智能电源",
+        "智能温控",
+        "智能监控",
+        "光储逆变器",
+        "并网逆变器",
+        "储能电池",
+        "离网逆变器",
+        "车载驱控",
+        "车载电源"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "领益智造",
+    "url": "https://guba.eastmoney.com/list,002600.html",
+    "pages": [
+      {
+        "url": "https://guba.eastmoney.com/list,002600.html",
+        "title": "领益智造(002600)股吧_领益智造怎么样_分析讨论社区—东方财富网",
+        "chars": 4396,
+        "error": null
+      },
+      {
+        "url": "https://guba.eastmoney.com/news,002600,1792690963.html",
+        "title": "领益智造:北京市嘉源律师事务所关于广东领益智造股份有限公司实际控制人增持股份的法律意见书_领益智造(002600)股吧_东方财富网股吧",
+        "chars": 970,
+        "error": null
+      },
+      {
+        "url": "https://guba.eastmoney.com/news,002600,1792681910.html",
+        "title": "领益智造:关于公司实际控制人、董事长兼总经理增持公司H股股份计划实施完成的公告_领益智造(002600)股吧_东方财富网股吧",
+        "chars": 2653,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "广东领益智造股份有限公司",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "兆驰股份",
+    "url": "https://www.szmtc.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.szmtc.com.cn/",
+        "title": "深圳市兆驰股份有限公司官网",
+        "chars": 943,
+        "error": null
+      },
+      {
+        "url": "https://www.szmtc.com.cn/contact",
+        "title": "联系我们-深圳市兆驰股份有限公司",
+        "chars": 562,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市兆驰股份有限公司",
+      "city": "深圳市",
+      "district": "龙岗区",
+      "website": "https://www.szmtc.com.cn/",
+      "description": "兆驰股份深耕制造业十逾年，秉承“工匠精神”的理念和实质，不断为实现“成为受到全球消费者尊敬的中国企业”这一愿景奋斗。兆驰股份以执着的态度、对精品的坚持和追求，先后完成了全产业链整合，并持续推动精细化管理，不断投入自动化改造，力争成为中国制造2025的先驱。",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-33614068",
+      "email": "LS@szmtc.com.cn",
+      "address": "深圳市龙岗区南湾街道下李朗社区李朗路1号兆驰创新产业园3号楼6楼",
+      "products": [],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "神舟电脑",
+    "url": "http://www.hasee.com/",
+    "pages": [
+      {
+        "url": "http://www.hasee.com/",
+        "title": "神舟电脑",
+        "chars": 2040,
+        "error": null
+      },
+      {
+        "url": "http://www.hasee.com/after/about",
+        "title": "服务与支持",
+        "chars": 4855,
+        "error": null
+      },
+      {
+        "url": "http://www.hasee.com/about",
+        "title": "神舟电脑",
+        "chars": 2154,
+        "error": null
+      },
+      {
+        "url": "http://www.hasee.com/about/news",
+        "title": "神舟电脑",
+        "chars": 1998,
+        "error": null
+      },
+      {
+        "url": "http://www.hasee.com/about/post",
+        "title": "神舟电脑",
+        "chars": 1713,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "神舟电脑",
+      "city": "深圳",
+      "district": "龙岗区",
+      "website": "http://www.hasee.com/",
+      "description": "深圳市神舟电脑股份有限公司成立于2001年，以IT、IA为主业，以电脑技术开发为核心，集研发、生产、销售为一体的国家级高科技企业。",
+      "sector": "电脑制造",
+      "founded_year": 2001,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-106-9999",
+      "email": "hejw@hasee.net",
+      "address": "深圳基地位于龙岗区坂雪岗高新技术产业园区",
+      "products": [
+        "笔记本电脑",
+        "台式电脑",
+        "商用电脑",
+        "液晶显示器",
+        "液晶电视",
+        "平板电脑",
+        "电脑周边设备",
+        "背包"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "伯恩光学",
+    "url": "https://www.bielcrystal.com/",
+    "pages": [
+      {
+        "url": "https://www.bielcrystal.com/",
+        "title": "Home Page | BIEL Crystal",
+        "chars": 2175,
+        "error": null
+      },
+      {
+        "url": "https://www.bielcrystal.com/en/about/",
+        "title": "About Us | BIEL Crystal",
+        "chars": 8115,
+        "error": null
+      },
+      {
+        "url": "https://www.bielcrystal.com/en/about/",
+        "title": "About Us | BIEL Crystal",
+        "chars": 8115,
+        "error": null
+      },
+      {
+        "url": "https://www.bielcrystal.com/en/about/",
+        "title": "About Us | BIEL Crystal",
+        "chars": 8115,
+        "error": null
+      },
+      {
+        "url": "https://www.bielcrystal.com/en/about/",
+        "title": "About Us | BIEL Crystal",
+        "chars": 8115,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "伯恩光学",
+      "city": "深圳",
+      "district": null,
+      "website": "https://www.bielcrystal.com/",
+      "description": "Founded in 1989, BIEL Crystal is a leading global provider of exterior structure and module solutions for smart devices.",
+      "sector": "exterior structure and module solutions for smart devices",
+      "founded_year": 1989,
+      "team_size": ">100,000 employees",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "36/F, Legend Tower, No. 7 Shing Yip Street, Kwun Tong, Kowloon, Hong Kong",
+      "products": [
+        "cell phone glass cover",
+        "cell phone metal shell",
+        "touch and fingerprint sensor module",
+        "camera optical glass",
+        "sapphire watch panel",
+        "ceramic accessories"
+      ],
+      "customers": [
+        "world class smartphone leading companies",
+        "famous watch companies",
+        "Samsung",
+        "Xiaomi",
+        "Transsion"
+      ],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深南电路",
+    "url": "https://www.scc.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.scc.com.cn/",
+        "title": "",
+        "chars": 1023,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深南电路",
+      "city": null,
+      "district": null,
+      "website": "https://www.scc.com.cn/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "86-755-89300000",
+      "email": null,
+      "address": null,
+      "products": [
+        "印制电路板（PCB）",
+        "电子装联（PCBA）",
+        "封装基板（SUB）",
+        "系统级封装（SIP）"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "朗特智能",
+    "url": "https://www.longtech.cc/",
+    "pages": [
+      {
+        "url": "https://www.longtech.cc/",
+        "title": "深圳朗特智能控制股份有限公司",
+        "chars": 4137,
+        "error": null
+      },
+      {
+        "url": "https://www.longtech.cc/article/62.html",
+        "title": "关于朗特-深圳朗特智能控制股份有限公司",
+        "chars": 2604,
+        "error": null
+      },
+      {
+        "url": "https://www.longtech.cc/article/69.html",
+        "title": "联系我们-深圳朗特智能控制股份有限公司",
+        "chars": 983,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳朗特智能控制股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://www.longtech.cc/",
+      "description": "深圳朗特智能控制股份有限公司是一家专注于智能控制器及智能产品研发、设计、生产和销售的国家级高新技术企业，产品覆盖智能家居家电及新型消费电子、咖啡机、储能系统、汽车电子和液冷算力基础设施，提供智能控制器、液冷散热产品及系统解决方案。",
+      "sector": "智能控制器及智能产品",
+      "founded_year": 2003,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755 23501350",
+      "email": "cc@longtech.cc",
+      "address": "深圳市宝安区新桥街道黄埔路52号建实工业园",
+      "products": [
+        "储能系统",
+        "汽车电子",
+        "创新消费电子",
+        "液冷算力解决方案",
+        "优咖智能",
+        "智能控制器",
+        "液冷散热产品"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "则成电子",
+    "url": "https://intflex.cn/",
+    "pages": [
+      {
+        "url": "https://intflex.cn/",
+        "title": "深圳市则成电子股份有限公司",
+        "chars": 935,
+        "error": null
+      },
+      {
+        "url": "https://intflex.cn/about.aspx",
+        "title": "公司介绍 - 则成电子",
+        "chars": 1720,
+        "error": null
+      },
+      {
+        "url": "https://intflex.cn/contact.aspx",
+        "title": "联系我们 - 则成电子",
+        "chars": 622,
+        "error": null
+      },
+      {
+        "url": "https://intflex.cn/about.aspx?type=9",
+        "title": "经营理念 - 则成电子",
+        "chars": 1376,
+        "error": null
+      },
+      {
+        "url": "https://intflex.cn/about.aspx?type=12&id=290",
+        "title": "两份认可，一路鞭策：则成电子荣获资本市场权威认可 - 则成电子",
+        "chars": 1252,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市则成电子股份有限公司",
+      "city": "深圳市",
+      "district": "龙岗区",
+      "website": "https://intflex.cn/",
+      "description": "深圳市则成电子股份有限公司(股票简称及代码：则成电子920821)，为国家级专精特新“小巨人”企业和国家级高新技术企业，从事基于柔性运用的定制化智能控制模块产品的研发、生产与销售，目前已成为众多世界500强公司的合格供应商。",
+      "sector": "电子",
+      "founded_year": null,
+      "team_size": "800+名员工",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-89968168",
+      "email": "info@intflex.com.cn",
+      "address": "广东省深圳市龙岗区南湾街道康正路48号莲塘工业区5、6栋",
+      "products": [
+        "智能模组模块",
+        "电子装联",
+        "电路板",
+        "柔性线路板",
+        "类载板"
+      ],
+      "customers": [
+        "美敦力（Medtronic）",
+        "柯惠医疗（Covidien）",
+        "马西莫（Masimo）",
+        "耐世特（Nexteer）",
+        "麦格纳（Magna）",
+        "富士通（Fujitsu）",
+        "百通（Belden）",
+        "博士（Bose）",
+        "戴尔（Dell）",
+        "耐克（Nike）",
+        "3M"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "贝仕达克",
+    "url": "http://www.szbtk.com/",
+    "pages": [
+      {
+        "url": "https://www.szbtk.com/",
+        "title": "深圳贝仕达克技术股份有限公司",
+        "chars": 62,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳贝仕达克技术股份有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": "https://www.szbtk.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "超频三",
+    "url": "https://www.pccooler.cn/",
+    "pages": [
+      {
+        "url": "https://www.cpspccooler.cn/",
+        "title": "超频三电脑散热产品、行业散热方案与AI工作站服务，产品规格与应用场景 | 超频三",
+        "chars": 5508,
+        "error": null
+      },
+      {
+        "url": "https://www.cpspccooler.cn/us/",
+        "title": "超频三业务合作、产品咨询、媒体联系与服务信息，产品规格与应用场景 | 超频三",
+        "chars": 696,
+        "error": null
+      },
+      {
+        "url": "https://www.cpspccooler.cn/about/",
+        "title": "上市公司超频三发展历程、散热技术研发体系、专利与品牌荣誉 | 超频三",
+        "chars": 1427,
+        "error": null
+      },
+      {
+        "url": "https://www.cpspccooler.cn/aboutus/",
+        "title": "上市公司超频三公司概况、散热业务、生产基地及研发制造能力 | 超频三",
+        "chars": 1034,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市超频三科技股份有限公司",
+      "city": "深圳市",
+      "district": null,
+      "website": "https://www.cpspccooler.cn/",
+      "description": "集电子产品新型散热器件研发、生产、销售于一体的国家高新技术企业，致力为全球客户提供新型系统化散热解决方案。",
+      "sector": "电子散热",
+      "founded_year": 2005,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "风冷散热器",
+        "水冷散热器",
+        "机箱",
+        "电源",
+        "风扇",
+        "配件",
+        "数据中心液冷系统",
+        "AI PC",
+        "AI 工作站",
+        "模组化整机"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "金信诺",
+    "url": "http://www.kingsignal.cn/",
+    "pages": [
+      {
+        "url": "http://www.kingsignal.cn/",
+        "title": "金信诺——信号联接技术创新者",
+        "chars": 2281,
+        "error": null
+      },
+      {
+        "url": "http://www.kingsignal.cn/index.php?ac=article&at=list&tid=20",
+        "title": "公司介绍 -  金信诺公司金信诺——信号联接技术创新者",
+        "chars": 2982,
+        "error": null
+      },
+      {
+        "url": "http://www.kingsignal.cn/index.php?ac=article&at=list&tid=30",
+        "title": "营销网络 -  金信诺——信号联接技术创新者",
+        "chars": 5976,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "金信诺",
+      "city": "深圳",
+      "district": "南山区",
+      "website": "http://www.kingsignal.cn/",
+      "description": "金信诺——信号联接技术创新者，成立于2002年4月2日，是一家集研发、生产和销售于一体的高科技民营上市公司（股票代码：300252.SZ），专注通过践行军民融合的持续创新以及基于5G与智联网的前瞻布局为全球多行业、多领域的核心客户提供全系列信号互联产品、方案和服务。",
+      "sector": "通信",
+      "founded_year": 2002,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-8631 9150",
+      "email": "sales@kingsignal.com",
+      "address": "深圳市南山区沙河西路1819号深圳湾科技生态园10栋B座26层",
+      "products": [
+        "射频电缆",
+        "射频连接器",
+        "射频组件",
+        "低频连接器",
+        "低频组件",
+        "电源线",
+        "光组件",
+        "光纤光缆",
+        "高速线缆",
+        "高速组件",
+        "天线PCB",
+        "手机板（通孔&HDI）",
+        "光模块PCB",
+        "厚铜电源板PCB",
+        "汽车PCB",
+        "高多层板PCB",
+        "PCBA",
+        "FPC",
+        "TR组件",
+        "通用电路",
+        "Wi-Fi Mesh系列",
+        "卫星终端系列",
+        "KS-TWS 无线蓝牙耳机",
+        "多功能扩展坞系列",
+        "CPE",
+        "MIFI",
+        "Repeater",
+        "UPS",
+        "高压连接器",
+        "低压连接器",
+        "储能连接器",
+        "整车高压线束",
+        "PTC线束",
+        "4G/5G融合核心网",
+        "5GC",
+        "EPC",
+        "IMS",
+        "SMSC",
+        "OMC"
+      ],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "新产业生物",
+    "url": "https://www.snibe.com/",
+    "pages": [
+      {
+        "url": "https://www.snibe.com/en/",
+        "title": "Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 5254,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/service/#service6",
+        "title": "Service - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 5329,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/career/#aboutSnibe",
+        "title": "Career - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 3405,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/about/",
+        "title": "About us - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 4796,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/about/#aboutus",
+        "title": "About us - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 4796,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "新产业生物",
+      "city": "Shenzhen",
+      "district": "Pingshan District",
+      "website": "https://www.snibe.com/en/",
+      "description": "Shenzhen New Industries Biomedical Engineering Co., Ltd. (Snibe Co.,Ltd.) is a bio-medical company specialized in clinical laboratory instruments and in vitro diagnostic reagents.",
+      "sector": "In vitro diagnostics",
+      "founded_year": 1995,
+      "team_size": "3000+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "86-755-26501514",
+      "email": "sales@snibe.com",
+      "address": "Snibe Building, No.23, Jinxiu East Road, Pingshan District, 518122 Shenzhen, P.R. China",
+      "products": [
+        "MAGLUMI X10",
+        "MAGLUMI X3",
+        "MAGLUMI X6",
+        "MAGLUMI X8",
+        "Biossays C10",
+        "Biossays 240 Plus",
+        "Biossays E6 Plus",
+        "Molecision R8",
+        "Molecision S6",
+        "Molecision MP-32",
+        "Molecision MP-96",
+        "Hemolumi H6",
+        "Biolumi CX Solution-X10+C10",
+        "SATLARS mini-T8",
+        "SATLARS-T8",
+        "SATLARS-TCA"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "基本半导体",
+    "url": "https://www.basicsemi.com/",
+    "pages": [
+      {
+        "url": "https://www.basicsemi.com/",
+        "title": "",
+        "chars": 9219,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "type": "json_object",
+      "name": "基本半导体",
+      "city": null,
+      "district": null,
+      "website": "https://www.basicsemi.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "芯邦科技",
+    "url": "https://www.chipsbank.com/",
+    "pages": [
+      {
+        "url": "https://www.chipsbank.com/",
+        "title": "深圳芯邦科技股份有限公司",
+        "chars": 1655,
+        "error": null
+      },
+      {
+        "url": "https://www.chipsbank.com/AboutUs/index.aspx",
+        "title": "深圳芯邦科技股份有限公司",
+        "chars": 1792,
+        "error": null
+      },
+      {
+        "url": "https://www.chipsbank.com/contact/index.aspx",
+        "title": "深圳芯邦科技股份有限公司",
+        "chars": 626,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳芯邦科技股份有限公司",
+      "city": "深圳市",
+      "district": "南山区",
+      "website": "https://www.chipsbank.com/",
+      "description": "深圳芯邦科技股份有限公司是一家于2003年创立的国家高新技术企业，国家级专精特新重点“小巨人”企业，是国内芯片设计与整体解决方案领域的核心品牌。目前公司在模块化数模混合soc 技术拥有多项专利和丰富的技术经验，产品涵盖存储控制芯片、超宽带UWB控制芯片，可广泛应用于智能家居、移动存储、消费电子、工业控制和汽车领域等多个应用场景。",
+      "sector": "芯片设计与整体解决方案",
+      "founded_year": 2003,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-88835998",
+      "email": "chipsbank@chipsbank.com",
+      "address": "深圳市南山区科技中二路深圳软件园二期12栋7楼",
+      "products": [
+        "存储控制芯片",
+        "UWB超宽带芯片",
+        "CBM2199E",
+        "CBM2199s",
+        "CBM3380",
+        "CBU5000V210"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "昂纳科技",
+    "url": "https://www.cnev.cn/shop/1073720/",
+    "pages": [
+      {
+        "url": "https://www.cnev.cn/shop/1073720/",
+        "title": "昂纳科技有限公司",
+        "chars": 1035,
+        "error": null
+      },
+      {
+        "url": "https://www.cnev.cn/shop/1073720/company.html",
+        "title": "公司介绍_昂纳科技有限公司",
+        "chars": 1104,
+        "error": null
+      },
+      {
+        "url": "https://www.cnev.cn/shop/1073720/contact.html",
+        "title": "联系我们-昂纳科技有限公司",
+        "chars": 615,
+        "error": null
+      },
+      {
+        "url": "http://www.cnev.cn/aboutUs/aboutus.aspx",
+        "title": "关于我们_电动汽车网",
+        "chars": 871,
+        "error": null
+      },
+      {
+        "url": "http://www.cnev.cn/aboutUs/link.aspx",
+        "title": "电动汽车网",
+        "chars": 668,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "昂纳科技有限公司",
+      "city": "上海市",
+      "district": "闵行区",
+      "website": "http://www.ampnova.com/",
+      "description": "昂纳科技有限公司是一家为物流快递行业提供电动车用车服务整体解决方案的高科技创业公司，为包括四通一达，EMS，宅急送，阿里，百度外卖，饿了么等数百家家各类快递企业提供用车服务。",
+      "sector": "物流快递行业电动车用车服务",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "上海闵行光华路598号4号楼4楼",
+      "products": [],
+      "customers": [
+        "四通一达",
+        "EMS",
+        "宅急送",
+        "阿里",
+        "百度外卖",
+        "饿了么"
+      ],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "捷佳伟创",
+    "url": "https://www.chinasc.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.chinasc.com.cn/",
+        "title": "深圳市捷佳伟创新能源装备股份有限公司",
+        "chars": 2446,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市捷佳伟创新能源装备股份有限公司",
+      "city": "深圳市",
+      "district": null,
+      "website": "https://www.chinasc.com.cn/",
+      "description": "深圳市捷佳伟创新能源装备股份有限公司是一家高速发展的新能源装备研发制造企业。2003年，公司的前身创立于广东省深圳市。2018年8月10日，捷佳伟创公司在创业板成功上市。（股票简称：捷佳伟创，股票代码：300724）",
+      "sector": "新能源装备",
+      "founded_year": 2003,
+      "team_size": "3800+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "整线解决方案",
+        "湿法设备",
+        "管式设备",
+        "板式设备",
+        "激光设备",
+        "金属化设备",
+        "半导体设备",
+        "智能制造设备",
+        "电子电路设备",
+        "卷绕及光学设备",
+        "钙钛矿光伏设备",
+        "全自动移载式填孔电镀设备",
+        "磁控溅射设备（PVD）",
+        "柔性钙钛矿产线核心设备",
+        "钙钛矿喷墨打印设备",
+        "大规格钙钛矿涂布设备",
+        "双面卷绕铜箔溅射镀膜设备",
+        "RPD5500A",
+        "制绒Plus系列设备",
+        "HJT板式PECVD设备"
+      ],
+      "customers": [
+        "全球300多家光伏电池生产企业"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "中芯国际深圳",
+    "url": "http://www.smics.com/",
+    "pages": [
+      {
+        "url": "https://www.smics.com/",
+        "title": "中芯国际-首页",
+        "chars": 3586,
+        "error": null
+      },
+      {
+        "url": "https://www.smics.com/site/about_summary",
+        "title": "中芯国际-关于中芯",
+        "chars": 2033,
+        "error": null
+      },
+      {
+        "url": "https://www.smics.com/site/company_contact",
+        "title": "中芯国际-投资者联系",
+        "chars": 2002,
+        "error": null
+      },
+      {
+        "url": "https://www.smics.com/site/company_contact#page_slide_0",
+        "title": "中芯国际-投资者联系",
+        "chars": 2002,
+        "error": null
+      },
+      {
+        "url": "https://www.smics.com/site/company_contact#page_slide_1",
+        "title": "中芯国际-投资者联系",
+        "chars": 2002,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "中芯国际",
+      "city": "上海",
+      "district": "浦东新区",
+      "website": "https://www.smics.com/",
+      "description": "中芯国际是世界领先的集成电路晶圆代工企业之一，也是中国大陆集成电路制造业领导者，拥有领先的工艺制造能力、产能优势、服务配套，向全球客户提供8英寸和12英寸晶圆代工与技术服务。",
+      "sector": "集成电路晶圆代工",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86 (21) 2081 2800",
+      "email": "IR@smics.com",
+      "address": "上海市浦东新区张江路18号，中华人民共和国 邮政编码: 201203",
+      "products": [
+        "8英寸晶圆代工",
+        "12英寸晶圆代工",
+        "Analog&Power",
+        "DDIC",
+        "IGBT",
+        "eNVM",
+        "NVM",
+        "Mixed Signal&RF",
+        "IoT Solutions",
+        "Automotive",
+        "光罩服务",
+        "多项目晶圆服务"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "拉普拉斯",
+    "url": "https://www.laplace-tech.com/",
+    "pages": [
+      {
+        "url": "https://www.laplace-tech.com/",
+        "title": "LAPLACE Renewable Energy Technology Co., Ltd.",
+        "chars": 2833,
+        "error": null
+      },
+      {
+        "url": "https://www.laplace-tech.com/about-us/",
+        "title": "About LAPLACE &#8211; LAPLACE Renewable Energy Technology Co., Ltd.",
+        "chars": 3878,
+        "error": null
+      },
+      {
+        "url": "https://www.laplace-tech.com/about-us/history/",
+        "title": "Development History &#8211; LAPLACE Renewable Energy Technology Co., Ltd.",
+        "chars": 3647,
+        "error": null
+      },
+      {
+        "url": "https://www.laplace-tech.com/about-us/culture/",
+        "title": "Corporate Culture &#8211; LAPLACE Renewable Energy Technology Co., Ltd.",
+        "chars": 8789,
+        "error": null
+      },
+      {
+        "url": "https://www.laplace-tech.com/about-us/csr/",
+        "title": "CSR &#8211; LAPLACE Renewable Energy Technology Co., Ltd.",
+        "chars": 7997,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "拉普拉斯",
+      "city": "深圳",
+      "district": null,
+      "website": "https://www.laplace-tech.com/",
+      "description": "Founded in Shenzhen in 2016, LAPLACE Renewable Energy Technology Co., Ltd. specializes in the research, development, and manufacturing of core equipment for N-type solar cell production.",
+      "sector": "光伏设备",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0510-85590779",
+      "email": "sales@laplace-tech.com",
+      "address": null,
+      "products": [
+        "Photovoltaic Equipment",
+        "Intelligent Manufacturing",
+        "Laser Equipment",
+        "Coatings & Adhesives",
+        "Advanced Materials",
+        "Scientific Instruments",
+        "G&D Semiconductor",
+        "Genius Way Semiconductor"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "青铜剑科技",
+    "url": "http://qtjtec.com/",
+    "pages": [
+      {
+        "url": "http://qtjtec.com/",
+        "title": "深圳青铜剑技术有限公司——中国功率器件驱动创新企业",
+        "chars": 1678,
+        "error": null
+      },
+      {
+        "url": "https://www.qtjtec.com/company",
+        "title": "公司概述 - 青铜剑技术",
+        "chars": 2095,
+        "error": null
+      },
+      {
+        "url": "https://www.qtjtec.com/contact",
+        "title": "联系我们 - 青铜剑技术",
+        "chars": 826,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳青铜剑技术有限公司",
+      "city": "深圳",
+      "district": "坪山区",
+      "website": "http://qtjtec.com/",
+      "description": "深圳青铜剑技术有限公司是中国功率器件驱动行业创新企业，专注于功率器件驱动器、驱动IC、测试设备的研发、生产、销售和服务，致力于为客户提供集成化、智能化、自主可控的电力电子解决方案。",
+      "sector": "功率器件驱动",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-86329497",
+      "email": "info@qtjtec.com",
+      "address": "广东省深圳市坪山区光科一路青铜剑科技大厦9楼",
+      "products": [
+        "门极驱动板",
+        "驱动核",
+        "即插即用驱动器",
+        "成套驱动方案",
+        "门极驱动芯片",
+        "隔离驱动芯片",
+        "低边驱动芯片",
+        "PWM控制芯片",
+        "功率器件动态参数测试系统",
+        "功率器件产线测试系统",
+        "脉冲信号发生器"
+      ],
+      "customers": [
+        "中国中车",
+        "国家电网",
+        "阳光电源",
+        "特变电工"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  }
+]

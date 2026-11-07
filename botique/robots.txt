@@ -1,0 +1,5 @@
+# BOTIQUE
+User-agent: *
+Allow: /
+
+Sitemap: https://botique.shop/sitemap.xml

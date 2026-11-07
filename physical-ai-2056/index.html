@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>物理 AI 2056 — 未来三十年，智能走出屏幕</title>
+  <meta name="description" content="一份关于物理 AI 的三十年展望：从芯片、本体、基础模型、感知、仿真到场景，梳理 2026—2056 的发展机会、产业玩家、全球资本路径与关键风险。">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="物理 AI 2056 — 智能，走出屏幕">
+  <meta property="og:description" content="当模型开始理解重力、摩擦与因果，未来三十年的主战场将从比特迁往原子。">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Noto+Sans+SC:wght@300;400;500;600;700&amp;family=Noto+Serif+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="page-progress" aria-hidden="true"><i id="pageProgress"></i></div>
+
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="物理 AI 2056 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M11 24V8h7.2a5.2 5.2 0 0 1 0 10.4H11" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="24" cy="24" r="2.2" fill="#ff5a1f"/>
+        </svg>
+        <span class="brand-copy">
+          <strong>物理 AI <em>2056</em></strong>
+          <span>THE PHYSICAL CENTURY</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主导航">
+        <a href="#thesis" data-nav>判断</a>
+        <a href="#horizon" data-nav>时间轴</a>
+        <a href="#chain" data-nav>产业链</a>
+        <a href="#opportunities" data-nav>机会</a>
+        <a href="#capital" data-nav>资本</a>
+        <a href="#scenarios" data-nav>情景</a>
+        <a href="#risks" data-nav>风险</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="nav-edition">EDITION 01 · 2026</span>
+        <a class="btn btn--small" href="#horizon"><span>进入 2056</span><span class="btn-arrow">↗</span></a>
+        <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <p class="eyebrow"><i class="status-dot"></i> OUTLOOK 2026—2056</p>
+            <p class="eyebrow eyebrow--muted">具身智能 · 世界模型 · 物理基础设施</p>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            <span>智能，</span>
+            <em>走出屏幕。</em>
+          </h1>
+
+          <p class="hero-lede">
+            当模型开始理解重力、摩擦与因果，机器不再只是回答问题，而是搬动、装配、驾驶与照料。未来三十年，物理 AI 将重写制造、交通、家庭与城市——这是智能从比特迁往原子的三十年。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#horizon"><span>进入三十年路线</span><span class="btn-arrow">↘</span></a>
+            <a class="text-link" href="#chain"><span>查看产业图谱</span><span class="text-link-line" aria-hidden="true"></span></a>
+          </div>
+
+          <dl class="hero-stats">
+            <div><dt>观察跨度</dt><dd><strong>30</strong><span>年</span></dd></div>
+            <div><dt>产业链</dt><dd><strong>06</strong><span>层</span></dd></div>
+            <div><dt>样本企业</dt><dd><strong>11</strong><span>家</span></dd></div>
+            <div><dt>能力换挡</dt><dd><strong>05</strong><span>次</span></dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="stage">
+            <div class="stage-ring stage-ring--one"></div>
+            <div class="stage-ring stage-ring--two"></div>
+            <div class="stage-cross stage-cross--a"></div>
+            <div class="stage-cross stage-cross--b"></div>
+
+            <canvas id="bodyCanvas"></canvas>
+
+            <span class="stage-label stage-label--perception"><b>01</b> 感知 / PERCEPTION</span>
+            <span class="stage-label stage-label--model"><b>02</b> 世界模型 / WORLD MODEL</span>
+            <span class="stage-label stage-label--actuation"><b>03</b> 执行 / ACTUATION</span>
+
+            <div class="stage-caption">
+              <span>FIG. 01</span>
+              <span>HUMANOID / POINT CLOUD</span>
+            </div>
+            <div class="stage-scale">
+              <span>2026</span>
+              <i></i>
+              <span>2056</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-foot container">
+        <a class="scroll-cue" href="#thesis"><span class="scroll-cue-line"></span> 向下阅读 · 约 15 分钟</a>
+        <p class="hero-note">研究型概念站 · 非投资建议</p>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>NVIDIA <i>·</i> QUALCOMM <i>·</i> UNITREE 宇树 <i>·</i> AGIBOT 智元 <i>·</i> PHYSICAL INTELLIGENCE <i>·</i> FIGURE <i>·</i> MOMENTA <i>·</i> ORBBEC 奥比中光 <i>·</i> SUOCHEN 索辰 <i>·</i> HAIQING 海清智元 <i>·</i> GOOGLE DEEPMIND <i>·</i></span>
+          <span>NVIDIA <i>·</i> QUALCOMM <i>·</i> UNITREE 宇树 <i>·</i> AGIBOT 智元 <i>·</i> PHYSICAL INTELLIGENCE <i>·</i> FIGURE <i>·</i> MOMENTA <i>·</i> ORBBEC 奥比中光 <i>·</i> SUOCHEN 索辰 <i>·</i> HAIQING 海清智元 <i>·</i> GOOGLE DEEPMIND <i>·</i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 01 THESIS ============================== -->
+    <section class="section thesis" id="thesis" aria-labelledby="thesis-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>01</span> / THESIS</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="thesis-title">从比特，<em>到原子</em></h2>
+            <p class="section-lede">物理 AI 不是一条新赛道，而是整个 AI 产业的第二次基础设施化：模型获得身体，软件进入车间、道路与家庭。</p>
+          </div>
+          <p class="section-meta">一次范式迁移<br>2026 → 2056</p>
+        </div>
+
+        <div class="thesis-statement reveal">
+          <p class="statement-kicker">THE NEXT INTERFACE IS THE PHYSICAL WORLD</p>
+          <h3>过去二十年，AI 学会了理解世界。<br>未来三十年，它要<em>亲手改变世界</em>。</h3>
+          <p class="statement-side">当输出从 token 变成力矩，评价标准也从“像不像人”变成“能不能把事做完”。这是一次关于可靠性、成本与规模的硬仗。</p>
+        </div>
+
+        <div class="shift-grid">
+          <article class="shift reveal">
+            <div class="shift-top"><span>01</span><i></i><em>INTERFACE</em></div>
+            <h3>接口变了：从文字到力矩</h3>
+            <p>AI 的输出不再只是屏幕上的字符，而是一次抓取、一次转向、一次装配。它必须在毫秒内完成，并承担真实的物理后果。</p>
+            <div class="shift-note">从“读懂”到“做到”</div>
+          </article>
+          <article class="shift reveal">
+            <div class="shift-top"><span>02</span><i></i><em>ECONOMICS</em></div>
+            <h3>成本结构变了：从复制到制造</h3>
+            <p>软件可以零成本复制，机器人不能。每一台设备都要穿过 BOM、良率、供应链与售后网络，规模效应来得更慢，也更厚。</p>
+            <div class="shift-note">从“边际成本为零”到“规模决定一切”</div>
+          </article>
+          <article class="shift reveal">
+            <div class="shift-top"><span>03</span><i></i><em>MOAT</em></div>
+            <h3>竞争单位变了：从模型到系统</h3>
+            <p>单一模型不再构成壁垒。芯片、身体、数据、场景与运营，拼的是一整条闭环。最后的赢家，往往是最懂现场的那一个。</p>
+            <div class="shift-note">从“单点能力”到“系统效率”</div>
+          </article>
+        </div>
+
+        <div class="why-now reveal">
+          <div class="why-head">
+            <p class="kicker">WHY NOW / 为什么是现在</p>
+            <h3>四个条件，第一次同时成立</h3>
+          </div>
+          <div class="why-grid">
+            <div class="why-item"><span>01 / 模型</span><p>多模态与空间推理跨过可用阈值，视觉—语言—动作模型（VLA）让“看懂”开始连接“做对”。</p></div>
+            <div class="why-item"><span>02 / 硬件</span><p>关节、灵巧手、3D 感知与边缘芯片同时进入成本下降通道。</p></div>
+            <div class="why-item"><span>03 / 供应链</span><p>中国把从样机到量产的周期压缩到周，试错成本被系统性降低。</p></div>
+            <div class="why-item"><span>04 / 资本</span><p>叙事从“会聊天”转向“能干活”，资金开始为实体交付买单。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 02 HORIZON ============================== -->
+    <section class="section horizon" id="horizon" aria-labelledby="horizon-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>02</span> / HORIZON</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="horizon-title">三十年，<em>五次换挡</em></h2>
+            <p class="section-lede">物理 AI 不会在某一天突然到来。它会沿着“验证—规模化—通用化—基础设施化”的路径，分五段完成对物理世界的改造。</p>
+          </div>
+          <p class="section-meta">点击节点切换阶段<br>或使用 ← → 键</p>
+        </div>
+
+        <div class="horizon-shell reveal">
+          <div class="horizon-top">
+            <div class="horizon-heading" aria-live="polite">
+              <p class="kicker" id="eraCounter">PHASE 01 / 05</p>
+              <h3 id="eraName">验证期</h3>
+              <p class="horizon-sub" id="eraSub">Demo 走向工位</p>
+            </div>
+            <div class="era-bigyear">
+              <span id="eraYear">2026</span>
+              <small id="eraRange">— 2029</small>
+            </div>
+          </div>
+
+          <div class="rail">
+            <div class="rail-line" aria-hidden="true"><i id="railProgress"></i></div>
+            <div class="rail-tabs" role="tablist" aria-label="三十年五个阶段">
+              <button class="era-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="era-0" id="era-tab-0" style="--i:0">
+                <span class="era-dot"></span><b>2026</b><em>验证</em>
+              </button>
+              <button class="era-tab" type="button" role="tab" aria-selected="false" aria-controls="era-1" id="era-tab-1" tabindex="-1" style="--i:1">
+                <span class="era-dot"></span><b>2030</b><em>规模化</em>
+              </button>
+              <button class="era-tab" type="button" role="tab" aria-selected="false" aria-controls="era-2" id="era-tab-2" tabindex="-1" style="--i:2">
+                <span class="era-dot"></span><b>2036</b><em>通用化</em>
+              </button>
+              <button class="era-tab" type="button" role="tab" aria-selected="false" aria-controls="era-3" id="era-tab-3" tabindex="-1" style="--i:3">
+                <span class="era-dot"></span><b>2043</b><em>基础设施</em>
+              </button>
+              <button class="era-tab" type="button" role="tab" aria-selected="false" aria-controls="era-4" id="era-tab-4" tabindex="-1" style="--i:4">
+                <span class="era-dot"></span><b>2050</b><em>物理 OS</em>
+              </button>
+            </div>
+          </div>
+
+          <div class="era-panels">
+            <div class="era-panel is-active" id="era-0" role="tabpanel" aria-labelledby="era-tab-0" tabindex="0">
+              <div class="era-lead">
+                <p class="era-range">2026 — 2029</p>
+                <h3>人形机器人第一次以“员工”身份进入真实产线。</h3>
+                <p>行业的关键词不是通用，而是可用。客户只为确定性的节拍与回报买单，实验室里的惊艳演示必须变成可复制的工位。</p>
+                <div class="era-tags"><span>核心零部件</span><span>数据采集</span><span>场景集成</span></div>
+              </div>
+              <div class="era-facts">
+                <div class="fact"><span>关键变化</span><ul><li>人形机器人进入汽车、3C、仓储，做搬运、质检与上下料</li><li>VLA 模型开始跨本体迁移，一个模型适配多种机械臂</li><li>城市 NOA 成为中高端车型标配，自动驾驶进入规模化运营</li></ul></div>
+                <div class="fact"><span>最大瓶颈</span><p>ROI 与可靠性。99% 的任务成功率，在工业现场仍然不够。</p></div>
+                <div class="fact fact--anchor"><span>现场锚点</span><p>宇树 2025 年人形机器人市占率约 32.4%；智元出货约占全球 39%（Omdia 口径）。</p></div>
+              </div>
+            </div>
+
+            <div class="era-panel" id="era-1" role="tabpanel" aria-labelledby="era-tab-1" tabindex="0" hidden>
+              <div class="era-lead">
+                <p class="era-range">2030 — 2035</p>
+                <h3>成本曲线与可靠性曲线第一次交叉。</h3>
+                <p>机器人从“项目”变成“产品”，再从“产品”变成“服务”。规模化不再由 Demo 驱动，而由单机经济模型驱动。</p>
+                <div class="era-tags"><span>执行器</span><span>灵巧手</span><span>边缘算力</span><span>运维网络</span></div>
+              </div>
+              <div class="era-facts">
+                <div class="fact"><span>关键变化</span><ul><li>单机 BOM 进入 2—3 万美元区间，RaaS（机器人即服务）成为主流交付方式</li><li>仓储物流与汽车制造率先规模化，高盛预计 2035 年全球出货 648 万台</li><li>灵巧手、执行器与边缘算力出现标准化模块</li></ul></div>
+                <div class="fact"><span>最大瓶颈</span><p>安全标准与售后网络。规模化的瓶颈，从实验室转向现场。</p></div>
+                <div class="fact fact--anchor"><span>机构锚点</span><p>高盛（2026.09）：2035 年全球人形机器人出货约 648 万台，市场规模约 1,380 亿美元。</p></div>
+              </div>
+            </div>
+
+            <div class="era-panel" id="era-2" role="tabpanel" aria-labelledby="era-tab-2" tabindex="0" hidden>
+              <div class="era-lead">
+                <p class="era-range">2036 — 2042</p>
+                <h3>世界模型把新任务的学习周期，从月压缩到天。</h3>
+                <p>机器人开始“举一反三”。通用化不是无所不能，而是面对新场景时，只需要更少的数据、更短的调试。</p>
+                <div class="era-tags"><span>世界模型</span><span>合成数据</span><span>家庭场景</span><span>运力网络</span></div>
+              </div>
+              <div class="era-facts">
+                <div class="fact"><span>关键变化</span><ul><li>家庭服务机器人出现首个千万级单品</li><li>自动驾驶车队成为城市公共运力的一部分</li><li>机器人基础模型形成“模型—数据—本体”飞轮</li></ul></div>
+                <div class="fact"><span>最大瓶颈</span><p>长尾场景。最后 10% 的异常，消耗 90% 的工程资源。</p></div>
+                <div class="fact fact--anchor"><span>情景推演</span><p>基准情景：2042 年全球可自动化物理任务中，约 50% 由物理 AI 承担。</p></div>
+              </div>
+            </div>
+
+            <div class="era-panel" id="era-3" role="tabpanel" aria-labelledby="era-tab-3" tabindex="0" hidden>
+              <div class="era-lead">
+                <p class="era-range">2043 — 2049</p>
+                <h3>物理 AI 接入电网、建筑、医疗与物流。</h3>
+                <p>它像电力一样成为看不见的基础设施。价值从单台设备，迁移到调度网络、安全认证与行业运营。</p>
+                <div class="era-tags"><span>调度网络</span><span>保险与安全</span><span>能源与散热</span><span>行业运营</span></div>
+              </div>
+              <div class="era-facts">
+                <div class="fact"><span>关键变化</span><ul><li>全球机器人保有量进入亿级，机器人调度网络出现</li><li>“物理世界 API”让设备、空间与智能体互相调用</li><li>机器人保险、身份与安全认证成为独立产业</li></ul></div>
+                <div class="fact"><span>最大瓶颈</span><p>责任与治理。事故归责、数据主权与跨境监管仍无统一答案。</p></div>
+                <div class="fact fact--anchor"><span>机构锚点</span><p>摩根士丹利长期情景：2050 年人形机器人保有量或达 10 亿台，市场规模约 5 万亿美元。</p></div>
+              </div>
+            </div>
+
+            <div class="era-panel" id="era-4" role="tabpanel" aria-labelledby="era-tab-4" tabindex="0" hidden>
+              <div class="era-lead">
+                <p class="era-range">2050 — 2056</p>
+                <h3>当机器人足够便宜、足够可靠，问题会变成“应不应该”。</h3>
+                <p>物理 AI 成为城市与工厂的默认配置，而非增量设备。技术问题终将变成分配问题，社会契约开始重写。</p>
+                <div class="era-tags"><span>标准与协议</span><span>城市级运营</span><span>治理与审计</span><span>新材料</span></div>
+              </div>
+              <div class="era-facts">
+                <div class="fact"><span>关键变化</span><ul><li>物理 AI 成为城市与工厂的默认配置</li><li>人机协作标准、机器人权利与劳动分配进入公共政策</li><li>价值从硬件转向协议、网络与治理</li></ul></div>
+                <div class="fact"><span>最大瓶颈</span><p>社会契约。技术问题终将变成分配问题。</p></div>
+                <div class="fact fact--anchor"><span>情景推演</span><p>基准情景：2056 年物理 AI 年度经济价值约 12 万亿美元，90% 的可自动化物理任务由 AI 承担。</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 03 CURVE ============================== -->
+    <section class="section curve" id="curve" aria-labelledby="curve-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>03</span> / ADOPTION</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="curve-title">增长不是直线，<em>是复利</em></h2>
+            <p class="section-lede">技术采用会在成本拐点突然加速，在可靠性瓶颈处短暂停滞，然后被下一次能力跃迁重新点燃。真正重要的不是速度，而是拐点出现的位置。</p>
+          </div>
+          <p class="section-meta">基准情景<br>2026 → 2056</p>
+        </div>
+
+        <div class="anchor-row reveal">
+          <div class="anchor-card"><span>2035 / 出货量</span><strong>648<small>万台</small></strong><p>高盛对全球人形机器人出货的最新预测</p></div>
+          <div class="anchor-card"><span>2050 / 市场规模</span><strong>$5<small>万亿</small></strong><p>摩根士丹利人形机器人长期情景</p></div>
+          <div class="anchor-card"><span>2056 / 任务渗透率</span><strong>90<small>%</small></strong><p>本站基准情景：可自动化物理任务由 AI 承担的比例</p></div>
+        </div>
+
+        <figure class="chart-figure reveal">
+          <div class="chart-head">
+            <div>
+              <p class="kicker">ADOPTION CURVE / 渗透率情景</p>
+              <h3>两个拐点，决定三十年的节奏</h3>
+            </div>
+            <div class="chart-legend">
+              <span><i class="legend-base"></i> 基准情景</span>
+              <span><i class="legend-prudent"></i> 审慎情景</span>
+            </div>
+          </div>
+          <div class="chart-canvas" id="adoptionChartWrap">
+            <svg id="adoptionChart" viewBox="0 0 900 480" role="img" aria-label="2026 至 2056 年物理 AI 任务渗透率曲线：基准情景从 2% 上升至 90%，审慎情景上升至 55%。"></svg>
+            <div class="chart-tooltip" id="chartTooltip" hidden>
+              <span id="tooltipYear">2035</span>
+              <strong id="tooltipValue">18%</strong>
+            </div>
+          </div>
+          <div class="chart-mobile">
+            <p class="mobile-bars-head"><span>基准情景 · 任务渗透率</span><span>2026 → 2056</span></p>
+            <div class="mbar"><span>2026</span><div class="mbar-track" aria-hidden="true"><i style="--v:2%"></i></div><b>2%</b></div>
+            <div class="mbar"><span>2035</span><div class="mbar-track" aria-hidden="true"><i style="--v:18%"></i></div><b>18%</b></div>
+            <div class="mbar"><span>2045</span><div class="mbar-track" aria-hidden="true"><i style="--v:63%"></i></div><b>63%</b></div>
+            <div class="mbar"><span>2056</span><div class="mbar-track" aria-hidden="true"><i style="--v:90%"></i></div><b>90%</b></div>
+          </div>
+          <figcaption>
+            曲线为编辑部情景推演，非机构预测。分母为“现有技术可自动化、且经济上可行的物理任务”。2035 与 2050 数据来自公开研究，口径不同，不可直接相加。
+          </figcaption>
+        </figure>
+        <details class="data-table">
+          <summary>查看数据表</summary>
+          <table>
+            <thead><tr><th scope="col">年份</th><th scope="col">基准情景</th><th scope="col">审慎情景</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">2026</th><td>2%</td><td>1%</td></tr>
+              <tr><th scope="row">2035</th><td>18%</td><td>8%</td></tr>
+              <tr><th scope="row">2040</th><td>41%</td><td>18%</td></tr>
+              <tr><th scope="row">2045</th><td>63%</td><td>31%</td></tr>
+              <tr><th scope="row">2050</th><td>80%</td><td>41%</td></tr>
+              <tr><th scope="row">2056</th><td>90%</td><td>55%</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============================== 04 CHAIN ============================== -->
+    <section class="section chain" id="chain" aria-labelledby="chain-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>04</span> / VALUE CHAIN</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="chain-title">六层产业链，<em>六种赢法</em></h2>
+            <p class="section-lede">物理 AI 的竞争不是单点对单点，而是链条对链条。每一层都有不同的壁垒：算力拼生态，本体拼成本，模型拼数据，场景拼运营。</p>
+          </div>
+          <p class="section-meta">价值池为情景估算<br>点击层级查看</p>
+        </div>
+
+        <div class="chain-layout reveal">
+          <div class="chain-list" role="tablist" aria-label="物理 AI 产业链六层" aria-orientation="vertical">
+            <button class="chain-item is-active" type="button" role="tab" aria-selected="true" aria-controls="chain-0" id="chain-tab-0">
+              <span class="chain-idx">01</span><span class="chain-name">芯片与算力</span><span class="chain-share">20%</span>
+              <i class="chain-bar" style="--v:20%"></i>
+            </button>
+            <button class="chain-item" type="button" role="tab" aria-selected="false" aria-controls="chain-1" id="chain-tab-1" tabindex="-1">
+              <span class="chain-idx">02</span><span class="chain-name">本体与执行器</span><span class="chain-share">26%</span>
+              <i class="chain-bar" style="--v:26%"></i>
+            </button>
+            <button class="chain-item" type="button" role="tab" aria-selected="false" aria-controls="chain-2" id="chain-tab-2" tabindex="-1">
+              <span class="chain-idx">03</span><span class="chain-name">基础模型</span><span class="chain-share">20%</span>
+              <i class="chain-bar" style="--v:20%"></i>
+            </button>
+            <button class="chain-item" type="button" role="tab" aria-selected="false" aria-controls="chain-3" id="chain-tab-3" tabindex="-1">
+              <span class="chain-idx">04</span><span class="chain-name">感知与传感</span><span class="chain-share">10%</span>
+              <i class="chain-bar" style="--v:10%"></i>
+            </button>
+            <button class="chain-item" type="button" role="tab" aria-selected="false" aria-controls="chain-4" id="chain-tab-4" tabindex="-1">
+              <span class="chain-idx">05</span><span class="chain-name">仿真与数据</span><span class="chain-share">8%</span>
+              <i class="chain-bar" style="--v:8%"></i>
+            </button>
+            <button class="chain-item" type="button" role="tab" aria-selected="false" aria-controls="chain-5" id="chain-tab-5" tabindex="-1">
+              <span class="chain-idx">06</span><span class="chain-name">场景与运营</span><span class="chain-share">16%</span>
+              <i class="chain-bar" style="--v:16%"></i>
+            </button>
+          </div>
+
+          <div class="chain-panels">
+            <section class="chain-panel is-active" id="chain-0" role="tabpanel" aria-labelledby="chain-tab-0" tabindex="0">
+              <div class="panel-head">
+                <p class="kicker">LAYER 01 / COMPUTE</p>
+                <h3>算力：训练在云端，推理在身体里</h3>
+                <p>物理 AI 对算力的要求不是更大的模型，而是更低的延迟、更低的功耗和更确定的安全边界。</p>
+              </div>
+              <div class="panel-metrics">
+                <div><span>价值池</span><strong>20%</strong></div>
+                <div><span>窗口</span><strong>2026—2035</strong></div>
+                <div><span>关键指标</span><strong>TOPS / W</strong></div>
+              </div>
+              <div class="entity-grid">
+                <a class="entity" href="https://www.nvidia.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">GPU · 边缘 · 仿真</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>NVIDIA</h4>
+                  <p>GPU、Jetson、Isaac 与 Omniverse 构成全栈生态；被 MarketsandMarkets 列为物理 AI 市场领导者，覆盖从训练、仿真到部署的完整链条。</p>
+                  <div class="entity-metric"><strong>全栈</strong><span>训练 → 部署</span></div>
+                </a>
+                <a class="entity" href="https://www.qualcomm.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">边缘 AI · 低功耗</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>Qualcomm</h4>
+                  <p>以 Snapdragon 与 Robotics RB 系列切入，主打高能效边缘 AI，面向功耗与成本敏感的量产设备。</p>
+                  <div class="entity-metric"><strong>能效</strong><span>边缘量产</span></div>
+                </a>
+              </div>
+              <p class="watchline"><span>观察</span>端侧推理芯片的能效比与实时性，以及工具链能否让机器人公司“开箱即用”。</p>
+            </section>
+
+            <section class="chain-panel" id="chain-1" role="tabpanel" aria-labelledby="chain-tab-1" tabindex="0" hidden>
+              <div class="panel-head">
+                <p class="kicker">LAYER 02 / BODY</p>
+                <h3>本体：得执行器者得成本，得场景者得规模</h3>
+                <p>机器人本体的竞争，本质上是 BOM、良率与供应链的竞争。谁能把成本打下来，谁就拥有定义产品形态的权力。</p>
+              </div>
+              <div class="panel-metrics">
+                <div><span>价值池</span><strong>26%</strong></div>
+                <div><span>窗口</span><strong>2026—2035</strong></div>
+                <div><span>关键指标</span><strong>BOM / MTBF</strong></div>
+              </div>
+              <div class="entity-grid">
+                <a class="entity" href="https://www.unitree.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">人形 · 四足</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>宇树科技</h4>
+                  <p>G1 等机型进入全球第一梯队；2025 年人形机器人市占率约 32.4%，已实现盈利。2026 上半年营收 11.52 亿元，归母净利润 2.74 亿元。</p>
+                  <div class="entity-metric"><strong>32.4%</strong><span>2025 人形市占率</span></div>
+                </a>
+                <a class="entity" href="https://www.agibot.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">人形 · 具身</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>智元机器人</h4>
+                  <p>2025 年出货约占全球 39%（Omdia 口径）；在 2026 AI Cloud 100 China 榜单中位列物理 AI 领域前列。</p>
+                  <div class="entity-metric"><strong>≈39%</strong><span>2025 全球出货</span></div>
+                </a>
+                <a class="entity" href="https://www.figure.ai" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">人形 · 进厂</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>Figure</h4>
+                  <p>人形机器人领域融资额最高的公司之一，累计融资超 7.5 亿美元；Figure 02 已进入宝马工厂场景。</p>
+                  <div class="entity-metric"><strong>&gt;$7.5亿</strong><span>累计融资</span></div>
+                </a>
+              </div>
+              <p class="watchline"><span>观察</span>单机成本、平均无故障时间（MTBF）、负载自重比与真实量产交付能力。</p>
+            </section>
+
+            <section class="chain-panel" id="chain-2" role="tabpanel" aria-labelledby="chain-tab-2" tabindex="0" hidden>
+              <div class="panel-head">
+                <p class="kicker">LAYER 03 / FOUNDATION MODEL</p>
+                <h3>模型：一个大脑，多种身体</h3>
+                <p>VLA 模型把视觉、语言与动作压进同一个策略网络。真正的壁垒不是参数，而是跨本体泛化与数据飞轮。</p>
+              </div>
+              <div class="panel-metrics">
+                <div><span>价值池</span><strong>20%</strong></div>
+                <div><span>窗口</span><strong>2027—2040</strong></div>
+                <div><span>关键指标</span><strong>泛化 / 成功率</strong></div>
+              </div>
+              <div class="entity-grid">
+                <a class="entity" href="https://www.physicalintelligence.company" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">VLA · 通用控制</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>Physical Intelligence</h4>
+                  <p>专注视觉—语言—动作模型，估值一度达 110 亿美元；目标是让单一模型控制多种机器人本体。</p>
+                  <div class="entity-metric"><strong>$110亿</strong><span>峰值估值</span></div>
+                </a>
+                <a class="entity" href="https://www.figure.ai" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">端到端 · 人形</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>Figure</h4>
+                  <p>以端到端人形机器人控制为方向，把大模型能力带进真实产线，是“模型 + 本体”垂直整合的代表。</p>
+                  <div class="entity-metric"><strong>端到端</strong><span>人形控制</span></div>
+                </a>
+                <a class="entity" href="https://deepmind.google" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">通用具身 · 研究</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>Google DeepMind</h4>
+                  <p>Gemini 系列与机器人基础模型研究，是通用具身智能的重要推动者，也是“机器人大脑”路线的头部力量。</p>
+                  <div class="entity-metric"><strong>Gemini</strong><span>机器人基础模型</span></div>
+                </a>
+              </div>
+              <p class="watchline"><span>观察</span>跨本体迁移能力、长任务成功率、单位数据成本与数据飞轮的转速。</p>
+            </section>
+
+            <section class="chain-panel" id="chain-3" role="tabpanel" aria-labelledby="chain-tab-3" tabindex="0" hidden>
+              <div class="panel-head">
+                <p class="kicker">LAYER 04 / PERCEPTION</p>
+                <h3>感知：物理 AI 的眼睛，不止是摄像头</h3>
+                <p>从 3D 结构光到多光谱，感知层决定机器能看见什么、看懂什么。它是物理 AI 最确定、也最容易被低估的入口。</p>
+              </div>
+              <div class="panel-metrics">
+                <div><span>价值池</span><strong>10%</strong></div>
+                <div><span>窗口</span><strong>2026—2032</strong></div>
+                <div><span>关键指标</span><strong>成本 / 精度</strong></div>
+              </div>
+              <div class="entity-grid">
+                <a class="entity" href="https://www.haiqingai.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">多光谱 · AI 感知</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>海清智元</h4>
+                  <p>多光谱 AI 感知代表企业，2026 年港股上市；按 2025 年收入计，中国多光谱 AI 公司第一，多光谱 AI 大模型服务份额 23%。</p>
+                  <div class="entity-metric"><strong>23%</strong><span>大模型服务份额</span></div>
+                </a>
+                <a class="entity" href="https://www.orbbec.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">3D 视觉 · 机器人</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>奥比中光</h4>
+                  <p>3D 视觉感知供应商，被称为“机器人眼睛”，与英伟达深度合作；2025 年营收 9.41 亿元，同比增长 66.66%，实现扭亏为盈。</p>
+                  <div class="entity-metric"><strong>9.41亿</strong><span>2025 营收</span></div>
+                </a>
+              </div>
+              <p class="watchline"><span>观察</span>车规与机器人双市场摊薄成本的能力，以及多传感器融合的算法壁垒。</p>
+            </section>
+
+            <section class="chain-panel" id="chain-4" role="tabpanel" aria-labelledby="chain-tab-4" tabindex="0" hidden>
+              <div class="panel-head">
+                <p class="kicker">LAYER 05 / SIMULATION</p>
+                <h3>仿真：在虚拟世界里，先摔一百万次</h3>
+                <p>仿真把昂贵的真实世界试错，变成廉价的并行计算。谁拥有高质量场景资产，谁就拥有训练速度。</p>
+              </div>
+              <div class="panel-metrics">
+                <div><span>价值池</span><strong>8%</strong></div>
+                <div><span>窗口</span><strong>2026—2040</strong></div>
+                <div><span>关键指标</span><strong>Sim2Real</strong></div>
+              </div>
+              <div class="entity-grid">
+                <a class="entity" href="https://www.suochen.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">CAE · 物理 AI</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>索辰科技</h4>
+                  <p>国产 CAE 龙头，推出“开物”物理 AI 平台与机器人虚拟训练平台；2025 年中报物理 AI 收入首次落地，占比 6.5%。</p>
+                  <div class="entity-metric"><strong>6.5%</strong><span>2025H1 物理 AI 占比</span></div>
+                </a>
+                <a class="entity" href="https://www.nvidia.com" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">仿真 · 合成数据</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>NVIDIA Isaac</h4>
+                  <p>Isaac Sim 与 Omniverse 构成机器人仿真与合成数据的事实标准之一，是“先训练、再落地”的基础设施。</p>
+                  <div class="entity-metric"><strong>Isaac</strong><span>仿真与合成数据</span></div>
+                </a>
+              </div>
+              <p class="watchline"><span>观察</span>Sim2Real 差距、场景资产生成速度与物理引擎的精度。</p>
+            </section>
+
+            <section class="chain-panel" id="chain-5" role="tabpanel" aria-labelledby="chain-tab-5" tabindex="0" hidden>
+              <div class="panel-head">
+                <p class="kicker">LAYER 06 / SCENARIO</p>
+                <h3>场景：谁掌握场景，谁定义产品</h3>
+                <p>物理 AI 的价值最终在场景里兑现。自动驾驶是最成熟的单一场景，工业、物流、家庭与医疗紧随其后。</p>
+              </div>
+              <div class="panel-metrics">
+                <div><span>价值池</span><strong>16%</strong></div>
+                <div><span>窗口</span><strong>2026—2045</strong></div>
+                <div><span>关键指标</span><strong>单位经济</strong></div>
+              </div>
+              <div class="entity-grid">
+                <a class="entity" href="https://www.momenta.ai" target="_blank" rel="noopener">
+                  <div class="entity-head"><span class="entity-tag">自动驾驶 · 城市 NOA</span><span class="entity-link">官网 ↗</span></div>
+                  <h4>Momenta</h4>
+                  <p>2026 年 7 月港交所上市；按 2025.03—2026.02 城市 NOA 方案销量计，市场份额 64.5%，全球第一；合作车企 24 家。</p>
+                  <div class="entity-metric"><strong>64.5%</strong><span>城市 NOA 份额</span></div>
+                </a>
+                <div class="entity entity--static">
+                  <div class="entity-head"><span class="entity-tag">工业 · 物流</span><span class="entity-link">先行场景</span></div>
+                  <h4>制造与仓储</h4>
+                  <p>汽车、3C、仓储是当前 ROI 最清晰的场景，适合验证可靠性、节拍与运维模型，也是规模化的第一站。</p>
+                  <div class="entity-metric"><strong>ROI</strong><span>最先兑现</span></div>
+                </div>
+                <div class="entity entity--static">
+                  <div class="entity-head"><span class="entity-tag">家庭 · 服务</span><span class="entity-link">长期场景</span></div>
+                  <h4>家庭服务</h4>
+                  <p>中长期最大的单一市场，但受安全、成本与用户预期三重约束，渗透节奏会明显慢于工业。</p>
+                  <div class="entity-metric"><strong>2032+</strong><span>爆发窗口</span></div>
+                </div>
+              </div>
+              <p class="watchline"><span>观察</span>单场景单位经济模型、部署周期与客户复购率，而不是发布会上的 Demo。</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="coordinate reveal">
+          <div class="coordinate-head">
+            <p class="kicker">YOUR ENTRY POINT / 你的坐标</p>
+            <p>同一条产业链，不同的进入方式。先确认你要解决的是“大脑”“身体”“眼睛”还是“场景”，再看对应的样本。</p>
+          </div>
+          <div class="coordinate-grid">
+            <button type="button" class="coordinate-item" data-chain-jump="2">
+              <span>机器人“大脑”</span>
+              <strong>NVIDIA · Physical Intelligence · DeepMind</strong>
+              <i>算力与基础模型 ↗</i>
+            </button>
+            <button type="button" class="coordinate-item" data-chain-jump="1">
+              <span>本体与量产</span>
+              <strong>宇树 · Figure · 智元</strong>
+              <i>本体与执行器 ↗</i>
+            </button>
+            <button type="button" class="coordinate-item" data-chain-jump="3">
+              <span>感知入口</span>
+              <strong>海清智元 · 奥比中光</strong>
+              <i>感知与传感 ↗</i>
+            </button>
+            <button type="button" class="coordinate-item" data-chain-jump="5">
+              <span>最成熟的场景</span>
+              <strong>Momenta</strong>
+              <i>自动驾驶 ↗</i>
+            </button>
+          </div>
+        </div>
+
+        <p class="chain-foot reveal">价值池结构为编辑部情景估算，用于呈现产业链的相对权重，不代表任何机构预测。样本企业为示意，非穷尽列表，排名不分先后。</p>
+      </div>
+    </section>
+
+    <!-- ============================== 05 OPPORTUNITIES ============================== -->
+    <section class="section opportunities" id="opportunities" aria-labelledby="opp-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>05</span> / OPPORTUNITY</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="opp-title">九个正在打开的<em>窗口</em></h2>
+            <p class="section-lede">不是每个环节都值得创业，也不是每个窗口都适合现在进入。用“时间窗口 × 确定性 × 天花板”三个维度，筛出值得长期跟踪的方向。</p>
+          </div>
+          <p class="section-meta">按窗口期筛选<br>2026 → 2056</p>
+        </div>
+
+        <div class="opp-filter reveal" role="group" aria-label="按时间窗口筛选机会">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">全部 <span>09</span></button>
+          <button class="filter-btn" type="button" data-filter="now" aria-pressed="false">近期 <span>2026—2035</span></button>
+          <button class="filter-btn" type="button" data-filter="mid" aria-pressed="false">中期 <span>2036—2045</span></button>
+          <button class="filter-btn" type="button" data-filter="long" aria-pressed="false">远期 <span>2046—2056</span></button>
+          <span class="opp-count" id="oppCount" aria-live="polite">09 个方向</span>
+        </div>
+
+        <div class="opp-grid" id="oppGrid">
+          <article class="opp reveal" data-window="now">
+            <div class="opp-top"><span class="opp-num">01</span><span class="opp-window">2026—2033</span></div>
+            <h3>具身基础模型 / VLA</h3>
+            <p>跨本体泛化是下一个平台级机会。谁能让一个模型快速适配新身体、新任务，谁就掌握了机器人大脑的入口。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 3 / 5"><b style="--v:60%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 5 / 5"><b style="--v:100%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="now">
+            <div class="opp-top"><span class="opp-num">02</span><span class="opp-window">2026—2035</span></div>
+            <h3>灵巧手与执行器</h3>
+            <p>执行器占本体成本近半。标准化、高寿命、低成本的关节与灵巧手，是机器人从样机走向量产的硬门槛。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 4 / 5"><b style="--v:80%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 5 / 5"><b style="--v:100%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="now">
+            <div class="opp-top"><span class="opp-num">03</span><span class="opp-window">2026—2040</span></div>
+            <h3>边缘推理芯片</h3>
+            <p>低功耗、实时、安全，是机器人规模化的隐形门槛。云端训练很强，但身体里的推理必须更便宜、更可控。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 4 / 5"><b style="--v:80%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 4 / 5"><b style="--v:80%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="now">
+            <div class="opp-top"><span class="opp-num">04</span><span class="opp-window">2026—2032</span></div>
+            <h3>3D 与多光谱感知</h3>
+            <p>机器人需要的不只是图像，而是深度、材质与语义。汽车与机器人双市场，能同时摊薄成本、加速迭代。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 4 / 5"><b style="--v:80%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 4 / 5"><b style="--v:80%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="now">
+            <div class="opp-top"><span class="opp-num">05</span><span class="opp-window">2026—2040</span></div>
+            <h3>自动驾驶运力网络</h3>
+            <p>从卖车到卖里程，商业模式正在重写。城市 NOA 是物理 AI 最早跑通规模化的单一场景，也是数据闭环的源头。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 4 / 5"><b style="--v:80%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 4 / 5"><b style="--v:80%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="mid">
+            <div class="opp-top"><span class="opp-num">06</span><span class="opp-window">2028—2042</span></div>
+            <h3>世界模型与合成数据</h3>
+            <p>把真实世界的试错搬进 GPU。世界模型决定训练速度，合成数据决定长尾覆盖，二者共同压缩具身智能的迭代周期。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 3 / 5"><b style="--v:60%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 5 / 5"><b style="--v:100%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="mid">
+            <div class="opp-top"><span class="opp-num">07</span><span class="opp-window">2030—2045</span></div>
+            <h3>机器人运维与保险</h3>
+            <p>规模越大，后市场越值钱。部署、保养、备件、事故责任与保险，会成长为一门独立且高粘性的生意。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 4 / 5"><b style="--v:80%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 4 / 5"><b style="--v:80%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="long">
+            <div class="opp-top"><span class="opp-num">08</span><span class="opp-window">2032—2050</span></div>
+            <h3>家庭服务机器人</h3>
+            <p>最难，也最大。安全、成本与用户预期是三道门，但一旦跨过，家庭会成为物理 AI 最大的单一市场。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 2 / 5"><b style="--v:40%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 5 / 5"><b style="--v:100%"></b></i></div>
+            </div>
+          </article>
+
+          <article class="opp reveal" data-window="long">
+            <div class="opp-top"><span class="opp-num">09</span><span class="opp-window">2038—2056</span></div>
+            <h3>物理世界 API / 调度</h3>
+            <p>当机器人足够多，调度层就是新的操作系统。谁定义设备、空间与智能体之间的协议，谁就掌握下一代基础设施。</p>
+            <div class="opp-meters">
+              <div><span>确定性</span><i class="meter" role="img" aria-label="确定性 3 / 5"><b style="--v:60%"></b></i></div>
+              <div><span>天花板</span><i class="meter" role="img" aria-label="天花板 5 / 5"><b style="--v:100%"></b></i></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 06 CAPITAL ============================== -->
+    <section class="section capital" id="capital" aria-labelledby="capital-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>06</span> / CAPITAL</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="capital-title">资本，流向<em>物理世界</em></h2>
+            <p class="section-lede">过去十年，风险资本奖励软件的分发与订阅；未来三十年，它要重新学会为算力、机器与基础设施的现金流定价。资本周期与技术阶段不必一一对应：资本往往提前定价，也常常滞后退出。物理 AI 的投资路径不是一条直线，而是一张由技术拐点、资本周期与地理优势叠合的地图。</p>
+          </div>
+          <p class="section-meta">长期配置框架<br>非投资建议</p>
+        </div>
+
+        <div class="capital-metrics reveal">
+          <div><strong>04</strong><span>资本周期</span><p>稀缺 → 交付 → 平台 → 现金流</p></div>
+          <div><strong>06</strong><span>地理枢纽</span><p>多极化，而非单中心</p></div>
+          <div><strong>04</strong><span>组合仓位</span><p>核心 / 成长 / 平台 / 期权</p></div>
+          <div><strong>05</strong><span>尽调问题</span><p>从技术叙事回到现金流</p></div>
+        </div>
+
+        <div class="capital-clock reveal">
+          <div class="clock-head">
+            <div>
+              <p class="kicker">CAPITAL CLOCK / 资本时钟</p>
+              <h3>四个周期，四种定价方式</h3>
+            </div>
+            <p class="clock-note">VC · 产业资本 · 主权基金 · 公开市场<br>点击切换 · 配置为示意</p>
+          </div>
+
+          <div class="clock-rail" role="tablist" aria-label="四个资本周期">
+            <button class="clock-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="capitalPanel" id="clock-tab-0">
+              <span class="clock-year">2026</span>
+              <span class="clock-name">基础设施军备期</span>
+              <small>2026—2029</small>
+            </button>
+            <button class="clock-tab" type="button" role="tab" aria-selected="false" aria-controls="capitalPanel" id="clock-tab-1" tabindex="-1">
+              <span class="clock-year">2029</span>
+              <span class="clock-name">量产验证期</span>
+              <small>2029—2034</small>
+            </button>
+            <button class="clock-tab" type="button" role="tab" aria-selected="false" aria-controls="capitalPanel" id="clock-tab-2" tabindex="-1">
+              <span class="clock-year">2034</span>
+              <span class="clock-name">平台整合期</span>
+              <small>2034—2043</small>
+            </button>
+            <button class="clock-tab" type="button" role="tab" aria-selected="false" aria-controls="capitalPanel" id="clock-tab-3" tabindex="-1">
+              <span class="clock-year">2043</span>
+              <span class="clock-name">基础设施成熟期</span>
+              <small>2043—2056</small>
+            </button>
+          </div>
+
+          <div class="clock-body">
+            <div class="clock-copy" id="capitalPanel" role="tabpanel" aria-labelledby="clock-tab-0" tabindex="0">
+              <p class="kicker" id="capitalKicker">PHASE 01 / 04 · 2026—2029</p>
+              <h3 id="capitalName">基础设施军备期</h3>
+              <p class="clock-desc" id="capitalDesc">资本追逐确定性稀缺：先进制程、GPU、电力、精密执行器与传感器。订单与产能，比故事更值钱。</p>
+              <div class="clock-tags" id="capitalTags">
+                <span>算力芯片</span><span>电力与散热</span><span>精密零部件</span><span>工业软件</span>
+              </div>
+              <dl class="clock-facts">
+                <div><dt>退出窗口</dt><dd id="capitalExit">战略并购；芯片与零部件 IPO</dd></div>
+                <div><dt>关键信号</dt><dd id="capitalSignal">资本开支、在手订单、毛利率</dd></div>
+              </dl>
+            </div>
+
+            <div class="clock-alloc">
+              <div class="alloc-head"><span>配置示意 / ALLOCATION</span><span>100%</span></div>
+              <div class="alloc-row"><span>算力与能源</span><b data-alloc-value="0">45%</b><i><em data-alloc-bar="0" style="--v:45%"></em></i></div>
+              <div class="alloc-row"><span>模型与数据</span><b data-alloc-value="1">22%</b><i><em data-alloc-bar="1" style="--v:22%"></em></i></div>
+              <div class="alloc-row"><span>本体与自动化</span><b data-alloc-value="2">20%</b><i><em data-alloc-bar="2" style="--v:20%"></em></i></div>
+              <div class="alloc-row"><span>场景与服务</span><b data-alloc-value="3">13%</b><i><em data-alloc-bar="3" style="--v:13%"></em></i></div>
+              <p class="alloc-note">比例为情景示意，用于呈现资本重心迁移，不代表任何基金或个人的真实配置。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="capital-global reveal">
+          <div class="capital-map" id="capitalMap">
+            <div class="map-head">
+              <p class="kicker">GLOBAL CAPITAL NETWORK</p>
+              <span>2026—2056</span>
+            </div>
+            <svg id="capitalMapSvg" viewBox="0 0 900 470" role="img" aria-label="全球物理 AI 资本网络示意：美国、中国、欧洲、日本与韩国、中东、印度与东南亚六个资本枢纽，由技术与资本流动弧线连接。"></svg>
+            <div class="map-foot">
+              <span>节点 = 资本与产业枢纽</span>
+              <span>弧线 = 技术、人才与资本流动方向</span>
+              <span>地图为示意，不构成地理或政治边界</span>
+            </div>
+          </div>
+
+          <div class="region-grid">
+            <article class="region-card" data-region="us">
+              <div class="region-top"><span>01 / NORTH AMERICA</span><b>US</b></div>
+              <h4>美国 <em>从 0 到 1</em></h4>
+              <p>基础模型、算力、人形机器人与自动驾驶的原创策源地；拥有最深的私募市场与最活跃的退出通道。</p>
+              <dl>
+                <div><dt>资本角色</dt><dd>风险资本 + 公开市场</dd></div>
+                <div><dt>优势资产</dt><dd>模型 / GPU / 人形 / Robotaxi</dd></div>
+                <div><dt>主要风险</dt><dd>估值集中、出口管制</dd></div>
+              </dl>
+            </article>
+
+            <article class="region-card" data-region="cn">
+              <div class="region-top"><span>02 / EAST ASIA</span><b>CN</b></div>
+              <h4>中国 <em>从 1 到 100 万</em></h4>
+              <p>供应链、硬件迭代与成本控制的中心；场景密度和工程速度，把样机更快推向量产。</p>
+              <dl>
+                <div><dt>资本角色</dt><dd>产业资本 + 人民币基金</dd></div>
+                <div><dt>优势资产</dt><dd>本体 / 感知 / 执行器 / 场景</dd></div>
+                <div><dt>主要风险</dt><dd>地缘政治、资本周期</dd></div>
+              </dl>
+            </article>
+
+            <article class="region-card" data-region="eu">
+              <div class="region-top"><span>03 / EUROPE</span><b>EU</b></div>
+              <h4>欧洲 <em>标准与工业</em></h4>
+              <p>工业自动化、汽车与安全标准的底座；深科技积累深，但规模化资本市场相对偏薄。</p>
+              <dl>
+                <div><dt>资本角色</dt><dd>战略资本 + 政府基金</dd></div>
+                <div><dt>优势资产</dt><dd>工业机器人 / 汽车 / 传感器 / 标准</dd></div>
+                <div><dt>主要风险</dt><dd>市场碎片化、退出偏慢</dd></div>
+              </dl>
+            </article>
+
+            <article class="region-card" data-region="jpkr">
+              <div class="region-top"><span>04 / EAST ASIA</span><b>JP · KR</b></div>
+              <h4>日本 · 韩国 <em>精密与材料</em></h4>
+              <p>执行器、传感器、半导体材料与服务机器人的隐形冠军；老龄化社会提供真实而迫切的需求。</p>
+              <dl>
+                <div><dt>资本角色</dt><dd>产业集团 + 长期资本</dd></div>
+                <div><dt>优势资产</dt><dd>零部件 / 材料 / 服务机器人</dd></div>
+                <div><dt>主要风险</dt><dd>创业生态、内需收缩</dd></div>
+              </dl>
+            </article>
+
+            <article class="region-card" data-region="me">
+              <div class="region-top"><span>05 / MIDDLE EAST</span><b>ME</b></div>
+              <h4>中东 <em>主权资本与能源</em></h4>
+              <p>主权基金、低成本能源与智慧城市试验场；用资本换产业，但人才与产业链仍在搭建。</p>
+              <dl>
+                <div><dt>资本角色</dt><dd>主权财富基金</dd></div>
+                <div><dt>优势资产</dt><dd>算力 / 能源 / 智慧城市 / 物流</dd></div>
+                <div><dt>主要风险</dt><dd>人才与产业链薄弱</dd></div>
+              </dl>
+            </article>
+
+            <article class="region-card" data-region="insea">
+              <div class="region-top"><span>06 / SOUTH ASIA</span><b>IN · SEA</b></div>
+              <h4>印度 · 东南亚 <em>增量市场</em></h4>
+              <p>工程人才、软件能力与年轻市场；自动驾驶、机器人与数字基础设施的增量需求正在形成。</p>
+              <dl>
+                <div><dt>资本角色</dt><dd>成长资本 + 战略资本</dd></div>
+                <div><dt>优势资产</dt><dd>软件 / 自动驾驶 / 机器人部署</dd></div>
+                <div><dt>主要风险</dt><dd>基础设施、支付能力</dd></div>
+              </dl>
+            </article>
+          </div>
+        </div>
+
+        <div class="capital-sleeves reveal">
+          <div class="sleeves-head">
+            <div>
+              <p class="kicker">PORTFOLIO SLEEVES / 组合仓位</p>
+              <h3>把未来拆成四个抽屉</h3>
+            </div>
+            <p>长期布局不是“买赛道”，而是把不同赔率、不同久期的资产放进同一张组合表。区间为示意，现金与对冲补足剩余。</p>
+          </div>
+
+          <div class="sleeve-grid">
+            <article class="sleeve">
+              <div class="sleeve-top"><span>CORE / 核心</span><b>25—40%</b></div>
+              <h4>算力、电力与精密部件</h4>
+              <p>赚产业 β 与现金流。看产能、良率、客户结构与能源约束，适合作为长期底仓。</p>
+              <div class="sleeve-range"><span>25</span><i><em style="--l:25%;--h:40%"></em></i><span>40</span></div>
+              <div class="sleeve-note">7—10 年 · 现金流 · 直投 / 基建基金</div>
+            </article>
+
+            <article class="sleeve">
+              <div class="sleeve-top"><span>GROWTH / 成长</span><b>20—30%</b></div>
+              <h4>人形本体、Robotaxi、工业机器人</h4>
+              <p>赚量产拐点的 α。看 BOM、MTBF、部署周期与复购，订单比 Demo 更早说话。</p>
+              <div class="sleeve-range"><span>20</span><i><em style="--l:20%;--h:30%"></em></i><span>30</span></div>
+              <div class="sleeve-note">5—8 年 · 订单驱动 · 直投 / 成长基金</div>
+            </article>
+
+            <article class="sleeve">
+              <div class="sleeve-top"><span>PLATFORM / 平台</span><b>15—25%</b></div>
+              <h4>基础模型、仿真、机器人 OS</h4>
+              <p>赚网络效应。赢家通吃，估值波动最大；需要容忍回撤，也需要识别真正的生态。</p>
+              <div class="sleeve-range"><span>15</span><i><em style="--l:15%;--h:25%"></em></i><span>25</span></div>
+              <div class="sleeve-note">7—12 年 · 赢家通吃 · 直投 / 二级</div>
+            </article>
+
+            <article class="sleeve">
+              <div class="sleeve-top"><span>OPTIONALITY / 期权</span><b>0—5%</b></div>
+              <h4>世界模型、新材料、太空 / 水下</h4>
+              <p>接受归零，换尾部不对称。用小仓位覆盖技术奇点，不把生存押在单一叙事上。</p>
+              <div class="sleeve-range"><span>0</span><i><em style="--l:0%;--h:5%"></em></i><span>5</span></div>
+              <div class="sleeve-note">10 年+ · 尾部 · 天使 / 主题基金</div>
+            </article>
+          </div>
+        </div>
+
+        <div class="capital-check reveal">
+          <div class="check-head">
+            <p class="kicker">FIVE QUESTIONS / 尽调清单</p>
+            <h3>从技术叙事，回到五个问题</h3>
+          </div>
+          <ol>
+            <li><span>01</span>是否拥有难以复制的真实物理数据闭环？</li>
+            <li><span>02</span>单机成本是否随规模下降，且不被单一供应商锁死？</li>
+            <li><span>03</span>客户是否为“可靠性”付费，而不是为 Demo 付费？</li>
+            <li><span>04</span>技术能否跨本体、跨场景复用，形成平台效应？</li>
+            <li><span>05</span>退出是否依赖单一资本市场或单一客户？</li>
+          </ol>
+        </div>
+
+        <p class="capital-foot reveal">本章为研究框架与情景示意，不构成投资建议；配置比例、地理判断与退出路径均为编辑部推演，不代表任何机构或基金的真实组合。</p>
+      </div>
+    </section>
+
+    <!-- ============================== 07 SCENARIOS ============================== -->
+    <section class="section scenarios" id="scenarios" aria-labelledby="scenario-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>07</span> / SCENARIOS</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="scenario-title">三种 <em>2056</em></h2>
+            <p class="section-lede">长期展望的价值，不在于给出一个精确数字，而在于把分歧讲清楚。下面三种情景，对应三组不同的技术、成本与治理假设。</p>
+          </div>
+          <p class="section-meta">编辑部情景推演<br>非预测</p>
+        </div>
+
+        <div class="scenario-controls reveal" role="group" aria-label="选择 2056 情景">
+          <button class="scenario-btn" type="button" data-scenario="prudent" aria-pressed="false"><span>审慎</span><small>工具化</small></button>
+          <button class="scenario-btn is-active" type="button" data-scenario="base" aria-pressed="true"><span>基准</span><small>基础设施化</small></button>
+          <button class="scenario-btn" type="button" data-scenario="bold" aria-pressed="false"><span>激进</span><small>通用化</small></button>
+        </div>
+
+        <div class="scenario-shell reveal">
+          <div class="scenario-copy">
+            <p class="kicker" id="scenarioKicker">SCENARIO B / BASE CASE</p>
+            <h3 id="scenarioName">基础设施化：机器人成为新的公共运力</h3>
+            <p class="scenario-lede" id="scenarioLede">2030 年代跨过成本拐点，2040 年代进入家庭与城市。物理 AI 像电力一样，成为看不见的基础设施。</p>
+            <div class="premise-block">
+              <span>成立前提</span>
+              <ul id="scenarioPremises">
+                <li>世界模型显著降低数据成本</li>
+                <li>执行器与传感器年降 8—12%</li>
+                <li>安全标准在 2032 年前落地</li>
+              </ul>
+            </div>
+            <p class="scenario-risk" id="scenarioRisk"><b>最大风险</b>算力与能源约束，以及责任界定滞后。</p>
+          </div>
+
+          <div class="scenario-stats">
+            <div class="s-stat"><span>2056 年度经济价值</span><strong><i data-stat="value">12</i><small>万亿美元</small></strong></div>
+            <div class="s-stat"><span>2056 人形机器人保有量</span><strong><i data-stat="installed">8</i><small>亿台</small></strong></div>
+            <div class="s-stat"><span>完全自主任务占比</span><strong><i data-stat="autonomy">60</i><small>%</small></strong></div>
+            <div class="s-stat"><span>2035 年全球出货量</span><strong><i data-stat="units">650</i><small>万台</small></strong></div>
+          </div>
+        </div>
+
+        <figure class="scenario-chart-wrap reveal">
+          <div class="chart-head">
+            <div>
+              <p class="kicker">THREE PATHS / 任务渗透率</p>
+              <h3>同一条时间轴，三种速度</h3>
+            </div>
+            <div class="chart-legend chart-legend--scenario">
+              <span data-legend="prudent"><i></i> 审慎</span>
+              <span data-legend="base"><i></i> 基准</span>
+              <span data-legend="bold"><i></i> 激进</span>
+            </div>
+          </div>
+          <div class="scenario-chart">
+            <svg id="scenarioChart" viewBox="0 0 900 420" role="img" aria-label="三种 2056 情景下的物理 AI 任务渗透率曲线：审慎 55%，基准 90%，激进 99%。"></svg>
+          </div>
+          <div class="scenario-mobile">
+            <p class="mobile-bars-head"><span>2056 年任务渗透率</span><span>三种情景</span></p>
+            <div class="sm-row" data-sm="prudent"><span>审慎</span><div class="sm-track" aria-hidden="true"><i style="--v:55%"></i></div><b>55%</b></div>
+            <div class="sm-row is-active" data-sm="base"><span>基准</span><div class="sm-track" aria-hidden="true"><i style="--v:90%"></i></div><b>90%</b></div>
+            <div class="sm-row" data-sm="bold"><span>激进</span><div class="sm-track" aria-hidden="true"><i style="--v:99%"></i></div><b>99%</b></div>
+          </div>
+          <figcaption>三条曲线使用同一套坐标与口径，仅改变技术突破、成本下降与治理落地三项假设。所有数值均为编辑部情景推演。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 08 RISKS ============================== -->
+    <section class="section risks" id="risks" aria-labelledby="risks-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-index"><span>08</span> / FRICTION</p>
+          <div class="section-title-wrap">
+            <h2 class="section-title" id="risks-title">通向 2056 的<em>六道关</em></h2>
+            <p class="section-lede">物理 AI 的难点，从来不只是模型。数据、可靠性、成本、能源、责任与社会接受度，每一道都可能让时间表推迟五年。</p>
+          </div>
+          <p class="section-meta">点击展开<br>查看应对路径</p>
+        </div>
+
+        <div class="risk-list reveal">
+          <details class="risk" open>
+            <summary><span class="risk-num">01</span><h3>数据墙</h3><span class="risk-tag">DATA</span><i class="risk-plus" aria-hidden="true"></i></summary>
+            <div class="risk-body"><p>真实物理数据昂贵、稀缺且长尾。每一次抓取、每一次失败，都需要真实设备与真实时间，仿真可以补，但不能完全替代。</p><p class="risk-fix"><b>应对</b>合成数据 + 遥操作 + 场景共建，把数据采集变成运营的一部分，而不是一次性项目。</p></div>
+          </details>
+          <details class="risk">
+            <summary><span class="risk-num">02</span><h3>可靠性</h3><span class="risk-tag">RELIABILITY</span><i class="risk-plus" aria-hidden="true"></i></summary>
+            <div class="risk-body"><p>工业现场要求 99.99% 的稳定，而实验室里的 99% 已经很难。一次停机，可能抵消一整年的效率收益。</p><p class="risk-fix"><b>应对</b>冗余设计、预测性维护、分级授权与机器人保险，把“不出错”变成系统工程。</p></div>
+          </details>
+          <details class="risk">
+            <summary><span class="risk-num">03</span><h3>成本</h3><span class="risk-tag">COST</span><i class="risk-plus" aria-hidden="true"></i></summary>
+            <div class="risk-body"><p>BOM 只是开始。部署、集成、运维与停线成本，才是客户真正支付的总成本。便宜的身体，未必等于便宜的劳动力。</p><p class="risk-fix"><b>应对</b>模块化、国产供应链、RaaS 按结果付费，把资本开支转成运营开支。</p></div>
+          </details>
+          <details class="risk">
+            <summary><span class="risk-num">04</span><h3>能源</h3><span class="risk-tag">ENERGY</span><i class="risk-plus" aria-hidden="true"></i></summary>
+            <div class="risk-body"><p>边缘算力与执行器同时推高功耗，续航成为产品定义的一部分。机器人越通用，能源约束越明显。</p><p class="risk-fix"><b>应对</b>低功耗芯片、轻量化材料、换电与自主充电，把能源管理纳入本体设计。</p></div>
+          </details>
+          <details class="risk">
+            <summary><span class="risk-num">05</span><h3>安全与责任</h3><span class="risk-tag">LIABILITY</span><i class="risk-plus" aria-hidden="true"></i></summary>
+            <div class="risk-body"><p>人机共处的事故归责，法律体系尚未准备好。是制造商、运营商、模型提供方，还是使用者负责？</p><p class="risk-fix"><b>应对</b>黑匣子、可解释日志、强制标准与责任保险，让事故可追溯、可定价。</p></div>
+          </details>
+          <details class="risk">
+            <summary><span class="risk-num">06</span><h3>社会接受</h3><span class="risk-tag">SOCIETY</span><i class="risk-plus" aria-hidden="true"></i></summary>
+            <div class="risk-body"><p>机器人进家庭，比进工厂难得多。信任不是靠参数建立的，而是靠一次次不出错的日常。</p><p class="risk-fix"><b>应对</b>渐进部署、透明交互、再培训与公共讨论，把技术问题放回社会语境。</p></div>
+          </details>
+        </div>
+
+        <p class="risk-foot reveal">每一道关，都是一个产业机会。区别只在于：你把它当阻力，还是当入口。</p>
+      </div>
+    </section>
+
+    <!-- ============================== 09 OUTRO ============================== -->
+    <section class="outro" id="outlook" aria-labelledby="outro-title">
+      <div class="outro-ghost" aria-hidden="true">2056</div>
+      <div class="outro-glow" aria-hidden="true"></div>
+      <div class="container outro-inner">
+        <p class="section-index"><span>09</span> / OUTLOOK</p>
+        <h2 class="outro-title" id="outro-title">最终胜出的，<br>不是最像人的机器，<br><em>而是最懂物理世界的系统。</em></h2>
+        <p class="outro-lede">2056 年最好的物理 AI 公司，可能不是今天最响的名字。但它一定同时懂三件事：身体如何工作、世界如何运转、人如何生活。</p>
+        <div class="outro-actions">
+          <a class="btn" href="#horizon"><span>重看三十年路线</span><span class="btn-arrow">↗</span></a>
+          <a class="text-link" href="#chain"><span>回到产业链</span><span class="text-link-line" aria-hidden="true"></span></a>
+        </div>
+        <div class="outro-meta">
+          <span>OUTLOOK 2026—2056</span>
+          <span>THE PHYSICAL CENTURY</span>
+          <span>SHANGHAI / WORLDWIDE</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M11 24V8h7.2a5.2 5.2 0 0 1 0 10.4H11" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="24" cy="24" r="2.2" fill="#ff5a1f"/>
+          </svg>
+          <span class="brand-copy"><strong>物理 AI <em>2056</em></strong><span>THE PHYSICAL CENTURY</span></span>
+        </a>
+        <p>一份关于物理 AI 的长期研究型概念站。关注智能如何从比特进入原子，以及由此产生的产业机会。</p>
+        <p class="footer-stamp">DATA CUT · 2026.10</p>
+      </div>
+
+      <nav class="footer-col" aria-label="页内导航">
+        <h4>阅读</h4>
+        <a href="#thesis">01 判断</a>
+        <a href="#horizon">02 时间轴</a>
+        <a href="#curve">03 采用曲线</a>
+        <a href="#chain">04 产业链</a>
+        <a href="#opportunities">05 机会</a>
+        <a href="#capital">06 资本</a>
+        <a href="#scenarios">07 情景</a>
+        <a href="#risks">08 风险</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>样本企业</h4>
+        <a href="https://www.nvidia.com" target="_blank" rel="noopener">NVIDIA ↗</a>
+        <a href="https://www.unitree.com" target="_blank" rel="noopener">宇树科技 ↗</a>
+        <a href="https://www.agibot.com" target="_blank" rel="noopener">智元机器人 ↗</a>
+        <a href="https://www.physicalintelligence.company" target="_blank" rel="noopener">Physical Intelligence ↗</a>
+        <a href="https://www.figure.ai" target="_blank" rel="noopener">Figure ↗</a>
+        <a href="https://www.momenta.ai" target="_blank" rel="noopener">Momenta ↗</a>
+        <a href="https://www.orbbec.com" target="_blank" rel="noopener">奥比中光 ↗</a>
+      </div>
+
+      <div class="footer-col footer-col--wide">
+        <h4>数据与来源</h4>
+        <p>企业数据来自公开报道、公司披露与机构口径（截至 2026 年 10 月），包括 Omdia、国金证券、头豹研究院、MarketsandMarkets 等。长期规模、渗透率与价值池为编辑部情景推演。</p>
+        <div class="source-links">
+          <a href="https://prod-mssip.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050" target="_blank" rel="noopener">Morgan Stanley · 1 Billion Humanoids ↗</a>
+          <a href="https://m.guandian.cn/article/20260914/601184.html" target="_blank" rel="noopener">Goldman Sachs · 2035 Humanoid Outlook ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 PHYSICAL AI 2056 · 独立研究与设计概念，不构成投资建议。</p>
+      <p>所有前瞻性数字均为情景推演，不是预测；企业市值、估值与份额数据以官方披露为准。</p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="返回顶部" data-to-top>
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4M4 10l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>

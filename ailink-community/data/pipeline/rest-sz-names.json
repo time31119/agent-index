@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Memobase",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "独角兽玩具科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "黑画科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳慧影未来文化创意",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳灵予科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳智驭未来机器人",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "具身智能与机器人"
+  },
+  {
+    "name": "水杉智云AI大模型",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "智蕊数据",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "广东微寻科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳比特涌现科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "深圳大览科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳可触未来创新科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "具身智能与机器人"
+  },
+  {
+    "name": "深圳成渊科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳深佰信息科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "深圳哇哈哈智慧科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳跃然创新科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "达而观智能",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "广东爱简艺人",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "幻世技术",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "积广科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "霁米科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "库博生物",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "奇迪健康科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "轻量化AR眼镜项目",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "人才很忙",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "深圳机智引擎",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "深圳聚渲信息",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳聚源视芯",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "智能物联与机器视觉"
+  },
+  {
+    "name": "深圳深思未来教育",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳埃睿智慧",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "深圳爱定智时代",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳利豹",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳流一未来",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳算海",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "深圳腾语互动",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "深圳元伴",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "网境智能",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "新磁超导",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "贞观创新",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "李未可科技",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "万魔声学",
+    "city": "深圳",
+    "district": "南山区",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "招商银行金融科技",
+    "city": "深圳",
+    "district": "福田区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "微民保险",
+    "city": "深圳",
+    "district": "福田区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "赢时胜",
+    "city": "深圳",
+    "district": "福田区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "招联金融",
+    "city": "深圳",
+    "district": "福田区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "招商局金融科技",
+    "city": "深圳",
+    "district": "福田区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "兆威机电",
+    "city": "深圳",
+    "district": "宝安区",
+    "sector": "具身智能与机器人"
+  },
+  {
+    "name": "鹏鼎控股",
+    "city": "深圳",
+    "district": "宝安区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "领益智造",
+    "city": "深圳",
+    "district": "龙岗区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "深南电路",
+    "city": "深圳",
+    "district": "龙岗区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "贝仕达克",
+    "city": "深圳",
+    "district": "龙岗区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "新产业生物",
+    "city": "深圳",
+    "district": "坪山区",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "基本半导体",
+    "city": "深圳",
+    "district": "坪山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "昂纳科技",
+    "city": "深圳",
+    "district": "坪山区",
+    "sector": "智能物联与机器视觉"
+  },
+  {
+    "name": "中芯国际深圳",
+    "city": "深圳",
+    "district": "坪山区",
+    "sector": "基础模型与算力"
+  }
+]

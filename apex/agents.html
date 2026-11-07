@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>智能体商店 — APEX</title>
+<meta name="description" content="按任务、行业与预算发现经过验证的智能体。每个智能体都有可验证身份、明确权限清单与真实评测成绩。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230B0C0E'/%3E%3Cpath d='M12 4.5 19.5 19h-4.2L12 11.2 8.7 19H4.5z' fill='%23F4F2EC'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f4f2ec">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="APEX 首页">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+      <span class="brand-word">APEX</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="agents.html" data-nav="agents">智能体</a>
+      <a href="compute.html" data-nav="compute">算力</a>
+      <a href="console.html" data-nav="console">控制台</a>
+      <a href="developers.html" data-nav="developers">开发者</a>
+      <a href="blueprint.html" data-nav="blueprint">平台规划</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="搜索（Ctrl K）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+      </button>
+      <a class="nav-signin" href="console.html">登录</a>
+      <a class="btn btn-sm" href="console.html">开始使用</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="agents.html">智能体市场</a>
+  <a href="compute.html">算力市场</a>
+  <a href="console.html">控制台</a>
+  <a href="developers.html">开发者中心</a>
+  <a href="blueprint.html">平台规划</a>
+  <a class="btn btn-block" href="console.html">进入控制台</a>
+</div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> AGENT STORE · 24 个编辑精选 / 12,400+ 已上架</div>
+    <h1 class="display">找到那个<br><span class="nowrap">能把事办成的智能体。</span></h1>
+    <p class="lead">按任务、行业与预算筛选。每一个智能体都带可验证身份、明确权限清单与真实任务评测——不是一段漂亮的演示视频。</p>
+    <div class="hero-meta">
+      <div class="hm"><b>12,400+</b>上架智能体</div>
+      <div class="hm"><b>42</b>项上架审计</div>
+      <div class="hm"><b>99.95%</b>中位可用性</div>
+      <div class="hm"><b>9</b>个运行区域</div>
+    </div>
+  </div>
+</section>
+
+<div class="toolbar">
+  <div class="wrap toolbar-inner">
+    <label class="search-lg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+      <input id="agentSearch" type="search" placeholder="搜索智能体、能力或开发者…" autocomplete="off">
+    </label>
+    <span class="result-count" id="resultCount">24 个结果</span>
+    <span class="spacer"></span>
+    <button class="btn btn-light btn-sm filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="filtersBody">筛选</button>
+    <select class="sort-select" id="sortSelect" aria-label="排序">
+      <option value="rec">推荐排序</option>
+      <option value="rating">评分最高</option>
+      <option value="installs">安装最多</option>
+      <option value="price">价格从低到高</option>
+    </select>
+  </div>
+</div>
+<div class="filter-scrim" id="filterScrim"></div>
+
+<div class="wrap catalog">
+  <aside class="filters" id="filtersBody" aria-label="筛选"></aside>
+  <div class="catalog-main">
+    <div class="agent-grid" id="agentGrid"></div>
+    <div class="empty-state" id="emptyState" style="display:none">
+      <h3 class="h3">没有匹配的智能体</h3>
+      <p class="body mt-8">试试减少筛选条件，或用更宽泛的词描述你的任务。</p>
+      <button class="btn btn-light mt-24" id="resetEmpty">清除全部筛选</button>
+    </div>
+  </div>
+</div>
+
+<section class="section tight" style="border-top:1px solid var(--line)">
+  <div class="wrap between center flex" style="gap:24px;flex-wrap:wrap">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> CAN'T FIND IT?</div>
+      <h3 class="h3 mt-8">没有找到合适的？让 APEX 为你组装一个。</h3>
+      <p class="body mt-8" style="max-width:520px">描述任务、预算与合规边界，平台从 40 万个可组合能力中生成候选方案，并在沙箱里先跑给你看。</p>
+    </div>
+    <a class="btn" href="console.html">描述你的任务</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html" style="color:#f5f2ea">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" style="color:#f5f2ea"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+          <span class="brand-word">APEX</span>
+        </a>
+        <p class="footer-tag">智能体与算力的全球市场。发现、部署、计量、结算，在一个地方完成。</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h5>市场</h5>
+          <a href="agents.html">智能体商店</a>
+          <a href="compute.html">算力市场</a>
+          <a href="agents.html?sort=popular">热门榜单</a>
+          <a href="console.html">企业采购</a>
+        </div>
+        <div>
+          <h5>开发者</h5>
+          <a href="developers.html">发布智能体</a>
+          <a href="developers.html#pricing">分成计划</a>
+          <a href="developers.html#sdk">SDK 与文档</a>
+          <a href="compute.html#supply">成为算力供应商</a>
+        </div>
+        <div>
+          <h5>信任</h5>
+          <a href="blueprint.html#trust">安全架构</a>
+          <a href="blueprint.html#governance">合规与治理</a>
+          <a href="#">状态页</a>
+          <a href="#">透明度报告</a>
+        </div>
+        <div>
+          <h5>公司</h5>
+          <a href="blueprint.html">平台规划</a>
+          <a href="#">关于 APEX</a>
+          <a href="#">加入我们</a>
+          <a href="#">联系</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-word">APEX</div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> APEX Systems · 概念设计与演示</span>
+      <span>数据为示意，不构成真实报价</span>
+      <div class="right">
+        <a href="#">隐私</a><a href="#">条款</a><a href="#">服务状态</a><a href="#">简体中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/agents.js" defer></script>
+</body>
+</html>
+

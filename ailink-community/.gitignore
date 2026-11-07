@@ -1,0 +1,7 @@
+.env
+.env.local
+node_modules/
+_shots/
+_qa/
+.edge-cdp-*/
+__pycache__/

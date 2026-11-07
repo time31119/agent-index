@@ -1,0 +1,1 @@
+"""Intraday strategy dossier batches."""

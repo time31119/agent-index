@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>短幕 SHORTFRAME — 全球热播短剧 TOP 100</title>
+  <meta name="description" content="短幕 SHORTFRAME 聚合 ReelShort、DramaBox、FlareFlow 等 12 家平台，追踪全球 100 部热播短剧。原版封面、跨平台热度榜、题材筛选、官方入口与个人片单，一站发现下一部上头短剧。">
+  <meta name="theme-color" content="#09080b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="短幕 SHORTFRAME — 全球热播短剧 TOP 100">
+  <meta property="og:description" content="全世界都在追的 100 部短剧，一次看全。">
+  <meta property="og:image" content="assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/og-cover.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Noto+Sans+SC:wght@300;400;500;600;700&amp;family=Noto+Serif+SC:wght@400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-progress" aria-hidden="true"><i id="pageProgress"></i></div>
+
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 5.8a5.2 5.2 0 0 0-7.4 0L12 7.2l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4L12 22l8.8-8.8a5.2 5.2 0 0 0 0-7.4Z"></path></symbol>
+    <symbol id="i-heart-fill" viewBox="0 0 24 24"><path d="M20.8 5.8a5.2 5.2 0 0 0-7.4 0L12 7.2l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4L12 22l8.8-8.8a5.2 5.2 0 0 0 0-7.4Z" fill="currentColor" stroke="none"></path></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"></path></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"></path></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"></path></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"></path></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 6 9 6-9 6V6Z" fill="currentColor" stroke="none"></path></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h4l4 10h4M3 17h4l2-5M15 7h6M18 4l3 3-3 3M18 14l3 3-3 3"></path></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.2 2.4 3.4 5.4 3.4 9S14.2 18.6 12 21c-2.2-2.4-3.4-5.4-3.4-9S9.8 5.4 12 3Z"></path></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"></path><circle cx="4.5" cy="6" r="1" fill="currentColor" stroke="none"></circle><circle cx="4.5" cy="12" r="1" fill="currentColor" stroke="none"></circle><circle cx="4.5" cy="18" r="1" fill="currentColor" stroke="none"></circle></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4V4.5Z"></path></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c.8 6.5 3.5 9.2 10 10-6.5.8-9.2 3.5-10 10-.8-6.5-3.5-9.2-10-10 6.5-.8 9.2-3.5 10-10Z" fill="currentColor" stroke="none"></path></symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="短幕 SHORTFRAME 首页">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><b></b></span>
+        <span class="brand-name">短幕</span>
+        <span class="brand-en">SHORTFRAME</span>
+      </a>
+
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#trending" data-nav="trending">正在热播</a>
+        <a href="#ranking" data-nav="ranking">TOP 100</a>
+        <a href="#platforms" data-nav="platforms">平台</a>
+        <a href="#insights" data-nav="insights">数据洞察</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger" type="button" data-open-search aria-label="搜索短剧">
+          <svg class="icon"><use href="#i-search"></use></svg>
+          <span>搜索剧名、题材或平台</span>
+          <kbd>⌘ K</kbd>
+        </button>
+        <button class="watch-trigger" type="button" data-open-watchlist aria-label="打开我的片单">
+          <svg class="icon"><use href="#i-bookmark"></use></svg>
+          <span>片单</span>
+          <i class="count" id="watchCount">0</i>
+        </button>
+        <a class="header-cta" href="#ranking">探索榜单 <span aria-hidden="true">↗</span></a>
+        <button class="mobile-menu" type="button" aria-label="打开导航" aria-expanded="false" id="mobileMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#trending">正在热播</a>
+      <a href="#ranking">TOP 100</a>
+      <a href="#platforms">平台</a>
+      <a href="#insights">数据洞察</a>
+      <button type="button" data-open-search>搜索 <svg class="icon"><use href="#i-search"></use></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="hero-ambient" id="heroAmbient" aria-hidden="true"></div>
+      <div class="hero-lines" aria-hidden="true"></div>
+      <div class="hero-wordmark" aria-hidden="true">FRAME<br>100</div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow hero-eyebrow">
+            <span class="live"><i></i> GLOBAL RADAR</span>
+            <span class="eyebrow-sep">/</span>
+            <span>VOL. 11 — 2026.10.30</span>
+          </div>
+
+          <h1 class="hero-title" id="heroTitle">
+            <span class="hero-title-small">全世界都在追的</span>
+            <span class="hero-title-big"><em>100</em><span>部短剧</span></span>
+          </h1>
+
+          <p class="hero-lede">聚合 ReelShort、DramaBox、FlareFlow 等 12 家全球平台。<br class="desk-only">原版封面、跨平台热度、题材与观看入口，一次看全。</p>
+
+          <div class="hero-actions">
+            <a class="button button--primary" href="#ranking">
+              查看完整榜单
+              <svg class="icon"><use href="#i-arrow"></use></svg>
+            </a>
+            <button class="button button--ghost" type="button" id="randomPick">
+              <svg class="icon"><use href="#i-shuffle"></use></svg>
+              随机开一部
+            </button>
+          </div>
+
+          <div class="hero-metrics">
+            <div><strong id="statPlatforms">12</strong><span>聚合平台</span></div>
+            <div><strong id="statMarkets">7</strong><span>覆盖市场</span></div>
+            <div><strong id="statViews">—</strong><span>估算播放</span></div>
+            <div><strong id="statUpdated">10.30</strong><span>榜单快照</span></div>
+          </div>
+        </div>
+
+        <div class="hero-stage-wrap">
+          <div class="stage-aura" aria-hidden="true"></div>
+          <div class="hero-stage" id="heroStage"></div>
+          <div class="stage-foot">
+            <div class="hero-dots" id="heroDots" role="tablist" aria-label="精选剧集"></div>
+            <div class="stage-caption" id="heroCaption"></div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#trending"><span>SCROLL TO DISCOVER</span><i></i></a>
+    </section>
+
+    <div class="ticker" aria-label="跨平台热度排行">
+      <div class="ticker-label"><span class="live"><i></i> RADAR</span><b>跨平台热度</b></div>
+      <div class="ticker-window"><div class="ticker-track" id="tickerTrack"></div></div>
+      <div class="ticker-stamp">快照于<br><b>10.30 · 2026</b></div>
+    </div>
+
+    <section class="section trending" id="trending" aria-labelledby="trendingTitle">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-main">
+            <p class="section-index"><span>01</span> TRENDING NOW</p>
+            <h2 id="trendingTitle">此刻，全球都在上头</h2>
+          </div>
+          <div class="section-head-side">
+            <p>来自 12 个短剧 App 当前榜单、7 个市场的跨平台切片。记录于 2026 年 10 月 30 日。</p>
+            <div class="rail-arrows">
+              <button type="button" id="trendPrev" aria-label="向左滚动"><svg class="icon"><use href="#i-arrow-left"></use></svg></button>
+              <button type="button" id="trendNext" aria-label="向右滚动"><svg class="icon"><use href="#i-arrow"></use></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="trend-rail" id="trendRail"></div>
+      </div>
+    </section>
+
+    <section class="platform-band" id="platforms" aria-labelledby="platformTitle">
+      <div class="container platform-inner">
+        <div class="platform-label">
+          <svg class="icon"><use href="#i-globe"></use></svg>
+          <span id="platformTitle">已收录平台</span>
+        </div>
+        <div class="platform-list" id="platformStrip"></div>
+        <span class="platform-note">官方入口 · 正版观看</span>
+      </div>
+    </section>
+
+    <section class="section ranking" id="ranking" aria-labelledby="rankingTitle">
+      <div class="container">
+        <div class="section-head section-head--ranking">
+          <div class="section-head-main">
+            <p class="section-index"><span>02</span> THE GLOBAL INDEX</p>
+            <h2 id="rankingTitle">全球热度 <em>TOP 100</em></h2>
+          </div>
+          <div class="section-head-side">
+            <p>汇总 12 个短剧 App 的官方榜单，按平台体量与榜位加权。不是统一播放量，却是更接近“全球正在看什么”的一张切片。</p>
+            <button class="text-link" type="button" data-open-method>数据如何得出 <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+
+        <div class="spotlight" id="topSpotlight"></div>
+
+        <div class="filter-panel">
+          <div class="filter-row filter-row--top">
+            <label class="inline-search" for="railSearch">
+              <svg class="icon"><use href="#i-search"></use></svg>
+              <input id="railSearch" type="search" placeholder="搜索剧名 / 题材 / 平台…" autocomplete="off">
+              <span class="search-key">/</span>
+            </label>
+            <div class="selects">
+              <label class="select-wrap">
+                <span>题材</span>
+                <select id="genreSelect" aria-label="按题材筛选"></select>
+              </label>
+              <label class="select-wrap">
+                <span>平台</span>
+                <select id="platformSelect" aria-label="按平台筛选"></select>
+              </label>
+              <label class="select-wrap">
+                <span>排序</span>
+                <select id="sortSelect" aria-label="排序方式">
+                  <option value="heat">综合热度</option>
+                  <option value="rise">上升最快</option>
+                  <option value="new">最新上线</option>
+                  <option value="episodes">集数最多</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="filter-row filter-row--bottom">
+            <div class="region-chips" id="regionChips" role="group" aria-label="按市场筛选"></div>
+            <div class="view-switch" role="group" aria-label="切换视图">
+              <button type="button" class="is-active" data-view="grid" aria-label="网格视图" aria-pressed="true"><svg class="icon"><use href="#i-grid"></use></svg></button>
+              <button type="button" data-view="list" aria-label="列表视图" aria-pressed="false"><svg class="icon"><use href="#i-list"></use></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-bar">
+          <p id="resultCount" aria-live="polite">正在载入榜单…</p>
+          <button type="button" class="clear-filters" id="clearFilters" hidden>清除筛选 <span>×</span></button>
+        </div>
+
+        <div class="ranking-grid" id="rankingGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span class="empty-glyph">NO<br>MATCH</span>
+          <h3>没有找到这部剧</h3>
+          <p>换个关键词，或把筛选条件放宽一点。</p>
+          <button class="button button--ghost" type="button" id="emptyReset">重置全部筛选</button>
+        </div>
+
+        <div class="load-zone" id="loadZone">
+          <button class="load-more" type="button" id="loadMore">加载更多 <span id="loadLabel">24</span></button>
+          <div class="load-progress"><i id="loadBar"></i></div>
+          <p id="loadStatus">已显示 24 / 100 部</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section insights" id="insights" aria-labelledby="insightsTitle">
+      <div class="container">
+        <div class="insights-head">
+          <p class="section-index section-index--dark"><span>03</span> BEHIND THE RANKING</p>
+          <div class="insights-title-row">
+            <h2 id="insightsTitle">一张榜单，<br>看见全球短剧的<em>流向</em></h2>
+            <p>短剧正在成为最容易跨越语言的内容形态。北美仍是声量最集中的市场，东南亚与南亚则把用户规模推向新高。100 部剧背后，是七种截然不同的“上头方式”。</p>
+          </div>
+        </div>
+
+        <div class="insights-grid">
+          <div class="insight-hero-card">
+            <div class="big-number"><span id="insightTotal">100</span><i>部</i></div>
+            <p class="big-number-label">在榜剧集 / TRACKED TITLES</p>
+            <div class="insight-quote">“真正的全球爆款，不再需要先成为一部‘剧’。它只需要在正确的三秒里，让人停下滑动。”</div>
+            <div class="insight-mini-grid">
+              <div><strong id="insightNew">—</strong><span>本月新上榜</span></div>
+              <div><strong id="insightEpisodes">—</strong><span>累计集数</span></div>
+              <div><strong id="insightPlatforms">—</strong><span>覆盖平台</span></div>
+            </div>
+          </div>
+
+          <div class="region-card">
+            <div class="card-heading">
+              <h3>市场热度分布</h3>
+              <span>HEAT SHARE</span>
+            </div>
+            <div class="bars" id="regionBars"></div>
+            <p class="card-note">按各市场在榜剧集的综合热度值占比计算。</p>
+          </div>
+
+          <div class="platform-card">
+            <div class="card-heading">
+              <h3>平台热度贡献</h3>
+              <span>HEAT SHARE</span>
+            </div>
+            <div class="platform-bars" id="platformBars"></div>
+            <p class="card-note">按各平台在榜剧集的综合热度值占比计算；同一部剧只计主平台。</p>
+          </div>
+        </div>
+
+        <div class="insights-foot">
+          <p><span>数据基准日 2026.10.30</span> · 热度为跨平台归一化指数，播放为估算值。封面来自各平台公开剧集页，版权归原方所有。</p>
+          <button class="text-link text-link--dark" type="button" data-open-method>查看完整数据说明 <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand brand--footer" href="#home" aria-label="短幕 SHORTFRAME 首页">
+            <span class="brand-mark" aria-hidden="true"><i></i><i></i><b></b></span>
+            <span class="brand-name">短幕</span>
+            <span class="brand-en">SHORTFRAME</span>
+          </a>
+          <p>全球短剧，一幕打尽。<br>为下一部让你熬夜的短剧，提供一个更好的入口。</p>
+          <a class="footer-mail" href="mailto:hello@shortframe.example">hello@shortframe.example <span>↗</span></a>
+        </div>
+        <div class="footer-col">
+          <h4>探索</h4>
+          <a href="#ranking">全球 TOP 100</a>
+          <a href="#trending">正在热播</a>
+          <a href="#platforms">平台索引</a>
+          <a href="#insights">数据洞察</a>
+        </div>
+        <div class="footer-col">
+          <h4>关于</h4>
+          <button type="button" data-open-method>榜单方法</button>
+          <button type="button" data-open-method>数据来源</button>
+          <a href="#home">关于短幕</a>
+          <a href="mailto:hello@shortframe.example">联系我们</a>
+        </div>
+        <div class="footer-col footer-col--note">
+          <h4>一份小小的声明</h4>
+          <p>短幕是短剧聚合与发现站，不存储、不转播任何剧集内容。所有剧名、平台名称与剧集封面归各自权利人所有；观看将跳转至官方平台。</p>
+        </div>
+      </div>
+
+      <div class="footer-wordmark" aria-hidden="true">SHORTFRAME</div>
+
+      <div class="footer-bottom">
+        <p>© 2026 短幕 SHORTFRAME. Made for the vertically obsessed.</p>
+        <p>产品原型 · 非商业演示</p>
+        <button type="button" data-open-method>数据说明</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 详情 -->
+  <div class="layer" id="detailModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="短剧详情">
+    <div class="layer-backdrop" data-close-layer></div>
+    <div class="detail-shell">
+      <button class="layer-close" type="button" data-close-layer aria-label="关闭详情"><svg class="icon"><use href="#i-close"></use></svg></button>
+      <div id="detailBody"></div>
+    </div>
+  </div>
+
+  <!-- 片单 -->
+  <div class="layer layer--drawer" id="watchDrawer" role="dialog" aria-modal="true" aria-hidden="true" aria-label="我的片单">
+    <div class="layer-backdrop" data-close-layer></div>
+    <aside class="drawer">
+      <div class="drawer-head">
+        <div><p class="section-index"><span>MY</span> WATCHLIST</p><h2>我的片单</h2></div>
+        <button class="layer-close layer-close--inline" type="button" data-close-layer aria-label="关闭片单"><svg class="icon"><use href="#i-close"></use></svg></button>
+      </div>
+      <div class="drawer-meta"><p id="watchMeta">还没有收藏任何短剧</p><button type="button" id="clearWatch" hidden>清空</button></div>
+      <div class="watch-list" id="watchList"></div>
+      <div class="watch-empty" id="watchEmpty">
+        <span class="empty-glyph">SAVE<br>IT</span>
+        <h3>先存一部，再慢慢看</h3>
+        <p>在任意剧集卡片上点一下书签，它就会出现在这里。</p>
+        <button class="button button--primary" type="button" data-close-layer data-explore>去逛榜单 <svg class="icon"><use href="#i-arrow"></use></svg></button>
+      </div>
+      <div class="drawer-foot"><p>片单只保存在你的浏览器本地，不会上传。</p></div>
+    </aside>
+  </div>
+
+  <!-- 搜索 -->
+  <div class="layer layer--search" id="searchOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="搜索短剧">
+    <div class="layer-backdrop" data-close-layer></div>
+    <div class="search-shell">
+      <div class="search-head">
+        <svg class="icon"><use href="#i-search"></use></svg>
+        <input id="globalSearch" type="search" placeholder="搜一部剧，或一个让你上头的题材…" autocomplete="off" aria-label="搜索短剧">
+        <button class="layer-close layer-close--inline" type="button" data-close-layer aria-label="关闭搜索"><svg class="icon"><use href="#i-close"></use></svg></button>
+      </div>
+      <div class="search-body">
+        <div class="search-suggest" id="searchSuggest">
+          <p class="micro-label">大家都在搜</p>
+          <div class="suggest-chips">
+            <button type="button" data-query="狼人">狼人</button>
+            <button type="button" data-query="先婚后爱">先婚后爱</button>
+            <button type="button" data-query="重生">重生</button>
+            <button type="button" data-query="DramaBox">DramaBox</button>
+            <button type="button" data-query="豪门">豪门</button>
+            <button type="button" data-query="悬疑">悬疑</button>
+          </div>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <div class="search-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 浏览</span><span><kbd>ENTER</kbd> 打开</span><span><kbd>ESC</kbd> 关闭</span><span class="search-count" id="searchCount"></span></div>
+    </div>
+  </div>
+
+  <!-- 方法 -->
+  <div class="layer" id="methodModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="榜单方法">
+    <div class="layer-backdrop" data-close-layer></div>
+    <div class="method-shell">
+      <button class="layer-close" type="button" data-close-layer aria-label="关闭数据说明"><svg class="icon"><use href="#i-close"></use></svg></button>
+      <p class="section-index"><span>METHOD</span> DATA NOTES</p>
+      <h2>这份榜单，<br>如何得出？</h2>
+      <p class="method-lede">短剧市场缺少统一的全球播放量口径。短幕把 12 个短剧 App 当前官方榜单放在同一把尺子上，回答一个更实际的问题：<strong>现在，全球观众到底在追什么？</strong></p>
+      <div class="method-grid">
+        <article><span>01</span><h3>样本范围</h3><p>12 个短剧 App，每个平台取当前榜单前 10 名，去重后按平台体量与榜位加权，选出 100 部。覆盖北美、拉美、欧洲、日韩、东南亚、南亚与中东 7 个市场。</p></article>
+        <article><span>02</span><h3>热度指数</h3><p>平台权重 80% + 榜位 20%，归一化后合成 0–100 指数。它衡量的是“跨平台综合能见度”，不是统一口径的播放量。</p></article>
+        <article><span>03</span><h3>播放估算</h3><p>“估算播放”为基于热度指数的展示估算，仅用于横向比较，不应被引用为平台官方数据。</p></article>
+        <article><span>04</span><h3>快照时间</h3><p>各平台榜单记录于 2026-10-30。平台榜单会持续变化；本页为静态产品原型，可通过替换 data.js 接入实时接口。</p></article>
+      </div>
+      <div class="method-sources">
+        <p class="micro-label">公开参考 / SELECTED SOURCES</p>
+        <a href="https://www.microdramaradar.com/en/apps" target="_blank" rel="noopener">MicroDrama Radar：12 个短剧 App 官方榜单索引 <span>↗</span></a>
+        <a href="https://www.36dianping.com/p/dp3810346794836228" target="_blank" rel="noopener">DataEye：2026 年 4 月海外短剧百强榜（行业背景） <span>↗</span></a>
+        <a href="https://m.jiemian.com/article/13626587.html" target="_blank" rel="noopener">DataEye：2026 年 10 月海外短剧市场观察 <span>↗</span></a>
+      </div>
+      <div class="method-disclaimer"><strong>边界声明</strong><p>本站为产品演示与内容发现工具，不提供、不托管、不转播任何剧集资源；所有观看入口均指向各平台官方站点或官方应用商店。部分平台可能限制地区访问。剧集封面来自各平台公开剧集页，经 MicroDrama Radar 索引，版权归原平台与制作方所有，仅用于内容识别与导航。</p></div>
+      <button class="button button--primary" type="button" data-close-layer>知道了 <svg class="icon"><use href="#i-arrow"></use></svg></button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

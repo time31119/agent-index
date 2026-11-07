@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 90 1040 780" role="img" aria-labelledby="title desc">
+  <title id="title">澜算 H200 八卡 GPU 服务器</title>
+  <desc id="desc">深色液冷 GPU 服务器产品渲染图，正面为八个计算模组，侧面为透明冷板与橙色液冷管路。</desc>
+  <defs>
+    <radialGradient id="ambient" cx="50%" cy="48%" r="58%">
+      <stop offset="0" stop-color="#C9F15B" stop-opacity=".15"/>
+      <stop offset=".55" stop-color="#6E9A50" stop-opacity=".045"/>
+      <stop offset="1" stop-color="#0B0F0C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="front" x1="0" y1="0" x2=".7" y2="1">
+      <stop offset="0" stop-color="#202720"/>
+      <stop offset=".45" stop-color="#121713"/>
+      <stop offset="1" stop-color="#090C0A"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2=".8">
+      <stop offset="0" stop-color="#202A22"/>
+      <stop offset=".55" stop-color="#121A15"/>
+      <stop offset="1" stop-color="#080B09"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#333D33"/>
+      <stop offset=".35" stop-color="#1B231C"/>
+      <stop offset="1" stop-color="#101511"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B7D0BC" stop-opacity=".16"/>
+      <stop offset=".22" stop-color="#273A2E" stop-opacity=".3"/>
+      <stop offset=".72" stop-color="#0B120D" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#8FA98F" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8FF9A"/>
+      <stop offset=".45" stop-color="#C9F15B"/>
+      <stop offset="1" stop-color="#87B62D"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9E3A1F"/>
+      <stop offset=".4" stop-color="#FF8558"/>
+      <stop offset="1" stop-color="#FF5F2E"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A0D0A"/>
+      <stop offset=".45" stop-color="#353F35"/>
+      <stop offset=".55" stop-color="#6E7B69"/>
+      <stop offset="1" stop-color="#101511"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DFFF94" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#9FC83E" stop-opacity=".1"/>
+    </linearGradient>
+    <pattern id="brushed" width="7" height="7" patternUnits="userSpaceOnUse">
+      <path d="M0 1H7" stroke="#D9E4D6" stroke-opacity=".025" stroke-width="1"/>
+    </pattern>
+    <pattern id="mesh" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M0 0H16V16" fill="none" stroke="#8FA18C" stroke-opacity=".15" stroke-width=".7"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000" flood-opacity=".48"/>
+    </filter>
+    <clipPath id="topClip">
+      <path d="M260 300 L500 200 L1090 260 L850 370 Z"/>
+    </clipPath>
+    <clipPath id="sideClip">
+      <path d="M850 370 L1090 260 L1090 610 L850 720 Z"/>
+    </clipPath>
+    <clipPath id="frontClip">
+      <path d="M0 0 H590 V420 H0 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#ambient)"/>
+  <g opacity=".45" stroke="#8FAE83" stroke-width=".6">
+    <path d="M70 710H260M940 190H1130M90 250H190M1000 760H1120"/>
+    <path d="M109 718v12M1140 183v14M179 243v14M1110 753v14"/>
+  </g>
+  <g fill="#C9F15B" opacity=".45">
+    <circle cx="156" cy="366" r="2"/>
+    <circle cx="1051" cy="165" r="2.5"/>
+    <circle cx="1002" cy="702" r="1.8"/>
+    <circle cx="212" cy="615" r="1.5"/>
+  </g>
+
+  <ellipse cx="650" cy="772" rx="420" ry="46" fill="#000" opacity=".45" filter="url(#soft)"/>
+  <ellipse cx="655" cy="758" rx="255" ry="20" fill="#C9F15B" opacity=".12" filter="url(#soft)"/>
+
+  <g filter="url(#shadow)">
+    <path d="M260 300 L500 200 L1090 260 L850 370 Z" fill="url(#top)" stroke="#4B574A" stroke-width="1.4"/>
+    <path d="M850 370 L1090 260 L1090 610 L850 720 Z" fill="url(#side)" stroke="#475246" stroke-width="1.4"/>
+    <path d="M260 300 L850 370 L850 720 L260 650 Z" fill="url(#front)" stroke="#566453" stroke-width="1.4"/>
+
+    <path d="M260 300 L850 370 L850 720 L260 650 Z" fill="url(#brushed)" opacity=".9"/>
+
+    <g clip-path="url(#topClip)">
+      <path d="M260 300 L500 200 L1090 260 L850 370 Z" fill="url(#mesh)" opacity=".9"/>
+      <path d="M312 288 L550 190 L630 198 L390 296 Z" fill="#DDE8D8" opacity=".035"/>
+      <path d="M585 236 L1004 274 L924 314 L512 274 Z" fill="#050806" opacity=".48"/>
+      <g fill="#63715F" opacity=".8">
+        <path d="M584 236l-66 38v7l66-38z"/>
+        <path d="M918 269l-64 37v9l64-37z"/>
+      </g>
+      <g stroke="#93A58E" stroke-width="1" opacity=".3">
+        <path d="M860 281 L1040 292"/>
+        <path d="M886 266 L1004 274"/>
+      </g>
+      <text x="892" y="309" fill="#C9D5C3" opacity=".7" font-family="Arial, sans-serif" font-size="10" letter-spacing="3" transform="rotate(4.7 892 309)">LIQUID COOLED · 8U</text>
+      <path d="M520 202 L1082 259" stroke="#D6E5CF" stroke-opacity=".16" stroke-width="2"/>
+      <path d="M260 300 L500 200" stroke="url(#lime)" stroke-width="2.2" filter="url(#glow)"/>
+      <g transform="translate(645 225) rotate(4.8)">
+        <rect x="0" y="0" width="252" height="25" rx="3" fill="#0A0E0B" stroke="#3C493A"/>
+        <circle cx="15" cy="12.5" r="3" fill="#C9F15B" filter="url(#glow)"/>
+        <text x="29" y="16" fill="#B9C8B2" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.2">LANSUAN NODE / H200</text>
+      </g>
+    </g>
+
+    <g clip-path="url(#sideClip)">
+      <path d="M850 370 L1090 260 L1090 610 L850 720 Z" fill="url(#glass)"/>
+      <path d="M876 392 L1066 286 L1066 579 L876 682 Z" fill="#050A07" opacity=".72" stroke="#81947E" stroke-opacity=".35"/>
+      <g stroke="#C9F15B" stroke-opacity=".55" stroke-width="1.2">
+        <path d="M901 464 L1055 379"/>
+        <path d="M901 491 L1055 406"/>
+        <path d="M901 518 L1055 433"/>
+        <path d="M901 545 L1055 460"/>
+        <path d="M901 572 L1055 487"/>
+      </g>
+      <g fill="#1D2A20" stroke="#5A705A" stroke-width=".8">
+        <path d="M901 449 L1055 364 L1055 379 L901 464 Z"/>
+        <path d="M901 476 L1055 391 L1055 406 L901 491 Z"/>
+        <path d="M901 503 L1055 418 L1055 433 L901 518 Z"/>
+        <path d="M901 530 L1055 445 L1055 460 L901 545 Z"/>
+        <path d="M901 557 L1055 472 L1055 487 L901 572 Z"/>
+      </g>
+      <g fill="#C9F15B" opacity=".75">
+        <circle cx="915" cy="457" r="1.7"/><circle cx="915" cy="484" r="1.7"/>
+        <circle cx="915" cy="511" r="1.7"/><circle cx="915" cy="538" r="1.7"/>
+        <circle cx="915" cy="565" r="1.7"/>
+      </g>
+      <path d="M938 397 C1035 342 1037 347 1060 334 L1060 354 C1010 383 985 395 938 425 Z" fill="url(#orange)" opacity=".9" filter="url(#glow)"/>
+      <path d="M954 420 C1000 389 1046 366 1060 357" fill="none" stroke="#FFB08E" stroke-opacity=".55" stroke-width="1.2"/>
+      <g transform="translate(1030 560) rotate(-28)">
+        <circle r="28" fill="#0A100C" stroke="#667861" stroke-width="1.2"/>
+        <circle r="21" fill="none" stroke="#364535" stroke-dasharray="3 5"/>
+        <g fill="#95A98D" opacity=".65">
+          <path d="M0 -17C6 -9 6 -3 0 0C-6 -3 -6 -9 0 -17Z"/>
+          <path d="M14 10C7 12 2 9 0 0C8 -2 13 2 14 10Z"/>
+          <path d="M-14 10C-13 2 -8 -2 0 0C-2 9 -7 12 -14 10Z"/>
+        </g>
+        <circle r="4" fill="#C9F15B"/>
+      </g>
+      <path d="M850 370 L850 720" stroke="#DDF7A3" stroke-width="2.2" filter="url(#glow)"/>
+      <path d="M978 321 L1086 265" stroke="#DCE9D7" stroke-opacity=".12" stroke-width="8"/>
+      <g stroke="#9FB09A" stroke-opacity=".22" stroke-width="1">
+        <path d="M869 386 L869 704"/>
+        <path d="M1069 274 L1069 591"/>
+      </g>
+    </g>
+
+    <g transform="matrix(1 0.11864 0 1 260 300)">
+      <g clip-path="url(#frontClip)">
+        <path d="M0 0H590V420H0Z" fill="url(#front)"/>
+        <path d="M0 0H590V64H0Z" fill="#293128" opacity=".7"/>
+        <path d="M0 64H590" stroke="#95A48E" stroke-opacity=".3"/>
+        <path d="M0 349H590V420H0Z" fill="#070A08" opacity=".82"/>
+
+        <text x="26" y="40" fill="#E5EEDF" font-family="Arial, sans-serif" font-weight="700" font-size="20" letter-spacing="4">LANSUAN</text>
+        <text x="26" y="54" fill="#91A18B" font-family="Arial, sans-serif" font-size="7" letter-spacing="3.4">COMPUTE INFRASTRUCTURE</text>
+        <text x="564" y="32" fill="#C9F15B" text-anchor="end" font-family="Arial, sans-serif" font-size="9" letter-spacing="1.3">H200 / SXM5</text>
+        <text x="564" y="46" fill="#8B9B85" text-anchor="end" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.7">8-GPU · 1.1TB HBM3e</text>
+        <circle cx="548" cy="56" r="2.4" fill="#C9F15B" filter="url(#glow)"/>
+
+        <g>
+          <rect x="26" y="82" width="538" height="250" rx="5" fill="#060907" stroke="#394539"/>
+          <g>
+            <rect x="36" y="92" width="518" height="104" rx="3" fill="#0A0E0B" stroke="#2A342B"/>
+            <g fill="#121A13">
+              <rect x="48" y="101" width="58" height="86" rx="2"/>
+              <rect x="113" y="101" width="58" height="86" rx="2"/>
+              <rect x="178" y="101" width="58" height="86" rx="2"/>
+              <rect x="243" y="101" width="58" height="86" rx="2"/>
+              <rect x="308" y="101" width="58" height="86" rx="2"/>
+              <rect x="373" y="101" width="58" height="86" rx="2"/>
+              <rect x="438" y="101" width="58" height="86" rx="2"/>
+              <rect x="503" y="101" width="41" height="86" rx="2"/>
+            </g>
+            <g stroke="#435144" stroke-width=".7" opacity=".8">
+              <path d="M54 123H101M54 130H101M54 137H101M54 144H101"/>
+              <path d="M119 123H166M119 130H166M119 137H166M119 144H166"/>
+              <path d="M184 123H231M184 130H231M184 137H231M184 144H231"/>
+              <path d="M249 123H296M249 130H296M249 137H296M249 144H296"/>
+              <path d="M314 123H361M314 130H361M314 137H361M314 144H361"/>
+              <path d="M379 123H426M379 130H426M379 137H426M379 144H426"/>
+              <path d="M444 123H491M444 130H491M444 137H491M444 144H491"/>
+              <path d="M509 123H538M509 130H538M509 137H538M509 144H538"/>
+            </g>
+            <g fill="#C9F15B" filter="url(#glow)">
+              <circle cx="52" cy="109" r="1.4"/><circle cx="117" cy="109" r="1.4"/><circle cx="182" cy="109" r="1.4"/><circle cx="247" cy="109" r="1.4"/>
+              <circle cx="312" cy="109" r="1.4"/><circle cx="377" cy="109" r="1.4"/><circle cx="442" cy="109" r="1.4"/><circle cx="507" cy="109" r="1.4"/>
+            </g>
+            <g fill="#FF7A4B" filter="url(#glow)">
+              <circle cx="52" cy="116" r="1"/><circle cx="117" cy="116" r="1"/><circle cx="182" cy="116" r="1"/><circle cx="247" cy="116" r="1"/>
+            </g>
+            <g fill="#7D8B78" font-family="Arial, sans-serif" font-size="5" letter-spacing=".5">
+              <text x="54" y="177">GPU 01</text><text x="119" y="177">GPU 02</text><text x="184" y="177">GPU 03</text><text x="249" y="177">GPU 04</text>
+              <text x="314" y="177">GPU 05</text><text x="379" y="177">GPU 06</text><text x="444" y="177">GPU 07</text><text x="509" y="177">GPU 08</text>
+            </g>
+          </g>
+
+          <g>
+            <rect x="36" y="204" width="518" height="117" rx="3" fill="#080C09" stroke="#283228"/>
+            <path d="M36 204H554V232H36Z" fill="#111711"/>
+            <text x="50" y="222" fill="#BAC8B4" font-family="Arial, sans-serif" font-size="8" letter-spacing="2.2">SYSTEM TELEMETRY</text>
+            <text x="540" y="222" fill="#C9F15B" text-anchor="end" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.4">ALL SYSTEMS NOMINAL</text>
+            <g transform="translate(50 245)">
+              <path d="M0 33 L18 33 L27 9 L38 45 L51 20 L61 33 L96 33" fill="none" stroke="#C9F15B" stroke-width="1.4"/>
+              <path d="M0 33 L18 33 L27 9 L38 45 L51 20 L61 33 L96 33 V48 H0Z" fill="#C9F15B" opacity=".08"/>
+            </g>
+            <g font-family="Arial, sans-serif">
+              <text x="174" y="247" fill="#758272" font-size="6" letter-spacing="1">POWER</text>
+              <text x="174" y="261" fill="#E6EEE0" font-size="11">8.4 kW</text>
+              <text x="258" y="247" fill="#758272" font-size="6" letter-spacing="1">TEMP</text>
+              <text x="258" y="261" fill="#E6EEE0" font-size="11">43°C</text>
+              <text x="342" y="247" fill="#758272" font-size="6" letter-spacing="1">FABRIC</text>
+              <text x="342" y="261" fill="#E6EEE0" font-size="11">800G</text>
+              <text x="426" y="247" fill="#758272" font-size="6" letter-spacing="1">UPTIME</text>
+              <text x="426" y="261" fill="#E6EEE0" font-size="11">99.98%</text>
+              <g stroke="#263026">
+                <path d="M159 238V278M241 238V278M325 238V278M409 238V278"/>
+              </g>
+            </g>
+            <g transform="translate(462 268)">
+              <circle r="17" fill="#0A0E0A" stroke="#3D4B3B"/>
+              <circle r="12" fill="none" stroke="#C9F15B" stroke-opacity=".5" stroke-dasharray="2 4"/>
+              <path d="M0 -7V1L5 5" fill="none" stroke="#C9F15B" stroke-width="1.2"/>
+            </g>
+          </g>
+        </g>
+
+        <g font-family="Arial, sans-serif">
+          <text x="27" y="376" fill="#DAE5D3" font-size="15" font-weight="700" letter-spacing="2.5">澜算 H200</text>
+          <text x="27" y="390" fill="#768571" font-size="7" letter-spacing="1.8">ASSET-GRADE GPU COMPUTE</text>
+          <g transform="translate(203 365)">
+            <rect width="52" height="22" rx="11" fill="#1B241B" stroke="#3B4938"/>
+            <circle cx="15" cy="11" r="4" fill="#C9F15B" filter="url(#glow)"/>
+            <path d="M25 7H42M25 11H38M25 15H42" stroke="#788A71" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(467 371)">
+            <circle cx="18" cy="11" r="12" fill="#0A0D0A" stroke="#4C5B49"/>
+            <path d="M18 4V11" stroke="#C9F15B" stroke-width="2"/>
+            <circle cx="18" cy="11" r="2" fill="#C9F15B"/>
+            <text x="39" y="9" fill="#667460" font-size="5" letter-spacing="1">DUAL</text>
+            <text x="39" y="17" fill="#667460" font-size="5" letter-spacing="1">PSU</text>
+          </g>
+          <rect x="492" y="380" width="42" height="3" rx="1.5" fill="#2D392D"/>
+          <rect x="492" y="380" width="28" height="3" rx="1.5" fill="#C9F15B" opacity=".7"/>
+          <text x="534" y="392" fill="#586653" font-size="5" text-anchor="end">SN · LS-H200-0087</text>
+        </g>
+      </g>
+
+      <g>
+        <rect x="-14" y="52" width="13" height="268" rx="3" fill="url(#handle)" stroke="#5B6857"/>
+        <path d="M-10 65V306" stroke="#C9F15B" stroke-opacity=".55" stroke-width="1.2"/>
+        <rect x="591" y="52" width="13" height="268" rx="3" fill="url(#handle)" stroke="#5B6857"/>
+        <path d="M595 65V306" stroke="#C9F15B" stroke-opacity=".35" stroke-width="1.2"/>
+        <g fill="#20291F" stroke="#66745F">
+          <rect x="-11" y="72" width="7" height="25" rx="2"/>
+          <rect x="592" y="72" width="7" height="25" rx="2"/>
+        </g>
+      </g>
+    </g>
+
+    <path d="M850 370 L850 720" stroke="#D8FA91" stroke-width="1.7" filter="url(#glow)"/>
+    <path d="M260 300 L260 650" stroke="url(#edge)" stroke-width="2" opacity=".8"/>
+    <path d="M850 370 L1090 260" stroke="#B8C9B1" stroke-opacity=".22" stroke-width="1.2"/>
+  </g>
+
+  <g opacity=".26" stroke="#C9F15B" stroke-width=".7">
+    <path d="M820 742H1050" stroke-dasharray="2 7"/>
+  </g>
+  <g fill="#C9F15B" font-family="Arial, sans-serif" font-size="7" letter-spacing="2" opacity=".55">
+    <text x="900" y="734">LIQUID COOLING LOOP / ACTIVE</text>
+  </g>
+</svg>

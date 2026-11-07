@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Atlas 2026 · 全球 AI 网站与 APP 百强</title>
+  <meta name="description" content="100 个全球 AI 网站与 APP：分类、网址、月访问、下载量、月活与商业模式。一份可筛选、可查证、可下载的 AI 产品地图。">
+  <meta name="theme-color" content="#0c0e09">
+  <meta property="og:title" content="AI Atlas 2026 · 全球 AI 网站与 APP 百强">
+  <meta property="og:description" content="网站看访问，APP 看下载。把 100 个 AI 产品放进同一张地图。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.svg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="AI Atlas 首页">
+      <span class="brand-mark">AI</span>
+      <span class="brand-word">ATLAS</span>
+      <span class="brand-edition">2026</span>
+    </a>
+
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#ranking">完整榜单</a>
+      <a href="#categories">分类地图</a>
+      <a href="#insights">数据洞察</a>
+      <a href="#method">数据方法</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="bookmark-pill" id="headerBookmarkFilter" type="button" aria-pressed="false" aria-label="只看已收藏" title="只看已收藏">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"/></svg>
+        <span id="headerBookmarkCount">0</span>
+      </button>
+      <button class="btn btn-small btn-lime" id="downloadCsv" type="button" aria-label="下载数据 CSV">
+        <span>下载数据</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>AI ATLAS / 2026 EDITION</span>
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span>100 PRODUCTS</span>
+          </div>
+
+          <h1>
+            <span class="h1-top">THE GLOBAL</span>
+            <span class="h1-main">AI <em>百强</em></span>
+            <span class="h1-bottom">TOP 100 <i>2026</i></span>
+          </h1>
+
+          <p class="hero-lede">
+            网站看月访问，APP 看下载。我们把 <strong>100 个</strong> 正在改变日常生活的 AI 网站与 APP 放进同一张地图，
+            从 <strong>63.7 亿</strong> 次访问到 <strong>8,000 万</strong> 次下载，看清入口、赛道与地域。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#ranking">
+              探索完整榜单
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <button class="btn btn-ghost" id="heroAppRank" type="button">
+              先看 APP 下载榜
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4"/></svg>
+            </button>
+            <button class="btn btn-ghost" id="heroDownload" type="button">下载 CSV 数据</button>
+          </div>
+
+          <div class="hero-note">
+            <span><i aria-hidden="true"></i> 10 个赛道</span>
+            <span><i aria-hidden="true"></i> 17 个市场</span>
+            <span><i aria-hidden="true"></i> 网站榜 / APP 榜各 50</span>
+            <span><i aria-hidden="true"></i> 2025.10–2026.03 快照</span>
+          </div>
+        </div>
+
+        <aside class="ledger" aria-label="榜单数据摘要">
+          <div class="ledger-topline">
+            <span>GLOBAL INDEX</span>
+            <span class="ledger-status"><i aria-hidden="true"></i> SNAPSHOT</span>
+          </div>
+
+          <div class="ledger-headline">
+            <p>样本触达总和 / 月度估算</p>
+            <strong id="statReach">—</strong>
+            <span>月访问 + 下载 + MAU 归一化</span>
+          </div>
+
+          <div class="ledger-bars" id="heroBars" aria-hidden="true"></div>
+
+          <div class="ledger-grid">
+            <div>
+              <span>网站月访问</span>
+              <strong id="statVisits">—</strong>
+            </div>
+            <div>
+              <span>APP 月下载</span>
+              <strong id="statDownloads">—</strong>
+            </div>
+            <div>
+              <span>产品样本</span>
+              <strong id="statProducts">100</strong>
+            </div>
+            <div>
+              <span>整理日期</span>
+              <strong class="mono" id="statUpdated">2026.11</strong>
+            </div>
+          </div>
+
+          <div class="ledger-foot">
+            <span>数据口径见 #method</span>
+            <span>NOT AFFILIATED</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>SCROLL TO EXPLORE</span>
+        <i></i>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-head">
+        <div class="section-label">
+          <span class="section-no">01</span>
+          <span>CATEGORY MAP</span>
+        </div>
+        <h2>十种使用 AI 的方式</h2>
+        <p>从“问一句”到“交付一个结果”。每个分类背后，都是一条不同的产品逻辑与商业路径。</p>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section ranking-section" id="ranking">
+      <div class="section-head section-head-wide">
+        <div>
+          <div class="section-label">
+            <span class="section-no">02</span>
+            <span>THE INDEX</span>
+          </div>
+          <h2>完整榜单</h2>
+        </div>
+        <p>总榜按综合触达排序；也可以切换到网站榜或 APP 榜，分别查看访问量与下载量排名（各取前 50 名）。所有条目都能搜索、筛选和收藏。</p>
+      </div>
+
+      <div class="ranking-shell">
+        <div class="ranking-toolbar">
+          <div class="tabs" role="tablist" aria-label="榜单视图">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="all">总榜 <span>100</span></button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="web">网站 <span>50</span></button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="app">APP <span>50</span></button>
+          </div>
+
+          <div class="toolbar-tools">
+            <label class="search-box" for="searchInput">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+              <input id="searchInput" type="search" placeholder="搜索产品、公司或关键词…" autocomplete="off" spellcheck="false">
+              <kbd>/</kbd>
+            </label>
+
+            <label class="select-wrap">
+              <span class="sr-only">排序方式</span>
+              <select id="sortSelect">
+                <option value="reach">综合触达</option>
+                <option value="visits">月访问量</option>
+                <option value="downloads">月下载量</option>
+                <option value="mau">月活跃</option>
+                <option value="year">最新上线</option>
+                <option value="name">名称 A–Z</option>
+              </select>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </label>
+
+            <div class="view-toggle" role="group" aria-label="展示方式">
+              <button class="view-btn is-active" type="button" data-view="grid" aria-label="卡片视图" aria-pressed="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              </button>
+              <button class="view-btn" type="button" data-view="table" aria-label="表格视图" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ranking-body">
+          <aside class="filters" id="filtersPanel" aria-label="筛选条件">
+            <div class="filter-head">
+              <span>FILTERS</span>
+              <button id="resetFilters" type="button">重置</button>
+            </div>
+
+            <div class="filter-group">
+              <p class="filter-label">分类</p>
+              <div class="filter-list" id="categoryFilters"></div>
+            </div>
+
+            <div class="filter-group">
+              <p class="filter-label">快速筛选</p>
+              <label class="check-row">
+                <input type="checkbox" id="freeOnly">
+                <span class="fake-check" aria-hidden="true"></span>
+                <span>免费可用</span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" id="bookmarkOnly">
+                <span class="fake-check" aria-hidden="true"></span>
+                <span>只看已收藏</span>
+                <b id="sidebarBookmarkCount">0</b>
+              </label>
+            </div>
+
+            <div class="filter-note">
+              <span class="note-mark">*</span>
+              <p>带 <b>*</b> 的下载量与 MAU 为公开资料估算；访问量来自 Similarweb 第三方口径。</p>
+            </div>
+          </aside>
+
+          <div class="results">
+            <div class="results-topline">
+              <p id="resultSummary" aria-live="polite">正在载入榜单…</p>
+              <button class="mobile-filter-btn" id="mobileFilterToggle" type="button" aria-expanded="false" aria-controls="filtersPanel">
+                筛选
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+              </button>
+            </div>
+
+            <div class="active-filters" id="activeFilters"></div>
+            <div class="product-grid" id="productGrid"></div>
+
+            <div class="table-wrap" id="tableWrap" hidden>
+              <table>
+                <caption class="sr-only">全球 AI 产品榜单表格</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" data-sort="rank">#</th>
+                    <th scope="col" data-sort="name">产品</th>
+                    <th scope="col">分类</th>
+                    <th scope="col">形态</th>
+                    <th scope="col" data-sort="visits">月访问</th>
+                    <th scope="col" data-sort="downloads">月下载</th>
+                    <th scope="col" data-sort="mau">MAU</th>
+                    <th scope="col">国家 / 地区</th>
+                    <th scope="col" data-sort="year">上线</th>
+                    <th scope="col"><span class="sr-only">官网</span></th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+              <span class="empty-glyph">404</span>
+              <h3>没有找到匹配的产品</h3>
+              <p>换一个关键词，或者清空筛选条件再试。</p>
+              <button class="btn btn-lime" id="emptyReset" type="button">清空筛选</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section insights-section" id="insights">
+      <div class="section-head">
+        <div class="section-label">
+          <span class="section-no">03</span>
+          <span>SIGNALS</span>
+        </div>
+        <h2>榜单背后的四个信号</h2>
+        <p>数据不只是排名。它告诉我们入口有多集中、哪些赛道正在变成基础设施，以及中国产品如何从“出海”走向“主场”。</p>
+      </div>
+
+      <div class="insight-grid">
+        <article class="insight-feature">
+          <span class="insight-kicker">01 / CONCENTRATION</span>
+          <h3><span id="concentrationMultiple">5.2</span><small>×</small></h3>
+          <p>ChatGPT 的月访问量约为 Gemini 的 <span id="concentrationText">5.2</span> 倍。通用助手仍是整个 AI 消费市场最大的单一入口。</p>
+          <div class="mini-compare" id="concentrationBars"></div>
+          <span class="feature-stamp">ENTRY POINT</span>
+        </article>
+
+        <article class="panel panel-category">
+          <div class="panel-head">
+            <span>02 / CATEGORY MIX</span>
+            <b>按产品数</b>
+          </div>
+          <h3>创意工具占据半壁江山</h3>
+          <div class="bar-list" id="categoryBars"></div>
+        </article>
+
+        <article class="panel panel-country">
+          <div class="panel-head">
+            <span>03 / GEOGRAPHY</span>
+            <b>按产品数</b>
+          </div>
+          <h3>美国与中国双极，出海产品遍布全球</h3>
+          <div class="bar-list bar-list-country" id="countryBars"></div>
+        </article>
+
+        <article class="panel panel-platform">
+          <div class="panel-head">
+            <span>04 / FORM FACTOR</span>
+            <b>网站 vs APP</b>
+          </div>
+          <h3>双端，才是默认形态</h3>
+          <div class="platform-content">
+            <div class="donut" id="platformDonut" role="img" aria-label="产品形态分布"></div>
+            <div class="donut-legend" id="platformLegend"></div>
+          </div>
+        </article>
+
+        <article class="panel panel-toplist">
+          <div class="panel-head">
+            <span>TOP APP</span>
+            <b>月下载</b>
+          </div>
+          <ol class="toplist" id="topDownloads"></ol>
+        </article>
+
+        <article class="panel panel-toplist panel-toplist-web">
+          <div class="panel-head">
+            <span>TOP WEB</span>
+            <b>月访问</b>
+          </div>
+          <ol class="toplist" id="topVisits"></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method">
+      <div class="section-head">
+        <div class="section-label">
+          <span class="section-no">04</span>
+          <span>METHOD & SOURCES</span>
+        </div>
+        <h2>这份榜单是怎么做出来的</h2>
+        <p>我们不把访问量、下载量和月活强行相加成一个“官方分数”。总榜只用它们做归一化排序，原始数字全部保留，方便你按自己的问题重新排。</p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-copy">
+          <div class="method-block">
+            <span class="method-no">A</span>
+            <div>
+              <h3>样本范围</h3>
+              <p>100 个面向消费者的 AI 产品：AI 原生应用，以及生成式 AI 已成为核心体验的产品。排除纯企业基础设施、通用软件中仅附带 AI 功能且使用门槛过高的产品。</p>
+            </div>
+          </div>
+          <div class="method-block">
+            <span class="method-no">B</span>
+            <div>
+              <h3>三个核心指标</h3>
+              <p><b>月访问量</b>衡量网站触达；<b>月下载量</b>衡量 APP 新增；<b>MAU</b>衡量活跃规模。三者不是同一量纲，不能直接比较。</p>
+            </div>
+          </div>
+          <div class="method-block">
+            <span class="method-no">C</span>
+            <div>
+              <h3>综合触达排序</h3>
+              <p>使用 <code>max(月访问, MAU, 月下载 × 3)</code> 做近似归一化，只为给出一个可浏览的顺序，不代表官方排名或估值。你可以在榜单里切换到单一指标排序。</p>
+            </div>
+          </div>
+          <div class="method-block">
+            <span class="method-no">D</span>
+            <div>
+              <h3>已知局限</h3>
+              <p>第三方流量与下载数据存在口径差异；中国 Android 渠道未完全计入；网站访问 ≠ 独立用户，下载 ≠ 活跃。带 <b>*</b> 的数值为公开资料估算，适合看趋势，不适合做财务决策。</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="method-ledger">
+          <div class="terminal-head">
+            <span>DATA LEDGER</span>
+            <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <dl class="ledger-list">
+            <div><dt>样本量</dt><dd>100</dd></div>
+            <div><dt>分类</dt><dd>10</dd></div>
+            <div><dt>市场</dt><dd id="ledgerMarkets">17</dd></div>
+            <div><dt>网站样本</dt><dd id="ledgerWebCount">—</dd></div>
+            <div><dt>APP 样本</dt><dd id="ledgerAppCount">—</dd></div>
+            <div><dt>数据快照</dt><dd>2025.10–2026.03</dd></div>
+            <div><dt>整理日期</dt><dd>2026.11.02</dd></div>
+          </dl>
+
+          <div class="source-list" id="sourceList"></div>
+
+          <div class="terminal-note">
+            <span>README</span>
+            <p>这是一个静态研究站点，不依赖后端。数据在 <code>assets/data.js</code>，可替换后重新发布。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="数据下载">
+      <div>
+        <span class="cta-kicker">TAKE THE DATA WITH YOU</span>
+        <h2>把 100 个产品带走。</h2>
+        <p>CSV 包含分类、网址、月访问、月下载、MAU、上线年份与定价方式。</p>
+      </div>
+      <div class="cta-actions">
+        <button class="btn btn-lime btn-large" id="ctaDownload" type="button">
+          下载完整 CSV
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+        </button>
+        <a class="text-link" href="#ranking">回到榜单 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="footer-brand" href="#top">
+        <span class="brand-mark">AI</span>
+        <span>ATLAS</span>
+      </a>
+      <p>一份关于 AI 产品如何被使用的独立研究。</p>
+      <div class="footer-links">
+        <a href="#ranking">榜单</a>
+        <a href="#categories">分类</a>
+        <a href="#insights">洞察</a>
+        <a href="#method">方法</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AI ATLAS · INDEPENDENT RESEARCH</span>
+      <span>数据为第三方估算，不构成投资建议。</span>
+      <a href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="detail-dialog" id="detailDialog" aria-labelledby="detailTitle">
+    <div class="detail-shell">
+      <button class="detail-close" id="detailClose" type="button" aria-label="关闭详情">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="detail-hero" id="detailHero"></div>
+      <div class="detail-body" id="detailBody"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="掌柜">
+  <rect width="32" height="32" rx="8" fill="#0b0d13"/>
+  <g fill="none" stroke="#e7b968" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 14.2 16 7l9 7.2"/>
+    <path d="M9.2 14.6v9.8h13.6v-9.8"/>
+    <path d="M13.6 24.4v-5.2h4.8v5.2"/>
+  </g>
+</svg>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>排名 — SCALP//LAB</title>
+<meta name="description" content="10 个 OKX 永续合约 30 分钟策略按净收益排名，含盈亏比、最大回撤、夏普、分品种收益矩阵与收益风险散点图。">
+<meta name="theme-color" content="#070908">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c9ff4a'/%3E%3Cpath d='M16 21h20c7 0 11 4 11 10s-4 10-11 10H22l-4 10H8l14-30z' fill='%23070908'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="ranking">
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="index.html" aria-label="SCALP LAB 首页">
+      <span class="brand-mark">S//L</span>
+      <span class="brand-word"><b>SCALP//LAB</b><small>OKX PERP · 30M RESEARCH</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航"><a class="" href="index.html"><span class="n">01</span>首页</a><a class="active" href="ranking.html"><span class="n">02</span>排名</a><a class="" href="strategies.html"><span class="n">03</span>策略库</a><a class="" href="data.html"><span class="n">04</span>指标数据</a><a class="" href="method.html"><span class="n">05</span>方法</a></nav>
+    <div class="status"><span class="dot"></span><span>DATA · 2026-11-04 15:00 UTC</span></div>
+    <button class="nav-toggle" type="button" aria-expanded="false">MENU</button>
+  </div>
+</header>
+<div class="tape">
+  <div class="shell tape-in">
+    <div class="tape-label">LIVE TAPE / UTC</div>
+    <div class="tape-items" data-tape><span class="tape-sym muted">LOADING MARKET DATA…</span></div>
+  </div>
+</div>
+<main >
+
+<section class="data-lead"><div class="shell">
+  <div>
+    <div class="eyebrow">RANKING / NET RETURN / 84D</div>
+    <h1>按净收益，<br><span class="lime">从第 1 到第 10。</span></h1>
+    <p class="hero-lede" style="max-width:720px">同一段 30m 数据、同一套成本、同一个执行引擎。排名只看扣除 6bp/边后的组合净收益；盈亏比、回撤、夏普、交易数作为解释变量，而不是排名依据。</p>
+  </div>
+  <div class="data-stamp">SAMPLE<br><b>2026-08-12 21:30 → 2026-11-04 15:00 UTC</b><br>17,280 BARS · 4 SYMBOLS<br>1X NOTIONAL · 0.06 BP/SIDE</div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="filterbar">
+    <span class="lab">FILTER /</span><button class="chip on" data-family="all">全部 10</button><button class="chip" data-family="趋势">趋势</button><button class="chip" data-family="均值回归">均值回归</button><button class="chip" data-family="突破">突破</button><button class="chip" data-family="动量">动量</button><button class="chip" data-family="日内">日内</button><button class="chip" data-family="波动率">波动率</button>
+    <label class="search"><span>⌕</span><input type="search" placeholder="搜索策略…" data-search aria-label="搜索策略"></label>
+  </div>
+  <div class="filterbar" style="padding-top:8px">
+    <span class="lab">SORT /</span>
+    <button class="chip on" data-sort="return">净收益</button>
+    <button class="chip" data-sort="pf">盈亏比</button>
+    <button class="chip" data-sort="dd">回撤（小→大）</button>
+    <button class="chip" data-sort="sharpe">夏普</button>
+    <button class="chip" data-sort="trades">交易数</button>
+    <span class="mono tiny dim" style="margin-left:auto">显示 <b id="rank-count" data-rank-count>10</b> / 10</span>
+  </div>
+  <div class="table-wrap" style="margin-top:14px">
+    <table class="rank-table" data-ranking-table>
+      <thead><tr><th>#</th><th>策略 / STRATEGY</th><th class="hide-sm">类型</th><th>净收益</th><th class="hide-sm">盈亏比</th><th>最大回撤</th><th class="hide-sm">胜率</th><th class="hide-sm">交易</th><th class="hide-sm">净值</th><th class="hide-sm"></th></tr></thead>
+      <tbody><tr data-rank="1" data-name="Supertrend 趋势带" data-family="趋势" data-return="-0.48" data-pf="1.06" data-dd="21.62" data-sharpe="0.15" data-trades="536" data-color="#6ee7ff">
+  <td class="r">01</td>
+  <td><a class="st-name" href="strategy-supertrend.html"><b>Supertrend 趋势带</b><span>SUPERTREND 10/3</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-0.48%<small>GROSS +17.32%</small></span><span class="bar"><i class="neg" style="width:3%"></i></span></div></td>
+  <td class="metric hide-sm">1.06</td>
+  <td class="metric down">-21.62%</td>
+  <td class="metric hide-sm">18.7%</td>
+  <td class="metric hide-sm">536</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="supertrend"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-supertrend.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="2" data-name="肯特纳挤压突破" data-family="波动率" data-return="-3.43" data-pf="0.96" data-dd="16.74" data-sharpe="-0.44" data-trades="257" data-color="#7dffb3">
+  <td class="r">02</td>
+  <td><a class="st-name" href="strategy-keltner-squeeze.html"><b>肯特纳挤压突破</b><span>KELTNER SQUEEZE</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">波动率</span></td>
+  <td><div class="ret-bar"><span class="ret down">-3.43%<small>GROSS +4.45%</small></span><span class="bar"><i class="neg" style="width:11%"></i></span></div></td>
+  <td class="metric hide-sm">0.96</td>
+  <td class="metric down">-16.74%</td>
+  <td class="metric hide-sm">26.8%</td>
+  <td class="metric hide-sm">257</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="keltner-squeeze"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-keltner-squeeze.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="3" data-name="唐奇安 20 突破" data-family="突破" data-return="-5.68" data-pf="0.97" data-dd="21.97" data-sharpe="-0.49" data-trades="531" data-color="#ff7a90">
+  <td class="r">03</td>
+  <td><a class="st-name" href="strategy-donchian-breakout.html"><b>唐奇安 20 突破</b><span>DONCHIAN 20 BREAKOUT</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">突破</span></td>
+  <td><div class="ret-bar"><span class="ret down">-5.68%<small>GROSS +10.96%</small></span><span class="bar"><i class="neg" style="width:19%"></i></span></div></td>
+  <td class="metric hide-sm">0.97</td>
+  <td class="metric down">-21.97%</td>
+  <td class="metric hide-sm">23.5%</td>
+  <td class="metric hide-sm">531</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="donchian-breakout"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-donchian-breakout.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="4" data-name="布林带 + RSI(2) 回踩" data-family="均值回归" data-return="-7.58" data-pf="0.59" data-dd="10.8" data-sharpe="-3.56" data-trades="156" data-color="#ffb86b">
+  <td class="r">04</td>
+  <td><a class="st-name" href="strategy-bollinger-rsi2.html"><b>布林带 + RSI(2) 回踩</b><span>BOLLINGER + RSI(2)</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">均值回归</span></td>
+  <td><div class="ret-bar"><span class="ret down">-7.58%<small>GROSS -3.11%</small></span><span class="bar"><i class="neg" style="width:26%"></i></span></div></td>
+  <td class="metric hide-sm">0.59</td>
+  <td class="metric down">-10.80%</td>
+  <td class="metric hide-sm">39.7%</td>
+  <td class="metric hide-sm">156</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="bollinger-rsi2"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-bollinger-rsi2.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="5" data-name="VWAP 回收 + 放量" data-family="日内" data-return="-9.97" data-pf="0.66" data-dd="15.95" data-sharpe="-3.25" data-trades="278" data-color="#b8a1ff">
+  <td class="r">05</td>
+  <td><a class="st-name" href="strategy-vwap-reclaim.html"><b>VWAP 回收 + 放量</b><span>VWAP RECLAIM</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">日内</span></td>
+  <td><div class="ret-bar"><span class="ret down">-9.97%<small>GROSS -2.01%</small></span><span class="bar"><i class="neg" style="width:34%"></i></span></div></td>
+  <td class="metric hide-sm">0.66</td>
+  <td class="metric down">-15.95%</td>
+  <td class="metric hide-sm">21.6%</td>
+  <td class="metric hide-sm">278</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="vwap-reclaim"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-vwap-reclaim.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="6" data-name="UT Bot ATR 追踪" data-family="趋势" data-return="-14.98" data-pf="0.78" data-dd="23.28" data-sharpe="-2.63" data-trades="598" data-color="#5ad1ff">
+  <td class="r">06</td>
+  <td><a class="st-name" href="strategy-utbot-atr.html"><b>UT Bot ATR 追踪</b><span>UT BOT ATR TRAILING</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-14.98%<small>GROSS +1.88%</small></span><span class="bar"><i class="neg" style="width:51%"></i></span></div></td>
+  <td class="metric hide-sm">0.78</td>
+  <td class="metric down">-23.28%</td>
+  <td class="metric hide-sm">12.7%</td>
+  <td class="metric hide-sm">598</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="utbot-atr"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-utbot-atr.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="7" data-name="EMA 三线动量" data-family="趋势" data-return="-18.12" data-pf="0.83" data-dd="32.87" data-sharpe="-1.98" data-trades="745" data-color="#c8ff3d">
+  <td class="r">07</td>
+  <td><a class="st-name" href="strategy-ema-ribbon.html"><b>EMA 三线动量</b><span>EMA RIBBON MOMENTUM</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-18.12%<small>GROSS +2.81%</small></span><span class="bar"><i class="neg" style="width:62%"></i></span></div></td>
+  <td class="metric hide-sm">0.83</td>
+  <td class="metric down">-32.87%</td>
+  <td class="metric hide-sm">18.3%</td>
+  <td class="metric hide-sm">745</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="ema-ribbon"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-ema-ribbon.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="8" data-name="一目均衡表云层突破" data-family="趋势" data-return="-18.76" data-pf="0.83" data-dd="34.66" data-sharpe="-2.1" data-trades="814" data-color="#d9c7ff">
+  <td class="r">08</td>
+  <td><a class="st-name" href="strategy-ichimoku-cloud.html"><b>一目均衡表云层突破</b><span>ICHIMOKU CLOUD BREAKOUT</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-18.76%<small>GROSS +4.01%</small></span><span class="bar"><i class="neg" style="width:65%"></i></span></div></td>
+  <td class="metric hide-sm">0.83</td>
+  <td class="metric down">-34.66%</td>
+  <td class="metric hide-sm">20.0%</td>
+  <td class="metric hide-sm">814</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="ichimoku-cloud"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-ichimoku-cloud.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="9" data-name="Stoch RSI 趋势回踩" data-family="均值回归" data-return="-22.24" data-pf="0.61" data-dd="25.25" data-sharpe="-6.7" data-trades="767" data-color="#ff9f43">
+  <td class="r">09</td>
+  <td><a class="st-name" href="strategy-stochrsi-pullback.html"><b>Stoch RSI 趋势回踩</b><span>STOCH RSI PULLBACK</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">均值回归</span></td>
+  <td><div class="ret-bar"><span class="ret down">-22.24%<small>GROSS -2.02%</small></span><span class="bar"><i class="neg" style="width:77%"></i></span></div></td>
+  <td class="metric hide-sm">0.61</td>
+  <td class="metric down">-25.25%</td>
+  <td class="metric hide-sm">26.5%</td>
+  <td class="metric hide-sm">767</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="stochrsi-pullback"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-stochrsi-pullback.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr data-rank="10" data-name="MACD 柱状动量" data-family="动量" data-return="-28.85" data-pf="0.71" data-dd="37.51" data-sharpe="-4.04" data-trades="986" data-color="#f5d76e">
+  <td class="r">10</td>
+  <td><a class="st-name" href="strategy-macd-momentum.html"><b>MACD 柱状动量</b><span>MACD HISTOGRAM MOMENTUM</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">动量</span></td>
+  <td><div class="ret-bar"><span class="ret down">-28.85%<small>GROSS -4.04%</small></span><span class="bar"><i class="neg" style="width:100%"></i></span></div></td>
+  <td class="metric hide-sm">0.71</td>
+  <td class="metric down">-37.51%</td>
+  <td class="metric hide-sm">24.4%</td>
+  <td class="metric hide-sm">986</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="macd-momentum"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-macd-momentum.html">DETAIL <span>↗</span></a></td>
+</tr></tbody>
+    </table>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head"><div class="l"><span class="sec-index">02 / RISK</span><h2>收益 × 回撤 <span class="thin">/ RISK MAP</span></h2></div><div class="sec-sub">越靠左上越好：更高的净收益，更小的最大回撤。圆点颜色对应策略主色。</div></div>
+  <div class="panel"><div class="chart-box scatter-box"><canvas data-scatter></canvas></div></div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head"><div class="l"><span class="sec-index">03 / MATRIX</span><h2>分品种收益矩阵 <span class="thin">/ BY INSTRUMENT</span></h2></div><div class="sec-sub">同一策略在四个合约上的净收益。绿色为盈利，红色为亏损；最后一列是四品种等权组合。</div></div>
+  <div class="table-wrap">
+    <table class="matrix">
+      <thead><tr><th>策略</th><th>BTC</th><th>ETH</th><th>SOL</th><th>DOGE</th><th>组合</th></tr></thead>
+      <tbody><tr><td><a href="strategy-supertrend.html">#01 Supertrend 趋势带</a></td><td style="background:rgba(201,255,74,0.017)"><span class="up">+2.6%</span></td><td style="background:rgba(201,255,74,0.051)"><span class="up">+8.1%</span></td><td style="background:rgba(255,93,108,0.116)"><span class="down">-18.5%</span></td><td style="background:rgba(201,255,74,0.037)"><span class="up">+5.8%</span></td><td class="metric">-0.5%</td></tr><tr><td><a href="strategy-keltner-squeeze.html">#02 肯特纳挤压突破</a></td><td style="background:rgba(255,93,108,0.045)"><span class="down">-7.1%</span></td><td style="background:rgba(255,93,108,0.073)"><span class="down">-11.6%</span></td><td style="background:rgba(201,255,74,0.015)"><span class="up">+2.3%</span></td><td style="background:rgba(201,255,74,0.017)"><span class="up">+2.6%</span></td><td class="metric">-3.4%</td></tr><tr><td><a href="strategy-donchian-breakout.html">#03 唐奇安 20 突破</a></td><td style="background:rgba(255,93,108,0.006)"><span class="down">-0.9%</span></td><td style="background:rgba(255,93,108,0.064)"><span class="down">-10.2%</span></td><td style="background:rgba(255,93,108,0.049)"><span class="down">-7.7%</span></td><td style="background:rgba(255,93,108,0.024)"><span class="down">-3.9%</span></td><td class="metric">-5.7%</td></tr><tr><td><a href="strategy-bollinger-rsi2.html">#04 布林带 + RSI(2) 回踩</a></td><td style="background:rgba(255,93,108,0.038)"><span class="down">-6.0%</span></td><td style="background:rgba(255,93,108,0.060)"><span class="down">-9.5%</span></td><td style="background:rgba(255,93,108,0.040)"><span class="down">-6.4%</span></td><td style="background:rgba(255,93,108,0.053)"><span class="down">-8.4%</span></td><td class="metric">-7.6%</td></tr><tr><td><a href="strategy-vwap-reclaim.html">#05 VWAP 回收 + 放量</a></td><td style="background:rgba(255,93,108,0.072)"><span class="down">-11.4%</span></td><td style="background:rgba(201,255,74,0.007)"><span class="up">+1.1%</span></td><td style="background:rgba(255,93,108,0.092)"><span class="down">-14.6%</span></td><td style="background:rgba(255,93,108,0.095)"><span class="down">-15.1%</span></td><td class="metric">-10.0%</td></tr><tr><td><a href="strategy-utbot-atr.html">#06 UT Bot ATR 追踪</a></td><td style="background:rgba(255,93,108,0.047)"><span class="down">-7.5%</span></td><td style="background:rgba(255,93,108,0.140)"><span class="down">-22.2%</span></td><td style="background:rgba(255,93,108,0.150)"><span class="down">-23.8%</span></td><td style="background:rgba(255,93,108,0.041)"><span class="down">-6.5%</span></td><td class="metric">-15.0%</td></tr><tr><td><a href="strategy-ema-ribbon.html">#07 EMA 三线动量</a></td><td style="background:rgba(255,93,108,0.079)"><span class="down">-12.5%</span></td><td style="background:rgba(255,93,108,0.096)"><span class="down">-15.2%</span></td><td style="background:rgba(255,93,108,0.136)"><span class="down">-21.6%</span></td><td style="background:rgba(255,93,108,0.146)"><span class="down">-23.1%</span></td><td class="metric">-18.1%</td></tr><tr><td><a href="strategy-ichimoku-cloud.html">#08 一目均衡表云层突破</a></td><td style="background:rgba(255,93,108,0.074)"><span class="down">-11.8%</span></td><td style="background:rgba(255,93,108,0.093)"><span class="down">-14.8%</span></td><td style="background:rgba(255,93,108,0.105)"><span class="down">-16.7%</span></td><td style="background:rgba(255,93,108,0.200)"><span class="down">-31.7%</span></td><td class="metric">-18.8%</td></tr><tr><td><a href="strategy-stochrsi-pullback.html">#09 Stoch RSI 趋势回踩</a></td><td style="background:rgba(255,93,108,0.105)"><span class="down">-16.6%</span></td><td style="background:rgba(255,93,108,0.166)"><span class="down">-26.3%</span></td><td style="background:rgba(255,93,108,0.127)"><span class="down">-20.1%</span></td><td style="background:rgba(255,93,108,0.163)"><span class="down">-25.9%</span></td><td class="metric">-22.2%</td></tr><tr><td><a href="strategy-macd-momentum.html">#10 MACD 柱状动量</a></td><td style="background:rgba(255,93,108,0.186)"><span class="down">-29.5%</span></td><td style="background:rgba(255,93,108,0.191)"><span class="down">-30.3%</span></td><td style="background:rgba(255,93,108,0.175)"><span class="down">-27.7%</span></td><td style="background:rgba(255,93,108,0.176)"><span class="down">-27.9%</span></td><td class="metric">-28.9%</td></tr></tbody>
+    </table>
+  </div>
+</div></section>
+
+</main>
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">S//L</span>
+        <div><b>SCALP//LAB</b><small>OKX PERPETUAL · 30M STRATEGY INDEX</small></div>
+      </div>
+      <div class="footer-links">
+        <a href="ranking.html">完整排名</a>
+        <a href="strategies.html">策略库</a>
+        <a href="data.html">指标数据</a>
+        <a href="method.html">方法与局限</a>
+        <a href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noopener">Pine 文档 ↗</a>
+        <a href="https://www.okx.com/docs-v5/en/" target="_blank" rel="noopener">OKX API ↗</a>
+      </div>
+    </div>
+    <p class="disclaimer">风险提示：本站所有收益、回撤、胜率均为历史回测统计，不是实盘业绩，也不构成任何投资建议。加密永续合约具有高杠杆、强平、资金费率与流动性风险；历史表现不代表未来收益。Pine Script 代码用于研究与教学，实盘前请在 TradingView 策略测试器中独立验证，并从小仓位开始。本站未使用杠杆、未计资金费率、未模拟盘口冲击，真实交易结果通常更差。</p>
+    <div class="footer-meta">
+      <span>数据：OKX 公共行情 API · 30m K 线 · 4,320 根/品种 · 抓取于 2026-11-04 15:00 UTC</span>
+      <span>构建：2026-11-04 15:34 UTC · 静态站点 · 无外部依赖</span>
+      <span>© <span id="year">2026</span> SCALP//LAB</span>
+    </div>
+  </div>
+</footer>
+<script src="data/lab.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASTER · 一个插座，接上所有 AI｜全球模型统一网关</title>
+<meta name="description" content="OpenAI、Claude、Gemini、DeepSeek——一个接口、一种货币、一张账单。人民币充值，余额不过期，可开发票。官方 API + 自部署双供给，双协议原生兼容。">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="一个插座，接上所有 AI">
+<meta property="og:description" content="一个接口、一种货币、一张账单。人民币充值，余额不过期，可开发票。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/media/poster.jpg">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/">
+      <span class="logo-mark"></span>
+      ASTER
+    </a>
+    <nav class="nav-links">
+      <a href="#watch">60 秒看懂</a>
+      <a href="#models">模型与价格</a>
+      <a href="/apis">API 目录</a>
+      <a href="#why">为什么</a>
+      <a href="/docs">文档</a>
+      <a href="/status">状态</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/login">登录</a>
+      <a class="btn btn-primary btn-sm" href="/register">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 首屏 ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> 官方 API + 自部署 · 双协议网关</span>
+        <h1>一个插座<br><span class="grad">接上所有 AI</span></h1>
+        <p class="lede">
+          OpenAI、Claude、Gemini、DeepSeek——一个接口、一种货币、一张账单。
+          人民币充值，余额不过期，可开发票。
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="/register">免费试用（送 ¥1）</a>
+          <a class="btn btn-lg" href="#watch">▶ 看 60 秒</a>
+        </div>
+        <div class="trust">
+          <span><i></i> 注册即送 ¥1</span>
+          <span><i></i> 余额不过期</span>
+          <span><i></i> 可开发票</span>
+          <span><i></i> 默认不存对话内容</span>
+        </div>
+      </div>
+
+      <div class="code-card">
+        <div class="code-head">
+          <div class="code-dots"><i></i><i></i><i></i></div>
+          <div class="code-tabs" id="codeTabs">
+            <button class="on" data-tab="curl">cURL</button>
+            <button data-tab="python">Python</button>
+            <button data-tab="node">Node</button>
+            <button data-tab="claude">Claude Code</button>
+          </div>
+        </div>
+        <pre class="code-body" id="codeBody"></pre>
+        <div class="code-foot">
+          <span class="pill">POST /v1/chat/completions</span>
+          <span>Base URL: https://api.aster.dev/v1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats" id="statStrip">
+      <div><b id="stModels">15</b><span>可用模型</span></div>
+      <div><b id="stReq">—</b><span>近 24 小时请求</span></div>
+      <div><b id="stUptime">99.95%</b><span>月度可用性</span></div>
+      <div><b id="stLatency">—</b><span>平均首字延迟</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 视频 ============ -->
+<section class="section" id="watch">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">Watch</span>
+      <h2>60 秒，看懂我们在做什么</h2>
+      <p>不是又一个中转站。这六十秒讲清楚三件事：为什么贵、供给从哪来、以及它怎么自己跑起来。</p>
+    </div>
+
+    <div class="video-row">
+      <div class="video-main">
+        <video id="promo" controls preload="metadata" poster="/media/poster.jpg" playsinline>
+          <source src="/media/promo.mp4" type="video/mp4">
+          <track kind="subtitles" src="/media/promo.vtt" srclang="zh" label="中文" default>
+          你的浏览器不支持 video 标签，可直接<a href="/media/promo.mp4">下载观看</a>。
+        </video>
+      </div>
+
+      <aside class="video-side">
+        <a class="mini-video" href="/media/promo-15s.mp4" target="_blank" rel="noopener">
+          <span class="thumb">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          <span><b>15 秒信息流版</b><span>投流 / 朋友圈</span></span>
+        </a>
+        <a class="mini-video" href="/media/promo-9x16.mp4" target="_blank" rel="noopener">
+          <span class="thumb">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </span>
+          <span><b>竖版 9:16</b><span>抖音 / Reels / Shorts</span></span>
+        </a>
+        <p class="video-note">
+          三个版本同源同文案，静音也能看懂。<br>
+          字幕文件：<a href="/media/promo.srt" style="color:var(--muted)">SRT</a>
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 痛点 ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">The Real Problem</span>
+      <h2>卡住你的，从来不是 AI</h2>
+      <p>是 AI 前面那四道门。</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain"><b>付不了钱</b><span>海外信用卡办不下来，找代充又怕封号。</span></div>
+      <div class="pain"><b>用得乱</b><span>七八个模型七八个后台，月底没人算得清哪个功能烧了多少钱。</span></div>
+      <div class="pain"><b>过不了审</b><span>采购要发票、要合同、要数据不出境，个人账号一条都满足不了。</span></div>
+      <div class="pain"><b>怕断供</b><span>今天还便宜，明天就换域名，余额跟着打水漂。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 三样东西 ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">What We Build</span>
+      <h2>我们给 AI 装了三样东西</h2>
+      <p>万能插座、电表、收银机。三样都不性感，但缺一样生意就跑不起来。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="2" width="8" height="9" rx="2"/><path d="M10 2v3M14 2v3M12 11v4a3 3 0 0 0 3 3h1"/></svg>
+        </div>
+        <h3>万能插座</h3>
+        <p>各家接口不一样，我们统一成一个。OpenAI 和 Claude 两套协议都原生支持，换模型只改一个字段，代码不用动。</p>
+      </div>
+      <div class="feature">
+        <div class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 14l4-3"/><circle cx="12" cy="14" r="1.6"/></svg>
+        </div>
+        <h3>电表</h3>
+        <p>每一笔调用记下用了多少、花了多少。输入、输出、缓存分别计价，账单能一路对到上游。</p>
+      </div>
+      <div class="feature">
+        <div class="ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18"/><circle cx="12" cy="15" r="2"/></svg>
+        </div>
+        <h3>收银机</h3>
+        <p>人民币充值、按量扣费、月底开票。不用再走跨境汇款，也不用为了一个模型去注册一家公司。</p>
+      </div>
+    </div>
+
+    <p class="lede" style="text-align:center;margin-top:32px;font-size:18px;color:var(--text)">
+      别人卖模型，我们卖<span class="grad">「用模型的那条路」</span>。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 业务线 ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">What You Can Buy</span>
+      <h2>你可以只买一样</h2>
+      <p>四种买法，按你的阶段来，不用一次买全。</p>
+    </div>
+    <div class="biz-grid">
+      <div class="biz">
+        <h3>调用通道</h3>
+        <p>一个网址、一把钥匙，调所有模型。</p>
+        <div class="who">适合：开发者、独立产品</div>
+      </div>
+      <div class="biz">
+        <h3>充值额度</h3>
+        <p>充多少用多少，余额不过期，未消费可退。</p>
+        <div class="who">适合：个人、小团队</div>
+      </div>
+      <div class="biz">
+        <h3>企业服务</h3>
+        <p>发票、合同、可用性承诺、私有化部署。</p>
+        <div class="who">适合：有采购流程的公司</div>
+      </div>
+      <div class="biz">
+        <h3>自带密钥</h3>
+        <p>用你自己的上游，只付 15% 网关服务费。</p>
+        <div class="who">适合：已有采购能力的大客户</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 优势 ============ -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">Why Us</span>
+      <h2>四件同行不愿做的事</h2>
+      <p>每一件都会让成本变高，也都决定了你能不能用它干正经事。</p>
+    </div>
+    <div class="adv">
+      <div class="adv-item">
+        <div class="adv-num">01</div>
+        <div>
+          <h3>两套接口，代码不用改</h3>
+          <p>OpenAI 的 SDK 和 Anthropic 的 SDK 都能直接连。Claude Code 只要两个环境变量，Cursor、LangChain 同理。</p>
+          <em>换供应商最贵的是改代码，这一步我们替你省了。</em>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">02</div>
+        <div>
+          <h3>三条供给线，不会一夜断供</h3>
+          <p>官方采购、自己部署开源模型、客户自带密钥，互为备份。一家涨价或限流，只影响一部分模型，不会整站瘫掉。</p>
+          <em>这是「敢不敢把生产环境放上来」的分界线。</em>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">03</div>
+        <div>
+          <h3>每一笔都算得清</h3>
+          <p>每次请求的响应里直接带回这次花了多少钱、走的哪个渠道。账单可以逐条核对到上游发票。</p>
+          <em>大多数同行给不了这个——因为他们自己也算不清。</em>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-num">04</div>
+        <div>
+          <h3>一个人能管一整天</h3>
+          <p>余额不足自动充值、每月自动开票、上游挂了自动切换、有人刷量自动限流，每天自动发运营简报。</p>
+          <em>日常运维压到每周看两小时报表。</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 对比 ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">Comparison</span>
+      <h2>便宜和便宜，不是一回事</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="tbl">
+        <thead>
+          <tr><th></th><th>常见中转站</th><th>ASTER</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="color:var(--dim)">价格</td><td>官方价 0.3–0.6 折</td><td>官方价 0.35–1.3 倍，按供给线分层</td></tr>
+          <tr><td style="color:var(--dim)">便宜从哪来</td><td>转卖共享会员账号</td><td>自部署 + 批量采购 + 缓存</td></tr>
+          <tr><td style="color:var(--dim)">会不会突然没</td><td>会，官方封号即断</td><td>三条线兜底，自动故障转移</td></tr>
+          <tr><td style="color:var(--dim)">能开票吗</td><td>大多不能</td><td>能，可开专票</td></tr>
+          <tr><td style="color:var(--dim)">数据去哪了</td><td>说不清</td><td>默认不存内容，可私有化</td></tr>
+          <tr><td style="color:var(--dim)">出事找谁</td><td>找不到人</td><td>有 SLA 与赔付条款</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tiny" style="margin-top:14px;color:var(--amber);text-align:center">
+      我们不卖最便宜的 token。那个位置属于号池，也活不长。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 模型与价格 ============ -->
+<section class="section" id="models">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">Models &amp; Pricing</span>
+      <h2>价格写在明面上</h2>
+      <p>价格 = 官方标价 × 汇率折算 × 分组倍率，最终价格直接展示，不用自己换算美元。</p>
+    </div>
+
+    <div class="chips" id="vendorChips"></div>
+
+    <div class="row" style="align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px">
+      <label class="tiny muted" for="groupSel">计费分组</label>
+      <select class="select" id="groupSel" style="max-width:260px"></select>
+      <span class="tiny dim" id="groupHint"></span>
+      <span style="flex:1"></span>
+      <a class="btn btn-sm" href="/register">获取 API Key</a>
+    </div>
+
+    <div class="table-wrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th style="min-width:210px">模型</th>
+            <th>上下文</th>
+            <th style="text-align:right">输入 ¥/1M</th>
+            <th style="text-align:right">输出 ¥/1M</th>
+            <th style="text-align:right">缓存读 ¥/1M</th>
+            <th>标签</th>
+          </tr>
+        </thead>
+        <tbody id="modelRows">
+          <tr><td colspan="6"><div class="loading"><div class="spinner"></div>正在加载实时价格…</div></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tiny dim" style="margin-top:12px">
+      单位：人民币元 / 百万 tokens；图片模型按张计费。实际扣费以控制台用量明细为准，调价会提前 7 天在控制台公告。
+    </p>
+    <p class="tiny" style="margin-top:10px">
+      <a href="/apis" style="color:#b9b2ff;text-decoration:underline">查看 46 家上游的 API 接入目录（Base URL / 鉴权 / 协议兼容）→</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 信任 ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">Commitments</span>
+      <h2>敢写进合同的四件事</h2>
+    </div>
+    <div class="trust-list">
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+        <div><b>零内容留存</b><span>只记 token 数和耗时，不记你的对话内容。</span></div>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+        <div><b>余额可退</b><span>未消费部分原路退回，只扣支付通道已产生的手续费。</span></div>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+        <div><b>99.95% 可用性</b><span>高可用分组承诺，未达标按当月消费 10% 补偿。</span></div>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+        <div><b>发票合规</b><span>普票 1 个工作日，专票 3 个工作日。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>常见问题</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>和直接申请官方 API 有什么区别？</summary>
+        <p>官方要海外卡、要外币结算、要自己处理网络，而且每个厂商一个后台。我们把这些收在一层里：账单和发票是人民币的，协议是统一的，出了问题只有一个地方找。</p>
+      </details>
+      <details>
+        <summary>为什么比某些站贵？</summary>
+        <p>因为那些站便宜在「共享会员账号」，官方一封号就断，余额也退不回来。我们的供给是采购和自部署，成本压不到那个程度，但能开票、能签 SLA、不会一夜消失。</p>
+      </details>
+      <details>
+        <summary>我的代码和对话会被看到吗？</summary>
+        <p>默认不记录内容，只记金额和 token 数。企业客户可以把整套部署在自己机房，数据不出域。</p>
+      </details>
+      <details>
+        <summary>余额能退吗？会过期吗？</summary>
+        <p>不会过期。未消费部分可按原路退回，只扣支付通道已经产生的手续费。企业客户也可申请后付费与月结。</p>
+      </details>
+      <details>
+        <summary>支持哪些客户端？</summary>
+        <p>兼容 OpenAI 协议的工具（LangChain、LlamaIndex、Cursor、各类桌面客户端）和兼容 Anthropic 协议的工具（Claude Code、Claude 桌面版）都能直接接入，文档里有逐项配置步骤。</p>
+      </details>
+      <details>
+        <summary>令牌分组怎么选？</summary>
+        <p>先用「标准分组」验证链路，生产按场景切换：编码场景选「编程分组」，要求稳定选「高可用分组」，已有上游密钥选 BYOK。不确定就选 Auto。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" style="border-top:0;padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>先充 20 块，跑通再谈长期</h2>
+      <p>注册送 ¥1，够你把整条链路跑一遍：建密钥、发一次请求、看一眼账单。觉得对再充值，觉得不对余额随时可退。</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary btn-lg" href="/register">创建账号</a>
+        <a class="btn btn-lg" href="/docs">阅读文档</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="/"><span class="logo-mark"></span> ASTER</a>
+        <p class="tiny" style="margin-top:14px;max-width:30ch">全球模型统一网关。为开发者提供稳定、透明、可审计的 AI 接口层。</p>
+      </div>
+      <div>
+        <h4>产品</h4>
+        <a href="#watch">60 秒看懂</a>
+        <a href="#models">模型与价格</a>
+        <a href="/apis">API 目录</a>
+        <a href="/docs">接口文档</a>
+        <a href="/status">服务状态</a>
+      </div>
+      <div>
+        <h4>开发者</h4>
+        <a href="/docs#openai">OpenAI 兼容</a>
+        <a href="/docs#anthropic">Anthropic 兼容</a>
+        <a href="/docs#claude-code">Claude Code</a>
+        <a href="/docs#errors">错误码</a>
+      </div>
+      <div>
+        <h4>公司</h4>
+        <a href="#faq">常见问题</a>
+        <a href="/console">控制台</a>
+        <a href="mailto:support@aster.dev">联系客服</a>
+        <a href="/docs#privacy">隐私政策</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> 星芒智能科技有限公司 · 保留所有权利</span>
+      <span>沪ICP备2026000000号 · 增值电信业务经营许可证（示例）</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>

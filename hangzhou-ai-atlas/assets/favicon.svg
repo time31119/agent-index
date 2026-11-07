@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0c1511"/>
+  <rect x="7" y="7" width="50" height="50" fill="none" stroke="#c94b32" stroke-width="3" transform="rotate(-3 32 32)"/>
+  <text x="32" y="44" text-anchor="middle" fill="#c94b32" font-family="Songti SC, STSong, SimSun, serif" font-size="34" font-weight="700">杭</text>
+</svg>

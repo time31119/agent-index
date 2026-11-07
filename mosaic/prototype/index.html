@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mosaic 万象 — AI App Studio</title>
+<meta name="description" content="Mosaic 把顶尖模型矩阵、真实产品设计库与原生 App 交付流水线，合成一间 AI 工作室。">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9.5 20v-6h5v6"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V5M16 20v-6M22 20H2"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c.7-4 3.8-6 7.5-6s6.8 2 7.5 6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 9a6 6 0 10-12 0c0 6-2.5 6.5-2.5 8.5h17C20.5 15.5 18 15 18 9z"/><path d="M10 21h4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8.5 7l1.4-3h4.2l1.4 3"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.4"/><path d="M21 15.5l-4.5-4.5L5 22"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><path d="M5 12h.01M12 12h.01M19 12h.01" stroke-width="2.6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h5a4 4 0 014 4v5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10.5 13.5M21 3l-6.5 18-4-8-8-4L21 3z"/></symbol>
+  <symbol id="i-paperclip" viewBox="0 0 24 24"><path d="M20 11.5l-8.5 8.5a5 5 0 01-7-7L14 4.5a3.5 3.5 0 015 5l-9 9a2 2 0 01-3-3l8-8"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+  <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.5"/><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="7" r="2.5"/><path d="M6 7.5v9M18 9.5c0 4-6 3-6 7"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><path d="M2.5 10h19"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="3"/><path d="M10.5 18.5h3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 018 0v3.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5v14z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 01-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 3c3 1.5 5 4.5 5 8l-3 3H10L7 11c0-3.5 2-6.5 5-8z"/><path d="M9 14l-3 3M15 14l3 3M12 9v4"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-8 8H8l-5 2 1.5-5A8 8 0 1121 12z"/></symbol>
+  <symbol id="i-command" viewBox="0 0 24 24"><path d="M9 6a3 3 0 10-3 3h3V6zM15 6a3 3 0 113 3h-3V6zM9 18a3 3 0 11-3-3h3v3zM15 18a3 3 0 103-3h-3v3z"/><path d="M9 6h6v12H9z"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1h5"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3"/><path d="M4 12h16"/></symbol>
+</svg>
+
+<div class="app">
+  <header class="topbar">
+    <a class="logo" href="#" data-nav="home" aria-label="Mosaic 首页">
+      <span class="logo__mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="logo__type">mosaic</span>
+    </a>
+    <button class="ws" type="button">Acme Studio <svg class="i"><use href="#i-chevron-down"/></svg></button>
+    <nav class="nav" aria-label="主导航">
+      <button class="nav__item active" data-nav="home" type="button">工作台</button>
+      <button class="nav__item" data-nav="studio" type="button">工作室</button>
+      <button class="nav__item" data-nav="library" type="button">设计库</button>
+      <button class="nav__item" data-nav="models" type="button">模型</button>
+      <button class="nav__item" data-nav="ship" type="button">发布</button>
+    </nav>
+    <div class="topbar__spacer"></div>
+    <button class="searchbtn" id="openCmdk" type="button" aria-label="打开命令面板">
+      <svg class="i"><use href="#i-search"/></svg>
+      <span>搜索项目、界面、模型</span>
+      <span class="kbd">⌘K</span>
+    </button>
+    <button class="contrast-btn" id="contrastToggle" type="button" title="切换高对比模式" aria-pressed="false">Aa</button>
+    <div class="credits" title="本月剩余算力点数"><i></i>216</div>
+    <button class="avatar" type="button" title="Lin · 个人工作区">L</button>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         HOME
+         ==================================================================== -->
+    <section class="view active" id="v-home">
+      <div class="page">
+        <div class="home-grid">
+          <div class="home-main">
+            <div class="page-head">
+              <div>
+                <div class="eyebrow">Friday · 06 Nov 2026</div>
+                <h1 class="page-title">晚上好，Lin。</h1>
+                <p class="page-sub">把想法做出来，而不是继续讨论它。今天想造点什么？</p>
+              </div>
+              <div class="head-actions">
+                <button class="btn btn--ghost" type="button" data-toast="已打开导入面板：支持截图、Figma 链接与录屏。">
+                  <svg class="i"><use href="#i-image"/></svg> 导入
+                </button>
+                <button class="btn btn--dark" type="button" data-nav="studio">
+                  <svg class="i"><use href="#i-plus"/></svg> 新建 App
+                </button>
+              </div>
+            </div>
+
+            <div class="composer">
+              <div class="composer__top"><span class="live-dot"></span> 描述你的 App · 越具体越好</div>
+              <textarea id="prompt" rows="3" placeholder="例如：做一个帮上班族坚持晨跑的习惯 App，安静克制，不要游戏化。需要登录、推送和订阅。"></textarea>
+              <div class="composer__foot">
+                <div class="composer__tools">
+                  <button class="tool" type="button" data-toast="上传截图，视觉模型会反推出组件与设计 token。">
+                    <svg class="i"><use href="#i-camera"/></svg> 截图
+                  </button>
+                  <button class="tool" type="button" data-toast="已连接 Figma：粘贴文件链接即可导入画板。">
+                    <svg class="i"><use href="#i-layers"/></svg> Figma
+                  </button>
+                  <button class="tool" type="button" data-toast="已打开模板库：12 个可运行的起点。">
+                    <svg class="i"><use href="#i-grid"/></svg> 模板
+                  </button>
+                  <span class="tool__divider"></span>
+                  <button class="model-pick" type="button" data-toast="Auto 路由：按任务选择 12 个模型中最合适的一个。">
+                    <span class="model-dots"><i></i><i></i><i></i><i></i></span>
+                    Auto · 12 模型
+                    <svg class="i"><use href="#i-chevron-down"/></svg>
+                  </button>
+                </div>
+                <button class="btn btn--accent" id="generate" type="button">
+                  生成首屏 <span class="kbd">↵</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="composer__hint">
+              <b>预计 28 credits</b>
+              <span class="sep"></span>
+              <span>约 90 秒生成 3 个可交互页面</span>
+              <span class="sep"></span>
+              <span>先生成关键页，不一次性铺满</span>
+            </div>
+
+            <div class="quick-row">
+              <button class="chip chip--lime" type="button" data-toast="已选择「习惯追踪」起点，包含今日页、统计与设置。">
+                <svg class="i"><use href="#i-sparkle"/></svg> 从真实产品模式起步
+              </button>
+              <button class="chip" type="button" data-toast="已切换到中文文案与 Qwen4 本地化路由。">中文优先</button>
+              <button class="chip" type="button" data-toast="已开启设计对照：生成后会与 3 个同品类参考比较。">设计对照</button>
+              <button class="chip" type="button" data-toast="已开启成本上限：单项目每月不超过 600 credits。">预算 600</button>
+            </div>
+
+            <section class="section">
+              <div class="section-head">
+                <h2>继续构建</h2>
+                <button class="link" type="button" data-nav="studio">查看全部 <svg class="i"><use href="#i-arrow-right"/></svg></button>
+              </div>
+              <div class="apps">
+                <article class="app-card" data-nav="studio">
+                  <div class="app-card__preview">
+                    <span class="app-card__badge"><i></i> 已上架</span>
+                    <div class="mini mini--back" data-ms="stats:sand"></div>
+                    <div class="mini mini--front" data-ms="home:sand"></div>
+                  </div>
+                  <div class="app-card__meta">
+                    <div class="app-icon">R</div>
+                    <div><h3>Ritual</h3><p>习惯追踪 · 12 个页面</p></div>
+                    <span class="app-card__time">2 分钟前</span>
+                  </div>
+                </article>
+
+                <article class="app-card" data-nav="studio">
+                  <div class="app-card__preview">
+                    <span class="app-card__badge app-card__badge--draft"><i></i> 草稿</span>
+                    <div class="mini mini--back" data-ms="stats:blue"></div>
+                    <div class="mini mini--front" data-ms="checkout:blue"></div>
+                  </div>
+                  <div class="app-card__meta">
+                    <div class="app-icon app-icon--blue">L</div>
+                    <div><h3>Ledger</h3><p>极简记账 · 8 个页面</p></div>
+                    <span class="app-card__time">昨天</span>
+                  </div>
+                </article>
+
+                <article class="app-card" data-nav="studio">
+                  <div class="app-card__preview">
+                    <span class="app-card__badge app-card__badge--build"><i></i> 构建中</span>
+                    <div class="mini mini--back" data-ms="reader:coral"></div>
+                    <div class="mini mini--front" data-ms="map:coral"></div>
+                  </div>
+                  <div class="app-card__meta">
+                    <div class="app-icon app-icon--coral">M</div>
+                    <div><h3>Morrow</h3><p>旅行日记 · 15 个页面</p></div>
+                    <span class="app-card__time">11月3日</span>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <h2>从一个起点开始</h2>
+                <span class="aside">可运行的模板，不是静态稿</span>
+              </div>
+              <div class="templates">
+                <button class="template" type="button" data-nav="studio">
+                  <span class="template__icon template__icon--lime"><svg class="i"><use href="#i-target"/></svg></span>
+                  <span class="template__body"><b>习惯追踪</b><span>21 页 · 含推送与订阅</span></span>
+                  <svg class="i"><use href="#i-arrow-right"/></svg>
+                </button>
+                <button class="template" type="button" data-nav="studio">
+                  <span class="template__icon template__icon--blue"><svg class="i"><use href="#i-card"/></svg></span>
+                  <span class="template__body"><b>订阅付费</b><span>8 页 · RevenueCat</span></span>
+                  <svg class="i"><use href="#i-arrow-right"/></svg>
+                </button>
+                <button class="template" type="button" data-nav="studio">
+                  <span class="template__icon template__icon--violet"><svg class="i"><use href="#i-message"/></svg></span>
+                  <span class="template__body"><b>AI 对话</b><span>12 页 · 流式与历史</span></span>
+                  <svg class="i"><use href="#i-arrow-right"/></svg>
+                </button>
+                <button class="template" type="button" data-nav="studio">
+                  <span class="template__icon template__icon--coral"><svg class="i"><use href="#i-globe"/></svg></span>
+                  <span class="template__body"><b>同城二手</b><span>18 页 · IM 与担保支付</span></span>
+                  <svg class="i"><use href="#i-arrow-right"/></svg>
+                </button>
+              </div>
+            </section>
+          </div>
+
+          <aside class="home-rail">
+            <div class="rail-card">
+              <div class="rail-card__head">
+                <h3>Agent 动态</h3>
+                <svg class="i"><use href="#i-flow"/></svg>
+              </div>
+              <div class="feed">
+                <div class="feed__item">
+                  <div class="feed__dot feed__dot--lime">D</div>
+                  <div class="feed__text"><b>Designer</b> 从 128 个参考中选了 3 个今日页方向<span class="feed__time">2 分钟前</span></div>
+                </div>
+                <div class="feed__item">
+                  <div class="feed__dot feed__dot--blue">E</div>
+                  <div class="feed__text"><b>Engineer</b> 修复了 3 个 TypeScript 错误，构建通过<span class="feed__time">18 分钟前</span></div>
+                </div>
+                <div class="feed__item">
+                  <div class="feed__dot feed__dot--coral">Q</div>
+                  <div class="feed__text"><b>QA</b> 在 iPhone 17 上通过 12 条用例<span class="feed__time">1 小时前</span></div>
+                </div>
+                <div class="feed__item">
+                  <div class="feed__dot">S</div>
+                  <div class="feed__text"><b>Scout</b> 发现 4 个新的付费墙模式，已加入项目参考<span class="feed__time">今天 09:20</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rail-card">
+              <div class="rail-card__head">
+                <h3>本月用量</h3>
+                <svg class="i"><use href="#i-chart"/></svg>
+              </div>
+              <div class="usage__top">
+                <div class="usage__num">1,284 <span>/ 1,500</span></div>
+                <div class="usage__pct">86%</div>
+              </div>
+              <div class="meter meter--lime"><i style="width:86%"></i></div>
+              <div class="usage__rows">
+                <div class="usage__row"><span>模型调用</span><b>$9.40</b></div>
+                <div class="usage__row"><span>构建与分发</span><b>$2.10</b></div>
+                <div class="usage__row"><span>图像生成</span><b>$1.34</b></div>
+              </div>
+              <div class="rail-note">自动路由本月为你节省约 $21.40，对比全部使用旗舰模型。</div>
+            </div>
+
+            <div class="rail-card">
+              <div class="rail-card__head">
+                <h3>设计雷达</h3>
+                <svg class="i"><use href="#i-sparkle"/></svg>
+              </div>
+              <div class="radar">
+                <div class="radar__item" data-nav="library">
+                  <div class="radar__thumb" data-ms="onboard:violet"></div>
+                  <div class="radar__text">Onboarding 正从「多屏介绍」转向「单屏价值主张」<span>健康 · 42 个样本</span></div>
+                </div>
+                <div class="radar__item" data-nav="library">
+                  <div class="radar__thumb" data-ms="paywall:ink"></div>
+                  <div class="radar__text">年付默认选中 + 7 天试用，仍是订阅页主流<span>效率 · 67 个样本</span></div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         STUDIO
+         ==================================================================== -->
+    <section class="view view--studio" id="v-studio">
+      <div class="studio">
+        <aside class="panel panel--left">
+          <div class="proj">
+            <div class="proj__icon">R</div>
+            <div class="proj__meta">
+              <strong>Ritual</strong>
+              <span>iOS · 私有项目</span>
+            </div>
+            <button class="icon-btn" type="button" data-toast="项目菜单：重命名、复制、导出、归档。"><svg class="i"><use href="#i-more"/></svg></button>
+          </div>
+          <div class="branch">
+            <svg class="i"><use href="#i-branch"/></svg> main
+            <span class="branch__save">已自动保存</span>
+          </div>
+
+          <div class="seg" id="leftTabs">
+            <button class="seg__item active" type="button" data-ltab="screens">页面</button>
+            <button class="seg__item" type="button" data-ltab="flows">流程</button>
+            <button class="seg__item" type="button" data-ltab="graph">图谱</button>
+          </div>
+
+          <div class="left-scroll">
+            <div data-lpane="screens">
+              <div class="screen-row" data-toast="已切换到「启动」。">
+                <div class="thumb"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screen-row__body"><span class="screen-row__name">启动</span><span class="screen-row__route">/launch</span></div>
+                <span class="screen-row__more"><svg class="i"><use href="#i-more"/></svg></span>
+              </div>
+              <div class="screen-row active" data-toast="已切换到「今日」。">
+                <div class="thumb"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screen-row__body"><span class="screen-row__name">今日</span><span class="screen-row__route">/today</span></div>
+                <span class="screen-row__more"><svg class="i"><use href="#i-more"/></svg></span>
+              </div>
+              <div class="screen-row" data-toast="已切换到「习惯详情」。">
+                <div class="thumb"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screen-row__body"><span class="screen-row__name">习惯详情</span><span class="screen-row__route">/habit/:id</span></div>
+                <span class="screen-row__more"><svg class="i"><use href="#i-more"/></svg></span>
+              </div>
+              <div class="screen-row" data-toast="已切换到「统计」。">
+                <div class="thumb"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screen-row__body"><span class="screen-row__name">统计</span><span class="screen-row__route">/stats</span></div>
+                <span class="screen-row__more"><svg class="i"><use href="#i-more"/></svg></span>
+              </div>
+              <div class="screen-row" data-toast="已切换到「设置」。">
+                <div class="thumb"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="screen-row__body"><span class="screen-row__name">设置</span><span class="screen-row__route">/settings</span></div>
+                <span class="screen-row__more"><svg class="i"><use href="#i-more"/></svg></span>
+              </div>
+              <button class="left-add" type="button" data-toast="描述新页面，Designer 会先给 3 个参考方向。">
+                <svg class="i"><use href="#i-plus"/></svg> 新建页面
+              </button>
+            </div>
+
+            <div data-lpane="flows" hidden>
+              <div class="flow-list">
+                <div class="flow-card">
+                  <b>Onboarding → First value</b>
+                  <span>6 步 · 已生成 4 步</span>
+                  <div class="flow-steps"><i class="on"></i><em></em><i class="on"></i><em></em><i class="on"></i><em></em><i class="on"></i><em></em><i></i><em></em><i></i></div>
+                </div>
+                <div class="flow-card">
+                  <b>Paywall → Subscribe</b>
+                  <span>5 步 · 参考 12 个产品</span>
+                  <div class="flow-steps"><i class="on"></i><em></em><i class="on"></i><em></em><i></i><em></em><i></i><em></em><i></i></div>
+                </div>
+                <div class="flow-card">
+                  <b>Habit → Reminder</b>
+                  <span>3 步 · 未开始</span>
+                  <div class="flow-steps"><i></i><em></em><i></i><em></em><i></i></div>
+                </div>
+                <button class="left-add" type="button" data-toast="选择一个流程，系统会先补全失败态与空状态。">
+                  <svg class="i"><use href="#i-plus"/></svg> 补全一个流程
+                </button>
+              </div>
+            </div>
+
+            <div data-lpane="graph" hidden>
+              <div class="graph-list">
+                <div class="graph-node"><i></i> users <span>12 字段</span></div>
+                <div class="graph-node"><i></i> habits <span>9 字段</span></div>
+                <div class="graph-node"><i></i> check_ins <span>6 字段</span></div>
+                <div class="graph-node"><i></i> subscriptions <span>8 字段</span></div>
+                <div class="graph-node graph-node--api"><i></i> POST /check-in <span>API</span></div>
+                <div class="graph-node graph-node--api"><i></i> GET /insights <span>API</span></div>
+                <div class="graph-node graph-node--auth"><i></i> Sign in with Apple <span>AUTH</span></div>
+                <div class="graph-node graph-node--push"><i></i> 每日提醒 <span>PUSH</span></div>
+              </div>
+              <button class="left-add" type="button" data-toast="App Graph 是单一事实源：界面、接口、数据都从这里派生。">
+                <svg class="i"><use href="#i-eye"/></svg> 打开完整图谱
+              </button>
+            </div>
+          </div>
+
+          <div class="left-foot">
+            <div class="graph-stat"><span>数据表</span><b>4</b></div>
+            <div class="graph-stat"><span>接口</span><b>7</b></div>
+            <div class="graph-stat"><span>代码</span><b>2.4k</b></div>
+          </div>
+        </aside>
+
+        <div class="canvas">
+          <div class="canvas-bar">
+            <div class="canvas-bar__group">
+              <button class="cbtn" type="button" data-toast="设备切换：iPhone 17 Pro / iPhone SE / Pixel 10。">
+                <svg class="i"><use href="#i-phone"/></svg> iPhone 17 Pro
+                <svg class="i"><use href="#i-chevron-down"/></svg>
+              </button>
+              <button class="cbtn" type="button" data-toast="缩放已重置为 100%。">100%</button>
+            </div>
+            <div class="canvas-title"><b>今日</b><span>·</span><span>Home</span><span>·</span><span>已保存</span></div>
+            <div class="canvas-bar__group">
+              <button class="cbtn" type="button" data-toast="真机预览：用 Expo Go 扫码，或推送到 TestFlight。">
+                <svg class="i"><use href="#i-play"/></svg> 预览
+              </button>
+              <button class="cbtn" type="button" data-toast="分享链接已复制（仅团队成员可访问）。">
+                <svg class="i"><use href="#i-share"/></svg>
+              </button>
+              <button class="cbtn cbtn--accent" type="button" data-nav="ship">
+                <svg class="i"><use href="#i-rocket"/></svg> 构建
+              </button>
+            </div>
+          </div>
+
+          <div class="canvas-stage">
+            <div class="phone-wrap">
+              <div class="phone">
+                <div class="phone__screen">
+                  <div class="island"></div>
+                  <div class="app-ui">
+                    <div class="statusbar">
+                      <span>9:41</span>
+                      <div class="statusbar__icons"><i></i><i></i><i></i><span class="statusbar__battery"></span></div>
+                    </div>
+
+                    <div class="app-scroll">
+                      <div class="app-top">
+                        <div>
+                          <div class="app-date">11月6日 · 周五</div>
+                          <h2>早上好，Lin</h2>
+                        </div>
+                        <div class="app-avatar">L</div>
+                      </div>
+
+                      <div class="streak">✦ 连续 <b>12</b> 天</div>
+
+                      <div class="progress-card sel">
+                        <div>
+                          <div class="pc__label">今日完成度</div>
+                          <div class="pc__big">3<span>/5</span></div>
+                          <div class="pc__sub">再完成 2 项，保持连胜</div>
+                        </div>
+                        <div class="ring">
+                          <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <circle cx="32" cy="32" r="27" stroke="#2f2f29" stroke-width="5" fill="none"/>
+                            <circle cx="32" cy="32" r="27" stroke="#d5f23f" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="67.8"/>
+                          </svg>
+                          <div class="ring__txt">60%</div>
+                        </div>
+                        <div class="sel-label">ProgressRing · 24 变体</div>
+                        <div class="sel-tools"><span>✎</span><span>⧉</span><span>⋯</span></div>
+                      </div>
+
+                      <div class="list-head"><span>今日习惯</span><button type="button" data-toast="进入编辑模式：拖拽排序、批量修改提醒。">编辑</button></div>
+
+                      <div class="habits">
+                        <div class="habit habit--done">
+                          <div class="habit__icon"><svg class="i"><use href="#i-zap"/></svg></div>
+                          <div class="habit__body"><div class="habit__title">晨跑 5 公里</div><div class="habit__sub">07:30 · 已连续 12 天</div></div>
+                          <div class="habit__check done"><svg class="i"><use href="#i-check"/></svg></div>
+                        </div>
+                        <div class="habit habit--done">
+                          <div class="habit__icon"><svg class="i"><use href="#i-book"/></svg></div>
+                          <div class="habit__body"><div class="habit__title">阅读 30 分钟</div><div class="habit__sub">已完成 · 《禅与摩托车维修艺术》</div></div>
+                          <div class="habit__check done"><svg class="i"><use href="#i-check"/></svg></div>
+                        </div>
+                        <div class="habit">
+                          <div class="habit__icon"><svg class="i"><use href="#i-target"/></svg></div>
+                          <div class="habit__body"><div class="habit__title">冥想 10 分钟</div><div class="habit__sub">睡前 · 建议 22:30</div></div>
+                          <div class="habit__check"><svg class="i"><use href="#i-check"/></svg></div>
+                        </div>
+                        <div class="habit">
+                          <div class="habit__icon"><svg class="i"><use href="#i-droplet"/></svg></div>
+                          <div class="habit__body"><div class="habit__title">喝水 8 杯</div><div class="habit__sub">5 / 8 杯 · 还差 3 杯</div></div>
+                          <div class="habit__bar"><i style="width:62%"></i></div>
+                          <div class="habit__check"><svg class="i"><use href="#i-check"/></svg></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tabbar">
+                      <button class="on" type="button"><svg class="i"><use href="#i-home"/></svg>今日</button>
+                      <button type="button"><svg class="i"><use href="#i-chart"/></svg>统计</button>
+                      <button type="button"><svg class="i"><use href="#i-compass"/></svg>探索</button>
+                      <button type="button"><svg class="i"><use href="#i-user"/></svg>我的</button>
+                    </div>
+                    <div class="home-indicator"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-caption">
+                <b>今日</b><span class="dot"></span><span>iPhone 17 Pro</span><span class="dot"></span><span>390 × 844</span><span class="dot"></span><span>已同步</span>
+              </div>
+            </div>
+
+            <div class="stage-side">
+              <button type="button" title="对比模式" data-toast="对比模式：并排查看 3 个设计方向。"><svg class="i"><use href="#i-grid"/></svg></button>
+              <button type="button" title="设计检查" data-toast="Design Lint：0 个严重问题，2 个建议。"><svg class="i"><use href="#i-scan"/></svg></button>
+              <button type="button" title="代码" data-toast="代码视图：Expo Router + TypeScript，2,418 行。"><svg class="i"><use href="#i-code"/></svg></button>
+            </div>
+
+            <div class="stage-label"><i></i> Live preview</div>
+          </div>
+
+          <div class="filmstrip">
+            <div class="film" data-toast="启动页">
+              <div class="mini" data-ms="onboard:sand"></div><span>启动</span>
+            </div>
+            <div class="film on" data-toast="今日页">
+              <div class="mini" data-ms="home:sand"></div><span>今日</span>
+            </div>
+            <div class="film" data-toast="习惯详情">
+              <div class="mini" data-ms="reader:sand"></div><span>详情</span>
+            </div>
+            <div class="film" data-toast="统计">
+              <div class="mini" data-ms="stats:sand"></div><span>统计</span>
+            </div>
+            <div class="film" data-toast="设置">
+              <div class="mini" data-ms="profile:sand"></div><span>设置</span>
+            </div>
+            <div class="film__more">
+              <div class="add"><svg class="i"><use href="#i-plus"/></svg></div>
+              <span>7 页</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel panel--right">
+          <div class="agent-head">
+            <div class="agent-avatar">D</div>
+            <div class="agent-head__meta">
+              <b>Designer <span class="agent-live"><i></i> 工作中</span></b>
+              <span>Claude Opus 5.5 · 设计模式上下文</span>
+            </div>
+            <button class="icon-btn" type="button" data-toast="Agent 设置：模型、参考库范围、自主程度。"><svg class="i"><use href="#i-sliders"/></svg></button>
+          </div>
+
+          <div class="seg seg--right" id="rightTabs">
+            <button class="seg__item active" type="button" data-rtab="chat">对话</button>
+            <button class="seg__item" type="button" data-rtab="inspect">检查器</button>
+          </div>
+
+          <div class="chat" data-rpane="chat">
+            <div class="msg">
+              <div class="msg__avatar"></div>
+              <div class="msg__body">
+                <p>我先看了 <b>128 个习惯类界面</b>。今日页用「大数字 + 环形进度」比卡片列表更聚焦，参考了这 3 个方向：</p>
+                <div class="refs">
+                  <div class="ref" data-ref="0">
+                    <div class="ref__thumb" data-ms="home:sand"></div>
+                    <div class="ref__name">Streaks <span>Home</span></div>
+                  </div>
+                  <div class="ref" data-ref="1">
+                    <div class="ref__thumb" data-ms="home:lime"></div>
+                    <div class="ref__name">Finch <span>Today</span></div>
+                  </div>
+                  <div class="ref" data-ref="2">
+                    <div class="ref__thumb" data-ms="stats:ink"></div>
+                    <div class="ref__name">Habitify <span>Stats</span></div>
+                  </div>
+                </div>
+                <div class="msg__meta"><svg class="i"><use href="#i-book"/></svg> 来自 Mobbin 设计库 · 128 个匹配</div>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="msg__avatar"></div>
+              <div class="msg__body">
+                <p>已更新今日页：进度卡改成深色，和纸感背景拉开层次；保留了 4 个习惯，避免首屏过密。</p>
+                <p>还做了一个更安静的版本，去掉了连续天数的火焰符号。要切换看看吗？</p>
+              </div>
+            </div>
+
+            <div class="msg msg--user">
+              <div class="msg__body">把进度卡改成浅色试试，和整体更统一。别动排版。</div>
+            </div>
+
+            <div class="msg">
+              <div class="msg__avatar"></div>
+              <div class="msg__body">
+                <p>正在生成 2 个浅色变体，保留现有排版与间距。</p>
+                <div class="typing"><i></i><i></i><i></i> <span style="margin-left:4px">约 6 秒</span></div>
+              </div>
+            </div>
+
+            <div class="dna">
+              <div class="dna__head">
+                <b>Design DNA · 已锁定</b>
+                <span>FROM 3 REFS</span>
+              </div>
+              <div class="dna__swatches">
+                <span class="dna__sw" style="background:#f4f1e8"><i>F4F1E8</i></span>
+                <span class="dna__sw" style="background:#171714"><i>171714</i></span>
+                <span class="dna__sw" style="background:#d5f23f"><i>D5F23F</i></span>
+                <span class="dna__sw" style="background:#e9e4d3"><i>E9E4D3</i></span>
+              </div>
+              <div class="dna__rows">
+                <div class="dna__row"><span>Display</span><b>Inter 28/-4%</b></div>
+                <div class="dna__row"><span>Radius</span><b>20 / 14</b></div>
+                <div class="dna__row"><span>Density</span><b>Airy</b></div>
+                <div class="dna__row"><span>Motion</span><b>Spring 220ms</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="inspector" data-rpane="inspect" hidden>
+            <div class="inspector__group">
+              <div class="inspector__label">Selection</div>
+              <div class="inspector__row"><span>组件</span><b>ProgressRing</b></div>
+              <div class="inspector__row"><span>实例</span><b>Today / Card 01</b></div>
+              <div class="inspector__row"><span>变体</span><b>24</b></div>
+            </div>
+            <div class="inspector__group">
+              <div class="inspector__label">Layout</div>
+              <div class="inspector__row"><span>Padding</span><b>16px</b></div>
+              <div class="inspector__row"><span>Radius</span><b>20px</b></div>
+              <div class="inspector__row"><span>Height</span><b>108px</b></div>
+              <div class="inspector__row"><span>Grid</span><b>4 cols / 16</b></div>
+            </div>
+            <div class="inspector__group">
+              <div class="inspector__label">Color</div>
+              <div class="swatches">
+                <i style="background:#171714"></i><i style="background:#f4f1e8"></i><i style="background:#d5f23f"></i><i style="background:#2f2f29"></i>
+              </div>
+            </div>
+            <div class="inspector__group">
+              <div class="inspector__label">Motion</div>
+              <div class="inspector__row"><span>Enter</span><b>spring .82 / 24</b></div>
+              <div class="inspector__row"><span>Press</span><b>scale .97</b></div>
+            </div>
+            <div class="inspector__group">
+              <div class="inspector__label">Code</div>
+              <div class="code"><span class="c">// components/progress-ring.tsx</span><br><span class="k">export function</span> <span class="s">ProgressRing</span>({ value }) {<br>&nbsp;&nbsp;<span class="k">const</span> r = 27;<br>&nbsp;&nbsp;<span class="k">return</span> &lt;Svg&gt;...&lt;/Svg&gt;;<br>}</div>
+            </div>
+          </div>
+
+          <div class="agent-compose">
+            <div class="suggest">
+              <button type="button" data-toast="已插入：把进度卡改成浅色，保留排版。">改成浅色</button>
+              <button type="button" data-toast="已插入：给这个页面加一个空状态。">加空状态</button>
+              <button type="button" data-toast="已插入：对照 3 个参考做一次设计检查。">对照参考</button>
+            </div>
+            <div class="agent-input">
+              <textarea id="agentPrompt" rows="2" placeholder="继续描述，或 @ 引用界面、组件、代码…"></textarea>
+              <div class="agent-input__foot">
+                <div class="agent-input__tools">
+                  <button type="button" title="引用"><svg class="i"><use href="#i-paperclip"/></svg></button>
+                  <button type="button" title="截图"><svg class="i"><use href="#i-camera"/></svg></button>
+                  <button type="button" title="模型"><svg class="i"><use href="#i-sparkle"/></svg></button>
+                </div>
+                <div class="agent-model"><i></i> Opus 5.5 · Auto</div>
+                <button class="agent-send" id="agentSend" type="button" title="发送"><svg class="i"><use href="#i-arrow-right"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="studio-status">
+        <span>已自动保存 · 12 秒前</span>
+        <span class="live"><i></i> 3 个 Agent 工作中</span>
+        <span>本次会话 <b>$0.42</b></span>
+        <span>模型 <b>Opus 5.5 + V4.1</b></span>
+        <span class="grow"></span>
+        <span>分支 <b>main</b></span>
+        <span>⌘K 命令</span>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         LIBRARY
+         ==================================================================== -->
+    <section class="view" id="v-library">
+      <div class="lib-page">
+        <div class="lib-head">
+          <div>
+            <div class="eyebrow">Design Intelligence · Powered by Mobbin</div>
+            <h1 class="lib-title">设计库 <em>—</em> 真实产品，<br>直接变成你的界面。</h1>
+            <p class="lib-sub">不是灵感墙。每个界面都被拆成布局、组件与 token，生成时作为硬约束。</p>
+          </div>
+          <div class="lib-head__meta">
+            <span>612,480 个界面</span><span class="dot"></span><span>4,200 个产品</span><span class="dot"></span><span>每日更新</span>
+          </div>
+        </div>
+
+        <div class="lib-search">
+          <svg class="i"><use href="#i-search"/></svg>
+          <input id="libSearch" type="text" placeholder="试试「订阅付费墙」「运动 App 首页」「空状态插画」…" aria-label="搜索设计库">
+          <div class="lib-search__hint"><span class="kbd">⌘K</span> 搜索</div>
+        </div>
+
+        <div class="filters">
+          <span class="filters__label">Filter</span>
+          <button class="chip active" type="button" data-filter="all">全部</button>
+          <button class="chip" type="button" data-filter="ios">iOS</button>
+          <button class="chip" type="button" data-filter="android">Android</button>
+          <button class="chip" type="button" data-filter="web">Web</button>
+          <span style="width:1px;height:14px;background:var(--line);margin:0 4px"></span>
+          <button class="chip" type="button" data-filter="onboard">引导</button>
+          <button class="chip" type="button" data-filter="paywall">付费墙</button>
+          <button class="chip" type="button" data-filter="home">首页</button>
+          <button class="chip" type="button" data-filter="checkout">支付</button>
+          <button class="chip" type="button" data-filter="stats">数据</button>
+          <div class="filters__spacer"></div>
+          <button class="filter-select" type="button" data-toast="更多筛选：颜色、年份、地区、信息密度。">
+            <svg class="i"><use href="#i-filter"/></svg> 更多筛选
+          </button>
+          <button class="filter-select" type="button" data-toast="已按「最近更新」排序。">
+            <svg class="i"><use href="#i-clock"/></svg> 最近更新
+          </button>
+        </div>
+
+        <div class="lib-grid" id="libGrid"></div>
+
+        <div class="lib-more">
+          <button class="btn btn--ghost" type="button" data-toast="已加载下一页：再 30 个界面。">加载更多 · 还有 612,456 个</button>
+        </div>
+        <p class="lib-footnote">所有界面均来自真实上架产品，仅用于模式检索与设计参考；原图不进入你的成品。</p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MODELS
+         ==================================================================== -->
+    <section class="view" id="v-models">
+      <div class="models-page">
+        <div class="model-head">
+          <div>
+            <div class="eyebrow">Model Mesh · 2026.11</div>
+            <h1 class="page-title">每个任务，<br>交给最合适的大脑。</h1>
+            <p class="page-sub">12 个模型，按任务路由。你不必选择，但随时可以接管。</p>
+          </div>
+          <button class="switch" id="autoRoute" type="button" aria-pressed="true">
+            <span class="switch__track"></span> 自动路由 <b>开启</b>
+          </button>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="stat__label">本月模型花费</div>
+            <div class="stat__value">$12.84</div>
+            <div class="stat__delta"><svg class="i"><use href="#i-arrow-up-right"/></svg> 比全旗舰方案省 62%</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">调用次数</div>
+            <div class="stat__value">18,240</div>
+            <div class="stat__delta stat__delta--muted">约 61% 命中前缀缓存</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">一次构建通过率</div>
+            <div class="stat__value">91.4<small>%</small></div>
+            <div class="stat__delta"><svg class="i"><use href="#i-arrow-up-right"/></svg> 较上月 +4.2</div>
+          </div>
+          <div class="stat">
+            <div class="stat__label">P95 首屏时间</div>
+            <div class="stat__value">74<small>s</small></div>
+            <div class="stat__delta stat__delta--muted">目标 &lt; 90s</div>
+          </div>
+        </div>
+
+        <div class="models-grid">
+          <div class="card">
+            <div class="card__head">
+              <h3>任务路由表</h3>
+              <span>8 条策略 · 自动更新</span>
+            </div>
+            <table class="table">
+              <thead>
+                <tr><th>任务</th><th>主模型</th><th>备用</th><th>策略</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="task">产品规划 / 信息架构</td>
+                  <td><span class="model-chip"><i style="background:#d97757"></i>Claude Opus 5.5</span></td>
+                  <td><span class="model-chip model-chip--muted"><i style="background:#4285f4"></i>Gemini 4</span></td>
+                  <td><span class="policy policy--quality">质量优先</span></td>
+                </tr>
+                <tr>
+                  <td class="task">首屏与关键页面</td>
+                  <td><span class="model-chip"><i style="background:#d97757"></i>Claude Fable 5</span></td>
+                  <td><span class="model-chip model-chip--muted"><i style="background:#d97757"></i>Opus 5.5</span></td>
+                  <td><span class="policy policy--quality">质量优先</span></td>
+                </tr>
+                <tr>
+                  <td class="task">高频组件微调</td>
+                  <td><span class="model-chip"><i style="background:#4d6bfe"></i>DeepSeek V4.1 Flash</span></td>
+                  <td><span class="model-chip model-chip--muted"><i style="background:#4285f4"></i>Gemini 3.5 Flash</span></td>
+                  <td><span class="policy policy--cost">成本优先</span></td>
+                </tr>
+                <tr>
+                  <td class="task">截图转代码</td>
+                  <td><span class="model-chip"><i style="background:#4285f4"></i>Gemini 4</span></td>
+                  <td><span class="model-chip model-chip--muted"><i style="background:#10a37f"></i>GPT-6.1 Sol</span></td>
+                  <td><span class="policy policy--quality">质量优先</span></td>
+                </tr>
+                <tr>
+                  <td class="task">设计评审</td>
+                  <td><span class="model-chip"><i style="background:#111110"></i>3 模型投票</span></td>
+                  <td><span class="model-chip model-chip--muted">—</span></td>
+                  <td><span class="policy policy--consensus">共识</span></td>
+                </tr>
+                <tr>
+                  <td class="task">测试生成与修复</td>
+                  <td><span class="model-chip"><i style="background:#10a37f"></i>GPT-6.1 Sol</span></td>
+                  <td><span class="model-chip model-chip--muted"><i style="background:#4d6bfe"></i>DeepSeek V4.1</span></td>
+                  <td><span class="policy">平衡</span></td>
+                </tr>
+                <tr>
+                  <td class="task">中文文案 / 本地化</td>
+                  <td><span class="model-chip"><i style="background:#615ced"></i>Qwen4 Plus</span></td>
+                  <td><span class="model-chip model-chip--muted"><i style="background:#4d6bfe"></i>DeepSeek V4.1</span></td>
+                  <td><span class="policy policy--cost">成本优先</span></td>
+                </tr>
+                <tr>
+                  <td class="task">图标 / 商店素材</td>
+                  <td><span class="model-chip"><i style="background:#10a37f"></i>GPT Image 2.5</span></td>
+                  <td><span class="model-chip model-chip--muted"><i style="background:#4285f4"></i>Nano Banana 2.1</span></td>
+                  <td><span class="policy">平衡</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="card usage-card">
+              <h3>成本构成</h3>
+              <p class="sub">2026 年 11 月 · 全部项目</p>
+              <div class="money"><b>$12.84</b><span>/ 1,284 credits</span></div>
+              <div class="stack-bar">
+                <i style="width:44%;background:#d97757"></i>
+                <i style="width:23%;background:#4d6bfe"></i>
+                <i style="width:16%;background:#10a37f"></i>
+                <i style="width:10%;background:#4285f4"></i>
+                <i style="width:7%;background:#d5f23f"></i>
+              </div>
+              <div class="legend">
+                <div class="legend__row"><i style="background:#d97757"></i>Claude Fable 5 / Opus <b>$5.64</b></div>
+                <div class="legend__row"><i style="background:#4d6bfe"></i>DeepSeek V4.1 <b>$2.95</b></div>
+                <div class="legend__row"><i style="background:#10a37f"></i>GPT-6.1 Sol <b>$2.05</b></div>
+                <div class="legend__row"><i style="background:#4285f4"></i>Gemini 4 <b>$1.28</b></div>
+                <div class="legend__row"><i style="background:#d5f23f"></i>图像生成 <b>$0.92</b></div>
+              </div>
+              <div class="saving">
+                <b>本月节省 $21.40</b>
+                <span>通过任务路由、前缀缓存与批量调用，对比全部使用旗舰模型。</span>
+              </div>
+            </div>
+
+            <div class="card" style="padding:14px 15px">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:9px">
+                <h3 style="margin:0;font-size:12px;font-weight:600">质量阈值</h3>
+                <span class="mono" style="font-size:8px;color:var(--muted-2)">QUALITY FLOOR</span>
+              </div>
+              <div class="meter"><i style="width:88%"></i></div>
+              <div style="display:flex;justify-content:space-between;margin-top:7px;font-size:9.5px;color:var(--muted)">
+                <span>省钱</span><span>平衡 · 88</span><span>最好</span>
+              </div>
+              <p style="margin:10px 0 0;font-size:9.5px;line-height:1.55;color:var(--muted-2)">低于阈值的模型不会进入候选，即使它更便宜。阈值可按项目调整。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head" style="margin-top:28px">
+          <h2>已接入的模型</h2>
+          <span class="aside">8 家供应商 · 12 个模型</span>
+        </div>
+
+        <div class="model-cards">
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#d97757">A</span>
+              <div class="model-card__title"><b>Claude Opus 5.5</b><span>Anthropic</span></div>
+              <span class="model-card__badge model-card__badge--on">主用</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>98</b></div><div><span>延迟</span><b>2.1s</b></div><div><span>成本</span><b>$4/$20</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:92%"></i></div>
+            <div class="model-card__foot"><span>会话占比 31%</span><span>规划 / 架构</span></div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#d97757">F</span>
+              <div class="model-card__title"><b>Claude Fable 5</b><span>Anthropic</span></div>
+              <span class="model-card__badge model-card__badge--on">困难档</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>99</b></div><div><span>延迟</span><b>4.8s</b></div><div><span>成本</span><b>$10/$50</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:74%"></i></div>
+            <div class="model-card__foot"><span>会话占比 18%</span><span>首屏 / 重构</span></div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#10a37f">S</span>
+              <div class="model-card__title"><b>GPT-6.1 Sol</b><span>OpenAI</span></div>
+              <span class="model-card__badge">平衡</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>94</b></div><div><span>延迟</span><b>1.4s</b></div><div><span>成本</span><b>$2/$10</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:76%"></i></div>
+            <div class="model-card__foot"><span>会话占比 21%</span><span>工具 / 测试</span></div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#4285f4">G</span>
+              <div class="model-card__title"><b>Gemini 4</b><span>Google</span></div>
+              <span class="model-card__badge">视觉</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>96</b></div><div><span>延迟</span><b>1.8s</b></div><div><span>成本</span><b>$4/$20</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:81%"></i></div>
+            <div class="model-card__foot"><span>会话占比 12%</span><span>截图 / 设计</span></div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#4d6bfe">D</span>
+              <div class="model-card__title"><b>DeepSeek V4.1 Flash</b><span>DeepSeek</span></div>
+              <span class="model-card__badge model-card__badge--on">高性价比</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>88</b></div><div><span>延迟</span><b>0.9s</b></div><div><span>成本</span><b>$0.27/$1.1</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:68%"></i></div>
+            <div class="model-card__foot"><span>会话占比 9%</span><span>高频微调</span></div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#7c5cfc">K</span>
+              <div class="model-card__title"><b>Kimi K2.7 Code</b><span>Moonshot</span></div>
+              <span class="model-card__badge">备选</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>86</b></div><div><span>延迟</span><b>1.6s</b></div><div><span>成本</span><b>开源</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:54%"></i></div>
+            <div class="model-card__foot"><span>会话占比 3%</span><span>中文代码</span></div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#615ced">Q</span>
+              <div class="model-card__title"><b>Qwen4 Plus</b><span>Alibaba</span></div>
+              <span class="model-card__badge">中文</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>84</b></div><div><span>延迟</span><b>1.1s</b></div><div><span>成本</span><b>国内合规</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:46%"></i></div>
+            <div class="model-card__foot"><span>会话占比 4%</span><span>文案 / 本地化</span></div>
+          </div>
+
+          <div class="model-card">
+            <div class="model-card__head">
+              <span class="model-logo" style="--c:#10a37f">I</span>
+              <div class="model-card__title"><b>GPT Image 2.5</b><span>OpenAI</span></div>
+              <span class="model-card__badge">图像</span>
+            </div>
+            <div class="model-card__stats">
+              <div><span>质量</span><b>93</b></div><div><span>延迟</span><b>15s</b></div><div><span>成本</span><b>~$0.014</b></div>
+            </div>
+            <div class="model-card__bar"><i style="width:58%"></i></div>
+            <div class="model-card__foot"><span>会话占比 2%</span><span>图标 / 商店图</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SHIP
+         ==================================================================== -->
+    <section class="view" id="v-ship">
+      <div class="ship-page">
+        <div class="ship-head">
+          <div>
+            <div class="eyebrow">Build &amp; Ship</div>
+            <h1 class="page-title">从构建到上架，<br>只差一次确认。</h1>
+            <div class="version"><b>v0.9.12</b><span>·</span><span>commit 8f2c1a</span><span>·</span><span>main</span></div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <span class="pill pill--live"><i></i> TestFlight 已分发</span>
+            <button class="btn btn--ghost" type="button" data-toast="已导出干净的 Expo 工程：npx expo start 即可运行。">
+              <svg class="i"><use href="#i-download"/></svg> 导出代码
+            </button>
+          </div>
+        </div>
+
+        <div class="pipeline">
+          <div class="pstep pstep--done">
+            <span class="pstep__dot"><svg class="i"><use href="#i-check"/></svg></span>
+            <b>设计冻结</b><span>09:12 · 24 个页面</span>
+          </div>
+          <div class="pstep pstep--done">
+            <span class="pstep__dot"><svg class="i"><use href="#i-check"/></svg></span>
+            <b>代码生成</b><span>09:18 · 2,418 行</span>
+          </div>
+          <div class="pstep pstep--done">
+            <span class="pstep__dot"><svg class="i"><use href="#i-check"/></svg></span>
+            <b>自动化测试</b><span>09:24 · 12/12 通过</span>
+          </div>
+          <div class="pstep pstep--done">
+            <span class="pstep__dot"><svg class="i"><use href="#i-check"/></svg></span>
+            <b>构建</b><span>09:31 · iOS 18.2</span>
+          </div>
+          <div class="pstep pstep--active">
+            <span class="pstep__dot"></span>
+            <b>TestFlight</b><span>已邀请 18 人</span>
+          </div>
+          <div class="pstep pstep--pending">
+            <span class="pstep__dot"></span>
+            <b>App Store 审核</b><span>等待提交</span>
+          </div>
+        </div>
+
+        <div class="ship-grid">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="card build-card">
+              <div class="build-top">
+                <span class="icon"><svg class="i"><use href="#i-code"/></svg></span>
+                <div><b>构建日志</b><span>06 Nov 2026 · 09:12–09:31 · 19m 04s</span></div>
+                <span class="pill pill--live"><i></i> 成功</span>
+              </div>
+              <div class="log">
+                <div class="log__line"><time>09:12</time><span>→ 冻结设计 <b>v0.9.12</b>，生成 App Graph 快照</span></div>
+                <div class="log__line"><time>09:13</time><span>→ 路由：24 个页面 · 3 个模型 · 预算 600 credits</span></div>
+                <div class="log__line"><time>09:18</time><span class="ok">✓</span><span>生成 2,418 行 TypeScript · 0 个类型错误</span></div>
+                <div class="log__line"><time>09:21</time><span class="ok">✓</span><span>Design Lint：0 严重 / 2 建议</span></div>
+                <div class="log__line"><time>09:24</time><span class="ok">✓</span><span>12 条 E2E 通过（登录、打卡、订阅、推送）</span></div>
+                <div class="log__line"><time>09:26</time><span class="warn">!</span><span>缺少 1024×1024 商店图标，已自动生成 3 个候选</span></div>
+                <div class="log__line"><time>09:31</time><span class="ok">✓</span><span>EAS Build 完成 · 42.8 MB · 已上传 TestFlight</span></div>
+                <div class="log__line log__line--active"><time>09:31</time><span>→ 等待确认商店素材与隐私清单<span class="log__cursor"></span></span></div>
+              </div>
+              <div class="artifact">
+                <span class="artifact__icon"><svg class="i"><use href="#i-phone"/></svg></span>
+                <div><b>Ritual-0.9.12.ipa</b><span>42.8 MB · iOS 18.2+ · arm64</span></div>
+                <button class="btn btn--sm btn--ghost" type="button" data-toast="下载链接已复制，24 小时内有效。">下载</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__head">
+                <h3>上架检查</h3>
+                <span>5 / 6 完成</span>
+              </div>
+              <div class="checklist">
+                <div class="check"><span class="check__box"><svg class="i"><use href="#i-check"/></svg></span> 隐私清单（Privacy Manifest）<span>已生成</span></div>
+                <div class="check"><span class="check__box"><svg class="i"><use href="#i-check"/></svg></span> 年龄分级 · 4+<span>已确认</span></div>
+                <div class="check"><span class="check__box"><svg class="i"><use href="#i-check"/></svg></span> 商店截图 · 6.9" / 6.5"<span>6 / 6</span></div>
+                <div class="check"><span class="check__box"><svg class="i"><use href="#i-check"/></svg></span> 订阅合规 · 自动续费说明<span>已生成</span></div>
+                <div class="check"><span class="check__box"><svg class="i"><use href="#i-check"/></svg></span> 审核备注 · 演示账号<span>已填写</span></div>
+                <div class="check" style="opacity:.6"><span class="check__box" style="background:var(--surface-2)"></span> 最终人工确认<span>待你</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="card store-card">
+              <div class="card__head">
+                <h3>App Store 预览</h3>
+                <span>自动生成 · 可编辑</span>
+              </div>
+              <div class="store-preview">
+                <div class="store-app">
+                  <div class="icon">R</div>
+                  <div><h3>Ritual — 把小事做成习惯</h3><p>安静、克制，不游戏化。</p></div>
+                </div>
+                <div class="shots">
+                  <div class="store-shot" data-ms="home:sand"></div>
+                  <div class="store-shot" data-ms="stats:sand"></div>
+                  <div class="store-shot" data-ms="paywall:ink"></div>
+                </div>
+                <div class="store-note"><b>审核备注已生成：</b>本 App 无需登录即可浏览；订阅测试账号已提供；推送权限在使用时请求。</div>
+              </div>
+              <div class="store-actions">
+                <button class="btn btn--dark btn--wide" type="button" data-toast="已提交 App Store 审核 · 预计 24–48 小时。">
+                  <svg class="i"><use href="#i-rocket"/></svg> 提交审核
+                </button>
+                <button class="btn btn--ghost" type="button" data-toast="已打开素材编辑器。">
+                  <svg class="i"><use href="#i-image"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="card" style="padding:14px 15px">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                <svg class="i" style="width:14px;height:14px;color:var(--muted)"><use href="#i-globe"/></svg>
+                <b style="font-size:11px;font-weight:600">发布到 Web 预览</b>
+              </div>
+              <p style="margin:0 0 10px;font-size:9.5px;line-height:1.55;color:var(--muted)">生成一个可分享的 Web 版本，方便在浏览器里快速评审；不影响原生工程。</p>
+              <button class="btn btn--ghost btn--sm btn--wide" type="button" data-toast="Web 预览已部署：ritual-preview.mosaic.app">部署预览</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Drawer -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__head">
+    <div style="flex:1">
+      <div class="title" id="drawerTitle">Rise · Onboarding</div>
+      <div class="sub" id="drawerSub">健康 · iOS · 2026</div>
+    </div>
+    <button class="icon-btn" id="drawerClose" type="button" aria-label="关闭"><svg class="i"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="drawer__body">
+    <div class="drawer__preview" id="drawerPreview"></div>
+    <div class="drawer__app">
+      <div class="icon" id="drawerIcon">R</div>
+      <div><h3 id="drawerApp">Rise</h3><p id="drawerScreen">Onboarding · 01</p></div>
+    </div>
+    <div class="drawer__tags" id="drawerTags"></div>
+    <p class="drawer__desc" id="drawerDesc"></p>
+    <div class="drawer__section">
+      <h4>可复用的模式</h4>
+      <div class="pattern-list" id="drawerPatterns"></div>
+    </div>
+    <div class="drawer__section">
+      <h4>Design DNA 摘要</h4>
+      <div class="pattern-list">
+        <div class="pattern-row"><span>布局</span><b>单列 / 大留白</b></div>
+        <div class="pattern-row"><span>字号层级</span><b>4 级</b></div>
+        <div class="pattern-row"><span>信息密度</span><b>低</b></div>
+        <div class="pattern-row"><span>动效</span><b>Spring · 240ms</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer__foot">
+    <button class="btn btn--ghost" type="button" data-toast="已收藏到「Ritual 参考」合集。">收藏</button>
+    <button class="btn btn--dark" id="applyRef" type="button"><svg class="i"><use href="#i-sparkle"/></svg> 应用到我的 App</button>
+  </div>
+</aside>
+
+<!-- Command palette -->
+<div class="cmdk" id="cmdk">
+  <div class="cmdk__box" role="dialog" aria-modal="true" aria-label="命令面板">
+    <div class="cmdk__search">
+      <svg class="i"><use href="#i-search"/></svg>
+      <input id="cmdkInput" type="text" placeholder="搜索项目、界面、模型，或输入命令…">
+      <span class="kbd">ESC</span>
+    </div>
+    <div class="cmdk__list" id="cmdkList">
+      <div class="cmdk__group">快速前往</div>
+      <div class="cmdk__item" data-nav="home"><svg class="i"><use href="#i-home"/></svg> 工作台 <span class="kbd">G H</span></div>
+      <div class="cmdk__item" data-nav="studio"><svg class="i"><use href="#i-layers"/></svg> 工作室 <span class="kbd">G S</span></div>
+      <div class="cmdk__item" data-nav="library"><svg class="i"><use href="#i-grid"/></svg> 设计库 <span class="kbd">G D</span></div>
+      <div class="cmdk__item" data-nav="models"><svg class="i"><use href="#i-sparkle"/></svg> 模型矩阵 <span class="kbd">G M</span></div>
+      <div class="cmdk__item" data-nav="ship"><svg class="i"><use href="#i-rocket"/></svg> 发布 <span class="kbd">G P</span></div>
+      <div class="cmdk__group">操作</div>
+      <div class="cmdk__item" data-toast="已开始新项目：先描述，再生成 3 页。"><svg class="i"><use href="#i-plus"/></svg> 新建 App</div>
+      <div class="cmdk__item" data-toast="已打开导入：截图 / Figma / 录屏。"><svg class="i"><use href="#i-camera"/></svg> 从截图导入</div>
+      <div class="cmdk__item" data-toast="已导出 Expo 工程到 GitHub。"><svg class="i"><use href="#i-download"/></svg> 导出代码</div>
+    </div>
+    <div class="cmdk__foot"><span><span class="kbd">↑</span><span class="kbd">↓</span> 选择</span><span><span class="kbd">↵</span> 打开</span><span><span class="kbd">ESC</span> 关闭</span></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><svg class="i"><use href="#i-check"/></svg><span id="toastText">已保存</span></div>
+
+<script src="app.js"></script>
+</body>
+</html>

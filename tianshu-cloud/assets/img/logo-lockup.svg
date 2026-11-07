@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="天枢云 TIANSHU CLOUD">
+  <defs>
+    <linearGradient id="ts-lock" x1="6" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9DB4FF"/>
+      <stop offset=".52" stop-color="#6C8CFF"/>
+      <stop offset="1" stop-color="#35E0C8"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 8) scale(1)">
+    <rect x="8" y="8" width="27" height="27" rx="7.5" transform="rotate(45 24 24)"
+          fill="none" stroke="url(#ts-lock)" stroke-width="2.8"/>
+    <circle cx="24" cy="24" r="7.2" fill="none" stroke="url(#ts-lock)" stroke-width="1.6" opacity=".62"/>
+    <circle cx="24" cy="24" r="3.4" fill="url(#ts-lock)"/>
+    <circle cx="39.4" cy="8.6" r="2.5" fill="#35E0C8"/>
+  </g>
+  <text x="66" y="34" font-family="Inter, 'HarmonyOS Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+        font-size="23" font-weight="700" letter-spacing="1" fill="#F6F9FF">天枢云</text>
+  <text x="67.5" y="50" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif"
+        font-size="8.2" font-weight="600" letter-spacing="2.9" fill="#8E9BB3">TIANSHU CLOUD</text>
+</svg>

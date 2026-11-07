@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>部署控制台 — APEX</title>
+<meta name="description" content="在一个控制台里部署智能体、绑定算力、管理权限与成本。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230B0C0E'/%3E%3Cpath d='M12 4.5 19.5 19h-4.2L12 11.2 8.7 19H4.5z' fill='%23F4F2EC'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f4f2ec">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="APEX 首页">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+      <span class="brand-word">APEX</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="agents.html" data-nav="agents">智能体</a>
+      <a href="compute.html" data-nav="compute">算力</a>
+      <a href="console.html" data-nav="console">控制台</a>
+      <a href="developers.html" data-nav="developers">开发者</a>
+      <a href="blueprint.html" data-nav="blueprint">平台规划</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="搜索（Ctrl K）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+      </button>
+      <a class="nav-signin" href="console.html">林砚</a>
+      <a class="btn btn-sm" href="agents.html">浏览市场</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="agents.html">智能体市场</a>
+  <a href="compute.html">算力市场</a>
+  <a href="console.html">控制台</a>
+  <a href="developers.html">开发者中心</a>
+  <a href="blueprint.html">平台规划</a>
+</div>
+
+<main class="console-shell">
+  <div class="wrap">
+    <div class="console-bar">
+      <div class="proj"><span class="sq">A</span> Acme · Production <span class="env">HEALTHY</span></div>
+      <div class="right">
+        <span>本月支出 <b class="ink">$4,218.40</b></span>
+        <span class="chip" style="height:28px;font-size:11px;cursor:default">us-east</span>
+        <span class="review-avatar" style="width:26px;height:26px;font-size:10px">林</span>
+      </div>
+    </div>
+
+    <div class="flex between center" style="gap:20px;flex-wrap:wrap">
+      <div>
+        <h1 class="console-title">欢迎回来，林砚。</h1>
+        <p class="console-sub">3 个服务在运行 · 2 条待处理告警 · 最近一次部署 18 分钟前</p>
+      </div>
+      <a class="btn btn-sm deploy-cta" href="#deploy">＋ 部署智能体</a>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="k">本月支出</div>
+        <div class="v">$4,218</div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg> 12.4% vs 上月</div>
+      </div>
+      <div class="kpi">
+        <div class="k">运行中智能体</div>
+        <div class="v">24</div>
+        <div class="d flat">3 个本周新增</div>
+      </div>
+      <div class="kpi">
+        <div class="k">本月任务量</div>
+        <div class="v">182,430</div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg> 8.2% vs 上月</div>
+      </div>
+      <div class="kpi">
+        <div class="k">P95 延迟</div>
+        <div class="v">1.42s</div>
+        <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg> 0.18s 更快</div>
+      </div>
+    </div>
+
+    <div class="console-grid">
+      <div class="panel-card">
+        <div class="panel-card-head">
+          <div><div class="t">每日算力支出</div><div class="s">过去 14 天 · 含模型调用</div></div>
+          <div class="legend"><span><i style="background:rgba(36,64,255,.5)"></i>算力</span><span><i style="background:var(--accent)"></i>今日</span></div>
+        </div>
+        <div id="spendChart"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-card-head">
+          <div><div class="t">预算与告警</div><div class="s">2026 年 11 月</div></div>
+          <span class="badge badge-live">正常</span>
+        </div>
+        <div class="flex between center" style="font-size:11px;color:var(--muted)"><span>已用 $4,218 / $6,200</span><b style="color:var(--ink)">68%</b></div>
+        <div class="meter" style="height:8px;border-radius:4px;background:rgba(11,12,14,.08);margin-top:8px;overflow:hidden">
+          <div style="width:68%;height:100%;background:var(--accent);border-radius:4px"></div>
+        </div>
+        <div class="small mt-8">按当前速度，预计月底 $5,940 · 低于预算 4%</div>
+        <div class="mt-24" style="border-top:1px solid var(--line);padding-top:14px">
+          <div class="flex center gap-8" style="font-size:11.5px;padding:7px 0"><span class="dot-live" style="background:#e6c07b;box-shadow:none"></span>Atlas Research 重试率升至 2.1%</div>
+          <div class="flex center gap-8" style="font-size:11.5px;padding:7px 0"><span class="dot-live"></span>EU 区域容量将在 6 小时后释放</div>
+          <div class="flex center gap-8" style="font-size:11.5px;padding:7px 0"><span class="dot-live" style="background:#9aa0ad;box-shadow:none"></span>发票 #2026-1042 已生成</div>
+        </div>
+        <a class="link-arrow mt-16" href="#" style="font-size:11.5px">管理告警规则
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="panel-card deployments">
+      <div class="panel-card-head">
+        <div><div class="t">运行中的部署</div><div class="s">按最近调用排序</div></div>
+        <a class="link-arrow" href="#" style="font-size:11px">查看全部 24 个
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="dep-row" style="border-bottom:1px solid var(--line-strong);padding-top:0">
+        <span class="dep-meta" style="color:var(--muted)">服务</span>
+        <span class="dep-meta">状态</span>
+        <span class="dep-meta">区域 / 算力</span>
+        <span class="dep-meta" style="text-align:right">24h 成本</span>
+        <span></span>
+      </div>
+      <div id="deploymentRows"></div>
+    </div>
+
+    <div class="wizard" id="deploy">
+      <div class="wizard-head">
+        <div>
+          <h2 class="h3">部署新的智能体</h2>
+          <p>选择一个已上架智能体，绑定算力与权限，5 分钟内上线。</p>
+        </div>
+        <span class="badge badge-dark">SANDBOX → PROD</span>
+      </div>
+
+      <div class="stepper" id="stepper">
+        <div class="step-tab is-active" data-step="0"><div class="n">01</div><div class="t">选择智能体</div></div>
+        <div class="step-tab" data-step="1"><div class="n">02</div><div class="t">绑定算力</div></div>
+        <div class="step-tab" data-step="2"><div class="n">03</div><div class="t">权限与副本</div></div>
+        <div class="step-tab" data-step="3"><div class="n">04</div><div class="t">确认并部署</div></div>
+      </div>
+
+      <div class="wizard-body">
+        <div>
+          <div class="wizard-step is-active" data-panel="0">
+            <div class="opt-grid" id="agentOptions"></div>
+          </div>
+
+          <div class="wizard-step" data-panel="1">
+            <div class="field-row" style="margin-bottom:14px">
+              <div class="field"><label for="wizRegion">运行区域</label><select id="wizRegion"></select></div>
+              <div class="field"><label for="wizReplicas">副本数</label><select id="wizReplicas"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>6</option><option>8</option></select></div>
+            </div>
+            <div class="opt-grid" id="gpuOptions"></div>
+          </div>
+
+          <div class="wizard-step" data-panel="2">
+            <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8e8a82;margin-bottom:10px">授予权限</div>
+            <label class="switch-row" style="padding:9px 0"><input type="checkbox" checked data-perm="web"><span class="switch"></span><span>公开网络检索 <span style="color:#6f6b64">· 低风险</span></span></label>
+            <label class="switch-row" style="padding:9px 0"><input type="checkbox" checked data-perm="files"><span class="switch"></span><span>工作区文件读写 <span style="color:#6f6b64">· 中风险</span></span></label>
+            <label class="switch-row" style="padding:9px 0"><input type="checkbox" checked data-perm="memory"><span class="switch"></span><span>长期记忆 <span style="color:#6f6b64">· 中风险</span></span></label>
+            <label class="switch-row" style="padding:9px 0"><input type="checkbox" data-perm="payments"><span class="switch"></span><span>支付与转账 <span style="color:#6f6b64">· 极高风险 · 默认关闭</span></span></label>
+            <div style="border-top:1px solid rgba(255,255,255,.1);margin-top:14px;padding-top:14px">
+              <label class="switch-row"><input type="checkbox" checked><span class="switch"></span><span>超出预算时自动暂停</span></label>
+              <div class="field mt-16"><label for="wizBudget">月度预算上限</label><input type="number" id="wizBudget" value="2500" min="0" step="100"></div>
+            </div>
+          </div>
+
+          <div class="wizard-step" data-panel="3">
+            <div class="run-box" style="margin-bottom:14px">
+              <div class="run-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="name">apex deploy --prod</span><span class="live-tag"><span class="dot-live"></span>DRY RUN</span></div>
+              <div class="run-body">
+                <div class="step"><i>01</i><span>解析 manifest · 权限 3 项</span></div>
+                <div class="step"><i>02</i><span>预留容量 · H200 × 1 · us-east</span></div>
+                <div class="step"><i>03</i><span class="ok">✓ 预算检查通过 · 预计 $1,019 / 月</span></div>
+                <div class="step dim"><i>$</i><span>等待确认…</span></div>
+              </div>
+            </div>
+            <button class="btn btn-on-dark btn-block" id="deployBtn">确认部署</button>
+            <p class="small" style="color:#77736c;margin-top:10px;font-size:10px">部署后可在 30 秒内回滚。生产环境需要项目管理员二次确认。</p>
+          </div>
+
+          <div class="wizard-actions">
+            <button class="btn btn-outline-dark btn-sm" id="wizBack" disabled>上一步</button>
+            <button class="btn btn-on-dark btn-sm" id="wizNext">下一步</button>
+          </div>
+        </div>
+
+        <aside class="wizard-summary">
+          <div class="label">配置摘要</div>
+          <div class="sum-row"><span>智能体</span><b id="sumAgent">Atlas Research</b></div>
+          <div class="sum-row"><span>算力</span><b id="sumGpu">H200 · 1 GPU</b></div>
+          <div class="sum-row"><span>区域</span><b id="sumRegion">US-E · 弗吉尼亚</b></div>
+          <div class="sum-row"><span>副本</span><b id="sumReplicas">2</b></div>
+          <div class="sum-row"><span>权限</span><b id="sumPerms">3 项</b></div>
+          <div class="sum-total"><div><div class="v" id="sumCost">$1,019</div><div class="l">预估算力 / 月</div></div><span class="badge badge-dark">不含订阅</span></div>
+          <div class="mt-24" style="border-top:1px solid rgba(255,255,255,.12);padding-top:14px;font-size:10px;color:#8e8a82;line-height:1.7">
+            <div class="flex between"><span>按需单价</span><b id="sumUnit" style="color:#f5f2ea">$3.49 / GPU·h</b></div>
+            <div class="flex between"><span>平均利用率</span><b style="color:#f5f2ea">20%</b></div>
+            <div class="flex between"><span>计费粒度</span><b style="color:#f5f2ea">按秒</b></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="mt-48" style="padding-bottom:20px">
+      <div class="panel-card">
+        <div class="panel-card-head"><div><div class="t">实时计量</div><div class="s">过去 60 分钟</div></div><span class="dep-status"><span class="dot-live"></span>LIVE</span></div>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead><tr><th>时间</th><th>服务</th><th>动作</th><th>算力</th><th>计量</th></tr></thead>
+            <tbody>
+              <tr><td class="num">02:30:58</td><td>Atlas Research</td><td>web.search × 12</td><td class="num">H200 · 14s</td><td class="num">$0.014</td></tr>
+              <tr><td class="num">02:30:41</td><td>Echo Support</td><td>refund.create</td><td class="num">L40S · 3s</td><td class="num">$0.001</td></tr>
+              <tr><td class="num">02:30:22</td><td>CodePilot X</td><td>repo.index</td><td class="num">L40S · 86s</td><td class="num">$0.021</td></tr>
+              <tr><td class="num">02:29:57</td><td>Atlas Research</td><td>report.render</td><td class="num">H200 · 41s</td><td class="num">$0.040</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="padding-top:0;border-top:0">
+      <span>© <span data-year>2026</span> APEX Systems · 概念设计与演示</span>
+      <span>控制台数据为示意</span>
+      <div class="right"><a href="#">状态</a><a href="#">文档</a><a href="#">支持</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/console.js" defer></script>
+</body>
+</html>
+
+

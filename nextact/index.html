@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>次幕 NEXTACT · AI短剧出海的基础设施层</title>
+  <meta name="description" content="次幕不生产短剧。我们用资产交易所解决匹配效率，用数据信用档案解决信用缺失，让好内容找到对的买方，让有数据的团队拿到该拿的钱。">
+  <meta name="theme-color" content="#0a0d0a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="次幕 NEXTACT · AI短剧出海的基础设施层">
+  <meta property="og:description" content="不生产短剧。让好内容找到对的买方，让有数据的团队拿到该拿的钱。">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="utility-bar">
+      <div class="container utility-inner">
+        <span class="utility-brand">NEXTACT MARKET / 次幕</span>
+        <span class="utility-center">AI SHORT DRAMA · ASSET &amp; CREDIT INFRASTRUCTURE</span>
+        <span class="utility-status"><i class="live-dot" aria-hidden="true"></i> 数据授权通道运行中 <span class="utility-time" id="clock">22:20</span> CST</span>
+      </div>
+    </div>
+    <nav class="main-nav container" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="次幕 NEXTACT 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="3" y="3" width="9" height="26" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="20" y="3" width="9" height="9" fill="#c8f65d"/>
+          <rect x="20" y="20" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+        <span class="brand-name">次幕</span>
+        <span class="brand-wordmark">NEXTACT</span>
+      </a>
+
+      <div class="nav-links" id="siteMenu">
+        <a href="#exchange">资产交易所</a>
+        <a href="#credit">数据信用</a>
+        <a href="#services">服务网络</a>
+        <a href="#roadmap">路线图</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="nav-login" href="#credit">后台预览</a>
+        <button class="btn btn-primary btn-small" type="button" data-open-submit>挂牌资产</button>
+        <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="siteMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <p class="hero-kicker reveal"><span class="kicker-tag">基础设施层</span> 不生产短剧。只解决出海链条里最贵的两个问题。</p>
+          <h1 id="hero-title" class="hero-title">
+            <span>AI短剧出海，每天有</span>
+            <span><em class="money">2000万美元</em>在燃烧。</span>
+            <span class="hero-question">你的钱，烧对地方了吗？</span>
+          </h1>
+          <p class="hero-lead">用可验证的资产货架缩短匹配路径，用授权数据为制作团队建立可被金融机构读懂的信用档案。这里不做内容推荐，只做交易判断。</p>
+
+          <div class="entry-pair" role="group" aria-label="选择你的身份">
+            <a class="entry entry-creator" href="#exchange" data-open-submit>
+              <span class="entry-top"><span>FOR CREATORS / 制作方</span><span class="entry-index">01</span></span>
+              <span class="entry-title">我有好内容，<br>想找到对的买方</span>
+              <span class="entry-foot">挂牌资产 <span class="arrow" aria-hidden="true">↗</span></span>
+            </a>
+            <a class="entry entry-buyer" href="#exchange">
+              <span class="entry-top"><span>FOR BUYERS &amp; CAPITAL / 买方与资金方</span><span class="entry-index">02</span></span>
+              <span class="entry-title">我想筛选标的，<br>或评估团队信用</span>
+              <span class="entry-foot">进入交易所 <span class="arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+        <aside class="market-console reveal" aria-label="平台实时数据概览">
+          <div class="console-head">
+            <span class="console-title"><i class="live-dot" aria-hidden="true"></i> MARKET PULSE / 实时脉冲</span>
+            <span class="console-ref">SAMPLE FEED</span>
+          </div>
+
+          <div class="pulse-row">
+            <div class="pulse-label"><span>在库可交易资产</span><small>TRADABLE ASSETS</small></div>
+            <div class="pulse-main">
+              <div class="pulse-value"><strong class="count" data-count="146">146</strong><span>部</span></div>
+              <span class="pulse-delta up">+14 本周</span>
+            </div>
+            <div class="pulse-viz">
+              <svg class="sparkline" viewBox="0 0 168 48" role="img" aria-label="资产库存近八周上升趋势">
+                <defs>
+                  <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c8f65d" stop-opacity=".23"/>
+                    <stop offset="1" stop-color="#c8f65d" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M1 40L24 35L47 36L68 28L88 31L111 20L134 23L165 9V48H1Z" fill="url(#sparkFill)"/>
+                <path class="spark-path" d="M1 40L24 35L47 36L68 28L88 31L111 20L134 23L165 9" fill="none" stroke="#c8f65d" stroke-width="1.5"/>
+                <circle cx="165" cy="9" r="2.4" fill="#c8f65d"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="pulse-row">
+            <div class="pulse-label"><span>累计完成匹配的买方询盘</span><small>MATCHED INQUIRIES</small></div>
+            <div class="pulse-main">
+              <div class="pulse-value"><strong class="count" data-count="1284">1,284</strong><span>次</span></div>
+              <span class="pulse-delta up">+18.6% / 30D</span>
+            </div>
+            <div class="pulse-viz bars" aria-hidden="true">
+              <i style="--h:24%"></i><i style="--h:38%"></i><i style="--h:31%"></i><i style="--h:48%"></i><i style="--h:43%"></i><i style="--h:62%"></i><i style="--h:58%"></i><i style="--h:74%"></i><i style="--h:69%"></i><i style="--h:88%"></i><i style="--h:80%"></i><i class="lit" style="--h:100%"></i>
+            </div>
+          </div>
+
+          <div class="pulse-row">
+            <div class="pulse-label"><span>数据信用档案覆盖团队</span><small>DATA-AUTHORIZED STUDIOS</small></div>
+            <div class="pulse-main">
+              <div class="pulse-value"><strong class="count" data-count="76">76</strong><span>家</span></div>
+              <span class="pulse-delta">占活跃制作方 24%</span>
+            </div>
+            <div class="pulse-viz ring-wrap">
+              <div class="ring" style="--value:24%" role="img" aria-label="数据授权覆盖率24%"><span>24<small>%</small></span></div>
+            </div>
+          </div>
+
+          <div class="console-foot">
+            <span>来源 / 平台内统计 · 合作方脱敏数据</span>
+            <span>更新 <time id="feedTime">22:20</time></span>
+          </div>
+        </aside>
+
+        <div class="hero-side-note reveal">
+          <div class="note-line">
+            <span class="micro-label">BUYER ACCESS / 买方准入</span>
+            <span class="note-status"><i></i> 实名制</span>
+          </div>
+          <p>完整目录、试看链接与数据后台仅向实名买方开放。开放范围由制作方逐项决定。</p>
+          <button class="note-link" type="button" data-lead-mode="catalogue">申请完整资产目录 <span aria-hidden="true">↗</span></button>
+        </div>
+        </div>
+      </div>
+
+      <div class="stat-band">
+        <div class="container stat-grid">
+          <div class="stat">
+            <strong>93<small>%</small></strong>
+            <span>AI漫剧月播放不足百万</span>
+            <em>供给严重过剩</em>
+          </div>
+          <div class="stat">
+            <strong>0.5<small>%</small></strong>
+            <span>行业爆款率 · 千分之五</span>
+            <em>内容像一场赌博</em>
+          </div>
+          <div class="stat">
+            <strong><span class="minus">−</span>90<small>%</small></strong>
+            <span>AI带来的制作成本降幅</span>
+            <em>第一重红利</em>
+          </div>
+          <div class="stat">
+            <strong><span class="plus">+</span>100<small>%</small></strong>
+            <span>同期海外流量成本涨幅</span>
+            <em>红利被渠道拿走</em>
+          </div>
+          <p class="stat-source">数据来源：公开行业报告与合作方脱敏抽样，2025–2026。首页支出数字为行业估算，非平台交易额。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="thesis section" aria-labelledby="thesis-title">
+      <div class="container thesis-grid">
+        <div class="thesis-intro reveal">
+          <p class="eyebrow">OUR POSITION / 我们相信</p>
+          <h2 id="thesis-title">内容已经过剩。<br>判断力没有。</h2>
+          <p class="thesis-note">次幕不解决创作，也不解决流量。我们只修复两件让交易无法发生的事。</p>
+        </div>
+        <div class="thesis-points">
+          <article class="thesis-point reveal">
+            <div class="point-head"><span class="point-no">01</span><span class="point-en">MATCHING EFFICIENCY</span></div>
+            <h3>匹配效率</h3>
+            <p>把非标内容变成可筛选的标的。买方不必再从 1,000 条私信里找项目，而是从结构化资产里做判断。</p>
+            <div class="point-line">更短的判断路径 / FEWER STEPS TO A DECISION</div>
+          </article>
+          <article class="thesis-point reveal">
+            <div class="point-head"><span class="point-no">02</span><span class="point-en">VERIFIABLE CREDIT</span></div>
+            <h3>信用缺失</h3>
+            <p>把散落在平台后台的播放、完播与回款记录，变成资金方能够验证的经营证据，而不只是一句“我们数据很好”。</p>
+            <div class="point-line">可验证的经营记录 / A RECORD THAT CAN BE CHECKED</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="exchange section" id="exchange" aria-labelledby="exchange-title">
+      <div class="container">
+        <div class="section-head exchange-head">
+          <div>
+            <p class="eyebrow">01 / ASSET EXCHANGE</p>
+            <h2 id="exchange-title">资产交易所 <span class="title-badge">内测 · 邀请制</span></h2>
+          </div>
+          <div class="section-side">
+            <p>让好内容找到对的买方。不是信息流，是可操作的货架。每一条资产，都按买方真正会问的问题结构化。</p>
+            <div class="head-metrics">
+              <span><strong>146</strong> 在库</span>
+              <span><strong>38</strong> 买方</span>
+              <span><strong>1,284</strong> 询盘</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exchange-shell">
+          <div class="market-tabs" role="group" aria-label="按目标市场筛选">
+            <button class="market-tab is-active" type="button" data-market="全部市场">全部市场 <span>6</span></button>
+            <button class="market-tab" type="button" data-market="北美">北美 <span>2</span></button>
+            <button class="market-tab" type="button" data-market="东南亚">东南亚 <span>1</span></button>
+            <button class="market-tab" type="button" data-market="日韩">日韩 <span>1</span></button>
+            <button class="market-tab" type="button" data-market="中东">中东 <span>1</span></button>
+            <button class="market-tab" type="button" data-market="拉美">拉美 <span>1</span></button>
+          </div>
+
+          <div class="filter-bar">
+            <label class="select-wrap">
+              <span class="sr-only">题材</span>
+              <select id="filterGenre">
+                <option value="全部">全部题材</option>
+                <option value="狼人">狼人</option>
+                <option value="霸总">霸总</option>
+                <option value="复仇">复仇</option>
+                <option value="逆袭">逆袭</option>
+                <option value="甜宠">甜宠</option>
+                <option value="悬疑">悬疑</option>
+              </select>
+            </label>
+            <label class="select-wrap">
+              <span class="sr-only">制作完成度</span>
+              <select id="filterStage">
+                <option value="全部">全部完成度</option>
+                <option value="剧本">剧本</option>
+                <option value="粗剪">粗剪</option>
+                <option value="成片">成片</option>
+                <option value="已上线">已上线</option>
+              </select>
+            </label>
+            <label class="select-wrap">
+              <span class="sr-only">数据信用</span>
+              <select id="filterData">
+                <option value="全部">全部数据信用</option>
+                <option value="已接入">已接入播放数据</option>
+                <option value="基础认证">仅基础信息认证</option>
+              </select>
+            </label>
+            <label class="select-wrap">
+              <span class="sr-only">版权状态</span>
+              <select id="filterRights">
+                <option value="全部">全部版权状态</option>
+                <option value="完整版权">完整版权</option>
+                <option value="改编权">改编权</option>
+                <option value="区域独家">区域独家</option>
+                <option value="非独家">非独家</option>
+              </select>
+            </label>
+            <label class="search-wrap">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg>
+              <span class="sr-only">搜索剧名或制作方</span>
+              <input type="search" id="filterSearch" placeholder="搜索剧名 / 制作方" autocomplete="off">
+            </label>
+            <button class="reset-btn" type="button" id="resetFilters">重置</button>
+          </div>
+
+          <div class="results-line">
+            <p><span id="resultCount">6</span> 个样本资产 <span class="result-sep">/</span> 共 146 个在库 <span class="result-note">以下为脱敏样本，完整目录向实名买方开放</span></p>
+            <label class="sort-control">排序
+              <select id="sortAssets" aria-label="资产排序方式">
+                <option value="credit">数据信用优先</option>
+                <option value="episodes">集数优先</option>
+                <option value="latest">最近入库</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="asset-grid" id="assetGrid" aria-live="polite"></div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            <span class="empty-index">NO MATCH</span>
+            <h3>没有符合当前条件的资产。</h3>
+            <p>尝试放宽一个筛选条件，或向平台提交你的采购需求。</p>
+            <button class="btn btn-outline" type="button" data-lead-mode="catalogue">提交采购需求</button>
+          </div>
+        </div>
+
+        <div class="exchange-foot">
+          <p><span class="seal">认证</span> 挂牌资产均完成主体认证与合规自查。联系方式不在列表页公开；制作方登录后可管理挂牌与开放权限。</p>
+          <button class="text-link" type="button" data-lead-mode="catalogue">申请完整资产目录 <span aria-hidden="true">↗</span></button>
+        </div>
+
+        <div class="trade-flow">
+          <div class="flow-intro">
+            <p class="eyebrow">HOW IT WORKS / 交易机制</p>
+            <h3>判断发生在这里，<br>交易也发生在这里。</h3>
+          </div>
+          <ol class="flow-steps">
+            <li>
+              <span class="flow-no">01 / 筛选</span>
+              <p>用市场、题材、完成度、数据信用与版权状态，先缩小到可判断的范围。</p>
+            </li>
+            <li>
+              <span class="flow-no">02 / 询价</span>
+              <p>买方实名发起，通过站内编号沟通。平台不暴露任何个人联系方式。</p>
+            </li>
+            <li>
+              <span class="flow-no">03 / 开放</span>
+              <p>制作方决定向谁开放试看、数据后台与版权文件。平台收取询盘服务费或成交佣金。</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="credit section" id="credit" aria-labelledby="credit-title">
+      <div class="container">
+        <div class="credit-layout">
+          <div class="credit-copy">
+            <p class="eyebrow">02 / DATA CREDIT</p>
+            <h2 id="credit-title">让有数据的团队，<br>拿到该拿的钱。</h2>
+            <p class="credit-lead">数据不是报表。数据是轻资产团队在银行面前，唯一能拿得出的经营证据。</p>
+
+            <div class="credit-points">
+              <article class="credit-point reveal">
+                <span class="credit-no">01</span>
+                <div>
+                  <h3>一个结构性错配</h3>
+                  <p>AI 短剧团队轻资产运营，算力要预付，平台回款有账期。银行想放贷，却看不到厂房、设备，也看不懂散落在各个平台后台的播放数据。已有城商行把 Token 消耗纳入授信评估——需求真实存在，缺的是标准化通道。</p>
+                </div>
+              </article>
+              <article class="credit-point reveal">
+                <span class="credit-no">02</span>
+                <div>
+                  <h3>数据换服务，不是数据买卖</h3>
+                  <p>制作方授权接入 ReelShort、DramaWave、DramaBox 等主要海外平台后台，获得免费的跨平台数据看板。平台获得将脱敏数据用于信用评估与金融机构对接的权利。授权可随时撤回。</p>
+                </div>
+              </article>
+              <article class="credit-point reveal">
+                <span class="credit-no">03</span>
+                <div>
+                  <h3>一键生成经营证据</h3>
+                  <p>需要融资或账期支持时，一键生成包含上线剧集、播放趋势、爆款率、回款记录与合作历史的信用报告，并推送给指定合作资金方，作为传统风控材料之外的经营验证补充。</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="credit-promise">
+              <span class="promise-mark" aria-hidden="true">↳</span>
+              <p><strong>数据换服务，不是数据买卖。</strong>平台不向制作方收取数据授权费用；报告仅供参考，不构成金融机构的授信承诺。</p>
+            </div>
+          </div>
+
+          <div class="report-shell reveal" role="region" aria-label="数据信用档案产品预览">
+            <div class="report-tabs" role="tablist" aria-label="档案预览切换">
+              <button class="report-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panelCredit" id="tabCredit">信用报告</button>
+              <button class="report-tab" type="button" role="tab" aria-selected="false" aria-controls="panelDashboard" id="tabDashboard">数据看板</button>
+              <span class="report-sample" aria-hidden="true">SAMPLE / 演示</span>
+            </div>
+
+            <div class="report-panel" id="panelCredit" role="tabpanel" aria-labelledby="tabCredit">
+              <div class="report-topline">
+                <span>NEXTACT / CREDIT PROFILE</span>
+                <span>NX-CR-0921</span>
+              </div>
+              <div class="studio-row">
+                <div>
+                  <span class="micro-label">DATA-AUTHORIZED STUDIO</span>
+                  <h3>夜航制作 <small>NIGHTNAV</small></h3>
+                  <p>深圳 · 成立 3 年 · 已接入 3 个平台后台</p>
+                </div>
+                <span class="verified-pill"><i></i> 已认证</span>
+              </div>
+
+              <div class="score-row">
+                <div class="score-main">
+                  <span class="micro-label">经营数据信用分 / 仅供参考</span>
+                  <div><strong>762</strong><span class="score-denom">/ 900</span></div>
+                </div>
+                <div class="score-grade">
+                  <span>等级</span>
+                  <strong>A−</strong>
+                  <small>数据完整度 90%</small>
+                </div>
+              </div>
+
+              <div class="meter" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="off"></span>
+              </div>
+
+              <div class="report-chart-head">
+                <span>近 12 个月播放趋势</span>
+                <span class="chart-up">+38.6%</span>
+              </div>
+              <div class="chart">
+                <div class="chart-bars" aria-hidden="true">
+                  <i style="--h:28%"></i><i style="--h:36%"></i><i style="--h:31%"></i><i style="--h:46%"></i><i style="--h:42%"></i><i style="--h:55%"></i><i style="--h:51%"></i><i style="--h:64%"></i><i style="--h:61%"></i><i style="--h:76%"></i><i style="--h:72%"></i><i class="lit" style="--h:92%"></i>
+                </div>
+                <div class="chart-axis"><span>11月</span><span>2月</span><span>5月</span><span>8月</span><span>10月</span></div>
+              </div>
+
+              <div class="report-metrics">
+                <div><span>上线剧集</span><strong>14<small>部</small></strong></div>
+                <div><span>样本爆款率</span><strong>7.1<small>%</small></strong></div>
+                <div><span>平均完播率</span><strong>41.2<small>%</small></strong></div>
+                <div><span>回款记录</span><strong>12<small>/12</small></strong></div>
+              </div>
+
+              <div class="data-sources">
+                <span class="micro-label">已授权数据源</span>
+                <div><span><i class="source-dot"></i>ReelShort</span><span><i class="source-dot"></i>DramaWave</span><span><i class="source-dot"></i>DramaBox</span></div>
+              </div>
+
+              <div class="report-foot">
+                <span>仅作经营验证补充 · 不构成授信承诺</span>
+                <span>2026.10.30</span>
+              </div>
+            </div>
+
+            <div class="report-panel" id="panelDashboard" role="tabpanel" aria-labelledby="tabDashboard" hidden>
+              <div class="report-topline">
+                <span>NEXTACT / DATA DASHBOARD</span>
+                <span>LAST 30D</span>
+              </div>
+              <div class="dash-heading">
+                <span class="micro-label">跨平台数据总览</span>
+                <div class="dash-total"><strong>28.4<small>M</small></strong><span class="pulse-delta up">+18.2%</span></div>
+                <p>总播放 · 3 个平台 · 14 部在架剧集</p>
+              </div>
+
+              <div class="platform-list">
+                <div class="platform-row">
+                  <div><span>ReelShort</span><small>12.8M / 45%</small></div>
+                  <div class="platform-bar"><i style="--w:82%"></i></div>
+                  <em>+24.1%</em>
+                </div>
+                <div class="platform-row">
+                  <div><span>DramaWave</span><small>9.6M / 34%</small></div>
+                  <div class="platform-bar"><i style="--w:61%"></i></div>
+                  <em>+15.6%</em>
+                </div>
+                <div class="platform-row">
+                  <div><span>DramaBox</span><small>6.0M / 21%</small></div>
+                  <div class="platform-bar"><i style="--w:38%"></i></div>
+                  <em>+9.8%</em>
+                </div>
+              </div>
+
+              <div class="dash-grid">
+                <div><span>平均完播率</span><strong>41.2<small>%</small></strong><em>高于同类 12%</em></div>
+                <div><span>最佳单剧 ROI</span><strong>1.84<small>×</small></strong><em>近 30 日</em></div>
+              </div>
+
+              <div class="dash-insight">
+                <span class="micro-label">趋势备注 / AUTO NOTE</span>
+                <p>北美狼人题材的次周留存明显回升，建议将《月蚀契约》第 18–24 集作为下一轮投放素材。</p>
+              </div>
+
+              <div class="report-foot">
+                <span>数据更新于 2 分钟前 · 已脱敏</span>
+                <span>仅制作方与授权买方可见</span>
+              </div>
+            </div>
+
+            <p class="report-disclaimer">预览数据为脱敏样本。正式报告需制作方授权生成，仅向指定机构推送。</p>
+          </div>
+        </div>
+
+        <div class="channels reveal">
+          <div class="channel-head">
+            <div>
+              <p class="eyebrow">CAPITAL CHANNELS / 资金方通道</p>
+              <h3>已建立数据验证通道</h3>
+            </div>
+            <p>不展示利率，不做授信承诺。机构名单以正式协议披露为准。</p>
+          </div>
+          <div class="channel-list">
+            <div class="channel">
+              <span class="channel-code">BANK / 01</span>
+              <div><strong>城商行</strong><span>跨境文创金融</span></div>
+              <em><i></i> 试点验证</em>
+            </div>
+            <div class="channel">
+              <span class="channel-code">FACTOR / 02</span>
+              <div><strong>商业保理</strong><span>应收账款融资</span></div>
+              <em><i></i> 试点验证</em>
+            </div>
+            <div class="channel">
+              <span class="channel-code">FUND / 03</span>
+              <div><strong>产业基金</strong><span>内容资产配置</span></div>
+              <em class="pending"><i></i> 洽谈中</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 / SERVICE NETWORK</p>
+            <h2 id="services-title">先让资产更好卖，<br>再谈规模化。</h2>
+          </div>
+          <div class="section-side">
+            <p>服务商网络是启动期最快的现金流，也是资产交易所的供给入口。平台不做交付，做品控与结算担保。</p>
+            <div class="head-metrics">
+              <span><strong>45</strong> 认证服务商</span>
+              <span><strong>4</strong> 个关键环节</span>
+              <span><strong>64</strong> 单 / 月</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-list">
+          <article class="service-row reveal">
+            <span class="service-no">01</span>
+            <div class="service-name"><h3>本土化叙事顾问</h3><p>LOCAL STORY CONSULTING</p></div>
+            <p class="service-copy">北美狼人题材已经过剩。中小团队最缺的，是知道当地观众为什么在第 8 秒划走的人。</p>
+            <div class="service-tags"><span>项目制</span><span>48h 匹配</span></div>
+            <div class="service-capacity"><strong>12</strong><span>家认证</span></div>
+            <button class="service-open" type="button" data-service="本土化叙事顾问" aria-label="申请本土化叙事顾问匹配">↗</button>
+          </article>
+
+          <article class="service-row reveal">
+            <span class="service-no">02</span>
+            <div class="service-name"><h3>多语种配音与字幕</h3><p>DUBBING &amp; SUBTITLES</p></div>
+            <p class="service-copy">AI 配音工具已经成熟，但“对”的口音、语速和情绪，仍然需要文化适配。</p>
+            <div class="service-tags"><span>按语种</span><span>试听验收</span></div>
+            <div class="service-capacity"><strong>18</strong><span>家认证</span></div>
+            <button class="service-open" type="button" data-service="多语种配音与字幕" aria-label="申请多语种配音与字幕匹配">↗</button>
+          </article>
+
+          <article class="service-row reveal">
+            <span class="service-no">03</span>
+            <div class="service-name"><h3>合规与版权审查</h3><p>COMPLIANCE &amp; RIGHTS</p></div>
+            <p class="service-copy">专供海外，不等于境内监管豁免。AI 微短剧有独立的分类分层标准，审查是挂牌的前置条件。</p>
+            <div class="service-tags"><span>挂牌前置</span><span>报告留档</span></div>
+            <div class="service-capacity"><strong>6</strong><span>家认证</span></div>
+            <button class="service-open" type="button" data-service="合规与版权审查" aria-label="申请合规与版权审查匹配">↗</button>
+          </article>
+
+          <article class="service-row reveal">
+            <span class="service-no">04</span>
+            <div class="service-name"><h3>投流优化服务</h3><p>MEDIA BUYING</p></div>
+            <p class="service-copy">海外投放素材增速是下载增速的四倍。懂本地投流、能把钱花出效率的人，正在变成稀缺资产。</p>
+            <div class="service-tags"><span>月度顾问</span><span>素材诊断</span></div>
+            <div class="service-capacity"><strong>9</strong><span>家认证</span></div>
+            <button class="service-open" type="button" data-service="投流优化服务" aria-label="申请投流优化服务匹配">↗</button>
+          </article>
+        </div>
+
+        <div class="service-guarantee reveal">
+          <div class="guarantee-copy">
+            <span class="micro-label">PLATFORM ROLE / 平台角色</span>
+            <p>不做服务交付，做<strong>品控与结算担保</strong>。</p>
+          </div>
+          <div class="guarantee-points">
+            <span><i></i>资金经平台托管</span>
+            <span><i></i>验收确认后放款</span>
+            <span><i></i>争议全程留痕</span>
+          </div>
+          <button class="btn btn-primary" type="button" data-lead-mode="service">申请服务商匹配 <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap section" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section-head roadmap-head">
+          <div>
+            <p class="eyebrow">04 / ROADMAP</p>
+            <h2 id="roadmap-title">从撮合现金流，<br>到信用基础设施。</h2>
+          </div>
+          <div class="section-side">
+            <p>先用服务撮合聚集制作方，用数据授权建立资产，再把信用变成基础设施。每一步都由上一阶段的数据触发。</p>
+            <span class="as-of">CURRENT PROGRESS / 2026 Q4</span>
+          </div>
+        </div>
+
+        <div class="progress-board reveal">
+          <div class="progress-head">
+            <span class="micro-label">LEADING INDICATORS / 当前进度</span>
+            <span class="progress-status"><i class="live-dot"></i> 阶段一进行中</span>
+          </div>
+          <div class="progress-grid">
+            <div class="progress-item">
+              <div class="progress-top"><span>活跃制作方 <small>P1</small></span><strong>312 <em>/ 500</em></strong></div>
+              <div class="progress-track"><i class="progress-fill" data-progress="62" style="--w:62%"></i></div>
+              <span class="progress-pct">62%</span>
+            </div>
+            <div class="progress-item">
+              <div class="progress-top"><span>在库可交易资产 <small>P2</small></span><strong>146 <em>/ 200</em></strong></div>
+              <div class="progress-track"><i class="progress-fill" data-progress="73" style="--w:73%"></i></div>
+              <span class="progress-pct">73%</span>
+            </div>
+            <div class="progress-item">
+              <div class="progress-top"><span>数据授权团队 <small>P3</small></span><strong>76 <em>/ 300</em></strong></div>
+              <div class="progress-track"><i class="progress-fill" data-progress="25" style="--w:25%"></i></div>
+              <span class="progress-pct">25%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="phase-track">
+          <div class="phase-line" aria-hidden="true"></div>
+
+          <article class="phase phase-active reveal">
+            <div class="phase-top"><span class="phase-status">● NOW / 进行中</span><span class="phase-period">2026 Q3–Q4</span></div>
+            <span class="phase-no">PHASE 01</span>
+            <h3>服务商匹配<br>与数据授权</h3>
+            <p class="phase-desc">用服务撮合把制作方聚起来，用免费数据看板换取授权。先跑通现金流和供给。</p>
+            <div class="phase-specs">
+              <div><span>目标</span><strong>500 家活跃制作方</strong></div>
+              <div><span>收入</span><strong>服务撮合费</strong></div>
+              <div><span>验证</span><strong>月撮合 64 单 / 授权 76 家</strong></div>
+            </div>
+          </article>
+
+          <article class="phase reveal">
+            <div class="phase-top"><span class="phase-status">○ NEXT / 触发后启动</span><span class="phase-period">2027 H1</span></div>
+            <span class="phase-no">PHASE 02</span>
+            <h3>资产交易所<br>公开上线</h3>
+            <p class="phase-desc">标准化挂牌、询价、试看与成交确认。把非标内容变成可被筛选、可被定价的资产。</p>
+            <div class="phase-specs">
+              <div><span>触发</span><strong>在库资产 &gt; 200 部<br>实名买方 &gt; 50 家</strong></div>
+              <div><span>收入</span><strong>询盘服务费 + 成交佣金</strong></div>
+            </div>
+            <div class="phase-mini"><span>146 / 200 部</span><span>38 / 50 家</span></div>
+          </article>
+
+          <article class="phase reveal">
+            <div class="phase-top"><span class="phase-status">○ LATER / 触发后启动</span><span class="phase-period">2027 H2+</span></div>
+            <span class="phase-no">PHASE 03</span>
+            <h3>信用报告与<br>机构对接</h3>
+            <p class="phase-desc">生成报告、推送机构、经授权做贷后数据监控。平台从信息中介升级为信用基础设施。</p>
+            <div class="phase-specs">
+              <div><span>触发</span><strong>授权团队 &gt; 300 家<br>3 家机构签署 MOU</strong></div>
+              <div><span>收入</span><strong>数据服务费（向机构收取）</strong></div>
+            </div>
+            <div class="phase-mini"><span>76 / 300 家</span><span>1 / 3 家</span></div>
+          </article>
+        </div>
+
+        <p class="roadmap-note">路线图以可验证指标触发，不以时间表强行推进。当前数据为平台内测口径。</p>
+      </div>
+    </section>
+
+    <section class="boundary-cta" aria-labelledby="boundary-title">
+      <div class="container boundary-grid">
+        <div class="boundary-copy reveal">
+          <p class="eyebrow">BOUNDARIES / 合规</p>
+          <h2 id="boundary-title">合规不是附录。<br>它是交易发生的前提。</h2>
+          <p>AI 短剧出海涉及境内监管延伸与跨境版权风险。平台如果不在合规边界上主动划清，后续的金融对接和资产交易都走不远。</p>
+          <a class="btn btn-outline" href="compliance.html">阅读：我们做什么，不做什么 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="boundary-list reveal">
+          <div><span>01</span><p>不公开任何个人手机号、微信号</p></div>
+          <div><span>02</span><p>不展示未经授权的播放数据</p></div>
+          <div><span>03</span><p>不代理发行，不承诺流量</p></div>
+          <div><span>04</span><p>不向制作方收取数据授权费用</p></div>
+          <p class="boundary-foot">数据换服务，不是数据买卖。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="次幕 NEXTACT 首页">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="3" y="3" width="9" height="26" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <rect x="20" y="3" width="9" height="9" fill="#c8f65d"/>
+            <rect x="20" y="20" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <span class="brand-name">次幕</span>
+          <span class="brand-wordmark">NEXTACT</span>
+        </a>
+        <p>AI 短剧出海的资产与信用基础设施。</p>
+        <p class="footer-motto">BUILT FOR DECISIONS,<br>NOT SCROLLING.</p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">平台</span>
+        <a href="#exchange">资产交易所</a>
+        <a href="#credit">数据信用档案</a>
+        <a href="#services">服务商网络</a>
+        <a href="#roadmap">发展路线图</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">参与</span>
+        <button type="button" data-open-submit>制作方挂牌</button>
+        <button type="button" data-lead-mode="buyer">买方实名认证</button>
+        <button type="button" data-lead-mode="service">服务商匹配</button>
+        <a href="compliance.html">合规与边界</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <span class="footer-label">联系</span>
+        <a href="mailto:partners@nextact.market">partners@nextact.market</a>
+        <p>商务合作 / 机构数据对接<br>工作日 09:30–18:30 CST</p>
+        <span class="system-status"><i class="live-dot"></i> ALL SYSTEMS OPERATIONAL</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 NEXTACT / 次幕. ALL RIGHTS RESERVED.</span>
+      <span>平台不代理发行，不承诺流量或收益，不构成投资建议。</span>
+      <span class="footer-lang">ZH / CN</span>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="leadDialog" aria-labelledby="leadTitle">
+    <div class="modal-shell">
+      <button class="modal-close" type="button" data-close aria-label="关闭">×</button>
+      <div class="modal-head">
+        <p class="eyebrow" id="leadEyebrow">BUYER INQUIRY</p>
+        <h2 id="leadTitle">发起询价</h2>
+        <p id="leadIntro">询价通过站内编号转交制作方，平台不会公开任何个人联系方式。</p>
+      </div>
+      <div class="context-strip" id="leadContext" hidden>
+        <span>当前标的</span>
+        <strong id="leadContextName"></strong>
+        <em id="leadContextMeta"></em>
+      </div>
+      <form class="modal-form" id="leadForm">
+        <input type="hidden" id="leadMode" value="inquiry">
+        <input type="hidden" id="leadAsset" value="">
+        <div class="form-grid">
+          <label class="field">
+            <span>公司 / 机构名称</span>
+            <input type="text" id="leadCompany" name="company" placeholder="例：Northstar Media" required>
+          </label>
+          <label class="field">
+            <span>联系人</span>
+            <input type="text" id="leadName" name="name" placeholder="你的姓名" required autocomplete="name">
+          </label>
+          <label class="field">
+            <span>工作邮箱</span>
+            <input type="email" id="leadEmail" name="email" placeholder="name@company.com" required autocomplete="email">
+          </label>
+          <label class="field">
+            <span id="leadTypeLabel">买方类型</span>
+            <select id="leadType" name="type" required></select>
+          </label>
+          <label class="field field-full">
+            <span>需求说明</span>
+            <textarea id="leadNote" name="note" rows="3" placeholder="目标市场、预算区间、希望开放的材料，或其他判断依据。"></textarea>
+          </label>
+        </div>
+        <label class="check">
+          <input type="checkbox" required>
+          <span>我确认以真实机构身份发起，并同意平台仅在本次沟通中使用上述信息。</span>
+        </label>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" id="leadSubmit">发送询价 <span aria-hidden="true">↗</span></button>
+          <span>通常 24 小时内回复</span>
+        </div>
+        <p class="demo-note">原型演示：提交不会发送真实数据，也不会产生任何费用。</p>
+      </form>
+      <div class="form-success" id="leadSuccess" hidden>
+        <span class="success-mark">↗</span>
+        <h3 id="leadSuccessTitle" tabindex="-1">询价已进入队列</h3>
+        <p id="leadSuccessCopy">平台将以匿名编号转交制作方，并通过工作邮箱同步进展。</p>
+        <div class="success-ref"><span>REFERENCE</span><strong id="leadRef">NX-2026-0000</strong></div>
+        <button class="btn btn-outline" type="button" data-close>返回继续浏览</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="submitDialog" aria-labelledby="submitTitle">
+    <div class="modal-shell">
+      <button class="modal-close" type="button" data-close aria-label="关闭">×</button>
+      <div class="modal-head">
+        <p class="eyebrow">ASSET ONBOARDING</p>
+        <h2 id="submitTitle">挂牌资产</h2>
+        <p>提交基础信息，平台将在 2 个工作日内完成主体与版权初审。联系方式仅在审核流程内使用。</p>
+      </div>
+      <form class="modal-form" id="submitForm">
+        <div class="form-grid">
+          <label class="field">
+            <span>剧名</span>
+            <input type="text" name="title" placeholder="作品名称" required>
+          </label>
+          <label class="field">
+            <span>制作方</span>
+            <input type="text" name="studio" placeholder="公司 / 团队名称" required>
+          </label>
+          <label class="field">
+            <span>制作完成度</span>
+            <select name="stage" required>
+              <option value="">请选择</option>
+              <option>剧本</option>
+              <option>粗剪</option>
+              <option>成片</option>
+              <option>已上线</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>目标市场</span>
+            <select name="market" required>
+              <option value="">请选择</option>
+              <option>北美</option>
+              <option>东南亚</option>
+              <option>日韩</option>
+              <option>中东</option>
+              <option>拉美</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>题材</span>
+            <select name="genre" required>
+              <option value="">请选择</option>
+              <option>狼人</option>
+              <option>霸总</option>
+              <option>复仇</option>
+              <option>逆袭</option>
+              <option>甜宠</option>
+              <option>悬疑</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>工作邮箱</span>
+            <input type="email" name="email" placeholder="name@studio.com" required autocomplete="email">
+          </label>
+          <label class="check field-full">
+            <input type="checkbox" required>
+            <span>我确认已阅读合规自查要求，所提交信息与版权权属真实有效。</span>
+          </label>
+          <label class="check field-full">
+            <input type="checkbox">
+            <span>我愿意接入平台数据看板，并授权脱敏数据用于信用评估（可随时撤回）。</span>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" id="submitAssetBtn">提交初审 <span aria-hidden="true">↗</span></button>
+          <span>初审免费</span>
+        </div>
+        <p class="demo-note">原型演示：提交不会发送真实数据，也不会保存任何信息。</p>
+      </form>
+      <div class="form-success" id="submitSuccess" hidden>
+        <span class="success-mark">↗</span>
+        <h3 tabindex="-1">已进入初审队列</h3>
+        <p>平台将在 2 个工作日内通过工作邮箱联系你，并发送数据授权协议与合规自查表。</p>
+        <div class="success-ref"><span>ASSET REFERENCE</span><strong id="submitRef">NX-A-0000</strong></div>
+        <button class="btn btn-outline" type="button" data-close>完成</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

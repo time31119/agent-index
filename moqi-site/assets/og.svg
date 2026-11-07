@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="默契 MOQI — 记得住，也懂分寸。">
+  <rect width="1200" height="630" fill="#F4EFE4"/>
+  <g opacity=".16" stroke="#171713" fill="none">
+    <path d="M60 0v630M1140 0v630M0 72h1200M0 558h1200"/>
+  </g>
+  <g transform="translate(74 62)">
+    <rect width="46" height="46" rx="10" fill="#C8402C"/>
+    <path d="M17 12.5c-4 2.6-6 5.8-6 10.4s2 7.8 6 10.4" fill="none" stroke="#F4EFE4" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M29 12.5c4 2.6 6 5.8 6 10.4s-2 7.8-6 10.4" fill="none" stroke="#F4EFE4" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="23" cy="23" r="2.2" fill="#F4EFE4"/>
+  </g>
+  <text x="134" y="92" font-family="'Noto Serif SC','Songti SC',serif" font-size="28" font-weight="700" letter-spacing="2" fill="#171713">默契</text>
+  <text x="134" y="113" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="4.6" fill="#C8402C">MOQI</text>
+  <text x="74" y="242" font-family="'Noto Serif SC','Songti SC',serif" font-size="82" font-weight="700" letter-spacing="-2" fill="#171713">记得住，</text>
+  <text x="74" y="338" font-family="'Noto Serif SC','Songti SC',serif" font-size="82" font-weight="700" letter-spacing="-2" fill="#C8402C">也懂分寸。</text>
+  <text x="78" y="405" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-size="23" font-weight="300" fill="#4D4A42">一张先征得同意，再开始记录的 AI 记忆卡。</text>
+  <text x="78" y="540" font-family="'IBM Plex Mono',monospace" font-size="13" letter-spacing="3.2" fill="#726D61">CONSENT-FIRST AI MEMORY CARD / CARD 01</text>
+  <g transform="translate(790 160) rotate(-7)">
+    <rect x="0" y="0" width="326" height="206" rx="14" fill="#E9E1D1" stroke="#D5CBB8"/>
+    <rect x="14" y="14" width="298" height="178" rx="8" fill="none" stroke="#BDB2A0"/>
+    <rect x="28" y="46" width="174" height="104" rx="4" fill="#DDE1D5"/>
+    <text x="42" y="68" font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing="1" fill="#3C443B">● RECORDING / 2 OF 2</text>
+    <text x="42" y="91" font-family="'IBM Plex Mono',monospace" font-size="18" fill="#171713">00:14:32</text>
+    <path d="M42 116h8v13h-8zM55 109h8v20h-8zM68 113h8v16h-8zM81 104h8v25h-8zM94 111h8v18h-8zM107 107h8v22h-8zM120 115h8v14h-8zM133 110h8v19h-8z" fill="#4D5D4B"/>
+    <text x="42" y="141" font-family="'Noto Sans SC',sans-serif" font-size="8" fill="#4D4A42">今天先定三件事。</text>
+    <circle cx="264" cy="98" r="28" fill="#C8402C"/>
+    <circle cx="264" cy="98" r="20" fill="none" stroke="#F4EFE4" stroke-opacity=".45"/>
+    <text x="250" y="102" font-family="'Noto Serif SC',serif" font-size="13" fill="#F4EFE4">默契</text>
+    <text x="28" y="176" font-family="'IBM Plex Mono',monospace" font-size="7" letter-spacing="1.2" fill="#726D61">85.6 × 54 × 3.2 MM · LOCAL VAULT · 32 GB</text>
+  </g>
+  <text x="798" y="424" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="2.4" fill="#726D61">MEMORY, WITH MANNERS.</text>
+  <rect x="74" y="572" width="1052" height="1" fill="#171713" opacity=".22"/>
+  <text x="74" y="602" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="2" fill="#726D61">MOQI.STUDIO / FOUNDING 500 / 2026</text>
+  <text x="1126" y="602" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="2" fill="#726D61">NOT ALWAYS-ON.</text>
+</svg>

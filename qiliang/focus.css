@@ -1,0 +1,682 @@
+/* =========================================================
+   起量 QILIANG — focus / readability layer
+   Loaded last. Larger type, fewer lessons, more operation.
+   ========================================================= */
+
+/* Hide anything that is reference, theory or documentation. */
+.learning-only,
+.nav-secondary {
+  display: none !important;
+}
+
+/* ---------------------------------------------------------
+   Base type: no more 7–9px body copy
+   --------------------------------------------------------- */
+body {
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+.eyebrow {
+  font-size: 11px !important;
+  letter-spacing: 0.1em !important;
+}
+.tiny {
+  font-size: 12px !important;
+}
+.small {
+  font-size: 13px !important;
+}
+.page-sub {
+  font-size: 15px !important;
+  line-height: 1.65;
+}
+
+.btn {
+  font-size: 14px !important;
+  min-height: 40px;
+}
+.btn-sm {
+  font-size: 13px !important;
+  min-height: 34px;
+}
+.btn-lg {
+  font-size: 15px !important;
+}
+.btn-icon {
+  width: 36px;
+  height: 36px;
+}
+.chip {
+  font-size: 13px !important;
+  min-height: 32px;
+  padding: 0 13px;
+}
+.badge {
+  font-size: 10.5px !important;
+  height: 24px;
+  padding: 0 9px;
+}
+.platform-tag {
+  font-size: 10.5px !important;
+  height: 24px;
+  padding: 0 9px;
+}
+.text-link {
+  font-size: 12px !important;
+}
+
+/* ---------------------------------------------------------
+   Shell / navigation
+   --------------------------------------------------------- */
+.nav-item {
+  font-size: 14px !important;
+  min-height: 43px;
+}
+.nav-label {
+  font-size: 10px !important;
+}
+.nav-count,
+.nav-new {
+  font-size: 9.5px !important;
+}
+.workspace-meta strong {
+  font-size: 13px !important;
+}
+.workspace-meta span {
+  font-size: 11px !important;
+}
+.quota-top {
+  font-size: 11px !important;
+}
+.quota-card p {
+  font-size: 11px !important;
+}
+.sidebar-foot-meta strong {
+  font-size: 12px !important;
+}
+.sidebar-foot-meta span {
+  font-size: 10px !important;
+}
+.system-state {
+  display: none !important;
+}
+.crumb {
+  font-size: 13px !important;
+}
+.global-search {
+  font-size: 13px !important;
+  height: 38px;
+}
+.global-search .kbd {
+  font-size: 10px !important;
+}
+.credit-pill {
+  font-size: 11px !important;
+}
+
+/* ---------------------------------------------------------
+   Dashboard
+   --------------------------------------------------------- */
+.hero-sub {
+  font-size: 15px !important;
+}
+.today-chip {
+  font-size: 10.5px !important;
+}
+.prompt-top {
+  font-size: 12px !important;
+}
+.prompt-hint {
+  font-size: 10px !important;
+}
+.prompt-card textarea {
+  font-size: 19px !important;
+}
+.prompt-meta {
+  font-size: 10px !important;
+}
+.quick-card strong {
+  font-size: 13px !important;
+}
+.quick-card small {
+  font-size: 11px !important;
+}
+.section-head h2 {
+  font-size: 26px !important;
+}
+.section-head p {
+  font-size: 12px !important;
+}
+.opp-card h3 {
+  font-size: 14px !important;
+}
+.opp-poster span {
+  font-size: 22px !important;
+}
+.opp-poster .poster-meta {
+  font-size: 9px !important;
+}
+.opp-stats {
+  font-size: 10.5px !important;
+}
+.opp-action {
+  font-size: 12px !important;
+}
+.project-info strong {
+  font-size: 14px !important;
+}
+.project-info span {
+  font-size: 12px !important;
+}
+.project-progress .row {
+  font-size: 10px !important;
+}
+.stat-label {
+  font-size: 12px !important;
+}
+.stat-value {
+  font-size: 25px !important;
+}
+.stat-delta {
+  font-size: 11px !important;
+}
+.rail-head {
+  font-size: 13px !important;
+}
+.account-meta strong {
+  font-size: 12px !important;
+}
+.account-meta span {
+  font-size: 10px !important;
+}
+.review-row {
+  font-size: 12px !important;
+}
+.review-note {
+  font-size: 11px !important;
+}
+.boost-card h3 {
+  font-size: 22px !important;
+}
+.boost-card p {
+  font-size: 12px !important;
+}
+
+/* ---------------------------------------------------------
+   Studio: preview + timeline + AI controls, no lesson rail
+   --------------------------------------------------------- */
+#page-studio .studio-layout {
+  grid-template-columns: minmax(0, 1fr) 306px;
+}
+#page-studio .studio-left {
+  display: none !important;
+}
+@media (max-width: 1160px) {
+  #page-studio .studio-layout {
+    grid-template-columns: minmax(0, 1fr) 230px;
+  }
+  #page-studio .studio-top {
+    flex-wrap: wrap;
+  }
+  #page-studio .studio-actions {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+@media (max-width: 900px) {
+  #page-studio .studio-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------
+   Studio text
+   --------------------------------------------------------- */
+.studio-title {
+  font-size: 26px !important;
+}
+.save-state {
+  font-size: 10px !important;
+}
+.stage-step {
+  font-size: 12px !important;
+}
+.stage-step span {
+  font-size: 9.5px !important;
+  font-weight: 700;
+}
+.stage-meter {
+  font-size: 10.5px !important;
+}
+.step-text strong {
+  font-size: 13px !important;
+}
+.step-text span {
+  font-size: 10.5px !important;
+}
+.preview-label {
+  font-size: 9.5px !important;
+}
+.preview-zoom {
+  font-size: 9.5px !important;
+}
+.transport-time {
+  font-size: 10px !important;
+}
+.transport-tool {
+  font-size: 10px !important;
+  height: 28px;
+}
+.shot-visual span {
+  font-size: 9px !important;
+}
+.shot-meta {
+  font-size: 9px !important;
+}
+.tl-toolbar,
+.tl-labels span,
+.tl-clip {
+  font-size: 9px !important;
+}
+.tl-ruler {
+  font-size: 8px !important;
+}
+.director-meta strong {
+  font-size: 12px !important;
+}
+.director-meta span {
+  font-size: 11px !important;
+}
+.msg {
+  font-size: 13px !important;
+  line-height: 1.6;
+}
+.director-suggestion .sug-top {
+  font-size: 10px !important;
+}
+.director-suggestion p {
+  font-size: 11px !important;
+}
+.chat-compose textarea {
+  font-size: 12px !important;
+}
+.compose-hints button {
+  font-size: 9.5px !important;
+}
+
+/* ---------------------------------------------------------
+   Radar
+   --------------------------------------------------------- */
+.feature-kicker {
+  font-size: 10px !important;
+  color: #f4ffd0 !important;
+  font-weight: 650 !important;
+}
+.feature-copy p {
+  font-size: 12px !important;
+}
+.feature-stats strong {
+  font-size: 16px !important;
+}
+.feature-stats span {
+  font-size: 10px !important;
+}
+.radar-feature-body h3 {
+  font-size: 23px !important;
+}
+.radar-feature-body > p {
+  font-size: 13px !important;
+}
+.radar-card-body h4 {
+  font-size: 13px !important;
+}
+.radar-card-meta {
+  font-size: 10px !important;
+}
+.radar-card-foot .fitness {
+  font-size: 10px !important;
+}
+.radar-card-foot button {
+  font-size: 11px !important;
+}
+
+/* ---------------------------------------------------------
+   Publish
+   --------------------------------------------------------- */
+.account-pill .account-meta strong {
+  font-size: 12px !important;
+}
+.account-pill .account-meta span {
+  font-size: 10px !important;
+}
+.pub-tab {
+  font-size: 13px !important;
+}
+.cal-date {
+  font-size: 10px !important;
+}
+.cal-event {
+  font-size: 9.5px !important;
+}
+.queue-info strong {
+  font-size: 13px !important;
+}
+.queue-meta {
+  font-size: 10px !important;
+}
+.queue-actions button {
+  font-size: 11px !important;
+}
+.check-card h3 {
+  font-size: 14px !important;
+}
+.check-card > p {
+  font-size: 11px !important;
+}
+.check-text strong {
+  font-size: 11px !important;
+}
+.check-text span {
+  font-size: 10px !important;
+}
+.ai-label-row strong {
+  font-size: 11px !important;
+}
+.ai-label-row span {
+  font-size: 10px !important;
+}
+.boost-planner p {
+  font-size: 11px !important;
+}
+.boost-field label {
+  font-size: 10px !important;
+}
+.boost-estimate {
+  font-size: 10px !important;
+}
+
+/* ---------------------------------------------------------
+   Analytics
+   --------------------------------------------------------- */
+.ana-label {
+  font-size: 11px !important;
+}
+.ana-foot {
+  font-size: 10px !important;
+}
+.ana-card-head h3 {
+  font-size: 20px !important;
+}
+.ana-card-head p {
+  font-size: 11px !important;
+}
+.legend {
+  font-size: 9.5px !important;
+}
+.chart-axis-label {
+  font-size: 9.5px !important;
+}
+.split-row {
+  font-size: 11px !important;
+}
+.split-row small {
+  font-size: 10px !important;
+}
+.insight-copy h3 {
+  font-size: 27px !important;
+}
+.insight-copy > p {
+  font-size: 12px !important;
+}
+.insight-action span {
+  font-size: 11px !important;
+}
+.insight-stat .label {
+  font-size: 10px !important;
+}
+.insight-stat .value {
+  font-size: 20px !important;
+}
+.insight-stat .delta {
+  font-size: 10px !important;
+}
+.content-table th {
+  font-size: 9.5px !important;
+}
+.content-table td {
+  font-size: 11px !important;
+}
+.table-title strong {
+  font-size: 11px !important;
+}
+.table-title span {
+  font-size: 9px !important;
+}
+
+/* ---------------------------------------------------------
+   Library
+   --------------------------------------------------------- */
+.source-meta strong {
+  font-size: 10px !important;
+}
+.source-meta span {
+  font-size: 9px !important;
+}
+.asset-meta strong {
+  font-size: 10px !important;
+}
+.asset-meta span {
+  font-size: 9px !important;
+}
+.asset-license {
+  font-size: 8px !important;
+}
+.voice-info strong {
+  font-size: 10px !important;
+}
+.voice-info span {
+  font-size: 9px !important;
+}
+
+/* ---------------------------------------------------------
+   Templates: turn the reference page into a simple picker
+   --------------------------------------------------------- */
+#page-templates .ref-hero,
+#page-templates .paywall-pattern-grid,
+#page-templates .ref-note,
+#page-templates .page-actions {
+  display: none !important;
+}
+
+#page-templates .ref-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+#page-templates .ref-card {
+  padding: 10px;
+}
+#page-templates .ref-card-visual {
+  height: 175px;
+}
+#page-templates .ref-frame strong {
+  font-size: 10px !important;
+}
+#page-templates .ref-frame span {
+  font-size: 6.5px !important;
+}
+#page-templates .ref-card-body {
+  padding: 10px 4px 2px;
+}
+#page-templates .ref-card h3 {
+  margin-top: 7px;
+  font-size: 16px !important;
+}
+#page-templates .ref-card p,
+#page-templates .ref-tags,
+#page-templates .ref-screen-count,
+#page-templates .ref-card-actions [data-ref-preview] {
+  display: none !important;
+}
+#page-templates .ref-card-actions {
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+#page-templates .ref-card-actions button:last-child {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 12px !important;
+  border-radius: 7px;
+}
+
+/* ---------------------------------------------------------
+   Modals
+   --------------------------------------------------------- */
+.modal-head h2 {
+  font-size: 28px !important;
+}
+.modal-head p {
+  font-size: 12px !important;
+}
+.modal-note {
+  font-size: 11px !important;
+}
+.publish-platform .pp-title strong {
+  font-size: 12px !important;
+}
+.publish-platform .pp-body p {
+  font-size: 10px !important;
+}
+.publish-platform .pp-account {
+  font-size: 9px !important;
+}
+.publish-options .field > label {
+  font-size: 10px !important;
+}
+.publish-options .input,
+.publish-options .select {
+  font-size: 12px !important;
+}
+.ai-label-row strong {
+  font-size: 11px !important;
+}
+.ai-label-row span {
+  font-size: 9px !important;
+}
+.setting-card strong {
+  font-size: 12px !important;
+}
+.setting-card p {
+  font-size: 10px !important;
+}
+.setting-card .badge {
+  font-size: 8px !important;
+}
+.theme-option .theme-meta strong {
+  font-size: 13px !important;
+}
+.theme-option .theme-meta small {
+  font-size: 10px !important;
+}
+.paywall-top h2 {
+  font-size: 30px !important;
+}
+.paywall-top p {
+  font-size: 12px !important;
+}
+.paywall-value span {
+  font-size: 9px !important;
+}
+.paywall-value strong {
+  font-size: 22px !important;
+}
+.paywall-value small {
+  font-size: 9px !important;
+}
+.paywall-toggle button {
+  font-size: 10px !important;
+}
+.paywall-trial-note {
+  font-size: 9px !important;
+}
+.paywall-plan .plan-name {
+  font-size: 10px !important;
+}
+.paywall-price {
+  font-size: 25px !important;
+}
+.paywall-plan > p {
+  font-size: 10px !important;
+}
+.paywall-plan li {
+  font-size: 10px !important;
+}
+.paywall-plan .plan-badge {
+  font-size: 8px !important;
+}
+.paywall-features span {
+  font-size: 10px !important;
+}
+.paywall-trust {
+  font-size: 9px !important;
+}
+.toast {
+  font-size: 12px !important;
+}
+
+/* ---------------------------------------------------------
+   Contrast fixes: small lime text is now pale, larger, bolder.
+   Lime remains a fill colour (ink on lime), not a small text colour.
+   --------------------------------------------------------- */
+.boost-card .eyebrow,
+.insight-copy .eyebrow,
+.paywall-plan.featured .plan-name {
+  color: #f4ffd0 !important;
+  font-size: 10.5px !important;
+  font-weight: 650 !important;
+}
+.poster-kicker {
+  font-size: 9px !important;
+  font-weight: 700 !important;
+}
+.poster-copy p {
+  font-size: 10.5px !important;
+}
+.poster-user strong {
+  font-size: 9px !important;
+}
+.poster-user small {
+  font-size: 7.5px !important;
+}
+.location-pill,
+.follow-pill {
+  font-size: 8px !important;
+}
+.poster-action span {
+  font-size: 7px !important;
+}
+.step-item.done .step-num,
+.stage-step.done span,
+.stage-step.current span {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+.boost-card .btn {
+  font-size: 13px !important;
+  font-weight: 650 !important;
+}
+
+@media (max-width: 1160px) {
+  #page-templates .ref-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  #page-templates .ref-grid {
+    grid-template-columns: 1fr;
+  }
+  #page-templates .ref-card-visual {
+    height: 150px;
+  }
+}

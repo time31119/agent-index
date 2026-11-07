@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PERP ATLAS · 开源合约策略观测站</title>
+  <meta name="description" content="把 GitHub 上最受关注的永续合约策略仓库、Release 下载量与 BTC/ETH/SOL/BNB 实时行情放进同一张观察桌面。看代码、看市场、不看喊单。">
+  <meta name="theme-color" content="#0a0d0f">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PERP ATLAS · 开源合约策略观测站">
+  <meta property="og:description" content="20 个开源合约策略仓库 × 实时永续行情。星标、下载、资金费率与策略环境，一屏读完。">
+  <meta property="og:image" content="preview-desktop.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="preview-desktop.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="topline">
+      <div class="container topline-inner">
+        <span class="topline-brand">PERP ATLAS <i>/</i> 开源永续策略观测站</span>
+        <div class="topline-status">
+          <span class="status-live" id="globalStatusDot" aria-hidden="true"></span>
+          <span id="globalStatusText">正在连接数据源</span>
+          <span class="topline-sep" aria-hidden="true">·</span>
+          <span class="topline-clock"><time id="clock">--:--:--</time> CST</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav container" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="PERP ATLAS 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="13.2" fill="none" stroke="currentColor" stroke-opacity=".26" stroke-width=".9"/>
+          <circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-opacity=".14" stroke-width=".9"/>
+          <path d="M6.8 24.5 16 7l9.2 17.5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/>
+          <path d="M11.2 19.5h9.6" stroke="currentColor" stroke-width="1.35"/>
+          <circle cx="16" cy="7" r="2.1" fill="var(--signal)"/>
+        </svg>
+        <span class="brand-copy">
+          <span class="brand-name">PERP ATLAS</span>
+          <span class="brand-cn">永续策略图谱</span>
+        </span>
+      </a>
+
+      <div class="nav-links" id="siteMenu">
+        <a href="#market"><span>01</span>市场脉冲</a>
+        <a href="#repos"><span>02</span>仓库排行</a>
+        <a href="#agents"><span>03</span>加密智能体</a>
+        <a href="#fit"><span>04</span>策略适配</a>
+        <a href="#method"><span>05</span>观察方法</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="watch-btn" type="button" id="watchBtn" aria-pressed="false">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m8 2.2 1.72 3.48 3.84.56-2.78 2.71.66 3.83L8 10.97l-3.44 1.81.66-3.83L2.44 6.24l3.84-.56L8 2.2Z" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+          观察清单
+          <span class="watch-count" id="watchCount">0</span>
+        </button>
+        <button class="icon-btn" type="button" id="refreshBtn" aria-label="刷新全部实时数据" title="刷新全部实时数据">
+          <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.2 7.2A6.4 6.4 0 1 0 15 11" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M15.5 3.3v4.3h-4.2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" id="menuToggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="siteMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="ticker" aria-label="实时永续合约价格">
+      <div class="ticker-fade ticker-fade-left" aria-hidden="true"></div>
+      <div class="container ticker-inner">
+        <span class="ticker-label"><i class="pulse-dot"></i> LIVE TAPE</span>
+        <div class="ticker-track" id="tickerTrack">
+          <span class="ticker-item is-loading"><span class="ticker-symbol">BTCUSDT</span><span class="ticker-price">加载中</span></span>
+          <span class="ticker-item is-loading"><span class="ticker-symbol">ETHUSDT</span><span class="ticker-price">加载中</span></span>
+          <span class="ticker-item is-loading"><span class="ticker-symbol">SOLUSDT</span><span class="ticker-price">加载中</span></span>
+          <span class="ticker-item is-loading"><span class="ticker-symbol">BNBUSDT</span><span class="ticker-price">加载中</span></span>
+        </div>
+        <a class="ticker-note" href="#method"><span id="tickerSource">BINANCE FUTURES</span> <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="ticker-fade ticker-fade-right" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="hero-kicker reveal">
+            <span class="kicker-index">VOL. 01 / 2026</span>
+            <span class="kicker-rule" aria-hidden="true"></span>
+            <span>OPEN-SOURCE PERPETUAL STRATEGY OBSERVATORY</span>
+          </div>
+
+          <h1 class="hero-title reveal" id="hero-title">
+            <span>GitHub 上最热的</span>
+            <span><em>合约策略</em>，</span>
+            <span>正在这里被观测。</span>
+          </h1>
+
+          <p class="hero-lede reveal">把 <strong>20 个开源仓库</strong>、<strong>10 个加密智能体项目</strong>的社区热度与收益证据，同 <strong>BTC / ETH / SOL / BNB</strong> 永续合约的实时行情叠在同一张桌面上。不是跟单信号，是一套可以自己复查的观察框架。</p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#repos">浏览仓库排行 <span class="btn-arrow" aria-hidden="true">↘</span></a>
+            <a class="btn btn-ghost" href="#market">先看实时市场 <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="hero-numbers reveal" aria-label="观察站概览">
+            <div class="hero-number">
+              <strong id="statRepos">20</strong>
+              <span>开源仓库 <small>REPOS</small></span>
+            </div>
+            <div class="hero-number">
+              <strong id="statAgents">10</strong>
+              <span>加密智能体 <small>AGENTS</small></span>
+            </div>
+            <div class="hero-number">
+              <strong id="statStars">221.6<span>K</span></strong>
+              <span>累计星标 <small>STARS</small></span>
+            </div>
+            <div class="hero-number">
+              <strong id="statDownloads">106.8<span>K</span></strong>
+              <span>发布下载 <small>RELEASE DLS</small></span>
+            </div>
+            <div class="hero-number">
+              <strong id="statMarkets">4</strong>
+              <span>永续市场 <small>PERP MARKETS</small></span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-terminal reveal" id="heroTerminal" aria-label="BTC 永续实时概览">
+          <div class="terminal-notch" aria-hidden="true"></div>
+          <div class="terminal-head">
+            <span class="terminal-id"><i class="pulse-dot"></i> MARKET / 永续市场</span>
+            <span class="terminal-badge" id="heroSource">BINANCE · LIVE</span>
+          </div>
+
+          <div class="terminal-symbol-row">
+            <div>
+              <span class="terminal-symbol"><span id="heroBase">BTC</span> <small>/ USDT</small></span>
+              <span class="terminal-perp">PERPETUAL · 永续</span>
+            </div>
+            <span class="terminal-leverage" id="heroLeverage">最高 125×</span>
+          </div>
+
+          <div class="terminal-price-row">
+            <strong class="terminal-price" id="heroPrice">77,183.7</strong>
+            <span class="change-chip is-down" id="heroChange">−1.91%</span>
+          </div>
+          <span class="terminal-price-note">标记价格 / MARK PRICE</span>
+
+          <div class="hero-spark" id="heroSpark" aria-hidden="true"></div>
+
+          <div class="terminal-metrics">
+            <div class="terminal-metric">
+              <span>资金费率 <small>8H</small></span>
+              <strong id="heroFunding">0.0100%</strong>
+              <em id="heroFundingApr">年化 +10.95%</em>
+            </div>
+            <div class="terminal-metric">
+              <span>未平仓量 <small>OI</small></span>
+              <strong id="heroOi">$7.44B</strong>
+              <em id="heroOiChange">2.5h +0.02%</em>
+            </div>
+            <div class="terminal-metric">
+              <span>多空比 <small>L/S</small></span>
+              <strong id="heroLs">2.67</strong>
+              <em id="heroLongPct">多头账户 72.7%</em>
+            </div>
+          </div>
+
+          <div class="terminal-foot">
+            <span id="heroUpdated">更新于 --:--:--</span>
+            <span class="terminal-regime" id="heroRegime">读取市场结构…</span>
+          </div>
+          <div class="terminal-scanline" aria-hidden="true"></div>
+        </aside>
+      </div>
+
+      <div class="hero-rule container" aria-hidden="true">
+        <span>SCROLL TO OBSERVE</span>
+        <i></i>
+        <span>数据不是结论 / DATA IS NOT A THESIS</span>
+      </div>
+    </section>
+
+    <section class="section market-section" id="market" aria-labelledby="market-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-main">
+            <p class="eyebrow"><span>01</span> MARKET PULSE / 市场脉冲</p>
+            <h2 id="market-title">先看市场，<br>再谈策略。</h2>
+          </div>
+          <div class="section-head-side">
+            <p>同一套策略，在不同波动与资金费率环境里会得到相反的结果。行情由公开 API 轮询，指标在浏览器里现场计算。</p>
+            <div class="head-actions">
+              <span class="source-chip" id="marketSource"><i></i> Binance Futures · 连接中</span>
+              <button class="text-btn" type="button" id="marketRefreshBtn">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.4 6.4A5.6 5.6 0 1 0 13.2 9.6" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M13.7 2.9v3.8H9.9" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+                刷新
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="market-shell reveal">
+          <div class="chart-panel">
+            <div class="chart-toolbar">
+              <div class="symbol-tabs" id="symbolTabs" role="group" aria-label="选择合约">
+                <button class="symbol-tab is-active" type="button" data-symbol="BTCUSDT"><span>BTC</span><small>USDT PERP</small></button>
+                <button class="symbol-tab" type="button" data-symbol="ETHUSDT"><span>ETH</span><small>USDT PERP</small></button>
+                <button class="symbol-tab" type="button" data-symbol="SOLUSDT"><span>SOL</span><small>USDT PERP</small></button>
+                <button class="symbol-tab" type="button" data-symbol="BNBUSDT"><span>BNB</span><small>USDT PERP</small></button>
+              </div>
+              <div class="interval-tabs" id="intervalTabs" role="group" aria-label="选择K线周期">
+                <button class="interval-tab" type="button" data-interval="1m">1m</button>
+                <button class="interval-tab is-active" type="button" data-interval="5m">5m</button>
+                <button class="interval-tab" type="button" data-interval="15m">15m</button>
+                <button class="interval-tab" type="button" data-interval="1h">1h</button>
+              </div>
+            </div>
+
+            <div class="chart-title-row">
+              <div class="chart-title-main">
+                <span class="chart-symbol" id="chartSymbol">BTC / USDT 永续</span>
+                <strong id="chartPrice">77,183.7</strong>
+                <span class="change-chip is-down" id="chartChange">−1.91%</span>
+              </div>
+              <div class="chart-meta">
+                <span id="chartSourceTag">BINANCE FUTURES</span>
+                <span class="meta-dot" aria-hidden="true"></span>
+                <span id="marketUpdated">更新于 --:--:--</span>
+                <span class="latency" id="marketLatency">— ms</span>
+              </div>
+            </div>
+
+            <div class="chart-wrap" id="chartWrap">
+              <svg id="priceChart" class="price-chart" viewBox="0 0 960 430" role="img" aria-label="永续合约价格K线图"></svg>
+              <div class="chart-tooltip" id="chartTooltip" hidden>
+                <span class="tt-time" id="ttTime">--</span>
+                <div class="tt-grid">
+                  <span>开 <b id="ttOpen">—</b></span>
+                  <span>高 <b id="ttHigh">—</b></span>
+                  <span>低 <b id="ttLow">—</b></span>
+                  <span>收 <b id="ttClose">—</b></span>
+                </div>
+                <span class="tt-vol">成交额 <b id="ttVol">—</b></span>
+              </div>
+              <div class="chart-loading" id="chartLoading">
+                <span class="loading-bar"></span>
+                <span>正在拉取 K 线</span>
+              </div>
+            </div>
+
+            <div class="chart-footer">
+              <div class="chart-legend">
+                <span><i class="legend-up"></i>上涨</span>
+                <span><i class="legend-down"></i>下跌</span>
+                <span><i class="legend-ema20"></i>EMA20</span>
+                <span><i class="legend-ema60"></i>EMA60</span>
+                <span class="chart-hint">悬停查看 OHLC</span>
+              </div>
+              <div class="chart-stats">
+                <span>24H 高 <b id="chartHigh">—</b></span>
+                <span>24H 低 <b id="chartLow">—</b></span>
+                <span>24H 额 <b id="chartVolume">—</b></span>
+                <span>ATR14 <b id="chartAtr">—</b></span>
+              </div>
+            </div>
+
+            <div class="range-bar" aria-label="24小时价格区间位置">
+              <div class="range-label"><span>24H RANGE</span><span id="chartRangePos">—</span></div>
+              <div class="range-track"><i id="chartRangeFill"></i><b id="chartRangeMarker"></b></div>
+            </div>
+          </div>
+
+          <aside class="market-rail">
+            <article class="metric-card metric-funding">
+              <div class="metric-card-head">
+                <span>FUNDING / 资金费率</span>
+                <span class="metric-tag" id="fundingTag">8H</span>
+              </div>
+              <div class="metric-hero">
+                <strong id="fundingRate">0.0100<small>%</small></strong>
+                <span class="metric-delta" id="fundingApr">年化 +10.95%</span>
+              </div>
+              <div class="funding-meter"><i id="fundingBar"></i><span class="meter-zero"></span></div>
+              <div class="funding-scale"><span>−0.05%</span><span>0</span><span>+0.05%</span></div>
+              <div class="metric-card-foot">
+                <span>下次结算 <b id="fundingCountdown">--:--:--</b></span>
+                <span id="fundingSide">多头付费</span>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <div class="metric-card-head">
+                <span>OPEN INTEREST / 持仓</span>
+                <span class="metric-tag" id="oiTag">2.5H</span>
+              </div>
+              <div class="metric-hero">
+                <strong id="oiValue">$7.44<small>B</small></strong>
+                <span class="metric-delta" id="oiChange">+0.02%</span>
+              </div>
+              <div class="mini-bars" id="oiBars" aria-hidden="true"></div>
+              <div class="metric-card-foot">
+                <span id="oiSub">BTC 计价 96.3K</span>
+                <span id="oiChangeLabel">区间变化</span>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <div class="metric-card-head">
+                <span>POSITIONING / 持仓结构</span>
+                <span class="metric-tag">ACCOUNTS</span>
+              </div>
+              <div class="positioning-top">
+                <div>
+                  <span class="micro-label">LONG / SHORT</span>
+                  <strong id="lsRatio">2.67</strong>
+                </div>
+                <div class="positioning-split">
+                  <span id="lsLong">多 72.7%</span>
+                  <span id="lsShort">空 27.3%</span>
+                </div>
+              </div>
+              <div class="split-bar"><i id="lsBarLong"></i><i id="lsBarShort"></i></div>
+              <div class="taker-row">
+                <span>主动买卖比 <b id="takerRatio">—</b></span>
+                <div class="taker-track"><i id="takerBar"></i><span class="taker-mid"></span></div>
+              </div>
+            </article>
+          </aside>
+        </div>
+
+        <div class="market-readout reveal">
+          <div class="readout-regime">
+            <span class="micro-label">REGIME READ / 环境读数</span>
+            <strong id="regimeLabel">读取中</strong>
+            <p id="regimeNote">正在用 K 线、资金费率与持仓数据计算市场结构。</p>
+          </div>
+          <div class="readout-tags" id="regimeTags" aria-label="市场结构标签"></div>
+          <a class="readout-link" href="#fit">看策略适配 <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section repo-section" id="repos" aria-labelledby="repos-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-main">
+            <p class="eyebrow"><span>02</span> REPOSITORY INDEX / 仓库排行</p>
+            <h2 id="repos-title">20 个仓库，<br>不是 20 个答案。</h2>
+          </div>
+          <div class="section-head-side">
+            <p>按星标、Release 资产下载和维护活跃度观察。方向为人工标注，策略摘要只描述代码结构，不评价收益。每一行都能回到 GitHub 原址。</p>
+            <div class="head-metrics">
+              <span><strong id="repoCount">20</strong> REPOS</span>
+              <span><strong id="repoStarTotal">221.6K</strong> STARS</span>
+              <span><strong id="repoDownloadTotal">106.8K</strong> DLS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="repo-controls">
+          <div class="filter-row">
+            <div class="filter-pills" id="repoFilters" role="group" aria-label="按策略方向筛选">
+              <button class="filter-pill is-active" type="button" data-cat="all">全部 <span>20</span></button>
+              <button class="filter-pill" type="button" data-cat="library">策略库 <span>3</span></button>
+              <button class="filter-pill" type="button" data-cat="market">做市/网格 <span>4</span></button>
+              <button class="filter-pill" type="button" data-cat="trend">趋势/突破 <span>3</span></button>
+              <button class="filter-pill" type="button" data-cat="ai">AI/ML <span>3</span></button>
+              <button class="filter-pill" type="button" data-cat="engine">执行引擎 <span>4</span></button>
+              <button class="filter-pill" type="button" data-cat="research">回测研究 <span>3</span></button>
+            </div>
+            <button class="watch-filter" type="button" id="watchFilter" aria-pressed="false">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m8 2.2 1.72 3.48 3.84.56-2.78 2.71.66 3.83L8 10.97l-3.44 1.81.66-3.83L2.44 6.24l3.84-.56L8 2.2Z" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+              只看清单
+            </button>
+          </div>
+
+          <div class="tool-row">
+            <label class="search-box">
+              <svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="7.8" cy="7.8" r="5.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="m11.7 11.7 4 4" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span class="sr-only">搜索仓库、方向或语言</span>
+              <input type="search" id="repoSearch" placeholder="搜索仓库 / 方向 / 语言" autocomplete="off" spellcheck="false">
+              <kbd>/</kbd>
+            </label>
+
+            <div class="sort-tabs" id="sortTabs" role="group" aria-label="排行依据">
+              <span class="sort-label">SORT BY</span>
+              <button class="sort-tab is-active" type="button" data-sort="stars">星标</button>
+              <button class="sort-tab" type="button" data-sort="downloads">下载</button>
+              <button class="sort-tab" type="button" data-sort="updated">更新</button>
+              <button class="sort-tab" type="button" data-sort="heat">综合</button>
+            </div>
+
+            <button class="text-btn repo-refresh" type="button" id="repoRefreshBtn">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.4 6.4A5.6 5.6 0 1 0 13.2 9.6" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M13.7 2.9v3.8H9.9" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+              同步 GitHub
+            </button>
+          </div>
+
+          <div class="result-row">
+            <p id="repoResultMeta"><strong>20</strong> 个仓库 <span aria-hidden="true">/</span> 按社区星标排序 <span aria-hidden="true">/</span> 展示 <b id="repoVisibleCount">20</b> 个</p>
+            <p class="result-note" id="downloadFreshness">下载量为 GitHub Release 资产累计 · 快照 2026-10-31</p>
+          </div>
+        </div>
+
+        <div class="repo-workspace">
+          <div class="repo-table-wrap">
+            <div class="repo-head" id="repoHead">
+              <span class="col-rank">#</span>
+              <span class="col-repo">仓库 / 方向</span>
+              <span class="col-kind">类型</span>
+              <span class="col-stars">STARS</span>
+              <span class="col-downloads">RELEASE DLS</span>
+              <span class="col-status">维护</span>
+              <span class="col-updated">更新</span>
+            </div>
+            <div class="repo-list" id="repoList" aria-live="polite"></div>
+            <div class="repo-empty" id="repoEmpty" hidden>
+              <span class="empty-mark">∅</span>
+              <h3>没有符合条件的仓库。</h3>
+              <p>换一个方向，或清空搜索与观察清单筛选。</p>
+              <button class="btn btn-ghost" type="button" id="clearFilters">清除筛选</button>
+            </div>
+            <div class="repo-loading" id="repoLoading" hidden>
+              <span class="loading-bar"></span>
+              <span>正在同步 GitHub 仓库数据</span>
+            </div>
+          </div>
+
+          <aside class="repo-detail" id="repoDetail" aria-live="polite">
+            <div class="detail-placeholder">
+              <span class="detail-index">SELECT / 01</span>
+              <p>从左侧选择一个仓库，查看策略结构、风险注记与最近提交。</p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="repo-foot">
+          <p><span class="foot-mark">!</span> 星标衡量关注度，不衡量策略质量；Release 下载不包含 pip/npm 安装；下载为 0 不代表没人使用。</p>
+          <a class="text-link" href="#method">阅读完整口径 <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section agent-section" id="agents" aria-labelledby="agents-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-main">
+            <p class="eyebrow"><span>03</span> AGENT WATCH / 加密智能体</p>
+            <h2 id="agents-title">10 个加密智能体，<br>先过证据关。</h2>
+          </div>
+          <div class="section-head-side">
+            <p>只收加密原生项目：永续合约、链上交易或加密资产专用智能体。排序不按收益海报，而按公开证据质量、工程完整度与合约相关性。</p>
+            <div class="head-metrics">
+              <span><strong id="agentCount">10</strong> AGENTS</span>
+              <span><strong id="agentEvidenceCount">2</strong> B-GRADE</span>
+              <span><strong id="agentAuditedCount">0</strong> AUDITED</span>
+            </div>
+            <div class="head-actions">
+              <div class="agent-sort" id="agentSortTabs" role="group" aria-label="智能体排序依据">
+                <span>SORT</span>
+                <button class="agent-sort-btn is-active" type="button" data-agent-sort="evidence">证据优先</button>
+                <button class="agent-sort-btn" type="button" data-agent-sort="stars">热度</button>
+                <button class="agent-sort-btn" type="button" data-agent-sort="updated">更新</button>
+              </div>
+              <span class="agent-snapshot">星标快照 · 2026-10-31</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-audit reveal">
+          <div class="audit-copy">
+            <span class="audit-kicker">EVIDENCE FIRST / 证据优先</span>
+            <h3>没有 A 级，<br>所以没有收益榜。</h3>
+            <p>本站不采信没有净值、回撤与审计记录的「稳定高收益」。在本次检索的 10 个加密原生项目中：2 个有回测链路，8 个只有平台、演示或未披露收益；本次检索未发现可核验的第三方审计实盘净值。</p>
+          </div>
+          <div class="audit-scale">
+            <div class="audit-row">
+              <span class="grade grade-a">A</span>
+              <div><strong>审计实盘</strong><p>第三方可核验的净值、回撤与交易记录</p></div>
+              <em>0</em>
+            </div>
+            <div class="audit-row">
+              <span class="grade grade-b">B</span>
+              <div><strong>回测 / 纸交易</strong><p>有可复现链路，但不是实盘净值</p></div>
+              <em id="auditB">2</em>
+            </div>
+            <div class="audit-row">
+              <span class="grade grade-c">C</span>
+              <div><strong>平台 / 未披露</strong><p>工程或平台可运行，收益证据不足</p></div>
+              <em id="auditC">8</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-grid" id="agentGrid" aria-live="polite">
+          <div class="agent-loading"><span class="loading-bar"></span><span>正在整理智能体证据</span></div>
+        </div>
+
+        <div class="evidence-board reveal">
+          <div class="evidence-head">
+            <div>
+              <p class="eyebrow"><span>!</span> PUBLIC EVIDENCE / 公开收益样本</p>
+              <h3>真实的收益，<br>通常带着回撤。</h3>
+            </div>
+            <p>下面一条审计结论和一个公开样本，都不是本站收益，也不是审计报告。它们只说明：加密市场里的高收益数字，必须连同时间、回撤与交易范围一起读。</p>
+          </div>
+
+          <div class="evidence-grid">
+            <a class="evidence-card evidence-audit-card" href="#method">
+              <div class="evidence-top">
+                <span class="evidence-tag">AUDIT RESULT / 本次审计</span>
+                <span class="evidence-date">2026-10-31</span>
+              </div>
+              <div class="evidence-main evidence-zero">
+                <strong>0</strong>
+                <span>个 A 级加密智能体</span>
+              </div>
+              <div class="evidence-row"><span>可核验实盘净值</span><b>0 / 10</b></div>
+              <p>10 个加密原生项目中，没有一个同时提供第三方审计的净值、最大回撤与完整交易记录。没有这组数据，就不能把它们排成「稳定高收益」。</p>
+              <span class="evidence-link">阅读证据口径 <span aria-hidden="true">↘</span></span>
+            </a>
+
+            <a class="evidence-card" href="https://cloud.tencent.com.cn/developer/article/2699095" target="_blank" rel="noopener noreferrer">
+              <div class="evidence-top">
+                <span class="evidence-tag">ALPHA ARENA / 竞赛快照</span>
+                <span class="evidence-date">2025-10-22</span>
+              </div>
+              <div class="evidence-main">
+                <strong>+13.34<small>%</small></strong>
+                <span>DeepSeek V3.1</span>
+              </div>
+              <div class="evidence-mini">Grok 4 <b>+3.67%</b> · Gemini 2.5 Pro <b class="is-down">−42.65%</b></div>
+              <p>Hyperliquid 永续实盘竞赛，第三方文章快照；不是当前排行榜，也没有审计净值。同一场比赛里，第一名和最后一名可以相差 50 多个百分点。</p>
+              <span class="evidence-link">查看第三方记录 <span aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+
+          <p class="evidence-disclaimer"><span>!</span> 公开样本只用于说明「高收益与高回撤可以同时出现」，不构成本站对任何智能体的收益背书。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fit-section" id="fit" aria-labelledby="fit-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-main">
+            <p class="eyebrow"><span>04</span> STRATEGY FIT / 策略适配</p>
+            <h2 id="fit-title">把行情翻译成<br>策略环境。</h2>
+          </div>
+          <div class="section-head-side">
+            <p>适配度不是买卖信号，而是「这类策略当前面对的市场结构是否友好」的启发式评分。所有分数由所选合约的 K 线、ATR、成交额与资金费率现场计算。</p>
+            <div class="head-actions">
+              <span class="source-chip"><i></i> <span id="fitSymbol">BTCUSDT</span> · <span id="fitInterval">5m</span></span>
+              <span class="as-of" id="fitUpdated">CALCULATED LOCALLY</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fit-shell reveal">
+          <div class="radar-panel">
+            <div class="radar-head">
+              <span class="micro-label">FIT RADAR / 0—100</span>
+              <span class="radar-score" id="radarTopScore">—</span>
+            </div>
+            <div class="radar-wrap">
+              <svg id="fitRadar" viewBox="0 0 420 400" role="img" aria-label="策略适配雷达图"></svg>
+            </div>
+            <div class="radar-narrative">
+              <span class="narrative-mark">↳</span>
+              <p id="fitNarrative">正在读取市场结构。</p>
+            </div>
+            <div class="radar-legend">
+              <span><i></i> 当前环境</span>
+              <span><i class="ghost"></i> 中性基线 50</span>
+            </div>
+          </div>
+
+          <div class="fit-matrix">
+            <div class="fit-matrix-head">
+              <span>策略族</span>
+              <span>适配度</span>
+              <span>环境判断</span>
+            </div>
+            <div class="fit-list" id="fitList"></div>
+            <div class="fit-note">
+              <p><strong>读法：</strong>分数高只代表当前环境与策略的典型假设更接近，不代表策略会盈利。点击任一策略族，可回到上方筛选对应仓库。</p>
+              <button class="text-btn" type="button" id="fitExplainBtn">查看计算公式 <span aria-hidden="true">↘</span></button>
+            </div>
+            <div class="formula-panel" id="formulaPanel" hidden>
+              <div class="formula-row"><span>趋势</span><code>60% × |EMA20−EMA60|／价格 + 40% × 区间动量</code></div>
+              <div class="formula-row"><span>网格</span><code>低趋势 + 中等波动 + 成交活跃度</code></div>
+              <div class="formula-row"><span>套利</span><code>|资金费率| × 年化系数，阈值 30% APR</code></div>
+              <div class="formula-row"><span>做市</span><code>成交活跃 − 趋势强度 − 波动惩罚</code></div>
+              <div class="formula-row"><span>突破</span><code>区间位置 + 波动扩张 + 成交量放大</code></div>
+              <p>全部为线性归一化后的启发式分数，仅用于横向比较，不构成策略建议。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-main">
+            <p class="eyebrow"><span>05</span> METHOD &amp; LIMITS / 观察方法</p>
+            <h2 id="method-title">所有数字，<br>都应该能被追问。</h2>
+          </div>
+          <div class="section-head-side">
+            <p>这是一个观察站，不是策略超市。没有收益排行、没有跟单入口、没有「必胜参数」。下面写清楚每个数字从哪里来，以及它不能证明什么。</p>
+            <span class="as-of">LAST AUDITED / 2026-10-31</span>
+          </div>
+        </div>
+
+        <div class="method-grid">
+          <article class="method-card">
+            <span class="method-no">01</span>
+            <div class="method-card-head">
+              <h3>社区热度</h3>
+              <span class="method-source">GITHUB REST API</span>
+            </div>
+            <p>星标、Fork、Issue 数与最近推送时间每 30 分钟尝试刷新一次，匿名 API 限额为每小时 60 次。刷新失败时保留最近一次快照，并在状态栏标记。</p>
+            <div class="method-proof"><span>能证明</span><p>项目被多少人看见、是否仍在维护。</p></div>
+            <div class="method-limit"><span>不能证明</span><p>策略收益、代码质量或实盘安全性。</p></div>
+          </article>
+
+          <article class="method-card">
+            <span class="method-no">02</span>
+            <div class="method-card-head">
+              <h3>发布下载</h3>
+              <span class="method-source">RELEASE ASSETS</span>
+            </div>
+            <p>累加每个仓库 GitHub Release 中二进制资产的 <code>download_count</code>。选择「下载」排序时，页面会按仓库重新汇总最近发布页资产，并缓存 6 小时。</p>
+            <div class="method-proof"><span>能证明</span><p>有多少人下载了作者发布的安装包或二进制。</p></div>
+            <div class="method-limit"><span>不能证明</span><p>pip、npm、源码克隆与容器拉取；GitHub 不公开仓库克隆数。</p></div>
+          </article>
+
+          <article class="method-card">
+            <span class="method-no">03</span>
+            <div class="method-card-head">
+              <h3>行情与费率</h3>
+              <span class="method-source">BINANCE / OKX</span>
+            </div>
+            <p>优先读取 Binance USDT-M Futures 公共接口：24h ticker、K 线、资金费率、持仓量与多空账户比。接口不可达时切换 OKX，仍失败则显示本地快照。</p>
+            <div class="method-proof"><span>能证明</span><p>某一时刻的公开市场状态与持仓结构。</p></div>
+            <div class="method-limit"><span>不能证明</span><p>未来价格方向；公开多空比也不等于主力仓位。</p></div>
+          </article>
+
+          <article class="method-card">
+            <span class="method-no">04</span>
+            <div class="method-card-head">
+              <h3>策略适配</h3>
+              <span class="method-source">LOCAL HEURISTIC</span>
+            </div>
+            <p>用 EMA20/60 距离、区间动量、ATR14、成交额与资金费率年化值，计算 5 类策略的 0—100 环境分。公式完全在前端执行，可展开查看。</p>
+            <div class="method-proof"><span>能证明</span><p>当前环境更接近哪类策略的典型假设。</p></div>
+            <div class="method-limit"><span>不能证明</span><p>策略胜率、回撤或收益；分数没有经过历史 alpha 检验。</p></div>
+          </article>
+        </div>
+
+        <div class="source-table">
+          <div class="source-row source-head">
+            <span>数据链</span><span>用途</span><span>刷新</span><span>当前状态</span>
+          </div>
+          <div class="source-row">
+            <span class="source-name"><i class="source-dot"></i>GitHub REST API</span>
+            <span>仓库热度 / 发布时间</span>
+            <span>30 min</span>
+            <span class="source-state" id="methodGithub">连接中</span>
+          </div>
+          <div class="source-row">
+            <span class="source-name"><i class="source-dot"></i>Binance Futures</span>
+            <span>永续行情 / 资金费率 / OI</span>
+            <span>45 sec</span>
+            <span class="source-state" id="methodMarket">连接中</span>
+          </div>
+          <div class="source-row">
+            <span class="source-name"><i class="source-dot"></i>OKX Public API</span>
+            <span>备用行情与 K 线</span>
+            <span>failover</span>
+            <span class="source-state" id="methodFallback">待命</span>
+          </div>
+          <div class="source-row">
+            <span class="source-name"><i class="source-dot"></i>Local Snapshot</span>
+            <span>离线兜底数据</span>
+            <span>static</span>
+            <span class="source-state" id="methodSnapshot">已载入</span>
+          </div>
+        </div>
+
+        <div class="boundary">
+          <div class="boundary-copy">
+            <p class="eyebrow">BOUNDARY / 边界</p>
+            <h3>不推荐，不跟单，<br>不承诺收益。</h3>
+          </div>
+          <div class="boundary-points">
+            <div><span>01</span><p>所有仓库、指标与评分仅用于研究与工程阅读。</p></div>
+            <div><span>02</span><p>永续合约具有高杠杆与强制平仓风险，可能损失全部本金。</p></div>
+            <div><span>03</span><p>本项目不接入交易账户、不发送订单、不托管任何资金。</p></div>
+          </div>
+        </div>
+
+        <div class="use-note">
+          <span class="use-note-label">HOW TO READ / 建议读法</span>
+          <div class="use-steps">
+            <span><b>01</b> 先看市场处于趋势、震荡还是高费率环境。</span>
+            <span><b>02</b> 再看哪类策略的假设与当前环境接近。</span>
+            <span><b>03</b> 最后读代码、回测和风控，不跳过任何一步。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="PERP ATLAS 首页">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="13.2" fill="none" stroke="currentColor" stroke-opacity=".26" stroke-width=".9"/>
+            <circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-opacity=".14" stroke-width=".9"/>
+            <path d="M6.8 24.5 16 7l9.2 17.5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/>
+            <path d="M11.2 19.5h9.6" stroke="currentColor" stroke-width="1.35"/>
+            <circle cx="16" cy="7" r="2.1" fill="var(--signal)"/>
+          </svg>
+          <span class="brand-copy">
+            <span class="brand-name">PERP ATLAS</span>
+            <span class="brand-cn">永续策略图谱</span>
+          </span>
+        </a>
+        <p>把开源策略放回真实市场里观察。</p>
+        <p class="footer-motto">READ THE CODE.<br>WATCH THE MARKET.<br>SKIP THE SIGNALS.</p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">OBSERVE</span>
+        <a href="#market">市场脉冲</a>
+        <a href="#repos">仓库排行</a>
+        <a href="#agents">智能体优选</a>
+        <a href="#fit">策略适配</a>
+        <a href="#method">观察方法</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">DATA</span>
+        <a href="https://docs.github.com/en/rest" target="_blank" rel="noopener noreferrer">GitHub REST API ↗</a>
+        <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/general-info" target="_blank" rel="noopener noreferrer">Binance Futures ↗</a>
+        <a href="https://www.okx.com/docs-v5/" target="_blank" rel="noopener noreferrer">OKX Public API ↗</a>
+        <a href="#method">口径与限制</a>
+      </div>
+      <div class="footer-col footer-status">
+        <span class="footer-label">SYSTEM</span>
+        <span class="footer-live"><i class="pulse-dot"></i> PULSE <time id="footerClock">--:--:--</time> CST</span>
+        <p>匿名数据 · 无需登录<br>所有计算在浏览器完成</p>
+        <span class="footer-version">BUILD 2026.10 / VOL. 01</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 PERP ATLAS. OPEN-SOURCE OBSERVATORY.</span>
+      <span>仅作研究观察，不构成投资建议。合约交易可能导致全部本金损失。</span>
+      <span class="footer-lang">ZH / CN</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="agents.js"></script>
+  <script src="market-snapshot.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

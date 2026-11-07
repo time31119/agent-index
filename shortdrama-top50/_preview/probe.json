@@ -1,0 +1,352 @@
+[
+  {
+    "brand": "BibiShort",
+    "tried": "https://bibishort.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "BlinkDrama",
+    "tried": "https://blinkdrama.com",
+    "status": 200,
+    "final": "https://blinkdrama.com/",
+    "title": ""
+  },
+  {
+    "brand": "CandyJarTV",
+    "tried": "https://www.candyjartv.com",
+    "status": 200,
+    "final": "https://candyjartv.com/",
+    "title": "candyjartv.com"
+  },
+  {
+    "brand": "DramaBox",
+    "tried": "https://dramabox.app",
+    "status": 200,
+    "final": "https://dramabox.app/",
+    "title": "DramaBox.App"
+  },
+  {
+    "brand": "DramaBox Lite",
+    "tried": "https://www.dramabox.com",
+    "status": 403,
+    "final": "https://www.dramabox.com/",
+    "title": "ERROR: The request could not be satisfied"
+  },
+  {
+    "brand": "DramaShorts",
+    "tried": "https://www.dramashorts.com",
+    "status": 200,
+    "final": "https://www.dramashorts.com/",
+    "title": ""
+  },
+  {
+    "brand": "DramaWave",
+    "tried": "https://drama-wave.com",
+    "status": 200,
+    "final": "https://drama-wave.com/",
+    "title": "Watch Short Dramas Online | DramaWave"
+  },
+  {
+    "brand": "Felveria",
+    "tried": "https://felveria.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "FlareFlow",
+    "tried": "https://www.flareflow.com",
+    "status": 200,
+    "final": "https://www.flareflow.com/",
+    "title": ""
+  },
+  {
+    "brand": "FlexTV",
+    "tried": "https://www.flextv.com",
+    "status": 200,
+    "final": "https://www.dynamo.com/assets.htm",
+    "title": ""
+  },
+  {
+    "brand": "FlickReels",
+    "tried": "https://flickreels.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "FreeDrama",
+    "tried": "https://freedrama.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "FreeReels",
+    "tried": "https://www.freereels.com",
+    "status": 200,
+    "final": "https://www.freereels.com/",
+    "title": ""
+  },
+  {
+    "brand": "GoodShort",
+    "tried": "https://goodshort.com",
+    "status": 403,
+    "final": "https://www.goodshort.com/",
+    "title": "403 Forbidden"
+  },
+  {
+    "brand": "Halo Reels",
+    "tried": "https://www.haloreels.com",
+    "status": 200,
+    "final": "https://haloreels.com/",
+    "title": "Studio Flow — AI Video Generator"
+  },
+  {
+    "brand": "HotDrama",
+    "tried": "https://hotdrama.com",
+    "status": 403,
+    "final": "https://namestar.com/domain/hotdrama.com",
+    "title": "Just a moment..."
+  },
+  {
+    "brand": "HotMiniDrama",
+    "tried": "https://www.hotminidrama.com",
+    "status": 200,
+    "final": "https://www.hotminidrama.com/",
+    "title": "Hotmini Drama"
+  },
+  {
+    "brand": "iDrama",
+    "tried": "https://www.idrama.com",
+    "status": 200,
+    "final": "https://www.idrama.com/",
+    "title": "iDrama:Enjoy Good Short Movies"
+  },
+  {
+    "brand": "JoyReels",
+    "tried": "https://www.joyreels.com",
+    "status": 200,
+    "final": "https://www.joyreels.com/",
+    "title": "JoyReels - Enjoy Short Dramas"
+  },
+  {
+    "brand": "KalosTV",
+    "tried": "https://www.kalostv.com",
+    "status": 200,
+    "final": "https://www.kalostv.com/",
+    "title": "Kalos TV"
+  },
+  {
+    "brand": "Kuku TV",
+    "tried": "https://kukutv.com",
+    "status": 200,
+    "final": "https://kukutv.com/",
+    "title": "KukuTV.com - Premium Domain For Sale"
+  },
+  {
+    "brand": "LoveShots",
+    "tried": "https://loveshots.com",
+    "status": 403,
+    "final": "https://loveshots.com/",
+    "title": ""
+  },
+  {
+    "brand": "MangoTV",
+    "tried": "https://www.mgtv.com",
+    "status": 200,
+    "final": "https://www.mgtv.com/",
+    "title": "芒果TV-天生青春"
+  },
+  {
+    "brand": "Melolo",
+    "tried": "https://melolo.app",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "MoboDrama",
+    "tried": "https://www.mobodrama.com",
+    "status": 200,
+    "final": "https://www.mobodrama.com/",
+    "title": "MoboDrama"
+  },
+  {
+    "brand": "MoboReels",
+    "tried": "https://www.moboreels.com",
+    "status": 200,
+    "final": "https://www.moboreels.com/",
+    "title": "MoboReels - Free AI Short Dramas and Movies Watch Online"
+  },
+  {
+    "brand": "MoreShort",
+    "tried": "https://www.moreshort.com",
+    "status": 200,
+    "final": "https://www.moreshort.com/",
+    "title": "moreshort.com for sale | Spaceship.com"
+  },
+  {
+    "brand": "My Drama",
+    "tried": "https://my-drama.com",
+    "status": 200,
+    "final": "https://my-drama.com/zh",
+    "title": "最佳短剧应用 - 免费观看竖屏短剧 | My Drama"
+  },
+  {
+    "brand": "My Muse",
+    "tried": "https://www.mymuse.com",
+    "status": 200,
+    "final": "https://www.mymuse.com/",
+    "title": "myMuse.com"
+  },
+  {
+    "brand": "NetShort",
+    "tried": "https://net-short.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "PineDrama",
+    "tried": "https://pine-drama.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "Playlet",
+    "tried": "https://www.playlet.com",
+    "status": 200,
+    "final": "https://www.playlet.com/",
+    "title": "playlet"
+  },
+  {
+    "brand": "Pocket FM",
+    "tried": "https://www.pocketfm.com",
+    "status": 200,
+    "final": "https://pocketfm.com/",
+    "title": "Pocket FM: The home of the world&#x27;s best audio dramas"
+  },
+  {
+    "brand": "PopoVibe",
+    "tried": "https://popovibe.com",
+    "status": 403,
+    "final": "https://domains.atom.com/lpd/name/popovibe.com",
+    "title": "Just a moment..."
+  },
+  {
+    "brand": "QuickTV",
+    "tried": "https://quicktv.in",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "ReelShort",
+    "tried": "https://www.reelshort.com",
+    "status": 403,
+    "final": "https://www.reelshort.com/",
+    "title": "ERROR: The request could not be satisfied"
+  },
+  {
+    "brand": "ReelyGo",
+    "tried": "https://reelygo.com",
+    "status": 200,
+    "final": "https://reelygo.com/",
+    "title": ""
+  },
+  {
+    "brand": "SarosTV",
+    "tried": "https://sarostv.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "Shortical",
+    "tried": "https://www.shortical.com",
+    "status": 200,
+    "final": "https://shortical.com/",
+    "title": "Shortical — Watch Free Vertical Short Dramas Online"
+  },
+  {
+    "brand": "ShortMax",
+    "tried": "https://shortmax.tv",
+    "status": 200,
+    "final": "https://shortmax.tv/",
+    "title": ""
+  },
+  {
+    "brand": "Shorts",
+    "tried": "https://www.luni.app",
+    "status": 200,
+    "final": "https://www.luni.app/",
+    "title": ""
+  },
+  {
+    "brand": "ShortsWave",
+    "tried": "https://www.shortswave.com",
+    "status": 200,
+    "final": "https://www.shortswave.com/",
+    "title": "Welcome to nginx!"
+  },
+  {
+    "brand": "Soda TV",
+    "tried": "https://sodatv.com",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "StardustTV",
+    "tried": "https://stardust.tv",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "StarShort",
+    "tried": "https://www.starshort.com",
+    "status": 200,
+    "final": "https://www.starshort.com/",
+    "title": "Welcome to use OneinStack"
+  },
+  {
+    "brand": "Story TV",
+    "tried": "https://storytv.in",
+    "status": "ERR",
+    "final": "",
+    "title": "fetch failed"
+  },
+  {
+    "brand": "StoryReel",
+    "tried": "https://storyreel.com",
+    "status": 403,
+    "final": "https://domains.atom.com/lpd/name/StoryReel.com",
+    "title": "Just a moment..."
+  },
+  {
+    "brand": "ToonShort",
+    "tried": "https://www.toonshort.com",
+    "status": 200,
+    "final": "https://www.toonshort.com/",
+    "title": "ToonShort - AI Short Drama Platform | HONG KONG TOONSHORT TECHNOLOGY LIMITED"
+  },
+  {
+    "brand": "VibeShort",
+    "tried": "https://vibeshort.com",
+    "status": 200,
+    "final": "https://vibeshort.com/",
+    "title": "vibeshort.com&nbsp;-&nbsp;该网站正在出售！&nbsp;-&nbsp;vibeshort ai dramas 资源和信息。"
+  },
+  {
+    "brand": "Vigloo",
+    "tried": "https://www.vigloo.com",
+    "status": 200,
+    "final": "https://www.vigloo.com/en",
+    "title": "Vigloo"
+  }
+]

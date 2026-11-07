@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="天枢云">
+  <defs>
+    <linearGradient id="ts-mark" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9DB4FF"/>
+      <stop offset=".52" stop-color="#6C8CFF"/>
+      <stop offset="1" stop-color="#35E0C8"/>
+    </linearGradient>
+  </defs>
+  <rect x="10.5" y="10.5" width="27" height="27" rx="7.5" transform="rotate(45 24 24)"
+        fill="none" stroke="url(#ts-mark)" stroke-width="2.8"/>
+  <circle cx="24" cy="24" r="7.2" fill="none" stroke="url(#ts-mark)" stroke-width="1.6" opacity=".62"/>
+  <circle cx="24" cy="24" r="3.4" fill="url(#ts-mark)"/>
+  <circle cx="39.4" cy="8.6" r="2.5" fill="#35E0C8"/>
+</svg>

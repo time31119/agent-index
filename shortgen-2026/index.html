@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>短视频生成器索引 2026 — 33 款模型与工具，按出片链路整理</title>
+<meta name="description" content="2026 年 11 月短视频生成器全景索引：Seedance 2.5、Kling 4.0、海螺 H3、Vidu Q4 等 33 款模型与工具，附价格、对比、成本计算与工作流。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="短视频生成器索引 2026 — 33 款模型与工具">
+<meta property="og:description" content="Sora 退场，国产接棒。按出片链路重排 33 款短视频生成工具：模型、成片 Agent、口播、剪辑，附成本计算器。">
+<meta name="theme-color" content="#07080c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307080c'/%3E%3Cpath d='M25 19l22 13-22 13z' fill='%23ff5a2b'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("shortgen-theme");
+      var q = new URLSearchParams(location.search).get("theme");
+      if (q === "light" || q === "dark") t = q;
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#library">跳到工具库</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="短视频生成器索引 2026 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 6.5 18 12l-9 5.5z" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-text">SHORT<span>/</span>GEN</span>
+      <span class="brand-year">2026</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#picks">编辑选择</a>
+      <a href="#library">工具库</a>
+      <a href="#compare">横向对比</a>
+      <a href="#calc">算成本</a>
+      <a href="#flow">工作流</a>
+    </nav>
+    <div class="nav-right">
+      <span class="nav-pill"><i aria-hidden="true"></i>11.03 更新</span>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="切换明暗主题" title="切换明暗主题">
+        <svg class="ic-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg class="ic-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="hero-year">2026</div>
+      <div class="scan"></div>
+    </div>
+
+    <div class="wrap hero-in">
+      <p class="eyebrow reveal"><span class="live"></span>2026.11 更新 · 33 款工具归档</p>
+      <h1 class="reveal">短视频<span class="grad">生成器</span><br>全景索引</h1>
+      <p class="lede reveal">Sora 退场，国产接棒。30 秒、4K、原生音频成为标配——这份索引按「出片链路」重排 33 款工具，从想法到可发布的成片。</p>
+
+      <div class="search reveal" role="search">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <input id="heroSearch" type="search" placeholder="搜工具、厂商或能力：4K / 口播 / 免费 / 开源" aria-label="搜索工具" autocomplete="off">
+        <kbd>/</kbd>
+      </div>
+      <div class="quick reveal" id="quickTags">
+        <button type="button" data-q="30秒">30 秒直出</button>
+        <button type="button" data-q="4K">4K</button>
+        <button type="button" data-q="原生音频">原生音频</button>
+        <button type="button" data-q="开源">开源可部署</button>
+        <button type="button" data-q="低价">0.1 元级</button>
+        <button type="button" data-q="免费">免费</button>
+      </div>
+
+      <dl class="stats reveal" id="stats">
+        <div><dt>工具总数</dt><dd><span data-count="33">33</span></dd></div>
+        <div><dt>视频模型</dt><dd><span data-count="11">11</span></dd></div>
+        <div><dt>最低单价</dt><dd><span data-count="0.09" data-decimals="2">0.09</span><em>元/秒</em></dd></div>
+        <div><dt>模型价差</dt><dd><span data-count="100">100</span><em>×</em></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="picks">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="idx">01</span>
+        <div>
+          <h2>编辑选择</h2>
+          <p>三个方向各挑一个：最强画质、最全能、最划算。</p>
+        </div>
+        <a class="head-link" href="#compare">看完整对比 <span aria-hidden="true">→</span></a>
+      </header>
+      <div class="picks" id="picksGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="library">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="idx">02</span>
+        <div>
+          <h2>工具库</h2>
+          <p>按出片链路分成四层。点卡片看细节、价格和坑。</p>
+        </div>
+      </header>
+
+      <div class="lib-bar reveal">
+        <div class="tabs" id="tabs" role="tablist" aria-label="工具分类">
+          <button class="tab is-on" data-cat="all" role="tab" aria-selected="true">全部 <span>33</span></button>
+          <button class="tab" data-cat="model" role="tab" aria-selected="false">视频模型 <span>11</span></button>
+          <button class="tab" data-cat="agent" role="tab" aria-selected="false">一站式成片 <span>9</span></button>
+          <button class="tab" data-cat="script" role="tab" aria-selected="false">图文口播 <span>5</span></button>
+          <button class="tab" data-cat="edit" role="tab" aria-selected="false">剪辑数字人 <span>8</span></button>
+        </div>
+        <div class="lib-tools">
+          <label class="mini-search">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <input id="libSearch" type="search" placeholder="筛选…" aria-label="筛选工具">
+          </label>
+          <div class="select-wrap">
+            <select id="sort" aria-label="排序方式">
+              <option value="rec">推荐排序</option>
+              <option value="rating">评分最高</option>
+              <option value="new">最新发布</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <p>没有匹配的工具。</p>
+        <button type="button" id="resetBtn">清除筛选</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compare">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="idx">03</span>
+        <div>
+          <h2>横向对比</h2>
+          <p>只看参数不够，但参数能先筛掉一半。</p>
+        </div>
+        <span class="head-note">API 挂牌价 · 美元按 7.2 折算</span>
+      </header>
+      <div class="table-wrap reveal">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col">模型</th>
+              <th scope="col">单次时长</th>
+              <th scope="col">最高画质</th>
+              <th scope="col">原生音频</th>
+              <th scope="col">参考输入</th>
+              <th scope="col">价格 / 秒</th>
+              <th scope="col">评分</th>
+            </tr>
+          </thead>
+          <tbody id="compareBody"></tbody>
+        </table>
+      </div>
+      <p class="table-note reveal">没有“全能冠军”：Seedance 赢在可控，Kling 赢在均衡，Vidu 赢在价格，Wan 赢在草稿成本。按镜头分工，而不是只选一个。</p>
+    </div>
+  </section>
+
+  <section class="section" id="calc">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="idx">04</span>
+        <div>
+          <h2>算一笔账</h2>
+          <p>按“可用片”算，才是真成本。</p>
+        </div>
+      </header>
+
+      <div class="calc reveal">
+        <div class="calc-controls">
+          <div class="field">
+            <label class="field-label" for="calcModel">模型</label>
+            <div class="select-wrap wide">
+              <select id="calcModel"></select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="dur">单条时长</label><b id="durOut">30 秒</b></div>
+            <input type="range" id="dur" min="5" max="60" step="5" value="30">
+            <div class="scale"><span>5s</span><span>60s</span></div>
+          </div>
+          <div class="field">
+            <div class="field-head"><label for="tries">抽卡次数</label><b id="tryOut">3 次</b></div>
+            <input type="range" id="tries" min="1" max="10" step="1" value="3">
+            <div class="scale"><span>1</span><span>10</span></div>
+          </div>
+          <div class="field">
+            <div class="field-head"><span>通过率</span><b id="passOut">50%</b></div>
+            <div class="seg" id="passSeg" role="group" aria-label="通过率">
+              <button type="button" data-pass="0.3">30%</button>
+              <button type="button" data-pass="0.5" class="is-on">50%</button>
+              <button type="button" data-pass="0.7">70%</button>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field-head"><span>画质档位</span></div>
+            <div class="tiers" id="tiers" role="group" aria-label="画质档位"></div>
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <p class="calc-kicker">每条可用片成本</p>
+          <div class="calc-big" id="perUsable">¥389</div>
+          <p class="calc-sub" id="calcSub">Seedance 2.5 · 1080p · 30 秒 · 抽 3 次 · 通过率 50%</p>
+          <div class="calc-rows">
+            <div><span>单条生成</span><b id="oneCost">¥194</b></div>
+            <div><span>总投入</span><b id="totalCost">¥583</b></div>
+            <div><span>可用片数</span><b id="usable">1.5 条</b></div>
+          </div>
+          <p class="calc-note">通过率按经验值估算。真实项目里，返工、配音、剪辑的人工成本通常是算力成本的 2–5 倍。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="scenes">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="idx">05</span>
+        <div>
+          <h2>按场景选</h2>
+          <p>别问“哪个最好”，先问“你要拍什么”。</p>
+        </div>
+      </header>
+      <div class="scenes" id="scenesGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="flow">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="idx">06</span>
+        <div>
+          <h2>一条片的工作流</h2>
+          <p>从脚本到发布，六步，每一步都有更便宜的替代。</p>
+        </div>
+      </header>
+      <ol class="flow" id="flowList"></ol>
+    </div>
+  </section>
+
+  <section class="section insights-sec">
+    <div class="wrap">
+      <div class="insights" id="insights"></div>
+      <p class="insight-note reveal">数据说明：价格为公开挂牌价或测评实付价，随版本与活动变动；备案数为公开报道口径。整理于 2026-11-03。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="brand-mark small" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 6.5 18 12l-9 5.5z" fill="currentColor"/></svg>
+        </span>
+        <div>
+          <p class="foot-title">SHORT/GEN 2026</p>
+          <p class="foot-sub">短视频生成器 index · 独立整理，非商业榜单</p>
+        </div>
+      </div>
+      <a class="to-top" href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="foot-grid">
+      <div class="sources">
+        <p class="foot-label">数据来源</p>
+        <ul id="sourceList"></ul>
+      </div>
+      <div class="foot-meta">
+        <p class="foot-label">使用说明</p>
+        <p>本站为静态整理页，不收集数据、不设追踪。外链指向官网或搜索结果，价格与能力以官方页面为准。</p>
+        <p class="foot-fine">Last updated 2026.11.03 · Built as a single-page static site.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="modal-x" type="button" data-close aria-label="关闭详情">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

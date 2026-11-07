@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>合规边界 · 循迹 TRACE</title>
+  <meta name="description" content="循迹的地域准入、KYC、衍生品适当性、风险披露与交易员监控边界。">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#070a09">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    window.addEventListener('error', function () {
+      document.documentElement.classList.remove('js');
+    });
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="utility-bar">
+      <div class="container utility-inner">
+        <span class="utility-brand">TRACE / 循迹 · COMPLIANCE</span>
+        <span class="utility-center">BOUNDARIES BEFORE ACCESS · 先划线，再开门</span>
+        <span class="utility-status"><i class="live-dot" aria-hidden="true"></i> 注册通道 <span class="utility-time" id="clock">00:00:00</span> CST</span>
+      </div>
+    </div>
+
+    <nav class="main-nav container" aria-label="主导航">
+      <a class="brand" href="index.html" aria-label="循迹 TRACE 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 26L12 8L18 19L28 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/>
+          <circle cx="12" cy="8" r="2.2" fill="currentColor"/>
+          <circle cx="18" cy="19" r="2.2" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">循迹</span>
+        <span class="brand-wordmark">TRACE</span>
+      </a>
+
+      <div class="nav-links" id="siteMenu">
+        <a href="index.html#sources">信号源</a>
+        <a href="index.html#execution">执行链路</a>
+        <a href="index.html#risk">风控阀门</a>
+        <a href="index.html#profit">高水位分润</a>
+        <a href="compliance.html" aria-current="page">合规边界</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="nav-login" href="terminal.html">工作台 / TERMINAL</a>
+        <a class="btn btn-primary btn-small" href="index.html?intent=seed">预约种子名额 <span class="arrow" aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="siteMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="compliance-hero">
+      <div class="container">
+        <p class="kicker reveal"><span class="kicker-tag">COMPLIANCE</span> 地域 · 适当性 · 披露 · 监控</p>
+        <h1 class="hero-title reveal">合规不是附录，<br>是<em>入口</em>。</h1>
+        <p class="hero-sub reveal">我们不把“全球可用”当作增长指标。初期只做技术验证与有限用户：地域先屏蔽，适当性先评估，风险先披露。没有通过这三道门，再好的业绩也不构成准入理由。</p>
+      </div>
+    </section>
+
+    <div class="metric-strip" aria-label="合规边界概览">
+      <div class="container metric-strip-grid">
+        <div class="metric-strip-item">
+          <div class="metric-strip-label">初期不开放地区</div>
+          <div class="metric-strip-value">5<small> 个</small></div>
+        </div>
+        <div class="metric-strip-item">
+          <div class="metric-strip-label">入金前强制门槛</div>
+          <div class="metric-strip-value">3<small> 步</small></div>
+        </div>
+        <div class="metric-strip-item">
+          <div class="metric-strip-label">老鼠仓识别窗口</div>
+          <div class="metric-strip-value">5<small> 秒</small></div>
+        </div>
+        <div class="metric-strip-item">
+          <div class="metric-strip-label">分润争议容忍</div>
+          <div class="metric-strip-value">0<small> 起</small></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="page-section" id="regions">
+      <div class="container page-grid">
+        <div>
+          <span class="eyebrow">01 / JURISDICTIONS</span>
+          <h2 style="margin-top:14px">注册之前，<br>先回答“你在哪里”。</h2>
+          <p class="lead">地域屏蔽不是勾选框，而是注册链路的第一道硬校验：IP 归属地与证件签发地必须一致，任一命中限制地区即终止流程。</p>
+
+          <div class="notice-list reveal">
+            <div class="notice-item">
+              <span class="notice-no">A</span>
+              <div>
+                <h4>美国 / 加拿大 / 英国</h4>
+                <p>初期不开放。即使以专业投资者身份申请，也不进入自动准入流程。</p>
+              </div>
+            </div>
+            <div class="notice-item">
+              <span class="notice-no">B</span>
+              <div>
+                <h4>中国大陆 / 香港零售</h4>
+                <p>不开放。香港仅对符合当地框架的专业投资者单独审核，且需满足保证金全额预缴、不得信贷、仅接受法币或受监管稳定币等要求。</p>
+              </div>
+            </div>
+            <div class="notice-item">
+              <span class="notice-no">C</span>
+              <div>
+                <h4>其他司法辖区</h4>
+                <p>逐项法律评估后再决定是否开放；不因“技术可访问”而视为“合规可服务”。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="region-checker reveal" style="--delay:.08s">
+          <h3>地域准入预检 / Pre-check</h3>
+          <p>这是一个前端演示工具，不构成准入结论。正式流程会结合 IP、证件签发地与法律意见。</p>
+
+          <div class="check-fields">
+            <div class="field">
+              <label for="regionSelect">居住地 / 证件签发地</label>
+              <select id="regionSelect">
+                <option value="">请选择</option>
+                <option value="sg">新加坡</option>
+                <option value="jp">日本</option>
+                <option value="ae">阿联酋</option>
+                <option value="eu">欧盟</option>
+                <option value="hk">香港</option>
+                <option value="us">美国</option>
+                <option value="ca">加拿大</option>
+                <option value="gb">英国</option>
+                <option value="cn">中国大陆</option>
+                <option value="other">其他司法辖区</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="investorSelect">投资者类型</label>
+              <select id="investorSelect">
+                <option value="retail">零售投资者</option>
+                <option value="professional">专业投资者</option>
+                <option value="entity">机构 / 公司</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="button" id="checkRegion">运行预检 <span class="arrow" aria-hidden="true">↗</span></button>
+          </div>
+
+          <div class="check-result" id="regionResult" aria-live="polite">
+            <div class="result-label">RESULT / 预检结果</div>
+            <div class="result-value">等待选择</div>
+            <div class="result-desc">选择居住地与投资者类型后运行预检。此结果仅用于界面演示。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="kyc">
+      <div class="container">
+        <span class="eyebrow">02 / PRE-TRADE GATE</span>
+        <h2 style="margin-top:14px">入金之前，<br>先证明你理解风险。</h2>
+        <p class="lead">KYC 解决“你是谁”，适当性问卷解决“你是否适合”，风险披露解决“你是否知情”。三者缺一，不开跟单权限。</p>
+
+        <div class="kyc" style="margin-top:30px">
+          <div class="kyc-head">
+            <span>强制流程 / MANDATORY SEQUENCE</span>
+            <span class="tag tag-live">NO SKIP</span>
+          </div>
+          <div class="kyc-steps">
+            <div class="kyc-step">
+              <span class="kyc-no">01 / IDENTITY</span>
+              <h4>基础 KYC</h4>
+              <p>证件 OCR、活体检测、签发地校验。人、证、地区不一致时终止注册。</p>
+            </div>
+            <div class="kyc-step">
+              <span class="kyc-no">02 / SUITABILITY</span>
+              <h4>衍生品适当性问卷</h4>
+              <p>评估对杠杆、保证金、强平机制的理解。未通过者不得开启跟单，可重测但有冷却期。</p>
+            </div>
+            <div class="kyc-step">
+              <span class="kyc-no">03 / DISCLOSURE</span>
+              <h4>风险披露确认</h4>
+              <p>逐项确认：跟单不保证收益、滑点导致业绩偏离、极端行情可能穿仓。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="monitor" style="margin-top:14px">
+          <div class="monitor-item">
+            <span class="mono">REGION / IP + ID</span>
+            <strong>双重地域校验</strong>
+            <p>IP 归属地与证件签发地交叉比对，VPN 与代理命中高风险规则时转人工。</p>
+          </div>
+          <div class="monitor-item">
+            <span class="mono">SUITABILITY / PASS</span>
+            <strong>适当性不是一次性</strong>
+            <p>风险偏好、资金规模或杠杆设置发生重大变化时，重新触发问卷。</p>
+          </div>
+          <div class="monitor-item">
+            <span class="mono">COOLING / 24H</span>
+            <strong>冷静期</strong>
+            <p>首次开启跟单后 24 小时内限制提高杠杆，避免情绪化加仓。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="disclosure">
+      <div class="container page-grid">
+        <div>
+          <span class="eyebrow">03 / DISCLOSURE</span>
+          <h2 style="margin-top:14px">把最坏的情况，<br>先写清楚。</h2>
+          <p class="lead">以下披露不是免责话术，而是产品边界。你需要理解：即使信号源盈利，你的跟单结果也可能亏损。</p>
+          <div class="notice-list">
+            <div class="notice-item">
+              <span class="notice-no">01</span>
+              <div>
+                <h4>跟单不保证收益</h4>
+                <p>历史业绩不代表未来表现。交易员可能亏损，跟随者可能亏损全部本金。</p>
+              </div>
+            </div>
+            <div class="notice-item">
+              <span class="notice-no">02</span>
+              <div>
+                <h4>滑点会让结果偏离</h4>
+                <p>信号延迟、盘口深度与执行价格差异，可能导致跟随者收益低于或高于信号源。</p>
+              </div>
+            </div>
+            <div class="notice-item">
+              <span class="notice-no">03</span>
+              <div>
+                <h4>极端行情可能穿仓</h4>
+                <p>跳空、流动性枯竭与强平引擎延迟，可能造成超出保证金的损失。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion reveal" style="--delay:.08s">
+          <details open>
+            <summary>分润为什么只对新高收费？</summary>
+            <div class="acc-body">
+              <p>采用高水位线模型：仅当账户总盈亏突破历史已分润高点，才对新增盈利抽成。回撤期间不收费；回到前高也不重复收费。</p>
+              <p>示例：1000 → 1200 收取 20；回撤到 900 不收；回升到 1300 仅对 1200 以上的 100 收取 10。已收取的第 1 天费用不会重复计算。</p>
+            </div>
+          </details>
+          <details>
+            <summary>什么时候结算？有持仓怎么办？</summary>
+            <div class="acc-body">
+              <p>每日 UTC+8 00:00 结算一次，仅对完全无持仓的跟单账户结算。有持仓的账户跳过，待全平后纳入下一周期。</p>
+              <p>跟随者停止跟单、交易员关闭带单项目时，可触发提前结算。结算前会展示计费基数与金额明细。</p>
+            </div>
+          </details>
+          <details>
+            <summary>滑点保护具体如何执行？</summary>
+            <div class="acc-body">
+              <p>开仓：获取信号成交价，计算当前市价与信号价偏差。若超过用户设定的单笔滑点上限，取消订单并记录失败原因；若在阈值内，以带限价保护的订单发送。</p>
+              <p>平仓：若偏差过大，转市价成交以确保仓位退出，不因“零滑点”而让风险敞口滞留。该场景会在执行日志中明确标记。</p>
+            </div>
+          </details>
+          <details>
+            <summary>部分平仓如何镜像？</summary>
+            <div class="acc-body">
+              <p>交易员平掉 20% 仓位时，跟随者按相同比例平仓。执行引擎处理交易所最小平仓数量与精度取整；不足最小单位时标记失败并通知，而非强行下单。</p>
+              <p>对账任务每 30 秒比对仓位一致性，长期偏离会触发告警。</p>
+            </div>
+          </details>
+          <details>
+            <summary>如果信号源出现可疑行为？</summary>
+            <div class="acc-body">
+              <p>平台比对交易员个人账户与带单账户的成交时间差，若个人账户在带单账户开仓前 5 秒内出现同方向成交，标记为可疑。单日开平仓超过 50 次触发人工审核。</p>
+              <p>复核期间暂停该信号源的新开仓跟单，保留只读数据；确认违规后终止合作并公示处理结果（在不违反隐私与法律要求的前提下）。</p>
+            </div>
+          </details>
+          <details>
+            <summary>我的资金在哪里？</summary>
+            <div class="acc-body">
+              <p>本页面为产品原型，不托管任何真实资金。正式产品中，资金托管、交易所账户结构与出入金路径会在开户前以独立法律文件披露。</p>
+              <p>平台不会要求你向个人地址转账，也不会承诺保本或固定收益。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="monitoring">
+      <div class="container">
+        <span class="eyebrow">04 / TRADER MONITORING</span>
+        <h2 style="margin-top:14px">对信号源的监控，<br>不靠信任，靠规则。</h2>
+        <p class="lead">交易员端的风控与跟随者端同样重要。以下规则在接入前写入协议，在执行中持续运行。</p>
+
+        <div class="monitor" style="margin-top:30px">
+          <div class="monitor-item">
+            <span class="mono">CONFLICT / 5S</span>
+            <strong>老鼠仓识别</strong>
+            <p>比对交易员个人账户与带单账户的成交时间差。个人账户在带单账户开仓前 5 秒内出现同方向成交，标记可疑并进入复核。</p>
+          </div>
+          <div class="monitor-item">
+            <span class="mono">FREQUENCY / 50</span>
+            <strong>异常频率检测</strong>
+            <p>单日开平仓超过 50 次触发人工审核，防止以高频刷量制造分润或美化胜率。</p>
+          </div>
+          <div class="monitor-item">
+            <span class="mono">DRAWDOWN / 40%</span>
+            <strong>回撤硬门槛</strong>
+            <p>实盘记录少于 6 个月、最大回撤超过 40%、平均持仓不足 1 小时的信号源，不进入展示与跟单池。</p>
+          </div>
+        </div>
+
+        <div class="legal-note" style="margin-top:18px">以上为产品规则演示，不构成对任何交易员或资产的推荐。正式展业前，监控规则、数据处理与争议解决机制须经法律与合规审阅。</div>
+      </div>
+    </section>
+
+    <section class="page-section" id="faq">
+      <div class="container page-grid">
+        <div>
+          <span class="eyebrow">05 / FAQ</span>
+          <h2 style="margin-top:14px">常见问题</h2>
+          <p class="lead">如果这里没有回答你的问题，说明我们还没把它写清楚。正式上线前会补充完整的产品文档与法律文本。</p>
+        </div>
+        <div class="accordion">
+          <details>
+            <summary>为什么初期不面向所有地区？</summary>
+            <div class="acc-body"><p>永续合约在不同司法辖区的监管待遇差异很大。初期以技术验证与有限用户为目标，先做地域屏蔽与适当性评估，不追求“全球覆盖”。</p></div>
+          </details>
+          <details>
+            <summary>我可以同时跟随多个信号源吗？</summary>
+            <div class="acc-body"><p>产品设计支持多信号源，但会按账户维度汇总保证金与风险敞口，避免多个信号在同一标的上叠加出超出你设定上限的杠杆。冷启动期建议先跟随 1–2 个信号源。</p></div>
+          </details>
+          <details>
+            <summary>跟单失败会扣费吗？</summary>
+            <div class="acc-body"><p>不会。因最小下单单位、保证金不足或滑点超限导致的失败，不产生跟单分润；失败原因会在工作台与通知中明确展示。</p></div>
+          </details>
+          <details>
+            <summary>如何停止跟单？</summary>
+            <div class="acc-body"><p>可随时暂停新信号跟单，已有仓位可选择保留或一键平仓。暂停不等于平仓；平仓指令会按你的滑点设置执行，极端行情下可能产生较大滑点。</p></div>
+          </details>
+          <details>
+            <summary>分润如何计算与扣除？</summary>
+            <div class="acc-body"><p>按高水位线模型，仅对突破历史已分润高点的新增盈利抽成。每日 UTC+8 00:00 仅对无持仓账户结算；有持仓则顺延。结算明细可在分润账本中查看。</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-grid">
+        <div>
+          <p class="cta-kicker">BOUNDARIES FIRST / 先合规，再增长</p>
+          <h2 id="cta-title">看清边界，<br>再决定是否进入。</h2>
+          <p class="cta-note">种子期仅开放邀请制，单账户 ≤ 500 USDT。所有用户须完成 KYC、适当性评估与风险披露。</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="index.html#cta-title">返回首页 <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="terminal.html">查看工作台</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="循迹 TRACE 首页">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M4 26L12 8L18 19L28 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/>
+              <circle cx="12" cy="8" r="2.2" fill="currentColor"/>
+              <circle cx="18" cy="19" r="2.2" fill="currentColor"/>
+            </svg>
+            <span class="brand-name">循迹</span>
+            <span class="brand-wordmark">TRACE</span>
+          </a>
+          <p>链上永续合约跟单执行层。把信号、风控与结算拆开做，让每一次跟随都有据可循。</p>
+          <span class="footer-status"><i class="live-dot" aria-hidden="true"></i> COMPLIANCE GATE · DEMO</span>
+        </div>
+        <div class="footer-col">
+          <h3>产品</h3>
+          <ul>
+            <li><a href="terminal.html">跟单工作台</a></li>
+            <li><a href="index.html#sources">信号源</a></li>
+            <li><a href="index.html#risk">风控阀门</a></li>
+            <li><a href="index.html#profit">高水位分润</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>透明</h3>
+          <ul>
+            <li><a href="index.html#metrics">指标看板</a></li>
+            <li><a href="index.html#roadmap">冷启动路线</a></li>
+            <li><a href="compliance.html">合规边界</a></li>
+            <li><a href="#disclosure">风险披露</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>联系</h3>
+          <ul>
+            <li><a href="index.html#cta-title">种子用户申请</a></li>
+            <li><a href="index.html#cta-title">信号源合作</a></li>
+            <li><a href="#faq">常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-legal">本网站为产品原型演示，不构成投资建议、招揽或任何形式的收益承诺。加密永续合约交易具有高杠杆风险，可能导致本金全部损失；历史业绩不代表未来表现。地域策略、KYC、适当性与监控规则均为产品设计演示，正式展业前须完成目标司法辖区的法律与监管评估。演示数据非真实运营数据。本原型与 Hyperliquid、OKX 无隶属或背书关系。</p>
+        <span class="footer-copy">© 2026 TRACE / 循迹 · PROTOTYPE</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+  <script src="compliance.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="蜂院长的 100 个 AI 赚钱点子：谁付钱、第一块钱怎么收、48 小时验证、每周复盘。">
+  <title>蜂院长 · 100 个 AI 点子</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#ideas" aria-label="蜂院长首页">
+      <span class="brand-mark">蜂</span>
+      <span class="brand-text">
+        <strong>蜂院长</strong>
+        <small>100 个 AI 点子</small>
+      </span>
+    </a>
+    <nav class="tabs" aria-label="主导航">
+      <button class="tab active" data-view="ideas">点子库</button>
+      <button class="tab" data-view="board">实验看板</button>
+      <button class="tab" data-view="review">复盘</button>
+      <button class="tab" data-view="data">数据</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 点子库 -->
+    <section id="view-ideas" class="view active">
+      <div class="hero">
+        <p class="eyebrow">AI 创业实验 · 第 1 季</p>
+        <h1>100 个 AI 点子，<br><em>赚到第一块钱。</em></h1>
+        <p class="lede">按“谁付钱”筛，不按“酷不酷”筛。每周挑一个，48 小时验证；收到钱就继续，收不到就换下一个。</p>
+        <div class="stats" aria-label="总览">
+          <div class="stat"><strong id="stat-total">100</strong><span>个点子</span></div>
+          <div class="stat"><strong id="stat-active">0</strong><span>验证中</span></div>
+          <div class="stat"><strong id="stat-paid">0</strong><span>收到第一块钱</span></div>
+          <div class="stat"><strong id="stat-revenue">¥0</strong><span>累计收入</span></div>
+        </div>
+      </div>
+
+      <div class="next-card" id="next-card">
+        <div class="next-copy">
+          <p class="eyebrow">下一个实验</p>
+          <h2 id="next-title">正在挑选…</h2>
+          <p id="next-meta" class="muted"></p>
+        </div>
+        <button class="btn primary" id="start-next">开始验证 →</button>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input id="search" class="input" type="search" placeholder="搜索点子、行业、付钱的人…（按 / 聚焦）" autocomplete="off">
+        </div>
+        <select id="filter-category" class="select" aria-label="按分类筛选">
+          <option value="all">全部分类</option>
+        </select>
+        <select id="filter-status" class="select" aria-label="按状态筛选">
+          <option value="all">全部状态</option>
+          <option value="未验证">未验证</option>
+          <option value="验证中">验证中</option>
+          <option value="收到第一块钱">收到第一块钱</option>
+          <option value="放弃">放弃</option>
+        </select>
+        <select id="filter-difficulty" class="select" aria-label="按难度筛选">
+          <option value="all">全部难度</option>
+          <option value="低">低难度</option>
+          <option value="中">中难度</option>
+          <option value="高">高难度</option>
+        </select>
+        <select id="sort" class="select" aria-label="排序">
+          <option value="rating">按推荐指数</option>
+          <option value="id">按编号</option>
+          <option value="cost">按启动成本</option>
+          <option value="difficulty">按难度</option>
+        </select>
+        <button class="btn ghost" id="add-idea">＋ 新点子</button>
+      </div>
+
+      <div class="result-meta">
+        <span id="result-count">100 个点子</span>
+        <span id="active-filters" class="muted"></span>
+      </div>
+
+      <div id="idea-grid" class="grid"></div>
+      <div id="ideas-empty" class="empty" hidden>没有匹配的点子。换个关键词，或者点“＋ 新点子”。</div>
+    </section>
+
+    <!-- 实验看板 -->
+    <section id="view-board" class="view">
+      <div class="section-head">
+        <p class="eyebrow">Kanban</p>
+        <h1>实验看板</h1>
+        <p class="lede">把点子拖到下一列：未验证 → 验证中 → 收到第一块钱。拖到“放弃”也算复盘。</p>
+      </div>
+      <div id="board-grid" class="board"></div>
+    </section>
+
+    <!-- 复盘 -->
+    <section id="view-review" class="view">
+      <div class="section-head">
+        <p class="eyebrow">Weekly Review</p>
+        <h1>每周复盘</h1>
+        <p class="lede">每周日花 30 分钟，记下 6 个数和一句教训。数据不用漂亮，但要真实。</p>
+      </div>
+
+      <div class="review-layout">
+        <form id="review-form" class="panel">
+          <div class="panel-head">
+            <h2>本周记录</h2>
+            <button type="button" class="btn tiny ghost" id="autofill-review">从实验记录自动填入</button>
+          </div>
+          <div class="form-grid">
+            <label>日期<input type="date" id="rv-date" required></label>
+            <label>订阅数<input type="number" id="rv-subs" min="0" placeholder="0"></label>
+            <label>本周播放量<input type="number" id="rv-views" min="0" placeholder="0"></label>
+            <label>本周实验数<input type="number" id="rv-exp" min="0" placeholder="0"></label>
+            <label>本周收入（元）<input type="number" id="rv-revenue" min="0" step="0.01" placeholder="0"></label>
+            <label>本周支出（元）<input type="number" id="rv-spend" min="0" step="0.01" placeholder="0"></label>
+          </div>
+          <label class="full">最大的一笔教训<textarea id="rv-lesson" rows="3" placeholder="哪个点子没人付钱？卡在哪一步？"></textarea></label>
+          <label class="full">下周只做哪一件事<textarea id="rv-next" rows="2" placeholder="一个实验、一个客户、一条视频。"></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">保存复盘</button>
+            <span class="muted" id="rv-hint">保存在本机浏览器，可导出备份。</span>
+          </div>
+        </form>
+
+        <div class="panel">
+          <div class="panel-head"><h2>复盘历史</h2><span class="muted" id="review-count">0 条</span></div>
+          <div id="review-chart" class="chart"></div>
+          <div id="review-list" class="review-list"></div>
+        </div>
+      </div>
+
+      <div class="panel questions">
+        <h2>每周五问</h2>
+        <ol>
+          <li>本周播放前 10% 的选题是什么？为什么是它？下周怎么复制？</li>
+          <li>后 50% 的选题是什么？砍掉，还是换一个钩子重拍？</li>
+          <li>哪个 CTA 带来的评论/私信最多？下周统一用它。</li>
+          <li>下周实验最容易失败的环节是什么？先写进脚本，别等拍完才发现。</li>
+          <li>本周收到钱了吗？没有的话，卡在哪：没人要、找不到人、还是不敢收？</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 数据 -->
+    <section id="view-data" class="view">
+      <div class="section-head">
+        <p class="eyebrow">Data &amp; Backup</p>
+        <h1>数据与备份</h1>
+        <p class="lede">所有修改只存在这台电脑的浏览器里。定期导出 JSON，换设备/换浏览器时再导入。</p>
+      </div>
+
+      <div class="data-grid">
+        <div class="panel">
+          <h2>备份与恢复</h2>
+          <p class="muted">导出包含 100 个点子、实验记录、每周复盘。导入会覆盖当前数据。</p>
+          <div class="button-row">
+            <button class="btn primary" id="export-btn">导出 JSON</button>
+            <label class="btn ghost file-btn">导入 JSON<input type="file" id="import-input" accept="application/json,.json" hidden></label>
+            <button class="btn danger" id="reset-btn">恢复默认 100 个</button>
+          </div>
+          <p class="muted small" id="storage-info"></p>
+        </div>
+
+        <div class="panel">
+          <h2>怎么用</h2>
+          <ol class="howto">
+            <li><strong>每周一</strong>：在点子库挑一个，点“开始验证”。</li>
+            <li><strong>周二/周三</strong>：按“第一块钱怎么收”去找 10 个客户，先收钱再交付。</li>
+            <li><strong>每次实验</strong>：在详情里加一条“实验记录”，写清收入、支出、教训。</li>
+            <li><strong>每周日</strong>：去复盘页记 6 个数；只保留前 10% 的选题。</li>
+            <li><strong>每月</strong>：导出 JSON 备份；把失败的点子写成一条内容。</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>分类表现</h2><span class="muted">按“收到钱”看，不按“点子多”看</span></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>分类</th><th>点子数</th><th>收到钱</th><th>累计收入</th><th>实验数</th></tr>
+            </thead>
+            <tbody id="data-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/ideas.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

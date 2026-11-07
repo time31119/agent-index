@@ -1,0 +1,1224 @@
+[
+  {
+    "company": "杭州以勒上云机器人科技有限公司",
+    "url": "https://yiletianmao.21food.cn/",
+    "pages": [
+      {
+        "url": "https://yiletianmao.21food.cn/",
+        "title": "页面加载中...",
+        "chars": 224,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州以勒上云机器人科技有限公司",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "浙江中泰安全科技有限公司",
+    "url": "https://www.aqsctz.com/",
+    "pages": [
+      {
+        "url": "https://www.aqsctz.com/",
+        "title": "浙江中泰安全科技有限公司【官网】",
+        "chars": 915,
+        "error": null
+      },
+      {
+        "url": "https://www.aqsctz.com/AboutUs.html",
+        "title": "浙江中泰安全科技有限公司【官网】",
+        "chars": 1104,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江中泰安全科技有限公司",
+      "city": "杭州市",
+      "district": null,
+      "website": "https://www.aqsctz.com/",
+      "description": "浙江中泰安全科技有限公司是一家长期致力于企业安全技术应用研究与安全物联智能控制系统开发的国家高新技术企业。公司研发的“ZTWL—中泰安全风险监测预警系统”可针对现场多种类因素同时进行数据采集、报警与联锁智能应急处置，实现预警、报警与自动应急处置全流程闭环管理。",
+      "sector": "安全物联智能控制系统",
+      "founded_year": 2012,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "4008-6262-56",
+      "email": "463726055@qq.com",
+      "address": "莫干山路1418-23号1号楼8楼",
+      "products": [
+        "ZTWL-企业安全物联智能控制产品",
+        "ZTWL—中泰安全风险监测预警系统",
+        "ZTWL-安全风险监测预警多功能智控终端",
+        "深井铸造Ai智能体系统"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "浙江安诺数据技术服务有限公司",
+    "url": "http://www.zjannuo.cn/",
+    "pages": [
+      {
+        "url": "http://www.zjannuo.cn/",
+        "title": "",
+        "chars": 4456,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江安诺数据技术服务有限公司",
+      "city": null,
+      "district": null,
+      "website": "http://www.zjannuo.cn/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州第二人生科技有限公司",
+    "url": "http://www.2lives.com.cn/",
+    "pages": [
+      {
+        "url": "http://2lives.com.cn/",
+        "title": "首页-第二人生数字",
+        "chars": 660,
+        "error": null
+      },
+      {
+        "url": "http://2lives.com.cn/about.html",
+        "title": "关于我们",
+        "chars": 1652,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州第二人生科技有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "http://2lives.com.cn/",
+      "description": "第二人生是国内通过3D打印、AI生成、数字孪生等底层技术，实现：“AI生成照进现实——万物皆可打印”+“人人拥有3D数字孪生资产”的链接虚实世界的潮玩科技公司。",
+      "sector": "潮玩科技",
+      "founded_year": 2021,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "18868449173",
+      "email": null,
+      "address": null,
+      "products": [
+        "人宠手办",
+        "数字人",
+        "万物打印",
+        "照片生成宠物"
+      ],
+      "customers": [
+        "2023年杭州亚运会",
+        "2023年世界互联网大会"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州赫瓦机器人技术开发有限公司",
+    "url": "http://www.hiwao.com/",
+    "pages": [
+      {
+        "url": "http://www.hiwao.com/",
+        "title": "杭州赫瓦机器人技术开发有限公司-首页",
+        "chars": 62,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州赫瓦机器人技术开发有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "http://www.hiwao.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州极光感知科技有限公司",
+    "url": "https://www.selectdataset.com/dataset/aa59eb3d40e00c57dc897b15f446b759",
+    "pages": [
+      {
+        "url": "https://www.selectdataset.com/dataset/aa59eb3d40e00c57dc897b15f446b759",
+        "title": "SUIM|图像语义分割数据集|机器人视觉数据集",
+        "chars": 4129,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州极光感知科技有限公司",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州捷扬微电子有限公司",
+    "url": "https://m.qixin.com/company/38cd715c-08e6-48bd-9ef7-984a5a90d535",
+    "pages": [
+      {
+        "url": "https://m.qixin.com/company/38cd715c-08e6-48bd-9ef7-984a5a90d535",
+        "title": "启信宝-企业信息查询_工商信息查询-企业信用信息查询平台",
+        "chars": 210,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州捷扬微电子有限公司",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州动悟机器人科技有限公司",
+    "url": "http://www.iplusbot.com/",
+    "pages": [
+      {
+        "url": "https://www.iplusmobot.com/",
+        "title": "Iplusmobot AMR Autonomous Mobile Robot Manufacturer/Company, China Robotic AMR",
+        "chars": 3654,
+        "error": null
+      },
+      {
+        "url": "https://www.iplusmobot.com/about-us/",
+        "title": "About Us - Zhejiang IPLUSMOBOT Technology Co., Ltd.",
+        "chars": 8187,
+        "error": null
+      },
+      {
+        "url": "https://www.iplusmobot.com/contact/",
+        "title": "Contact Us - Zhejiang IPLUSMOBOT Technology Co., Ltd.",
+        "chars": 2333,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州动悟机器人科技有限公司",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.iplusmobot.com/",
+      "description": "IPLUSMOBOT is a global leader in intelligent mobile robotics, founded in 2016 and headquartered in Hangzhou, China. We specialize in providing automated and intelligent robotics, along with a wide range of logistics products and solutions tailored to the manufacturing industry.",
+      "sector": "智能移动机器人",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86-400-100-6391",
+      "email": "sales@iplusmobot.com",
+      "address": "Floor 1, Building 8, Jinsheng Tech. Park, 611 Dongguan Road, Puyan, Binjiang District, Hangzhou, China",
+      "products": [
+        "EMMA Standard AMR",
+        "FOLA Forklift AMR",
+        "NERA-A Industrial Embodied Cobot AMR",
+        "LUNA Outdoor AMR",
+        "OMNI Omnidirectional AMR",
+        "AMR+ Customized AMR",
+        "CLOUDIA fleet management system",
+        "ANNE autonomous positioning and navigation module"
+      ],
+      "customers": [
+        "Large-Scale Japanese 3PL Company"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州动微视觉科技有限公司",
+    "url": "https://dvsense.com/",
+    "pages": [
+      {
+        "url": "https://dvsense.com/",
+        "title": "动微视觉 DVSense &#8211; DVSense",
+        "chars": 1426,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州动微视觉科技有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://dvsense.com/",
+      "description": "动微视觉是一家专注于突破创新界限的初创公司，提供综合硬软一体的超高速视觉感知处理解决方案，包括软件、模组和感算一体智能相机。通过全球领先的事件流处理技术，实现微秒级延迟、毫瓦级功耗的视觉感知处理。团队来自苏黎世联邦理工的博士团队。",
+      "sector": "事件视觉/超高速视觉感知",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "灵眸 DVSLume",
+        "灵眸 DVSLume-G1",
+        "融视 DVSync",
+        "DvsBox",
+        "同步盒相机底座",
+        "标定板",
+        "6-Pin 电源触发线"
+      ],
+      "customers": [
+        "工业视觉",
+        "机器人制造商",
+        "整车厂商",
+        "手机",
+        "智能眼镜等消费电子",
+        "无人机",
+        "无人配送",
+        "出租",
+        "卡车",
+        "公交",
+        "港口",
+        "矿山",
+        "光缆",
+        "线缆",
+        "铁路",
+        "电力",
+        "纺织",
+        "芯片半导体",
+        "印刷业"
+      ],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "浙江工匠培训有限公司",
+    "url": "https://www.jxrsrc.com/company/34972.html",
+    "pages": [
+      {
+        "url": "https://www.jxrsrc.com/company/34972.html",
+        "title": "浙江工匠培训有限公司平湖分公司 - 嘉兴人事人才网",
+        "chars": 2983,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江工匠培训有限公司",
+      "city": "嘉兴市",
+      "district": "平湖市",
+      "website": null,
+      "description": "浙江工匠培训学院（浙江工匠培训有限公司）于2017年5月在浙江省职业教育活动周上获省教育厅、省国资委等多部门联合授牌，于2018年12月经省国资委备案成立。学院由浙江省机电集团有限公司(浙江省职业教育集团)控股，浙江省万里教育集团、浙江经济职业技术学院、浙江省机电技师学院参股设立，以浙江工匠培训有限公司企业实体运营，注册资本5000万元。浙江工匠培训有限公司平湖分公司于2024年11月注册登记，聚焦平湖区域产业发展急需紧缺人才引育，为平湖市产业人才学院的运营单位。",
+      "sector": "教育/培训",
+      "founded_year": 2018,
+      "team_size": "20人以下",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "浙江省嘉兴市平湖市钟埭街道新兴二路988 号科技创业中心 10 号楼 108 室",
+      "products": [],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "明度智云",
+    "url": "https://www.mingdutech.com/",
+    "pages": [
+      {
+        "url": "https://www.mingdutech.com/",
+        "title": "明度（浙江）数智科技股份有限公司",
+        "chars": 1426,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "明度（浙江）数智科技股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.mingdutech.com/",
+      "description": "生命科学领域数智未来引领者，提供AI平台Atlas及端到端场景化应用，贯穿药物研发、制造、监管注册及商业化。",
+      "sector": "生命科学数智化",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-600-9163",
+      "email": "mingdu@mingdutech.com",
+      "address": "杭州市滨江区建业路599号华业发展中心",
+      "products": [
+        "AI平台Atlas",
+        "APPs&Agents",
+        "智慧研发",
+        "智慧质量",
+        "智慧生产",
+        "智能体矩阵",
+        "数智工厂",
+        "供应链控制塔",
+        "先进疗法智慧追溯"
+      ],
+      "customers": [
+        "复宏汉霖",
+        "人福医药集团"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "剂泰医药",
+    "url": "https://www.metispharma.com/",
+    "pages": [
+      {
+        "url": "https://www.metispharma.com/",
+        "title": "剂泰科技（北京）股份有限公司",
+        "chars": 1256,
+        "error": null
+      },
+      {
+        "url": "https://www.metispharma.com/about.html",
+        "title": "关于我们_剂泰科技（北京）股份有限公司",
+        "chars": 4972,
+        "error": null
+      },
+      {
+        "url": "https://www.metispharma.com/contact.html",
+        "title": "联系我们_剂泰科技（北京）股份有限公司",
+        "chars": 777,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "剂泰科技（北京）股份有限公司",
+      "city": "北京",
+      "district": "海淀区",
+      "website": "https://www.metispharma.com/",
+      "description": "剂泰科技是一家人工智能（AI）驱动纳米材料创新的生物科技公司，专注于利用靶向药物递送和发现技术，加速重要疾病领域创新疗法的研发。",
+      "sector": "生物科技",
+      "founded_year": 2020,
+      "team_size": null,
+      "funding_stage": "D轮",
+      "funding_amount": "4亿元",
+      "phone": null,
+      "email": "bd@metistechbio.com",
+      "address": "北京市海淀区永腾北路9号贝伦产业园9栋4A",
+      "products": [
+        "AiLNP",
+        "AiRNA",
+        "AiTEM",
+        "NanoForge",
+        "MTS-004",
+        "MTS-105"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "浙江中泰安全科技",
+    "url": "http://www.aqjsfw.com/home.html",
+    "pages": [
+      {
+        "url": "http://www.aqjsfw.com/home.html",
+        "title": "浙江中泰安全科技有限公司【官网】",
+        "chars": 915,
+        "error": null
+      },
+      {
+        "url": "http://www.aqjsfw.com/AboutUs.html",
+        "title": "浙江中泰安全科技有限公司【官网】",
+        "chars": 1104,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江中泰安全科技有限公司",
+      "city": "杭州市",
+      "district": null,
+      "website": "http://www.aqjsfw.com",
+      "description": "浙江中泰安全科技有限公司是一家长期致力于企业安全技术应用研究与安全物联智能控制系统开发的国家高新技术企业。公司研发的“ZTWL—中泰安全风险监测预警系统”可针对现场多种类因素同时进行数据采集、报警与联锁智能应急处置，实现预警、报警与自动应急处置全流程闭环管理。",
+      "sector": "安全科技",
+      "founded_year": 2012,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "4008-6262-56",
+      "email": "463726055@qq.com",
+      "address": "莫干山路1418-23号1号楼8楼",
+      "products": [
+        "ZTWL—中泰安全风险监测预警系统",
+        "ZTWL-安全风险监测预警多功能智控终端",
+        "ZTWL-企业安全物联智能控制产品",
+        "深井铸造Ai智能体系统"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "浙江安诺数据技术服务",
+    "url": "http://www.zjannuo.cn/",
+    "pages": [
+      {
+        "url": "http://www.zjannuo.cn/",
+        "title": "",
+        "chars": 4456,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江安诺数据技术服务",
+      "city": null,
+      "district": null,
+      "website": "http://www.zjannuo.cn/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州第二人生科技",
+    "url": "http://2lives.com.cn/",
+    "pages": [
+      {
+        "url": "http://2lives.com.cn/",
+        "title": "首页-第二人生数字",
+        "chars": 660,
+        "error": null
+      },
+      {
+        "url": "http://2lives.com.cn/about.html",
+        "title": "关于我们",
+        "chars": 1652,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州第二人生科技有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "http://2lives.com.cn/",
+      "description": "第二人生是国内通过3D打印、AI生成、数字孪生等底层技术，实现：“AI生成照进现实——万物皆可打印”+“人人拥有3D数字孪生资产”的链接虚实世界的潮玩科技公司。",
+      "sector": "潮玩科技",
+      "founded_year": 2021,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "18868449173",
+      "email": null,
+      "address": null,
+      "products": [
+        "人宠手办",
+        "数字人",
+        "万物打印"
+      ],
+      "customers": [
+        "2023年杭州亚运会",
+        "2023年世界互联网大会"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州赫瓦机器人技术开发",
+    "url": "http://www.hiwao.com/",
+    "pages": [
+      {
+        "url": "http://www.hiwao.com/",
+        "title": "杭州赫瓦机器人技术开发有限公司-首页",
+        "chars": 62,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州赫瓦机器人技术开发有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "http://www.hiwao.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州极光感知科技",
+    "url": "https://qy.zhaobiao.cn/enterprise_v_9495114a2f278996adbe08461e83a08f.html",
+    "pages": [
+      {
+        "url": "https://qy.zhaobiao.cn/enterprise_v_9495114a2f278996adbe08461e83a08f.html",
+        "title": "极光智慧（杭州）科技有限公司企业信息",
+        "chars": 2012,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "极光智慧（杭州）科技有限公司",
+      "city": "杭州市",
+      "district": "拱墅区",
+      "website": null,
+      "description": "一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；软件开发；计算机软硬件及辅助设备批发；机械电气设备销售；电子元器件批发；终端计量设备销售；仪器仪表销售；消防器材销售；电气设备销售；金属材料销售；日用百货销售；建筑材料销售；物联网应用服务；工业互联网数据服务；5G通信技术服务；物联网技术服务；网络设备销售；互联网销售（除销售需要许可的商品）；会议及展览服务；数字技术服务；电子产品销售；软件销售；电子元器件与机电组件设备销售；摄像及视频制作服务；集成电路设计；电工仪器仪表销售（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "浙江省杭州市拱墅区新华路266号三楼3761室",
+      "products": [],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "杭州捷扬微电子",
+    "url": "https://m.qixin.com/company/38cd715c-08e6-48bd-9ef7-984a5a90d535",
+    "pages": [
+      {
+        "url": "https://m.qixin.com/company/38cd715c-08e6-48bd-9ef7-984a5a90d535",
+        "title": "启信宝-企业信息查询_工商信息查询-企业信用信息查询平台",
+        "chars": 210,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州捷扬微电子",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州动悟机器人科技",
+    "url": "http://www.iplusbot.com/",
+    "pages": [
+      {
+        "url": "https://www.iplusmobot.com/",
+        "title": "Iplusmobot AMR Autonomous Mobile Robot Manufacturer/Company, China Robotic AMR",
+        "chars": 3654,
+        "error": null
+      },
+      {
+        "url": "https://www.iplusmobot.com/about-us/",
+        "title": "About Us - Zhejiang IPLUSMOBOT Technology Co., Ltd.",
+        "chars": 8187,
+        "error": null
+      },
+      {
+        "url": "https://www.iplusmobot.com/contact/",
+        "title": "Contact Us - Zhejiang IPLUSMOBOT Technology Co., Ltd.",
+        "chars": 2333,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州动悟机器人科技",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.iplusmobot.com/",
+      "description": "IPLUSMOBOT is a global leader in intelligent mobile robotics, founded in 2016 and headquartered in Hangzhou, China. We specialize in providing automated and intelligent robotics, along with a wide range of logistics products and solutions tailored to the manufacturing industry.",
+      "sector": "智能移动机器人（AMR）",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86-400-100-6391",
+      "email": "sales@iplusmobot.com",
+      "address": "Floor 1, Building 8, Jinsheng Tech. Park, 611 Dongguan Road, Puyan, Binjiang District, Hangzhou, China",
+      "products": [
+        "EMMA Standard AMR",
+        "FOLA Forklift AMR",
+        "NERA-A Industrial Embodied Cobot AMR",
+        "LUNA Outdoor AMR",
+        "OMNI Omnidirectional AMR",
+        "AMR+ Customized AMR",
+        "CLOUDIA fleet management system",
+        "MORA cobot AMR"
+      ],
+      "customers": [
+        "Large-Scale Japanese 3PL Company"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州动微视觉科技",
+    "url": "https://dvsense.com/",
+    "pages": [
+      {
+        "url": "https://www.dvsense.com/",
+        "title": "动微视觉 DVSense &#8211; DVSense",
+        "chars": 1426,
+        "error": null
+      },
+      {
+        "url": "https://www.dvsense.com/about/",
+        "title": "关于动微 &#8211; 动微视觉 DVSense",
+        "chars": 1208,
+        "error": null
+      },
+      {
+        "url": "https://www.dvsense.com/contact/",
+        "title": "联系我们 &#8211; 动微视觉 DVSense",
+        "chars": 702,
+        "error": null
+      },
+      {
+        "url": "https://www.dvsense.com/about/#honor",
+        "title": "关于动微 &#8211; 动微视觉 DVSense",
+        "chars": 1208,
+        "error": null
+      },
+      {
+        "url": "https://www.dvsense.com/about/#location",
+        "title": "关于动微 &#8211; 动微视觉 DVSense",
+        "chars": 1208,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州动微视觉科技",
+      "city": "杭州",
+      "district": "上城区",
+      "website": "https://www.dvsense.com/",
+      "description": "动微视觉是一家专注于突破创新界限的初创公司，提供综合硬软一体的超高速视觉感知处理解决方案，包括软件、模组和感算一体智能相机。通过全球领先的事件流处理技术，实现微秒级延迟、毫瓦级功耗的视觉感知处理。",
+      "sector": "机器视觉/事件视觉",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86 153-1323-8581",
+      "email": "dvsense@dvsense.com",
+      "address": "浙江省杭州市上城区国家大学科技园",
+      "products": [
+        "灵眸 DVSLume",
+        "灵眸 DVSLume-G1",
+        "融视 DVSync",
+        "DvsBox",
+        "同步盒相机底座",
+        "标定板",
+        "6-Pin 电源触发线"
+      ],
+      "customers": [
+        "工业视觉",
+        "机器人制造商",
+        "整车厂商",
+        "手机",
+        "智能眼镜等消费电子",
+        "无人机",
+        "无人配送",
+        "出租",
+        "卡车",
+        "公交",
+        "港口",
+        "矿山",
+        "光缆",
+        "线缆",
+        "铁路",
+        "电力",
+        "纺织",
+        "芯片半导体",
+        "印刷业"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州川核科技",
+    "url": "https://www.iyoovr.com/",
+    "pages": [
+      {
+        "url": "https://www.iyoovr.com/",
+        "title": "川核科技",
+        "chars": 785,
+        "error": null
+      },
+      {
+        "url": "https://www.iyoovr.com/#about",
+        "title": "川核科技",
+        "chars": 785,
+        "error": null
+      },
+      {
+        "url": "https://www.iyoovr.com/#contact",
+        "title": "川核科技",
+        "chars": 785,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州川核科技",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.iyoovr.com/",
+      "description": "VR/AR领域解决方法领跑者",
+      "sector": "VR/AR",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "(86)0571-86660008",
+      "email": "hezuo@iyoovr.com",
+      "address": null,
+      "products": [
+        "VR产品",
+        "AR产品",
+        "教室一体化解决方案"
+      ],
+      "customers": [
+        "中艺G20",
+        "浙江大学",
+        "普陀山景区",
+        "红袖",
+        "上海科学技术出版社",
+        "武田中国",
+        "中科院"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州川核灵境科技",
+    "url": "https://www.iyoovr.com/",
+    "pages": [
+      {
+        "url": "https://www.iyoovr.com/",
+        "title": "川核科技",
+        "chars": 785,
+        "error": null
+      },
+      {
+        "url": "https://www.iyoovr.com/#about",
+        "title": "川核科技",
+        "chars": 785,
+        "error": null
+      },
+      {
+        "url": "https://www.iyoovr.com/#contact",
+        "title": "川核科技",
+        "chars": 785,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州川核灵境科技",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.iyoovr.com/",
+      "description": "VR/AR领域解决方法领跑者，提供VR课程深度定制服务、AR辅助教学系统及教室一体化解决方案。",
+      "sector": "VR/AR",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "(86)0571-86660008",
+      "email": "hezuo@iyoovr.com",
+      "address": null,
+      "products": [
+        "VR产品",
+        "AR产品",
+        "教室一体化解决方案",
+        "中艺G20",
+        "浙江大学康复训练",
+        "普陀山景区",
+        "红袖",
+        "血管通AR",
+        "武田中国"
+      ],
+      "customers": [
+        "中艺G20",
+        "浙江大学",
+        "普陀山景区",
+        "红袖",
+        "上海科学技术出版社",
+        "武田中国",
+        "中科院"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州群核信息技术",
+    "url": "http://zccareer.zufe.edu.cn/company/view/id/965263/tab/4",
+    "pages": [
+      {
+        "url": "http://zccareer.zufe.edu.cn/company/view/id/965263/tab/4",
+        "title": "杭州群核信息技术有限公司",
+        "chars": 423,
+        "error": null
+      },
+      {
+        "url": "http://zccareer.zufe.edu.cn/news/view/tag/zxjs",
+        "title": "中心介绍",
+        "chars": 254,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州群核信息技术有限公司",
+      "city": "杭州",
+      "district": "钱塘区",
+      "website": null,
+      "description": null,
+      "sector": "信息传输、软件和信息技术服务业",
+      "founded_year": null,
+      "team_size": "1000-5000人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "钱塘区学源街18号浙江财经大学",
+      "products": [],
+      "customers": [],
+      "confidence": 0.4
+    },
+    "error": null
+  },
+  {
+    "company": "杭州征信",
+    "url": "https://ipcrs.pbccrc.org.cn/html/help_center6.html",
+    "pages": [
+      {
+        "url": "https://ipcrs.pbccrc.org.cn/html/help_center6.html",
+        "title": "欢迎使用个人信用信息服务平台",
+        "chars": 5955,
+        "error": null
+      },
+      {
+        "url": "https://ipcrs.pbccrc.org.cn/html/help_center8.html",
+        "title": "欢迎使用个人信用信息服务平台",
+        "chars": 252,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州征信",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-810-8866",
+      "email": "ccrc_ipcrs@pbc.gov.cn",
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杭州海兴电力科技",
+    "url": "https://www.hxgroup.com/",
+    "pages": [
+      {
+        "url": "https://www.hxgroup.com/",
+        "title": "首页 - 杭州海兴电力科技股份有限公司",
+        "chars": 5975,
+        "error": null
+      },
+      {
+        "url": "https://www.hxgroup.com/about-hexing/",
+        "title": "关于海兴 - 杭州海兴电力科技股份有限公司",
+        "chars": 5995,
+        "error": null
+      },
+      {
+        "url": "https://www.hxgroup.com/about-hexing/#brxe-kqynbz",
+        "title": "关于海兴 - 杭州海兴电力科技股份有限公司",
+        "chars": 5995,
+        "error": null
+      },
+      {
+        "url": "https://www.hxgroup.com/about-hexing/#brxe-efca66",
+        "title": "关于海兴 - 杭州海兴电力科技股份有限公司",
+        "chars": 5995,
+        "error": null
+      },
+      {
+        "url": "https://www.hxgroup.com/about-hexing/#brxe-4845b0",
+        "title": "关于海兴 - 杭州海兴电力科技股份有限公司",
+        "chars": 5995,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州海兴电力科技股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.hxgroup.com/",
+      "description": "杭州海兴电力科技股份有限公司，专注智能电网与新能源，提供智慧能源解决方案，致力全球能源计量与能效管理，推动电力数字化创新。",
+      "sector": "智能电网与新能源",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "4009 955 981",
+      "email": null,
+      "address": null,
+      "products": [
+        "电表",
+        "水表",
+        "专用计量装置",
+        "采集终端",
+        "数据采集器",
+        "通信模块",
+        "电气装备",
+        "智能装置",
+        "成套设备",
+        "逆变器",
+        "储能电池",
+        "储能一体柜",
+        "充电桩",
+        "能源管理终端",
+        "AMI",
+        "Orca® 计费与交易平台",
+        "Orca® 网络运维平台",
+        "海水淡化设备",
+        "电动船外推进器",
+        "电动吊舱推进器",
+        "路灯",
+        "控制器",
+        "网关"
+      ],
+      "customers": [
+        "巴西电力公司",
+        "墨西哥城市政机构",
+        "孟加拉国气局",
+        "斯威士兰ERS",
+        "塔吉克斯坦",
+        "国家电网"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "浙江省邮电工程建设",
+    "url": "http://oldpt.zycg.gov.cn/81009",
+    "pages": [],
+    "extracted": null,
+    "error": "HTTP Error 503: Service Unavailable; curl failed:   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current\r\n                                 Dload  "
+  },
+  {
+    "company": "浙江海卡飞宏航空技术",
+    "url": "http://data.carnoc.com/corp/gacompany/feihonghan.html",
+    "pages": [
+      {
+        "url": "http://data.carnoc.com/corp/gacompany/feihonghan.html",
+        "title": "",
+        "chars": 542,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江海卡飞宏航空技术有限公司",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": "通用航空器进口、技术引进等",
+      "sector": "通用航空",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-86568802",
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "杭州几海里网络科技",
+    "url": null,
+    "pages": [],
+    "extracted": null,
+    "error": "无官网"
+  },
+  {
+    "company": "杭州博文股权投资",
+    "url": "https://www.shuididp.cn/yp-3f72b5fcfa3f595d4bff3ddcaab74d01.html",
+    "pages": [
+      {
+        "url": "https://www.shuididp.cn/yp-3f72b5fcfa3f595d4bff3ddcaab74d01.html",
+        "title": "杭州博文股权投资有限公司",
+        "chars": 2254,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州博文股权投资有限公司",
+      "city": "杭州市",
+      "district": "上城区",
+      "website": null,
+      "description": "杭州博文股权投资有限公司,2019-04-30日成立，经营范围包括服务：股权投资（未经金融等监管部门批准，不得从事向公众融资存款、融资担保、代客理财等金融服务），,企业管理咨询，商务信息咨询，经济信息咨询，财务咨询。（依法须经批准的项目，经相关部门批准后方可开展经营活动）",
+      "sector": "商务服务业",
+      "founded_year": 2019,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "浙江省杭州市上城区元帅庙后88-2号587室-1",
+      "products": [],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "中国美院视觉中国协同创新中心",
+    "url": "http://north.sjzu.edu.cn/",
+    "pages": [
+      {
+        "url": "http://north.sjzu.edu.cn/",
+        "title": "协同创新中心",
+        "chars": 1372,
+        "error": null
+      },
+      {
+        "url": "http://north.sjzu.edu.cn/news.jsp?urltype=news.NewsContentUrl&wbtreeid=1011&wbnewsid=1183",
+        "title": "系统提示",
+        "chars": 34,
+        "error": null
+      },
+      {
+        "url": "http://north.sjzu.edu.cn/news.jsp?urltype=news.NewsContentUrl&wbtreeid=1047&wbnewsid=1153",
+        "title": "系统提示",
+        "chars": 34,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "中国美院视觉中国协同创新中心",
+      "city": "沈阳市",
+      "district": "浑南区",
+      "website": "http://north.sjzu.edu.cn/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "中国 沈阳市浑南区浑南东路9号",
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  }
+]

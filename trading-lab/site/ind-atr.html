@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATR 波动率过滤趋势 · 指标回测 · 技术分析研究实验室</title><meta name="description" content="ATR 本身无方向，Wilder 用它做止损与仓位。此处用“EMA20 方向 + ATR 确认波动放大”组合：当日均线向上且 ATR 高于其 20 日均值（波动扩张）时持有，代表“趋势需要波动配合”。 用沪深300、上证指数、标普500、纳斯达克100 的历史数据回测，含净值曲线、参数敏感性、交易记录与浏览器实时重算。">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9b26a%22/><text x=%2216%22 y=%2222%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23151009%22 font-family=%22Arial%22 font-weight=%22bold%22>T</text></svg>">
+
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="logo" href="index.html"><span class="mark">T</span>技术分析研究实验室</a>
+  <div class="nav-links">
+    <a href="index.html" class="">首页</a>
+    <a href="books.html" class="">权威书单</a>
+    <a href="indicators.html" class="on">指标测试</a>
+    <a href="ranking.html" class="">收益率排名</a>
+    <a href="summary.html" class="">归纳总结</a>
+    <a href="method.html" class="">方法与数据</a>
+  </div>
+</div></nav>
+<div class="wrap"><div class="breadcrumb"><a href="index.html">首页</a> / <a href="indicators.html">指标测试</a> / <span>ATR 波动率过滤趋势</span></div></div>
+<header class="wrap" style="padding:34px 0 8px">
+  <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;justify-content:space-between">
+    <div style="max-width:760px">
+      <div class="dim" style="font-size:12.5px;letter-spacing:2px;color:var(--gold)">波动率与通道 · 指标 #18</div>
+      <h1 style="font-size:clamp(28px,4.2vw,42px);margin-top:10px">ATR 波动率过滤趋势</h1>
+      <div class="badge-row"><span class="tag red">全样本超额 -2.3%</span><span class="tag red">样本外超额 -4.8%</span><span class="tag blue">市场一致性 50%</span><span class="tag gold">默认参数 n=20, atrN=14, ratio=1</span></div>
+      <p class="muted" style="font-size:15.5px">ATR 本身无方向，Wilder 用它做止损与仓位。此处用“EMA20 方向 + ATR 确认波动放大”组合：当日均线向上且 ATR 高于其 20 日均值（波动扩张）时持有，代表“趋势需要波动配合”。</p>
+    </div>
+    <div class="card" style="min-width:250px">
+      <div class="dim" style="font-size:12px">该指标核心策略</div>
+      <div style="font-size:14px;margin-top:6px">ATR 波动率过滤趋势 规则：按默认参数生成 0/1 仓位，T 日收盘决策、T+1 开盘成交。</div>
+      <div class="divider" style="margin:14px 0"></div>
+      <div class="kv"><dt>成本</dt><dd>单边 5bp</dd><dt>空仓收益</dt><dd>年化 2%</dd><dt>测试市场</dt><dd>沪深300 / 上证指数 / 标普500 / 纳斯达克100</dd></div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:22px"><div class="wrap">
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="card"><div class="metric"><div class="k">全样本年化（沪深300）</div><div class="v up">9.8%</div>
+      <div class="dim" style="font-size:12px">基准 7.0% · 超额 <span class="up">+2.7%</span></div></div></div>
+    <div class="card"><div class="metric"><div class="k">最大回撤</div><div class="v down">-22.8%</div>
+      <div class="dim" style="font-size:12px">基准 -72.3% · 优于基准</div></div></div>
+    <div class="card"><div class="metric"><div class="k">夏普比率</div><div class="v">0.66</div>
+      <div class="dim" style="font-size:12px">基准 0.32 · 风险调整后更优</div></div></div>
+    <div class="card"><div class="metric"><div class="k">交易次数 / 仓位暴露</div><div class="v">196 <span style="font-size:14px;color:var(--muted)">/ 21%</span></div>
+      <div class="dim" style="font-size:12px">平均持仓 6 天 · 胜率 45%</div></div></div>
+  </div>
+
+  <div class="chart-card" style="margin-bottom:18px">
+    <div class="chart-head"><h3>净值曲线 vs 买入持有（沪深300 · 2005–2026）</h3>
+      <div class="legend"><span><i style="background:var(--gold)"></i>ATR 波动过滤</span><span><i style="background:#5aa9ff"></i>买入持有</span><span class="dim">竖线 = 样本外起点（2016-01-01）</span></div></div>
+    <div id="ch-equity" style="height:320px"></div>
+  </div>
+  <div class="grid g2" style="margin-bottom:18px">
+    <div class="chart-card"><div class="chart-head"><h3>逐年收益（策略 vs 基准）</h3></div><div id="ch-yearly" style="height:230px"></div>
+      <div class="legend" style="margin-top:8px"><span><i style="background:var(--gold)"></i>策略</span><span><i style="background:#5aa9ff"></i>沪深300</span></div></div>
+    <div class="chart-card"><div class="chart-head"><h3>样本外表现（2016 年起）</h3></div>
+      <div id="ch-oos" style="height:230px"></div>
+      <div class="dim" style="font-size:12px;margin-top:8px">样本外年化 3.1%，基准 1.9%，超额 <span class="up">+1.2%</span></div></div>
+  </div>
+
+  <div class="sec-head" style="margin:34px 0 14px"><div><h2 style="font-size:22px">分市场结果</h2><p>同一套规则在四个市场上的表现；点击市场名切换上方曲线。</p></div></div>
+  <div class="table-wrap"><table><thead><tr>
+    <th class="l">市场</th><th>年化</th><th>基准年化</th><th>超额</th><th>最大回撤</th><th>基准回撤</th><th>夏普</th><th>交易</th><th>胜率</th><th>暴露</th><th>样本外超额</th></tr></thead>
+    <tbody><tr><td class="l name"><a href="#" data-mk="csi300" class="mk-link" style="border-bottom:1px dashed rgba(217,178,106,.4)">沪深300</a></td>
+        <td class="up">9.8%</td><td class="dim">7.0%</td>
+        <td class="up">+2.7%</td>
+        <td class="down">-22.8%</td><td class="dim">-72.3%</td>
+        <td>0.66</td><td>196</td><td>45%</td><td>21%</td>
+        <td class="up">+1.2%</td></tr><tr><td class="l name"><a href="#" data-mk="sse" class="mk-link" style="border-bottom:1px dashed rgba(217,178,106,.4)">上证指数</a></td>
+        <td class="up">8.9%</td><td class="dim">5.3%</td>
+        <td class="up">+3.6%</td>
+        <td class="down">-28.1%</td><td class="dim">-72.0%</td>
+        <td>0.64</td><td>176</td><td>49%</td><td>20%</td>
+        <td class="up">+2.2%</td></tr><tr><td class="l name"><a href="#" data-mk="sp500" class="mk-link" style="border-bottom:1px dashed rgba(217,178,106,.4)">标普500</a></td>
+        <td class="up">1.6%</td><td class="dim">8.9%</td>
+        <td class="down">-7.3%</td>
+        <td class="down">-12.5%</td><td class="dim">-56.8%</td>
+        <td>-0.06</td><td>282</td><td>46%</td><td>18%</td>
+        <td class="down">-10.7%</td></tr><tr><td class="l name"><a href="#" data-mk="ndx" class="mk-link" style="border-bottom:1px dashed rgba(217,178,106,.4)">纳斯达克100</a></td>
+        <td class="up">2.8%</td><td class="dim">12.1%</td>
+        <td class="down">-9.3%</td>
+        <td class="down">-17.6%</td><td class="dim">-55.6%</td>
+        <td>0.14</td><td>281</td><td>50%</td><td>19%</td>
+        <td class="down">-12.5%</td></tr></tbody></table></div>
+
+  <div class="grid g2" style="margin-top:22px">
+    <div class="chart-card"><div class="chart-head"><h3>参数敏感性 · 沪深300</h3></div><div id="ch-scatter" style="height:280px"></div>
+      <div class="dim" style="font-size:12px;margin-top:6px">每个点是一组参数：横轴为样本内年化，纵轴为样本外年化。点若集中在右下，说明样本内的优势没有延续到样本外（过拟合）。</div></div>
+    <div class="chart-card"><div class="chart-head"><h3>参数实验室 · 浏览器实时重算</h3></div>
+      <div class="controls" style="margin:12px 0">
+        <div class="ctrl"><label>市场</label><select id="lab-market"><option value="csi300" selected>沪深300</option><option value="sse" >上证指数</option><option value="sp500" >标普500</option><option value="ndx" >纳斯达克100</option></select></div>
+        <div class="ctrl"><label for="p_n">n</label>
+      <input type="number" id="p_n" value="20" step="1" min="0">
+      <span class="dim" style="font-size:11.5px">可选: 10 / 20 / 30 / 50</span></div><div class="ctrl"><label for="p_atrN">atrN</label>
+      <input type="number" id="p_atrN" value="14" step="1" min="0">
+      <span class="dim" style="font-size:11.5px">可选: 14</span></div><div class="ctrl"><label for="p_ratio">ratio</label>
+      <input type="number" id="p_ratio" value="1" step="1" min="0">
+      <span class="dim" style="font-size:11.5px">可选: 0.8 / 1 / 1.2</span></div>
+        <button class="btn gold" id="lab-run" style="padding:8px 16px">重算</button>
+      </div>
+      <div id="lab-out" style="font-size:13.5px;color:var(--muted)">调整参数后点击“重算”，将在你的浏览器里用同一份历史数据重新回测。</div>
+      <div id="lab-chart" style="height:170px;margin-top:8px"></div>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin:34px 0 14px"><div><h2 style="font-size:22px">交易记录（沪深300 · 最近 20 笔）</h2><p>按“T+1 开盘成交 + 单边 5bp 成本”计算，未平仓交易单独标注。</p></div></div>
+  <div class="table-wrap"><table><thead><tr><th class="l">#</th><th class="l">入场</th><th class="l">出场</th><th>入场价</th><th>出场价</th><th>持有天数</th><th>收益</th></tr></thead>
+    <tbody id="trade-body"><tr><td colspan="7" class="l dim">加载中…</td></tr></tbody></table></div>
+
+  <div class="grid g2" style="margin-top:28px">
+    <div class="card"><h3 style="font-size:16px;margin-bottom:10px">这个指标背后的书</h3>
+      <a class="mini-book" href="book-wilder.html">
+        <img src="assets/covers/wilder.jpg" alt="《技术交易系统新概念》封面" loading="lazy" width="38" height="57">
+        <span style="min-width:0"><span style="display:block;font-size:14px">技术交易系统新概念</span><span class="dim" style="font-size:12px">J. Welles Wilder Jr. · 对应观点 5 条</span></span></a>
+    </div>
+    <div class="card"><h3 style="font-size:16px;margin-bottom:10px">怎么读这页数据</h3>
+      <ul class="takeaways" style="font-size:13.5px">
+        <li>“超额”= 策略年化 − 同窗口买入持有年化；正数才代表跑赢基准。</li>
+        <li>样本外（2016 起）才是检验是否过拟合的关键；样本内好看不算数。</li>
+        <li>最大回撤比收益更重要：回撤 −50% 需要 +100% 才能回本。</li>
+        <li>参数敏感性越集中、越平滑，规则越稳健；极端点往往是拟合出来的。</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<script src="assets/lib/indicators.js"></script><script src="assets/lib/backtest.js"></script><script src="assets/lib/strategies.js"></script>
+<script>window.TL_IND_ID = "atr";</script>
+<script src="data/ind/atr.js"></script>
+<script src="data/curves/atr/curves.js"></script>
+<script src="data/markets.js"></script>
+<script src="data/ohlc/csi300.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/indicator-page.js"></script><footer class="footer"><div class="wrap"><div class="row">
+  <div><b style="color:var(--muted)">技术分析研究实验室</b> · 33 本权威著作 × 28 个技术指标 × 4 大市场 × 21 年历史数据</div>
+  <div>数据：东方财富公开日线 · 回测口径见 <a href="method.html" style="color:var(--gold)">方法与数据</a></div>
+</div><div style="margin-top:14px;max-width:900px">风险声明：本站所有回测结果均为历史统计，不构成任何投资建议。历史表现不代表未来收益；技术指标在样本外经常失效，实盘还需考虑流动性、税费、涨跌停与执行滑点。市场有风险，决策需独立。</div></div></footer></body></html>

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>开发文档 — 天枢云 TIANSHU CLOUD</title>
+  <meta name="description" content="天枢云 API 接入文档：OpenAI 兼容接口、鉴权方式、对话补全、流式输出、图像与视频生成、错误码与客户端配置。">
+  <meta name="theme-color" content="#06080f">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="开发文档 — 天枢云">
+  <meta property="og:description" content="OpenAI 兼容接口，改两行代码即可接入。">
+  <meta property="og:image" content="assets/img/og-cover.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add("js");window.setTimeout(function(){if(!window.__TS_OK){document.documentElement.classList.remove("js");}},2500);</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="天枢云首页">
+        <img class="brand-mark" src="assets/img/logo-mark.svg" width="34" height="34" alt="">
+        <span class="brand-text">
+          <span class="brand-name">天枢云</span>
+          <span class="brand-sub">Tianshu Cloud</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="主导航">
+        <a class="nav-link" href="index.html">首页</a>
+        <a class="nav-link" href="models.html">模型广场</a>
+        <a class="nav-link" href="pricing.html">价格</a>
+        <a class="nav-link is-active" href="docs.html">开发文档</a>
+        <a class="nav-link" href="partners.html">渠道合作</a>
+        <a class="nav-link" href="about.html">关于我们</a>
+        <div class="nav-cta">
+          <a class="btn btn-quiet btn-sm" href="https://token.quanxiyun.cloud/console" data-outbound>登录控制台</a>
+          <a class="btn btn-primary btn-sm" href="https://token.quanxiyun.cloud/r/HyicS5" data-outbound>免费注册</a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="docs-hero">
+      <div class="container">
+        <p class="eyebrow">Documentation</p>
+        <h1>开发文档</h1>
+        <p>天枢云提供与 OpenAI 完全兼容的 HTTP 接口。保留现有 SDK，替换地址与密钥即可完成迁移。</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="docs-layout">
+        <aside class="docs-nav" aria-label="文档目录">
+          <p class="docs-nav-title">目录</p>
+          <a href="#overview" data-level="1">概览</a>
+          <a href="#quickstart" data-level="1">快速开始</a>
+          <a href="#auth" data-level="1">鉴权方式</a>
+          <a href="#chat" data-level="1">对话补全</a>
+          <a href="#stream" data-level="1">流式输出</a>
+          <a href="#images" data-level="1">图像生成</a>
+          <a href="#video" data-level="1">视频生成</a>
+          <a href="#embeddings" data-level="1">向量化</a>
+          <a href="#clients" data-level="1">客户端接入</a>
+          <a href="#errors" data-level="1">错误码</a>
+          <a href="#limits" data-level="1">限流与配额</a>
+        </aside>
+
+        <article class="docs-article">
+          <h2 id="overview">概览</h2>
+          <p>
+            天枢云是一个统一的模型调用网关。所有请求都发往同一个域名，通过请求体中的
+            <code class="mono">model</code> 字段选择具体模型；鉴权、计费、日志与线路切换都在网关侧完成。
+          </p>
+
+          <dl class="kv">
+            <dt>Base URL</dt><dd>https://token.quanxiyun.cloud/v1</dd>
+            <dt>协议</dt><dd>HTTPS · JSON · SSE（流式）</dd>
+            <dt>鉴权</dt><dd>Authorization: Bearer sk-...</dd>
+            <dt>兼容</dt><dd>OpenAI Chat Completions / Images / Embeddings</dd>
+          </dl>
+
+          <div class="table-wrap" style="margin-top:20px">
+            <table class="data">
+              <thead>
+                <tr><th>方法</th><th>路径</th><th>说明</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="t-model">POST</td><td class="t-model">/v1/chat/completions</td><td class="t-vendor">对话补全，支持流式与工具调用</td></tr>
+                <tr><td class="t-model">GET</td><td class="t-model">/v1/models</td><td class="t-vendor">获取当前账号可用模型列表</td></tr>
+                <tr><td class="t-model">POST</td><td class="t-model">/v1/images/generations</td><td class="t-vendor">图像生成</td></tr>
+                <tr><td class="t-model">POST</td><td class="t-model">/v1/embeddings</td><td class="t-vendor">文本向量化</td></tr>
+                <tr><td class="t-model">POST</td><td class="t-model">/v1/video/generations</td><td class="t-vendor">创建视频生成任务</td></tr>
+                <tr><td class="t-model">GET</td><td class="t-model">/v1/video/generations/{task_id}</td><td class="t-vendor">查询视频任务状态与结果</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              天枢云负责品牌、客户服务与技术支持；模型算力、账号与账单由上游合作平台承载。
+              本文档描述的是双方共同使用的接口规范，参数与返回与你在上游控制台看到的一致。
+            </div>
+          </div>
+
+          <h2 id="quickstart">快速开始</h2>
+          <p>整个接入过程只有三步：注册账号、创建密钥、修改 Base URL。</p>
+
+          <ul class="bullets">
+            <li>在 <a href="https://token.quanxiyun.cloud/r/HyicS5" data-outbound style="color:var(--brand-2)">注册页</a> 完成账号注册并登录控制台。</li>
+            <li>进入「令牌 / API Key」页面创建一个密钥，复制以 <code class="mono">sk-</code> 开头的字符串。</li>
+            <li>把你的 SDK 的 <code class="mono">base_url</code> 改为 <code class="mono">https://token.quanxiyun.cloud/v1</code>，模型名改为目录中的 <code class="mono">id</code>。</li>
+          </ul>
+
+          <div class="code-card">
+            <div class="code-head">
+              <button class="code-tab is-active" type="button" data-tab="c1" aria-selected="true">cURL</button>
+              <button class="code-tab" type="button" data-tab="p1" aria-selected="false">Python</button>
+              <button class="code-tab" type="button" data-tab="n1" aria-selected="false">Node.js</button>
+              <button class="code-copy" type="button" data-copy-code>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>
+                复制
+              </button>
+            </div>
+            <div class="code-panel is-active" data-panel="c1">
+<pre>export TIANSHU_API_KEY="sk-ts-你的密钥"
+
+curl https://token.quanxiyun.cloud/v1/chat/completions \
+  -H "Authorization: Bearer $TIANSHU_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "glm-5.3",
+    "messages": [{"role": "user", "content": "你好"}]
+  }'</pre>
+            </div>
+            <div class="code-panel" data-panel="p1">
+<pre><span class="token-keyword">from</span> openai <span class="token-keyword">import</span> OpenAI
+
+client = OpenAI(
+    base_url=<span class="token-string">"https://token.quanxiyun.cloud/v1"</span>,
+    api_key=<span class="token-string">"sk-ts-你的密钥"</span>,
+)
+
+completion = client.chat.completions.create(
+    model=<span class="token-string">"glm-5.3"</span>,
+    messages=[{<span class="token-string">"role"</span>: <span class="token-string">"user"</span>, <span class="token-string">"content"</span>: <span class="token-string">"你好"</span>}],
+)
+print(completion.choices[<span class="token-number">0</span>].message.content)</pre>
+            </div>
+            <div class="code-panel" data-panel="n1">
+<pre><span class="token-keyword">import</span> OpenAI <span class="token-keyword">from</span> <span class="token-string">"openai"</span>;
+
+<span class="token-keyword">const</span> client = <span class="token-keyword">new</span> OpenAI({
+  baseURL: <span class="token-string">"https://token.quanxiyun.cloud/v1"</span>,
+  apiKey: process.env.TIANSHU_API_KEY,
+});
+
+<span class="token-keyword">const</span> res = <span class="token-keyword">await</span> client.chat.completions.create({
+  model: <span class="token-string">"glm-5.3"</span>,
+  messages: [{ role: <span class="token-string">"user"</span>, content: <span class="token-string">"你好"</span> }],
+});
+console.log(res.choices[<span class="token-number">0</span>].message.content);</pre>
+            </div>
+          </div>
+
+          <h2 id="auth">鉴权方式</h2>
+          <p>
+            所有请求都需要在 HTTP Header 中携带密钥：
+          </p>
+          <div class="code-card">
+            <div class="code-head"><span class="code-tab is-active">HTTP Header</span>
+              <button class="code-copy" type="button" data-copy-code>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>
+                复制
+              </button>
+            </div>
+            <div class="code-panel is-active">
+<pre>Authorization: Bearer sk-ts-xxxxxxxxxxxxxxxx
+Content-Type: application/json</pre>
+            </div>
+          </div>
+          <ul class="bullets">
+            <li>密钥只在创建时完整显示一次，请妥善保存，不要提交到公开仓库。</li>
+            <li>建议按项目或环境分别创建密钥，便于统计用量与快速吊销。</li>
+            <li>如怀疑泄露，请立即在控制台删除并重新生成。</li>
+          </ul>
+
+          <h2 id="chat">对话补全</h2>
+          <p>标准 OpenAI Chat Completions 接口，支持系统提示词、多轮对话、工具调用与结构化输出参数。</p>
+
+          <div class="code-card">
+            <div class="code-head">
+              <button class="code-tab is-active" type="button" data-tab="c2" aria-selected="true">请求</button>
+              <button class="code-tab" type="button" data-tab="r2" aria-selected="false">响应</button>
+              <button class="code-copy" type="button" data-copy-code>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>
+                复制
+              </button>
+            </div>
+            <div class="code-panel is-active" data-panel="c2">
+<pre>POST /v1/chat/completions
+
+{
+  "model": "qwen3.8-max",
+  "messages": [
+    {"role": "system", "content": "你是一名严谨的技术顾问"},
+    {"role": "user", "content": "用三句话解释什么是 API 网关"}
+  ],
+  "temperature": 0.7,
+  "max_tokens": 1024
+}</pre>
+            </div>
+            <div class="code-panel" data-panel="r2">
+<pre>{
+  "id": "chatcmpl-8f2c...",
+  "object": "chat.completion",
+  "created": 1786000000,
+  "model": "qwen3.8-max",
+  "choices": [{
+    "index": 0,
+    "message": {"role": "assistant", "content": "..."},
+    "finish_reason": "stop"
+  }],
+  "usage": {
+    "prompt_tokens": 42,
+    "completion_tokens": 128,
+    "total_tokens": 170
+  }
+}</pre>
+            </div>
+          </div>
+
+          <div class="callout warn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 9v4M12 17h.01" stroke-linecap="round"/><path d="M10.3 3.9 2.6 17.1A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.9L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke-linejoin="round"/></svg>
+            <div>
+              计费以响应中的 <b>usage</b> 为准。开启流式时，usage 会在最后一个 chunk 返回；
+              部分客户端会自动丢弃该字段，建议以控制台账单核对实际用量。
+            </div>
+          </div>
+
+          <h2 id="stream">流式输出</h2>
+          <p>在请求体中设置 <code class="mono">"stream": true</code>，服务端会以 SSE 逐块返回增量内容。</p>
+          <div class="code-card">
+            <div class="code-head"><span class="code-tab is-active">Python · 流式</span>
+              <button class="code-copy" type="button" data-copy-code>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>
+                复制
+              </button>
+            </div>
+            <div class="code-panel is-active">
+<pre>stream = client.chat.completions.create(
+    model=<span class="token-string">"deepseek-v4.1-flash"</span>,
+    messages=[{<span class="token-string">"role"</span>: <span class="token-string">"user"</span>, <span class="token-string">"content"</span>: <span class="token-string">"写一段产品介绍"</span>}],
+    stream=<span class="token-keyword">True</span>,
+)
+
+<span class="token-keyword">for</span> chunk <span class="token-keyword">in</span> stream:
+    delta = chunk.choices[<span class="token-number">0</span>].delta
+    <span class="token-keyword">if</span> delta.content:
+        print(delta.content, end=<span class="token-string">""</span>)</pre>
+            </div>
+          </div>
+
+          <h2 id="images">图像生成</h2>
+          <p>使用标准 Images 接口，模型名从 <a href="models.html" style="color:var(--brand-2)">模型广场</a> 的图像分类中选择。</p>
+          <div class="code-card">
+            <div class="code-head"><span class="code-tab is-active">POST /v1/images/generations</span>
+              <button class="code-copy" type="button" data-copy-code>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>
+                复制
+              </button>
+            </div>
+            <div class="code-panel is-active">
+<pre>curl https://token.quanxiyun.cloud/v1/images/generations \
+  -H "Authorization: Bearer $TIANSHU_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "qwen-image-3.0-pro",
+    "prompt": "极简风格的科技品牌主视觉，深蓝背景，发光几何体",
+    "size": "1024x1024",
+    "n": 1
+  }'</pre>
+            </div>
+          </div>
+          <p>响应中的 <code class="mono">data[].url</code> 为图片地址，部分模型也会返回 <code class="mono">b64_json</code>。图片地址存在有效期，建议及时转存。</p>
+
+          <h2 id="video">视频生成</h2>
+          <p>视频属于异步任务：先创建任务，再轮询任务状态获取成片地址。</p>
+
+          <div class="code-card">
+            <div class="code-head">
+              <button class="code-tab is-active" type="button" data-tab="v1" aria-selected="true">创建任务</button>
+              <button class="code-tab" type="button" data-tab="v2" aria-selected="false">查询结果</button>
+              <button class="code-copy" type="button" data-copy-code>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>
+                复制
+              </button>
+            </div>
+            <div class="code-panel is-active" data-panel="v1">
+<pre>POST /v1/video/generations
+
+{
+  "model": "seedance-2.0",
+  "prompt": "镜头从海面推近到灯塔，黄昏，电影感",
+  "duration": 5,
+  "images": ["https://example.com/reference.jpg"],
+  "metadata": {
+    "resolution": "720p",
+    "ratio": "16:9"
+  }
+}</pre>
+            </div>
+            <div class="code-panel" data-panel="v2">
+<pre>GET /v1/video/generations/{task_id}
+
+{
+  "id": "task_abc123",
+  "object": "video.generation",
+  "status": "completed",
+  "progress": 100,
+  "output": {
+    "video_url": "https://cdn.example.com/output/task_abc123.mp4"
+  }
+}</pre>
+            </div>
+          </div>
+
+          <p><code class="mono">status</code> 取值：<code class="mono">queued</code>（排队）、<code class="mono">in_progress</code>（生成中）、<code class="mono">completed</code>（成功）、<code class="mono">failed</code>（失败）。建议轮询间隔 5–10 秒。</p>
+
+          <h2 id="embeddings">向量化</h2>
+          <div class="code-card">
+            <div class="code-head"><span class="code-tab is-active">POST /v1/embeddings</span>
+              <button class="code-copy" type="button" data-copy-code>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" stroke-linecap="round"/></svg>
+                复制
+              </button>
+            </div>
+            <div class="code-panel is-active">
+<pre>{
+  "model": "text-embedding-3-large",
+  "input": ["第一段文本", "第二段文本"]
+}</pre>
+            </div>
+          </div>
+
+          <h2 id="clients">客户端接入</h2>
+          <p>任何支持自定义 OpenAI 接口地址的客户端都可以直接使用，配置时填写以下三项：</p>
+          <ul class="bullets">
+            <li><strong>API 地址 / Base URL：</strong><code class="mono">https://token.quanxiyun.cloud/v1</code></li>
+            <li><strong>API Key：</strong>控制台创建的 <code class="mono">sk-</code> 密钥</li>
+            <li><strong>模型：</strong>模型广场中的 <code class="mono">id</code>，例如 <code class="mono">glm-5.3</code></li>
+          </ul>
+          <p>
+            已验证可用的客户端包括 Cherry Studio、Lobe Chat、OpenCat、AionUI、AI as Workspace、CC Switch 等；
+            LangChain、LlamaIndex、Dify、n8n 等框架按 OpenAI Provider 配置即可。
+          </p>
+
+          <h2 id="errors">错误码</h2>
+          <div class="table-wrap">
+            <table class="data">
+              <thead>
+                <tr><th>HTTP</th><th>含义</th><th>处理建议</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="t-model">400</td><td class="t-vendor">请求参数错误</td><td class="t-vendor">检查 JSON 结构、模型名与必填字段</td></tr>
+                <tr><td class="t-model">401</td><td class="t-vendor">鉴权失败</td><td class="t-vendor">确认密钥正确、未被删除、Header 格式为 Bearer</td></tr>
+                <tr><td class="t-model">403</td><td class="t-vendor">无权限或额度不足</td><td class="t-vendor">检查账户余额、模型分组与实名认证状态</td></tr>
+                <tr><td class="t-model">404</td><td class="t-vendor">模型不存在</td><td class="t-vendor">核对模型 id，或先调用 /v1/models 查询</td></tr>
+                <tr><td class="t-model">429</td><td class="t-vendor">请求过于频繁</td><td class="t-vendor">指数退避重试，或联系商务提升配额</td></tr>
+                <tr><td class="t-model">500</td><td class="t-vendor">上游服务异常</td><td class="t-vendor">稍后重试；持续出现请联系技术支持</td></tr>
+                <tr><td class="t-model">503</td><td class="t-vendor">暂无可用线路</td><td class="t-vendor">等待自动切换或更换其他模型</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>错误响应遵循 OpenAI 格式：<code class="mono">{"error": {"message": "...", "type": "...", "code": "..."}}</code>。</p>
+
+          <h2 id="limits">限流与配额</h2>
+          <ul class="bullets">
+            <li>默认并发与每分钟请求数（RPM）由账号等级与模型决定，可在控制台查看当前配额。</li>
+            <li>单个密钥可设置额度上限，避免误用或密钥泄露造成超额消费。</li>
+            <li>视频、图像等异步任务有独立的任务队列并发限制。</li>
+            <li>需要更高配额或专属线路，请通过 <a href="about.html#contact" style="color:var(--brand-2)">联系我们</a> 沟通。</li>
+          </ul>
+
+          <div class="callout" style="margin-top:36px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5" stroke-linecap="round"/></svg>
+            <div>
+              需要更完整的参数说明？上游控制台的 <a href="https://token.quanxiyun.cloud/zh/docs" data-outbound style="color:var(--brand-2)">接口文档</a>
+              与本页保持同步，包含各模型的专属参数与示例。
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="天枢云首页">
+          <img class="brand-mark" src="assets/img/logo-mark.svg" width="34" height="34" alt="">
+          <span class="brand-text">
+            <span class="brand-name">天枢云</span>
+            <span class="brand-sub">Tianshu Cloud</span>
+          </span>
+        </a>
+        <p>面向企业与开发者的 AI 模型 API 聚合网关。一个接口，接入文本、图像、视频与多模态能力。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="models.html">模型广场</a></li>
+          <li><a href="pricing.html">价格与计费</a></li>
+          <li><a href="docs.html">开发文档</a></li>
+          <li><a href="https://token.quanxiyun.cloud/pricing" data-outbound>实时价格</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>开发者</h4>
+        <ul>
+          <li><a href="docs.html#quickstart">快速开始</a></li>
+          <li><a href="docs.html#auth">鉴权方式</a></li>
+          <li><a href="docs.html#errors">错误码</a></li>
+          <li><a href="docs.html#clients">客户端接入</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>公司</h4>
+        <ul>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="partners.html">渠道合作</a></li>
+          <li><a href="about.html#contact">联系我们</a></li>
+          <li><a href="about.html#compliance">合规与安全</a></li>
+          <li><a href="https://token.quanxiyun.cloud/console" data-outbound>控制台</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 杭州天枢云智科技有限公司</p>
+      <div class="footer-legal">
+        <span>浙ICP备2026XXXXXX号-1（备案中）</span>
+        <span>增值电信业务经营许可证（办理中）</span>
+        <span>模型与算力服务由上游合作平台提供</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/models-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

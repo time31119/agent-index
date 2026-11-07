@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>手机原型 · 识途 SHITU</title>
+<meta name="description" content="识途手机 Web 原型：浏览器定位 + 语音输入 + 路线 + 语音播报，无需硬件即可体验完整导航流程。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><i></i><b>识途</b><span>SHITU</span></a>
+    <a class="link" href="index.html">品牌</a>
+    <a class="link" href="crowdfund.html">众筹</a>
+    <a class="link" href="video.html">视频</a>
+    <a class="link on" href="prototype.html">原型</a>
+    <span class="spacer"></span>
+    <a class="pill" href="index.html#reserve">预约首批</a>
+  </div>
+</header>
+
+<main class="app">
+
+  <div class="banner" id="banner" hidden></div>
+
+  <div class="navcard">
+    <div class="to" id="to">未设置目的地</div>
+    <div class="arrow" id="arrow">↑</div>
+    <div class="ins" id="ins">先说出你要去哪</div>
+    <div class="sub" id="sub">例如：去王府井</div>
+  </div>
+
+  <canvas id="map" aria-label="路线示意图"></canvas>
+
+  <div class="controls">
+    <button class="btn primary" id="start" type="button">开始导航</button>
+    <button class="btn ghost" id="stop" type="button">结束</button>
+  </div>
+
+  <div class="mic-row">
+    <button class="mic" id="mic" type="button" aria-label="语音输入">点一下说</button>
+    <form id="ask">
+      <input id="dest" placeholder="或输入目的地，如：王府井" autocomplete="off">
+      <button type="submit">去</button>
+    </form>
+  </div>
+
+  <div class="chips" style="margin-top:14px">
+    <button class="chip" type="button" data-poi="王府井">王府井</button>
+    <button class="chip" type="button" data-poi="天安门">天安门</button>
+    <button class="chip" type="button" data-poi="外滩">外滩</button>
+    <button class="chip" type="button" data-poi="南京东路">南京东路</button>
+    <button class="chip" type="button" data-poi="西湖">西湖</button>
+  </div>
+
+  <details class="settings">
+    <summary>设置（高德 Key / 语音 / GPS）</summary>
+    <div class="inner">
+      <div>
+        <label for="amapKey">高德 Web 服务 Key（可选）</label>
+        <input type="text" id="amapKey" placeholder="留空则使用内置演示路线" autocomplete="off">
+      </div>
+      <label class="row"><input type="checkbox" id="voice" checked> 语音播报</label>
+      <label class="row"><input type="checkbox" id="useGps"> 使用真实 GPS 位置</label>
+      <p style="font-size:11.5px;color:var(--dim);margin:0;line-height:1.7">
+        填了 Key 会调用高德地理编码与步行路线；失败会自动回退到演示路线。
+        Key 只存在你本机浏览器。
+      </p>
+    </div>
+  </details>
+
+  <div id="log" aria-live="polite"></div>
+
+  <section style="margin-top:26px">
+    <h2 style="font-size:16px;margin:0 0 8px">怎么玩</h2>
+    <ol style="color:var(--muted);font-size:13.5px;padding-left:18px;line-height:1.9;margin:0">
+      <li>先点一个演示目的地（或按住麦克风说“去王府井”）</li>
+      <li>点“开始导航”，它会用语音报出第一段路线</li>
+      <li>箭头和文字会随“模拟前进”实时变化，走完会提示到达</li>
+      <li>勾选“使用真实 GPS”后，它会跟着你真实位置走（需要授权）</li>
+    </ol>
+    <p style="font-size:12px;color:var(--dim);margin-top:12px;line-height:1.8">
+      说明：这是交互原型，路线为演示数据；语音识别需要 Chrome / Edge，并在
+      <span class="mono">http://localhost</span> 或 HTTPS 下才能用麦克风。
+      没有高德 Key 也能完整体验——用的是内置的模拟路线。
+    </p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap fgrid">
+    <div><b>识途 SHITU · 原型</b><p>10 分钟能走完的演示，用来验证“只用耳朵能不能导航”。</p></div>
+    <div><b>下一步</b><p>把这个交互搬到蓝牙挂件上，麦克风换成硬件，屏幕换成箭头。</p></div>
+  </div>
+</footer>
+
+<script src="assets/prototype.js" defer></script>
+</body>
+</html>

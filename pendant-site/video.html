@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分镜动画 · 识途 SHITU</title>
+<meta name="description" content="识途 Kickstarter 众筹视频的 75 秒分镜动画：中英双语字幕、镜头表与 SRT 字幕下载。">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .player{max-width:980px;margin:0 auto}
+  .stage{
+    position:relative;aspect-ratio:16/9;background:#000;border-radius:18px;overflow:hidden;
+    border:1px solid var(--line2);box-shadow:0 30px 80px rgba(0,0,0,.55);
+  }
+  .scene{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;display:grid;place-items:center;overflow:hidden}
+  .scene.on{opacity:1}
+
+  /* 01 黑屏 */
+  .s1{background:radial-gradient(ellipse at 50% 72%,#151b23 0%,#000 68%)}
+  .s1 .glow{width:34%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.05),transparent 70%);animation:breathe 4s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:scale(.9);opacity:.5}50%{transform:scale(1.1);opacity:1}}
+
+  /* 02 手忙脚乱 */
+  .s2{background:linear-gradient(150deg,#2b1a12,#0a0705 72%)}
+  .s2 .blob{position:absolute;left:-6%;top:8%;width:46%;height:74%;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.38),transparent 70%);filter:blur(18px)}
+  .s2 .phone{
+    position:absolute;right:17%;top:20%;width:15%;aspect-ratio:.52;border:2px solid rgba(255,255,255,.32);
+    border-radius:16px;transform:rotate(-15deg);box-shadow:0 0 46px rgba(255,107,53,.25);
+  }
+  .s2 .phone::after{content:"";position:absolute;inset:9%;border-radius:9px;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.03))}
+  .s2 .cup{position:absolute;left:26%;bottom:16%;width:9%;aspect-ratio:1;border-radius:50% 50% 46% 46%;background:rgba(242,237,228,.85)}
+  .s2 .cup::after{content:"";position:absolute;left:-14%;top:6%;width:128%;height:78%;border-radius:50%;background:rgba(242,237,228,.14)}
+
+  /* 03 产品 */
+  .s3{background:radial-gradient(ellipse at 50% 55%,#1b232c,#05080b 72%)}
+  .s3 .ring{position:absolute;width:58%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,107,53,.35);animation:pulse 2.4s ease-out infinite}
+  @keyframes pulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+  .s3 .product{position:relative;height:74%;display:flex;align-items:center;justify-content:center}
+  .s3 .product svg{height:100%;width:auto;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+
+  /* 04 说话 */
+  .s4{background:radial-gradient(ellipse at 50% 60%,#161d26,#05080b 70%)}
+  .wave{display:flex;align-items:center;gap:7px;height:34%}
+  .wave i{display:block;width:6px;border-radius:3px;background:linear-gradient(180deg,#ff8a5c,#ff6b35);animation:eq 1s ease-in-out infinite}
+  .wave i:nth-child(1){height:26%;animation-delay:0s}
+  .wave i:nth-child(2){height:52%;animation-delay:.1s}
+  .wave i:nth-child(3){height:84%;animation-delay:.2s}
+  .wave i:nth-child(4){height:40%;animation-delay:.3s}
+  .wave i:nth-child(5){height:96%;animation-delay:.4s}
+  .wave i:nth-child(6){height:58%;animation-delay:.5s}
+  .wave i:nth-child(7){height:32%;animation-delay:.6s}
+  @keyframes eq{0%,100%{transform:scaleY(.65)}50%{transform:scaleY(1)}}
+
+  /* 05 路线 */
+  .s5{background:radial-gradient(ellipse at 50% 50%,#131a22,#05080b 72%)}
+  .s5 svg{width:100%;height:100%}
+  .s5 .dash{stroke-dasharray:10 12;animation:flow 1.4s linear infinite}
+  @keyframes flow{to{stroke-dashoffset:-44}}
+
+  /* 06 雨天 */
+  .s6{background:linear-gradient(160deg,#1a2430,#080c11 75%)}
+  .s6 .rain{position:absolute;inset:-20%;background:repeating-linear-gradient(105deg,transparent 0 22px,rgba(255,255,255,.055) 22px 23px);animation:rain 1.1s linear infinite}
+  @keyframes rain{to{transform:translate3d(-23px,46px,0)}}
+  .s6 .sheen{position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,transparent,rgba(94,234,212,.07))}
+
+  /* 07 山里 */
+  .s7{background:linear-gradient(180deg,#0b1410,#05080b 70%)}
+  .s7 .mtn{position:absolute;bottom:0;left:0;width:100%;height:62%}
+  .s7 .m1{background:linear-gradient(180deg,#182a20,#0c1511);clip-path:polygon(0 100%,18% 38%,34% 72%,52% 22%,72% 66%,88% 44%,100% 100%)}
+  .s7 .m2{background:linear-gradient(180deg,#0f1d16,#080f0b);clip-path:polygon(0 100%,12% 62%,30% 84%,46% 54%,64% 82%,82% 60%,100% 100%);height:52%}
+  .s7 .nosig{position:absolute;right:14%;top:20%;display:flex;align-items:flex-end;gap:4px;opacity:.75}
+  .s7 .nosig i{display:block;width:5px;background:#5eead4;border-radius:2px}
+  .s7 .nosig i:nth-child(1){height:8px;opacity:.35}
+  .s7 .nosig i:nth-child(2){height:14px;opacity:.55}
+  .s7 .nosig i:nth-child(3){height:20px;opacity:.8}
+  .s7 .nosig::after{content:"";position:absolute;left:-4px;top:-4px;width:34px;height:34px;border-left:2px solid #ff6b35;transform:rotate(-45deg);transform-origin:center}
+
+  /* 08 老人与孩子 */
+  .s8{background:linear-gradient(160deg,#2a1d14,#0a0705 75%)}
+  .s8 .fig{position:absolute;bottom:12%;border-radius:50% 50% 20% 20%;background:rgba(242,237,228,.16)}
+  .s8 .fig.a{left:32%;width:9%;height:34%}
+  .s8 .fig.b{left:46%;width:6%;height:22%}
+  .s8 .fig::before{content:"";position:absolute;left:50%;top:-38%;transform:translateX(-50%);width:62%;aspect-ratio:1;border-radius:50%;background:rgba(242,237,228,.22)}
+
+  /* 09 结尾 */
+  .s9{background:radial-gradient(ellipse at 50% 40%,#1a1d24,#05080b 72%)}
+  .s9 .brand{text-align:center}
+  .s9 .cn{font-size:clamp(40px,7vw,76px);font-weight:800;letter-spacing:.16em;color:#f2ede4}
+  .s9 .en{font-size:clamp(10px,1.4vw,14px);letter-spacing:.5em;color:#8b98a9;margin-top:6px}
+  .s9 .price{margin-top:22px;font-size:clamp(11px,1.5vw,15px);color:#ff8a5c;letter-spacing:.08em}
+
+  /* 字幕 */
+  .subs{
+    position:absolute;left:0;right:0;bottom:5.5%;display:flex;flex-direction:column;align-items:center;gap:5px;
+    padding:0 8%;pointer-events:none;
+  }
+  .subs span{
+    display:inline-block;background:rgba(0,0,0,.52);backdrop-filter:blur(4px);
+    padding:5px 12px;border-radius:8px;font-size:clamp(12px,1.6vw,19px);line-height:1.55;
+    max-width:92%;text-align:center;
+  }
+  #subEn{font-size:clamp(10px,1.25vw,15px);color:#cfd9e5;letter-spacing:.01em}
+  .subs span:empty{display:none}
+
+  .overlay{
+    position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.35);
+    cursor:pointer;transition:opacity .25s;
+  }
+  .overlay.hide{opacity:0;pointer-events:none}
+  .bigplay{
+    width:86px;height:86px;border-radius:50%;border:2px solid rgba(255,255,255,.7);
+    background:rgba(255,107,53,.9);display:grid;place-items:center;color:#1a0d06;
+  }
+  .bigplay svg{margin-left:4px}
+
+  .bar{display:flex;align-items:center;gap:14px;margin-top:14px;flex-wrap:wrap}
+  .bar .btn{padding:9px 16px;font-size:13px}
+  #time{font-family:ui-monospace,monospace;font-size:12px;color:var(--muted);min-width:88px}
+  input[type=range]{flex:1;min-width:160px;accent-color:var(--accent)}
+  .modes{display:flex;gap:6px}
+  .modes button{
+    padding:6px 12px;border-radius:999px;border:1px solid var(--line2);background:transparent;
+    color:var(--muted);font-size:12px;cursor:pointer;
+  }
+  .modes button.on{background:var(--ink);color:#080b10;border-color:var(--ink);font-weight:700}
+
+  .shot td:first-child{white-space:nowrap;color:var(--accent);font-family:ui-monospace,monospace;font-size:12px}
+  .shot td:nth-child(2){color:var(--muted);font-size:12.8px}
+  .shot .cn{color:#dbe4ee;font-size:12.8px}
+  .shot .en{color:var(--muted);font-size:12px;font-style:italic}
+
+  .dlrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><i></i><b>识途</b><span>SHITU</span></a>
+    <a class="link" href="index.html">品牌</a>
+    <a class="link" href="crowdfund.html">众筹</a>
+    <a class="link on" href="video.html">分镜动画</a>
+    <a class="link" href="prototype.html">原型</a>
+    <span class="spacer"></span>
+    <a class="pill" href="index.html#reserve">预约首批</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding:52px 0 26px">
+    <div class="wrap">
+      <div class="eyebrow"><b></b>Kickstarter 视频 · 75 秒</div>
+      <h1 style="font-size:clamp(30px,4vw,46px);margin-bottom:12px">一个走路的人，<br><em>和一句刚好够用的话</em></h1>
+      <p class="lead" style="margin-bottom:0">这是众筹页的首屏视频分镜：9 个镜头、10 条字幕、中英双语。点播放可以先看节奏。</p>
+    </div>
+  </section>
+
+  <section style="padding:0 0 30px">
+    <div class="wrap">
+      <div class="player">
+        <div class="stage" id="stage">
+          <div class="scene on s1" data-s="1"><div class="glow"></div></div>
+          <div class="scene s2" data-s="2">
+            <div class="blob"></div><div class="phone"></div><div class="cup"></div>
+          </div>
+          <div class="scene s3" data-s="3"><div class="ring"></div><div class="product" id="productSlot"></div></div>
+          <div class="scene s4" data-s="4"><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="scene s5" data-s="5">
+            <svg viewBox="0 0 960 540" fill="none" aria-hidden="true">
+              <path d="M120 470 V300 H420 V190 H760" stroke="rgba(255,255,255,.12)" stroke-width="26" stroke-linecap="square"/>
+              <path class="dash" d="M120 470 V300 H420 V190 H760" stroke="#ff6b35" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="120" cy="470" r="12" fill="#5eead4"/>
+              <circle cx="760" cy="190" r="12" fill="#ff6b35"/>
+              <path d="M760 130 l26 44 h-52 z" fill="#ff6b35"/>
+            </svg>
+          </div>
+          <div class="scene s6" data-s="6"><div class="rain"></div><div class="sheen"></div></div>
+          <div class="scene s7" data-s="7">
+            <div class="mtn m1"></div><div class="mtn m2"></div>
+            <div class="nosig"><i></i><i></i><i></i></div>
+          </div>
+          <div class="scene s8" data-s="8"><div class="fig a"></div><div class="fig b"></div></div>
+          <div class="scene s9" data-s="9">
+            <div class="brand">
+              <div class="cn">识途</div>
+              <div class="en">SHITU</div>
+              <div class="price">KICKSTARTER · FROM $129</div>
+            </div>
+          </div>
+
+          <div class="subs"><span id="subCn"></span><span id="subEn"></span></div>
+
+          <div class="overlay" id="overlay">
+            <div class="bigplay" aria-hidden="true">
+              <svg width="26" height="30" viewBox="0 0 26 30" fill="currentColor"><path d="M0 0l26 15L0 30z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="bar">
+          <button class="btn primary" id="play" type="button">播放</button>
+          <button class="btn ghost" id="restart" type="button">重播</button>
+          <span id="time">0:00 / 1:15</span>
+          <input type="range" id="seek" min="0" max="75" step="0.1" value="0" aria-label="进度">
+          <div class="modes" aria-label="字幕语言">
+            <button data-mode="both" class="on" type="button">中英</button>
+            <button data-mode="cn" type="button">中文</button>
+            <button data-mode="en" type="button">EN</button>
+          </div>
+          <button class="btn ghost small" id="sfxBtn" type="button">音效 开</button>
+          <button class="btn ghost small" id="ttsBtn" type="button">旁白 开</button>
+        </div>
+
+        <p class="note" style="margin-top:12px">
+          分镜动画（animatic）：用时间轴和字幕预演成片节奏，不是实拍素材。正式拍摄时按下方镜头表逐条替换。
+          声音是浏览器实时合成的（脚步、雨声、震动、提示音），旁白由系统 TTS 朗读——
+          <b style="color:var(--muted)">受浏览器策略限制，必须点一下「播放」才会出声</b>。
+        </p>
+
+        <div class="dlrow">
+          <a class="btn ghost small" href="assets/subtitles/shitu-cn.srt" download>下载中文字幕 .srt</a>
+          <a class="btn ghost small" href="assets/subtitles/shitu-en.srt" download>English .srt</a>
+          <a class="btn ghost small" href="assets/subtitles/shitu-bilingual.srt" download>中英双语 .srt</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="num">镜头表 / SHOT LIST</span>
+        <h2>九个镜头，75 秒</h2>
+        <p>拍摄时按这张表执行；每条字幕都能在 SRT 文件里对应到时间码。</p>
+      </div>
+      <table class="shot">
+        <thead><tr><th>时间</th><th>画面</th><th>中文字幕</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td>00:00–00:05</td><td>黑屏，只有脚步声</td><td class="cn">每次出门，你都要先掏出手机。</td><td class="en">Every time you leave, you reach for your phone.</td></tr>
+          <tr><td>00:05–00:15</td><td>一手咖啡、一手伞，手机在包里响</td><td class="cn">可你的手，早就满了。</td><td class="en">But your hands are already full.</td></tr>
+          <tr><td>00:15–00:25</td><td>胸前挂件特写，拇指按下</td><td class="cn">识途。按一下，说去哪。</td><td class="en">SHITU. Press once. Say where.</td></tr>
+          <tr><td>00:25–00:32</td><td>主观视角，对着挂件说话</td><td class="cn">“去最近的地铁站。” → “直走两百米。”</td><td class="en">"Take me to the nearest subway." → "Straight for 200 meters."</td></tr>
+          <tr><td>00:32–00:40</td><td>走路 POV，箭头亮起，两下震动</td><td class="cn">它只说一句：前面路口，右转。</td><td class="en">It says one thing: turn right at the corner.</td></tr>
+          <tr><td>00:40–00:52</td><td>骑行、地铁口、雨天</td><td class="cn">不掏手机，不看屏。</td><td class="en">No phone. No screen.</td></tr>
+          <tr><td>00:52–01:02</td><td>山里，无信号，箭头仍指向</td><td class="cn">没信号，也认得回家的路。</td><td class="en">No signal. Still knows the way home.</td></tr>
+          <tr><td>01:02–01:10</td><td>老人按键，孩子奔跑</td><td class="cn">给不会用地图的人。</td><td class="en">For people who don't use maps.</td></tr>
+          <tr><td>01:10–01:15</td><td>产品 + 字标 + 价格</td><td class="cn">识途。Kickstarter 首发，129 美元起。</td><td class="en">SHITU. Back us on Kickstarter. From $129.</td></tr>
+        </tbody>
+      </table>
+
+      <p class="note">
+        字幕可直接导入 Premiere / Final Cut / DaVinci Resolve。导入后如时间轴有偏移，整轨拖动即可对齐；双语版适合做宣传物料，单语版适合平台上传。
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap fgrid">
+    <div><b>识途 SHITU</b><p>分镜动画为概念演示，最终成片以实拍样机为准。</p></div>
+    <div><b>返回</b><p><a href="crowdfund.html">众筹方案</a> · <a href="index.html">品牌站</a></p></div>
+  </div>
+</footer>
+
+<script src="concepts.js"></script>
+<script src="assets/video.js"></script>
+</body>
+</html>

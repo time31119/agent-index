@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>价格与计费 — 天枢云 TIANSHU CLOUD</title>
+  <meta name="description" content="天枢云按量计费说明：文本模型按百万 tokens 计价，图像按张、视频按秒；输入输出分开计费，渠道折扣实时生效，无月费与最低消费。">
+  <meta name="theme-color" content="#06080f">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="价格与计费 — 天枢云">
+  <meta property="og:description" content="按量计费，无月费。输入输出分开计价，渠道折扣实时生效。">
+  <meta property="og:image" content="assets/img/og-cover.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add("js");window.setTimeout(function(){if(!window.__TS_OK){document.documentElement.classList.remove("js");}},2500);</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="天枢云首页">
+        <img class="brand-mark" src="assets/img/logo-mark.svg" width="34" height="34" alt="">
+        <span class="brand-text">
+          <span class="brand-name">天枢云</span>
+          <span class="brand-sub">Tianshu Cloud</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="主导航">
+        <a class="nav-link" href="index.html">首页</a>
+        <a class="nav-link" href="models.html">模型广场</a>
+        <a class="nav-link is-active" href="pricing.html">价格</a>
+        <a class="nav-link" href="docs.html">开发文档</a>
+        <a class="nav-link" href="partners.html">渠道合作</a>
+        <a class="nav-link" href="about.html">关于我们</a>
+        <div class="nav-cta">
+          <a class="btn btn-quiet btn-sm" href="https://token.quanxiyun.cloud/console" data-outbound>登录控制台</a>
+          <a class="btn btn-primary btn-sm" href="https://token.quanxiyun.cloud/r/HyicS5" data-outbound>免费注册</a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Pricing</p>
+        <h1>价格与计费</h1>
+        <p>
+          按实际用量付费：文本按 tokens，图像按张，视频按秒。输入与输出分开计价，
+          没有月费、没有最低消费，余额长期有效。
+        </p>
+      </div>
+    </section>
+
+    <!-- Billing model -->
+    <section class="section" style="padding-top:44px;padding-bottom:0">
+      <div class="container">
+        <div class="price-cards">
+          <article class="price-card featured reveal">
+            <h3>文本 / 多模态</h3>
+            <p class="price-amount">按 Token<small>计费</small></p>
+            <p class="price-note">输入、输出分别计价，缓存命中另有折扣</p>
+            <ul class="price-list">
+              <li>单价以「元 / 百万 tokens」展示</li>
+              <li>流式与非流式计费口径一致</li>
+              <li>推理模型的思考 token 计入输出</li>
+            </ul>
+            <a class="btn btn-primary btn-sm" href="#text-pricing">查看文本价格</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>图像生成</h3>
+            <p class="price-amount">按张<small>计费</small></p>
+            <p class="price-note">不同分辨率与质量档位对应不同单价</p>
+            <ul class="price-list">
+              <li>文生图、图生图、图像编辑统一按张</li>
+              <li>失败请求不计费</li>
+              <li>批量任务按成功张数结算</li>
+            </ul>
+            <a class="btn btn-ghost btn-sm" href="#media-pricing">查看图像模型</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>视频生成</h3>
+            <p class="price-amount">按秒<small>计费</small></p>
+            <p class="price-note">按输出时长与分辨率档位结算</p>
+            <ul class="price-list">
+              <li>支持文生视频、图生视频、参考音频</li>
+              <li>任务失败不计费</li>
+              <li>长视频按实际生成秒数累计</li>
+            </ul>
+            <a class="btn btn-ghost btn-sm" href="#media-pricing">查看视频模型</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Text pricing table -->
+    <section class="section" id="text-pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Token Pricing</p>
+          <h2>文本模型价格</h2>
+          <p>官方基准价按 <strong>1 USD = 6.82 CNY</strong> 折算。实际扣费叠加实时渠道折扣，通常低于下表展示价。</p>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="data price-table">
+            <thead>
+              <tr>
+                <th>模型</th>
+                <th>厂商</th>
+                <th class="num">输入（¥ / 百万 tokens）</th>
+                <th class="num">输出（¥ / 百万 tokens）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="t-model">glm-5.3</td><td class="t-vendor">智谱 AI</td><td class="num">8.00</td><td class="num">28.00</td></tr>
+              <tr><td class="t-model">glm-5.3-flash</td><td class="t-vendor">智谱 AI</td><td class="num">0.80</td><td class="num">2.80</td></tr>
+              <tr><td class="t-model">glm-5.2</td><td class="t-vendor">智谱 AI</td><td class="num">8.00</td><td class="num">28.00</td></tr>
+              <tr><td class="t-model">kimi-k3</td><td class="t-vendor">月之暗面</td><td class="num">19.98</td><td class="num">99.97</td></tr>
+              <tr><td class="t-model">kimi-k3.1-pro</td><td class="t-vendor">月之暗面</td><td class="num">13.00</td><td class="num">68.00</td></tr>
+              <tr><td class="t-model">kimi-k2.7-code</td><td class="t-vendor">月之暗面</td><td class="num">6.34</td><td class="num">26.39</td></tr>
+              <tr><td class="t-model">qwen3.8-max</td><td class="t-vendor">阿里通义</td><td class="num">12.00</td><td class="num">36.00</td></tr>
+              <tr><td class="t-model">qwen3.7-max</td><td class="t-vendor">阿里通义</td><td class="num">12.00</td><td class="num">36.00</td></tr>
+              <tr><td class="t-model">qwen3.6-plus</td><td class="t-vendor">阿里通义</td><td class="num">1.98</td><td class="num">12.01</td></tr>
+              <tr><td class="t-model">qwen3.8-flash</td><td class="t-vendor">阿里通义</td><td class="num">0.80</td><td class="num">2.70</td></tr>
+              <tr><td class="t-model">deepseek-v4-pro</td><td class="t-vendor">深度求索</td><td class="num">9.00</td><td class="num">27.00</td></tr>
+              <tr><td class="t-model">deepseek-v4.1-flash</td><td class="t-vendor">深度求索</td><td class="num">2.00</td><td class="num">8.00</td></tr>
+              <tr><td class="t-model">deepseek-v3.2</td><td class="t-vendor">深度求索</td><td class="num">2.00</td><td class="num">3.00</td></tr>
+              <tr><td class="t-model">doubao-seed-2.1-pro</td><td class="t-vendor">字节豆包</td><td class="num">6.00</td><td class="num">30.00</td></tr>
+              <tr><td class="t-model">doubao-seed-2.1-turbo</td><td class="t-vendor">字节豆包</td><td class="num">3.00</td><td class="num">15.00</td></tr>
+              <tr><td class="t-model">hy3</td><td class="t-vendor">腾讯混元</td><td class="num">1.00</td><td class="num">4.01</td></tr>
+              <tr><td class="t-model">hy4-preview</td><td class="t-vendor">腾讯混元</td><td class="num">6.00</td><td class="num">18.00</td></tr>
+              <tr><td class="t-model">minimax-m3</td><td class="t-vendor">MiniMax</td><td class="num">4.20</td><td class="num">16.77</td></tr>
+              <tr><td class="t-model">minimax-m3.1-flash</td><td class="t-vendor">MiniMax</td><td class="num">1.00</td><td class="num">4.00</td></tr>
+              <tr><td class="t-model">claude-opus-4-8</td><td class="t-vendor">Anthropic</td><td class="num">34.10</td><td class="num">170.50</td></tr>
+              <tr><td class="t-model">claude-sonnet-4-6</td><td class="t-vendor">Anthropic</td><td class="num">20.46</td><td class="num">102.30</td></tr>
+              <tr><td class="t-model">claude-haiku-4-5</td><td class="t-vendor">Anthropic</td><td class="num">6.82</td><td class="num">34.10</td></tr>
+              <tr><td class="t-model">gpt-5.5</td><td class="t-vendor">OpenAI</td><td class="num">34.10</td><td class="num">204.60</td></tr>
+              <tr><td class="t-model">gpt-5.4</td><td class="t-vendor">OpenAI</td><td class="num">17.05</td><td class="num">102.30</td></tr>
+              <tr><td class="t-model">gpt-5.4-mini</td><td class="t-vendor">OpenAI</td><td class="num">5.12</td><td class="num">30.69</td></tr>
+              <tr><td class="t-model">gemini-3.1-pro</td><td class="t-vendor">Google</td><td class="num">13.64</td><td class="num">81.84</td></tr>
+              <tr><td class="t-model">gemini-3-flash</td><td class="t-vendor">Google</td><td class="num">3.41</td><td class="num">20.46</td></tr>
+              <tr><td class="t-model">grok-4.3</td><td class="t-vendor">xAI</td><td class="num">8.53</td><td class="num">8.53</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout warn" style="margin-top:18px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 9v4M12 17h.01" stroke-linecap="round"/><path d="M10.3 3.9 2.6 17.1A2 2 0 0 0 4.3 20h15.4a2 2 0 0 0 1.7-2.9L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke-linejoin="round"/></svg>
+          <div>
+            以上为 <b>2026-11-06</b> 价格快照，随上游调价与渠道折扣实时变动。下单前请以
+            <a href="https://token.quanxiyun.cloud/pricing" data-outbound style="color:var(--brand-2);text-decoration:underline">控制台实时价格</a>
+            为准；已产生的调用按当时的计费规则结算。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media pricing -->
+    <section class="section" id="media-pricing" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Image &amp; Video</p>
+          <h2>图像与视频计费</h2>
+          <p>按张、按秒结算，单价随模型、分辨率与质量档位变化。以下为计费单元说明，具体单价见控制台。</p>
+        </div>
+
+        <div class="bento">
+          <article class="card reveal">
+            <h3>图像生成 · 按张</h3>
+            <p>支持文生图、图生图与图像编辑，失败不计费。</p>
+            <div class="model-tags" style="margin-top:14px">
+              <span class="tag">Qwen-Image-3.0-Pro</span>
+              <span class="tag">Doubao-Seedream 5.0</span>
+              <span class="tag">Kling 3.0 Image</span>
+              <span class="tag">GPT-Image-2</span>
+              <span class="tag">Z-Image-Turbo</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>视频生成 · 按秒</h3>
+            <p>按输出时长结算，支持分辨率档位与参考素材。</p>
+            <div class="model-tags" style="margin-top:14px">
+              <span class="tag">Seedance 2.0 / 2.5</span>
+              <span class="tag">Kling 3.0</span>
+              <span class="tag">Sora 2</span>
+              <span class="tag">Veo 3.1</span>
+              <span class="tag">HappyHorse 1.1</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Embedding 与语音 · 按 token / 时长</h3>
+            <p>向量化、语音合成与识别按各自计量单位结算。</p>
+            <div class="model-tags" style="margin-top:14px">
+              <span class="tag">text-embedding-3-large</span>
+              <span class="tag">text-embedding-3-small</span>
+              <span class="tag">TTS / ASR 系列</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discount & recharge -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Billing</p>
+          <h2>折扣、充值与发票</h2>
+          <p>平台按模型与线路维护渠道折扣，折扣变化会同步反映在账单中，无需手动申请。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <h3>渠道折扣</h3>
+            <p>不同上游线路的采购成本不同，平台按线路折算折扣并实时生效；同一模型可能有多条线路，系统优先选择可用且更优的线路。</p>
+            <span class="step-code">实时浮动</span>
+          </div>
+          <div class="step reveal">
+            <h3>在线充值</h3>
+            <p>控制台支持在线充值，充值金额即时到账，余额长期有效（以控制台规则为准），可用于全部模型与模态。</p>
+            <span class="step-code">¥ 1 = 1 额度</span>
+          </div>
+          <div class="step reveal">
+            <h3>开票与对账</h3>
+            <p>控制台可导出按日 / 按模型的用量明细，并提交发票申请；企业客户可签订采购合同。</p>
+            <span class="step-code">明细可导出</span>
+          </div>
+        </div>
+
+        <div class="cta-band" style="margin-top:56px">
+          <h2>先充小额，跑通再扩量</h2>
+          <p>注册后可先小额充值验证效果，确认无误再扩量。所有调用明细实时可查。</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://token.quanxiyun.cloud/r/HyicS5" data-outbound>注册并充值</a>
+            <a class="btn btn-ghost" href="https://token.quanxiyun.cloud/pricing" data-outbound>打开实时价格页</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>计费常见问题</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq" open>
+            <summary>为什么展示价和实际账单不完全一致？</summary>
+            <div class="faq-body">
+              展示价是按官方基准倍率与固定汇率折算的参考值；实际账单会叠加渠道折扣、缓存命中折扣以及调价生效时间，
+              因此通常低于展示价。以控制台账单明细为准。
+            </div>
+          </details>
+          <details class="faq">
+            <summary>余额会过期吗？</summary>
+            <div class="faq-body">
+              充值余额长期有效，具体规则以控制台说明为准；赠送的体验额度可能有使用期限。
+            </div>
+          </details>
+          <details class="faq">
+            <summary>失败或超时的请求会扣费吗？</summary>
+            <div class="faq-body">
+              模型未成功返回内容时不产生费用；流式请求若已输出部分内容，按实际生成的 token 结算。
+              图像与视频任务失败不计费。
+            </div>
+          </details>
+          <details class="faq">
+            <summary>支持企业对公转账与合同吗？</summary>
+            <div class="faq-body">
+              支持。请通过 <a href="about.html#contact">联系我们</a> 提供公司主体、开票信息与预估用量，
+              商务同学会协助完成合同与对公付款流程。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="天枢云首页">
+          <img class="brand-mark" src="assets/img/logo-mark.svg" width="34" height="34" alt="">
+          <span class="brand-text">
+            <span class="brand-name">天枢云</span>
+            <span class="brand-sub">Tianshu Cloud</span>
+          </span>
+        </a>
+        <p>面向企业与开发者的 AI 模型 API 聚合网关。一个接口，接入文本、图像、视频与多模态能力。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="models.html">模型广场</a></li>
+          <li><a href="pricing.html">价格与计费</a></li>
+          <li><a href="docs.html">开发文档</a></li>
+          <li><a href="https://token.quanxiyun.cloud/pricing" data-outbound>实时价格</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>开发者</h4>
+        <ul>
+          <li><a href="docs.html#quickstart">快速开始</a></li>
+          <li><a href="docs.html#auth">鉴权方式</a></li>
+          <li><a href="docs.html#errors">错误码</a></li>
+          <li><a href="docs.html#clients">客户端接入</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>公司</h4>
+        <ul>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="partners.html">渠道合作</a></li>
+          <li><a href="about.html#contact">联系我们</a></li>
+          <li><a href="about.html#compliance">合规与安全</a></li>
+          <li><a href="https://token.quanxiyun.cloud/console" data-outbound>控制台</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 杭州天枢云智科技有限公司</p>
+      <div class="footer-legal">
+        <span>浙ICP备2026XXXXXX号-1（备案中）</span>
+        <span>增值电信业务经营许可证（办理中）</span>
+        <span>模型与算力服务由上游合作平台提供</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/models-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

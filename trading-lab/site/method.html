@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方法与数据 · 回测口径与复现说明 · 技术分析研究实验室</title><meta name="description" content="数据来源、回测引擎执行规则、交易成本、样本内外切分、过拟合控制、指标定义与已知局限，全部公开可复核。">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9b26a%22/><text x=%2216%22 y=%2222%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23151009%22 font-family=%22Arial%22 font-weight=%22bold%22>T</text></svg>">
+
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="logo" href="index.html"><span class="mark">T</span>技术分析研究实验室</a>
+  <div class="nav-links">
+    <a href="index.html" class="">首页</a>
+    <a href="books.html" class="">权威书单</a>
+    <a href="indicators.html" class="">指标测试</a>
+    <a href="ranking.html" class="">收益率排名</a>
+    <a href="summary.html" class="">归纳总结</a>
+    <a href="method.html" class="on">方法与数据</a>
+  </div>
+</div></nav>
+<header class="hero" style="padding-bottom:24px"><div class="wrap">
+  <div class="kicker">METHODOLOGY & DATA</div>
+  <h1>方法与数据：<br>让每一个数字都能被<span class="n">复现</span></h1>
+  <p class="lede">本站不是“荐股站”，而是一个可复核的研究项目。这一页写清楚数据来源、回测引擎的执行规则、成本假设、统计口径与已知局限，方便你判断结论的可信度。</p>
+</div></header>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="two-col">
+    <div>
+      <h2 style="font-size:22px;margin-bottom:14px">一、数据来源</h2>
+      <div class="card" style="margin-bottom:20px">
+        <div class="kv">
+          <dt>来源</dt><dd>东方财富公开行情接口（push2his.eastmoney.com）日线数据</dd>
+          <dt>抓取时间</dt><dd>2026-11-04</dd>
+          <dt>品种</dt><dd>沪深300（2005-01-04 起，5302 根）、上证指数（5302 根）、标普500（5498 根）、纳斯达克100（5490 根）</dd>
+          <dt>字段</dt><dd>日期 / 开盘 / 收盘 / 最高 / 最低 / 成交量</dd>
+          <dt>复权</dt><dd>指数点位本身不涉及复权；个股若使用需前复权</dd>
+          <dt>样本区间</dt><dd>统一从 2005-01-04 起算（四个市场取交集），样本内 2005–2015，样本外 2016-01-01 至今</dd>
+        </div>
+      </div>
+      <div class="note">为什么统一从 2005 年开始？因为沪深300 于 2005 年发布。若只用美股 1990 年起的更长历史，会让美股在排名中权重过大，失去跨市场可比性。</div>
+
+      <h2 style="font-size:22px;margin:34px 0 14px">二、回测引擎的执行规则</h2>
+      <div class="card">
+        <ol style="padding-left:20px;color:var(--muted);font-size:14.5px;line-height:1.9">
+          <li><b style="color:var(--txt)">信号时点：</b>t 日收盘后，用 t 日及之前的数据计算信号，绝不使用未来数据。</li>
+          <li><b style="color:var(--txt)">成交时点：</b>t+1 日开盘成交，买入价 = 开盘 × (1+成本)，卖出价 = 开盘 × (1−成本)，避免“用收盘价抢跑”。</li>
+          <li><b style="color:var(--txt)">仓位：</b>二值信号 → 0 或 100%；连续信号（波动率择时）→ 按目标波动率调整，仅当权重变化超过 10 个百分点才调仓。</li>
+          <li><b style="color:var(--txt)">记账方式：</b>份额制（现金 + 持股），每日按收盘价 Mark-to-Market，成本只在换手时计一次。</li>
+          <li><b style="color:var(--txt)">空仓期：</b>现金按年化 2% 计息，避免“空仓零收益”低估择时策略。</li>
+          <li><b style="color:var(--txt)">未平仓：</b>回测结束时仍持有的头寸按最后收盘价 − 成本计入交易统计。</li>
+        </ol>
+      </div>
+
+      <h2 style="font-size:22px;margin:34px 0 14px">三、成本与基准</h2>
+      <div class="grid g2">
+        <div class="card"><div class="tag gold">交易成本</div><p class="muted" style="font-size:14px;margin-top:10px">单边 5bp（0.05%），含佣金与滑点。A 股实际还有印花税（卖出 0.05%）、过户费与冲击成本，因此本站结果对高换手策略偏乐观。</p></div>
+        <div class="card"><div class="tag gold">基准</div><p class="muted" style="font-size:14px;margin-top:10px">同一市场、同一窗口的买入持有（含一次建仓成本）。超额收益 = 策略年化 − 基准年化，而不是“绝对收益”。</p></div>
+      </div>
+
+      <h2 style="font-size:22px;margin:34px 0 14px">四、防止过拟合的四道闸门</h2>
+      <div class="timeline">
+        <div class="item"><b>标准参数，不做样本外优化</b><div class="muted" style="font-size:14px">主排名使用教材/原典的默认参数（如 MACD 12/26/9、RSI 14、布林 20/2），而不是挑出来的最优参数。</div></div>
+        <div class="item"><b>样本内 / 样本外切分</b><div class="muted" style="font-size:14px">2005–2015 为样本内，2016 年至今为样本外；所有“是否有效”的判断以样本外为准。</div></div>
+        <div class="item"><b>参数敏感性网格</b><div class="muted" style="font-size:14px">每个指标跑参数网格（共 2356 组），观察结果是否随参数剧烈波动；剧烈波动 = 过拟合嫌疑。</div></div>
+        <div class="item"><b>跨市场一致性</b><div class="muted" style="font-size:14px">同一规则必须在 4 个市场都检验；只在单一市场有效的规则，可信度打折。</div></div>
+      </div>
+
+      <h2 style="font-size:22px;margin:34px 0 14px">五、指标定义（28 个）</h2>
+      <div class="table-wrap"><table><thead><tr><th class="l">指标</th><th class="l">全名</th><th class="l">核心逻辑</th><th class="l">默认参数</th></tr></thead><tbody><tr><td class="l name"><a href="ind-aroon.html">Aroon</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">Aroon 阿隆指标</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">Aroon-Up 衡量“距离最近 N 日最高点过去了多少天”，用来判断趋势的新鲜度。Aroon-Up &gt; 70 且 &gt; Aroon-Down 视为上升趋势。…</td>
+    <td class="l mono" style="font-size:12px">n=25, th=70</td></tr><tr><td class="l name"><a href="ind-sma.html">SMA 均线</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">SMA 简单移动平均（价格 vs 均线）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">价格在均线之上视为上升趋势，之下视为下降趋势。均线的本质是“平滑噪音后的趋势方向”，单均线用价格与均线的相对位置做多空判断。…</td>
+    <td class="l mono" style="font-size:12px">n=50</td></tr><tr><td class="l name"><a href="ind-ichimoku.html">一目均衡表</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">一目均衡表（Ichimoku）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">转换线/基准线/先行带构成“云图”。价格站上云图且转换线在基准线上方代表多头结构；云图同时给出支撑阻力与趋势方向。…</td>
+    <td class="l mono" style="font-size:12px">t=9, k=26, b=52</td></tr><tr><td class="l name"><a href="ind-ema.html">EMA 均线</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">EMA 指数移动平均（价格 vs 均线）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">EMA 对近期价格赋予更高权重，转折比 SMA 更早；代价是震荡市里假信号更多。…</td>
+    <td class="l mono" style="font-size:12px">n=40</td></tr><tr><td class="l name"><a href="ind-donchian.html">唐奇安通道</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">唐奇安通道 / 海龟突破</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">价格创 N 日新高做多、创 M 日新低离场（海龟 System 1/2 的简化版）。突破的本质是“用规则强制在趋势启动时上车”，代价是震荡市连续小亏。…</td>
+    <td class="l mono" style="font-size:12px">entry=20, exit=10</td></tr><tr><td class="l name"><a href="ind-supertrend.html">Supertrend</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">Supertrend 超级趋势</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">ATR 通道 + 趋势翻转规则：收盘价突破上轨转多、跌破下轨转空。本质是“带波动率自适应带宽的唐奇安通道”。…</td>
+    <td class="l mono" style="font-size:12px">n=10, mult=3</td></tr><tr><td class="l name"><a href="ind-roc.html">ROC 动量</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">ROC 变动率 / 动量</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">N 日涨跌幅，最朴素的动量指标。动量效应（强者继续强）在跨市场长期存在，但在 A 股高波动环境下回撤更大。…</td>
+    <td class="l mono" style="font-size:12px">n=20, th=0</td></tr><tr><td class="l name"><a href="ind-voltarget.html">波动率择时</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">波动率择时（目标波动仓位）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">仓位 ∝ 目标波动率 / 已实现波动率，下跌波动放大时自动减仓。海龟法则的“按波动率等风险配置”与风险平价的简化版。…</td>
+    <td class="l mono" style="font-size:12px">n=20, target=0.15, ma=100</td></tr><tr><td class="l name"><a href="ind-cci.html">CCI</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">CCI 顺势指标</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">典型价格偏离其均值的程度，用平均绝对偏差归一化。CCI &gt; +100 视为强势启动（顺势），&lt; -100 视为弱势。Elder 用 CCI 做“脉冲系统”。…</td>
+    <td class="l mono" style="font-size:12px">n=20, th=100</td></tr><tr><td class="l name"><a href="ind-tsmom.html">时序动量</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">时序动量（12-1 月）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">学术与实务都验证过的“时序动量”：过去 12 个月（跳过最近 1 个月）为正则持有，否则空仓。Faber 的“10 月均线”与 Asness 的动量因子同源。…</td>
+    <td class="l mono" style="font-size:12px">look=252, skip=21</td></tr><tr><td class="l name"><a href="ind-boll.html">布林带</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">布林带（Bollinger Bands）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">均线 ± k 倍标准差构成通道，宽度反映波动。Bollinger 本人强调“价格触及上轨不是卖出信号”，真正有用的是带宽收缩后的突破与 %b 的均值回归。此处测试中轨趋势跟随（收盘…</td>
+    <td class="l mono" style="font-size:12px">n=20, k=2</td></tr><tr><td class="l name"><a href="ind-adx.html">ADX 趋向</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">ADX / DMI 趋向系统</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">Wilder 的 DMI 用 +DI/-DI 判断方向、ADX 判断趋势强度。经典规则：ADX &gt; 20~25 且 +DI 在 -DI 上方才做多，过滤掉无趋势的震荡期。…</td>
+    <td class="l mono" style="font-size:12px">n=14, adxMin=20</td></tr><tr><td class="l name"><a href="ind-pivot.html">结构突破</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">摆动高低点（结构突破）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">用左右各 5 根 K 线确认摆动高点，收盘突破最近一个确认高点即“结构突破”，跌破最近确认低点离场。这是道氏理论“高低点抬高”的可计算版本。…</td>
+    <td class="l mono" style="font-size:12px">k=5</td></tr><tr><td class="l name"><a href="ind-keltner.html">肯特纳通道</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">肯特纳通道突破</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">EMA 中轨 ± ATR 带宽。收盘突破上轨做多、跌破中轨离场；比布林带更平滑，适合捕捉中等趋势。…</td>
+    <td class="l mono" style="font-size:12px">n=20, k=2</td></tr><tr><td class="l name"><a href="ind-high52.html">52周新高</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">52 周新高突破</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">O'Neil 的 CAN SLIM 与 Darvas 箱体都强调“创新高的股票最强”。测试收盘创 250 日新高做多、跌破 50 日低点离场。…</td>
+    <td class="l mono" style="font-size:12px">hi=250, lo=50</td></tr><tr><td class="l name"><a href="ind-macd.html">MACD</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">MACD 指数平滑异同移动平均</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">快慢 EMA 之差衡量动量方向与强度，信号线交叉提供进出场；零轴之上金叉胜率通常更高。此处测试“MACD 上穿信号线做多、下穿离场”。…</td>
+    <td class="l mono" style="font-size:12px">fast=12, slow=26, sig=9</td></tr><tr><td class="l name"><a href="ind-trendmom.html">趋势+动量</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">双确认：趋势 + 动量</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">Elder 的“三重滤网”思想：大周期趋势向上（价格 &gt; MA200）且中周期动量向上（MACD 柱 &gt; 0）才做多。双条件过滤减少单一指标的假信号。…</td>
+    <td class="l mono" style="font-size:12px">n=200, fast=12, slow=26</td></tr><tr><td class="l name"><a href="ind-atr.html">ATR 波动过滤</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">ATR 波动率过滤趋势</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">ATR 本身无方向，Wilder 用它做止损与仓位。此处用“EMA20 方向 + ATR 确认波动放大”组合：当日均线向上且 ATR 高于其 20 日均值（波动扩张）时持有，代表“…</td>
+    <td class="l mono" style="font-size:12px">n=20, atrN=14, ratio=1</td></tr><tr><td class="l name"><a href="ind-obv.html">OBV 能量潮</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">OBV 能量潮</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">Granville 的“量在价先”：把涨跌日的成交量累加，OBV 领先于价格突破。测试 OBV 相对其均线走强时持有。…</td>
+    <td class="l mono" style="font-size:12px">n=30</td></tr><tr><td class="l name"><a href="ind-volratio.html">量比</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">量比 + 价格趋势</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">成交量 / 20 日均量 &gt; 1.5 代表资金异动；配合价格站上 MA20，代表“放量上涨”。这是 O'Neil 与 Weinstein 共同强调的量价确认。…</td>
+    <td class="l mono" style="font-size:12px">n=20, ratio=1.50</td></tr><tr><td class="l name"><a href="ind-psar.html">抛物线 SAR</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">抛物线 SAR（Parabolic SAR）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">Wilder 的止损转向系统：SAR 在价格下方为多头，在价格上方为空头。它把“止损”机械化，适合强趋势，不适合宽幅震荡。…</td>
+    <td class="l mono" style="font-size:12px">step=0.02, max=0.20</td></tr><tr><td class="l name"><a href="ind-stoch.html">KDJ 随机指标</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">KDJ / 随机指标（Stochastic）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">收盘价在最近 N 日高低区间中的相对位置；K 上穿 D 且处于低位为买入信号，高位死叉为卖出信号。对震荡市敏感，趋势市中容易钝化。…</td>
+    <td class="l mono" style="font-size:12px">k=9, d=3, buy=20, sell=80</td></tr><tr><td class="l name"><a href="ind-round.html">整数关口</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">整数关口 / 心理价位</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">整数位（如 3000、4000 点）聚集订单与情绪，常成为支撑阻力。测试“站上最近整数关口做多、跌破离场”，检验心理价位是否有统计意义。…</td>
+    <td class="l mono" style="font-size:12px">step=100</td></tr><tr><td class="l name"><a href="ind-mfi.html">MFI</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">MFI 资金流量指标</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">把“价+量”合成 RSI 式的 0-100 指标，衡量资金流入流出。MFI &lt; 20 视为超卖，&gt; 80 视为超买。…</td>
+    <td class="l mono" style="font-size:12px">n=14, buy=30, sell=70</td></tr><tr><td class="l name"><a href="ind-rsi.html">RSI</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">RSI 相对强弱指标</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">Wilder 用平均涨幅/跌幅衡量多空力量。经典用法是超卖买入、回归中枢卖出；Elder 强调 RSI 与价格的背离比阈值更重要。此处测试“RSI 自下而上穿越 30 买入，上穿 …</td>
+    <td class="l mono" style="font-size:12px">n=14, buy=30, sell=70</td></tr><tr><td class="l name"><a href="ind-willr.html">Williams %R</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">Williams %R 威廉指标</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">与随机指标同源但取负值。Larry Williams 强调“短期极端值反转”，-80 以下超卖买入、-20 以上超买卖出。…</td>
+    <td class="l mono" style="font-size:12px">n=14, buy=-80, sell=-20</td></tr><tr><td class="l name"><a href="ind-bollrev.html">布林带回归</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">布林带均值回归（下轨买入）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">收盘跌破下轨视为短期超卖，回到中轨即离场。与趋势跟随相反的假设：震荡市中“低吸”优于“追涨”。…</td>
+    <td class="l mono" style="font-size:12px">n=20, k=2</td></tr><tr><td class="l name"><a href="ind-stochrsi.html">StochRSI</a></td>
+    <td class="l" style="font-family:var(--font);font-size:13px">Stochastic RSI（随机相对强弱）</td>
+    <td class="l" style="font-family:var(--font);font-size:12.5px;color:var(--muted)">对 RSI 再做一次随机指标，放大超买超卖的敏感度。适合短线均值回归，噪音也更大。…</td>
+    <td class="l mono" style="font-size:12px">n=14, k=14, buy=20, sell=80</td></tr></tbody></table></div>
+
+      <h2 style="font-size:22px;margin:34px 0 14px">六、已知局限</h2>
+      <div class="card">
+        <ul class="takeaways" style="font-size:14px">
+          <li>只做多、只做指数：没有测试做空、杠杆、个股、期货与多资产轮动。</li>
+          <li>日线级别、收盘/开盘成交：未模拟盘中滑点、涨跌停无法成交、流动性冲击。</li>
+          <li>指数不含分红：沪深300 全收益指数会略高于价格指数，基准可能被低估约 1.5%–2%/年。</li>
+          <li>参数网格有限：只覆盖常见区间，不代表“最优参数”不存在，但刻意不追求最优。</li>
+          <li>单一数据源：未与 Wind/彭博交叉校验；极端行情（如 2015 股灾）的撮合假设偏理想。</li>
+          <li>生存者偏差：指数本身不含退市股，个股策略需另做处理。</li>
+        </ul>
+      </div>
+
+      <h2 style="font-size:22px;margin:34px 0 14px">七、封面图片说明</h2>
+      <div class="card" style="margin-bottom:24px">
+        <p class="muted" style="font-size:14px">书单与单书页的封面来自公开图书信息源（豆瓣图书、Open Library），仅用于书目识别，版权归原出版方所有。少数原版封面暂缺的著作（如 George Lane 的随机指标著作、Wyckoff 原著、Appel 与 Kirkpatrick 的部分版本），使用本站设计的“研究版封面”替代，并在页面下方标注。</p>
+      </div>
+      <h2 style="font-size:22px;margin:34px 0 14px">八、如何复现</h2>
+      <div class="card"><p class="muted" style="font-size:14px">项目完全静态、无后端依赖。源码结构：</p>
+        <pre class="mono" style="font-size:12.5px;color:var(--gold2);overflow-x:auto;margin-top:12px;line-height:1.8">trading-lab/
+├─ data/            原始日线数据（JSON）
+├─ lib/indicators.js   28 个指标的纯函数实现
+├─ lib/backtest.js     事件驱动回测引擎（份额制）
+├─ lib/strategies.js   指标 → 交易规则的映射
+├─ lib/books.js        36 本书的内容库
+├─ scripts/analyze.js  批量回测 → 统计与排名
+└─ site/               静态站点（本页）</pre>
+        <p class="muted" style="font-size:13.5px;margin-top:12px">运行 <span class="mono" style="color:var(--gold)">node scripts/analyze.js</span> 可重算全部结果；<span class="mono" style="color:var(--gold)">node scripts/build.js</span> 可重新生成站点。</p>
+      </div>
+    </div>
+
+    <aside class="sticky">
+      <div class="card" style="margin-bottom:14px"><h3 style="font-size:15px;margin-bottom:10px">一页速览</h3>
+        <div class="kv" style="font-size:13px">
+          <dt>样本</dt><dd>2005-01-04 起</dd>
+          <dt>切分</dt><dd>2016-01-01</dd>
+          <dt>成本</dt><dd>单边 5bp</dd>
+          <dt>空仓</dt><dd>年化 2%</dd>
+          <dt>成交</dt><dd>T+1 开盘</dd>
+          <dt>指标</dt><dd>28 个</dd>
+          <dt>书籍</dt><dd>33 本</dd>
+          <dt>回测组合</dt><dd>2356</dd>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:14px"><h3 style="font-size:15px;margin-bottom:10px">指标类别</h3>
+        <div style="display:grid;gap:8px"><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">技术分析原典</span><span class="mono">0</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">趋势与系统交易</span><span class="mono">7</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">形态与价格行为</span><span class="mono">0</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">量价与订单流</span><span class="mono">3</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">震荡与均值回归</span><span class="mono">5</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">量化与组合配置</span><span class="mono">0</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">风险与心理</span><span class="mono">0</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">市场结构与周期</span><span class="mono">0</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">结构与心理价位</span><span class="mono">2</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">突破与趋势启动</span><span class="mono">2</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">动量与相对强弱</span><span class="mono">3</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">波动率与通道</span><span class="mono">4</span></div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">组合与自适应</span><span class="mono">2</span></div></div>
+      </div>
+      <div class="card"><h3 style="font-size:15px;margin-bottom:10px">相关页面</h3>
+        <div style="display:grid;gap:8px;font-size:13.5px">
+          <a href="ranking.html" style="color:var(--gold2)">→ 收益率排名</a>
+          <a href="summary.html" style="color:var(--gold2)">→ 归纳总结</a>
+          <a href="indicators.html" style="color:var(--gold2)">→ 指标测试台</a>
+          <a href="books.html" style="color:var(--gold2)">→ 权威书单</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div></section><footer class="footer"><div class="wrap"><div class="row">
+  <div><b style="color:var(--muted)">技术分析研究实验室</b> · 33 本权威著作 × 28 个技术指标 × 4 大市场 × 21 年历史数据</div>
+  <div>数据：东方财富公开日线 · 回测口径见 <a href="method.html" style="color:var(--gold)">方法与数据</a></div>
+</div><div style="margin-top:14px;max-width:900px">风险声明：本站所有回测结果均为历史统计，不构成任何投资建议。历史表现不代表未来收益；技术指标在样本外经常失效，实盘还需考虑流动性、税费、涨跌停与执行滑点。市场有风险，决策需独立。</div></div></footer></body></html>

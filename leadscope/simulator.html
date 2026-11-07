@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>跟单模拟器 · LeadScope</title>
+<meta name="description" content="用蒙特卡洛模拟跟单结果：输入带单员的胜率、盈亏比与交易频率，扣除分成、手续费与滑点，看 3000 条路径的分布。">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236ea8ff'/%3E%3Cpath d='M9 21l5-10 4 7 5-4' stroke='%2305070d' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="simulator">
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LS</span>
+      <span>LeadScope<small style="display:block">带单透视</small></span>
+    </a>
+    <nav class="nav">
+      <a data-nav="home" href="index.html">结论</a>
+      <a data-nav="board" href="board.html">榜单</a>
+      <a data-nav="analysis" href="analysis.html">拆解</a>
+      <a data-nav="simulator" href="simulator.html">模拟器</a>
+      <a data-nav="playbook" href="playbook.html">学习</a>
+      <a data-nav="method" href="method.html">方法</a>
+    </nav>
+    <span class="pill-live"><i class="dot"></i><span id="asOf">—</span></span>
+  </div>
+</header>
+
+<main>
+<div class="wrap" style="padding-top:52px">
+  <div class="eyebrow">工具 · 蒙特卡洛</div>
+  <h1 style="font-size:clamp(30px,3.4vw,44px);max-width:26ch;margin-bottom:14px">先算清楚，再决定跟不跟</h1>
+  <p class="lede" style="max-width:72ch">
+    选定一位带单员（或手动填参数），模型会按他的<b>胜率、平均盈亏、交易频率</b>逐笔模拟 3,000 个跟单人账户，
+    每月扣除<b>利润分成</b>，每笔扣除<b>手续费与滑点</b>。输出不是一个收益承诺，而是一个分布。
+  </p>
+</div>
+
+<section class="wrap" style="padding-top:10px">
+  <div class="sim-grid">
+    <div class="card">
+      <div class="field">
+        <label>带单员预设</label>
+        <select id="preset"></select>
+        <p class="note" id="presetNote" style="margin:8px 0 0"></p>
+      </div>
+
+      <div class="field"><label>胜率 <b id="wrv">—</b></label><input type="range" id="wr" min="10" max="95" step="1"></div>
+      <div class="field"><label>平均盈利（占仓位） <b id="awv">—</b></label><input type="range" id="aw" min="0.1" max="30" step="0.1"></div>
+      <div class="field"><label>平均亏损（占仓位） <b id="alv">—</b></label><input type="range" id="al" min="-40" max="-0.1" step="0.1"></div>
+      <div class="field"><label>每月交易笔数 <b id="tpmv">—</b></label><input type="range" id="tpm" min="5" max="400" step="5"></div>
+
+      <div class="hr" style="margin:20px 0"></div>
+
+      <div class="field"><label>模拟时长 <b id="monthsv">—</b></label><input type="range" id="months" min="1" max="24" step="1"></div>
+      <div class="field"><label>带单员分成 <b id="splitv">—</b></label><input type="range" id="split" min="0" max="30" step="1"></div>
+      <div class="field"><label>杠杆 / 仓位倍数 <b id="levv">—</b></label><input type="range" id="lev" min="0.5" max="3" step="0.1"></div>
+      <div class="field"><label>单边滑点 <b id="slipv">—</b></label><input type="range" id="slip" min="0" max="50" step="1"></div>
+      <div class="field"><label>单边手续费 <b id="feev">—</b></label><input type="range" id="fee" min="0" max="10" step="0.5"></div>
+      <div class="field">
+        <label>运气剥离：胜率偏移 <b id="driftv">—</b></label>
+        <input type="range" id="drift" min="-0.3" max="0.3" step="0.01">
+      </div>
+      <button class="btn" id="run">重新模拟 3,000 条路径</button>
+      <p class="note" style="margin-top:10px">「运气剥离」把胜率整体平移：调到 −10pt，就是假设他多出来的那部分胜率纯属运气，用来看结论有多脆弱。</p>
+    </div>
+
+    <div>
+      <div class="result-grid" id="results"></div>
+      <div class="chart-box" style="margin-bottom:16px">
+        <div class="chart-title"><h3>跟单人净值路径</h3><span id="simLabel">3,000 条路径</span></div>
+        <p class="chart-sub">纵轴是对数刻度的净值倍数（1x = 本金不变）。阴影是 50% 与 80% 的路径区间，蓝线是中位数。</p>
+        <canvas id="fan"></canvas>
+      </div>
+      <div class="card">
+        <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:10px">读数</div>
+        <p class="note" id="simNote" style="font-size:13px;line-height:1.8"></p>
+        <div class="hr" style="margin:16px 0"></div>
+        <p class="note" style="margin:0">
+          <b style="color:#cfd8ea">模型说明：</b>每笔交易按「胜率决定方向、平均盈亏决定幅度」独立抽样；单笔对权益的影响 = 杠杆 × 盈亏% − 杠杆 × 双边成本；
+          每月结束对当月净利润收取分成。未建模：连续亏损时的追加保证金、强平、资金费率、下单失败。
+          因此真实结果通常比这里更差。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal" style="padding-top:20px">
+  <div class="grid-3">
+    <div class="card">
+      <div class="badge ghost" style="margin-bottom:10px">怎么用</div>
+      <p class="note" style="color:var(--muted);font-size:13.3px;line-height:1.8">
+        从 <a href="board.html" style="color:#6ea8ff">榜单</a> 里选一个人，把预设切到他。先看默认参数下的中位数，
+        再把「运气剥离」拉到 −10pt。如果结论立刻崩塌，说明他的优势经不起 10 个百分点的胜率误差。
+      </p>
+    </div>
+    <div class="card">
+      <div class="badge ghost" style="margin-bottom:10px">最常见的误读</div>
+      <p class="note" style="color:var(--muted);font-size:13.3px;line-height:1.8">
+        把「中位数 1.4x」当成「我能赚 40%」。中位数意味着一半的路径比它差，另一半比它好；
+        真正决定体验的是 5% 分位那条线，以及你能不能扛住中间的回撤。
+      </p>
+    </div>
+    <div class="card">
+      <div class="badge ghost" style="margin-bottom:10px">一个简单结论</div>
+      <p class="note" style="color:var(--muted);font-size:13.3px;line-height:1.8">
+        把「笔/月 × 杠杆 × 0.3%」和「分成」加起来，如果它们超过带单员的月度收益，
+        那么这套跟单在数学上就是负和的——不管他本人多厉害。
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="color:#95a2bd;margin-bottom:8px">LeadScope · 带单透视</div>
+      <div>数据快照 <span id="asOf3">—</span>（UTC+8）· 模拟结果为模型输出，不构成投资建议。</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">结论</a><a href="board.html">榜单</a><a href="analysis.html">拆解</a><a href="playbook.html">学习</a><a href="method.html">方法与局限</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文档 · ASTER 全球模型统一网关</title>
+<meta name="description" content="ASTER 接口文档：OpenAI 兼容与 Anthropic 兼容双协议、流式调用、错误码、计费规则与客户端配置。">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .docs-layout { display: grid; grid-template-columns: 220px 1fr; gap: 48px; padding: 40px 0 80px; }
+  .docs-toc { position: sticky; top: 84px; align-self: start; font-size: 13px; }
+  .docs-toc h4 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin: 18px 0 8px; }
+  .docs-toc a { display: block; padding: 5px 0; color: var(--muted); }
+  .docs-toc a:hover { color: var(--text); }
+  .docs-body { max-width: 760px; }
+  .docs-body h1 { font-size: 32px; margin-bottom: 12px; }
+  .docs-body h2 { font-size: 22px; margin: 44px 0 14px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .docs-body h3 { font-size: 16px; margin: 26px 0 10px; }
+  .docs-body p { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+  .docs-body ul { color: var(--muted); font-size: 14px; padding-left: 20px; }
+  .docs-body li { margin-bottom: 6px; }
+  .docs-body code { font-family: var(--mono); font-size: 12.6px; background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 5px; color: #d6d1ff; }
+  .docs-body pre { margin: 0 0 16px; }
+  .anchor-link { color: var(--dim); font-size: 13px; margin-left: 8px; opacity: 0; }
+  .docs-body h2:hover .anchor-link { opacity: 1; }
+  @media (max-width: 900px) { .docs-layout { grid-template-columns: 1fr; } .docs-toc { position: static; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/"><span class="logo-mark"></span> ASTER</a>
+    <nav class="nav-links">
+      <a href="/#models">模型与价格</a>
+      <a href="/apis">API 目录</a>
+      <a href="/#features">能力</a>
+      <a href="/docs">文档</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/login">登录</a>
+      <a class="btn btn-primary btn-sm" href="/register">免费开始</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap docs-layout">
+  <aside class="docs-toc">
+    <h4>开始</h4>
+    <a href="#quickstart">快速开始</a>
+    <a href="#auth">鉴权</a>
+    <a href="#base-url">Base URL</a>
+    <h4>接口</h4>
+    <a href="#openai">OpenAI 兼容</a>
+    <a href="#anthropic">Anthropic 兼容</a>
+    <a href="#stream">流式输出</a>
+    <a href="#models-api">模型列表</a>
+    <a href="#headers">响应头</a>
+    <h4>客户端</h4>
+    <a href="#claude-code">Claude Code</a>
+    <a href="#codex">Codex / Cursor</a>
+    <h4>运营</h4>
+    <a href="#billing">计费规则</a>
+    <a href="#automation">自动化与状态</a>
+    <a href="#errors">错误码</a>
+    <a href="#limits">限流</a>
+    <h4>条款</h4>
+    <a href="#sla">服务等级</a>
+    <a href="#privacy">隐私政策</a>
+    <a href="#terms">服务条款</a>
+  </aside>
+
+  <article class="docs-body">
+    <h1>ASTER 开发者文档</h1>
+    <p>ASTER 是一个同时兼容 OpenAI 与 Anthropic 协议的模型网关。你可以保留现有 SDK，只把 Base URL 指向网关，就能调用目录中的全部模型。</p>
+
+    <h2 id="quickstart">快速开始</h2>
+    <p>三步完成接入：</p>
+    <ul>
+      <li>注册账号，在「令牌管理」创建一枚令牌（选择分组）。</li>
+      <li>把 Base URL 改为 <code>https://api.aster.dev/v1</code>（本地部署时为 <code>http://localhost:8787/v1</code>）。</li>
+      <li>用 <code>Authorization: Bearer sk-ast-...</code> 发起请求。</li>
+    </ul>
+
+    <h3>安装 SDK</h3>
+    <pre class="snippet">pip install openai        <span class="c"># Python</span>
+npm install openai        <span class="c"># Node.js</span></pre>
+
+    <h3>第一次调用</h3>
+    <pre class="snippet"><span class="k">curl</span> https://api.aster.dev/v1/chat/completions \
+  -H <span class="s">"Authorization: Bearer $ASTER_KEY"</span> \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -d <span class="s">'{
+    "model": "claude-sonnet-5-5",
+    "messages": [{"role": "user", "content": "你好"}]
+  }'</span></pre>
+
+    <h2 id="auth">鉴权</h2>
+    <p>所有 <code>/v1</code> 接口都需要 API Key，支持两种请求头：</p>
+    <pre class="snippet">Authorization: Bearer sk-ast-xxxxx
+<span class="c"># 或（Anthropic 客户端默认）</span>
+x-api-key: sk-ast-xxxxx</pre>
+    <p>令牌可设置可用模型白名单、额度上限与过期时间。若 Key 泄漏，请在控制台立即停用或删除，并重新创建。</p>
+
+    <h2 id="base-url">Base URL</h2>
+    <div class="table-wrap" style="margin-bottom:16px">
+      <table class="tbl"><thead><tr><th>环境</th><th>Base URL</th><th>说明</th></tr></thead><tbody>
+        <tr><td>生产</td><td class="mono tiny">https://api.aster.dev/v1</td><td>OpenAI 兼容协议</td></tr>
+        <tr><td>生产</td><td class="mono tiny">https://api.aster.dev</td><td>Anthropic 兼容协议（不带 /v1）</td></tr>
+        <tr><td>本地</td><td class="mono tiny">http://localhost:8787/v1</td><td>自部署默认地址</td></tr>
+      </tbody></table>
+    </div>
+
+    <h2 id="openai">OpenAI 兼容</h2>
+    <p><code>POST /v1/chat/completions</code>，请求与响应结构与 OpenAI 完全一致，支持 <code>messages</code>、<code>tools</code>、<code>tool_choice</code>、<code>temperature</code>、<code>max_tokens</code>、<code>stream</code>。</p>
+    <pre class="snippet"><span class="k">from</span> openai <span class="k">import</span> OpenAI
+
+client = OpenAI(api_key=<span class="s">"sk-ast-..."</span>, base_url=<span class="s">"https://api.aster.dev/v1"</span>)
+
+resp = client.chat.completions.create(
+    model=<span class="s">"gpt-6-astra"</span>,
+    messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"用一句话解释闭包"</span>}],
+)
+<span class="k">print</span>(resp.choices[<span class="n">0</span>].message.content)</pre>
+
+    <h2 id="anthropic">Anthropic 兼容</h2>
+    <p><code>POST /v1/messages</code>，与 Anthropic Messages API 结构一致，支持 <code>system</code>、<code>tool_use</code>、<code>tool_result</code>、<code>stop_sequences</code>、流式事件（<code>message_start</code> / <code>content_block_delta</code> / <code>message_delta</code> 等）。</p>
+    <pre class="snippet"><span class="k">from</span> anthropic <span class="k">import</span> Anthropic
+
+client = Anthropic(api_key=<span class="s">"sk-ast-..."</span>, base_url=<span class="s">"https://api.aster.dev"</span>)
+
+msg = client.messages.create(
+    model=<span class="s">"claude-opus-5-5"</span>,
+    max_tokens=<span class="n">1024</span>,
+    messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"帮我审一下这段代码"</span>}],
+)
+<span class="k">print</span>(msg.content[<span class="n">0</span>].text)</pre>
+    <p>另有 <code>POST /v1/messages/count_tokens</code> 用于预估输入 token，返回 <code>{"input_tokens": N}</code>。</p>
+
+    <h2 id="stream">流式输出</h2>
+    <p>设置 <code>stream: true</code> 后返回 SSE。OpenAI 协议以 <code>data: {...}</code> 分块并以 <code>data: [DONE]</code> 结束；Anthropic 协议以 <code>event:</code> + <code>data:</code> 成对返回。</p>
+    <pre class="snippet">stream = client.chat.completions.create(
+    model=<span class="s">"gemini-3-8-flash"</span>,
+    messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"写一段冒泡排序"</span>}],
+    stream=<span class="n">True</span>,
+)
+<span class="k">for</span> chunk <span class="k">in</span> stream:
+    <span class="k">print</span>(chunk.choices[<span class="n">0</span>].delta.content <span class="k">or</span> <span class="s">""</span>, end=<span class="s">""</span>)</pre>
+    <p class="tiny dim">说明：当客户端协议与上游协议不一致时（例如用 OpenAI SDK 调用 Anthropic 上游），网关会在内部完成协议转换后再流式下发，首字延迟会略高于原生直连。</p>
+
+    <h2 id="models-api">模型列表</h2>
+    <p><code>GET /v1/models</code> 返回当前令牌分组下可用的模型，可直接被 OpenAI SDK 的 <code>client.models.list()</code> 使用。</p>
+    <pre class="snippet">{
+  "object": "list",
+  "data": [
+    { "id": "claude-sonnet-5-5", "object": "model", "owned_by": "Anthropic" }
+  ]
+}</pre>
+
+    <h2 id="headers">响应头</h2>
+    <div class="table-wrap" style="margin-bottom:16px">
+      <table class="tbl"><thead><tr><th>Header</th><th>含义</th></tr></thead><tbody>
+        <tr><td class="mono tiny">x-aster-request-id</td><td>请求唯一 ID，排查问题时提供</td></tr>
+        <tr><td class="mono tiny">x-aster-model</td><td>实际命中的模型</td></tr>
+        <tr><td class="mono tiny">x-aster-group</td><td>令牌分组（决定倍率）</td></tr>
+        <tr><td class="mono tiny">x-aster-provider</td><td>实际使用的上游渠道名称</td></tr>
+        <tr><td class="mono tiny">x-aster-cost</td><td>本次费用（微元，1 元 = 1,000,000）</td></tr>
+        <tr><td class="mono tiny">x-aster-latency</td><td>网关侧耗时（毫秒）</td></tr>
+      </tbody></table>
+    </div>
+
+    <h2 id="claude-code">Claude Code 配置</h2>
+    <p>Claude Code 使用 Anthropic 原生协议，只需三个环境变量：</p>
+    <pre class="snippet"><span class="k">export</span> ANTHROPIC_BASE_URL=<span class="s">"https://api.aster.dev"</span>
+<span class="k">export</span> ANTHROPIC_AUTH_TOKEN=<span class="s">"sk-ast-..."</span>
+<span class="k">export</span> ANTHROPIC_MODEL=<span class="s">"claude-opus-5-5"</span>
+
+claude</pre>
+    <p>若使用 Claude 桌面版或 VS Code 插件，在设置中把 API Base URL 指向同一地址，并填写同一个令牌即可。令牌分组需要包含你要使用的模型，否则会返回 <code>model_not_in_group</code>。</p>
+
+    <h2 id="codex">Codex / Cursor / 其它 OpenAI 兼容客户端</h2>
+    <p>把 Base URL 改为 <code>https://api.aster.dev/v1</code>，API Key 填 <code>sk-ast-...</code>。Codex CLI 的 <code>~/.codex/config.toml</code> 示例：</p>
+    <pre class="snippet">model = <span class="s">"gpt-6-astra"</span>
+model_provider = <span class="s">"aster"</span>
+
+[model_providers.aster]
+name = <span class="s">"ASTER"</span>
+base_url = <span class="s">"https://api.aster.dev/v1"</span>
+env_key = <span class="s">"ASTER_API_KEY"</span></pre>
+
+    <h2 id="billing">计费规则</h2>
+    <p>费用按请求的实际 usage 计算，公式为：</p>
+    <pre class="snippet">费用 = (输入 tokens × 输入单价
+      + 输出 tokens × 输出单价
+      + 缓存读 tokens × 缓存读单价
+      + 缓存写 tokens × 缓存写单价) × 分组倍率</pre>
+    <ul>
+      <li>单价单位为「元 / 百万 tokens」，图片模型为「元 / 张」。</li>
+      <li>金额内部以微元整数结算（1 元 = 1,000,000 微元），不存在浮点误差。</li>
+      <li>请求失败（4xx/5xx）不计费；网关侧超时与上游错误不计费。</li>
+      <li>余额不足时返回 <code>402 insufficient_balance</code>，充值后立即恢复。</li>
+    </ul>
+
+    <h2 id="automation">自动化与状态</h2>
+    <p>平台的核心运维动作由调度器自动完成，不需要人工值守：</p>
+    <ul>
+      <li><b>余额巡检与自动充值</b>：余额低于阈值时自动充值（受月度上限保护），否则发送余额提醒。</li>
+      <li><b>上游探活与故障转移</b>：每 2 分钟探测一次渠道，连续 3 次失败自动下线并切换备用，恢复后自动上线。</li>
+      <li><b>异常用量限流</b>：单账户 10 分钟请求超阈值时自动限流，1 小时后自动恢复。</li>
+      <li><b>月度开票</b>：每月自动为有消费的账户生成发票，可在控制台下载。</li>
+    </ul>
+    <p>所有自动处置都会写入审计日志，并在 <a href="/status" style="color:var(--muted)">服务状态页</a> 对外公开。你可以通过 <code>GET /api/public/status</code> 获取同一份数据。</p>
+
+    <h2 id="errors">错误码</h2>
+    <div class="table-wrap" style="margin-bottom:16px">
+      <table class="tbl"><thead><tr><th>HTTP</th><th>code</th><th>说明与处理</th></tr></thead><tbody>
+        <tr><td>401</td><td class="mono tiny">invalid_api_key</td><td>Key 缺失或错误，检查是否复制完整、是否带了 <code>Bearer</code> 前缀</td></tr>
+        <tr><td>402</td><td class="mono tiny">insufficient_balance</td><td>余额不足，前往控制台充值</td></tr>
+        <tr><td>402</td><td class="mono tiny">quota_exceeded</td><td>令牌额度用尽，调整令牌额度</td></tr>
+        <tr><td>403</td><td class="mono tiny">model_not_in_group</td><td>模型不在令牌分组内，换分组或换模型</td></tr>
+        <tr><td>403</td><td class="mono tiny">key_disabled / key_expired</td><td>令牌被停用或过期</td></tr>
+        <tr><td>404</td><td class="mono tiny">model_not_found</td><td>模型标识不存在，检查 <code>model</code> 字段拼写</td></tr>
+        <tr><td>429</td><td class="mono tiny">rate_limit_exceeded</td><td>超出令牌速率上限，退避重试</td></tr>
+        <tr><td>502</td><td class="mono tiny">upstream_unavailable</td><td>全部上游失败，稍后重试或联系客服</td></tr>
+      </tbody></table>
+    </div>
+
+    <h2 id="limits">限流</h2>
+    <p>默认每个令牌 600 请求 / 分钟，可在创建令牌时调整（10–6000）。并发较高时建议使用流式请求并实现指数退避。</p>
+
+    <h2 id="sla">服务等级</h2>
+    <p>「高可用分组」承诺月度可用性 99.95%。未达标时，按当月该分组消费金额的 10% 进行额度补偿。计划内维护会提前 24 小时在控制台公告。</p>
+
+    <h2 id="privacy">隐私政策</h2>
+    <p>默认情况下，网关只记录请求的元数据（模型、token 数、耗时、状态码、费用），<b>不记录 messages 内容</b>。企业版可开启审计日志，或将网关私有化部署在自有 VPC 内。</p>
+    <p>我们不会将你的数据用于模型训练，也不会出售给第三方。支付信息由支付服务商处理，平台不存储银行卡信息。</p>
+
+    <h2 id="terms">服务条款</h2>
+    <p>用户不得使用本服务生成违法内容、发起攻击、绕过上游安全机制或转售给未授权第三方。违反者平台有权暂停令牌并冻结余额。余额长期有效，未消费部分可按原路退回（扣除支付通道手续费）。</p>
+
+    <p class="tiny dim" style="margin-top:40px">文档版本 v1.0 · 最后更新 2026-11 · 如有疑问请联系 support@aster.dev</p>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-bottom" style="border-top:0;padding-top:0">
+      <span>© 2026 星芒智能科技有限公司</span>
+      <span><a href="/">返回首页</a> · <a href="/console">控制台</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

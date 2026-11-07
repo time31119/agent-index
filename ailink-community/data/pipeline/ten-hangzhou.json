@@ -1,0 +1,710 @@
+[
+  {
+    "company": "聚光科技",
+    "url": "https://www.fpi-inc.com/",
+    "pages": [
+      {
+        "url": "https://www.fpi-inc.com/",
+        "title": "聚光科技（杭州）股份有限公司",
+        "chars": 5606,
+        "error": null
+      },
+      {
+        "url": "https://www.fpi-inc.com/about.html",
+        "title": "关于聚光-聚光科技（杭州）股份有限公司",
+        "chars": 4470,
+        "error": null
+      },
+      {
+        "url": "https://www.fpi-inc.com/ab_contact.html",
+        "title": "联系我们_关于聚光-聚光科技（杭州）股份有限公司",
+        "chars": 2342,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "聚光科技（杭州）股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "http://www.fpi-inc.com",
+      "description": "聚光科技（杭州）股份有限公司（股票代码：300203）是由归国留学人员创办的高新技术企业, 2002年1月注册成立于浙江省杭州市国家高新技术产业开发区，2011年4月15日上市，注册资金4.53亿元人民币，是国内先进的城市智能化整体解决方案提供商，同时也是国内绿色智慧城市建设的先驱之一。",
+      "sector": "高端分析仪器",
+      "founded_year": 2002,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-7007-555",
+      "email": "fpi_market@fpi-inc.com",
+      "address": "浙江省杭州市滨江区滨安路760号",
+      "products": [
+        "质谱",
+        "光谱",
+        "色谱",
+        "前处理",
+        "流动注射",
+        "自动化实验室",
+        "试剂耗材",
+        "工业激光",
+        "工业紫外",
+        "工业质谱",
+        "红外/热导",
+        "报警仪",
+        "大气环境",
+        "水环境",
+        "水污染源",
+        "气污染源",
+        "便携/走航",
+        "信息化",
+        "治理规划",
+        "PreMed 7000 电感耦合等离子体质谱检测系统 (ICP-MS)",
+        "PreMed 5200 超高效液相色谱-三重四极杆质谱检测系统 (LC-MS/MS)",
+        "运维服务",
+        "应急监测",
+        "第三方检测",
+        "膜技术",
+        "加热炉燃烧优化系统",
+        "农村一体化污水处理装置",
+        "环境信息化",
+        "水利水务信息化",
+        "生态综合发展信息化"
+      ],
+      "customers": [
+        "环保",
+        "实验室",
+        "钢铁",
+        "石化",
+        "应急安全",
+        "食品",
+        "医药",
+        "生命科学",
+        "新能源",
+        "半导体"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "丁香园",
+    "url": "https://www.dxy.cn/",
+    "pages": [
+      {
+        "url": "https://www.dxy.cn/",
+        "title": "丁香园_医疗领域的连接者_丁香园生物医药科技网",
+        "chars": 974,
+        "error": null
+      },
+      {
+        "url": "https://www.dxy.cn/pages/about.html",
+        "title": "关于我们_医疗领域的连接者_丁香园生物医药科技网",
+        "chars": 2867,
+        "error": null
+      },
+      {
+        "url": "https://www.dxy.cn/pages/contact.html",
+        "title": "联系我们_医疗领域的连接者_丁香园生物医药科技网",
+        "chars": 270,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "丁香园",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.dxy.cn/",
+      "description": "丁香园是中国领先的数字医疗健康科技企业，通过专业权威的内容分享互动、丰富全面的医疗数据积累、高质量的数字医疗服务，连接医生、患众、医院、生物医药企业、科研企业和大众消费品企业等。",
+      "sector": "数字医疗健康",
+      "founded_year": 2000,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "hr@dxy.cn",
+      "address": null,
+      "products": [
+        "临床决策",
+        "用药助手",
+        "丁香园社区",
+        "丁香医生",
+        "丁香妈妈",
+        "丁香生活研究",
+        "丁香家",
+        "丁香人才",
+        "丁香医考",
+        "丁香公开课",
+        "Insight 数据库",
+        "丁香通",
+        "丁香播咖",
+        "丁香搜索",
+        "丁香实验",
+        "医院汇"
+      ],
+      "customers": [
+        "医生",
+        "医疗机构",
+        "医药从业者",
+        "生命科学领域人士",
+        "患众",
+        "医院",
+        "生物医药企业",
+        "科研企业",
+        "大众消费品企业"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "魔点科技",
+    "url": "https://www.moredian.com/",
+    "pages": [
+      {
+        "url": "https://www.moredian.com/",
+        "title": "魔点科技官网 | 智能门禁考勤与空间智能解决方案",
+        "chars": 2972,
+        "error": null
+      },
+      {
+        "url": "https://www.moredian.com/about/moredian",
+        "title": "关于魔点 | 魔点科技",
+        "chars": 2553,
+        "error": null
+      },
+      {
+        "url": "https://www.moredian.com/about/join",
+        "title": "加入魔点 | 魔点科技",
+        "chars": 6355,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "魔点科技",
+      "city": "杭州",
+      "district": "余杭区",
+      "website": "https://www.moredian.com/",
+      "description": "魔点科技专注于空间智能，通过智能终端、AI算法、空间操作系统、开放平台构建完整的AI产品与服务体系，把AI能力带入每一个组织、每一个空间。作为钉钉深度战略伙伴，魔点携手全球生态伙伴，共同打造开放、智能、连接的空间生态，用AI重塑办公、园区、校园、商业等场景。",
+      "sector": "空间智能",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-033-7675",
+      "email": "marketing@moredian.com",
+      "address": "余杭区五常街道思凯路阿里中心·未科D5幢6楼",
+      "products": [
+        "门禁系列",
+        "考勤系列",
+        "大屏系列",
+        "门锁系列",
+        "储物系列",
+        "一体机系列",
+        "D5 Ultra",
+        "G5 Pro",
+        "MY8 Pro",
+        "Y8 Pro",
+        "Y2 Pro",
+        "Y1",
+        "M3",
+        "M3 mini",
+        "M3-A",
+        "W3X Pro",
+        "W5F Pro",
+        "8S",
+        "T21",
+        "K50",
+        "储物柜",
+        "领用柜",
+        "AI BOX",
+        "私有化一体机"
+      ],
+      "customers": [
+        "菜鸟物流",
+        "党校",
+        "东方电缆",
+        "东方希望",
+        "杭叉集团",
+        "杭钢股份",
+        "九州通",
+        "老乡鸡",
+        "力诺",
+        "蒙牛",
+        "人民日报",
+        "松下",
+        "泰尔茂",
+        "物产中大",
+        "中国电信",
+        "佐帕斯"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "浙江讯飞",
+    "url": "https://www.iflytek.com/",
+    "pages": [
+      {
+        "url": "https://www.iflytek.com/",
+        "title": "科大讯飞 - 用人工智能建设美好世界",
+        "chars": 18,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江讯飞智能科技有限公司",
+      "city": "杭州",
+      "district": "萧山区",
+      "website": "https://www.iflytek.com/",
+      "description": "科大讯飞股份有限公司浙江总部、全资子公司，落地杭州湾信息港，负责浙江区域人工智能核心算法、智慧教育、智慧医疗、智慧城市等业务。",
+      "sector": "人工智能",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "杭州市萧山区杭州湾信息港",
+      "products": [
+        "人工智能核心算法",
+        "智慧教育",
+        "智慧医疗",
+        "智慧城市"
+      ],
+      "customers": [],
+      "confidence": 0.6,
+      "_source": "人工核验：iflytek.com（母公司官网）+ 杭州日报/人民日报公开报道"
+    },
+    "error": null
+  },
+  {
+    "company": "顺网科技",
+    "url": "https://www.shunwang.com/",
+    "pages": [
+      {
+        "url": "https://www.shunwang.com/",
+        "title": "顺网科技—科技连接快乐",
+        "chars": 1410,
+        "error": null
+      },
+      {
+        "url": "https://www.shunwang.com/about.html",
+        "title": "顺网科技—科技连接快乐",
+        "chars": 1558,
+        "error": null
+      },
+      {
+        "url": "https://www.shunwang.com/about-history.html",
+        "title": "顺网科技—科技连接快乐",
+        "chars": 4955,
+        "error": null
+      },
+      {
+        "url": "https://www.shunwang.com/about-honor.html",
+        "title": "顺网科技—科技连接快乐",
+        "chars": 899,
+        "error": null
+      },
+      {
+        "url": "https://www.shunwang.com/about-culture.html",
+        "title": "顺网科技—科技连接快乐",
+        "chars": 1153,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "顺网科技",
+      "city": "杭州市",
+      "district": "拱墅区",
+      "website": "https://www.shunwang.com/",
+      "description": "顺网科技是国内领先的互联网科技公司，多年来公司坚持以技术产品为核心，秉承“科技连接快乐”的企业使命，通过推进本地服务智能化、云服务Inside、元宇宙创新，迈向服务“50万家线下实体、5000万户家庭娱乐、5亿个人用户”的愿景。",
+      "sector": "算力、AI、电竞、CJ",
+      "founded_year": 2005,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-8851-678",
+      "email": "marketing@shunwang.com",
+      "address": "浙江省杭州市拱墅区湖州街555号顺网运河国际（1号楼、2号楼、3号楼、4号楼、6号楼）",
+      "products": [
+        "顺网云电脑",
+        "顺网游戏",
+        "5866商城",
+        "顺游手咖",
+        "泡泡加速器",
+        "树呆熊电竞",
+        "动漫潮玩",
+        "ChinaJoy",
+        "瞬元SiMETA",
+        "顺网影视",
+        "蝌蚪语音",
+        "顺网算力云",
+        "顺网电竞云电脑",
+        "顺网智算",
+        "网维大师",
+        "维护云",
+        "网吧管家",
+        "顺网X管家",
+        "万象网管",
+        "Pubwin OL",
+        "游戏联运",
+        "游戏推广",
+        "非游戏推广"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "电魂网络",
+    "url": "https://www.dianhun.cn/",
+    "pages": [
+      {
+        "url": "https://www.dianhun.cn/",
+        "title": "为热爱全力以赴 - 电魂网络",
+        "chars": 1086,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/",
+        "title": "关于电魂 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/contact/",
+        "title": "联系我们 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/",
+        "title": "关于电魂 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/",
+        "title": "关于电魂 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/history/",
+        "title": "发展历程 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/layout/",
+        "title": "业务版图 - 电魂网络",
+        "chars": 1100,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州电魂网络科技股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.dianhun.cn/",
+      "description": "集游戏研发与运营于一体的互动娱乐企业，代表作《梦三国》系列。",
+      "sector": "游戏",
+      "founded_year": 2008,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "梦三国"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "宏杉科技",
+    "url": "https://www.macrosan.com/",
+    "pages": [
+      {
+        "url": "https://www.macrosan.com/en/",
+        "title": "MacroSAN-One-stop Data Storage Expert",
+        "chars": 2714,
+        "error": null
+      },
+      {
+        "url": "https://www.macrosan.com/en/AboutUs/Company/default.html",
+        "title": "About Us MacroSAN-One-stop Data Storage Expert",
+        "chars": 18861,
+        "error": null
+      },
+      {
+        "url": "https://www.macrosan.com/en/AboutUs/Cases/default.html",
+        "title": "Success Stories MacroSAN-One-stop Data Storage Expert",
+        "chars": 7137,
+        "error": null
+      },
+      {
+        "url": "https://www.macrosan.com/en/AboutUs/DocmentCenter/default.html",
+        "title": "Resource Center MacroSAN-One-stop Data Storage Expert",
+        "chars": 1677,
+        "error": null
+      },
+      {
+        "url": "https://www.macrosan.com/en/AboutUs/Contact/default.html",
+        "title": "Connect Us MacroSAN-One-stop Data Storage Expert",
+        "chars": 2122,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "宏杉科技",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.macrosan.com/en/",
+      "description": "MacroSAN Technologies Co., Ltd (MacroSAN), founded in 2010, is an innovative technology provider of enterprise storage solution. Headquartered in Hangzhou, MacroSAN has R&D centers in both Hangzhou and Shenzhen, and 30 branches across China, possessing a 51% ratio of R&D personnel. As a one-stop data storage expert, MacroSAN specializes in the R&D, production, sales and service of enterprise storage products and solutions.",
+      "sector": "企业级存储",
+      "founded_year": 2010,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86400-650-5527",
+      "email": "service@macrosan.com",
+      "address": "10th to 12th floors, Building A, No. 482 Qianmo Road, Xixing Street, Binjiang District, Hangzhou City, China",
+      "products": [
+        "MS5520G3",
+        "MS series storage system",
+        "SAN",
+        "distributed storage",
+        "backup",
+        "cloud",
+        "hyper-convergence",
+        "NAS storage",
+        "all-flash storage"
+      ],
+      "customers": [
+        "ICBC",
+        "Bank of China",
+        "China Mobile",
+        "CHINA TELECOM",
+        "China Unicom",
+        "CHINA RAILWAY",
+        "State Grid Corporation of China",
+        "SINOPEC",
+        "China Life Insurance (Group) Company",
+        "Peking University",
+        "Fudan University",
+        "Zhejiang University",
+        "Beijing Daxing International Airport",
+        "Beijing MTR Corporation Ltd.(BJMTR)",
+        "Wuhan Union Hospital",
+        "Beijing Chao-Yang Hospital",
+        "Cancer Hospital Chinese Academy of Medical Sciences",
+        "COMAC",
+        "GAC Honda Automobile",
+        "Nanjing Iron and Steel Group",
+        "POSTAL SAVINGS BANK OF CHINA（PSBC）",
+        "China National Petroleum Corporation(CNPC)",
+        "China Petroleum and Chemical Corporation(CPCC)"
+      ],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "迪普科技",
+    "url": "https://www.dptech.com/",
+    "pages": [
+      {
+        "url": "https://www.dptech.com/",
+        "title": "杭州迪普科技股份有限公司",
+        "chars": 6304,
+        "error": null
+      },
+      {
+        "url": "https://www.dptech.com/index.php?m=content&c=index&a=lists&catid=91",
+        "title": "关于我们 - 杭州迪普科技股份有限公司",
+        "chars": 3459,
+        "error": null
+      },
+      {
+        "url": "https://www.dptech.com/index.php?m=content&c=index&a=lists&catid=99",
+        "title": "联系我们 - 杭州迪普科技股份有限公司",
+        "chars": 6100,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州迪普科技股份有限公司",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.dptech.com/",
+      "description": "自安全网络解决方案供应商，提供网络安全产品、应用交付产品及自安全基础架构等产品与解决方案。",
+      "sector": "网络安全",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-6100-598",
+      "email": null,
+      "address": "杭州市滨江区月明路595号迪普科技",
+      "products": [
+        "慧眼安全检测平台",
+        "高级威胁检测平台",
+        "综合安全网关",
+        "应用防火墙",
+        "智能安全网关",
+        "入侵防御系统",
+        "Web 应用防火墙",
+        "异常流量清洗系统",
+        "物联网应用安全控制系统",
+        "上网行为管理及流控",
+        "视频图像安全防护网关",
+        "安全隔离与信息交换系统",
+        "网络安全风险管控平台",
+        "先知威胁感知大数据平台",
+        "运维审计",
+        "日志审计",
+        "运维一体机",
+        "数据安全管控平台",
+        "数据分类分级与风险评估系统",
+        "API风险监测系统",
+        "数据库审计",
+        "工控防火墙",
+        "工控监测审计系统",
+        "工控漏洞检测平台",
+        "工控安全监管与分析平台",
+        "工控主机安全卫士系统",
+        "工控安全隔离与信息交换系统",
+        "零信任安全代理系统",
+        "终端检测与响应系统XDR",
+        "核心交换机",
+        "汇聚交换机",
+        "接入交换机",
+        "智算交换机",
+        "WLAN产品",
+        "自安全网络产品",
+        "路由器产品",
+        "工业交换机",
+        "UMC统一管理中心",
+        "智能分流产品",
+        "通用应用交付平台",
+        "信创应用交付平台",
+        "云安全管理平台CSSMP"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "连连数字",
+    "url": "https://www.lianlian.com/",
+    "pages": [
+      {
+        "url": "https://global.lianlianpay.com/",
+        "title": "全球跨境收付款平台_出口外贸B2B收款_全球收单_国际贸易支付收款首选 - 连连(LianLian Global)",
+        "chars": 4026,
+        "error": null
+      },
+      {
+        "url": "https://global.lianlianpay.com/company/about",
+        "title": "连连介绍 | 连连怎么样 - 连连(LianLian Global)",
+        "chars": 3894,
+        "error": null
+      },
+      {
+        "url": "https://global.lianlianpay.com/company/contact",
+        "title": "联系我们 - 连连(LianLian Global)",
+        "chars": 2989,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "连连数字",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://global.lianlianpay.com/",
+      "description": "中国领先的全球支付与金融平台，提供收款、付款、收单、汇兑、虚拟银行卡、聚合支付等数字支付服务。",
+      "sector": "跨境支付",
+      "founded_year": 2009,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-091-0999",
+      "email": "service@lianlianpay.com",
+      "address": "浙江省杭州市滨江区越达巷79号连连大厦A座",
+      "products": [
+        "全球收款",
+        "全球付款",
+        "全球汇兑",
+        "连连卡",
+        "全球收单",
+        "连连智枢",
+        "LianLian Fabric",
+        "LianLian XWorker"
+      ],
+      "customers": [
+        "跨境电商",
+        "外贸B2B",
+        "数娱出海",
+        "国际物流",
+        "跨境航旅",
+        "线下零售"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "博联智能",
+    "url": "https://www.broadlink.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.broadlink.com.cn/",
+        "title": "BroadLink博联-主页",
+        "chars": 14,
+        "error": null
+      },
+      {
+        "url": "https://www.broadlink.com.cn/lxwm",
+        "title": "联系我们-BroadLink博联",
+        "chars": 1105,
+        "error": null
+      },
+      {
+        "url": "https://www.broadlink.com.cn/gybl",
+        "title": "关于博联-BroadLink博联",
+        "chars": 460,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "博联智能",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.broadlink.com.cn/",
+      "description": "博联智能（BroadLink）是智能家居与物联网解决方案提供商，拥有智能模组、FastCon 技术、寰思 AI 中枢等产品，服务全屋智能、智慧地产、智慧酒店、智慧办公等场景。",
+      "sector": "智能家居 / 物联网",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-0900-955",
+      "email": "support@broadlink.com.cn",
+      "address": "浙江省杭州市滨江区江二路57号 杭州人工智能产业园C座",
+      "products": [
+        "WiFi模组",
+        "APP应用",
+        "智能模组",
+        "FastCon技术",
+        "寰思AI中枢"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  }
+]

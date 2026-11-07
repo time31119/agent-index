@@ -1,0 +1,5063 @@
+[
+  {
+    "company": "达摩院",
+    "url": "http://damo.alibaba.com/",
+    "pages": [
+      {
+        "url": "http://damo.alibaba.com/",
+        "title": "达摩院",
+        "chars": 477,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "达摩院",
+      "city": "杭州",
+      "district": null,
+      "website": "http://damo.alibaba.com/",
+      "description": "阿里巴巴达摩院（Alibaba DAMO Academy for Discovery, Adventure, Momentum and Outlook）是一家致力于探索科技未知，以人类愿景为驱动力的，立足于基础科学、创新性技术和应用技术的研究院。",
+      "sector": "基础科学、创新性技术和应用技术研究",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "新华三（H3C）",
+    "url": "https://www.h3c.com/cn/",
+    "pages": [
+      {
+        "url": "https://www.h3c.com/cn/",
+        "title": "新华三 - 融绘数字未来，共享美好生活",
+        "chars": 11017,
+        "error": null
+      },
+      {
+        "url": "https://www.h3c.com/cn/home/right_float/contact_us/",
+        "title": "联系我们-人工在线咨询-售后支持-新华三集团-H3C",
+        "chars": 7659,
+        "error": null
+      },
+      {
+        "url": "https://www.h3c.com/cn/home/right_float/contact_us/pc_service/default.htm?page=3",
+        "title": "更多服务查询-新华三集团-H3C",
+        "chars": 11815,
+        "error": null
+      },
+      {
+        "url": "https://www.h3c.com/cn/home/right_float/contact_us/pc_service/default.htm?page=2",
+        "title": "更多服务查询-新华三集团-H3C",
+        "chars": 11815,
+        "error": null
+      },
+      {
+        "url": "https://www.h3c.com/cn/home/right_float/contact_us/pc_service/default.htm?page=1",
+        "title": "更多服务查询-新华三集团-H3C",
+        "chars": 11815,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "新华三（H3C）",
+      "city": null,
+      "district": null,
+      "website": "https://www.h3c.com/cn/",
+      "description": "新华三集团作为数字化及AI解决方案领导者，致力于成为客户业务创新、数字化转型值得信赖的合作伙伴。作为新紫光集团旗下的核心企业，新华三提供覆盖“算-网-存-云-安-维”全方位的数字化基础设施产品和解决方案，以及端到端的技术服务",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-810-0504",
+      "email": null,
+      "address": null,
+      "products": [
+        "智算网络解决方案",
+        "新华三全光网络5.0解决方案",
+        "H3C服务器",
+        "HPE服务器",
+        "H3C存储",
+        "HPE存储",
+        "CloudOS云操作系统",
+        "CAS虚拟化",
+        "UIS超融合",
+        "桌面云",
+        "大数据",
+        "数据库",
+        "灵犀使能平台",
+        "智慧城市",
+        "工业互联网",
+        "智算安全解决方案",
+        "可信数据空间安全解决方案",
+        "新华三国产化安全",
+        "AD-WAN安全解决方案",
+        "零信任安全解决方案",
+        "云安全解决方案",
+        "商用密码应用安全性评估解决方案",
+        "数据安全解决方案",
+        "安全大脑解决方案",
+        "灵犀运维智能体",
+        "IT服务管理咨询",
+        "AIO一站式运维管理服务",
+        "SDService-NSD网络自服务解决方案",
+        "U-Center统一运维平台",
+        "业务运维服务",
+        "安仔远程运维服务",
+        "商用台式机",
+        "商用笔记本",
+        "商用显示器",
+        "Pinvou品悟AI智能体平台",
+        "MegaCube",
+        "MegaBook",
+        "MegaBook Air",
+        "Magic家用网络",
+        "MagicHub云屏",
+        "Aolynk产品",
+        "灵犀智算",
+        "灵犀数据中心",
+        "灵犀数字园区",
+        "灵犀智能广域",
+        "图灵Token工厂",
+        "H3C UniPoD 超节点",
+        "高密全液冷整机S90000",
+        "智算服务器R5500 G7X",
+        "智算服务器R53x0 G7 Ultra",
+        "DDC智算交换机",
+        "高密800G智算DCI交换机 S12500R-64EP",
+        "新华三确定性算力核心路由器 CR19000-X",
+        "X20836",
+        "X20360"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "剂泰医药",
+    "url": "https://www.metispharma.com/",
+    "pages": [
+      {
+        "url": "https://www.metispharma.com/",
+        "title": "剂泰科技（北京）股份有限公司",
+        "chars": 1256,
+        "error": null
+      },
+      {
+        "url": "https://www.metispharma.com/about.html",
+        "title": "关于我们_剂泰科技（北京）股份有限公司",
+        "chars": 4972,
+        "error": null
+      },
+      {
+        "url": "https://www.metispharma.com/contact.html",
+        "title": "联系我们_剂泰科技（北京）股份有限公司",
+        "chars": 777,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "剂泰科技（北京）股份有限公司",
+      "city": "北京",
+      "district": "海淀区",
+      "website": "https://www.metispharma.com/",
+      "description": "剂泰科技是一家人工智能（AI）驱动纳米材料创新的生物科技公司，专注于利用靶向药物递送和发现技术，加速重要疾病领域创新疗法的研发。",
+      "sector": "生物科技",
+      "founded_year": 2020,
+      "team_size": null,
+      "funding_stage": "D轮",
+      "funding_amount": "4亿元",
+      "phone": null,
+      "email": "bd@metistechbio.com",
+      "address": "北京市海淀区永腾北路9号贝伦产业园9栋4A",
+      "products": [
+        "AiLNP",
+        "AiRNA",
+        "AiTEM",
+        "NanoForge"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "一知智能",
+    "url": "https://www.yiwise.com/",
+    "pages": [
+      {
+        "url": "https://www.yiwise.com/",
+        "title": "一知智能-AI互动营销Agent产业引领者",
+        "chars": 4780,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "一知智能",
+      "city": "杭州市",
+      "district": "萧山区",
+      "website": "https://www.yiwise.com/",
+      "description": "领先的企业级AI交互引擎提供商，为全球企业构建可持续增长的AI交互能力。基于多模态AI技术打造全场景AI互动智能体矩阵，覆盖营销与服务全场景。",
+      "sector": "人工智能",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-926-0706",
+      "email": "marketing@yiwise.com",
+      "address": "杭州市萧山区启迪路198号信息港F座",
+      "products": [
+        "AI Voice Agent",
+        "AI Avatar Agent",
+        "AI UGC Agent",
+        "AICC解决方案"
+      ],
+      "customers": [
+        "韩束",
+        "苏泊尔",
+        "汤臣倍健",
+        "伊芙丽",
+        "英孚",
+        "奶酪博士",
+        "波奇宠物",
+        "老百姓大药房",
+        "安克创新"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "光云科技",
+    "url": "https://www.raycloud.com/ljgy/?tab=tab-4",
+    "pages": [
+      {
+        "url": "https://www.raycloud.com/ljgy/?tab=tab-4",
+        "title": "关于光云_光云科技公司介绍_杭州光云科技股份有限公司官方网站",
+        "chars": 1398,
+        "error": null
+      },
+      {
+        "url": "https://www.raycloud.com/ljgy/",
+        "title": "关于光云_光云科技公司介绍_杭州光云科技股份有限公司官方网站",
+        "chars": 1398,
+        "error": null
+      },
+      {
+        "url": "https://www.raycloud.com/lxwm1/",
+        "title": "联系光云_光云科技联系电话_杭州光云科技联系方式_杭州光云科技股份有限公司官方网站",
+        "chars": 750,
+        "error": null
+      },
+      {
+        "url": "https://www.raycloud.com/ljgy/?tab=tab-1",
+        "title": "关于光云_光云科技公司介绍_杭州光云科技股份有限公司官方网站",
+        "chars": 1398,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州光云科技股份有限公司",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.raycloud.com",
+      "description": "光云科技，A股电商SaaS第一股（股票代码：688365），成立于2009年，总部位于中国电商之都杭州，是互联网SaaS模式的软件技术创新型企业。作为中国首批电商SaaS服务商，光云科技秉承“让企业经营更卓越”的使命，专注于为企业提供电商运营的全链路解决方案，致力于成为全球企业软件服务领域的领跑者。",
+      "sector": "电商SaaS",
+      "founded_year": 2009,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-88995530",
+      "email": "Market@raycloud.com",
+      "address": "杭州市滨江区坚塔街599号光云大厦",
+      "products": [
+        "超级店长",
+        "快递助手",
+        "旺店交易",
+        "旺店商品",
+        "超级快车",
+        "跟单宝",
+        "推广宝",
+        "快麦ERP",
+        "快麦小智",
+        "快麦打印机",
+        "快麦CRM",
+        "巨沃WMS",
+        "深绘PIM",
+        "逸淘",
+        "有成会议",
+        "有成财务",
+        "有成CRM",
+        "番茄表单",
+        "有成会务",
+        "有成报销"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "嘉楠科技",
+    "url": "https://canaan-creative.com/",
+    "pages": [
+      {
+        "url": "https://www.kendryte.com/",
+        "title": "Kendryte 开发者社区 - 用 RISC-V 玩转端侧 AI",
+        "chars": 1914,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "嘉楠科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.kendryte.com/",
+      "description": "Kendryte 开发者社区：4 颗 RISC-V AI 芯片、13 款开发板、完整 SDK、海量模型与教程，助你快速打造端侧 AI 产品。",
+      "sector": "RISC-V AI 芯片",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "salesAI@canaan-creative.com",
+      "address": null,
+      "products": [
+        "K230",
+        "K230D",
+        "K210",
+        "K510",
+        "CanMV",
+        "RT-Smart SDK",
+        "Linux SDK",
+        "DongshanPI-Vision SDK",
+        "Arduino"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "趣拍云",
+    "url": "https://m.it168.com/articleq_2597751.html",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "微脉",
+    "url": "https://www.myweimai.net/",
+    "pages": [
+      {
+        "url": "https://www.myweimai.net/",
+        "title": "全病程管理创新实践者——微脉",
+        "chars": 2096,
+        "error": null
+      },
+      {
+        "url": "https://www.myweimai.net/about.html",
+        "title": "关于我们",
+        "chars": 6592,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "微脉",
+      "city": "杭州市",
+      "district": "西湖区",
+      "website": "https://www.myweimai.net/",
+      "description": "微脉是一家数字健康公司，秉持\"用科技点亮医学\"的理念，践行\"让医疗健康服务不再难\"的公司使命。作为AI+全病程管理的首创者，微脉已成为中国最大的全病程管理服务平台，通过自研CareAI人工智能技术推动全病程管理的规模化应用，致力于打造具有中国特色的管理式医疗组织（MCO）。",
+      "sector": "数字健康/互联网医疗",
+      "founded_year": 2015,
+      "team_size": null,
+      "funding_stage": "D轮",
+      "funding_amount": "2亿元",
+      "phone": "400-000-3999",
+      "email": "MKT@myweimai.com",
+      "address": "浙江省杭州市西湖区荆大路180号微脉云谷中心A座",
+      "products": [
+        "全病程管理服务平台",
+        "CareAI",
+        "诺依曼AI",
+        "数字疗法",
+        "CareGPT",
+        "微脉APP",
+        "微脉妈妈"
+      ],
+      "customers": [
+        "公立医院",
+        "政府部门",
+        "医护人员",
+        "患者"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "鲁尔物联",
+    "url": "http://www.ruhrtec.com/",
+    "pages": [
+      {
+        "url": "https://www.ruhrtec.com/",
+        "title": "鲁尔物联-环境物理智能服务商",
+        "chars": 8254,
+        "error": null
+      },
+      {
+        "url": "https://www.ruhrtec.com/about.html",
+        "title": "鲁尔物联-企业介绍",
+        "chars": 1636,
+        "error": null
+      },
+      {
+        "url": "https://www.ruhrtec.com/originator.html",
+        "title": "鲁尔物联-创始人简介",
+        "chars": 7311,
+        "error": null
+      },
+      {
+        "url": "https://www.ruhrtec.com/ContactUs.html",
+        "title": "鲁尔物联-企业介绍",
+        "chars": 2205,
+        "error": null
+      },
+      {
+        "url": "https://www.ruhrtec.com/advice.html",
+        "title": "鲁尔物联-环境物理智能服务商",
+        "chars": 958,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "鲁尔物联",
+      "city": "杭州",
+      "district": "余杭区",
+      "website": "https://www.ruhrtec.com/",
+      "description": "杭州鲁尔物联科技有限公司成立于2013年，是工信部专精特新重点“小巨人”企业、浙江省首台（套）装备企业。作为环境物理智能服务商，公司以环境物理感知硬件、行业数据模型及AI智能体为技术底座，面向自然环境、大型基础设施、工业装备与现代农业等领域，提供集监测采集、故障诊断、风险预测、运维管控于一体的环境物理智能解决方案。",
+      "sector": "环境物理智能",
+      "founded_year": 2013,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-119-1899",
+      "email": "kf@ruhrtec.cn",
+      "address": "浙江省杭州市余杭区五常街道绮颐弄53号鲁尔物联总部园区",
+      "products": [
+        "AI 数据标注平台",
+        "睿尔模型",
+        "睿尔智能体",
+        "模型算力一体机",
+        "三维点云扫描仪",
+        "视觉形变仪",
+        "GNSS监测一体机",
+        "一体式GNSS监测站",
+        "多功能监测仪",
+        "深部测斜仪",
+        "二轴倾角传感器",
+        "轻型边坡监测雷达系统",
+        "拉绳位移计",
+        "顶出式裂缝计",
+        "压电雨量一体机",
+        "翻斗式雨量计",
+        "无线简易雨量报警器",
+        "管式土壤含水率计",
+        "雷达泥水位计",
+        "投入式水位计",
+        "量水堰计",
+        "土压力计",
+        "振弦式渗压计",
+        "次声传感器",
+        "地声传感器",
+        "数字式/振弦式智能数采仪",
+        "数采仪",
+        "水利版数采仪",
+        "北斗通讯终端"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "联汇科技",
+    "url": "https://www.hzlh.com/",
+    "pages": [
+      {
+        "url": "https://www.om-ai.com/",
+        "title": "OmAI-联汇科技",
+        "chars": 9,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "联汇科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.om-ai.com/",
+      "description": "Om AI is building a future where intelligence lives in the physical world. We build VLX, a family of on-device multimodal models that enables machines to perceive, remember, reason, and act—turning them into intelligent, autonomous agents.",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "VLX"
+      ],
+      "customers": [],
+      "confidence": 0.4
+    },
+    "error": null
+  },
+  {
+    "company": "百应科技",
+    "url": "https://www.byai.com/",
+    "pages": [
+      {
+        "url": "https://www.byai.com/",
+        "title": "百应科技 BYAI · Gravity Agentic OS · 客户运营 AI Agent 平台",
+        "chars": 6025,
+        "error": null
+      },
+      {
+        "url": "https://www.byai.com/about.html",
+        "title": "关于百应 &middot; 让每一次对话都有意义 | BYAI",
+        "chars": 6547,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "百应科技",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.byai.com/",
+      "description": "基于 Gravity LLM 和 Multi-Agent 协同架构，在电话、WhatsApp、企业微信、短信等全渠道部署专属 AI Agent，帮企业多赚钱，效果看得见。",
+      "sector": "客户运营 AI Agent 平台",
+      "founded_year": 2016,
+      "team_size": "400+ 人",
+      "funding_stage": "Pre-IPO",
+      "funding_amount": "累计融资超 5 亿元",
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "Gravity Agentic OS",
+        "语音 Agent",
+        "WhatsApp Agent",
+        "企微 Agent",
+        "短信 Agent",
+        "策略 Agent",
+        "画像 Agent",
+        "质检 Agent",
+        "Flow 编排器"
+      ],
+      "customers": [
+        "中国平安",
+        "招商银行",
+        "美的集团",
+        "学而思",
+        "恒生电子",
+        "太平洋保险",
+        "工商银行",
+        "平安集团",
+        "星巴克",
+        "POP MART",
+        "京东",
+        "名创优品",
+        "新东方",
+        "阿里健康",
+        "蚂蚁消金",
+        "兰蔻",
+        "屈臣氏",
+        "华住集团",
+        "国家电网",
+        "比亚迪",
+        "顺丰速运",
+        "好未来",
+        "爱尔眼科",
+        "反诈中心",
+        "蔚来汽车",
+        "天猫",
+        "万豪酒店"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "浙大网新",
+    "url": "https://www.insigma.com.cn/index.php/welcome.html",
+    "pages": [
+      {
+        "url": "https://www.insigma.com.cn/index.php/welcome.html",
+        "title": "浙大网新科技股份有限公司浙大网新",
+        "chars": 2556,
+        "error": null
+      },
+      {
+        "url": "https://www.insigma.com.cn/index.php/about.html",
+        "title": "公司介绍浙大网新",
+        "chars": 2991,
+        "error": null
+      },
+      {
+        "url": "https://www.insigma.com.cn/index.php/about/history.html",
+        "title": "发展历程浙大网新",
+        "chars": 1301,
+        "error": null
+      },
+      {
+        "url": "https://www.insigma.com.cn/index.php/about/system.html",
+        "title": "能力体系浙大网新",
+        "chars": 2117,
+        "error": null
+      },
+      {
+        "url": "https://www.insigma.com.cn/index.php/about/honor.html",
+        "title": "荣誉资质浙大网新",
+        "chars": 1206,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙大网新科技股份有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.insigma.com.cn",
+      "description": "浙大网新科技股份有限公司（证券代码600797.SH）是以浙江大学综合应用学科为依托的信息技术咨询和服务集团，中国领先的数智化技术整合服务提供商。公司持续深化AI Driven“智能驱动”的发展战略，在打造网新云擎Insphere AI基座的同时，搭建并完善“算力服务－模型服务－数据服务”网新全链条AI大模型服务体系，并以此加速助力千行百业的数智化转型。",
+      "sector": "信息技术咨询和服务",
+      "founded_year": 2001,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86(571)8795-0588",
+      "email": null,
+      "address": null,
+      "products": [
+        "网新云擎Insphere AI基座",
+        "青聚智算管理平台",
+        "电子签章SDK",
+        "移动密码模块SDK",
+        "扫码入企SDK"
+      ],
+      "customers": [
+        "港珠澳大桥",
+        "浙江省人社厅",
+        "贵州银行",
+        "杭州国际博览中心",
+        "钱江世纪城"
+      ],
+      "confidence": 0.85
+    },
+    "error": null
+  },
+  {
+    "company": "宇泛智能",
+    "url": "https://www.uni-ubi.com/",
+    "pages": [
+      {
+        "url": "https://www.uniubi.com/",
+        "title": "UNIUBI AI",
+        "chars": 1585,
+        "error": null
+      },
+      {
+        "url": "https://www.uniubi.com/about/news",
+        "title": "UNIUBI AI",
+        "chars": 1380,
+        "error": null
+      },
+      {
+        "url": "https://www.uniubi.com/about/cooperation/supplier",
+        "title": "UNIUBI AI",
+        "chars": 1850,
+        "error": null
+      },
+      {
+        "url": "https://www.uniubi.com/about/cooperation/channel",
+        "title": "UNIUBI AI",
+        "chars": 1413,
+        "error": null
+      },
+      {
+        "url": "https://www.uniubi.com/about/contact",
+        "title": "联系我们 - 宇泛智能",
+        "chars": 1886,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "宇泛智能",
+      "city": null,
+      "district": null,
+      "website": "https://www.uniubi.com/",
+      "description": "Leader in AIoT products and solutions.",
+      "sector": "AIoT",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": "Pre-IPO+轮",
+      "funding_amount": "5.13亿元",
+      "phone": "400-0686-857",
+      "email": "sourcing@uni-ubi.com",
+      "address": null,
+      "products": [
+        "通用机器人大脑 Manas",
+        "四足机器人",
+        "自研高性能关节电机",
+        "AI Agent",
+        "U安智巡 AI Agent",
+        "空间智能",
+        "智能照明"
+      ],
+      "customers": [],
+      "confidence": 0.7
+    },
+    "error": null
+  },
+  {
+    "company": "云仰科技",
+    "url": "https://www.dtyunxi.com/",
+    "pages": [
+      {
+        "url": "https://www.dtyunxi.com/",
+        "title": "云徙科技官网｜企业级AI应用解决方案提供商",
+        "chars": 964,
+        "error": null
+      },
+      {
+        "url": "https://www.dtyunxi.com/about",
+        "title": "404 Not Found",
+        "chars": 33,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "云仰科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.dtyunxi.com/",
+      "description": "企业级AI应用解决方案提供商，国家级专精特新“小巨人”企业。我们提供覆盖会员营销、订单交易、供应链履约、业财融合全链路场景的智能运营解决方案，致力于成为企业 AI 转型最受信赖的长期共创伙伴。",
+      "sector": "企业级AI应用解决方案",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "4008-588-669",
+      "email": null,
+      "address": null,
+      "products": [
+        "xGOS.AI",
+        "xAaaS 策略智能",
+        "xBiz 业务智能",
+        "xData 数据智能"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "万马科技",
+    "url": "http://www.wanma-tech.cn/",
+    "pages": [
+      {
+        "url": "http://www.wanma-tech.cn/",
+        "title": "万马科技 ｜ 万马科技股份有限公司官网",
+        "chars": 4149,
+        "error": null
+      },
+      {
+        "url": "http://www.wanma-tech.cn/aboutus.html",
+        "title": "万马科技股份有限公司",
+        "chars": 2828,
+        "error": null
+      },
+      {
+        "url": "http://www.wanma-tech.cn/aboutculture.html",
+        "title": "企业文化 - 万马科技股份有限公司",
+        "chars": 2431,
+        "error": null
+      },
+      {
+        "url": "http://www.wanma-tech.cn/aboutzhuanli.html",
+        "title": "专利证书 - 万马科技股份有限公司",
+        "chars": 2162,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "万马科技股份有限公司",
+      "city": "杭州市",
+      "district": null,
+      "website": "http://www.wanma-tech.cn/",
+      "description": "万马科技股份有限公司成立于1997年，注册资金13400万元，公司于2017年8月在深交所上市（股票代码为300698）。是国内著名的通信电子、通讯物理连接设备的生产厂商之一。集研发、生产、销售与服务的高新技术企业。公司主营的系列产品都广泛用于IDC机房、云平台建设、通讯网络、医疗领域、国家高铁、轨道交通等众多领域。",
+      "sector": "通信电子、通讯物理连接设备",
+      "founded_year": 1997,
+      "team_size": "600余名",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-61101902",
+      "email": "dongmiban@wanmagroup.com",
+      "address": "浙江省杭州市天目山路181号天际大厦11F",
+      "products": [
+        "液冷产品",
+        "移动基站类产品",
+        "光通信类产品",
+        "配电类产品",
+        "行业客户类产品",
+        "智慧灯杆类产品",
+        "数据中心类产品",
+        "模块化数据中心",
+        "厢式数据中心",
+        "N系列机柜",
+        "母线系统",
+        "PDU",
+        "医院信息化产品系列",
+        "手术室行为管理系统",
+        "全院织物管理解决方案",
+        "高值耗材管理解决方案",
+        "智慧病区解决方案",
+        "医疗系统软件",
+        "护理管理信息系统",
+        "门/急诊输液系统",
+        "护理信息屏系统",
+        "医院移动运送系统",
+        "移动护理信息系统",
+        "全医嘱执行系统",
+        "BBU机柜",
+        "BBU室外机柜",
+        "BBU室内一体化柜",
+        "太阳能光伏柜",
+        "5G拉远光跳线",
+        "超五类非屏蔽数据电缆",
+        "移动医疗护理工作站",
+        "移动医疗查房工作站",
+        "移动医疗收费工作站"
+      ],
+      "customers": [
+        "电信",
+        "移动",
+        "联通",
+        "广电",
+        "华数"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "宏景智驾",
+    "url": "https://www.hongjingdrive.com/",
+    "pages": [
+      {
+        "url": "https://www.hongjingdrive.com/",
+        "title": "宏景智驾（衢州）科技有限公司",
+        "chars": 1089,
+        "error": null
+      },
+      {
+        "url": "https://www.hongjingdrive.com/about.html",
+        "title": "关于我们_宏景智驾（衢州）科技有限公司",
+        "chars": 2122,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "宏景智驾（衢州）科技有限公司",
+      "city": "衢州",
+      "district": null,
+      "website": "https://www.hongjingdrive.com/",
+      "description": "一家全栈式自动驾驶解决方案服务商，具备全栈自动驾驶软件算法和完整的系统集成能力，可针对不同客户需求提供定制化的高性能智能驾驶解决方案，全周期赋能 L1-L4 级别智能驾驶。",
+      "sector": "自动驾驶",
+      "founded_year": 2018,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "021-31821039",
+      "email": "tong.yang@hongjingdrive.com",
+      "address": "上海市嘉定区安亭镇安驰路488号 CAS·汽车广场A区4楼4021室",
+      "products": [
+        "IPM",
+        "HDC",
+        "T-BOX",
+        "ADCU",
+        "智能摄像头"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "拼便宜",
+    "url": "https://www.pinpianyi.com/",
+    "pages": [
+      {
+        "url": "https://www.pinpianyi.com/",
+        "title": "拼便宜-便利店智能集采平台",
+        "chars": 709,
+        "error": null
+      },
+      {
+        "url": "https://www.pinpianyi.com/we.html",
+        "title": "拼便宜-便利店智能集采平台",
+        "chars": 1268,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "拼便宜",
+      "city": "杭州",
+      "district": "萧山区",
+      "website": "https://www.pinpianyi.com/",
+      "description": "拼便宜，通过对便利店及供应商双方数据的采集分析，从多个维度构建算法模型进行数据的智能匹配，帮助门店计算出最优的采购方案及采购组合，降低门店采购成本、物流费用、库存积压、增加其流通效率、以更好的帮助便利店进货采购，最终最大限度降低其采购成本。",
+      "sector": "快消品供应链",
+      "founded_year": 2017,
+      "team_size": null,
+      "funding_stage": "D+轮",
+      "funding_amount": null,
+      "phone": "400-080-7070",
+      "email": "hezuo@pinpianyi.com",
+      "address": "杭州市萧山区金二路71号信息港小镇6期7号楼4楼",
+      "products": [
+        "便利店智能集采平台",
+        "拼便宜物流端APP",
+        "管理后台"
+      ],
+      "customers": [
+        "中小型非品牌便利店",
+        "供应商",
+        "货运司机"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "芯翼科技",
+    "url": "https://www.chipwing.com/",
+    "pages": [
+      {
+        "url": "https://www.chipwing.com/",
+        "title": "芯翼科技 - 集成电路首席运营官",
+        "chars": 62,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "芯翼科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.chipwing.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "杰牌传动",
+    "url": "https://www.jie.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.jie.com.cn/",
+        "title": "杰牌官网,智能传动方案提供商,齿轮减速电机,工业齿轮箱,行星齿轮箱,蜗杆减速机,电动机,因专业而杰出",
+        "chars": 2798,
+        "error": null
+      },
+      {
+        "url": "https://www.jie.com.cn/#",
+        "title": "杰牌官网,智能传动方案提供商,齿轮减速电机,工业齿轮箱,行星齿轮箱,蜗杆减速机,电动机,因专业而杰出",
+        "chars": 2798,
+        "error": null
+      },
+      {
+        "url": "https://www.jie.com.cn/abouts12.html",
+        "title": "关于杰牌|公司简介-杰牌传动",
+        "chars": 9005,
+        "error": null
+      },
+      {
+        "url": "https://www.jie.com.cn/abouts12.html#wenhua",
+        "title": "关于杰牌|公司简介-杰牌传动",
+        "chars": 9005,
+        "error": null
+      },
+      {
+        "url": "https://www.jie.com.cn/abouts12.html#history",
+        "title": "关于杰牌|公司简介-杰牌传动",
+        "chars": 9005,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杰牌传动",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.jie.com.cn/",
+      "description": "杰牌智能传动方案提供商，始创于1988年，坚持100年做好一台减速机，匠心打造齿轮行业百年企业。杰牌减速机、电动机、变频器及传动系统、驱动系统、控制系统等智能传动方案，服务全球市场。",
+      "sector": "智能传动",
+      "founded_year": 1988,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-82996820",
+      "email": "jiem@jie.com.cn",
+      "address": null,
+      "products": [
+        "JRT齿轮减速电机",
+        "JRH工业齿轮箱",
+        "JRP行星齿轮箱",
+        "JRW蜗杆减速机",
+        "WP蜗杆减速机",
+        "JD电动机",
+        "JC智能传动方案",
+        "JRES不锈钢减速机",
+        "JRSS丝杆升降机",
+        "JRTM伞齿轮转向器",
+        "JRGC工程分动箱",
+        "JEC电扶梯主机",
+        "JMES智能监测系统"
+      ],
+      "customers": [
+        "中国华能",
+        "太钢集团",
+        "中联重科",
+        "恒天集团",
+        "豪德木工"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "锘崴科技",
+    "url": "https://www.shuididp.cn/yp-14850e73dd1a002bb24ca8752df1b801.html",
+    "pages": [
+      {
+        "url": "https://www.shuididp.cn/yp-14850e73dd1a002bb24ca8752df1b801.html",
+        "title": "上海锘崴信息科技有限公司",
+        "chars": 2653,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "上海锘崴信息科技有限公司",
+      "city": "上海市",
+      "district": "徐汇区",
+      "website": null,
+      "description": "上海锘崴信息科技有限公司,2019-03-28日成立，经营范围包括一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；软件开发；信息系统集成服务；网络与信息安全软件开发；软件外包服务；互联网安全服务；数据处理和存储支持服务；计算机系统服务；人工智能应用软件开发；健康咨询服务（不含诊疗服务）；会议及展览服务；电子产品销售；机械设备研发；通讯设备销售；办公设备销售；信息技术咨询服务；摄像及视频制作服务；第一类医疗器械销售；生物化工产品技术研发；医学研究和试验发展；实验分析仪器销售；仪器仪表销售；智能仪器仪表销售；广告设计、代理；广告制作；翻译服务。",
+      "sector": "专业技术服务业",
+      "founded_year": 2019,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "上海市徐汇区乐山路33号5幢2楼200室",
+      "products": [],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "睿笛生物",
+    "url": "http://www.r-ablation.com/",
+    "pages": [
+      {
+        "url": "http://www.r-ablation.com/",
+        "title": "杭州睿笛生物科技有限公司",
+        "chars": 1519,
+        "error": null
+      },
+      {
+        "url": "http://www.r-ablation.com/?page_id=9528",
+        "title": "杭州睿笛生物科技有限公司 | 公司简介",
+        "chars": 784,
+        "error": null
+      },
+      {
+        "url": "http://www.r-ablation.com/?page_id=6633",
+        "title": "杭州睿笛生物科技有限公司 | 联络我们",
+        "chars": 511,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州睿笛生物科技有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "http://www.r-ablation.com/",
+      "description": "杭州睿笛生物科技有限公司成立于2014年，由英美海归科学家创办，是一家聚焦脉冲电场能量平台并致力于微创介入高端医疗器械创新的国家高新技术企业，同时推动脉冲电场技术的生物医药转化应用。",
+      "sector": "医疗器械",
+      "founded_year": 2014,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-89055971",
+      "email": "hzruidi@163.com",
+      "address": "杭州市余杭区仓前街道余杭塘路2959号4幢8楼",
+      "products": [
+        "纳秒脉冲肿瘤消融系统（纳秒刀）",
+        "陡脉冲治疗设备",
+        "一次性使用陡脉冲消融针",
+        "数字化心理行为测评平台系统（心理CT系统）"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "诺辉健康",
+    "url": "http://www.newhorizonbio.com/",
+    "pages": [
+      {
+        "url": "http://www.newhorizonbio.com/",
+        "title": "诺辉健康——中国癌症早筛的引领者和居家检测的开创者",
+        "chars": 565,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "诺辉健康",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "http://www.newhorizonbio.com/",
+      "description": "中国癌症早筛的引领者和居家检测的开创者，中国首家专注于癌症早筛的生物高科技公司，率先提出“高发癌症居家早期筛查”的服务理念。其自主研发的“非侵入性，多靶点粪便FIT-DNA联合检测”产品--常卫清®是中国首个，且现阶段唯一的肠癌早筛产品。产品管线覆盖肠癌、宫颈癌、胃癌和肺癌等领域。",
+      "sector": "生物高科技/癌症早筛",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-826-2300",
+      "email": null,
+      "address": "浙江省杭州市滨江区长河街道长河路475号2幢1层110室",
+      "products": [
+        "常卫清®",
+        "噗噗管®",
+        "幽幽管®",
+        "宫证清™",
+        "中国泛癌种早筛早诊PANDA项目(在研)"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "医准智能",
+    "url": "https://www.yizhun-ai.com/",
+    "pages": [
+      {
+        "url": "https://www.yizhun-ai.com/",
+        "title": "医准智能 &#8211; AI赋能·让影像发挥最大临床价值",
+        "chars": 720,
+        "error": null
+      },
+      {
+        "url": "https://www.yizhun-ai.com/about",
+        "title": "了解医准 &#8211; 医准智能",
+        "chars": 1511,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "医准智能",
+      "city": "北京市",
+      "district": "海淀区",
+      "website": "https://www.yizhun-ai.com/",
+      "description": "医准智能是一家致力于人工智能辅助医疗影像诊断的科技公司，率先被认定为国家级专精特新“小巨人”企业，通过图像识别与深度学习技术，达到对病灶的智能识别及分析，为各级医疗机构提供医疗影像诊断分析服务，让影像发挥最大临床价值。",
+      "sector": "人工智能辅助医疗影像诊断",
+      "founded_year": 2017,
+      "team_size": null,
+      "funding_stage": "B+轮",
+      "funding_amount": "亿元",
+      "phone": "400-646-6088",
+      "email": "marketing@yizhun-ai.com",
+      "address": "北京市海淀区北航致真大厦A座3层",
+      "products": [
+        "智在全能",
+        "粉红关AI",
+        "所见即诊断",
+        "达尔文智能科研平台"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "银江技术",
+    "url": "http://www.enjoyor.net/video.html",
+    "pages": [
+      {
+        "url": "http://www.enjoyor.net/video.html",
+        "title": "银江技术",
+        "chars": 1426,
+        "error": null
+      },
+      {
+        "url": "http://www.enjoyor.net/aboutus.html",
+        "title": "银江技术-关于银江",
+        "chars": 1220,
+        "error": null
+      },
+      {
+        "url": "http://www.enjoyor.net/contact_sales.html",
+        "title": "银江技术-销售咨询",
+        "chars": 1436,
+        "error": null
+      },
+      {
+        "url": "http://www.enjoyor.net/about_intro.html",
+        "title": "银江技术-公司简介",
+        "chars": 1489,
+        "error": null
+      },
+      {
+        "url": "http://www.enjoyor.net/about_culture.html",
+        "title": "银江技术-企业文化",
+        "chars": 1604,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "银江技术股份有限公司",
+      "city": "杭州市",
+      "district": "西湖区",
+      "website": "http://www.enjoyor.net",
+      "description": "银江技术是中国领先的数字城市建设运营服务商，中国第一批创业板上市企业，股票代码：300020。公司率先在国内提出智慧城市理念，以人工智能、大数据、物联网等新一代信息技术构建城市大脑，秉承“软件设计、系统交付、数据运营”三位一体的经营策略，推动城市建设、社会治理、民生服务，赋能智慧治理、智慧交通、智慧健康等领域高质量发展。",
+      "sector": "智慧城市",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-8016-888",
+      "email": "enjoyor@enjoyor.net",
+      "address": "杭州市西湖区西园八路2号",
+      "products": [
+        "城市大脑",
+        "交通大脑",
+        "健康大脑",
+        "镇街大脑",
+        "软件产品",
+        "硬件产品",
+        "IT规划",
+        "企业培训",
+        "支持服务"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "中奥科技",
+    "url": "http://www.chinaoly.com/",
+    "pages": [
+      {
+        "url": "http://www.chinaoly.com/",
+        "title": "Not Found",
+        "chars": 72,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "中奥科技",
+      "city": null,
+      "district": null,
+      "website": "http://www.chinaoly.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "地芯科技",
+    "url": "https://www.geochipinc.com/",
+    "pages": [
+      {
+        "url": "https://www.geochipinc.com/",
+        "title": "杭州地芯科技&mdash;专业模拟射频芯片设计和提供者",
+        "chars": 1302,
+        "error": null
+      },
+      {
+        "url": "https://www.geochipinc.com/about/index/",
+        "title": "公司介绍 - 杭州地芯科技&mdash;专业模拟射频芯片设计和提供者",
+        "chars": 1935,
+        "error": null
+      },
+      {
+        "url": "https://www.geochipinc.com/about/news/",
+        "title": "新闻资讯 - 杭州地芯科技&mdash;专业模拟射频芯片设计和提供者",
+        "chars": 1522,
+        "error": null
+      },
+      {
+        "url": "https://www.geochipinc.com/about/joinindex/",
+        "title": "加入我们 - 杭州地芯科技&mdash;专业模拟射频芯片设计和提供者",
+        "chars": 525,
+        "error": null
+      },
+      {
+        "url": "https://www.geochipinc.com/contact/",
+        "title": "联系我们 - 杭州地芯科技&mdash;专业模拟射频芯片设计和提供者",
+        "chars": 636,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州地芯科技有限公司",
+      "city": "杭州",
+      "district": "余杭区",
+      "website": "https://www.geochipinc.com/",
+      "description": "杭州地芯科技有限公司成立于2018年，总部位于浙江杭州，并在上海及深圳设有分部。公司专注高端模拟和射频集成电路研发，具有完备的研发与量产能力，致力于成为全球领先的高端模拟射频芯片设计和提供者。当前，地芯科技已经形成了射频收发机、射频前端和模拟信号链三大产品线，产品应用遍及无线通信、低空经济、具身智能、AI数据中心、卫星通信、工业电子及物联网等诸多领域。",
+      "sector": "模拟射频芯片设计",
+      "founded_year": 2018,
+      "team_size": null,
+      "funding_stage": "B+轮",
+      "funding_amount": null,
+      "phone": "0571-26283530",
+      "email": "sales@geochipinc.com",
+      "address": "浙江省杭州市余杭区文一西路1818-2号1号楼808室",
+      "products": [
+        "射频收发芯片",
+        "混频器",
+        "射频前端芯片",
+        "模拟信号链芯片"
+      ],
+      "customers": [
+        "DWIN",
+        "利尔达",
+        "新华三",
+        "佰才邦"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "乐刻运动",
+    "url": "http://www.lefit.com/",
+    "pages": [
+      {
+        "url": "https://www.leoao.com/",
+        "title": "乐刻运动官网—全国健身房门店超2000家",
+        "chars": 535,
+        "error": null
+      },
+      {
+        "url": "https://www.leoao.com/about",
+        "title": "乐刻运动官网—全国健身房门店超2000家",
+        "chars": 1156,
+        "error": null
+      },
+      {
+        "url": "https://www.leoao.com/about#describe",
+        "title": "乐刻运动官网—全国健身房门店超2000家",
+        "chars": 1156,
+        "error": null
+      },
+      {
+        "url": "https://www.leoao.com/about#mission",
+        "title": "乐刻运动官网—全国健身房门店超2000家",
+        "chars": 1156,
+        "error": null
+      },
+      {
+        "url": "https://www.leoao.com/training#joinUs",
+        "title": "乐刻运动官网—全国健身房门店超2000家",
+        "chars": 766,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "乐刻运动",
+      "city": "杭州市",
+      "district": "拱墅区",
+      "website": "https://www.leoao.com/",
+      "description": "乐刻运动，2015年创立于杭州的健身产业互联网平台，以让每个人平等享有运动健康的资源和权利为使命，以每天响应1亿人次的运动健康需求为愿景。",
+      "sector": "健身产业互联网平台",
+      "founded_year": 2015,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "co-branding@leoao.com",
+      "address": "杭州市拱墅区小河街道大关路189号万通中心E座",
+      "products": [
+        "乐刻健身",
+        "FEELINGME",
+        "FitTribe",
+        "YOGA POD 小瑜荚",
+        "活力番茄",
+        "LOVEFITT",
+        "HiLITTA"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "传化智联",
+    "url": "https://www.transfarzl.com/",
+    "pages": [
+      {
+        "url": "https://www.transfarzl.com/",
+        "title": "传化智联_传化物流_智能物流平台-传化智联股份有限公司",
+        "chars": 1997,
+        "error": null
+      },
+      {
+        "url": "https://www.transfarzl.com/index.php/about.html",
+        "title": "传化智联-传化智联股份有限公司",
+        "chars": 4662,
+        "error": null
+      },
+      {
+        "url": "https://www.transfarzl.com/index.php/about.html?id=0",
+        "title": "传化智联-传化智联股份有限公司",
+        "chars": 4662,
+        "error": null
+      },
+      {
+        "url": "https://www.transfarzl.com/index.php/about.html?id=1",
+        "title": "传化智联-传化智联股份有限公司",
+        "chars": 4662,
+        "error": null
+      },
+      {
+        "url": "https://www.transfarzl.com/index.php/about.html?id=2",
+        "title": "传化智联-传化智联股份有限公司",
+        "chars": 4662,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "传化智联股份有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.transfarzl.com/",
+      "description": "传化智联是服务产业端的智能物流平台，为货主企业和物流企业提供物流供应链、智能物流园区、产业支付与金融、智能信息化等各类服务，帮助企业供应链降本增效。",
+      "sector": "智能物流平台",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-866-5566",
+      "email": null,
+      "address": null,
+      "products": [
+        "智能公路港服务",
+        "供应链物流服务",
+        "生态增值服务",
+        "功能化学品",
+        "化工新材料",
+        "物流交易管理",
+        "运输作业管理",
+        "仓储作业管理",
+        "智慧园区",
+        "智能监控管理系统",
+        "园区公共平台",
+        "园区信息发布平台",
+        "园区指挥中心",
+        "内部运营管理系统",
+        "陆运通",
+        "传化油卡",
+        "支付业务",
+        "保理业务",
+        "融资租赁业务",
+        "保险业务"
+      ],
+      "customers": [
+        "新能源",
+        "化工",
+        "快消"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "凯尔达",
+    "url": "http://www.kaierda.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.kaierda.com.cn/",
+        "title": "杭州凯尔达焊接机器人股份有限公司",
+        "chars": 1908,
+        "error": null
+      },
+      {
+        "url": "https://www.kaierda.com.cn/about.html",
+        "title": "杭州凯尔达焊接机器人股份有限公司",
+        "chars": 2362,
+        "error": null
+      },
+      {
+        "url": "https://www.kaierda.com.cn/about.html#d1",
+        "title": "杭州凯尔达焊接机器人股份有限公司",
+        "chars": 2362,
+        "error": null
+      },
+      {
+        "url": "https://www.kaierda.com.cn/about.html#d2",
+        "title": "杭州凯尔达焊接机器人股份有限公司",
+        "chars": 2362,
+        "error": null
+      },
+      {
+        "url": "https://www.kaierda.com.cn/about.html#d3",
+        "title": "杭州凯尔达焊接机器人股份有限公司",
+        "chars": 2362,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州凯尔达焊接机器人股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.kaierda.com.cn/",
+      "description": "专注于工业机器人及工业焊接设备领域，是一家集自主研发、设计、生产销售、系统集成、技术服务为一体的科创板上市企业（股票代码：688255）。",
+      "sector": "工业机器人及工业焊接设备",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "工业机器人",
+        "工业焊接电源",
+        "机器人控制器"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "排列科技",
+    "url": "https://zdb.pedaily.cn/enterprise/show88074/",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "灵西机器人",
+    "url": "https://www.linxrobot.com/",
+    "pages": [
+      {
+        "url": "https://www.linxrobot.com/",
+        "title": "Hangzhou Linx Robot Intelligent Technology Co., Ltd., Linx Robot, Linx, 3D vision camera, industrial camera, visual palletizing, visual loading and unloading",
+        "chars": 4593,
+        "error": null
+      },
+      {
+        "url": "https://www.linxrobot.com/about_concat",
+        "title": "Contact Us - Linx Robot",
+        "chars": 2780,
+        "error": null
+      },
+      {
+        "url": "https://www.linxrobot.com/about",
+        "title": "About Us - Hangzhou Linx Robot Intelligent Technology Co., Ltd",
+        "chars": 2924,
+        "error": null
+      },
+      {
+        "url": "https://www.linxrobot.com/about_notice",
+        "title": "Related news - Linx Robot",
+        "chars": 5681,
+        "error": null
+      },
+      {
+        "url": "https://www.linxrobot.com/about_join",
+        "title": "Join Us - Linx Robot",
+        "chars": 3528,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州灵西机器人智能科技有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "https://www.linxrobot.com/",
+      "description": "国内领先的“3D+AI”机器人视觉智能解决方案提供商，拥有全套自研的3D视觉相机、机器视觉算法、机器人控制等核心技术。产品和解决方案已在仓储物流、新能源、工业等诸多行业实现规模化落地。",
+      "sector": "机器人视觉智能解决方案",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-86938610",
+      "email": "linxrobot@linxrobot.com",
+      "address": "浙江省杭州市余杭区阿里巴巴数字生态创新园6幢西一区1-3楼",
+      "products": [
+        "2.5D Line Scan Camera",
+        "FLEX series Line Scan 3D Camera",
+        "SHARP series Inspection 3D Camera",
+        "LASER Laser Area Scan 3D Camera",
+        "SMART Area Scan 3D Camera",
+        "Vision-Based Single SKU Depalletizing",
+        "Vision-Based Mixed SKU Depalletizing",
+        "Vision-Based Universal Depalletizing",
+        "Vision-Based Loading/Unloading",
+        "Palletizing"
+      ],
+      "customers": [
+        "国内某头部锂电制造企业",
+        "国内某半导体行业龙头企业",
+        "国内某头部光伏企业",
+        "某企业货品仓",
+        "某供电局智能仓储中心"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "宇链科技",
+    "url": "http://www.vastchain.cn/",
+    "pages": [],
+    "extracted": null,
+    "error": "timed out; curl failed: curl: (28) Failed to connect to www.vastchain.cn:80 after 21288 ms: Could not connect to server\r\n"
+  },
+  {
+    "company": "托普云农",
+    "url": "https://www.tpynkj.com/",
+    "pages": [
+      {
+        "url": "https://www.tpynkj.com/",
+        "title": "",
+        "chars": 16588,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "type": "json_object",
+      "name": "托普云农",
+      "city": null,
+      "district": null,
+      "website": "https://www.tpynkj.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "当虹科技",
+    "url": "https://www.arcvideo.cn/",
+    "pages": [
+      {
+        "url": "https://www.arcvideo.cn/",
+        "title": "当虹科技-专业智能视频解决方案与视频云服务提供商",
+        "chars": 3101,
+        "error": null
+      },
+      {
+        "url": "https://www.arcvideo.cn/gongsijianjie/",
+        "title": "当虹简介-智能视音频领域领军企业-当虹科技",
+        "chars": 3663,
+        "error": null
+      },
+      {
+        "url": "https://www.arcvideo.cn/lianxiwomen/",
+        "title": "联系当虹-当虹科技电话/邮箱/地址-当虹科技",
+        "chars": 2124,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州当虹科技股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.arcvideo.cn/",
+      "description": "杭州当虹科技作为一家定位于大视频领域的国家级专精特新“小巨人”企业，主要面向超高清、工业与卫星、车载智能座舱、机器人等方向，提供智能视频解决方案与视频云服务，包括视听科技、音视频技术、视频压缩等。",
+      "sector": "智能视频解决方案与视频云服务",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-87767690",
+      "email": "customer@arcvideo.com",
+      "address": "杭州市滨江区众创路309号当虹大厦",
+      "products": [
+        "在线直播编转码系统",
+        "AI画质增强在线编转码系统",
+        "实时解码器",
+        "便携式编解码器",
+        "JPEG-XS编解码器",
+        "AIGC引擎",
+        "AI智能媒资系统",
+        "AI智能审核系统",
+        "AI智能收录系统",
+        "AI智能快编系统",
+        "AI超分视频增强离线转码系统",
+        "DeepSeek+BlackEye 大模型算力一体机",
+        "IP调度矩阵系统",
+        "NDI调度矩阵系统",
+        "流媒体服务器",
+        "轮播系统",
+        "IP多屏视频监控系统",
+        "智能数字人包装系统",
+        "磐为视频处理平台",
+        "云点播",
+        "云直播",
+        "云导播",
+        "图文包装",
+        "融合云",
+        "播放引擎",
+        "边缘感知压缩前端",
+        "边缘压缩AI融合前端",
+        "边缘智能解析前端",
+        "视频感知压缩编码器",
+        "联网汇聚平台",
+        "视觉AI中台",
+        "轨道交通线网结构化平台",
+        "轨道交通安防集成平台",
+        "当虹物联网节能智慧路灯",
+        "车载视听应用中台",
+        "5D沉浸式智能座舱",
+        "车载视觉增强引擎",
+        "机器人超远距离远程操控系统"
+      ],
+      "customers": [
+        "广电传媒",
+        "互联网视频",
+        "户外大屏",
+        "超高清视频产业园",
+        "远洋船舶",
+        "卫星通信",
+        "石油钻探",
+        "轨道交通",
+        "社会治理",
+        "传统车企",
+        "造车新势力"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "正泰新能源",
+    "url": "https://www.astronergy.com.cn/about/index.html",
+    "pages": [
+      {
+        "url": "https://www.astronergy.com.cn/about/index.html",
+        "title": "正泰新能官网 - 正泰集团-全球知名智慧能源系统解决方案提供商",
+        "chars": 4577,
+        "error": null
+      },
+      {
+        "url": "https://www.astronergy.com.cn/about/manufacture.html",
+        "title": "正泰新能官网 - 全球首家光伏“智能制造+互联网”透明工厂",
+        "chars": 1660,
+        "error": null
+      },
+      {
+        "url": "https://www.astronergy.com.cn/about/group.html",
+        "title": "正泰新能官网 - 正泰集团-全球知名智慧能源系统解决方案提供商",
+        "chars": 2105,
+        "error": null
+      },
+      {
+        "url": "https://www.astronergy.com.cn/about/sustainability.html",
+        "title": "正泰新能可持续发展-承诺将在2050年实现全价值链碳中和",
+        "chars": 3549,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "正泰新能科技股份有限公司",
+      "city": "海宁",
+      "district": null,
+      "website": "https://www.astronergy.com.cn",
+      "description": "正泰集团旗下专注于光伏电池组件的智能制造企业，专注于高效晶硅太阳能电池与组件的研发、生产和销售，持续推出ASTRO系列高效光伏组件产品。",
+      "sector": "光伏",
+      "founded_year": 2006,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "ASTRO系列高效光伏组件",
+        "高效晶硅太阳能电池",
+        "光伏组件"
+      ],
+      "customers": [],
+      "confidence": 0.85
+    },
+    "error": null
+  },
+  {
+    "company": "信雅达",
+    "url": "http://www.sunyard.com/",
+    "pages": [
+      {
+        "url": "http://www.sunyard.com/",
+        "title": "404 Not Found",
+        "chars": 2015,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "信雅达科技股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "http://www.sunyard.com/",
+      "description": "金融科技创新先锋，提供全栈式产品和服务，涵盖数字化经营、数字化运营、数字化管理、数字化风控、数字化产融、数字化智能终端及信息安全等领域。",
+      "sector": "金融科技",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-56686888",
+      "email": null,
+      "address": "浙江省杭州市高新区（滨江）江南大道3888号信雅达科技大厦",
+      "products": [
+        "全媒体智能客服",
+        "企业级远程银行",
+        "移动作业平台",
+        "营销决策平台",
+        "零售CRM",
+        "信用卡智能审批",
+        "信用卡网申平台",
+        "数字化云支付平台",
+        "数字化移动营销终端",
+        "云密码服务平台",
+        "国密改造方案"
+      ],
+      "customers": [
+        "银行",
+        "金融机构"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "果麦文化",
+    "url": "https://www.guomai.cn/",
+    "pages": [
+      {
+        "url": "https://www.goldmye.com/",
+        "title": "果麦文化",
+        "chars": 10907,
+        "error": null
+      },
+      {
+        "url": "https://www.goldmye.com/secondaryPage/aboutGuomai",
+        "title": "果麦文化",
+        "chars": 192,
+        "error": null
+      },
+      {
+        "url": "https://www.goldmye.com/#web_about_guomai",
+        "title": "果麦文化",
+        "chars": 10907,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "果麦文化",
+      "city": "上海",
+      "district": "徐汇区",
+      "website": "https://www.goldmye.com/",
+      "description": "中国领先的图书品牌，一家以互联网驱动的新出版公司，股票代码301052，为当代读者提供价值与美的内容产品。",
+      "sector": "出版",
+      "founded_year": 2012,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "上海市徐汇区云锦路555号6栋",
+      "products": [
+        "图书出版",
+        "果麦书店",
+        "文创",
+        "有声书",
+        "IP衍生和运营",
+        "电影",
+        "书世界智能出版平台",
+        "AI校对王"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "贵仁科技",
+    "url": "https://www.keepsoft.net/",
+    "pages": [
+      {
+        "url": "https://www.keepsoft.net/",
+        "title": "科技智水创领者_智慧水利_智慧水务_海绵城市_智慧环境_贵仁科技",
+        "chars": 6651,
+        "error": null
+      },
+      {
+        "url": "https://www.keepsoft.net/portal/about/about?id=10",
+        "title": "科技智水创领者_智慧水利_智慧水务_海绵城市_智慧环境_贵仁科技",
+        "chars": 2760,
+        "error": null
+      },
+      {
+        "url": "https://www.keepsoft.net/portal/about/about?id=11",
+        "title": "科技智水创领者_智慧水利_智慧水务_海绵城市_智慧环境_贵仁科技",
+        "chars": 2760,
+        "error": null
+      },
+      {
+        "url": "https://www.keepsoft.net/portal/about/about?id=12",
+        "title": "科技智水创领者_智慧水利_智慧水务_海绵城市_智慧环境_贵仁科技",
+        "chars": 2760,
+        "error": null
+      },
+      {
+        "url": "https://www.keepsoft.net/portal/article/index.html?id=33&article_id=55&cid=2",
+        "title": "科技智水创领者_智慧水利_智慧水务_海绵城市_智慧环境_贵仁科技",
+        "chars": 1098,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江贵仁信息科技股份有限公司",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.keepsoft.net/",
+      "description": "以水科学数值模型技术为核心的高科技信息化平台型企业，聚焦水安全、水资源、水环境、水生态领域，提供大数据分析研判、管理应用与咨询规划服务。",
+      "sector": "智慧水利、智慧水务、海绵城市、智慧环境",
+      "founded_year": 2009,
+      "team_size": "近200人的研发团队",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-6099-081",
+      "email": "gr@keepsoft.net",
+      "address": "浙江省杭州市滨江区阡陌路482号智慧e谷B栋12、13层",
+      "products": [
+        "GRMS模型云",
+        "数字孪生",
+        "水联网",
+        "流域预报调度",
+        "内涝智治",
+        "山洪预报预警"
+      ],
+      "customers": [
+        "政府客户",
+        "院所高校",
+        "企业客户"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "德施曼",
+    "url": "https://www.dessmann.com.cn/newsinfo.aspx?id=255",
+    "pages": [
+      {
+        "url": "https://www.dessmann.com.cn/newsinfo.aspx?id=255",
+        "title": "德施曼智能锁品牌介绍-德施曼官网",
+        "chars": 5436,
+        "error": null
+      },
+      {
+        "url": "https://www.dessmann.com.cn/about.aspx",
+        "title": "品牌故事-浙江德施曼科技智能股份有限公司",
+        "chars": 2193,
+        "error": null
+      },
+      {
+        "url": "https://www.dessmann.com.cn/profile.aspx",
+        "title": "公司简介-浙江德施曼科技智能股份有限公司",
+        "chars": 1365,
+        "error": null
+      },
+      {
+        "url": "https://www.dessmann.com.cn/contact.aspx",
+        "title": "联系我们-浙江德施曼科技智能股份有限公司",
+        "chars": 1159,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "德施曼",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.dessmann.com.cn",
+      "description": "德施曼智能锁创建于2009年，秉承“用科技让生活更简单”的使命，致力于让每一个家庭用上智能锁，成为受信赖的高端智能锁品牌。十多年来，德施曼专注于高端智能锁产品的自主研发与制造，是一家集高科技智能锁产品研发、制造、销售、安装、售后于一体的全产业链公司。",
+      "sector": "智能锁",
+      "founded_year": 2009,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-880-1889",
+      "email": "info@dessmannlock.com",
+      "address": "浙江省杭州市滨江区江晖南路7号1幢",
+      "products": [
+        "智能锁",
+        "指纹锁",
+        "3D人脸识别锁",
+        "AI虹膜锁",
+        "指/掌静脉锁",
+        "Shotax哨兵猫眼系列",
+        "智能家居摄像机",
+        "保险柜",
+        "蓝牙钥匙"
+      ],
+      "customers": [
+        "绿城",
+        "中海",
+        "龙湖"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "医策科技",
+    "url": "https://www.zgyckj.com/",
+    "pages": [
+      {
+        "url": "https://www.zgyckj.com/",
+        "title": "四川医策科技有限公司",
+        "chars": 62,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "四川医策科技有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.zgyckj.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "利尔达",
+    "url": "https://www.lierda.com/",
+    "pages": [
+      {
+        "url": "https://www.lierda.com/",
+        "title": "利尔达",
+        "chars": 3447,
+        "error": null
+      },
+      {
+        "url": "https://www.lierda.com/about-us/news-center/oldnews/2779",
+        "title": "利尔达携手ST推出WE18系列wM-Bus模组，助力智能表计出海-产品速递-利尔达",
+        "chars": 4956,
+        "error": null
+      },
+      {
+        "url": "https://www.lierda.com/about-us/news-center/iot-module-news/2778",
+        "title": "多元连接赋能水务！利尔达亮相全国水表行业技术交流会-展会资讯-利尔达",
+        "chars": 4558,
+        "error": null
+      },
+      {
+        "url": "https://www.lierda.com/about-us/about-lierda",
+        "title": "关于利尔达-利尔达",
+        "chars": 5198,
+        "error": null
+      },
+      {
+        "url": "https://www.lierda.com/about-us/investor-relations",
+        "title": "投资者关系-利尔达",
+        "chars": 20835,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "利尔达科技集团股份有限公司",
+      "city": "杭州市",
+      "district": null,
+      "website": "https://www.lierda.com/",
+      "description": "利尔达科技集团是物联网产品研发、技术应用、服务落地的一站式合作伙伴，主营业务为IC增值分销业务和物联网模块及物联网系统解决方案的研发、生产和销售。",
+      "sector": "半导体/芯片、物联网",
+      "founded_year": 2001,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "zhaozy@lierda.com",
+      "address": "杭州市文一西路1326号利尓达物联网科技园",
+      "products": [
+        "IC增值分销",
+        "物联网模块",
+        "物联网系统解决方案",
+        "蜂窝模组",
+        "5G模组",
+        "NB-IoT模组",
+        "Cat.1模组",
+        "Cat.4模组",
+        "星闪模组",
+        "标准Wi-Fi模组",
+        "BLE透传模组",
+        "IoT Wi-Fi模组",
+        "LoRaWAN产品",
+        "LoRa自组网产品",
+        "Wi-SUN网络产品",
+        "FSK射频模组",
+        "LoRa射频模组",
+        "UWB产品",
+        "5G边缘网关",
+        "5G网关",
+        "显示一体机",
+        "工控板",
+        "核心板",
+        "WE18 wM-Bus模组",
+        "wM-Bus+LoRaWAN双模模组"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "精准学",
+    "url": "http://www.91jzx.cn/",
+    "pages": [
+      {
+        "url": "https://www.91jzx.cn/",
+        "title": "寒雪老师官网-智能精准学",
+        "chars": 3008,
+        "error": null
+      },
+      {
+        "url": "https://www.91jzx.cn/about-v3/",
+        "title": "关于我们-智能精准学",
+        "chars": 2621,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "精准学",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.91jzx.cn/",
+      "description": "智能精准学打造全球首位超拟人一对一AI家教“寒雪老师”，基于阿里通义千问自研语音端到端大模型，为中国K12学生提供一对一语音互动辅导。",
+      "sector": "AI+教育",
+      "founded_year": 2018,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": "近2亿元",
+      "phone": "19012726900",
+      "email": "Marketing@jzx100.cn",
+      "address": "阿里中心·杭州首座B1-2-4F",
+      "products": [
+        "寒雪老师",
+        "AI家教机",
+        "智习本SmartBook系列",
+        "智习本S系列"
+      ],
+      "customers": [
+        "中国K12学生"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "鸿雁电器",
+    "url": "https://www.hongyan.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.hongyan.com.cn/",
+        "title": "鸿雁电器官网-智简生活专家-智能家居-LED照明-开关插座品牌",
+        "chars": 2222,
+        "error": null
+      },
+      {
+        "url": "https://www.hongyan.com.cn/about.html",
+        "title": "鸿雁简介-鸿雁电器",
+        "chars": 2623,
+        "error": null
+      },
+      {
+        "url": "https://www.hongyan.com.cn/news_cont_5134.html",
+        "title": "关于建议消费者合规采购的重要公告-鸿雁电器",
+        "chars": 1877,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "鸿雁电器",
+      "city": "杭州市",
+      "district": "临安区",
+      "website": "https://www.hongyan.com.cn/",
+      "description": "鸿雁电器诞生于1981年，是中国大陆86型开关插座的创始品牌。经过40年的发展，鸿雁已形成完善的全屋智能、电工电气、照明电器、水电管道四大产品族群，并发展为智能家居系统解决方案集成供应商。",
+      "sector": "智能家居",
+      "founded_year": 1981,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-826-7818",
+      "email": "jubao@hongyan.com.cn",
+      "address": "杭州市临安区青山湖街道鹤亭街899号",
+      "products": [
+        "智能家居",
+        "智慧电工",
+        "照明电器",
+        "智慧用水",
+        "全屋智能",
+        "智能单品",
+        "信息箱",
+        "智能面板",
+        "开关插座",
+        "排插转换器",
+        "高低压配电",
+        "线缆产品",
+        "充电桩",
+        "智慧照明",
+        "家居照明",
+        "智能净水器",
+        "家装管道",
+        "工程管道"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华创视讯",
+    "url": "https://www.hitry.com/",
+    "pages": [
+      {
+        "url": "https://www.hitry.com/",
+        "title": "浙江华创视讯科技有限公司",
+        "chars": 2444,
+        "error": null
+      },
+      {
+        "url": "https://www.hitry.com/about/",
+        "title": "浙江华创视讯科技有限公司",
+        "chars": 1808,
+        "error": null
+      },
+      {
+        "url": "https://www.hitry.com/about/news/2.html",
+        "title": "浙江华创视讯",
+        "chars": 1238,
+        "error": null
+      },
+      {
+        "url": "https://www.hitry.com/about/news/1.html",
+        "title": "浙江华创视讯",
+        "chars": 1518,
+        "error": null
+      },
+      {
+        "url": "https://www.hitry.com/about/join.html",
+        "title": "浙江华创视讯科技有限公司",
+        "chars": 1015,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江华创视讯科技有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.hitry.com/",
+      "description": "浙江华创视讯科技有限公司（简称华创视讯），2016 年 8 月完成工商注册，是全球领先的以音视频技术为核心的协作通讯产品制造商和解决方案供应商。",
+      "sector": "协作通讯",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-061-6690",
+      "email": "hitry@hitry.com",
+      "address": "杭州市滨江区滨安路1168号施强广场1号楼",
+      "products": [
+        "视频会议",
+        "会议终端",
+        "终端外设",
+        "平台产品",
+        "生态系列产品",
+        "智能会议",
+        "会议预约",
+        "无纸化办公",
+        "LED全彩屏",
+        "电容互动屏",
+        "旗舰版系列",
+        "精英版系列",
+        "教育摄像头",
+        "教育录播主机",
+        "教育AI平台",
+        "专业扩声",
+        "舞台灯光",
+        "公共广播",
+        "视频管理",
+        "微视通",
+        "慧眼机顶盒系列",
+        "云电脑系列",
+        "智能屏系列",
+        "华创云会议",
+        "HT-ASP30",
+        "HiBoard-65-C",
+        "会易通",
+        "有线分布式麦克风（腾讯天籁款）"
+      ],
+      "customers": [
+        "政务",
+        "政法",
+        "应急",
+        "教育",
+        "医疗",
+        "金融",
+        "家庭"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "半云科技",
+    "url": "https://jyb.cjlu.edu.cn/company/view/id/162234",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "金通科技",
+    "url": "https://kingtonemobile.cn.china.cn/",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "虚谷科技",
+    "url": "https://www.xugudb.com/",
+    "pages": [
+      {
+        "url": "https://www.xugudb.com/",
+        "title": "虚谷伟业科技有限公司",
+        "chars": 6876,
+        "error": null
+      },
+      {
+        "url": "https://www.xugudb.com/企业简介",
+        "title": "关于我们 - 虚谷伟业科技有限公司",
+        "chars": 4369,
+        "error": null
+      },
+      {
+        "url": "https://www.xugudb.com/%e4%bc%81%e4%b8%9a%e7%ae%80%e4%bb%8b",
+        "title": "关于我们 - 虚谷伟业科技有限公司",
+        "chars": 4369,
+        "error": null
+      },
+      {
+        "url": "https://www.xugudb.com/%e7%95%99%e8%a8%80%e5%92%a8%e8%af%a2",
+        "title": "留言咨询 - 虚谷伟业科技有限公司",
+        "chars": 3084,
+        "error": null
+      },
+      {
+        "url": "https://www.xugudb.com/%E4%BC%81%E4%B8%9A%E7%AE%80%E4%BB%8B",
+        "title": "关于我们 - 虚谷伟业科技有限公司",
+        "chars": 4369,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "虚谷伟业科技有限公司",
+      "city": "成都",
+      "district": "锦江区",
+      "website": "https://www.xugudb.com/",
+      "description": "虚谷伟业是国内最早选择数据库自主研发路线的厂商之一，2002年由创始人况忠强组建创始团队，研发完全自主原创、新一代架构的虚谷分布式数据库，是国内数据库领域的核心企业和牵头单位。",
+      "sector": "数据库",
+      "founded_year": 2002,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-8886236",
+      "email": null,
+      "address": "四川省成都市锦江区锦江工业园锦盛路138号佳霖科创大厦5楼3-14号",
+      "products": [
+        "虚谷数据库",
+        "虚谷关系库",
+        "虚谷安全库",
+        "虚谷空间库",
+        "虚谷数据平台体系",
+        "虚谷实时数据服务平台",
+        "虚谷数据集成处理管理平台",
+        "集群监控软件",
+        "迁移工具",
+        "同步软件",
+        "XuguDBeaver",
+        "XuguManager",
+        "xugudb-dev-skills",
+        "UPDATAi"
+      ],
+      "customers": [
+        "全国政协",
+        "中国气象局",
+        "自然资源部",
+        "国家统计局",
+        "上海大数据中心",
+        "重庆大数据中心"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "曼孚科技",
+    "url": "https://www.mindflow.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.mindflow.com.cn/",
+        "title": "MindFlow｜让智能持续进化",
+        "chars": 2362,
+        "error": null
+      },
+      {
+        "url": "https://www.mindflow.com.cn/about.html",
+        "title": "关于我们｜MindFlow",
+        "chars": 1506,
+        "error": null
+      },
+      {
+        "url": "https://www.mindflow.com.cn/contact.html",
+        "title": "联系我们｜MindFlow",
+        "chars": 833,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "曼孚科技",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.mindflow.com.cn/",
+      "description": "曼孚科技（MindFlow）为模型团队提供模型评测、训练数据、Agent 环境和专家协作服务，围绕模型研发和真实业务场景，提供从数据生产到能力验证的完整支持。",
+      "sector": "人工智能",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "contact@mindflow.com.cn",
+      "address": "浙江省杭州市滨江区西兴街道物联网街27号联络大厦B座1202",
+      "products": [
+        "大模型 Eval 与 Benchmark",
+        "Post-training 数据",
+        "Agent 训练与评测环境",
+        "专家网络与高难数据"
+      ],
+      "customers": [
+        "上汽集团",
+        "HUAWEI",
+        "百度",
+        "快手",
+        "BOSCH"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "西湖心辰",
+    "url": "https://xinchenai.com/",
+    "pages": [
+      {
+        "url": "https://xinchenai.com/",
+        "title": "西湖心辰",
+        "chars": 4,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "西湖心辰",
+      "city": null,
+      "district": null,
+      "website": "https://xinchenai.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "讯酷科技",
+    "url": "http://xunkuyun.com/",
+    "pages": [
+      {
+        "url": "http://xunkuyun.com/",
+        "title": "讯酷科技-提供可持续发展系统解决方案",
+        "chars": 1191,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "讯酷科技",
+      "city": null,
+      "district": null,
+      "website": "http://xunkuyun.com/",
+      "description": "基于“低代码 + 精准AI”大模型，提供制造业可持续发展系统解决方案。",
+      "sector": "制造业数字化服务",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "数字化改造",
+        "持续运营",
+        "智能体"
+      ],
+      "customers": [
+        "意达",
+        "佳丰",
+        "云创",
+        "豪格",
+        "中域",
+        "瑞泽服饰",
+        "爱美莱",
+        "棉田",
+        "徽锦",
+        "知音",
+        "欧秀",
+        "金驰科技",
+        "金驰包装"
+      ],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "乐橙",
+    "url": "https://mall.imou.com/web/",
+    "pages": [
+      {
+        "url": "https://mall.imou.com/web/",
+        "title": "",
+        "chars": 1975,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "乐橙",
+      "city": "杭州",
+      "district": null,
+      "website": "https://mall.imou.com/web/",
+      "description": "乐橙商城是面向全国服务的自营电商官网，我们提供智能家居硬件及云服务产品，包括监控摄像头、监控摄像机、智能锁、指纹锁、报警器、网络硬盘录像机、宝宝看护器、视频云存储等全新产品，通过乐橙智能硬件、乐橙APP监控系统及智慧云服务，您可以随时掌握家庭、商铺、学校、办公室等场所的视频监控、获取异常告警信息。",
+      "sector": "智能家居/安防",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-672-8169",
+      "email": null,
+      "address": null,
+      "products": [
+        "室内摄像机",
+        "室外摄像机",
+        "4G摄像机",
+        "超值套装",
+        "电池相机",
+        "智能门锁",
+        "猫眼门铃",
+        "网关传感",
+        "监控摄像头",
+        "监控摄像机",
+        "智能锁",
+        "指纹锁",
+        "报警器",
+        "网络硬盘录像机",
+        "宝宝看护器",
+        "视频云存储"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "青塔科技",
+    "url": "https://www.cingta.com/",
+    "pages": [
+      {
+        "url": "https://www.cingta.com/",
+        "title": "",
+        "chars": 4014,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "青塔科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.cingta.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "数政科技",
+    "url": "https://gxt.hebei.gov.cn/hbgyhxxht/ztzl11/900894/2025101109510568832/index.html",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "广脉科技",
+    "url": "https://www.gcomtechnology.com/",
+    "pages": [
+      {
+        "url": "https://www.gcomtechnology.com/",
+        "title": "广脉科技股份有限公司",
+        "chars": 1742,
+        "error": null
+      },
+      {
+        "url": "https://www.gcomtechnology.com/index/about/index.html",
+        "title": "关于广脉-广脉科技股份有限公司",
+        "chars": 2668,
+        "error": null
+      },
+      {
+        "url": "https://www.gcomtechnology.com/index/about/index/mid/MAv%253Dt.html",
+        "title": "公司简介-广脉科技股份有限公司",
+        "chars": 2766,
+        "error": null
+      },
+      {
+        "url": "https://www.gcomtechnology.com/index/about/index/mid/XLN3O.html",
+        "title": "企业文化-广脉科技股份有限公司",
+        "chars": 776,
+        "error": null
+      },
+      {
+        "url": "https://www.gcomtechnology.com/index/about/index/mid/6pwqa.html",
+        "title": "荣誉资质-广脉科技股份有限公司",
+        "chars": 1163,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "广脉科技股份有限公司",
+      "city": "杭州",
+      "district": "滨江",
+      "website": "https://www.gcomtechnology.com/",
+      "description": "广脉科技股份有限公司是一家专业的信息通信技术综合服务提供商，立足于信息通信产业，以“数智引领”为战略导向，依托核心技术，把握5G、物联网、云计算、大数据和人工智能等技术的发展新趋势，聚焦于5G新基建、ICT行业应用集成服务及泛智能终端等相关产品领域，为通信运营商、轨道交通、政府、企业、智慧家庭等客户提供技术先进、安全可靠的产品及服务解决方案。",
+      "sector": "信息通信技术（ICT）",
+      "founded_year": 2012,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-85088000",
+      "email": null,
+      "address": null,
+      "products": [
+        "5G新基建",
+        "ICT及行业应用",
+        "高铁信息化",
+        "算力服务",
+        "泛智能终端"
+      ],
+      "customers": [
+        "通信运营商",
+        "轨道交通",
+        "政府",
+        "企业",
+        "智慧家庭"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华新机电",
+    "url": "http://huaxinhz.com/",
+    "pages": [
+      {
+        "url": "http://huaxinhz.com/",
+        "title": "杭州华新机电工程有限公司",
+        "chars": 5102,
+        "error": null
+      },
+      {
+        "url": "http://huaxinhz.com/about.aspx",
+        "title": "杭州华新机电工程有限公司",
+        "chars": 1799,
+        "error": null
+      },
+      {
+        "url": "http://huaxinhz.com/contact.aspx",
+        "title": "杭州华新机电工程有限公司",
+        "chars": 941,
+        "error": null
+      },
+      {
+        "url": "http://huaxinhz.com/#",
+        "title": "404 - 华新机电",
+        "chars": 44,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州华新机电工程有限公司",
+      "city": "杭州市",
+      "district": "三墩镇",
+      "website": "http://huaxinhz.com/",
+      "description": "杭州华新机电工程有限公司正式成立于2000年，改制前称“杭州华新电力技术工程公司”始于1993年，隶属电力工业部杭州机械设计研究所。于2015年7月重组成为上市公司株洲天桥起重机股份有限公司（股票代码：002523）全资子公司，注册资本2.01亿元，是经浙江省认定的高新技术企业，起重装备的省级企业研究院。",
+      "sector": "起重装备制造",
+      "founded_year": 2000,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86-571-28257951",
+      "email": "huaxin@huaxinhz.com",
+      "address": "杭州市三墩镇金蓬街315号宇内大楼",
+      "products": [
+        "卸船机",
+        "装船机",
+        "门座式起重机",
+        "轨道吊",
+        "电站桥机",
+        "通用桥机",
+        "通用门机",
+        "常规岛吊车",
+        "核岛吊车",
+        "重件码头固定吊",
+        "PMC吊车",
+        "BOP吊车",
+        "螺旋卸船机",
+        "垃圾吊",
+        "电气系统",
+        "智能系统",
+        "智能化料场"
+      ],
+      "customers": [
+        "中铁建港航局泰兴港务有限公司",
+        "国家能源集团宿迁发电有限公司",
+        "国能神华九江发电有限责任公司",
+        "中船发动机",
+        "中核福清",
+        "中核方家山",
+        "巴基斯坦卡拉奇核电站",
+        "中广核彰州",
+        "长江三峡乌东德水电站",
+        "南京西坝港务码头",
+        "上海石洞口",
+        "印尼KALTIM燃煤电站",
+        "马来西亚TJB",
+        "印尼爪哇",
+        "菲律宾马里韦莱斯",
+        "迪拜哈斯彦项目",
+        "湖南托口水电站",
+        "特变电工沈阳变压器厂",
+        "浙江省特科院",
+        "广西西江",
+        "云南昭通"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "杭州数云",
+    "url": "https://www.shuyun.com/",
+    "pages": [
+      {
+        "url": "https://www.shuyun.com/",
+        "title": "数云 | 中国领先的消费者运营AI应用公司",
+        "chars": 5324,
+        "error": null
+      },
+      {
+        "url": "https://www.shuyun.com/intro",
+        "title": "关于数云 - 中国领先的消费者运营 AI 应用公司",
+        "chars": 4141,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州数云信息技术有限公司",
+      "city": "杭州",
+      "district": "西湖区",
+      "website": "https://www.shuyun.com/",
+      "description": "国内领先的消费者运营AI应用公司，依托Agentic AI技术提供企业级AI Agent平台，覆盖洞察、策略与执行，实现从企业软件向AI商业操作系统的代际跃迁。",
+      "sector": "消费者运营AI应用/企业软件",
+      "founded_year": 2011,
+      "team_size": null,
+      "funding_stage": "D轮",
+      "funding_amount": null,
+      "phone": "400-6266-275",
+      "email": "marketing@shuyun.com",
+      "address": "浙江省杭州市西湖区文三路478号华星时代广场A座1901室",
+      "products": [
+        "数据赢家",
+        "私域赢家",
+        "麒麟CDP",
+        "麒麟CRM",
+        "麒麟MA",
+        "麒麟SCRM",
+        "数云思源",
+        "数云出海 Loyaltyforce",
+        "数云海外平台营销",
+        "Synwin Agent Platform",
+        "Synwin Chief Agent",
+        "Synwin Insights Agent",
+        "Synwin VoC Agent",
+        "Synwin Campaign Agent",
+        "Synwin Clienteling Agent",
+        "Synwin Conversation Agent",
+        "Synwin AgentOS",
+        "Synwin ORA",
+        "Synwin CWM"
+      ],
+      "customers": [
+        "飞亚达",
+        "爱婴室",
+        "慕思",
+        "Tutuanna",
+        "汤臣倍健",
+        "Samsonite",
+        "绝味食品"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "新讯数字科技",
+    "url": "https://www.e-byte.com/",
+    "pages": [
+      {
+        "url": "https://www.e-byte.com/",
+        "title": "新讯数字科技（杭州）有限公司",
+        "chars": 4920,
+        "error": null
+      },
+      {
+        "url": "https://www.e-byte.com/list/roll/fnavid/16",
+        "title": "新讯数字科技（杭州）有限公司",
+        "chars": 4971,
+        "error": null
+      },
+      {
+        "url": "https://www.e-byte.com/list/roll/snavid/70",
+        "title": "新讯数字科技有限公司",
+        "chars": 2206,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "新讯数字科技（杭州）有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.e-byte.com/",
+      "description": "新讯致力于为电信运营商和行业客户提供电信业务、大数据与人工智能、物联网、通信信息安全等方面的产品和解决方案，以及包括软件开发、系统集成、工程维护和运营支撑在内的专业化服务。",
+      "sector": "电信/通信",
+      "founded_year": 2000,
+      "team_size": "约1800人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "010-82325588",
+      "email": "eb@e-byte.com",
+      "address": "北京市海淀区知春路9号坤讯大厦7-9层",
+      "products": [
+        "VPMN",
+        "家庭网",
+        "统一Centrex",
+        "点击拨号",
+        "语音验证码",
+        "和多号（一卡多号）",
+        "彩印",
+        "VoLTE音频彩铃业务",
+        "VoLTE视频彩铃业务",
+        "营业厅联播系统",
+        "云视讯媒体播报系统",
+        "中间号",
+        "新通话系列",
+        "诈骗电话集中监控系统",
+        "“呼死你”应急防护系统",
+        "个性化通信防控",
+        "语音专线管控",
+        "防诈骗来电号码提示服务系统",
+        "网间拦截监控系统",
+        "骚扰电话监控与分析系统",
+        "电信核心网5GC",
+        "电信核心网UPF",
+        "电信核心网IMS",
+        "星载核心网S-5GC",
+        "星载核心网S-UPF",
+        "星载核心网S-S&F",
+        "地面核心网G-5GC",
+        "地面核心网G-IMS",
+        "地面核心网G-SMS",
+        "地面核心网G-S&F",
+        "智能业务平台",
+        "媒体云平台",
+        "能力开放平台",
+        "大数据基础平台",
+        "可信数据空间产品",
+        "物联网平台产品",
+        "AI原子能力",
+        "AI中台",
+        "白泽大模型平台",
+        "智能体开发平台",
+        "智能问数系统",
+        "知识管理系统",
+        "WISE系列产品",
+        "行业智慧视频平台",
+        "数字人创作平台"
+      ],
+      "customers": [
+        "中国移动",
+        "中国联通",
+        "中国电信"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "每刻科技",
+    "url": "https://www.maycur.com/",
+    "pages": [
+      {
+        "url": "https://www.maycur.com/",
+        "title": "每刻科技_差旅费用报销系统,财务报销管理系统,费控系统平台,电子会计档案管理,费用报销管理系统",
+        "chars": 16313,
+        "error": null
+      },
+      {
+        "url": "https://www.maycur.com/about",
+        "title": "每刻科技公司介绍",
+        "chars": 8692,
+        "error": null
+      },
+      {
+        "url": "https://www.maycur.com/contact",
+        "title": "联系我们_联系每刻科技",
+        "chars": 7313,
+        "error": null
+      },
+      {
+        "url": "https://www.maycur.com/about/",
+        "title": "每刻科技公司介绍",
+        "chars": 8692,
+        "error": null
+      },
+      {
+        "url": "https://www.maycur.com/contact/",
+        "title": "联系我们_联系每刻科技",
+        "chars": 7313,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "每刻科技",
+      "city": "杭州",
+      "district": "钱塘新区",
+      "website": "https://www.maycur.com/",
+      "description": "杭州每刻科技有限公司成立于2015年，是国内领先的群智云财务产品及解决方案服务商。每刻科技以“财务+AI”为理念，围绕“ERP+每刻=数字财务”核心主张，依托人工智能、大数据、云计算、移动互联网等技术，为企业、行政事业单位、国央企及出海企业提供新一代业财税档数据一体化和数字财务共享解决方案。",
+      "sector": "企业服务/财务SaaS",
+      "founded_year": 2015,
+      "team_size": null,
+      "funding_stage": "C轮",
+      "funding_amount": null,
+      "phone": "400-6789-576",
+      "email": "marketing@maycur.com",
+      "address": "杭州市钱塘新区金沙大道833号湖畔中心A座15楼和14楼",
+      "products": [
+        "每刻报销",
+        "每刻档案",
+        "每刻云票",
+        "每刻应收",
+        "每刻应付",
+        "每刻BI",
+        "每刻生态开放平台",
+        "每刻AI",
+        "每刻财务共享解决方案"
+      ],
+      "customers": [
+        "圣奥科技",
+        "浙江越秀外国语学院",
+        "奉化区教育局财务核算中心"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "云器科技",
+    "url": "http://yunqi.tech/documents",
+    "pages": [
+      {
+        "url": "http://yunqi.tech/documents",
+        "title": "云器科技 | 产品文档",
+        "chars": 704,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "云器科技",
+      "city": null,
+      "district": null,
+      "website": "http://yunqi.tech",
+      "description": "云器 Lakehouse 是由云器科技完全自主研发的新一代云湖仓。使用增量计算的数据计算引擎，性能可以提升至传统开源架构例如Spark的 10倍，实现了海量数据的全链路-低成本-实时化处理，为AI 创新提供了支持全类型数据整合、存储与计算的平台，帮助企业从传统的开源 Spark 体系升级到 AI 时代的数据基础设施。支持全球七朵云的全托管云湖仓平台，已在亚太多地开服，同时支持私有化部署模式。",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "云器 Lakehouse"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "连信科技",
+    "url": "https://www.lx-tech.com/",
+    "pages": [
+      {
+        "url": "https://www.lx-tech.com/",
+        "title": "洞见人和认知大模型-AI大语言模型-洞见人和大模型-连信数字",
+        "chars": 30,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "连信科技",
+      "city": null,
+      "district": null,
+      "website": "https://www.lx-tech.com/",
+      "description": "洞见人和,致力于实现类人智慧的通用智能",
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "火石创造",
+    "url": "https://www.hsmap.com/",
+    "pages": [
+      {
+        "url": "https://www.hsmap.com/",
+        "title": "火石创造-产业AI_产业智能体_科技金融平台_高质量数据集",
+        "chars": 1618,
+        "error": null
+      },
+      {
+        "url": "https://www.hsmap.com/aboutus/aboutus",
+        "title": "火石创造_产业AI可信赋能者_产业智能体_公司简介",
+        "chars": 821,
+        "error": null
+      },
+      {
+        "url": "https://www.hsmap.com/aboutus/media",
+        "title": "火石创造最新动态_产业AI与产业智能体资讯",
+        "chars": 817,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "火石创造",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.hsmap.com/",
+      "description": "火石创造是产业AI的可信赋能者，基于产业高质量数据集、产业知识与人工智能技术，打造产业智能体及科技金融数智底座与平台，面向政府、园区、金融机构和企业提供产业招商、科技金融、投研分析、企业服务等AI应用。",
+      "sector": "产业大数据与人工智能",
+      "founded_year": 2015,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-656-6867",
+      "email": "Contact@hsmap.com",
+      "address": "浙江省杭州市滨江区阡陌路482号智慧e谷",
+      "products": [
+        "“火石星览”产业智能体",
+        "“火石星磐”科技金融",
+        "产业智能体招商场景",
+        "产业智能体对公营销场景",
+        "“火石星联”数据平台",
+        "“火石元擎”大模型"
+      ],
+      "customers": [
+        "政府",
+        "园区",
+        "金融机构",
+        "企业"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "明峰医疗",
+    "url": "http://www.minfound.com.cn/",
+    "pages": [
+      {
+        "url": "http://www.minfound.com.cn/",
+        "title": "明峰医疗",
+        "chars": 1050,
+        "error": null
+      },
+      {
+        "url": "http://www.minfound.com.cn/about-7.html",
+        "title": "企业介绍 - 明峰医疗",
+        "chars": 1073,
+        "error": null
+      },
+      {
+        "url": "http://www.minfound.com.cn/about-9.html",
+        "title": "董事长致辞 - 明峰医疗",
+        "chars": 1158,
+        "error": null
+      },
+      {
+        "url": "http://www.minfound.com.cn/about-10.html",
+        "title": "企业文化 - 明峰医疗",
+        "chars": 394,
+        "error": null
+      },
+      {
+        "url": "http://www.minfound.com.cn/about.html",
+        "title": "企业介绍 - 明峰医疗",
+        "chars": 1073,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "明峰医疗",
+      "city": "杭州市",
+      "district": "钱塘区",
+      "website": "http://www.minfound.com.cn/",
+      "description": "明峰医疗成立于2011年，是集CT、PET/CT、明峰云、人工智能AI的研发、生产、销售、服务于一体的国家高新技术企业，为全球客户提供高端医疗影像设备一体化解决方案。",
+      "sector": "医疗影像设备",
+      "founded_year": 2011,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-85199325或400 035 8898",
+      "email": "info@minfound.com",
+      "address": "浙江省杭州市钱塘区银海街851号",
+      "products": [
+        "CT",
+        "PET/CT",
+        "方舟CT",
+        "车载CT",
+        "宠物CT",
+        "AI",
+        "明峰云"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "好络维医疗",
+    "url": "https://zdb.pedaily.cn/enterprise/show28844/",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "中威电子",
+    "url": "http://www.joyware.com/",
+    "pages": [
+      {
+        "url": "http://www.joyware.com/",
+        "title": "中威电子-智慧城市建设运营专家",
+        "chars": 767,
+        "error": null
+      },
+      {
+        "url": "http://www.joyware.com/index.php/about/list/22",
+        "title": "404 Page",
+        "chars": 8,
+        "error": null
+      },
+      {
+        "url": "http://www.joyware.com/index.php/about/list/29",
+        "title": "404 Page",
+        "chars": 8,
+        "error": null
+      },
+      {
+        "url": "http://www.joyware.com/index.php/about/list/29/47",
+        "title": "404 Page",
+        "chars": 8,
+        "error": null
+      },
+      {
+        "url": "http://www.joyware.com/index.php/about/list/29/48",
+        "title": "404 Page",
+        "chars": 8,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州中威电子股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "http://www.joyware.com/",
+      "description": "是以视频应用为核心的行业物联网解决方案提供商与运营服务商。",
+      "sector": "智慧城市建设运营",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "工业以太网",
+        "三层交换机",
+        "光端机产品",
+        "抓拍单元",
+        "雷达类产品",
+        "车型识别产品",
+        "场库停车产品",
+        "路内停车产品",
+        "服务器",
+        "控制产品",
+        "视频综合平台",
+        "解码器",
+        "热成像产品",
+        "在线测温",
+        "手持测温",
+        "行业应用软件",
+        "通用应用软件",
+        "隧道巡检机器人",
+        "V80视频综合平台"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "电魂网络",
+    "url": "https://www.dianhun.cn/",
+    "pages": [
+      {
+        "url": "https://www.dianhun.cn/",
+        "title": "为热爱全力以赴 - 电魂网络",
+        "chars": 1086,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/",
+        "title": "关于电魂 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/contact/",
+        "title": "联系我们 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/",
+        "title": "关于电魂 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/",
+        "title": "关于电魂 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/history/",
+        "title": "发展历程 - 电魂网络",
+        "chars": 1045,
+        "error": null
+      },
+      {
+        "url": "http://www.dianhun.cn/about/layout/",
+        "title": "业务版图 - 电魂网络",
+        "chars": 1100,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州电魂网络科技股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.dianhun.cn/",
+      "description": "集游戏研发与运营于一体的互动娱乐企业，代表作《梦三国》系列。",
+      "sector": "游戏",
+      "founded_year": 2008,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "梦三国"
+      ],
+      "customers": [],
+      "confidence": 0.6
+    },
+    "error": null
+  },
+  {
+    "company": "玄机科技",
+    "url": "https://www.xjent.com/",
+    "pages": [
+      {
+        "url": "https://www.xjent.com/",
+        "title": "杭州玄机科技股份有限公司",
+        "chars": 332,
+        "error": null
+      },
+      {
+        "url": "https://www.xjent.com/100022/",
+        "title": "关于玄机",
+        "chars": 2198,
+        "error": null
+      },
+      {
+        "url": "https://www.xjent.com/100026/",
+        "title": "联系我们",
+        "chars": 546,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州玄机科技股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.xjent.com/",
+      "description": "杭州玄机科技股份有限公司立足原创动漫影视制作，拥有从内容创作、图书音像、衍生产品、网络游戏、媒介宣传到市场发行的动漫全产业链运营能力，致力于以精工细作的品质和不断创新的艺术风格诠释“原创”二字的至高价值。",
+      "sector": "三维数字内容制作",
+      "founded_year": 2005,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "021-62813868",
+      "email": "mao.zhongyuan@qinsmoon.cn",
+      "address": null,
+      "products": [
+        "秦时明月",
+        "天行九歌",
+        "武庚纪",
+        "斗罗大陆",
+        "天宝伏妖录",
+        "吞噬星空",
+        "师兄啊师兄",
+        "斗罗大陆Ⅱ绝世唐门",
+        "天谕",
+        "牧神记"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "数库科技",
+    "url": "https://www.chinascope.com/",
+    "pages": [
+      {
+        "url": "https://www.chinascope.com.cn/",
+        "title": "ChinaScope | 数库科技 - 基于产业数据网络打造新一代决策智能 - 首页",
+        "chars": 1344,
+        "error": null
+      },
+      {
+        "url": "https://www.chinascope.com.cn/about.html",
+        "title": "ChinaScope | 数库科技 - 基于产业数据网络打造新一代决策智能 - 关于数库",
+        "chars": 1054,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "数库科技",
+      "city": "上海",
+      "district": null,
+      "website": "https://www.chinascope.com.cn/",
+      "description": "数库（上海）科技有限公司（简称：“数库科技”）成立于2009年，是一家引领产融数字化的数据科技公司，长期致力于在金融及产业领域提供基于产业逻辑的智能数据产品与系统服务，帮助金融机构、企业集团、政府部门解决业务场景中的数据和系统需求。",
+      "sector": "数据科技",
+      "founded_year": 2009,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "(86) 021-36359362",
+      "email": "business@chinascope.com",
+      "address": null,
+      "products": [
+        "企业图谱",
+        "SAM产业链",
+        "SmarTag智能资讯",
+        "系统部署",
+        "银行对公数字化平台",
+        "区域产业招商数字化平台",
+        "量化投研"
+      ],
+      "customers": [
+        "金融机构",
+        "银行",
+        "产业园区",
+        "企业集团",
+        "政府部门"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "恒生聚源",
+    "url": "https://www.gildata.com/",
+    "pages": [
+      {
+        "url": "https://www.gildata.com/",
+        "title": "聚源数据",
+        "chars": 1342,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "恒生聚源",
+      "city": "上海",
+      "district": null,
+      "website": "https://www.gildata.com/",
+      "description": "领先的 \"数据 + AI\" 智能数据服务商，致力于深入挖掘数据价值，以数据智慧赋能金融业务增长",
+      "sector": "金融数据服务",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "021-60897828",
+      "email": "service@gildata.com",
+      "address": "上海－陆家嘴软件园10号楼7层",
+      "products": [
+        "基础数据库",
+        "应用数据库",
+        "主题数据库",
+        "WarrenQ",
+        "WarrenQ F1",
+        "WarrenQ Pure",
+        "WarrenQ APP",
+        "智能小梵",
+        "数据地图",
+        "AIDB",
+        "洞见",
+        "智眸"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "贝丰科技",
+    "url": "https://www.boreasa.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.boreasa.com.cn/",
+        "title": "电机, 风机, 风扇, 驱动 – 贝丰科技有限公司",
+        "chars": 1860,
+        "error": null
+      },
+      {
+        "url": "https://www.boreasa.com.cn/company-profile.html",
+        "title": "公司简介 - 贝丰科技有限公司",
+        "chars": 1224,
+        "error": null
+      },
+      {
+        "url": "https://www.boreasa.com.cn/Company-profile.html",
+        "title": "公司简介 - 贝丰科技有限公司",
+        "chars": 1224,
+        "error": null
+      },
+      {
+        "url": "https://www.boreasa.com.cn/Contact-Us.html",
+        "title": "联系我们 - 贝丰科技有限公司",
+        "chars": 653,
+        "error": null
+      },
+      {
+        "url": "https://www.boreasa.com.cn/Global-Sales-Offices.html",
+        "title": "全球销售网络 - 贝丰科技有限公司",
+        "chars": 1985,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "贝丰科技",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.boreasa.com.cn/",
+      "description": "专注于微型高性能电机、风机、风扇制造的国家级专精特新重点“小巨人”企业，为医疗、工业、航空等应用领域客户提供解决方案。",
+      "sector": "微型高性能电机、风机、风扇制造",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86 (571) 2812 0533",
+      "email": "sales@boreasa.com",
+      "address": "浙江省杭州市滨江区聚园路9号D幢，310051",
+      "products": [
+        "电机",
+        "风机",
+        "风扇",
+        "驱动器",
+        "定制产品",
+        "OEM 制造"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "中正数服",
+    "url": "https://www.11467.com/qiye/97707697.htm",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "稷量数字",
+    "url": "https://www.jldigitech.com/",
+    "pages": [
+      {
+        "url": "https://www.jldigitech.com/",
+        "title": "稷量数字科技（北京）有限公司",
+        "chars": 3175,
+        "error": null
+      },
+      {
+        "url": "https://www.jldigitech.com/687111-687147.html",
+        "title": "稷量数科—赋能中国经济升级版",
+        "chars": 939,
+        "error": null
+      },
+      {
+        "url": "https://www.jldigitech.com/1_copy_.html",
+        "title": "稷量数科—赋能中国经济升级版",
+        "chars": 943,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "稷量数字科技（北京）有限公司",
+      "city": "北京市",
+      "district": "海淀区",
+      "website": "https://www.jldigitech.com/",
+      "description": "稷量数科开辟智能认知全新服务领域，为国家高新技术企业、北京市专精特新企业，总部位于清华科技园，在杭州、宁波、青岛、济南、西安等地设有分支机构；坚持以字的数化推动数的智化，定位于产业经济知识服务AI、AI驱动的数字治理平台与企业数智化解决方案提供商，致力于促进将智库认知、咨询内容经由代码软件、数据要素转化为智能服务、平台运营，促进政府治理方式、产业组织方式、企业运营方式转变。",
+      "sector": "产业经济知识服务AI、数字治理平台、企业数智化解决方案",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "010—64775866",
+      "email": "jl@jldigitech.com",
+      "address": "北京市海淀区中关村东路1号院清华科技园",
+      "products": [
+        "云舟企业运营管理平台及智能体",
+        "数智通鉴大模型服务",
+        "墨客智能体服务"
+      ],
+      "customers": [
+        "企业",
+        "政务",
+        "多用户"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华星创业",
+    "url": "http://www.hxcy.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.hxcy.com.cn/",
+        "title": "杭州华星创业通信技术股份有限公司--华星创业|杭州华星创业通信技术|华星创业通信技术",
+        "chars": 633,
+        "error": null
+      },
+      {
+        "url": "https://www.hxcy.com.cn/about1.html",
+        "title": "公司简介",
+        "chars": 1048,
+        "error": null
+      },
+      {
+        "url": "https://www.hxcy.com.cn/about3.html",
+        "title": "公司架构",
+        "chars": 458,
+        "error": null
+      },
+      {
+        "url": "https://www.hxcy.com.cn/cont.html",
+        "title": "办公地点",
+        "chars": 606,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州华星创业通信技术股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.hxcy.com.cn/",
+      "description": "专业提供移动通信网络技术服务及相关产品的高新技术企业，提供移动通信网络的规划设计、工程建设、室分工程、网络基础代维、网络测评优化、无线测试系统、移动通信专用无线测试终端、信令采集平台和基于网络大数据的网络分析优化软件，以及互联网数据服务（服务器托管、服务器租赁、云服务、数据增值服务、IT运维外包服务）。",
+      "sector": "移动通信网络技术服务",
+      "founded_year": 2003,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-89910606",
+      "email": null,
+      "address": "杭州市滨江区长河街道聚才路500号",
+      "products": [
+        "移动通信网络的规划设计",
+        "工程建设",
+        "室分工程",
+        "网络基础代维",
+        "网络测评优化",
+        "无线测试系统",
+        "移动通信专用无线测试终端",
+        "信令采集平台",
+        "基于网络大数据的网络分析优化软件",
+        "服务器托管",
+        "服务器租赁",
+        "云服务",
+        "数据增值服务",
+        "IT运维外包服务"
+      ],
+      "customers": [
+        "电信运营商",
+        "通信主设备供应商",
+        "铁塔"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "中恒电气",
+    "url": "https://www.hzzh.com/",
+    "pages": [
+      {
+        "url": "https://www.hzzh.com/",
+        "title": "杭州中恒电气股份有限公司",
+        "chars": 1577,
+        "error": null
+      },
+      {
+        "url": "https://www.hzzh.com/about/index.html",
+        "title": "关于中恒 － 杭州中恒电气股份有限公司",
+        "chars": 3697,
+        "error": null
+      },
+      {
+        "url": "https://www.hzzh.com/about/hr_zp.html",
+        "title": "人才招聘 － 杭州中恒电气股份有限公司",
+        "chars": 1764,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州中恒电气股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.hzzh.com/",
+      "description": "杭州中恒电气股份有限公司（简称“中恒电气”，股票代码002364）创立于1996年，2010年3月在深圳证券交易所上市，是一家专注于零碳智能社会建设的数字能源公司。",
+      "sector": "数字能源",
+      "founded_year": 1996,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-56532188",
+      "email": null,
+      "address": "杭州市滨江区东信大道69号中恒大厦",
+      "products": [
+        "智能充换电系统",
+        "5G及IDC能源系统",
+        "智能微网系统",
+        "储能系统",
+        "数据中心供电系统预制化解决方案",
+        "通信电源供配电系统整体解决方案",
+        "电力电源系统解决方案",
+        "智慧储能整体解决方案",
+        "智能运维整体解决方案",
+        "智能微网一体化解决方案",
+        "电力运营整体解决方案"
+      ],
+      "customers": [
+        "中国移动",
+        "中国铁塔",
+        "中国电信",
+        "阿里巴巴",
+        "腾讯",
+        "百度",
+        "拼多多",
+        "国家电网",
+        "南方电网",
+        "哈啰出行"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "英飞特",
+    "url": "https://www.gkzhan.com/st171481/",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "长川科技",
+    "url": "https://www.hzcctech.com/",
+    "pages": [
+      {
+        "url": "https://www.hzcctech.com/",
+        "title": "杭州长川科技股份有限公司",
+        "chars": 1604,
+        "error": null
+      },
+      {
+        "url": "https://www.hzcctech.com/companyprofile/index.aspx",
+        "title": "杭州长川科技股份有限公司",
+        "chars": 2707,
+        "error": null
+      },
+      {
+        "url": "https://www.hzcctech.com/contactus5344/index.aspx",
+        "title": "杭州长川科技股份有限公司",
+        "chars": 921,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州长川科技股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.hzcctech.com/",
+      "description": "杭州长川科技股份有限公司成立于2008年4月，是一家致力于提升集成电路专用装备技术水平、积极推动集成电路装备业升级的高新技术企业。公司于2017年4月17日在深交所创业板挂牌上市（股票代码300604）。主营产品包括测试机、分选机、探针台、AOI设备。",
+      "sector": "集成电路专用装备",
+      "founded_year": 2008,
+      "team_size": "5800+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-85096193",
+      "email": "sales@hzcctech.cn",
+      "address": "杭州市滨江区创智街500号",
+      "products": [
+        "测试机",
+        "分选机",
+        "探针台",
+        "AOI设备"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "晶华微",
+    "url": "http://www.sdicmicro.cn/",
+    "pages": [
+      {
+        "url": "https://sdicmicro.cn/",
+        "title": "杭州晶华微电子股份有限公司",
+        "chars": 3864,
+        "error": null
+      },
+      {
+        "url": "https://sdicmicro.cn/about/index.html",
+        "title": "关于晶华 － 公司介绍 － 杭州晶华微电子股份有限公司",
+        "chars": 2608,
+        "error": null
+      },
+      {
+        "url": "https://sdicmicro.cn/about/history.html",
+        "title": "关于晶华 － 发展历程 － 杭州晶华微电子股份有限公司",
+        "chars": 2949,
+        "error": null
+      },
+      {
+        "url": "https://sdicmicro.cn/about/honor.html",
+        "title": "关于晶华 － 荣誉专利 － 杭州晶华微电子股份有限公司",
+        "chars": 2917,
+        "error": null
+      },
+      {
+        "url": "https://sdicmicro.cn/about/partner.html",
+        "title": "关于晶华 － 合作伙伴 － 杭州晶华微电子股份有限公司",
+        "chars": 1710,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州晶华微电子股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://sdicmicro.cn/",
+      "description": "成立于2005年，专注于高性能模拟及数模混合集成电路的研发与销售，以高性能、高集成度、高可靠性的集成电路创新设计能力和先进的品质保证体系，为用户提供一站式集成电路设计及产品化应用方案。",
+      "sector": "集成电路设计",
+      "founded_year": 2005,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-86673068",
+      "email": "sales-2@sdicmicro.cn",
+      "address": "浙江省杭州市滨江区长河街道长河路351号4号楼5楼",
+      "products": [
+        "医疗健康SoC芯片",
+        "工业控制及仪表芯片",
+        "智能感知SoC芯片",
+        "电池管理芯片",
+        "物联网芯片",
+        "HART调制解调器芯片",
+        "4~20mA DAC芯片",
+        "信号调理及变送芯片",
+        "温度变送器芯片",
+        "带高精度ADC的SoC",
+        "脂肪秤专用芯片",
+        "ADC、AFE",
+        "32位通用微处理器内置高精度ADC",
+        "红外测温信号处理芯片",
+        "红外感应（PIR）芯片",
+        "计量仪表及万用表芯片",
+        "数显仪表芯片",
+        "数字温度传感器芯片",
+        "8bit触控MCU产品芯片",
+        "32bit触控MCU产品芯片",
+        "AFE芯片",
+        "保护芯片",
+        "库仑计芯片"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华澜微",
+    "url": "https://jyb.cjlu.edu.cn/company/view/id/168075/tab/4",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "联芸科技",
+    "url": "https://www.maxio-tech.com/",
+    "pages": [
+      {
+        "url": "https://www.maxio-tech.com/",
+        "title": "联芸科技（杭州）股份有限公司 | Maxio",
+        "chars": 2493,
+        "error": null
+      },
+      {
+        "url": "https://www.maxio-tech.com/about/",
+        "title": "企业介绍 | Maxio",
+        "chars": 1273,
+        "error": null
+      },
+      {
+        "url": "https://www.maxio-tech.com/about/intro.html",
+        "title": "企业介绍 | Maxio",
+        "chars": 1273,
+        "error": null
+      },
+      {
+        "url": "https://www.maxio-tech.com/about/contact/",
+        "title": "联系我们 | Maxio",
+        "chars": 1221,
+        "error": null
+      },
+      {
+        "url": "http://www.maxio-tech.com/about/intro.html",
+        "title": "",
+        "chars": 0,
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>; curl failed:   % Total    % Received % Xferd  Average S"
+      }
+    ],
+    "extracted": {
+      "name": "联芸科技（杭州）股份有限公司",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.maxio-tech.com/",
+      "description": "联芸科技于2014年11月在中国杭州滨江创建，公司专注于数据管理相关芯片的研究及产业化。公司总部位于杭州，在上海/广州/深圳/苏州/成都设有从事研发、市场和技术支持等分支机构。公司以数据管理、通用IP、SOC芯片为核心研发方向，是目前国际上为数不多掌握数据存储管理芯片核心技术企业之一。公司推出的系列化数据存储主控芯片、AIoT信号处理及传输芯片可广泛应用于消费电子、工业控制、数据通信、智能物联等领域。",
+      "sector": "芯片",
+      "founded_year": 2014,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-85892512",
+      "email": null,
+      "address": "杭州市滨江区西兴街道阡陌路459号聚光中心C楼C1-604室",
+      "products": [
+        "固态硬盘控制芯片",
+        "SATA接口SSD控制芯片",
+        "PCIe接口SSD控制芯片",
+        "嵌入式存储控制芯片",
+        "UFS接口主控芯片",
+        "网络通信芯片",
+        "以太网收发器",
+        "数据存储主控芯片",
+        "AIoT信号处理及传输芯片"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "纵横通信",
+    "url": "https://www.freelynet.com/",
+    "pages": [
+      {
+        "url": "https://www.freelynet.com/",
+        "title": "杭州纵横通信股份有限公司 &#8211; 股票代码：603602",
+        "chars": 1134,
+        "error": null
+      },
+      {
+        "url": "https://www.freelynet.com/index.php/about/",
+        "title": "关于纵横 &#8211; 杭州纵横通信股份有限公司",
+        "chars": 780,
+        "error": null
+      },
+      {
+        "url": "https://www.freelynet.com/index.php/contact/",
+        "title": "联系我们 &#8211; 杭州纵横通信股份有限公司",
+        "chars": 304,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州纵横通信股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.freelynet.com/",
+      "description": "杭州纵横通信股份有限公司成立于2006年，2017年上海证券交易所主板上市（股票代码603602）。公司以成为行业领先的数字科技企业为发展愿景，积极布局新质生产力，现已发展成以数字基建、数字营销、智能科技为核心的国家高新技术企业。",
+      "sector": "数字基建、数字营销、智能科技",
+      "founded_year": 2006,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "86-0571-8882 1122",
+      "email": null,
+      "address": "杭州市滨江区协同路190号纵横通信A座18楼",
+      "products": [
+        "数字基建",
+        "数字营销",
+        "智能科技",
+        "智能飞控系统"
+      ],
+      "customers": [
+        "电信运营商",
+        "苹果",
+        "OPPO",
+        "小米",
+        "VIVO",
+        "阿里巴巴",
+        "百度",
+        "抖音",
+        "喜马拉雅"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "汇萃智能",
+    "url": "https://www.hc-vision.cn/",
+    "pages": [
+      {
+        "url": "https://www.hc-vision.cn/",
+        "title": "汇萃智能-机器视觉软硬件产品及解决方案提供商",
+        "chars": 4647,
+        "error": null
+      },
+      {
+        "url": "https://www.hc-vision.cn/index/about",
+        "title": "关于汇萃",
+        "chars": 3854,
+        "error": null
+      },
+      {
+        "url": "https://www.hc-vision.cn/index/contact",
+        "title": "联系我们",
+        "chars": 1672,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州汇萃智能科技有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "https://www.hc-vision.cn/",
+      "description": "专注于通用智能高速机器视觉平台研发及生产的国家级专精特新重点“小巨人”企业，提供机器视觉软硬件产品及解决方案。",
+      "sector": "机器视觉",
+      "founded_year": 2012,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-8919-718",
+      "email": "zhangl@hc-vision.cn",
+      "address": "浙江省杭州市余杭区文一西路998号杭州未来科技城（海创园）19幢4楼",
+      "products": [
+        "HCVisionQuick机器视觉软件",
+        "通用智能高速机器视觉平台",
+        "3D视觉检测系统",
+        "AOI晶圆检测设备",
+        "一次性注射器视觉检测设备",
+        "铝箔封口检测设备",
+        "红外热成像工业相机",
+        "机器视觉实训设备",
+        "具身智能教学实训平台"
+      ],
+      "customers": [
+        "富士康",
+        "蒙牛",
+        "海尔",
+        "宝钢"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华是科技",
+    "url": "https://www.zjwhyis.com/",
+    "pages": [
+      {
+        "url": "https://www.zjwhyis.com/",
+        "title": "301218华是科技-浙江华是科技股份有限公司",
+        "chars": 1388,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江华是科技股份有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "https://www.zjwhyis.com/",
+      "description": "国内专业从事智慧城市综合服务的高新技术企业，IT产品服务和智慧城市整体解决方案专业提供商，依托计算机软件、物联网、大数据及人工智能等技术优势，致力于国家数字经济发展",
+      "sector": "智慧城市综合服务",
+      "founded_year": 1998,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-28000066",
+      "email": "zjhs@zjwhyis.com",
+      "address": "浙江省杭州市余杭区闲林街道嘉企路16号华是科技园",
+      "products": [
+        "智慧港航",
+        "智慧监所",
+        "智慧建筑",
+        "智慧医疗",
+        "智慧安防",
+        "智慧电力",
+        "智慧工厂",
+        "智慧反恐"
+      ],
+      "customers": [
+        "浙江大学海洋学院",
+        "之江实验室",
+        "浙江省人民政府",
+        "浙江省第二女子监狱",
+        "金华市人民医院",
+        "浙江鑫达医院",
+        "中国石化",
+        "杭州至绍兴城际铁路"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "国辰机器人",
+    "url": "http://www.zjrob.com/",
+    "pages": [
+      {
+        "url": "https://www.zjrob.com/",
+        "title": "智能机器人_巡检机器人_视觉检测设备_重载agv小车_杭州国辰机器人科技有限公司",
+        "chars": 2972,
+        "error": null
+      },
+      {
+        "url": "https://www.zjrob.com/about/3.html",
+        "title": "浙江智能机器人研究院_杭州国辰机器人科技有限公司",
+        "chars": 1301,
+        "error": null
+      },
+      {
+        "url": "https://www.zjrob.com/about/1.html",
+        "title": "关于我们_杭州国辰机器人科技有限公司",
+        "chars": 1663,
+        "error": null
+      },
+      {
+        "url": "https://www.zjrob.com/about/2.html",
+        "title": "联系我们_杭州国辰机器人科技有限公司",
+        "chars": 1170,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州国辰机器人科技有限公司",
+      "city": "杭州市",
+      "district": "萧山区",
+      "website": "https://www.zjrob.com/",
+      "description": "杭州国辰机器人科技有限公司成立于2015年7月，技术团队源自于浙江大学机器人研究中心，以机器人、机器视觉关键核心技术的研究、开发和应用为方向；以智能机器人和机器视觉系列产品为核心；致力于多元化生态链产业发展，打造一个国家级的机器人产业技术平台。",
+      "sector": "智能机器人",
+      "founded_year": 2015,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-56757613",
+      "email": "services@zjrob.com",
+      "address": "浙江省杭州市萧山区博奥路1728号",
+      "products": [
+        "智能巡检机器人",
+        "挂轨巡检机器人",
+        "轮式巡检机器人",
+        "防爆巡检机器人",
+        "智能搬运机器人",
+        "重载AGV",
+        "复合机器人",
+        "防爆型堆高无人叉车",
+        "膜行业视觉检测设备",
+        "PCB视觉缺陷检测",
+        "铜箔在线检测设备",
+        "石化视觉检测设备",
+        "门岗机器人"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "中策橡胶",
+    "url": "http://www.zcrubber.com/",
+    "pages": [
+      {
+        "url": "http://www.zcrubber.com/",
+        "title": "",
+        "chars": 1213,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "中策橡胶",
+      "city": null,
+      "district": null,
+      "website": "http://www.zcrubber.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "数澜科技",
+    "url": "http://www.dtwave.com/",
+    "pages": [
+      {
+        "url": "http://www.dtwave.com/",
+        "title": "504 Gateway Time-out",
+        "chars": 47,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "数澜科技",
+      "city": null,
+      "district": null,
+      "website": "http://www.dtwave.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "数梦工场",
+    "url": "https://partner.aliyun.com/shumeng",
+    "pages": [
+      {
+        "url": "https://partner.aliyun.com/shumeng",
+        "title": "合作与生态-云合作-数梦工场首页",
+        "chars": 16541,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "数梦工场",
+      "city": null,
+      "district": null,
+      "website": null,
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "城云科技",
+    "url": "https://jyb.cjlu.edu.cn/company/view/id/159757",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "诺尔康",
+    "url": "http://www.nurotron.com/",
+    "pages": [
+      {
+        "url": "http://www.nurotron.com/",
+        "title": "诺尔康人工耳蜗官网 _诺尔康人工耳蜗_泌尿系统调控 浙江诺尔康神经电子科技股份有限公司",
+        "chars": 2213,
+        "error": null
+      },
+      {
+        "url": "http://www.nurotron.com/aboutus.html",
+        "title": "公司简介 - 浙江诺尔康神经电子科技股份有限公司",
+        "chars": 2725,
+        "error": null
+      },
+      {
+        "url": "http://www.nurotron.com/aboutus.html#profile",
+        "title": "公司简介 - 浙江诺尔康神经电子科技股份有限公司",
+        "chars": 2725,
+        "error": null
+      },
+      {
+        "url": "http://www.nurotron.com/aboutus.html#honor",
+        "title": "公司简介 - 浙江诺尔康神经电子科技股份有限公司",
+        "chars": 2725,
+        "error": null
+      },
+      {
+        "url": "http://www.nurotron.com/aboutus.html#course",
+        "title": "公司简介 - 浙江诺尔康神经电子科技股份有限公司",
+        "chars": 2725,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江诺尔康神经电子科技股份有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "http://www.nurotron.com/",
+      "description": "浙江诺尔康神经电子科技股份有限公司成立于2006年，是一家生产经营神经电子医疗器械的高科技企业，集自主研发、生产、销售于一身，坐落于杭州城西科创大走廊核心板块——未来科技城。",
+      "sector": "神经电子医疗器械",
+      "founded_year": 2006,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-88179920",
+      "email": null,
+      "address": "浙江省杭州市余杭区仓前街道龙潭路17号",
+      "products": [
+        "植入体3.0（CS-30A）",
+        "植入体2.0（CS-20A）",
+        "言语处理器3.0 (Airum/NSP-100A)",
+        "言语处理器3.0（Voyager）",
+        "穿戴式经皮胫神经刺激器（TTNS-W1）",
+        "膀胱腔内电刺激系统（IVES）",
+        "人工耳蜗系统",
+        "人工视网膜系统",
+        "骶神经刺激（SacralStim）系统",
+        "脑深部电刺激产品"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华立科技",
+    "url": "https://www.wahlap.com/",
+    "pages": [
+      {
+        "url": "https://www.wahlap.com/",
+        "title": "首页 - 华立科技",
+        "chars": 482,
+        "error": null
+      },
+      {
+        "url": "https://www.wahlap.com/about.html",
+        "title": "走进华立 - 华立科技",
+        "chars": 1319,
+        "error": null
+      },
+      {
+        "url": "https://www.wahlap.com/service.html",
+        "title": "联系我们 - 华立科技",
+        "chars": 896,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "华立科技",
+      "city": "广州",
+      "district": "番禺区",
+      "website": "https://www.wahlap.com/",
+      "description": "集设计、研发、制造、发行、营运、服务于一体，国内最大的商用游乐设备发行与运营综合服务商之一，产品覆盖中国和全球过万家高级游乐场所，聚焦多元化线下游乐体验和室内乐园一站式解决方案。",
+      "sector": "商用游乐设备",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86 20 3922 6222",
+      "email": "wahlap@wahlap.com",
+      "address": "广州番禺东环街迎星东路143号星力动漫产业园I1-I6",
+      "products": [],
+      "customers": [
+        "星际传奇",
+        "风云再起",
+        "万达宝贝王",
+        "永旺莫莉幻想",
+        "天空之城",
+        "卡通尼",
+        "Round 1",
+        "Time Zone",
+        "Tom’s World"
+      ],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "中翰盛泰",
+    "url": "https://www.joinstar.cn/",
+    "pages": [
+      {
+        "url": "https://www.joinstar.cn/",
+        "title": "中翰盛泰-专注创新，守护生命",
+        "chars": 2627,
+        "error": null
+      },
+      {
+        "url": "https://www.joinstar.cn/about",
+        "title": "中翰盛泰-专注医疗诊断，服务人类健康",
+        "chars": 5996,
+        "error": null
+      },
+      {
+        "url": "https://www.joinstar.cn/contact",
+        "title": "中翰盛泰-专注医疗诊断，服务人类健康",
+        "chars": 1462,
+        "error": null
+      },
+      {
+        "url": "https://www.joinstar.cn/about#survey",
+        "title": "中翰盛泰-专注医疗诊断，服务人类健康",
+        "chars": 5996,
+        "error": null
+      },
+      {
+        "url": "https://www.joinstar.cn/about#honor",
+        "title": "中翰盛泰-专注医疗诊断，服务人类健康",
+        "chars": 5996,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "中翰盛泰生物技术股份有限公司",
+      "city": "杭州市",
+      "district": "临平区",
+      "website": "http://www.joinstar.cn",
+      "description": "主要从事医疗体外诊断产品的全产业链生物医药高科技企业，全球领先的器官功能障碍趋势管理体外诊断产品专业提供商，构建快速诊断、液相芯片、真全血化学发光三大核心技术平台。",
+      "sector": "体外诊断/生物医药",
+      "founded_year": 2010,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-89028388",
+      "email": "ad@joinstar.cn",
+      "address": "浙江省杭州市临平区兴国路519号",
+      "products": [
+        "iMatrix 100 液相芯片技术分析仪",
+        "HBP测定试剂盒",
+        "JC 220L",
+        "Jet-iStar Infinity",
+        "医智汇数字化即时检验工作站",
+        "Jet-iStar 3000全自动免疫荧光分析仪",
+        "Jet-iStar 500全自动免疫荧光干式定量分析仪",
+        "Jet-iStar Max全自动荧光免疫分析仪",
+        "质控品",
+        "诊断试剂"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "安杰思",
+    "url": "http://www.bioags.com/",
+    "pages": [
+      {
+        "url": "http://www.bioags.com/",
+        "title": "安杰思医学",
+        "chars": 638,
+        "error": null
+      },
+      {
+        "url": "http://www.bioags.com/companyprofile/index.aspx",
+        "title": "安杰思医学",
+        "chars": 841,
+        "error": null
+      },
+      {
+        "url": "http://www.bioags.com/contactinformation/index.aspx",
+        "title": "安杰思医学",
+        "chars": 507,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州安杰思医学科技股份有限公司",
+      "city": "杭州市",
+      "district": "临平区",
+      "website": "http://www.bioags.com/",
+      "description": "公司成立于2010年，公司于2012年4月正式更名为杭州安杰思医学科技有限公司，一直致力于微创介入诊疗领域产品和手术方案的设计与开发，是一家集研发、生产、销售和服务为一体的国家高新技术企业。公司秉持“创造、坚持、分享”的核心价值观，为患者和临床医生提供更安全、更高效的内镜微创诊疗器械，帮助病人减少痛苦，降低医疗成本，安杰思致力于打造一家“让员工幸福，客户满意，股东放心”的幸福家园，一家受员工尊重、竞争对手尊重以及社会尊重的优秀企业。",
+      "sector": "微创介入诊疗",
+      "founded_year": 2010,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86-571-87671223",
+      "email": "ags@bioags.com",
+      "address": "浙江省杭州市临平区兴中路389号",
+      "products": [
+        "BIPOLAR 百博能双极电刀系统",
+        "夹子装置",
+        "高频切开刀",
+        "球囊取石导管",
+        "止血闭合类",
+        "诊疗仪器类",
+        "ERCP类",
+        "EMR/ESD类",
+        "活检类"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "迪安诊断",
+    "url": "http://www.dazd.cn/",
+    "pages": [
+      {
+        "url": "https://www.dazd.cn/",
+        "title": "迪安诊断",
+        "chars": 2626,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/index.html",
+        "title": "迪安诊断",
+        "chars": 3093,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/development.html",
+        "title": "迪安诊断",
+        "chars": 1219,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/quality.html",
+        "title": "迪安诊断",
+        "chars": 1120,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/culture.html",
+        "title": "迪安诊断",
+        "chars": 1254,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "迪安诊断技术集团股份有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.dazd.cn/",
+      "description": "以第三方诊断服务为核心业务，致力提供医学诊断整体化解决方案。业务涵盖医学诊断服务、诊断技术研发、诊断产品生产及营销、司法鉴定、健康管理、冷链物流等领域。",
+      "sector": "医学诊断服务",
+      "founded_year": 1996,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-711-8000",
+      "email": null,
+      "address": null,
+      "products": [
+        "医学诊断服务",
+        "诊断技术研发",
+        "诊断产品生产及营销",
+        "司法鉴定",
+        "健康管理",
+        "冷链物流",
+        "迪安生物",
+        "凯莱谱",
+        "迪谱诊断"
+      ],
+      "customers": [
+        "医疗机构"
+      ],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "中电海康",
+    "url": "https://www.woyaoce.cn/member/T133760/",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "经纬股份",
+    "url": "http://www.gisway.com.cn/",
+    "pages": [
+      {
+        "url": "http://www.gisway.com.cn/",
+        "title": "杭州经纬信息技术股份有限公司",
+        "chars": 1343,
+        "error": null
+      },
+      {
+        "url": "http://www.gisway.com.cn/about.html",
+        "title": "杭州经纬信息技术股份有限公司",
+        "chars": 1691,
+        "error": null
+      },
+      {
+        "url": "http://www.gisway.com.cn/contact.html",
+        "title": "杭州经纬信息技术股份有限公司",
+        "chars": 423,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州经纬信息技术股份有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "http://www.gisway.com.cn/",
+      "description": "杭州经纬信息技术股份有限公司成立于2003年3月6日，于2023年5月8日在深圳证券交易所创业板上市。聚焦电力、新能源及综合能源服务领域，整合能源投资、建设、运维与运营的全链条能力，为客户提供电力和新能源的规划咨询、设计、工程建设、运行维护等电力一体化服务和以“光储充”为核心的新能源建设、节能服务、购售电服务、能效管理、碳服务等综合能源服务；同时依托自主研发的云渲染与数字孪生三维引擎技术，开发数智应用平台。",
+      "sector": "综合能源服务",
+      "founded_year": 2003,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-88720288",
+      "email": "gisway@gisway.com.cn",
+      "address": "杭州市余杭区良渚街道虹良巷1号2幢",
+      "products": [
+        "数智应用平台",
+        "蓄电池监测、检测、治理和评估一体化系统及成套装备",
+        "蓄电池远程在线核容系统",
+        "新能源汽车充检一体机"
+      ],
+      "customers": [
+        "电力企业",
+        "工商业用户",
+        "工业企业",
+        "商业中心",
+        "工业园区"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "南方中金",
+    "url": "http://www.qgrz.org.cn/NewsVieww.asp?ID=81083",
+    "pages": [],
+    "extracted": null,
+    "error": "无可用官网/命中聚合站"
+  },
+  {
+    "company": "银都股份",
+    "url": "https://www.yinduchina.com/",
+    "pages": [
+      {
+        "url": "https://www.yinduchina.com/",
+        "title": "银都餐饮",
+        "chars": 1437,
+        "error": null
+      },
+      {
+        "url": "https://www.yinduchina.com/about/index.html",
+        "title": "银都餐饮",
+        "chars": 1590,
+        "error": null
+      },
+      {
+        "url": "https://www.yinduchina.com/about/event.html",
+        "title": "银都餐饮",
+        "chars": 1095,
+        "error": null
+      },
+      {
+        "url": "https://www.yinduchina.com/about/brand.html",
+        "title": "银都餐饮",
+        "chars": 1021,
+        "error": null
+      },
+      {
+        "url": "https://www.yinduchina.com/about/manu.html",
+        "title": "银都餐饮",
+        "chars": 915,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "银都餐饮设备股份有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.yinduchina.com/",
+      "description": "银都餐饮设备股份有限公司是一家专业生产商用餐饮设备的高新技术企业，成立于2003年，2017年在上海证券交易所主板上市，股票代码603277。是一家集科研、设计、生产、销售、维修、安装于一体的高新技术企业。",
+      "sector": "商用餐饮设备制造",
+      "founded_year": 2003,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-8827-888",
+      "email": null,
+      "address": null,
+      "products": [
+        "商用冰箱",
+        "万能蒸烤箱",
+        "制冰机",
+        "西厨设备",
+        "展示陈列柜",
+        "中餐设备",
+        "自助餐设备"
+      ],
+      "customers": [
+        "星级酒店",
+        "连锁餐饮",
+        "食堂",
+        "学校"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "星华新材",
+    "url": "https://www.chinastars.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.chinastars.com.cn/",
+        "title": "浙江星华新材料集团股份有限公司 — 反光材料龙头生产厂家",
+        "chars": 2786,
+        "error": null
+      },
+      {
+        "url": "https://www.chinastars.com.cn/ilist/32.html",
+        "title": "星华新材公司及产品新闻-浙江星华新材料集团股份有限公司",
+        "chars": 1742,
+        "error": null
+      },
+      {
+        "url": "https://www.chinastars.com.cn/factory.html",
+        "title": "浙江星华新材料集团股份有限公司 — 反光背心|反光布|反光材料|反光热贴膜",
+        "chars": 2591,
+        "error": null
+      },
+      {
+        "url": "https://www.chinastars.com.cn/contact.html",
+        "title": "浙江星华新材料集团股份有限公司 — 联系我们",
+        "chars": 1678,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江星华新材料集团股份有限公司",
+      "city": "杭州市",
+      "district": "上城区",
+      "website": "https://www.chinastars.com.cn/",
+      "description": "专注于反光材料和反光服生产、研发、销售，产品覆盖反光布、反光热贴、反光织带包边、反光丝、反光背心、反光雨衣夹克等，并通过国标、欧美国际标准认证。",
+      "sector": "反光材料",
+      "founded_year": 2003,
+      "team_size": "900+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-668-3005",
+      "email": "cnss@chinastars.com.cn",
+      "address": "杭州市上城区市民街98号尊宝大厦金尊24层",
+      "products": [
+        "反光面料",
+        "印花反光面料",
+        "炫彩反光面料",
+        "银灰色反光面料",
+        "彩色反光面料",
+        "渐变反光面料",
+        "夜光面料",
+        "反光布",
+        "普亮反光布",
+        "高亮反光布",
+        "亮银反光布",
+        "耐水洗反光布",
+        "阻燃反光布",
+        "反光热贴膜",
+        "反光织带",
+        "反光包边条",
+        "反光丝",
+        "反光晶格",
+        "反光背心",
+        "反光雨衣",
+        "反光棉衣",
+        "T恤执勤服"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "天地数码",
+    "url": "https://www.todaytec.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.todaytec.com.cn/",
+        "title": "天地数码科技股份有限公司",
+        "chars": 8307,
+        "error": null
+      },
+      {
+        "url": "https://www.todaytec.com.cn/about",
+        "title": "关于我们-天地数码",
+        "chars": 9888,
+        "error": null
+      },
+      {
+        "url": "https://www.todaytec.com.cn/contact",
+        "title": "联系我们-天地数码",
+        "chars": 7451,
+        "error": null
+      },
+      {
+        "url": "https://www.todaytec.com.cn/about#d1",
+        "title": "关于我们-天地数码",
+        "chars": 9888,
+        "error": null
+      },
+      {
+        "url": "https://www.todaytec.com.cn/about#d2",
+        "title": "关于我们-天地数码",
+        "chars": 9888,
+        "error": null
+      }
+    ],
+    "extracted": null,
+    "error": "HTTP Error 307: Temporary Redirect"
+  },
+  {
+    "company": "微光股份",
+    "url": "http://www.wgmotor.com/",
+    "pages": [
+      {
+        "url": "http://www.wgmotor.com/",
+        "title": "杭州微光电子股份有限公司_电子电工,电机,风机",
+        "chars": 2157,
+        "error": null
+      },
+      {
+        "url": "https://www.wgmotor.com/about.html",
+        "title": "关于微光-杭州微光电子股份有限公司",
+        "chars": 4821,
+        "error": null
+      },
+      {
+        "url": "http://www.wgmotor.com/about.html#about01",
+        "title": "关于微光-杭州微光电子股份有限公司",
+        "chars": 4821,
+        "error": null
+      },
+      {
+        "url": "http://www.wgmotor.com/about.html#about02",
+        "title": "关于微光-杭州微光电子股份有限公司",
+        "chars": 4821,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州微光电子股份有限公司",
+      "city": "杭州市",
+      "district": "临平区",
+      "website": "http://www.wgmotor.com/",
+      "description": "微光股份（002801.SZ）是国家高新技术企业、工信部制造业单项冠军示范企业、中国电子元件百强企业，拥有国家认可实验室、省重点企业研究院，公司专业从事电机、风机、微特电机、泵、驱动与控制器、机器人与自动化装备的研发、生产和销售。",
+      "sector": "电子电工,电机,风机",
+      "founded_year": 1986,
+      "team_size": "1000+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "浙江省杭州市临平区东湖街道兴中路365号",
+      "products": [
+        "轴流风机",
+        "离心风机",
+        "电机",
+        "贯流风机",
+        "紧凑型风机",
+        "伺服电机及驱动技术",
+        "EC前向双进风离心风机",
+        "离心紧凑型风机",
+        "伺服电机",
+        "冷柜电机及风机",
+        "ECM电机及风机",
+        "AC外转子轴流风机",
+        "EC外转子轴流风机",
+        "EC内转子轴流风机",
+        "AC外转子离心风机",
+        "EC外转子离心风机",
+        "泵",
+        "新能源汽车零部件"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "诺邦股份",
+    "url": "http://www.nbond.cn/",
+    "pages": [
+      {
+        "url": "https://www.nbond.cn/",
+        "title": "杭州诺邦无纺股份有限公司",
+        "chars": 1944,
+        "error": null
+      },
+      {
+        "url": "https://www.nbond.cn/contact.html",
+        "title": "联系我们-杭州诺邦无纺股份有限公司",
+        "chars": 823,
+        "error": null
+      },
+      {
+        "url": "https://www.nbond.cn/contact.html",
+        "title": "联系我们-杭州诺邦无纺股份有限公司",
+        "chars": 823,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州诺邦无纺股份有限公司",
+      "city": "杭州市",
+      "district": "临平区",
+      "website": "https://www.nbond.cn/",
+      "description": "创立于2002年的杭州诺邦无纺股份有限公司（股票代码：603238），由杭州老板实业集团投资设立，2017年2月22日在上海证券交易所成功挂牌上市，正式登陆资本市场，目前拥有技术领先水平的十二条水刺非织造材料生产线，并设有国内首条企业自建水刺非织造材料实验线。",
+      "sector": "水刺非织造材料",
+      "founded_year": 2002,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "86-571-86181608",
+      "email": "nbond@nbond.cn",
+      "address": "浙江省杭州市临平区国家级经济技术开发区昌达路8号/宏达路16号",
+      "products": [
+        "美容护理",
+        "工业用材",
+        "民用清洁",
+        "医用材料",
+        "卷材",
+        "干巾",
+        "湿巾"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "华正新材",
+    "url": "https://www.wazam.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.wazam.com.cn/",
+        "title": "浙江华正新材料股份有限公司",
+        "chars": 956,
+        "error": null
+      },
+      {
+        "url": "https://www.wazam.com.cn/article/list/28.html",
+        "title": "了解我们",
+        "chars": 1660,
+        "error": null
+      },
+      {
+        "url": "https://www.wazam.com.cn/article/list/49.html",
+        "title": "联系我们",
+        "chars": 735,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江华正新材料股份有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "http://www.wazam.com.cn",
+      "description": "浙江华正新材料股份有限公司成立于2003年，是华立集团的控股成员企业，是国内较早从事研发生产环氧树脂覆铜板的企业之一。2017年1月3日在上海证券交易所A股上市（股票代码：603186）。主营覆铜板（包括粘结片）、复合材料（包括功能性复合材料和交通物流用复合材料）和膜材料等产品的设计、研发、生产及销售。",
+      "sector": "新材料",
+      "founded_year": 2003,
+      "team_size": 2300,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": "浙江省杭州市余杭区余杭街道数云路8号华正科技园",
+      "products": [
+        "覆铜板",
+        "粘结片",
+        "功能性复合材料",
+        "交通物流用复合材料",
+        "铝塑膜",
+        "膜材料"
+      ],
+      "customers": [
+        "APPLE"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  }
+]

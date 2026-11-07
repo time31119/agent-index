@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lost in the robot shelf — BOTIQUE</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+  <section class="wrap" style="min-height:60vh;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:center;padding-block:60px">
+    <div>
+      <span class="kicker">404 · Lost in the shelf</span>
+      <h1 class="serif" style="font-size:clamp(56px,8vw,104px);line-height:.86;letter-spacing:-.045em;margin:14px 0 16px">This bot<br>wandered off.</h1>
+      <p style="color:var(--muted);max-width:420px;margin-bottom:24px">The page you’re looking for doesn’t exist, moved, or was adopted by a nicer shelf. Let’s get you back to the 100.</p>
+      <div style="display:flex;gap:9px;flex-wrap:wrap"><a class="btn btn-dark" href="shop.html">Shop the Top 100</a><a class="btn btn-ghost" href="index.html">Back home</a></div>
+    </div>
+    <div id="nf-art" style="background:var(--lime);border:1.4px solid var(--ink);border-radius:32px;overflow:hidden;position:relative;aspect-ratio:1/1"></div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/robot.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  BOTIQUE.init();
+  var p = BOTIQUE_DATA.byId('yonbo-y1');
+  document.getElementById('nf-art').innerHTML = BOTIQUE_ART.art(p);
+  var svg = document.querySelector('#nf-art .bot-art');
+  if (svg) { svg.style.position = 'absolute'; svg.style.width = '100%'; svg.style.left = '0'; svg.style.bottom = '-6%'; }
+});
+</script>
+</body>
+</html>

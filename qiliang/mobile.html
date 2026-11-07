@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#F5F1E8">
+  <meta name="description" content="起量 QILIANG 移动端 App：给中小业主的自动化营销短视频工具。">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="起量">
+  <title>起量 App · 中小业主的短视频营销工具</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+<svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 5v13"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="7" y="5" width="3.5" height="14" rx="1" fill="currentColor" stroke="none"/><rect x="13.5" y="5" width="3.5" height="14" rx="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-voice" viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M7 4v16M17 4v16M2 9h5M17 9h5M2 15h5M17 15h5"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6h.09A1.65 1.65 0 0 0 10.6 3.1V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7L13 18"/></symbol>
+</svg>
+
+<div class="preview-label">起量 App · 移动端预览</div>
+
+<div class="device">
+  <div class="statusbar">
+    <span>9:41</span>
+    <div class="status-right">
+      <span class="signal"><i></i><i></i><i></i><i></i></span>
+      <span class="wifi"></span>
+      <span class="battery"><i></i></span>
+    </div>
+  </div>
+
+  <header class="apptop">
+    <span class="app-avatar">林</span>
+    <div class="apptop-copy"><strong>起量</strong><span>商家自己操作的短视频工具</span></div>
+    <div class="apptop-actions">
+      <button class="member-pill" type="button" data-sheet="member">会员</button>
+      <button class="app-icon-btn" type="button" data-toast="暂无新消息" aria-label="消息">
+        <svg class="ic"><use href="#i-bell"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="screen" id="screen">
+
+    <!-- 首页 -->
+    <section class="m-page active" data-mpage="home">
+      <div class="eyebrow">周五 · 11/06</div>
+      <div class="m-home">
+        <h1>今天做什么<br>视频？</h1>
+        <p class="lead">说清楚给谁看、想要什么。剩下的交给自动化流水线。</p>
+      </div>
+
+      <div class="prompt-card">
+        <textarea id="mBrief" rows="2" placeholder="例如：给社区小馆做一条 30 秒到店视频"></textarea>
+        <div class="goals" id="mGoals">
+          <button class="chip active" type="button" data-goal="到店">到店</button>
+          <button class="chip" type="button" data-goal="带货">带货</button>
+          <button class="chip" type="button" data-goal="涨粉">涨粉</button>
+          <button class="chip" type="button" data-goal="品牌">品牌</button>
+        </div>
+        <button class="m-btn m-btn-primary m-btn-block" id="mStart" type="button">
+          开始生成
+          <svg class="ic"><use href="#i-arrow-right"/></svg>
+        </button>
+      </div>
+
+      <div class="m-section-head">
+        <h2>从模板开始</h2>
+        <button type="button" data-toast="常用模板已在下方">全部</button>
+      </div>
+      <div class="template-rail">
+        <button class="m-template" type="button" data-template="本地生活">
+          <span class="m-template-art ta1">老板口述<br>到店引流</span>
+          <span>本地生活</span>
+        </button>
+        <button class="m-template" type="button" data-template="电商带货">
+          <span class="m-template-art ta2">3 个细节<br>卖出产品</span>
+          <span>电商带货</span>
+        </button>
+        <button class="m-template" type="button" data-template="知识口播">
+          <span class="m-template-art ta3">一句话<br>讲清楚</span>
+          <span>知识口播</span>
+        </button>
+      </div>
+
+      <div class="m-section-head">
+        <h2>进行中</h2>
+        <span class="m-meta">2 条</span>
+      </div>
+      <div class="project-list">
+        <button class="m-project" type="button" data-tab="create">
+          <span class="m-thumb">只卖 3 样菜</span>
+          <span class="m-project-copy"><strong>巷子口小馆 · 到店视频</strong><span>视频号 · 30 秒 · 画面完成</span></span>
+          <span class="status">制作中</span>
+        </button>
+        <button class="m-project" type="button" data-tab="create">
+          <span class="m-thumb alt">隐藏菜单</span>
+          <span class="m-project-copy"><strong>巷子口小馆 · 隐藏菜单</strong><span>抖音 · 28 秒 · 待审核</span></span>
+          <span class="status">待审核</span>
+        </button>
+      </div>
+
+      <div class="m-stats">
+        <div class="m-stat"><span>本月发布</span><strong>2</strong><small>免费额度 3 条</small></div>
+        <div class="m-stat"><span>总播放</span><strong>36.4<span style="font-size:12px">万</span></strong><small>+18%</small></div>
+        <div class="m-stat"><span>到店</span><strong>86</strong><small>+21</small></div>
+      </div>
+    </section>
+
+    <!-- 创作 -->
+    <section class="m-page" data-mpage="create">
+      <div class="m-page-head">
+        <button class="m-back" type="button" data-tab="home" aria-label="返回首页">
+          <svg class="ic"><use href="#i-arrow-left"/></svg>
+        </button>
+        <div class="m-head-copy"><h1>巷子口小馆 · 到店视频</h1><span>已保存 14:32</span></div>
+        <button class="m-btn m-btn-primary" type="button" data-sheet="publish">发布</button>
+      </div>
+
+      <div class="m-steps" id="mSteps">
+        <button class="m-step" type="button" data-mstep="script">1 脚本</button>
+        <button class="m-step active" type="button" data-mstep="visual">2 画面</button>
+        <button class="m-step" type="button" data-mstep="voice">3 配音</button>
+        <button class="m-step" type="button" data-mstep="final">4 成片</button>
+      </div>
+
+      <div class="m-preview">
+        <div class="m-phone">
+          <div class="m-phone-screen">
+            <div class="m-screen-top"><span>杭州 · 拱墅</span><span>关注</span></div>
+            <div class="m-screen-copy">
+              <small>一家开了 12 年的小店</small>
+              <strong>只卖 3 样菜<br>却天天排队</strong>
+              <p>老板说：多的，我也做不过来。</p>
+            </div>
+            <div class="m-screen-bottom"><span>巷</span><div><strong>巷子口小馆</strong><small>杭州 · 人均 ¥28</small></div></div>
+          </div>
+        </div>
+        <div class="m-preview-bar">
+          <button class="m-btn m-btn-dark" id="mPlay" type="button"><svg class="ic"><use href="#i-play"/></svg> 播放</button>
+          <span class="m-preview-time">00:10 / 00:30</span>
+          <button class="m-btn m-btn-ghost" type="button" data-toast="已全屏预览">全屏</button>
+        </div>
+      </div>
+
+      <div class="m-panel">
+        <div class="m-panel-head"><h2 id="mPanelTitle">画面</h2><span id="mPanelMeta">5 个镜头</span></div>
+
+        <section class="m-panel-section" data-mpanel="script">
+          <textarea class="m-script" spellcheck="false">在杭州，有一家店，菜单上只有 3 样菜。
+却开了 12 年，每天排队。
+老板说，不是不想加，是加了他也做不好。
+一荤一素一汤，28 块。地址在拱墅。</textarea>
+          <button class="m-btn m-btn-ghost m-btn-block" type="button" data-toast="脚本已重写">重写脚本</button>
+        </section>
+
+        <section class="m-panel-section active" data-mpanel="visual">
+          <div class="m-shots">
+            <div class="m-shot"><span class="m-shot-num">1</span><div class="m-shot-copy"><strong>门头推近</strong><span>实拍</span></div><span class="m-shot-time">3s</span></div>
+            <div class="m-shot"><span class="m-shot-num">2</span><div class="m-shot-copy"><strong>菜单特写</strong><span>实拍</span></div><span class="m-shot-time">3s</span></div>
+            <div class="m-shot"><span class="m-shot-num">3</span><div class="m-shot-copy"><strong>老板炒菜</strong><span>实拍 · 锅气声</span></div><span class="m-shot-time">6s</span></div>
+            <div class="m-shot"><span class="m-shot-num">4</span><div class="m-shot-copy"><strong>菜品上桌</strong><span>AI 补</span></div><span class="m-shot-time">8s</span></div>
+            <div class="m-shot"><span class="m-shot-num">5</span><div class="m-shot-copy"><strong>客人反应</strong><span>AI 补</span></div><span class="m-shot-time">10s</span></div>
+          </div>
+          <button class="m-btn m-btn-dark m-btn-block" type="button" data-toast="正在补 2 个镜头">补 2 个镜头</button>
+        </section>
+
+        <section class="m-panel-section" data-mpanel="voice">
+          <div class="m-voice active">
+            <span class="m-voice-icon"><svg class="ic"><use href="#i-voice"/></svg></span>
+            <span class="m-voice-copy"><strong>老板娘 · 自然女声</strong><span>温暖、克制、轻微杭州口音</span></span>
+            <button class="m-btn m-btn-ghost" type="button" data-toast="试听中：老板娘">试听</button>
+          </div>
+          <div class="m-voice">
+            <span class="m-voice-icon"><svg class="ic"><use href="#i-mic"/></svg></span>
+            <span class="m-voice-copy"><strong>老板 · 低沉男声</strong><span>真实、慢速、适合口述</span></span>
+            <button class="m-btn m-btn-ghost" type="button" data-toast="试听中：老板">试听</button>
+          </div>
+          <div class="m-tip"><svg class="ic"><use href="#i-info"/></svg><span>字幕按语义断句，不按字数硬切。</span></div>
+          <button class="m-btn m-btn-dark m-btn-block" type="button" data-toast="正在重新生成配音">重新生成配音</button>
+        </section>
+
+        <section class="m-panel-section" data-mpanel="final">
+          <div class="m-platform"><span class="dot"></span><strong>抖音</strong><span>API 直发</span></div>
+          <div class="m-platform"><span class="dot"></span><strong>视频号</strong><span>需确认</span></div>
+          <div class="m-platform"><span class="dot"></span><strong>小红书</strong><span>需确认</span></div>
+          <button class="m-btn m-btn-primary m-btn-block" type="button" data-sheet="publish">去发布</button>
+        </section>
+
+        <div class="m-tip"><svg class="ic"><use href="#i-info"/></svg><span id="mTip">第 4 镜停留略长，建议提前 0.8 秒切到上桌。</span></div>
+      </div>
+    </section>
+
+    <!-- 发布 -->
+    <section class="m-page" data-mpage="publish">
+      <h1>发布</h1>
+      <p class="lead">选账号、选时间，确认后发出。</p>
+
+      <div class="m-accounts">
+        <div class="m-account"><span>抖</span><strong>巷子口小馆</strong><small>API 直发</small></div>
+        <div class="m-account"><span>视</span><strong>巷子口小馆</strong><small>半自动</small></div>
+        <div class="m-account"><span>红</span><strong>巷子口·杭州</strong><small>半自动</small></div>
+      </div>
+
+      <div class="m-section-head"><h2>待发布</h2><span class="m-meta">2 条</span></div>
+      <div class="m-queue">
+        <div class="m-queue-item">
+          <span class="m-thumb">只卖 3 样菜</span>
+          <span class="m-queue-copy"><strong>巷子口小馆 · 到店视频</strong><span>今天 18:30 · 三平台</span></span>
+          <button class="m-btn m-btn-primary" type="button" data-sheet="publish">发布</button>
+        </div>
+        <div class="m-queue-item">
+          <span class="m-thumb alt">隐藏菜单</span>
+          <span class="m-queue-copy"><strong>巷子口小馆 · 隐藏菜单</strong><span>明天 11:30 · 视频号</span></span>
+          <button class="m-btn m-btn-ghost" type="button" data-toast="已打开排期">查看</button>
+        </div>
+      </div>
+
+      <div class="m-settings">
+        <h2>发布设置</h2>
+        <div class="m-field"><label for="mTime">发布时间</label><input id="mTime" type="datetime-local" value="2026-11-06T18:30"></div>
+        <div class="m-switch-row">
+          <div><strong>AI 内容标识</strong><span>自动加到画面和文件</span></div>
+          <button class="m-switch on" type="button" data-switch aria-label="切换 AI 标识"></button>
+        </div>
+        <div class="m-field"><label for="mBoost">推流预算</label><select id="mBoost"><option>不加热</option><option selected>¥300</option><option>¥500</option></select></div>
+        <button class="m-btn m-btn-primary m-btn-block" type="button" data-sheet="publish">确认发布</button>
+      </div>
+    </section>
+
+    <!-- 数据 -->
+    <section class="m-page" data-mpage="data">
+      <h1>数据</h1>
+      <p class="lead">近 30 天，三个平台。</p>
+
+      <div class="m-bigstats">
+        <div class="m-bigstat"><span>总播放</span><strong>36.4<span style="font-size:11px">万</span></strong><small>+18%</small></div>
+        <div class="m-bigstat"><span>完播</span><strong>42<span style="font-size:11px">%</span></strong><small>+5.1</small></div>
+        <div class="m-bigstat"><span>到店</span><strong>86</strong><small>+21</small></div>
+      </div>
+
+      <div class="m-bars">
+        <h2>平台贡献</h2>
+        <div class="m-bar-row"><span>抖音</span><div class="m-bar-track"><i style="width:52%"></i></div><b>18.9万</b></div>
+        <div class="m-bar-row"><span>视频号</span><div class="m-bar-track"><i style="width:34%"></i></div><b>12.4万</b></div>
+        <div class="m-bar-row"><span>小红书</span><div class="m-bar-track"><i style="width:14%"></i></div><b>5.1万</b></div>
+      </div>
+
+      <div class="m-advice">
+        <div class="eyebrow">下一条建议</div>
+        <h2>把「12 年只卖 3 样菜」做成系列。</h2>
+        <p>固定周五 19:10 发视频号，连续 3 条，测试追更。</p>
+        <button class="m-btn" type="button" data-tab="home" data-toast="建议已带回工作台">用这个建议开始</button>
+      </div>
+
+      <div class="m-content">
+        <div class="m-content-row"><strong>只卖 3 样菜，却火了 12 年</strong><span>视频号</span><b>12.4万</b></div>
+        <div class="m-content-row"><strong>3 个动作，判断空调该洗了</strong><span>抖音</span><b>9.8万</b></div>
+        <div class="m-content-row"><strong>小个子秋冬通勤 7 套</strong><span>小红书</span><b>4.2万</b></div>
+      </div>
+    </section>
+
+    <!-- 我的 -->
+    <section class="m-page" data-mpage="me">
+      <div class="m-profile">
+        <span class="app-avatar">林</span>
+        <div><h1>林夏</h1><p>巷子口小馆 · 免费体验</p></div>
+      </div>
+
+      <div class="m-member">
+        <div class="m-member-top">
+          <div><span>起量会员</span><strong>15 条 / 月</strong></div>
+          <div class="m-member-price">¥699<small>/月</small></div>
+        </div>
+        <p>3 个平台账号 · 1080P 无水印 · 全部模板 · 数据复盘</p>
+        <div class="m-usage"><span>本月已用 2 / 3 条</span><i><b></b></i></div>
+        <button class="m-btn m-btn-block" type="button" data-sheet="member">成为会员</button>
+      </div>
+
+      <div class="m-menu">
+        <a href="app.html"><svg class="ic"><use href="#i-monitor"/></svg><span>打开网页版工作台</span><svg class="ic arrow"><use href="#i-arrow-right"/></svg></a>
+        <button type="button" data-toast="平台账号：抖音 / 视频号 / 小红书"><svg class="ic"><use href="#i-link"/></svg><span>平台账号</span><svg class="ic arrow"><use href="#i-arrow-right"/></svg></button>
+        <button type="button" data-toast="模板库：4 个模板"><svg class="ic"><use href="#i-film"/></svg><span>模板与品牌套件</span><svg class="ic arrow"><use href="#i-arrow-right"/></svg></button>
+        <button type="button" data-toast="设置：AI 标识默认开启"><svg class="ic"><use href="#i-settings"/></svg><span>设置</span><svg class="ic arrow"><use href="#i-arrow-right"/></svg></button>
+        <a href="index.html"><svg class="ic"><use href="#i-home"/></svg><span>返回官网</span><svg class="ic arrow"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="m-tip" style="margin-top:14px"><svg class="ic"><use href="#i-info"/></svg><span>起量只提供软件服务。商家自己操作，不含代运营、拍摄、设计外包。</span></div>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <button class="tab-item active" type="button" data-tab="home"><svg class="ic"><use href="#i-home"/></svg><span>首页</span></button>
+    <button class="tab-item" type="button" data-tab="publish"><svg class="ic"><use href="#i-send"/></svg><span>发布</span></button>
+    <button class="tab-item create" type="button" data-tab="create"><span class="tab-icon"><svg class="ic"><use href="#i-plus"/></svg></span><span>创作</span></button>
+    <button class="tab-item" type="button" data-tab="data"><svg class="ic"><use href="#i-chart"/></svg><span>数据</span></button>
+    <button class="tab-item" type="button" data-tab="me"><svg class="ic"><use href="#i-user"/></svg><span>我的</span></button>
+  </nav>
+
+  <!-- 会员 sheet -->
+  <div class="sheet-backdrop" id="memberSheet" aria-hidden="true">
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="memberTitle">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <div><h2 id="memberTitle">成为会员</h2><p>只提供软件。商家自己操作，不需要后期服务。</p></div>
+        <button class="sheet-close" type="button" data-close-sheet aria-label="关闭"><svg class="ic"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="sheet-price"><strong>起量会员</strong><span>¥699<small>/月</small></span></div>
+      <div class="sheet-note" style="margin-top:7px">年付 ¥6,710 · 省 20%</div>
+      <ul class="sheet-features">
+        <li>15 条 / 月</li><li>3 个平台账号</li><li>1080P 无水印</li><li>全部模板</li><li>三平台适配</li><li>数据复盘</li>
+      </ul>
+      <button class="m-btn m-btn-primary m-btn-block" type="button" data-member>开始 7 天免费试用</button>
+      <div class="sheet-note">会员是软件订阅，不含代运营、拍摄、设计外包。所有内容由商家自己生成和发布。</div>
+    </div>
+  </div>
+
+  <!-- 发布 sheet -->
+  <div class="sheet-backdrop" id="publishSheet" aria-hidden="true">
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="publishTitle">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <div><h2 id="publishTitle">确认发布</h2><p>今天 18:30 · 到店 / 团购核销</p></div>
+        <button class="sheet-close" type="button" data-close-sheet aria-label="关闭"><svg class="ic"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="sheet-checks">
+        <button class="sheet-check checked" type="button" data-check>
+          <span class="check-box"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span class="sheet-check-copy"><strong>抖音</strong><span>API 直发</span></span>
+        </button>
+        <button class="sheet-check checked" type="button" data-check>
+          <span class="check-box"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span class="sheet-check-copy"><strong>视频号</strong><span>打开官方页面确认</span></span>
+        </button>
+        <button class="sheet-check checked" type="button" data-check>
+          <span class="check-box"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span class="sheet-check-copy"><strong>小红书</strong><span>3:4 封面已生成</span></span>
+        </button>
+      </div>
+      <button class="m-btn m-btn-primary m-btn-block" id="mConfirmPublish" type="button">确认发布 3 个平台</button>
+    </div>
+  </div>
+
+  <div class="toast" id="mToast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="mobile.js"></script>
+</body>
+</html>

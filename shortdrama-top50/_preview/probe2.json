@@ -1,0 +1,572 @@
+[
+  {
+    "brand": "FreeReels",
+    "url": "https://freereels.tv",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "FreeReels",
+    "url": "https://freereels.ai",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "BlinkDrama",
+    "url": "https://blinkdrama.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "BlinkDrama",
+    "url": "https://blinkdrama.com",
+    "final": "https://blinkdrama.com/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "DramaShorts",
+    "url": "https://dramashorts.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "FreeReels",
+    "url": "https://freereels.com",
+    "final": "https://freereels.com/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "ReelyGo",
+    "url": "https://reelygo.com",
+    "final": "https://reelygo.com/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "Playlet",
+    "url": "https://playlet.com",
+    "final": "https://playlet.com/",
+    "status": 200,
+    "title": "playlet",
+    "site": "",
+    "hasBrand": true,
+    "text": "playlet"
+  },
+  {
+    "brand": "CandyJarTV",
+    "url": "https://candyjartv.com",
+    "final": "https://candyjartv.com/",
+    "status": 200,
+    "title": "candyjartv.com",
+    "site": "Candy Jar TV",
+    "hasBrand": true,
+    "text": "candyjartv.com Candy Jar TV Candy Jar TV Candy Jar TV Candy Jar TV Can"
+  },
+  {
+    "brand": "DramaShorts",
+    "url": "https://dramashorts.com",
+    "final": "https://dramashorts.com/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "ShortMax",
+    "url": "https://shortmax.tv",
+    "final": "https://shortmax.tv/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "Shorts",
+    "url": "https://www.luni.app",
+    "final": "https://www.luni.app/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": true,
+    "text": "Home Studio Career Luni Life G r o w w i t h u s LINKEDIN TWITTER TERM"
+  },
+  {
+    "brand": "FlareFlow",
+    "url": "https://flareflow.com",
+    "final": "https://flareflow.com/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "CandyJarTV",
+    "url": "https://candyjar.tv",
+    "final": "https://candyjar.tv/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "DramaBox",
+    "url": "https://dramabox.app",
+    "final": "https://dramabox.app/",
+    "status": 200,
+    "title": "DramaBox.App",
+    "site": "",
+    "hasBrand": true,
+    "text": "DramaBox.App"
+  },
+  {
+    "brand": "NetShort",
+    "url": "https://netshort.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "Shorts",
+    "url": "https://luni.app",
+    "final": "https://www.luni.app/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": true,
+    "text": "Home Studio Career Luni Life G r o w w i t h u s LINKEDIN TWITTER TERM"
+  },
+  {
+    "brand": "Melolo",
+    "url": "https://melolo.tv",
+    "final": "https://melolo.tv/",
+    "status": 403,
+    "title": "Attention Required! | Cloudflare",
+    "site": "",
+    "hasBrand": true,
+    "text": "Attention Required! | Cloudflare Please enable cookies. Sorry, you hav"
+  },
+  {
+    "brand": "FlickReels",
+    "url": "https://flickreels.com",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "PineDrama",
+    "url": "https://pinedrama.com",
+    "final": "https://pinedrama.com/",
+    "status": 503,
+    "title": "Something went wrong.",
+    "site": "",
+    "hasBrand": false,
+    "text": "Something went wrong. service unavailable."
+  },
+  {
+    "brand": "DramaBox",
+    "url": "https://dramabox.com",
+    "final": "https://www.dramabox.com/",
+    "status": 403,
+    "title": "ERROR: The request could not be satisfied",
+    "site": "",
+    "hasBrand": false,
+    "text": "ERROR: The request could not be satisfied 403 ERROR The request could "
+  },
+  {
+    "brand": "KukuTV",
+    "url": "https://kukutv.tv",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "PineDrama",
+    "url": "https://pinedrama.tv",
+    "final": "https://pinedrama.tv/",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "NetShort",
+    "url": "https://netshort.com",
+    "final": "https://netshort.com/",
+    "status": 403,
+    "title": "Attention Required! | Cloudflare",
+    "site": "",
+    "hasBrand": true,
+    "text": "Attention Required! | Cloudflare Please enable cookies. Sorry, you hav"
+  },
+  {
+    "brand": "QuickTV",
+    "url": "https://quicktv.tv",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "Melolo",
+    "url": "https://melolo.com",
+    "final": "https://melolo.com/",
+    "status": 503,
+    "title": "Something went wrong.",
+    "site": "",
+    "hasBrand": false,
+    "text": "Something went wrong. service unavailable."
+  },
+  {
+    "brand": "StoryTV",
+    "url": "https://storytv.app",
+    "final": "https://storytv.app/",
+    "status": 200,
+    "title": "Story TV - India's Leading Short Drama App | Watch Quality Dramas",
+    "site": "Story TV",
+    "hasBrand": true,
+    "text": "Story TV - India's Leading Short Drama App | Watch Quality Dramas"
+  },
+  {
+    "brand": "KukuTV",
+    "url": "https://kukutv.app",
+    "final": "https://kukutv.app/",
+    "status": 200,
+    "title": "Popular - Most Watched Microdramas &amp; Shows | Kuku TV",
+    "site": "Kuku TV",
+    "hasBrand": true,
+    "text": "Popular - Most Watched Microdramas &amp; Shows | Kuku TV Skip to main "
+  },
+  {
+    "brand": "BibiShort",
+    "url": "https://bibishort.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "QuickTV",
+    "url": "https://quicktv.app",
+    "final": "https://quicktv.app/",
+    "status": 200,
+    "title": "Quick TV",
+    "site": "",
+    "hasBrand": true,
+    "text": "Quick TV"
+  },
+  {
+    "brand": "Felveria",
+    "url": "https://felveria.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "SarosTV",
+    "url": "https://sarostv.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "StoryTV",
+    "url": "https://storytv.com",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "SodaTV",
+    "url": "https://sodatv.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "FreeDrama",
+    "url": "https://freedrama.app",
+    "final": "https://freedrama.app/",
+    "status": 200,
+    "title": "FreeDrama — Watch Free Short Dramas &amp; Earn Cash",
+    "site": "FreeDrama",
+    "hasBrand": true,
+    "text": "FreeDrama — Watch Free Short Dramas &amp; Earn Cash Android iOS Watch "
+  },
+  {
+    "brand": "PopoVibe",
+    "url": "https://popovibe.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "HotDrama",
+    "url": "https://hotdrama.app",
+    "final": "https://hotdrama.app/",
+    "status": 200,
+    "title": "HotDrama",
+    "site": "",
+    "hasBrand": true,
+    "text": "HotDrama \">"
+  },
+  {
+    "brand": "VibeShort",
+    "url": "https://vibeshort.tv",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "MyMuse",
+    "url": "https://mymuse.app",
+    "final": "https://domains.atom.com/lpd/name/mymuse.app",
+    "status": 403,
+    "title": "Just a moment...",
+    "site": "",
+    "hasBrand": true,
+    "text": "Just a moment... Enable JavaScript and cookies to continue"
+  },
+  {
+    "brand": "StoryReel",
+    "url": "https://storyreel.tv",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "Playlet",
+    "url": "https://playlet.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "StardustTV",
+    "url": "https://stardusttv.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "StoryReel",
+    "url": "https://storyreel.app",
+    "final": "https://storyreel.app/",
+    "status": 200,
+    "title": "storyreel.app",
+    "site": "storyreel.app",
+    "hasBrand": true,
+    "text": "storyreel.app storyreel.app storyreel.app storyreel.app storyreel.app "
+  },
+  {
+    "brand": "ShortMax",
+    "url": "https://shortmax.com",
+    "final": "",
+    "status": "ERR",
+    "title": "This operation was aborted",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "SodaTV",
+    "url": "https://soda.tv",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "MoreShort",
+    "url": "https://moreshort.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "ShortsWave",
+    "url": "https://shortswave.com",
+    "final": "https://shortswave.com/",
+    "status": 200,
+    "title": "ShortsWave - Explore Excitement Enjoy Stories",
+    "site": "",
+    "hasBrand": true,
+    "text": "ShortsWave - Explore Excitement Enjoy Stories Home Home Features Featu"
+  },
+  {
+    "brand": "StarShort",
+    "url": "https://starshort.com",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "LoveShots",
+    "url": "https://loveshots.com",
+    "final": "https://loveshots.com/",
+    "status": 403,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": "403 Forbidden"
+  },
+  {
+    "brand": "StardustTV",
+    "url": "https://stardusttv.com",
+    "final": "https://domains.atom.com/lpd/name/stardusttv.com",
+    "status": 403,
+    "title": "Just a moment...",
+    "site": "",
+    "hasBrand": true,
+    "text": "Just a moment... Enable JavaScript and cookies to continue"
+  },
+  {
+    "brand": "MangoTV",
+    "url": "https://www.mgtv.com",
+    "final": "https://www.mgtv.com/",
+    "status": 200,
+    "title": "芒果TV-天生青春",
+    "site": "",
+    "hasBrand": true,
+    "text": "芒果TV-天生青春 消息 评论/回复 赞 还没有收到任何消息 查看全部 历史 您还没有观看任何视频 创作 下载客户端 芒果TV视频客户端 立"
+  },
+  {
+    "brand": "FlickReels",
+    "url": "https://flickreels.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "HaloReels",
+    "url": "https://haloreels.com",
+    "final": "https://haloreels.com/",
+    "status": 200,
+    "title": "Studio Flow — AI Video Generator",
+    "site": "",
+    "hasBrand": true,
+    "text": "Studio Flow — AI Video Generator Loading…"
+  },
+  {
+    "brand": "HotMiniDrama",
+    "url": "https://hotminidrama.com",
+    "final": "https://hotminidrama.com/",
+    "status": 200,
+    "title": "Hotmini Drama",
+    "site": "",
+    "hasBrand": true,
+    "text": "Hotmini Drama Massive Short Dramas All Hits Included Bite-sized episod"
+  },
+  {
+    "brand": "FreeDrama",
+    "url": "https://freedrama.com",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "FlexTV",
+    "url": "https://flextv.com",
+    "final": "https://www.dynamo.com/assets.htm",
+    "status": 200,
+    "title": "",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  },
+  {
+    "brand": "VibeShort",
+    "url": "https://vibeshort.app",
+    "final": "",
+    "status": "ERR",
+    "title": "fetch failed",
+    "site": "",
+    "hasBrand": false,
+    "text": ""
+  }
+]

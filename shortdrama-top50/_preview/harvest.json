@@ -1,0 +1,252 @@
+{
+  "DramaWave": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6670430706",
+    "android": "https://play.google.com/store/apps/details?id=com.dramawave.app"
+  },
+  "ShortMax": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6464002625",
+    "android": "https://play.google.com/store/apps/details?id=live.shorttv.apps"
+  },
+  "GoodShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6448176203",
+    "android": "https://play.google.com/store/apps/details?id=com.newreading.goodreels"
+  },
+  "FreeReels": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6738081517",
+    "android": "https://play.google.com/store/apps/details?id=com.freereels.app"
+  },
+  "DramaBox": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6445905219",
+    "android": "https://play.google.com/store/apps/details?id=com.storymatrix.drama"
+  },
+  "ReelShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id1636235979",
+    "android": "https://play.google.com/store/apps/details?id=com.newleaf.app.android.victor"
+  },
+  "PineDrama": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6754134922",
+    "android": "https://play.google.com/store/apps/details?id=com.ss.android.ttmd.video"
+  },
+  "StoryReel": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6761538521",
+    "android": "https://play.google.com/store/apps/details?id=com.storyreel.tv.android"
+  },
+  "BlinkDrama": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6768593043",
+    "android": "https://play.google.com/store/apps/details?id=com.blink.drama.player"
+  },
+  "JoyReels": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6465895541",
+    "android": "https://play.google.com/store/apps/details?id=com.joyreels.video"
+  },
+  "NetShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6504849169",
+    "android": "https://play.google.com/store/apps/details?id=com.netshort.abroad"
+  },
+  "VibeShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6758667154",
+    "android": "https://play.google.com/store/apps/details?id=com.vibeshort.visualnovel.android"
+  },
+  "FlickReels": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6514312894",
+    "android": "https://play.google.com/store/apps/details?id=com.zyhwplatform.shortplay"
+  },
+  "Melolo": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6737513497",
+    "android": "https://play.google.com/store/apps/details?id=com.worldance.drama"
+  },
+  "Kuku TV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6737497276",
+    "android": "https://play.google.com/store/apps/details?id=com.vlv.aravali.reels"
+  },
+  "FreeDrama": {
+    "status": 200,
+    "ios": "https://apps.apple.com/app/id6768240254",
+    "android": "https://play.google.com/store/apps/details?id=com.Free.Drama"
+  },
+  "QuickTV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/in/app/id6747964677",
+    "android": "https://play.google.com/store/apps/details?id=in.mohalla.quicktv"
+  },
+  "Story TV": {
+    "status": 200,
+    "ios": "",
+    "android": "https://play.google.com/store/apps/details?id=story.tv.drama.reels"
+  },
+  "Halo Reels": {
+    "status": 200,
+    "ios": "",
+    "android": "https://play.google.com/store/apps/details?id=com.halo.reels.movie.fast"
+  },
+  "MoboReels": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6450243852",
+    "android": "https://play.google.com/store/apps/details?id=com.changdu.mobovideo"
+  },
+  "iDrama": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6741501595",
+    "android": "https://play.google.com/store/apps/details?id=com.gooddrama.idrama"
+  },
+  "HotMiniDrama": {
+    "status": 200,
+    "ios": "",
+    "android": "https://play.google.com/store/apps/details?id=com.hotmini.drama.hot"
+  },
+  "My Drama": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6498713494",
+    "android": "https://play.google.com/store/apps/details?id=com.dashdramas"
+  },
+  "StardustTV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6502377927",
+    "android": "https://play.google.com/store/apps/details?id=com.shdj.test"
+  },
+  "HotDrama": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6758563145",
+    "android": "https://play.google.com/store/apps/details?id=com.hotdrama.app"
+  },
+  "CandyJarTV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6466786430",
+    "android": "https://play.google.com/store/apps/details?id=com.inkitt.app.galateatv.android"
+  },
+  "Playlet": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6469587141",
+    "android": "https://play.google.com/store/apps/details?id=com.shortvideo.playlet"
+  },
+  "Vigloo": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6503421271",
+    "android": "https://play.google.com/store/apps/details?id=com.vigloo"
+  },
+  "Pocket FM": {
+    "status": 200,
+    "ios": "https://apps.apple.com/app/id1538433480",
+    "android": "https://play.google.com/store/apps/details?id=com.radio.pocketfm"
+  },
+  "Shortical": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6745260515",
+    "android": "https://play.google.com/store/apps/details?id=shortical.com"
+  },
+  "KalosTV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6463394851",
+    "android": "https://play.google.com/store/apps/details?id=com.kwshortvideo.kalostv"
+  },
+  "ShortsWave": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6478104173",
+    "android": "https://play.google.com/store/apps/details?id=com.shorts.wave.drama"
+  },
+  "My Muse": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6738098034",
+    "android": "https://play.google.com/store/apps/details?id=com.my.muse"
+  },
+  "Shorts": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6498894314",
+    "android": "https://play.google.com/store/apps/details?id=com.luni.android.shorts.app"
+  },
+  "MoreShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6503328539",
+    "android": "https://play.google.com/store/apps/details?id=live.moreshort.app"
+  },
+  "ReelyGo": {
+    "status": 200,
+    "ios": "https://apps.apple.com/app/id6749936320",
+    "android": "https://play.google.com/store/apps/details?id=com.zw.freeshortplay"
+  },
+  "BibiShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6755374588",
+    "android": "https://play.google.com/store/apps/details?id=com.aik.topreel.ai.app"
+  },
+  "MoboDrama": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6758762494",
+    "android": "https://play.google.com/store/apps/details?id=com.changduhk.mobodrama"
+  },
+  "DramaShorts": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6478970137",
+    "android": "https://play.google.com/store/apps/details?id=io.drama.shorts"
+  },
+  "ToonShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6746329101",
+    "android": "https://play.google.com/store/apps/details?id=com.toonshort.drama"
+  },
+  "FlexTV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id1645515419",
+    "android": "https://play.google.com/store/apps/details?id=com.aytech.flextv"
+  },
+  "PopoVibe": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6468945072",
+    "android": "https://play.google.com/store/apps/details?id=com.zhangyue.read.favornovel"
+  },
+  "StarShort": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6743144284",
+    "android": "https://play.google.com/store/apps/details?id=com.rlkj.lang.movie"
+  },
+  "Soda TV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6739734548",
+    "android": "https://play.google.com/store/apps/details?id=com.republic.sodatv"
+  },
+  "DramaBox Lite": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6755754589",
+    "android": "https://play.google.com/store/apps/details?id=com.storymatrix.lite"
+  },
+  "FlareFlow": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6744237126",
+    "android": "https://play.google.com/store/apps/details?id=tv.flareflow.drama"
+  },
+  "MangoTV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id1295034410",
+    "android": "https://play.google.com/store/apps/details?id=com.hunantv.imgo.activity.inter"
+  },
+  "SarosTV": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6743736634",
+    "android": "https://play.google.com/store/apps/details?id=com.duanju.sv.newimage"
+  },
+  "LoveShots": {
+    "status": 200,
+    "ios": "https://apps.apple.com/us/app/id6448256175",
+    "android": "https://play.google.com/store/apps/details?id=com.short.movie.app"
+  },
+  "Felveria": {
+    "status": 200,
+    "ios": "https://apps.apple.com/app/id6784058421",
+    "android": "https://play.google.com/store/apps/details?id=com.lithored.rovelo.app"
+  }
+}

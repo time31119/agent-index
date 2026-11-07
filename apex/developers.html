@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>开发者中心 — APEX</title>
+<meta name="description" content="把你的智能体发布到 APEX：85% 分成、全球算力、统一支付与合规。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230B0C0E'/%3E%3Cpath d='M12 4.5 19.5 19h-4.2L12 11.2 8.7 19H4.5z' fill='%23F4F2EC'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#08090b">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="APEX 首页">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+      <span class="brand-word">APEX</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="agents.html" data-nav="agents">智能体</a>
+      <a href="compute.html" data-nav="compute">算力</a>
+      <a href="console.html" data-nav="console">控制台</a>
+      <a href="developers.html" data-nav="developers">开发者</a>
+      <a href="blueprint.html" data-nav="blueprint">平台规划</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="搜索（Ctrl K）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+      </button>
+      <a class="nav-signin" href="console.html">登录</a>
+      <a class="btn btn-sm" href="#apply">申请上架</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="agents.html">智能体市场</a>
+  <a href="compute.html">算力市场</a>
+  <a href="console.html">控制台</a>
+  <a href="developers.html">开发者中心</a>
+  <a href="blueprint.html">平台规划</a>
+  <a class="btn btn-block" href="#apply">申请上架</a>
+</div>
+
+<section class="dev-hero">
+  <div class="wrap">
+    <div class="eyebrow on-dark"><span class="dot-live"></span> DEVELOPER PLATFORM</div>
+    <h1 class="display">把你的智能体，<br>带到<em class="serif">全世界</em>。</h1>
+    <p class="lead">APEX 负责分发、算力、支付、税务、合规与客服。你只需要把智能体做好，然后按 85% 分成。</p>
+    <div class="hero-cta">
+      <a class="btn btn-on-dark btn-lg" href="#apply">申请上架</a>
+      <a class="btn btn-outline-dark btn-lg" href="#sdk">查看 SDK</a>
+    </div>
+    <div class="dev-stats">
+      <div><div class="v">85%</div><div class="l">开发者分成</div></div>
+      <div><div class="v">12,400+</div><div class="l">已上架智能体</div></div>
+      <div><div class="v">9</div><div class="l">运行区域</div></div>
+      <div><div class="v">72h</div><div class="l">平均审核时长</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> HOW IT WORKS</div>
+        <h2 class="h2">从 manifest 到全球上线，<br>只需四步。</h2>
+        <p class="lead">不需要自己搭运行时、处理支付、做多区域部署。声明你需要的，剩下的交给平台。</p>
+      </div>
+      <a class="link-arrow" href="#sdk">阅读完整文档
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="publish-steps" data-reveal>
+      <div class="publish-step">
+        <div class="n">01 / DECLARE</div>
+        <h3 class="h4">声明你的智能体</h3>
+        <p>一个 apex.yaml：模型、工具、权限、算力与定价。平台据此生成运行时与权限清单。</p>
+      </div>
+      <div class="publish-step">
+        <div class="n">02 / EVALUATE</div>
+        <h3 class="h4">在沙箱里跑评测</h3>
+        <p>200 个脱敏真实任务自动生成，行为全程录屏。安全扫描与人工复核同步进行。</p>
+      </div>
+      <div class="publish-step">
+        <div class="n">03 / PRICE</div>
+        <h3 class="h4">选择定价与区域</h3>
+        <p>订阅、按任务、按席位或企业私有报价。按区域设置价格、数据驻留与可用性。</p>
+      </div>
+      <div class="publish-step">
+        <div class="n">04 / SHIP</div>
+        <h3 class="h4">全球上线</h3>
+        <p>自动扩容、按秒计量、月度结算。版本回滚即时生效，不中断进行中的任务。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-hair">
+  <div class="wrap split">
+    <div data-reveal>
+      <div class="eyebrow"><span class="dot"></span> ECONOMICS</div>
+      <h2 class="h2 mt-16">你保留 85%。<br>平台只收 15%。</h2>
+      <p class="lead mt-16">15% 覆盖支付通道、税务代扣、算力调度、运行时分摊、客服与合规审计。没有上架费，没有年费，没有隐藏的「推荐位」费用。</p>
+      <div class="rev-bars">
+        <div class="rev-bar">
+          <div class="top"><span>开发者分成 · 次月 15 日结算</span><b>85%</b></div>
+          <div class="track"><i style="width:85%"></i></div>
+        </div>
+        <div class="rev-bar">
+          <div class="top"><span>平台服务费</span><b>15%</b></div>
+          <div class="track"><i style="width:15%;background:#b9b3a6"></i></div>
+        </div>
+      </div>
+      <div class="steps-mini mt-32">
+        <div class="step-mini"><span class="idx">A</span><div><div class="t">支持 32 种结算币种</div><div class="d">本地收款，平台处理汇率与税务</div></div><span class="r">T+30</span></div>
+        <div class="step-mini"><span class="idx">B</span><div><div class="t">算力补贴</div><div class="d">新上架 12 个月，最高 $50,000 额度</div></div><span class="r">85 折</span></div>
+        <div class="step-mini"><span class="idx">C</span><div><div class="t">订阅与用量混合计费</div><div class="d">一份合约，多种计价，自动拆账</div></div><span class="r">自带</span></div>
+      </div>
+      <a class="link-arrow mt-24" href="#pricing">查看分成计划
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div data-reveal id="sdk">
+      <div class="code-window">
+        <div class="code-head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="file">agent.ts</span>
+          <span class="lang">TYPESCRIPT</span>
+        </div>
+<pre class="code"><span class="k">import</span> { defineAgent, route } <span class="k">from</span> <span class="s">"@apex/sdk"</span>;
+
+<span class="k">export default</span> <span class="f">defineAgent</span>({
+  <span class="k">id</span>: <span class="s">"atlas-research"</span>,
+  <span class="k">runtime</span>: <span class="s">"agent@2"</span>,
+  <span class="k">tools</span>: [web.search, files.read, memory],
+
+  <span class="c">// 按成本优先路由，失败自动切换</span>
+  <span class="k">model</span>: <span class="f">route</span>({
+    strategy: <span class="s">"cost"</span>,
+    fallback: [<span class="s">"gpt-5"</span>, <span class="s">"claude-4.5"</span>],
+  }),
+
+  <span class="k">async</span> <span class="f">run</span>(ctx, input) {
+    <span class="k">const</span> plan = <span class="k">await</span> ctx.<span class="f">plan</span>(input.task);
+    <span class="k">const</span> sources = <span class="k">await</span> ctx.<span class="f">gather</span>(plan, {
+      citations: <span class="k">true</span>,
+    });
+    <span class="k">return</span> ctx.<span class="f">report</span>(sources);
+  },
+});</pre>
+      </div>
+      <div class="code-window" style="margin-top:12px">
+        <div class="code-head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="file">terminal</span>
+          <span class="lang">SHELL</span>
+        </div>
+<pre class="code"><span class="c">$</span> npm i -g @apex/cli
+<span class="c">$</span> apex login
+<span class="c">$</span> apex eval --suite research-v3
+<span class="ok" style="color:#6ee7b7">✓</span> 200 tasks · 94.2 / 100 · 0 critical
+<span class="c">$</span> apex publish --region all</pre>
+      </div>
+      <p class="small mt-16">SDK 支持 TypeScript / Python，提供本地模拟器与回放工具。运行时契约开源。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> PARTNER PLANS</div>
+        <h2 class="h2">从小团队到平台级伙伴。</h2>
+      </div>
+      <p class="lead" style="max-width:340px">所有档位都保留 85% 基础分成。差别在于支持、算力折扣与联合营销。</p>
+    </div>
+
+    <div class="tier-grid" data-reveal>
+      <div class="tier">
+        <div class="name">INDIE</div>
+        <div class="cut">85%<span> 分成</span></div>
+        <div class="desc">适合独立开发者与小型团队，自助完成发布与运营。</div>
+        <ul>
+          <li>自助上架与版本管理</li>
+          <li>算力 95 折 · $5,000 补贴</li>
+          <li>标准评测报告</li>
+          <li>社区支持</li>
+        </ul>
+        <a class="btn btn-light btn-block" href="#apply">免费开始</a>
+      </div>
+      <div class="tier is-featured">
+        <div class="name">STUDIO · 推荐</div>
+        <div class="cut">85%<span> 分成</span></div>
+        <div class="desc">面向持续运营多个智能体的工作室，需要增长与容量支持。</div>
+        <ul>
+          <li>专属伙伴经理</li>
+          <li>算力 85 折 · $50,000 补贴</li>
+          <li>联合营销与首页推荐位</li>
+          <li>优先评测通道 · 48h</li>
+          <li>收入与留存分析</li>
+        </ul>
+        <a class="btn btn-on-dark btn-block" href="#apply">申请加入</a>
+      </div>
+      <div class="tier">
+        <div class="name">ENTERPRISE</div>
+        <div class="cut">定制<span> 最低 80%</span></div>
+        <div class="desc">模型厂商、云服务商与大型软件公司，需要私有市场与合规支持。</div>
+        <ul>
+          <li>私有目录与专属容量</li>
+          <li>SSO / SCIM / 审计导出</li>
+          <li>区域数据驻留与 BYOK</li>
+          <li>99.99% SLA 与 TAM</li>
+        </ul>
+        <a class="btn btn-light btn-block" href="#apply">联系团队</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-hair">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> BUILDER STORIES</div>
+        <h2 class="h2">他们已经在这里。</h2>
+      </div>
+    </div>
+    <div class="cols-3" data-reveal>
+      <div class="panel-card">
+        <p class="body" style="color:var(--ink);font-size:14px;line-height:1.7">“我们把一个内部工具变成了产品。第一个月就有 4,200 个团队安装，收入超过上一轮融资的月消耗。”</p>
+        <div class="flex center gap-12 mt-24">
+          <span class="review-avatar">陈</span>
+          <div><div class="review-name">陈默</div><div class="review-role">Meridian Labs · 创始人</div></div>
+        </div>
+      </div>
+      <div class="panel-card">
+        <p class="body" style="color:var(--ink);font-size:14px;line-height:1.7">“安全审查原本要六周。APEX 的权限清单和审计日志让我们的企业客户两周就签了。”</p>
+        <div class="flex center gap-12 mt-24">
+          <span class="review-avatar">D</span>
+          <div><div class="review-name">Daniel K.</div><div class="review-role">Northstar · CTO</div></div>
+        </div>
+      </div>
+      <div class="panel-card">
+        <p class="body" style="color:var(--ink);font-size:14px;line-height:1.7">“算力补贴让我们敢做长任务。没有它，深度研究类产品的毛利根本撑不住。”</p>
+        <div class="flex center gap-12 mt-24">
+          <span class="review-avatar">S</span>
+          <div><div class="review-name">Sofia M.</div><div class="review-role">Form&amp;Co · 产品负责人</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apply">
+  <div class="wrap apply">
+    <div data-reveal>
+      <div class="eyebrow"><span class="dot"></span> APPLY</div>
+      <h2 class="h2 mt-16">申请上架。</h2>
+      <p class="lead mt-16">填写基本信息，我们会在 3 个工作日内回复。通过初筛后，你会获得沙箱环境、评测套件与算力额度。</p>
+      <div class="steps-mini mt-32">
+        <div class="step-mini"><span class="idx">01</span><div><div class="t">提交申请</div><div class="d">团队、智能体与合规信息</div></div><span class="r">5 min</span></div>
+        <div class="step-mini"><span class="idx">02</span><div><div class="t">沙箱与评测</div><div class="d">200 个真实任务 + 安全扫描</div></div><span class="r">3 天</span></div>
+        <div class="step-mini"><span class="idx">03</span><div><div class="t">商务与合同</div><div class="d">分成、区域、SLA</div></div><span class="r">2 天</span></div>
+        <div class="step-mini"><span class="idx">04</span><div><div class="t">上线</div><div class="d">全球或指定区域</div></div><span class="r">72h</span></div>
+      </div>
+      <div class="callout" style="margin-top:28px">
+        <b>我们不接受：</b>无法解释行为的黑箱智能体、未经授权的数据抓取、金融/医疗等受监管领域无牌照的自动决策，以及任何形式的代写与欺诈工具。
+      </div>
+    </div>
+
+    <form class="form-card" id="applyForm" data-reveal>
+      <div class="form-row">
+        <div class="field-l"><label for="fname">姓名</label><input id="fname" required placeholder="你的名字"></div>
+        <div class="field-l"><label for="femail">工作邮箱</label><input id="femail" type="email" required placeholder="you@company.com"></div>
+      </div>
+      <div class="field-l"><label for="fagent">智能体名称</label><input id="fagent" required placeholder="例如 Atlas Research"></div>
+      <div class="form-row">
+        <div class="field-l"><label for="fcat">类别</label>
+          <select id="fcat">
+            <option>研究</option><option>编程</option><option>金融</option><option>设计</option>
+            <option>客服</option><option>安全</option><option>法律</option><option>医疗</option>
+            <option>营销</option><option>生产力</option><option>数据</option><option>自动化</option>
+          </select>
+        </div>
+        <div class="field-l"><label for="fstage">阶段</label>
+          <select id="fstage">
+            <option>已有可运行原型</option><option>已有付费用户</option><option>仅设计阶段</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-l"><label for="fdesc">一句话描述它解决什么问题</label><textarea id="fdesc" placeholder="它替谁完成什么任务？为什么现有工具做不好？"></textarea></div>
+      <button class="btn btn-primary btn-block" type="submit">提交申请</button>
+      <p class="form-note">提交即表示同意 APEX 开发者协议与上架标准。我们不会公开你的申请信息。</p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html" style="color:#f5f2ea">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" style="color:#f5f2ea"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+          <span class="brand-word">APEX</span>
+        </a>
+        <p class="footer-tag">智能体与算力的全球市场。发现、部署、计量、结算，在一个地方完成。</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h5>市场</h5>
+          <a href="agents.html">智能体商店</a>
+          <a href="compute.html">算力市场</a>
+          <a href="agents.html?sort=popular">热门榜单</a>
+          <a href="console.html">企业采购</a>
+        </div>
+        <div>
+          <h5>开发者</h5>
+          <a href="developers.html">发布智能体</a>
+          <a href="developers.html#pricing">分成计划</a>
+          <a href="developers.html#sdk">SDK 与文档</a>
+          <a href="compute.html#supply">成为算力供应商</a>
+        </div>
+        <div>
+          <h5>信任</h5>
+          <a href="blueprint.html#trust">安全架构</a>
+          <a href="blueprint.html#governance">合规与治理</a>
+          <a href="#">状态页</a>
+          <a href="#">透明度报告</a>
+        </div>
+        <div>
+          <h5>公司</h5>
+          <a href="blueprint.html">平台规划</a>
+          <a href="#">关于 APEX</a>
+          <a href="#">加入我们</a>
+          <a href="#">联系</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-word">APEX</div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> APEX Systems · 概念设计与演示</span>
+      <span>数据为示意，不构成真实报价</span>
+      <div class="right">
+        <a href="#">隐私</a><a href="#">条款</a><a href="#">服务状态</a><a href="#">简体中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script>
+document.getElementById('applyForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  window.APEX.ui.toast('申请已提交 · 我们会在 3 个工作日内联系你');
+  this.reset();
+});
+</script>
+</body>
+</html>
+

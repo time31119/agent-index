@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>学习手册：把别人的仓位管理变成自己的规则 · LeadScope</title>
+<meta name="description" content="从 931 份币安合约带单档案里反推出来的可复制规则：期望值、单笔风险、止损距离、反面教材与选人清单。">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236ea8ff'/%3E%3Cpath d='M9 21l5-10 4 7 5-4' stroke='%2305070d' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="playbook">
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LS</span>
+      <span>LeadScope<small style="display:block">带单透视</small></span>
+    </a>
+    <nav class="nav">
+      <a data-nav="home" href="index.html">结论</a>
+      <a data-nav="board" href="board.html">榜单</a>
+      <a data-nav="analysis" href="analysis.html">拆解</a>
+      <a data-nav="simulator" href="simulator.html">模拟器</a>
+      <a data-nav="playbook" href="playbook.html">学习</a>
+      <a data-nav="method" href="method.html">方法</a>
+    </nav>
+    <span class="pill-live"><i class="dot"></i><span id="asOf">—</span></span>
+  </div>
+</header>
+
+<main>
+<div class="wrap" style="padding-top:52px">
+  <div class="eyebrow">学习 · 可复制的部分</div>
+  <h1 style="font-size:clamp(30px,3.6vw,46px);max-width:24ch;margin-bottom:16px">抄不到他的单，<br>但能抄他的风控</h1>
+  <p class="lede" style="max-width:72ch">
+    931 份档案里，真正值得带走的不是「什么时候开多」，而是那些让账户活过 90 天的结构性习惯：
+    怎么定单笔风险、怎么用止损距离倒推杠杆、怎么判断自己是不是在扛单。
+  </p>
+</div>
+
+<!-- 1 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">01 / 第一性</div><h2>先算期望，再谈胜率</h2></div></div>
+  <div class="grid-2">
+    <div class="prose">
+      <p>任何策略的长期结果只由三个数决定：<strong>胜率 p</strong>、<strong>平均盈利 W</strong>、<strong>平均亏损 L</strong>。逐笔期望：</p>
+      <code style="display:block;padding:12px 14px;line-height:1.9">E = p × W − (1 − p) × L</code>
+      <p>E 为负时，加杠杆只会更快归零；E 为正时，仓位管理决定你能不能活到它兑现。</p>
+      <p>这个公式解释了我们数据里最反直觉的现象：<strong>胜率 90% 的账户比胜率 45% 的账户更容易亏光</strong>。因为前者的 W/L 是 0.12（赚 1 元冒 8 元风险），后者的 W/L 是 1.9。</p>
+      <div class="callout">把榜单里每个人的数字代进这个公式，你会发现前十名里至少 5 位的 <b>E 为负</b>——他们的月度收益来自少数几笔极端盈利，或者来自还没平仓的浮盈。</div>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:16px">三个真实档案的期望值</div>
+      <table style="font-size:12.5px">
+        <thead><tr><th class="l">账户</th><th>胜率</th><th>W/L</th><th>E/笔</th></tr></thead>
+        <tbody>
+          <tr><td class="l">第 4 名 · 盈亏比 1.31</td><td class="num">62%</td><td class="num">1.31</td><td class="num up">+3.10</td></tr>
+          <tr><td class="l">第 9 名 · 盈亏比 0.12</td><td class="num">90%</td><td class="num">0.12</td><td class="num">+0.21</td></tr>
+          <tr><td class="l">第 1 名 · 盈亏比 0.37</td><td class="num">57%</td><td class="num">0.37</td><td class="num down">−8.57</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:12px">第 1 名的账面逐笔期望是 −8.57（按镜像口径的胜率与平均盈亏），却做出了 30 天 +493%。这不是矛盾，这就是「收益不来自稳定优势」的定义。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">02 / 七条硬规则</div><h2>活得久的账户，几乎都遵守这些</h2>
+    <p>从样本里 274 个「回撤 &lt; 15% 且全期为正」的账户反推，共性高度一致。规则可以直接照做。</p>
+  </div></div>
+  <div class="grid-2">
+    <div class="card">
+      <ol class="rules">
+        <li><b>单笔风险 ≤ 1% 权益。</b>止损被打掉时，账户只掉 1%。这条决定了你能不能连续错 20 次还活着。</li>
+        <li><b>杠杆由止损距离反推，不由信心决定。</b>仓位 = 风险预算 ÷ 止损距离。止损 2% 时，1% 风险预算对应 0.5 倍名义仓位。</li>
+        <li><b>每日回撤 3% 停手。</b>连续亏损时继续交易，是账户死亡的第一大原因。</li>
+        <li><b>没有明确失效条件，不开仓。</b>「跌了就补」不是失效条件，是加仓理由。</li>
+      </ol>
+    </div>
+    <div class="card">
+      <ol class="rules" style="counter-reset:r 4">
+        <li><b>分批进出。</b>一次满仓的代价是「没有第二次机会」：同样的判断错误，分批建仓只损失一次止损，一把梭可能直接失去继续参与的资格。</li>
+        <li><b>记录每笔的假设与失效点。</b>不是为了复盘收益，是为了区分「策略失效」和「运气不好」。</li>
+        <li><b>每周统计四个数：</b>胜率、盈亏比、期望、最大回撤。任何一个恶化 30%，减半仓位。</li>
+      </ol>
+      <div class="hr"></div>
+      <p class="note" style="margin:0">这些规则的共同点是：<b style="color:#cfd8ea">它们不预测行情，只约束行为</b>。也正因如此，它们可以被复制——而「他为什么在这里开多」不能。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">03 / 反面教材</div><h2>三个可以直接对照的危险信号</h2></div></div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="badge avoid" style="margin-bottom:12px">信号 1</div>
+      <h3 style="margin:0 0 8px;font-size:16.5px">胜率 &gt; 85%，盈亏比 &lt; 0.5</h3>
+      <p class="note" style="color:var(--muted);font-size:13.2px;line-height:1.75">
+        样本里最典型的一位：胜率 90%、盈亏比 0.12、回撤 50%。平时天天小赚，一次失手回吐全部。
+        这类曲线在爆掉之前，看起来是所有账户里最稳的。
+      </p>
+    </div>
+    <div class="card">
+      <div class="badge avoid" style="margin-bottom:12px">信号 2</div>
+      <h3 style="margin:0 0 8px;font-size:16.5px">月交易 &gt; 300 笔</h3>
+      <p class="note" style="color:var(--muted);font-size:13.2px;line-height:1.75">
+        样本中最高的一位月均 789 笔（约每 30 分钟一笔）。跟单人的滑点、延迟与手续费会把正期望吃成负期望；
+        低于最小下单额的订单还会被直接跳过。
+      </p>
+    </div>
+    <div class="card">
+      <div class="badge avoid" style="margin-bottom:12px">信号 3</div>
+      <h3 style="margin:0 0 8px;font-size:16.5px">大亏之后立刻加倍</h3>
+      <p class="note" style="color:var(--muted);font-size:13.2px;line-height:1.75">
+        前十名里 8 位的前 60 天是亏的，且回撤中位数 −78%。「亏 80% 后用剩余资金博回本」是行为金融里
+        最经典的报复性交易，它的收益曲线必然长成榜单冠军的样子。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="wrap reveal">
+  <div class="sec-head">
+    <div><div class="sec-no">04 / 选人清单</div><h2>八项检查，逐条打勾</h2>
+      <p>点击打勾，进度会保存在本地。八项全过，再考虑用「可亏资金」的 10% 试跟。</p>
+    </div>
+    <span class="pill-count" id="checkCount">0 / 8</span>
+  </div>
+  <div class="checklist">
+    <div class="check-item" data-k="c1"><span class="box">✓</span><div><b>记录 ≥ 90 天，且经历过一次 &gt;15% 的市场回撤</b><p>只经历过单边上涨的账户，等于没有被测试过。</p></div></div>
+    <div class="check-item" data-k="c2"><span class="box">✓</span><div><b>最大回撤 &lt; 25%</b><p>超过 25% 意味着跟单人要在浮亏 1/4 时仍然相信他——大多数人在 15% 时就已经离场。</p></div></div>
+    <div class="check-item" data-k="c3"><span class="box">✓</span><div><b>前 60 天收益为正</b><p>这一条直接排除掉「回本型」账户，是本清单里最有区分度的一项。</p></div></div>
+    <div class="check-item" data-k="c4"><span class="box">✓</span><div><b>盈亏比 ≥ 1.0，或胜率 × 盈亏比组合下期望为正</b><p>用 <code>E = p·W − (1−p)·L</code> 手算一遍，别信感觉。</p></div></div>
+    <div class="check-item" data-k="c5"><span class="box">✓</span><div><b>月交易笔数 &lt; 120</b><p>超过这个量级，滑点和手续费会吃掉大部分可复制收益。</p></div></div>
+    <div class="check-item" data-k="c6"><span class="box">✓</span><div><b>30 天收益 / 回撤 &gt; 1</b><p>赚 30% 但回撤 60% 的账户，风险收益比是倒挂的。</p></div></div>
+    <div class="check-item" data-k="c7"><span class="box">✓</span><div><b>近 30 天没有更换策略风格</b><p>从波段突然变成高频、从 3 倍突然变成 20 倍，是风格漂移的典型信号。</p></div></div>
+    <div class="check-item" data-k="c8"><span class="box">✓</span><div><b>分成比例 ≤ 10%，且跟单人 PnL 为正</b><p>分成越高、跟单人整体亏损，说明这门生意里只有带单员在赚钱。</p></div></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">05 / 七天练习</div><h2>用一周建立自己的判断</h2></div></div>
+  <div class="grid-2">
+    <div class="card">
+      <table style="font-size:13px">
+        <tbody>
+          <tr><td class="l" style="width:64px;color:var(--dim)">D1</td><td class="l">在榜单里挑 5 个人，只用「前 60 天」和「回撤」两列排序，记下你的直觉。</td></tr>
+          <tr><td class="l" style="color:var(--dim)">D2</td><td class="l">把这 5 个人的胜率、盈亏比代进期望公式，看有几个人 E 为负。</td></tr>
+          <tr><td class="l" style="color:var(--dim)">D3</td><td class="l">用模拟器跑他们，把分成设成 10%，滑点 12bps。</td></tr>
+          <tr><td class="l" style="color:var(--dim)">D4</td><td class="l">把「运气剥离」拉到 −10pt，观察结论是否翻转。</td></tr>
+          <tr><td class="l" style="color:var(--dim)">D5</td><td class="l">用 100 USDT 真实跟一个人，记录成交价与带单员成交价的差。</td></tr>
+          <tr><td class="l" style="color:var(--dim)">D6</td><td class="l">算一周实际成本：滑点 + 手续费 + 分成，除以本金。</td></tr>
+          <tr><td class="l" style="color:var(--dim)">D7</td><td class="l">写下一句你自己的选人标准，不超过 20 个字。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="prose">
+      <p><strong>一周之后你会得到什么？</strong>不是一套稳赚的方法，而是一个可证伪的判断流程：先看风险，再看延续性，最后算成本。</p>
+      <p>这份数据里最好的账户，30 天收益是 +45%、回撤 −11%、前 60 天 +1.6%。这个数字在榜单上排不进前 20，但它是一个能持续跟 6 个月的数字。</p>
+      <div class="callout good">跟单的正确目标不是「找到最会赚的人」，而是「<b>找到一个我能在他回撤 20% 时不失眠的人</b>」。前者是榜单的任务，后者是你的任务。</div>
+      <p class="note" style="margin-top:18px">如果你更想验证「跟单到底能不能赚钱」，去 <a href="simulator.html" style="color:#6ea8ff">模拟器</a> 把上面这个账户的参数跑一遍：胜率 46%、盈亏比 1.18、月 61 笔、回撤 11%。</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="color:#95a2bd;margin-bottom:8px">LeadScope · 带单透视</div>
+      <div>数据快照 <span id="asOf3">—</span>（UTC+8）· 内容为研究与教育用途，不构成投资建议。</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">结论</a><a href="board.html">榜单</a><a href="analysis.html">拆解</a><a href="simulator.html">模拟器</a><a href="method.html">方法与局限</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

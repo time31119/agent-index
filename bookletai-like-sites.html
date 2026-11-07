@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>像 BookletAI 一样的 AI 册子生成网站 · 71 个同类工具清单</title>
+<style>
+  :root{
+    --ink:#17130f;
+    --ink-2:#4a423a;
+    --ink-3:#8a7f74;
+    --line:#e6dfd5;
+    --bg:#faf7f2;
+    --card:#fffdfa;
+    --accent:#e2542c;
+    --accent-soft:#fdeee7;
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* ---------- hero ---------- */
+  header.hero{
+    padding:76px 0 44px;
+    background:
+      radial-gradient(900px 380px at 12% -10%, #ffe7da 0%, rgba(255,231,218,0) 70%),
+      radial-gradient(700px 340px at 92% 0%, #e9f0ff 0%, rgba(233,240,255,0) 65%),
+      var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin-bottom:18px;
+  }
+  .kicker::before{content:"";width:22px;height:2px;background:var(--accent);display:inline-block}
+  h1{
+    font-size:clamp(30px,4.4vw,52px);
+    line-height:1.18;margin:0 0 20px;letter-spacing:-.02em;font-weight:800;
+  }
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:17px;color:var(--ink-2);max-width:760px;margin:0 0 26px}
+  .lede b{color:var(--ink)}
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+  .stat{
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:7px 15px;font-size:13.5px;color:var(--ink-2);
+  }
+  .stat b{color:var(--ink);font-weight:700}
+
+  .searchbox{position:relative;max-width:620px}
+  .searchbox input{
+    width:100%;padding:15px 18px 15px 48px;font-size:15px;font-family:inherit;
+    border:1.5px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);
+    outline:none;transition:.18s;
+  }
+  .searchbox input:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+  .searchbox svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);opacity:.45}
+  #count{font-size:12.5px;color:var(--ink-3);margin-top:10px;min-height:18px}
+
+  /* ---------- chips ---------- */
+  nav.chips{
+    position:sticky;top:0;z-index:40;
+    background:rgba(250,247,242,.94);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .chips-inner{display:flex;gap:8px;overflow-x:auto;padding:14px 28px;max-width:1180px;margin:0 auto;
+    scrollbar-width:none}
+  .chips-inner::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink-2);
+    padding:7px 14px;border-radius:999px;font-size:13.5px;cursor:pointer;font-family:inherit;
+    transition:.15s;white-space:nowrap;
+  }
+  .chip:hover{border-color:#cfc4b6}
+  .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+
+  /* ---------- sections ---------- */
+  main{padding:20px 0 90px}
+  section{padding:52px 0 8px;scroll-margin-top:80px}
+  .sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:8px;flex-wrap:wrap}
+  .sec-no{
+    font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--accent);
+    border:1px solid var(--accent);border-radius:6px;padding:2px 7px;line-height:1.5;
+  }
+  h2{font-size:26px;margin:0;letter-spacing:-.01em;font-weight:800}
+  .sec-sub{color:var(--ink-3);font-size:14.5px;margin:6px 0 26px;max-width:820px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 20px 18px;position:relative;transition:.18s;
+  }
+  .card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(60,45,30,.08);border-color:#d9cdbe}
+  .card.hide{display:none}
+  .card .row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:3px}
+  .card h3{font-size:17.5px;margin:0;font-weight:750;letter-spacing:-.01em}
+  .rank{
+    font-size:11px;font-weight:800;color:#fff;background:var(--accent);
+    border-radius:5px;padding:1px 6px;letter-spacing:.04em;
+  }
+  .card .url{font-size:12.5px;color:var(--ink-3);text-decoration:none;border-bottom:1px dotted #cbbfb1}
+  .card .url:hover{color:var(--accent);border-color:var(--accent)}
+  .card p{font-size:14px;color:var(--ink-2);margin:8px 0 12px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{
+    font-size:11.5px;color:var(--ink-2);background:#f2ede5;border-radius:5px;
+    padding:2.5px 8px;letter-spacing:.01em;
+  }
+  .tag.free{background:#e8f6ec;color:#20693a}
+  .tag.cn{background:#fdeee7;color:#a6381a}
+  .tag.print{background:#e9f0ff;color:#24457f}
+  .tag.paid{background:#f4f0fa;color:#4a3575}
+
+  .note{
+    background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:10px;padding:16px 18px;font-size:14px;color:var(--ink-2);margin:0 0 34px;
+  }
+  .note b{color:var(--ink)}
+  .note ul{margin:8px 0 0;padding-left:20px}
+  .note li{margin:3px 0}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 60px;color:var(--ink-3);font-size:13px}
+  footer a{color:var(--ink-2)}
+
+  @media (max-width:600px){
+    .wrap{padding:0 18px}
+    .chips-inner{padding:12px 18px}
+    header.hero{padding:52px 0 34px}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">BookletAI 同类站点地图 · 2026.11</div>
+    <h1>和 BookletAI 一样<br><em>“说一句话就出一本册子”</em>的网站</h1>
+    <p class="lede">
+      以 <b>bookletai.org</b> 为基准：输入主题或对话，AI 自动写内容、排版、配图，最后交付一本可下载 / 可印刷的小册子、杂志、绘本或电子书。
+      下面把同一条链路上的站点全部挑了出来 —— 从<b>几乎一模一样</b>的直接竞品，到翻页书、AI 写书、儿童绘本、照片书印刷、中文替代，共 <b>71 个</b>。
+    </p>
+    <div class="stats">
+      <span class="stat"><b>71</b> 个站点</span>
+      <span class="stat"><b>8</b> 个类别</span>
+      <span class="stat">含 <b>中文</b> 可用工具</span>
+      <span class="stat">标注免费额度 / 可印刷</span>
+    </div>
+    <div class="searchbox">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="搜索：杂志 / 翻页书 / 绘本 / 菜谱 / 印刷 / 中文 / Gamma …" autocomplete="off">
+    </div>
+    <div id="count"></div>
+  </div>
+</header>
+
+<nav class="chips">
+  <div class="chips-inner" id="chips">
+    <button class="chip on" data-f="all">全部 71</button>
+    <button class="chip" data-f="c1">最像的 13</button>
+    <button class="chip" data-f="c2">翻页书 10</button>
+    <button class="chip" data-f="c3">AI 写书 7</button>
+    <button class="chip" data-f="c4">儿童绘本 7</button>
+    <button class="chip" data-f="c5">照片书印刷 10</button>
+    <button class="chip" data-f="c6">垂类 8</button>
+    <button class="chip" data-f="c7">中文 8</button>
+    <button class="chip" data-f="c8">AI 演示 8</button>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+  <div class="note" style="margin-top:36px">
+    <b>先看结论：</b>
+    <ul>
+      <li><b>想直接复制 BookletAI 的体验</b>（一句话 → 成品）→ Gamma、Visme、Canva 可画</li>
+      <li><b>要中文界面 + 国内能付款</b> → 可画、稿定设计、创客贴、WPS AI</li>
+      <li><b>手里已有 PDF，只想变成能翻的线上杂志</b> → Flipsnack、Publuu、Issuu</li>
+      <li><b>目标是一本“书”而不是册子</b> → Bookwiz、Inkfluence、Designrr</li>
+      <li><b>要印出来拿在手上</b> → Blurb、Mixbook、MagCloud、MILK Books</li>
+    </ul>
+  </div>
+
+  <!-- ============ 01 ============ -->
+  <section id="s1">
+    <div class="sec-head"><span class="sec-no">01</span><h2>最接近 BookletAI 的 13 个</h2></div>
+    <p class="sec-sub">同样是「给个主题或一段对话，AI 负责写、排版、出片」，交付物是册子 / 宣传册 / 杂志 / 报告，可直接导出 PDF。第一个是基准站，后面 12 个才是替代选项。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c1" data-t="BookletAI 小册子 杂志 绘本 菜谱 中文 基准">
+        <div class="row"><span class="rank">基准</span><h3>BookletAI</h3></div>
+        <a class="url" href="https://bookletai.org/zh/index.html" target="_blank" rel="noopener">bookletai.org ↗</a>
+        <p>本次比对的基准站：对话式生成小册子、杂志、绘本、菜谱书、作品集、商品目录，中文界面完整，成品可下载 PDF。它的工具矩阵基本就是这个赛道的产品地图。</p>
+        <div class="tags"><span class="tag cn">中文</span><span class="tag free">免费额度</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Gamma 演示 文档 网页 一句话生成">
+        <div class="row"><span class="rank">01</span><h3>Gamma</h3></div>
+        <a class="url" href="https://gamma.app" target="_blank" rel="noopener">gamma.app ↗</a>
+        <p>输入主题、大纲甚至一份 Word/PDF，AI 直接排成多页卡片式文档，可当册子、提案、报告用，导出 PDF / PPT。是目前「一句话出成品」体验最顺的一个。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag print">导出 PDF</span><span class="tag">英文为主</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Visme 小册子 booklet maker">
+        <div class="row"><span class="rank">02</span><h3>Visme</h3></div>
+        <a class="url" href="https://www.visme.co" target="_blank" rel="noopener">visme.co ↗</a>
+        <p>官网有独立的 AI Booklet Maker 入口：填主题和风格，生成多页小册子，内置图表、图标、品牌套件，导出 PDF 质量稳定，商务感强。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Canva 可画 模板 画册 杂志 印刷">
+        <div class="row"><span class="rank">03</span><h3>Canva 可画</h3></div>
+        <a class="url" href="https://www.canva.com" target="_blank" rel="noopener">canva.com ↗</a>
+        <p>画册、杂志、折页、小册子模板最多的一个；Magic Design 按提示生成初稿，剩下的自己调。中文版 <a href="https://www.canva.cn" target="_blank" rel="noopener">canva.cn</a> 可直接用，成品能下单印刷。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Adobe Express 宣传册 传单 Firefly">
+        <div class="row"><h3>Adobe Express</h3></div>
+        <a class="url" href="https://www.adobe.com/express/" target="_blank" rel="noopener">adobe.com/express ↗</a>
+        <p>Firefly 驱动的宣传册 / 传单生成，选模板后一键换文案、换配图、生成背景。适合单页、折页这类营销物料，和 Adobe 素材库打通。</p>
+        <div class="tags"><span class="tag free">免费基础版</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Microsoft Designer 海报 传单 免费">
+        <div class="row"><h3>Microsoft Designer</h3></div>
+        <a class="url" href="https://designer.microsoft.com" target="_blank" rel="noopener">designer.microsoft.com ↗</a>
+        <p>完全免费的提示词设计工具，出海报、传单、邀请函、封面。页数做不了太多，但做单页物料或封面图最快。</p>
+        <div class="tags"><span class="tag free">免费</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Venngage brochure 信息图 商业模板">
+        <div class="row"><h3>Venngage</h3></div>
+        <a class="url" href="https://venngage.com" target="_blank" rel="noopener">venngage.com ↗</a>
+        <p>有 AI Brochure Generator 和大量商业/教育模板，做企业宣传册、培训手册、白皮书风格统一，团队协作和品牌色管理比较细。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Piktochart 报告 信息图 白皮书">
+        <div class="row"><h3>Piktochart</h3></div>
+        <a class="url" href="https://piktochart.com" target="_blank" rel="noopener">piktochart.com ↗</a>
+        <p>AI 生成报告、信息图和小册子，强项是数据可视化。适合年度报告、白皮书、带图表的产品手册。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Designs.ai 品牌 营销 视觉 幻灯片">
+        <div class="row"><h3>Designs.ai</h3></div>
+        <a class="url" href="https://designs.ai" target="_blank" rel="noopener">designs.ai ↗</a>
+        <p>一句 brief 交给多个 AI agent 分头出品牌视觉、图像、幻灯片、设计稿，适合一次做一整套营销物料（含宣传册）。</p>
+        <div class="tags"><span class="tag paid">付费为主</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="VistaCreate 模板 营销 社媒">
+        <div class="row"><h3>VistaCreate</h3></div>
+        <a class="url" href="https://create.vista.com" target="_blank" rel="noopener">create.vista.com ↗</a>
+        <p>模板 + AI 文案、去背、生成图，做营销册子和社媒套图很快，免费额度够试水。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Kittl 版式 海报 包装 封面">
+        <div class="row"><h3>Kittl</h3></div>
+        <a class="url" href="https://www.kittl.com" target="_blank" rel="noopener">kittl.com ↗</a>
+        <p>AI 生成版式和图形，偏海报、包装、封面这类强视觉成品。做册子封面或单页宣传比做多页排版更合适。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Marq 品牌 模板 企业 手册">
+        <div class="row"><h3>Marq</h3></div>
+        <a class="url" href="https://www.marq.com" target="_blank" rel="noopener">marq.com ↗</a>
+        <p>原 Lucidpress，品牌模板 + 批量套版，适合企业统一做员工手册、销售册、区域化宣传物料。</p>
+        <div class="tags"><span class="tag paid">团队/付费</span></div>
+      </article>
+
+      <article class="card" data-cat="c1" data-t="Readymag 网页杂志 作品集 排版">
+        <div class="row"><h3>Readymag</h3></div>
+        <a class="url" href="https://readymag.com" target="_blank" rel="noopener">readymag.com ↗</a>
+        <p>网页杂志和作品集的排版神器。做可滚动、带动效的数字刊物，表现力比 PDF 强，适合品牌刊物和线上作品集。</p>
+        <div class="tags"><span class="tag paid">付费为主</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 02 ============ -->
+  <section id="s2">
+    <div class="sec-head"><span class="sec-no">02</span><h2>翻页书 / 数字出版：把 PDF 变成能翻的杂志</h2></div>
+    <p class="sec-sub">BookletAI 的「PDF 转小册子」那一类需求。上传 PDF 就得到带翻页动效、可嵌入、可统计阅读数据的线上刊物。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c2" data-t="Flipsnack 翻页书 PDF 杂志">
+        <div class="row"><h3>Flipsnack</h3></div>
+        <a class="url" href="https://www.flipsnack.com" target="_blank" rel="noopener">flipsnack.com ↗</a>
+        <p>PDF 上传即成翻页书，也能在线设计；带 AI 辅助生成与文案，营销团队用得最多的一家。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="Publuu 翻页书 目录 统计">
+        <div class="row"><h3>Publuu</h3></div>
+        <a class="url" href="https://publuu.com" target="_blank" rel="noopener">publuu.com ↗</a>
+        <p>翻页书 + AI 生成封面和文案，带阅读统计与嵌入，产品目录、房产手册这类场景很成熟。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="Heyzine 翻页书 便宜">
+        <div class="row"><h3>Heyzine</h3></div>
+        <a class="url" href="https://heyzine.com" target="_blank" rel="noopener">heyzine.com ↗</a>
+        <p>PDF / 图片转翻页书，操作最轻，价格友好，个人和小团队做作品集、活动手册够用。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="Issuu 数字出版 杂志 发布">
+        <div class="row"><h3>Issuu</h3></div>
+        <a class="url" href="https://issuu.com" target="_blank" rel="noopener">issuu.com ↗</a>
+        <p>老牌数字出版平台，杂志、画册上传即发布，有读者数据和嵌入，适合对外公开传播。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="FlippingBook 企业 翻页书 线索">
+        <div class="row"><h3>FlippingBook</h3></div>
+        <a class="url" href="https://flippingbook.com" target="_blank" rel="noopener">flippingbook.com ↗</a>
+        <p>企业级翻页书：品牌化阅读器、线索收集、团队权限。偏 B2B 营销，价格也偏企业。</p>
+        <div class="tags"><span class="tag paid">付费为主</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="FlipHTML5 翻页书 转换">
+        <div class="row"><h3>FlipHTML5</h3></div>
+        <a class="url" href="https://fliphtml5.com" target="_blank" rel="noopener">fliphtml5.com ↗</a>
+        <p>PDF / PPT / Word 转翻页书，模板、书架、多语言齐全，功能上最接近「一站式」。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="AnyFlip 免费 翻页书">
+        <div class="row"><h3>AnyFlip</h3></div>
+        <a class="url" href="https://anyflip.com" target="_blank" rel="noopener">anyflip.com ↗</a>
+        <p>免费额度大、转换快，适合临时分享，不追求品牌化阅读器的话够用。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="Yumpu SEO 发布 翻页书">
+        <div class="row"><h3>Yumpu</h3></div>
+        <a class="url" href="https://www.yumpu.com" target="_blank" rel="noopener">yumpu.com ↗</a>
+        <p>发布后能被搜索引擎收录，适合把册子做成可被搜到的落地页，而不是死文件。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="Calaméo 法国 社区 发布">
+        <div class="row"><h3>Calaméo</h3></div>
+        <a class="url" href="https://www.calameo.com" target="_blank" rel="noopener">calameo.com ↗</a>
+        <p>法国老牌发布平台，社区属性强，适合公开展示型刊物。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c2" data-t="Madeflipbook 轻量 翻页书">
+        <div class="row"><h3>Madeflipbook</h3></div>
+        <a class="url" href="https://madeflipbook.com" target="_blank" rel="noopener">madeflipbook.com ↗</a>
+        <p>轻量翻页书生成器，上传 PDF 即可，适合只要一个翻页效果的简单场景。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 03 ============ -->
+  <section id="s3">
+    <div class="sec-head"><span class="sec-no">03</span><h2>AI 写书 / 电子书：从空白到一本完整书</h2></div>
+    <p class="sec-sub">比册子更重内容：生成整本电子书、非虚构、小说，导出 EPUB / PDF，甚至直接上架亚马逊。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c3" data-t="Bookwiz AI 写书 KDP 出版">
+        <div class="row"><h3>Bookwiz</h3></div>
+        <a class="url" href="https://bookwiz.io" target="_blank" rel="noopener">bookwiz.io ↗</a>
+        <p>AI 写完整本书再导出 EPUB/PDF，并打通亚马逊 KDP 上架。非虚构和小说都有对应流程。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag print">导出 PDF/EPUB</span></div>
+      </article>
+
+      <article class="card" data-cat="c3" data-t="Inkfluence ebook 一次提示 生成">
+        <div class="row"><h3>Inkfluence</h3></div>
+        <a class="url" href="https://www.inkfluenceai.com" target="_blank" rel="noopener">inkfluenceai.com ↗</a>
+        <p>一次提示生成完整电子书，含封面与排版，直接导出 PDF / EPUB，主打「5 分钟出书」。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c3" data-t="Designrr 博客 视频 转 电子书 翻页书">
+        <div class="row"><h3>Designrr</h3></div>
+        <a class="url" href="https://designrr.io" target="_blank" rel="noopener">designrr.io ↗</a>
+        <p>把博客、Word、PDF、播客、YouTube 视频一键变成电子书或翻页书，内置 Wordgenie AI 写作。做 lead magnet 的老牌工具。</p>
+        <div class="tags"><span class="tag paid">付费为主</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c3" data-t="Beacon 免费 lead magnet 电子书 工作簿">
+        <div class="row"><h3>Beacon</h3></div>
+        <a class="url" href="https://beacon.by" target="_blank" rel="noopener">beacon.by ↗</a>
+        <p>免费做引流电子书、工作簿、清单，模板化排版，还能配表单收邮箱。适合营销人而非设计师。</p>
+        <div class="tags"><span class="tag free">免费</span><span class="tag print">导出 PDF</span></div>
+      </article>
+
+      <article class="card" data-cat="c3" data-t="Squibler 小说 长篇 AI">
+        <div class="row"><h3>Squibler</h3></div>
+        <a class="url" href="https://www.squibler.io" target="_blank" rel="noopener">squibler.io ↗</a>
+        <p>AI 辅助长篇写作，从大纲到章节，小说和非虚构都覆盖，适合真正想写完一本书的人。</p>
+        <div class="tags"><span class="tag paid">付费为主</span></div>
+      </article>
+
+      <article class="card" data-cat="c3" data-t="Sudowrite 小说 改写 扩写">
+        <div class="row"><h3>Sudowrite</h3></div>
+        <a class="url" href="https://www.sudowrite.com" target="_blank" rel="noopener">sudowrite.com ↗</a>
+        <p>小说创作者的 AI 工作台：改写、扩写、头脑风暴、风格模仿。纯写作，不做排版。</p>
+        <div class="tags"><span class="tag paid">付费</span></div>
+      </article>
+
+      <article class="card" data-cat="c3" data-t="Novelcrafter 长篇 世界观 设定">
+        <div class="row"><h3>Novelcrafter</h3></div>
+        <a class="url" href="https://www.novelcrafter.com" target="_blank" rel="noopener">novelcrafter.com ↗</a>
+        <p>带角色库、世界观设定的长篇小说工作台，AI 续写可控性强，适合系列作品。</p>
+        <div class="tags"><span class="tag paid">付费</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 04 ============ -->
+  <section id="s4">
+    <div class="sec-head"><span class="sec-no">04</span><h2>儿童绘本 / 个性化故事书</h2></div>
+    <p class="sec-sub">对应 BookletAI 的「AI 绘本生成器」。输入孩子名字或一句创意，出图文绘本，多数能直接印成精装。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c4" data-t="BookBildr 儿童绘本 AI 插图 印刷">
+        <div class="row"><h3>BookBildr</h3></div>
+        <a class="url" href="https://www.bookbildr.com" target="_blank" rel="noopener">bookbildr.com ↗</a>
+        <p>在线做儿童绘本：写故事、AI 生成插图、自动排版，然后直接下单印实体书，单本起印。</p>
+        <div class="tags"><span class="tag free">免费注册</span><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c4" data-t="StoryJumper 绘本 课堂 印刷">
+        <div class="row"><h3>StoryJumper</h3></div>
+        <a class="url" href="https://www.storyjumper.com" target="_blank" rel="noopener">storyjumper.com ↗</a>
+        <p>孩子自己动手做绘本，素材库和模板丰富，可印实体书，教育场景用得多。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c4" data-t="MyStorybook 绘本 拖拽">
+        <div class="row"><h3>MyStorybook</h3></div>
+        <a class="url" href="https://www.mystorybook.com" target="_blank" rel="noopener">mystorybook.com ↗</a>
+        <p>简单拖拽做绘本，界面干净，适合课堂和亲子共创。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c4" data-t="Bedtimestory AI 睡前故事 个性化">
+        <div class="row"><h3>Bedtimestory.ai</h3></div>
+        <a class="url" href="https://www.bedtimestory.ai" target="_blank" rel="noopener">bedtimestory.ai ↗</a>
+        <p>一句话生成带插图的个性化睡前故事书，孩子当主角，可朗读、可打印，订阅制。</p>
+        <div class="tags"><span class="tag paid">订阅</span></div>
+      </article>
+
+      <article class="card" data-cat="c4" data-t="Oscar Stories 儿童 故事 App">
+        <div class="row"><h3>Oscar Stories</h3></div>
+        <a class="url" href="https://oscarstories.com" target="_blank" rel="noopener">oscarstories.com ↗</a>
+        <p>App 形态的个性化儿童故事，含插图、朗读与主题合集，家长口碑不错。</p>
+        <div class="tags"><span class="tag paid">订阅</span></div>
+      </article>
+
+      <article class="card" data-cat="c4" data-t="Wonderbly 名字定制 精装 礼物">
+        <div class="row"><h3>Wonderbly</h3></div>
+        <a class="url" href="https://www.wonderbly.com" target="_blank" rel="noopener">wonderbly.com ↗</a>
+        <p>名字定制的精装儿童书，礼物属性强，成品印刷品质高。适合买而不是「做」。</p>
+        <div class="tags"><span class="tag print">印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c4" data-t="Hooray Heroes 定制 家庭 绘本">
+        <div class="row"><h3>Hooray Heroes</h3></div>
+        <a class="url" href="https://hoorayheroes.com" target="_blank" rel="noopener">hoorayheroes.com ↗</a>
+        <p>把家人形象画进故事里的定制绘本，可印精装，适合生日、父亲节这类节点。</p>
+        <div class="tags"><span class="tag print">印刷</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 05 ============ -->
+  <section id="s5">
+    <div class="sec-head"><span class="sec-no">05</span><h2>照片书 / 印刷成册：把册子拿在手上</h2></div>
+    <p class="sec-sub">AI 排版 + 印刷供应链。做纪念册、旅行册、作品集、企业画册，最终交付是实物。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c5" data-t="Mixbook 照片书 AI 排版">
+        <div class="row"><h3>Mixbook</h3></div>
+        <a class="url" href="https://www.mixbook.com" target="_blank" rel="noopener">mixbook.com ↗</a>
+        <p>照片书 / 日历 / 卡片，AI 自动排版和设计建议好用，成品质量口碑靠前，适合家庭纪念册。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="Shutterfly 照片书 模板 折扣">
+        <div class="row"><h3>Shutterfly</h3></div>
+        <a class="url" href="https://www.shutterfly.com" target="_blank" rel="noopener">shutterfly.com ↗</a>
+        <p>老牌照片书，模板多、常年打折，做家庭相册最省心。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="Snapfish 便宜 照片书">
+        <div class="row"><h3>Snapfish</h3></div>
+        <a class="url" href="https://www.snapfish.com" target="_blank" rel="noopener">snapfish.com ↗</a>
+        <p>便宜大碗的照片书与冲印，预算优先时选它。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="Artifact Uprising 高端 纸张 装帧">
+        <div class="row"><h3>Artifact Uprising</h3></div>
+        <a class="url" href="https://www.artifactuprising.com" target="_blank" rel="noopener">artifactuprising.com ↗</a>
+        <p>高端纸张与装帧，做纪念册、作品集质感最好之一，价格也高。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="Blurb 自助出版 杂志 照片书">
+        <div class="row"><h3>Blurb</h3></div>
+        <a class="url" href="https://www.blurb.com" target="_blank" rel="noopener">blurb.com ↗</a>
+        <p>自助出版 + 照片书 + 杂志，可小批量印刷并上架销售，创作者出书常用。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="Lulu 按需印刷 自助出版">
+        <div class="row"><h3>Lulu</h3></div>
+        <a class="url" href="https://www.lulu.com" target="_blank" rel="noopener">lulu.com ↗</a>
+        <p>按需印刷与自助出版，书、杂志、年鉴都能印，单本起做。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="MagCloud 杂志 按需印刷 单本">
+        <div class="row"><h3>MagCloud</h3></div>
+        <a class="url" href="https://www.magcloud.com" target="_blank" rel="noopener">magcloud.com ↗</a>
+        <p>按需印杂志与小册子，单本起印，适合作品集、独立刊物、企业画册。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="Chatbooks 自动 相册 订阅">
+        <div class="row"><h3>Chatbooks</h3></div>
+        <a class="url" href="https://chatbooks.com" target="_blank" rel="noopener">chatbooks.com ↗</a>
+        <p>从手机相册自动生成小相册，订阅制，主打「不用动手」。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="MILK Books 高端 手工装帧 杂志">
+        <div class="row"><h3>MILK Books</h3></div>
+        <a class="url" href="https://www.milkbooks.com" target="_blank" rel="noopener">milkbooks.com ↗</a>
+        <p>手工装帧的高端相册与杂志，婚礼、旅行纪念这类「一次性重要场合」合适。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c5" data-t="Pinhole Press 设计感 照片书 礼品">
+        <div class="row"><h3>Pinhole Press</h3></div>
+        <a class="url" href="https://pinholepress.com" target="_blank" rel="noopener">pinholepress.com ↗</a>
+        <p>设计感强的照片书与礼品，排版克制，适合送礼。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 06 ============ -->
+  <section id="s6">
+    <div class="sec-head"><span class="sec-no">06</span><h2>垂类：菜谱书 · 年鉴 · 作品集</h2></div>
+    <p class="sec-sub">BookletAI 把「菜谱书 / 年鉴 / 作品集 / 员工手册」拆成了独立工具页，这些是各垂类里真正做深了的站。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c6" data-t="Heritage Cookbook 家族菜谱 精装">
+        <div class="row"><h3>Heritage Cookbook</h3></div>
+        <a class="url" href="https://heritagecookbook.com" target="_blank" rel="noopener">heritagecookbook.com ↗</a>
+        <p>收集亲友食谱、排版成精装家族菜谱书，适合作为传家礼物。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c6" data-t="CreateMyCookbook 菜谱 在线 印刷">
+        <div class="row"><h3>CreateMyCookbook</h3></div>
+        <a class="url" href="https://www.createmycookbook.com" target="_blank" rel="noopener">createmycookbook.com ↗</a>
+        <p>在线做菜谱书，可导入现有食谱、排版并印制成册。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c6" data-t="Morris Press 团体 菜谱 募款">
+        <div class="row"><h3>Morris Press Cookbooks</h3></div>
+        <a class="url" href="https://www.morriscookbooks.com" target="_blank" rel="noopener">morriscookbooks.com ↗</a>
+        <p>团体募款菜谱书老厂，学校、教会、社团批量印制的那一类。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c6" data-t="TreeRing 年鉴 学校 定制">
+        <div class="row"><h3>TreeRing</h3></div>
+        <a class="url" href="https://www.treering.com" target="_blank" rel="noopener">treering.com ↗</a>
+        <p>学校年鉴，家长可以定制自己孩子的那几页，按需印刷。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c6" data-t="Jostens 年鉴 毕业册 学校">
+        <div class="row"><h3>Jostens</h3></div>
+        <a class="url" href="https://www.jostens.com" target="_blank" rel="noopener">jostens.com ↗</a>
+        <p>年鉴、毕业册、毕业纪念品的学校渠道服务商，偏机构采购。</p>
+        <div class="tags"><span class="tag print">可印刷</span></div>
+      </article>
+
+      <article class="card" data-cat="c6" data-t="Pixpa 作品集 网站 摄影师">
+        <div class="row"><h3>Pixpa</h3></div>
+        <a class="url" href="https://www.pixpa.com" target="_blank" rel="noopener">pixpa.com ↗</a>
+        <p>摄影师 / 设计师作品集网站，模板化上线快，可挂客户选片与销售。</p>
+        <div class="tags"><span class="tag paid">付费</span></div>
+      </article>
+
+      <article class="card" data-cat="c6" data-t="Format 作品集 创意人 建站">
+        <div class="row"><h3>Format</h3></div>
+        <a class="url" href="https://www.format.com" target="_blank" rel="noopener">format.com ↗</a>
+        <p>创意人作品集建站，模板审美在线，适合把作品集做成可滚动在线册子。</p>
+        <div class="tags"><span class="tag paid">付费</span></div>
+      </article>
+
+      <article class="card" data-cat="c6" data-t="Adobe Portfolio 免费 作品集">
+        <div class="row"><h3>Adobe Portfolio</h3></div>
+        <a class="url" href="https://portfolio.adobe.com" target="_blank" rel="noopener">portfolio.adobe.com ↗</a>
+        <p>Creative Cloud 订阅用户免费用的作品集站点，和 Behance 打通。</p>
+        <div class="tags"><span class="tag free">随 CC 免费</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 07 ============ -->
+  <section id="s7">
+    <div class="sec-head"><span class="sec-no">07</span><h2>中文 / 国内可直接用</h2></div>
+    <p class="sec-sub">不用翻墙、能用支付宝微信、模板和字体符合中文排版习惯。这是 BookletAI 之外最实用的一档。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c7" data-t="可画 Canva 中文 模板 画册">
+        <div class="row"><h3>可画 Canva</h3></div>
+        <a class="url" href="https://www.canva.cn" target="_blank" rel="noopener">canva.cn ↗</a>
+        <p>Canva 中国版，中文字体和模板齐全，画册、宣传册、菜单、手册都能做，AI 文案与抠图可用。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span></div>
+      </article>
+
+      <article class="card" data-cat="c7" data-t="稿定设计 电商 营销 模板">
+        <div class="row"><h3>稿定设计</h3></div>
+        <a class="url" href="https://www.gaoding.com" target="_blank" rel="noopener">gaoding.com ↗</a>
+        <p>电商与营销模板 + AI 生成，做产品册、详情页、菜单、活动物料很顺手。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span></div>
+      </article>
+
+      <article class="card" data-cat="c7" data-t="创客贴 在线设计 模板">
+        <div class="row"><h3>创客贴</h3></div>
+        <a class="url" href="https://www.chuangkit.com" target="_blank" rel="noopener">chuangkit.com ↗</a>
+        <p>老牌在线设计平台，小册子、折页、易拉宝模板多，适合市场部自助出图。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span></div>
+      </article>
+
+      <article class="card" data-cat="c7" data-t="美图设计室 AI 海报 商品图">
+        <div class="row"><h3>美图设计室</h3></div>
+        <a class="url" href="https://design.meitu.com" target="_blank" rel="noopener">design.meitu.com ↗</a>
+        <p>AI 海报、商品图与画册，手机端体验好，适合小商家快速出物料。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span></div>
+      </article>
+
+      <article class="card" data-cat="c7" data-t="AiPPT 一句话 PPT 导出">
+        <div class="row"><h3>AiPPT</h3></div>
+        <a class="url" href="https://www.aippt.cn" target="_blank" rel="noopener">aippt.cn ↗</a>
+        <p>一句话或一份文档生成整套 PPT，可导出 PDF 当册子用，中文排版适配好。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span></div>
+      </article>
+
+      <article class="card" data-cat="c7" data-t="讯飞智文 科大讯飞 PPT Word">
+        <div class="row"><h3>讯飞智文</h3></div>
+        <a class="url" href="https://zhiwen.xfyun.cn" target="_blank" rel="noopener">zhiwen.xfyun.cn ↗</a>
+        <p>科大讯飞的 AI 文档工具：生成 PPT 与 Word 报告，适合体制内 / 汇报场景。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span></div>
+      </article>
+
+      <article class="card" data-cat="c7" data-t="WPS AI 文档 演示 金山">
+        <div class="row"><h3>WPS AI</h3></div>
+        <a class="url" href="https://www.wps.cn" target="_blank" rel="noopener">wps.cn ↗</a>
+        <p>WPS 文档与演示内置 AI，写作、排版、导出 PDF 一条龙，办公场景最顺手。</p>
+        <div class="tags"><span class="tag paid">会员</span><span class="tag cn">中文</span></div>
+      </article>
+
+      <article class="card" data-cat="c7" data-t="百度文库 AI 文档 模板">
+        <div class="row"><h3>百度文库 AI</h3></div>
+        <a class="url" href="https://wenku.baidu.com" target="_blank" rel="noopener">wenku.baidu.com ↗</a>
+        <p>文库的 AI 文档与 PPT 生成，背靠海量中文模板和资料库，适合快速凑出一版可用的稿子。</p>
+        <div class="tags"><span class="tag free">免费额度</span><span class="tag cn">中文</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 08 ============ -->
+  <section id="s8">
+    <div class="sec-head"><span class="sec-no">08</span><h2>相邻一档：AI 演示文稿</h2></div>
+    <p class="sec-sub">很多「小册子」实际是用幻灯片做的。如果你要的是一页页翻的成品、能导出 PDF，这一档也能顶。</p>
+    <div class="grid">
+
+      <article class="card" data-cat="c8" data-t="Beautiful.ai 智能排版 提案">
+        <div class="row"><h3>Beautiful.ai</h3></div>
+        <a class="url" href="https://www.beautiful.ai" target="_blank" rel="noopener">beautiful.ai ↗</a>
+        <p>规则驱动的智能排版，幻灯片不会乱，适合做提案册、销售册。</p>
+        <div class="tags"><span class="tag paid">付费为主</span></div>
+      </article>
+
+      <article class="card" data-cat="c8" data-t="Plus AI Google Slides 插件">
+        <div class="row"><h3>Plus AI</h3></div>
+        <a class="url" href="https://www.plusdocs.com" target="_blank" rel="noopener">plusdocs.com ↗</a>
+        <p>Google Slides / PowerPoint 里的 AI 插件，按大纲生成整份演示，改稿也在原软件里。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c8" data-t="Presentations.ai 提示词 演示">
+        <div class="row"><h3>Presentations.ai</h3></div>
+        <a class="url" href="https://www.presentations.ai" target="_blank" rel="noopener">presentations.ai ↗</a>
+        <p>提示词生成完整演示，带品牌模板、协作与分享分析。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c8" data-t="Decktopus 问卷 生成 deck">
+        <div class="row"><h3>Decktopus</h3></div>
+        <a class="url" href="https://www.decktopus.com" target="_blank" rel="noopener">decktopus.com ↗</a>
+        <p>填几个问题就出一份 deck，能嵌表单和链接，适合销售与课程。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c8" data-t="SlidesAI 长文本 转 幻灯片">
+        <div class="row"><h3>SlidesAI</h3></div>
+        <a class="url" href="https://www.slidesai.io" target="_blank" rel="noopener">slidesai.io ↗</a>
+        <p>把长文本一键变幻灯片，Google Slides 插件，写好的报告直接转成册子。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c8" data-t="Chronicle 设计感 演示">
+        <div class="row"><h3>Chronicle</h3></div>
+        <a class="url" href="https://chroniclehq.com" target="_blank" rel="noopener">chroniclehq.com ↗</a>
+        <p>AI 生成有设计感的演示，视觉偏高端，适合品牌发布、对外提案。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+      <article class="card" data-cat="c8" data-t="Tome 叙事 演示 销售">
+        <div class="row"><h3>Tome</h3></div>
+        <a class="url" href="https://tome.app" target="_blank" rel="noopener">tome.app ↗</a>
+        <p>叙事式 AI 演示的开创者，现在重心转向销售场景，做故事型提案仍然好用。</p>
+        <div class="tags"><span class="tag paid">付费为主</span></div>
+      </article>
+
+      <article class="card" data-cat="c8" data-t="Genspark AI agent 文档 幻灯片">
+        <div class="row"><h3>Genspark</h3></div>
+        <a class="url" href="https://www.genspark.ai" target="_blank" rel="noopener">genspark.ai ↗</a>
+        <p>通用 AI agent，可产出文档、幻灯片与网页，适合「给我做一份完整材料」这类模糊需求。</p>
+        <div class="tags"><span class="tag free">免费额度</span></div>
+      </article>
+
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>说明</b>：清单以 2026 年 11 月访问到的公开信息为准，站点功能、免费额度和定价会变；部分海外站点在国内需要网络代理，付款可能需要外币卡。标「可印刷」表示该站自带印刷 / 按需打印服务，标「导出 PDF」表示能以 PDF 形式交付。</p>
+    <p style="margin-top:10px">基准站：<a href="https://bookletai.org/zh/index.html" target="_blank" rel="noopener">BookletAI 中文站</a> · 本页仅为整理，不含推广链接。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var countEl = document.getElementById('count');
+  var activeCat = 'all';
+
+  function apply(){
+    var term = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c){
+      var okCat = (activeCat === 'all') || (c.dataset.cat === activeCat);
+      var text = (c.textContent + ' ' + (c.dataset.t || '')).toLowerCase();
+      var okTerm = !term || text.indexOf(term) !== -1;
+      var show = okCat && okTerm;
+      c.classList.toggle('hide', !show);
+      if(show) shown++;
+    });
+    sections.forEach(function(s){
+      var any = s.querySelectorAll('.card:not(.hide)').length > 0;
+      s.style.display = any ? '' : 'none';
+    });
+    countEl.textContent = (term || activeCat !== 'all')
+      ? '当前显示 ' + shown + ' / ' + cards.length + ' 个站点'
+      : '共 ' + cards.length + ' 个站点，按「像不像 BookletAI」排序';
+  }
+
+  q.addEventListener('input', apply);
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('on'); });
+      ch.classList.add('on');
+      activeCat = ch.dataset.f;
+      apply();
+      window.scrollTo({top: document.querySelector('nav.chips').offsetTop - 1, behavior:'smooth'});
+    });
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>

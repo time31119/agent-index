@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>跟单工作台 · 循迹 TRACE</title>
+  <meta name="description" content="循迹跟单工作台演示：账户权益、跟单仓位、风控阀门、信号流与高水位分润。">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#070a09">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="terminal-body">
+  <a class="skip-link" href="#termMain">跳至工作台内容</a>
+
+  <div class="terminal-shell">
+    <aside class="side-rail" aria-label="工作台导航">
+      <a class="brand" href="index.html" aria-label="循迹 TRACE 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 26L12 8L18 19L28 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/>
+          <circle cx="12" cy="8" r="2.2" fill="currentColor"/>
+          <circle cx="18" cy="19" r="2.2" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">循迹</span>
+        <span class="brand-wordmark">TRACE</span>
+      </a>
+
+      <nav class="side-nav" aria-label="工作台分区">
+        <span class="side-label">WORKSPACE / 工作台</span>
+        <a class="side-link active" href="#overview"><span class="icon">01</span> 总览 <span class="side-badge">LIVE</span></a>
+        <a class="side-link" href="#positions"><span class="icon">02</span> 跟单仓位 <span class="side-badge">3</span></a>
+        <a class="side-link" href="#risk-control"><span class="icon">03</span> 风控阀门</a>
+        <a class="side-link" href="#signals"><span class="icon">04</span> 信号流</a>
+        <span class="side-label">LEDGER / 账本</span>
+        <a class="side-link" href="#ledger"><span class="icon">05</span> 分润账本</a>
+        <a class="side-link" href="#reconcile"><span class="icon">06</span> 对账</a>
+        <a class="side-link" href="compliance.html"><span class="icon">07</span> 合规</a>
+      </nav>
+
+      <div class="side-foot">
+        <div class="rail-account">
+          <div class="rail-account-top"><span>COPY ACCOUNT</span><i class="live-dot" aria-hidden="true"></i></div>
+          <strong>$12,846.20</strong>
+          <small>SIMULATED · USDT</small>
+        </div>
+        <p class="rail-version">TRACE TERMINAL v0.9<br>DEMO BUILD · NOT LIVE TRADING</p>
+      </div>
+    </aside>
+
+    <div class="term-main">
+      <header class="term-topbar">
+        <div class="crumbs">
+          <a href="index.html">TRACE</a>
+          <span class="sep">/</span>
+          <span>工作台</span>
+          <span class="sep">/</span>
+          <b>总览</b>
+        </div>
+        <div class="topbar-actions">
+          <span class="net-status"><i class="live-dot" aria-hidden="true"></i> HL CONNECTED · 17ms</span>
+          <span class="account-chip"><span class="account-avatar">L</span> lin@trace.demo <span style="color:var(--faint)">·</span> 模拟账户</span>
+          <span class="account-chip" id="termClock">00:00:00</span>
+        </div>
+      </header>
+
+      <main class="term-content" id="termMain" tabindex="-1">
+        <div class="term-head" id="overview">
+          <div>
+            <span class="eyebrow">SIMULATED ACCOUNT / 模拟账户</span>
+            <h1><span id="greeting">你好</span>，Lin。</h1>
+            <p>跟单引擎运行正常。今日已拦截 1 笔超额滑点订单，无对账异常。</p>
+          </div>
+          <div class="term-head-actions">
+            <button class="copy-state" id="copyToggle" type="button" data-running="true" aria-pressed="true">
+              <i class="live-dot" aria-hidden="true"></i> <span>跟单运行中</span>
+            </button>
+            <button class="btn btn-ghost btn-small" id="simulateSignal" type="button">模拟新信号 <span class="arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+
+        <section class="term-stats" aria-label="账户概览">
+          <div class="term-stat">
+            <div class="term-stat-label">Account Equity / 账户权益</div>
+            <div class="term-stat-value">$12,846<small>.20</small></div>
+            <div class="term-stat-foot"><span class="up">+2.49%</span><span>过去 24 小时</span></div>
+          </div>
+          <div class="term-stat">
+            <div class="term-stat-label">Today PnL / 今日盈亏</div>
+            <div class="term-stat-value" style="color:var(--lime)">+$312<small>.40</small></div>
+            <div class="term-stat-foot"><span class="up">+$86.10</span><span>较昨日</span></div>
+          </div>
+          <div class="term-stat">
+            <div class="term-stat-label">Open Positions / 跟单仓位</div>
+            <div class="term-stat-value" id="positionCount">3<small> 个</small></div>
+            <div class="term-stat-foot"><span>2 多</span><span>·</span><span>1 空</span></div>
+          </div>
+          <div class="term-stat">
+            <div class="term-stat-label">Risk Status / 风控状态</div>
+            <div class="term-stat-value" style="font-size:20px;color:var(--mint)">正常</div>
+            <div class="term-stat-foot"><span>熔断剩余</span><span style="color:var(--muted)">$1,027.70</span></div>
+          </div>
+        </section>
+
+        <div class="dash-grid">
+          <div class="dash-col">
+            <section class="panel" aria-labelledby="equityTitle">
+              <div class="panel-head">
+                <div class="panel-title" id="equityTitle">账户权益 <span class="mono">EQUITY CURVE</span></div>
+                <div class="panel-tools" role="group" aria-label="选择图表周期">
+                  <button class="chip-btn active" type="button" data-range="7D" aria-pressed="true">7D</button>
+                  <button class="chip-btn" type="button" data-range="30D" aria-pressed="false">30D</button>
+                  <button class="chip-btn" type="button" data-range="90D" aria-pressed="false">90D</button>
+                </div>
+              </div>
+              <div class="chart-wrap">
+                <div class="chart-tooltip" id="chartTooltip" aria-hidden="true">
+                  <div class="tt-date">—</div>
+                  <div class="tt-value">—</div>
+                </div>
+                <svg id="equityChart" viewBox="0 0 760 280" role="img" aria-label="账户权益曲线，当前 12,846.20 USDT">
+                  <defs>
+                    <linearGradient id="equityArea" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#c6f75a" stop-opacity=".17"/>
+                      <stop offset="1" stop-color="#c6f75a" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="chart-legend">
+                  <span><i aria-hidden="true"></i> 账户权益 / USDT</span>
+                  <span>高水位 $12,540.00 · 数据为演示样本</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel" id="positions" aria-labelledby="positionsTitle">
+              <div class="panel-head">
+                <div class="panel-title" id="positionsTitle">当前仓位 <span class="mono">OPEN POSITIONS</span></div>
+                <div class="panel-tools">
+                  <span class="tag tag-live">3 / 3</span>
+                  <button class="chip-btn" type="button" id="closeAll" style="color:var(--faint)">全部平仓</button>
+                </div>
+              </div>
+              <div class="table-scroll">
+                <table class="pos-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">合约</th>
+                      <th scope="col">方向</th>
+                      <th scope="col">数量</th>
+                      <th scope="col">开仓价</th>
+                      <th scope="col">标记价</th>
+                      <th scope="col">未实现盈亏</th>
+                      <th scope="col">收益率</th>
+                      <th scope="col"><span class="sr-only">操作</span></th>
+                    </tr>
+                  </thead>
+                  <tbody id="posBody">
+                    <tr data-pnl="42.00" data-notional="4147.20">
+                      <td><span class="pos-asset"><span class="asset-mark">B</span> BTC-PERP</span></td>
+                      <td><span class="pos-side long">▲ LONG</span></td>
+                      <td>0.0600</td>
+                      <td>68,420.0</td>
+                      <td>69,120.0</td>
+                      <td class="pos-pnl up">+$42.00</td>
+                      <td class="pos-pnl up">+0.31%</td>
+                      <td><button class="pos-close" type="button"><span class="sr-only">平掉 BTC 仓位</span>平仓</button></td>
+                    </tr>
+                    <tr data-pnl="25.92" data-notional="2889.92">
+                      <td><span class="pos-asset"><span class="asset-mark">E</span> ETH-PERP</span></td>
+                      <td><span class="pos-side long">▲ LONG</span></td>
+                      <td>0.8000</td>
+                      <td>3,580.0</td>
+                      <td>3,612.4</td>
+                      <td class="pos-pnl up">+$25.92</td>
+                      <td class="pos-pnl up">+0.17%</td>
+                      <td><button class="pos-close" type="button"><span class="sr-only">平掉 ETH 仓位</span>平仓</button></td>
+                    </tr>
+                    <tr data-pnl="14.40" data-notional="2054.40">
+                      <td><span class="pos-asset"><span class="asset-mark">S</span> SOL-PERP</span></td>
+                      <td><span class="pos-side short">▼ SHORT</span></td>
+                      <td>12.00</td>
+                      <td>172.40</td>
+                      <td>171.20</td>
+                      <td class="pos-pnl up">+$14.40</td>
+                      <td class="pos-pnl up">+0.33%</td>
+                      <td><button class="pos-close" type="button"><span class="sr-only">平掉 SOL 仓位</span>平仓</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="logTitle">
+              <div class="panel-head">
+                <div class="panel-title" id="logTitle">执行日志 <span class="mono">EXECUTION LOG</span></div>
+                <span class="tag tag-soft">TAIL 4</span>
+              </div>
+              <div class="log-list">
+                <div class="log-row"><span class="log-tag">14:32:09</span><span class="log-msg">ORDER FILLED · BTC-PERP · 0.0600 @ 68,441.5 · slip +0.031%</span><span class="log-ok">OK</span></div>
+                <div class="log-row"><span class="log-tag">14:31:56</span><span class="log-msg">RISK BLOCKED · ETH-PERP · 滑点 0.42% &gt; 0.30%</span><span style="color:var(--orange);font-size:7px">BLOCK</span></div>
+                <div class="log-row"><span class="log-tag">14:30:02</span><span class="log-msg">RECONCILE PASS · bias 0.31% · next in 30s</span><span class="log-ok">OK</span></div>
+                <div class="log-row"><span class="log-tag">14:29:51</span><span class="log-msg">SIGNAL INGESTED · HL · ATLAS-07 · event evt_8f21</span><span class="log-ok">OK</span></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dash-col">
+            <section class="panel" id="risk-control" aria-labelledby="riskMiniTitle">
+              <div class="panel-head">
+                <div class="panel-title" id="riskMiniTitle">风控阀门 <span class="mono">RISK VALVES</span></div>
+                <span class="tag tag-live">ACTIVE</span>
+              </div>
+              <div class="risk-mini">
+                <div class="range-row">
+                  <div class="range-head">
+                    <span class="range-label">单笔滑点上限 <small>开仓取消 / 平仓转市价</small></span>
+                    <span class="range-value" id="slipValueT">0.30%</span>
+                  </div>
+                  <input id="slipRangeT" type="range" min="0.05" max="1" step="0.05" value="0.30" aria-label="单笔滑点上限">
+                </div>
+                <div class="range-row">
+                  <div class="range-head">
+                    <span class="range-label">杠杆上限 <small>低于交易员设置</small></span>
+                    <span class="range-value" id="levValueT">3.0x</span>
+                  </div>
+                  <input id="levRangeT" type="range" min="1" max="3" step="0.1" value="3" aria-label="杠杆上限">
+                </div>
+                <div class="range-row">
+                  <div class="range-head">
+                    <span class="range-label">单日亏损熔断 <small>按账户权益计算</small></span>
+                    <span class="range-value" id="lossValueT">8%</span>
+                  </div>
+                  <input id="lossRangeT" type="range" min="2" max="20" step="1" value="8" aria-label="单日亏损熔断">
+                </div>
+              </div>
+              <dl class="risk-summary">
+                <div><dt>今日剩余额度</dt><dd id="dailyRemaining">$1,027.70</dd></div>
+                <div><dt>保证金占用</dt><dd id="marginUsage">23.6%</dd></div>
+              </dl>
+              <div class="panel-action-row">
+                <button class="btn btn-primary" type="button" id="applyRisk" style="min-height:32px;font-size:9px">应用设置</button>
+                <button class="btn btn-ghost" type="button" id="resetRisk" style="min-height:32px;font-size:9px">重置</button>
+              </div>
+            </section>
+
+            <section class="panel" id="signals" aria-labelledby="signalsTitle">
+              <div class="panel-head">
+                <div class="panel-title" id="signalsTitle">信号流 <span class="mono">SIGNAL FEED</span></div>
+                <button class="chip-btn" type="button" id="feedPause" aria-pressed="false">暂停</button>
+              </div>
+              <div class="signal-list" id="signalFeed" aria-live="polite">
+                <div class="signal-row">
+                  <span class="signal-time">14:32:08</span>
+                  <div class="signal-main">
+                    <div class="signal-title">BTC-PERP <span style="color:var(--lime)">OPEN LONG</span> <span class="source">· HL</span></div>
+                    <div class="signal-meta">ATLAS-07 · Δ 0.50 BTC · 3.0x</div>
+                  </div>
+                  <span class="signal-latency">186ms<small>P95</small></span>
+                </div>
+                <div class="signal-row">
+                  <span class="signal-time">14:31:55</span>
+                  <div class="signal-main">
+                    <div class="signal-title">ETH-PERP <span style="color:var(--orange)">REDUCE 20%</span> <span class="source">· HL</span></div>
+                    <div class="signal-meta">ATLAS-07 · 部分平仓镜像</div>
+                  </div>
+                  <span class="signal-latency">203ms<small>LATENCY</small></span>
+                </div>
+                <div class="signal-row">
+                  <span class="signal-time">14:30:44</span>
+                  <div class="signal-main">
+                    <div class="signal-title">SOL-PERP <span style="color:var(--orange)">OPEN SHORT</span> <span class="source">· OKX</span></div>
+                    <div class="signal-meta">NOVA-03 · 轮询快照 · Δ 40 SOL</div>
+                  </div>
+                  <span class="signal-latency">1.02s<small>POLL</small></span>
+                </div>
+                <div class="signal-row">
+                  <span class="signal-time">14:29:51</span>
+                  <div class="signal-main">
+                    <div class="signal-title">BTC-PERP <span style="color:var(--lime)">OPEN LONG</span> <span class="source">· HL</span></div>
+                    <div class="signal-meta">ATLAS-07 · evt_8f21 · 已去重</div>
+                  </div>
+                  <span class="signal-latency">174ms<small>LATENCY</small></span>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel" id="ledger" aria-labelledby="ledgerTitle">
+              <div class="panel-head">
+                <div class="panel-title" id="ledgerTitle">分润账本 <span class="mono">HIGH-WATER LEDGER</span></div>
+                <span class="tag tag-live">10%</span>
+              </div>
+              <div class="ledger-body">
+                <div class="ledger-hero">
+                  <div>
+                    <div class="ledger-label">Accrued / 待结算分润</div>
+                    <div class="ledger-amount">$30<small>.62</small></div>
+                  </div>
+                  <div class="ring" aria-label="距离下次结算的时间">
+                    <svg viewBox="0 0 42 42" aria-hidden="true">
+                      <circle class="track" cx="21" cy="21" r="18"/>
+                      <circle class="value" id="settleRing" cx="21" cy="21" r="18" stroke-dasharray="113" stroke-dashoffset="34"/>
+                    </svg>
+                    <b id="settleIn">—</b>
+                  </div>
+                </div>
+                <div class="ledger-rows">
+                  <div class="ledger-row"><span>高水位 / HWM</span><b>$12,540.00</b></div>
+                  <div class="ledger-row"><span>当前权益</span><b>$12,846.20</b></div>
+                  <div class="ledger-row"><span>可计费新增盈利</span><b style="color:var(--lime)">+$306.20</b></div>
+                  <div class="ledger-row"><span>下次结算</span><b>UTC+8 00:00</b></div>
+                </div>
+                <p class="ledger-foot">仅在账户完全无持仓时结算；有持仓则顺延至全平后的下一周期。当前为演示账户，未发生真实划转。</p>
+              </div>
+            </section>
+
+            <section class="panel" id="reconcile" aria-labelledby="reconcileTitle">
+              <div class="panel-head">
+                <div class="panel-title" id="reconcileTitle">仓位对账 <span class="mono">RECONCILE / 30S</span></div>
+                <span class="tag tag-live">PASS</span>
+              </div>
+              <div class="reconcile-body">
+                <div class="reconcile-main">
+                  <span class="reconcile-mark" aria-hidden="true">✓</span>
+                  <div>
+                    <strong>仓位一致</strong>
+                    <p>偏差 0.31% · 阈值 5.00% · 2 个信号源</p>
+                  </div>
+                </div>
+                <div class="reconcile-meta">
+                  <span id="reconcileAge">12 秒前完成</span>
+                  <button type="button" id="reconcileRefresh">立即对账</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <p class="table-note" style="margin-top:18px">本工作台为产品原型，所有余额、仓位、成交与分润均为浏览器内演示数据，不连接交易所、不发送订单。与 Hyperliquid、OKX 无隶属或背书关系。加密永续合约风险极高，可能导致本金全部损失。</p>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="terminal.js"></script>
+</body>
+</html>

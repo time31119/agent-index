@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 620" role="img" aria-label="Botanical bloom poster">
+  <defs>
+    <linearGradient id="bl-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10291f"/>
+      <stop offset="1" stop-color="#06130e"/>
+    </linearGradient>
+    <linearGradient id="bl-petal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0ead8"/>
+      <stop offset=".72" stop-color="#c8c2ab"/>
+      <stop offset="1" stop-color="#8c8a78"/>
+    </linearGradient>
+    <radialGradient id="bl-center" cx=".42" cy=".38" r=".7">
+      <stop offset="0" stop-color="#e7a54b"/>
+      <stop offset=".6" stop-color="#bd6d27"/>
+      <stop offset="1" stop-color="#6b3815"/>
+    </radialGradient>
+    <filter id="bl-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+    <pattern id="bl-lines" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <path d="M0 0v26" stroke="#efe9d9" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="460" height="620" fill="url(#bl-bg)"/>
+  <rect width="460" height="620" fill="url(#bl-lines)"/>
+  <text x="28" y="40" fill="#efe9d9" fill-opacity=".74" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2.7">BOTANICAL SERIES</text>
+  <text x="432" y="40" fill="#d6ff58" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="1.4" text-anchor="end">04</text>
+
+  <g transform="translate(230 265)">
+    <ellipse cx="14" cy="162" rx="88" ry="28" fill="#000" opacity=".38" filter="url(#bl-shadow)"/>
+    <g fill="url(#bl-petal)">
+      <path d="M0 0C-15-90-73-118-84-176c-12-64 37-94 78-52 31 32 31 126 6 228z" transform="rotate(0)"/>
+      <path d="M0 0C-15-90-73-118-84-176c-12-64 37-94 78-52 31 32 31 126 6 228z" transform="rotate(60)"/>
+      <path d="M0 0C-15-90-73-118-84-176c-12-64 37-94 78-52 31 32 31 126 6 228z" transform="rotate(120)"/>
+      <path d="M0 0C-15-90-73-118-84-176c-12-64 37-94 78-52 31 32 31 126 6 228z" transform="rotate(180)"/>
+      <path d="M0 0C-15-90-73-118-84-176c-12-64 37-94 78-52 31 32 31 126 6 228z" transform="rotate(240)"/>
+      <path d="M0 0C-15-90-73-118-84-176c-12-64 37-94 78-52 31 32 31 126 6 228z" transform="rotate(300)"/>
+    </g>
+    <circle r="62" fill="url(#bl-center)"/>
+    <g fill="#2c1609" opacity=".68">
+      <circle cx="-22" cy="-8" r="3.5"/><circle cx="-4" cy="-20" r="2.6"/><circle cx="16" cy="-12" r="4"/><circle cx="25" cy="9" r="2.4"/><circle cx="3" cy="18" r="3.2"/><circle cx="-18" cy="18" r="2.1"/>
+    </g>
+    <path d="M1 60c-7 85 17 139 51 185" fill="none" stroke="#d6ff58" stroke-width="4" stroke-linecap="round"/>
+    <path d="M34 204c44-18 77-9 107 16-42 12-78 7-107-16z" fill="#d6ff58" opacity=".86"/>
+    <path d="M24 166c-38-27-72-25-106-4 37 22 72 23 106 4z" fill="#efe9d9" opacity=".45"/>
+  </g>
+
+  <text x="28" y="512" fill="#efe9d9" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-style="italic" letter-spacing="-2.2">Grow</text>
+  <text x="28" y="558" fill="#efe9d9" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-style="italic" letter-spacing="-2.2">wild.</text>
+  <text x="28" y="594" fill="#d6ff58" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" letter-spacing="2.2">A STUDY IN ORGANIC SYSTEMS</text>
+</svg>

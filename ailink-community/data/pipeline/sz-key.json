@@ -1,0 +1,433 @@
+[
+  {
+    "company": "赢时胜",
+    "url": "http://ysstech.com.cn/",
+    "district": "福田区",
+    "pages": [
+      {
+        "url": "http://ysstech.com.cn/",
+        "title": "赢时胜软件-金融行业专业软件开发商",
+        "chars": 1981,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市赢时胜信息技术股份有限公司",
+      "city": "深圳市",
+      "district": "福田区",
+      "website": "http://ysstech.com.cn/",
+      "description": "金融行业专业软件开发商，领先的金融行业IT综合服务商，深交所创业板上市，代码：300377",
+      "sector": "金融科技",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0755-88265110",
+      "email": null,
+      "address": "深圳市福田区皇岗路5001号深业上城南区二期37楼",
+      "products": [
+        "金融产品生命周期系统管理",
+        "TA系统",
+        "直销系统",
+        "反洗钱系统",
+        "资金运营系统",
+        "FOF/MOM基金投资分析系统",
+        "赢胜投研分析系统",
+        "银行间一体化交易",
+        "智能估值",
+        "大数据管理平台",
+        "公募信息披露",
+        "监管信息报送",
+        "保险综合信息管理",
+        "业务管控平台",
+        "运营风险管理",
+        "信用风险预警平台",
+        "投资绩效管理",
+        "新一代资产托管系统V5.0"
+      ],
+      "customers": [
+        "工银瑞信基金",
+        "东吴证券",
+        "平安基金",
+        "新华资产",
+        "长江养老"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "兆威机电",
+    "url": "https://www.zwgear.com/",
+    "district": "宝安区",
+    "pages": [
+      {
+        "url": "https://www.zwgear.com/",
+        "title": "微型驱动系统解决方案-深圳市兆威机电股份有限公司",
+        "chars": 3467,
+        "error": null
+      },
+      {
+        "url": "https://www.zwgear.com/zzsl/about.htm",
+        "title": "深圳市兆威机电股份有限公司-关于我们-兆威机电",
+        "chars": 4077,
+        "error": null
+      },
+      {
+        "url": "https://www.zwgear.com/zzsl/contact.htm",
+        "title": "深圳市兆威机电股份有限公司 | 联系我们",
+        "chars": 2054,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳市兆威机电股份有限公司",
+      "city": "深圳市",
+      "district": "宝安区",
+      "website": "https://www.zwgear.com/",
+      "description": "成立于2001年，是一家集设计、研发、制造于一体的微型驱动系统方案解决商，专注于研发、生产精密传动系统及汽车精密注塑零组件的制造型企业，为客户提供传动方案设计、零件的生产与组装的定制化服务。",
+      "sector": "微型驱动系统",
+      "founded_year": 2001,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-066-2287",
+      "email": "sales@szzhaowei.net",
+      "address": "深圳市宝安区燕罗街道燕川社区燕湖路88号",
+      "products": [
+        "灵巧手传动模组",
+        "行星减速箱",
+        "行星减速箱（高性能版）",
+        "无刷空心杯电机",
+        "有刷直流电机",
+        "步进电机",
+        "编码器",
+        "电路板",
+        "齿轮零部件",
+        "电动滚筒"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "鹏鼎控股",
+    "url": "http://www.avaryholding.com/",
+    "district": "宝安区",
+    "pages": [],
+    "extracted": null,
+    "error": "HTTP Error 503: Service Unavailable; curl failed: curl: (28) Failed to connect to www.avaryholding.com:80 after 21075 ms: Could not connect to server\r\n"
+  },
+  {
+    "company": "领益智造",
+    "url": "http://www.lingyiitech.com/index.html",
+    "district": "龙岗区",
+    "pages": [
+      {
+        "url": "https://www.lingyiitech.com/index.html",
+        "title": "广东领益智造股份有限公司",
+        "chars": 3760,
+        "error": null
+      },
+      {
+        "url": "https://www.lingyiitech.com/CompanyIntroduction/index.html",
+        "title": "广东领益智造股份有限公司",
+        "chars": 2469,
+        "error": null
+      },
+      {
+        "url": "https://www.lingyiitech.com/CompanyIntroduction/index.html#about",
+        "title": "广东领益智造股份有限公司",
+        "chars": 2372,
+        "error": null
+      },
+      {
+        "url": "https://www.lingyiitech.com/ContactUs/index.html",
+        "title": "广东领益智造股份有限公司",
+        "chars": 949,
+        "error": null
+      },
+      {
+        "url": "https://www.lingyiitech.com/InvestorContact/list.html",
+        "title": "广东领益智造股份有限公司",
+        "chars": 1673,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "广东领益智造股份有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.lingyiitech.com",
+      "description": "作为值得信赖的AI终端硬件核心供应商，领益智造在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。",
+      "sector": "AI终端硬件制造",
+      "founded_year": 2006,
+      "team_size": "100000+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": "LY.public@lingyiitech.com",
+      "address": null,
+      "products": [
+        "精密功能件",
+        "结构件",
+        "模组",
+        "液冷散热核心部件",
+        "AI服务器电源解决方案"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "深南电路",
+    "url": "https://www.scc.com.cn/",
+    "district": "龙岗区",
+    "pages": [
+      {
+        "url": "https://www.scc.com.cn/",
+        "title": "",
+        "chars": 1023,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深南电路",
+      "city": null,
+      "district": null,
+      "website": "https://www.scc.com.cn/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "86-755-89300000",
+      "email": null,
+      "address": null,
+      "products": [
+        "印制电路板（PCB）",
+        "电子装联（PCBA）",
+        "封装基板（SUB）",
+        "系统级封装（SIP）"
+      ],
+      "customers": [],
+      "confidence": 0.4
+    },
+    "error": null
+  },
+  {
+    "company": "贝仕达克",
+    "url": "http://www.szbtk.com/",
+    "district": "龙岗区",
+    "pages": [
+      {
+        "url": "http://www.szbtk.com/",
+        "title": "深圳贝仕达克技术股份有限公司",
+        "chars": 62,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "深圳贝仕达克技术股份有限公司",
+      "city": "深圳",
+      "district": null,
+      "website": "http://www.szbtk.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0.2
+    },
+    "error": null
+  },
+  {
+    "company": "新产业生物",
+    "url": "https://www.snibe.com/",
+    "district": "坪山区",
+    "pages": [
+      {
+        "url": "https://www.snibe.com/en/",
+        "title": "Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 5254,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/service/#service6",
+        "title": "Service - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 5329,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/career/#aboutSnibe",
+        "title": "Career - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 3405,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/about/",
+        "title": "About us - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 4796,
+        "error": null
+      },
+      {
+        "url": "https://www.snibe.com/en/about/#aboutus",
+        "title": "About us - Snibe Diagnostic丨CLIA products and Test Menu up to 278 parameters",
+        "chars": 4796,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "新产业生物",
+      "city": "Shenzhen",
+      "district": "Pingshan District",
+      "website": "https://www.snibe.com/en/",
+      "description": "Shenzhen New Industries Biomedical Engineering Co., Ltd. (Snibe Co.,Ltd.) is a bio-medical company specialized in clinical laboratory instruments and in vitro diagnostic reagents, offering the MAGLUMI® Chemiluminescence Immunoassay (CLIA) System with a test menu covering up to 278 parameters.",
+      "sector": "In vitro diagnostics",
+      "founded_year": 1995,
+      "team_size": "3000+",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "86-755-26501514",
+      "email": "sales@snibe.com",
+      "address": "Snibe Building, No.23, Jinxiu East Road, Pingshan District, 518122 Shenzhen, P.R. China",
+      "products": [
+        "MAGLUMI X10",
+        "MAGLUMI X3",
+        "MAGLUMI X6",
+        "MAGLUMI X8",
+        "Biossays C10",
+        "Biossays 240 Plus",
+        "Biossays E6 Plus",
+        "Molecision R8",
+        "Molecision S6",
+        "Molecision MP-32",
+        "Molecision MP-96",
+        "Hemolumi H6",
+        "Biolumi CX Solution-X10+C10",
+        "SATLARS mini-T8",
+        "SATLARS-T8",
+        "SATLARS-TCA"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "基本半导体",
+    "url": "https://www.basicsemi.com/",
+    "district": "坪山区",
+    "pages": [
+      {
+        "url": "https://www.basicsemi.com/",
+        "title": "",
+        "chars": 7942,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "type": "json_object",
+      "name": "基本半导体",
+      "city": null,
+      "district": null,
+      "website": "https://www.basicsemi.com/",
+      "description": null,
+      "sector": null,
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [],
+      "customers": [],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "昂纳科技",
+    "url": "http://www.angnakeji.com/",
+    "district": "坪山区",
+    "pages": [
+      {
+        "url": "http://www.angnakeji.com/",
+        "title": "云南昂纳网络科技有限公司",
+        "chars": 2322,
+        "error": null
+      },
+      {
+        "url": "http://www.angnakeji.com/about.html",
+        "title": "云南昂纳网络科技有限公司",
+        "chars": 1406,
+        "error": null
+      },
+      {
+        "url": "http://www.angnakeji.com/contact.html",
+        "title": "云南昂纳网络科技有限公司",
+        "chars": 2654,
+        "error": null
+      },
+      {
+        "url": "http://www.angnakeji.com/cantact.html",
+        "title": "404 - ҲļĿ¼",
+        "chars": 174,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "云南昂纳网络科技有限公司",
+      "city": "昆明市",
+      "district": "官渡区",
+      "website": "http://www.angnakeji.com/",
+      "description": "云南昂纳网络科技有限公司于2018年注册成立，总部位于云南昆明，主要提供定制化开发、标准化产品、标准服务接口三种核心服务，以网站设计制作和程序研发为核心业务。",
+      "sector": "互联网技术服务",
+      "founded_year": 2018,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "18988430616",
+      "email": "shw@onnakeji.com",
+      "address": "云南省昆明市官渡区关上街道巫家坝中交金地中央公园15号院9栋807",
+      "products": [
+        "APP开发",
+        "企业建站",
+        "小程序开发",
+        "软件外包",
+        "大数据处理",
+        "大屏监控",
+        "架构咨询",
+        "人力外派",
+        "供应链系统",
+        "分销商城",
+        "直播APP",
+        "上门服务",
+        "企业内部交易转让系统",
+        "导购系统",
+        "话费充值",
+        "机票",
+        "会员充值",
+        "代金券",
+        "酒店",
+        "火车票",
+        "汽车票",
+        "电影票",
+        "产品接口"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  }
+]

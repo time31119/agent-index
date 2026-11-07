@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 104" role="img" aria-label="默契 MOQI">
+  <g transform="translate(16 20)">
+    <rect width="64" height="64" rx="14" fill="#C8402C"/>
+    <path d="M24 17.5c-5.6 3.6-8.4 8.1-8.4 14.5s2.8 10.9 8.4 14.5" fill="none" stroke="#F4EFE4" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M40 17.5c5.6 3.6 8.4 8.1 8.4 14.5s-2.8 10.9-8.4 14.5" fill="none" stroke="#F4EFE4" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="32" cy="32" r="3.2" fill="#F4EFE4"/>
+  </g>
+  <text x="102" y="64" font-family="'Noto Serif SC','Songti SC','STSong',serif" font-size="42" font-weight="700" letter-spacing="3" fill="#171713">默契</text>
+  <text x="106" y="86" font-family="'IBM Plex Mono','Consolas',monospace" font-size="10" letter-spacing="5.2" fill="#C8402C">MOQI</text>
+  <text x="166" y="86" font-family="'IBM Plex Mono','Consolas',monospace" font-size="8.5" letter-spacing="1.4" fill="#726D61">CONSENT-FIRST MEMORY CARD</text>
+</svg>

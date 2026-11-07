@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140 120 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">澜算 RTX 4090 八卡推理服务器</title>
+  <desc id="desc">暖白色紧凑型 GPU 服务器产品渲染图，正面为八个环形涡轮风扇与黑色格栅。</desc>
+  <defs>
+    <radialGradient id="ambient4090" cx="50%" cy="45%" r="62%">
+      <stop offset="0" stop-color="#FFD8B8" stop-opacity=".28"/>
+      <stop offset=".56" stop-color="#FF8C5A" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#F2EFE6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ivoryFront" x1="0" y1="0" x2=".7" y2="1">
+      <stop offset="0" stop-color="#F4F0E5"/>
+      <stop offset=".5" stop-color="#DED8C9"/>
+      <stop offset="1" stop-color="#BDB6A6"/>
+    </linearGradient>
+    <linearGradient id="ivorySide" x1="0" y1="0" x2="1" y2=".8">
+      <stop offset="0" stop-color="#C8C1B0"/>
+      <stop offset=".6" stop-color="#9C9689"/>
+      <stop offset="1" stop-color="#6E6A60"/>
+    </linearGradient>
+    <linearGradient id="ivoryTop" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFFCF2"/>
+      <stop offset=".42" stop-color="#E7E1D2"/>
+      <stop offset="1" stop-color="#C3BCAB"/>
+    </linearGradient>
+    <linearGradient id="orange4090" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB58F"/>
+      <stop offset=".38" stop-color="#FF7A48"/>
+      <stop offset="1" stop-color="#D84B1E"/>
+    </linearGradient>
+    <linearGradient id="grille" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#242420"/>
+      <stop offset="1" stop-color="#0C0D0B"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8F8A7E"/>
+      <stop offset=".45" stop-color="#E8E2D4"/>
+      <stop offset=".55" stop-color="#FFFDF7"/>
+      <stop offset="1" stop-color="#948F83"/>
+    </linearGradient>
+    <pattern id="brushed4090" width="5" height="5" patternUnits="userSpaceOnUse">
+      <path d="M0 1H5" stroke="#FFFDF8" stroke-opacity=".15" stroke-width=".6"/>
+    </pattern>
+    <pattern id="mesh4090" width="13" height="13" patternUnits="userSpaceOnUse">
+      <path d="M0 0H13V13" fill="none" stroke="#716C60" stroke-opacity=".35" stroke-width=".65"/>
+    </pattern>
+    <filter id="glow4090" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow4090" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#4E4637" flood-opacity=".4"/>
+    </filter>
+    <filter id="soft4090" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <clipPath id="topClip4090"><path d="M280 380 L480 300 L1020 340 L820 430 Z"/></clipPath>
+    <clipPath id="sideClip4090"><path d="M820 430 L1020 340 L1020 610 L820 700 Z"/></clipPath>
+    <clipPath id="frontClip4090"><path d="M0 0 H540 V320 H0 Z"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#ambient4090)"/>
+  <g opacity=".5" stroke="#B45F38" stroke-width=".6">
+    <path d="M82 690H235M958 206H1118M104 262H206M993 748H1120"/>
+    <path d="M120 698v12M1106 198v14M192 255v14M1092 741v14"/>
+  </g>
+  <g fill="#FF7A48" opacity=".5">
+    <circle cx="174" cy="350" r="2"/><circle cx="1015" cy="171" r="2.2"/><circle cx="962" cy="700" r="1.6"/>
+  </g>
+
+  <ellipse cx="650" cy="744" rx="365" ry="42" fill="#5A5040" opacity=".28" filter="url(#soft4090)"/>
+  <ellipse cx="650" cy="742" rx="230" ry="15" fill="#FF7A48" opacity=".14" filter="url(#soft4090)"/>
+
+  <g filter="url(#shadow4090)">
+    <path d="M280 380 L480 300 L1020 340 L820 430 Z" fill="url(#ivoryTop)" stroke="#9E9788" stroke-width="1.3"/>
+    <path d="M820 430 L1020 340 L1020 610 L820 700 Z" fill="url(#ivorySide)" stroke="#817B6E" stroke-width="1.3"/>
+    <path d="M280 380 L820 430 L820 700 L280 640 Z" fill="url(#ivoryFront)" stroke="#A29A8A" stroke-width="1.3"/>
+    <path d="M280 380 L820 430 L820 700 L280 640 Z" fill="url(#brushed4090)"/>
+
+    <g clip-path="url(#topClip4090)">
+      <path d="M280 380 L480 300 L1020 340 L820 430 Z" fill="url(#mesh4090)" opacity=".55"/>
+      <path d="M318 371 L505 302 L600 309 L408 378 Z" fill="#FFFDF6" opacity=".32"/>
+      <path d="M576 326 L970 353 L895 390 L509 362 Z" fill="#C9C2B2" opacity=".38"/>
+      <g fill="#8F8879">
+        <path d="M586 329l-55 31v8l55-31z"/>
+        <path d="M881 350l-57 32v8l57-32z"/>
+      </g>
+      <g stroke="#7D776B" stroke-width="1" opacity=".5">
+        <path d="M792 353 L966 365"/>
+        <path d="M816 340 L942 348"/>
+      </g>
+      <text x="829" y="382" fill="#6B6559" opacity=".9" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.8" transform="rotate(4.3 829 382)">AIRFLOW OPTIMISED · 4U</text>
+      <path d="M482 301 L1017 340" stroke="#FFE5D5" stroke-opacity=".85" stroke-width="1.7"/>
+      <path d="M280 380 L480 300" stroke="#FF7A48" stroke-width="2.4" filter="url(#glow4090)"/>
+      <g transform="translate(593 314) rotate(4.3)">
+        <rect x="0" y="0" width="250" height="24" rx="3" fill="#F8F4EA" stroke="#ABA292"/>
+        <circle cx="15" cy="12" r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+        <text x="29" y="16" fill="#6D665A" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.1">LANSUAN NODE / RTX 4090</text>
+      </g>
+    </g>
+
+    <g clip-path="url(#sideClip4090)">
+      <path d="M820 430 L1020 340 L1020 610 L820 700 Z" fill="#A7A194"/>
+      <path d="M850 447 L996 374 L996 582 L850 655 Z" fill="#545248" opacity=".55" stroke="#E0DACB" stroke-opacity=".45"/>
+      <g stroke="#2D2C27" stroke-opacity=".7" stroke-width="2">
+        <path d="M867 463 L979 406"/>
+        <path d="M867 481 L979 424"/>
+        <path d="M867 499 L979 442"/>
+        <path d="M867 517 L979 460"/>
+        <path d="M867 535 L979 478"/>
+        <path d="M867 553 L979 496"/>
+        <path d="M867 571 L979 514"/>
+        <path d="M867 589 L979 532"/>
+        <path d="M867 607 L979 550"/>
+      </g>
+      <g fill="#FF7A48" opacity=".9" filter="url(#glow4090)">
+        <circle cx="865" cy="456" r="1.8"/>
+        <circle cx="865" cy="474" r="1.8"/>
+        <circle cx="865" cy="492" r="1.8"/>
+      </g>
+      <path d="M820 430 L820 700" stroke="#FF8D5D" stroke-width="2" filter="url(#glow4090)"/>
+      <path d="M871 435 L1005 370" stroke="#FFFDF8" stroke-opacity=".23" stroke-width="9"/>
+    </g>
+
+    <g transform="matrix(1 0.09259 0 1 280 380)">
+      <g clip-path="url(#frontClip4090)">
+        <path d="M0 0H540V320H0Z" fill="url(#ivoryFront)"/>
+        <path d="M0 0H540V54H0Z" fill="#F7F3E8" opacity=".65"/>
+        <path d="M0 54H540" stroke="#999181" stroke-opacity=".45"/>
+        <path d="M0 278H540V320H0Z" fill="#B9B2A2" opacity=".65"/>
+
+        <text x="24" y="33" fill="#272822" font-family="Arial, sans-serif" font-weight="700" font-size="19" letter-spacing="4">LANSUAN</text>
+        <text x="24" y="46" fill="#7F796C" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="3.2">COMPACT COMPUTE SERIES</text>
+        <text x="516" y="27" fill="#D35426" text-anchor="end" font-family="Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1.2">RTX 4090 / 8-GPU</text>
+        <text x="516" y="40" fill="#8A8375" text-anchor="end" font-family="Arial, sans-serif" font-size="6.5" letter-spacing="1.6">48GB · AIR COOLED</text>
+        <circle cx="499" cy="49" r="2.2" fill="#FF7A48" filter="url(#glow4090)"/>
+
+        <rect x="24" y="68" width="492" height="194" rx="5" fill="url(#grille)" stroke="#3A3932"/>
+        <g>
+          <g transform="translate(87 105)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+          <g transform="translate(210 105)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+          <g transform="translate(333 105)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+          <g transform="translate(456 105)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+          <g transform="translate(87 194)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+          <g transform="translate(210 194)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+          <g transform="translate(333 194)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+          <g transform="translate(456 194)">
+            <circle r="38" fill="#0A0B09" stroke="#4E4B43" stroke-width="2"/>
+            <circle r="31" fill="none" stroke="#FF7A48" stroke-opacity=".85" stroke-width="2"/>
+            <g fill="#8A8880" opacity=".55">
+              <path d="M0 -25C8 -13 8 -5 0 0C-8 -5 -8 -13 0 -25Z"/>
+              <path d="M22 13C10 17 3 13 0 0C11 -2 19 4 22 13Z"/>
+              <path d="M-22 13C-19 4 -11 -2 0 0C3 13 -10 17 -22 13Z"/>
+            </g>
+            <circle r="9" fill="#23251F" stroke="#77736A"/>
+            <circle r="3" fill="#FF7A48" filter="url(#glow4090)"/>
+          </g>
+        </g>
+        <g fill="#FF7A48" filter="url(#glow4090)">
+          <circle cx="36" cy="76" r="1.5"/><circle cx="504" cy="76" r="1.5"/>
+        </g>
+
+        <g font-family="Arial, sans-serif">
+          <text x="24" y="300" fill="#2E2F29" font-size="14" font-weight="700" letter-spacing="2.4">澜算 4090</text>
+          <text x="24" y="312" fill="#857E70" font-size="6.2" letter-spacing="1.5">INFERENCE WORKSTATION</text>
+          <g transform="translate(469 287)">
+            <circle cx="14" cy="10" r="10" fill="#F1ECE0" stroke="#A79F8F"/>
+            <path d="M14 4V10" stroke="#D35426" stroke-width="1.8"/>
+            <circle cx="14" cy="10" r="1.8" fill="#D35426"/>
+          </g>
+          <rect x="427" y="306" width="54" height="3" rx="1.5" fill="#AAA292"/>
+          <rect x="427" y="306" width="37" height="3" rx="1.5" fill="#FF7A48"/>
+        </g>
+      </g>
+      <g>
+        <rect x="-13" y="44" width="12" height="238" rx="3" fill="url(#metal)" stroke="#8D8679"/>
+        <rect x="541" y="44" width="12" height="238" rx="3" fill="url(#metal)" stroke="#8D8679"/>
+        <g fill="#685F50">
+          <rect x="-10" y="66" width="6" height="22" rx="2"/>
+          <rect x="544" y="66" width="6" height="22" rx="2"/>
+        </g>
+      </g>
+    </g>
+
+    <path d="M820 430 L820 700" stroke="#FFA077" stroke-width="1.4"/>
+    <path d="M280 380 L280 640" stroke="#FFFDF4" stroke-width="1.8" opacity=".85"/>
+    <path d="M820 430 L1020 340" stroke="#FFF9EC" stroke-opacity=".5" stroke-width="1.1"/>
+  </g>
+
+  <g opacity=".35" stroke="#FF7A48" stroke-width=".7"><path d="M790 721H1045" stroke-dasharray="2 7"/></g>
+  <g fill="#B9512A" font-family="Arial, sans-serif" font-size="7" letter-spacing="2" opacity=".7"><text x="902" y="714">AIRFLOW / POSITIVE PRESSURE</text></g>
+</svg>

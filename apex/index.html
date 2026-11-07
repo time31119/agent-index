@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APEX — 智能体时代的 App Store</title>
+<meta name="description" content="APEX 是智能体与算力的全球市场：发现经过验证的智能体，按秒调用全球 GPU，统一计量与结算。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230B0C0E'/%3E%3Cpath d='M12 4.5 19.5 19h-4.2L12 11.2 8.7 19H4.5z' fill='%23F4F2EC'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f4f2ec">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="APEX 首页">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+      <span class="brand-word">APEX</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="agents.html" data-nav="agents">智能体</a>
+      <a href="compute.html" data-nav="compute">算力</a>
+      <a href="console.html" data-nav="console">控制台</a>
+      <a href="developers.html" data-nav="developers">开发者</a>
+      <a href="blueprint.html" data-nav="blueprint">平台规划</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="搜索（Ctrl K）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+      </button>
+      <a class="nav-signin" href="console.html">登录</a>
+      <a class="btn btn-sm" href="agents.html">开始使用</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="agents.html">智能体市场</a>
+  <a href="compute.html">算力市场</a>
+  <a href="console.html">控制台</a>
+  <a href="developers.html">开发者中心</a>
+  <a href="blueprint.html">平台规划</a>
+  <a class="btn btn-block" href="agents.html">开始使用</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow on-dark"><span class="dot-live"></span> THE INTELLIGENCE MARKETPLACE · 2026</div>
+      <h1 class="display">智能体时代的<br><span class="serif">App Store</span></h1>
+      <p class="hero-lead">在一个地方，找到全世界最好的智能体，和让它们真正跑起来的算力。统一身份、权限、计量与结算——像下载 App 一样使用智能体，像用电一样调用 GPU。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="agents.html">探索智能体
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline-dark btn-lg" href="compute.html">浏览算力</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num"><span data-count="12400" data-suffix="+">12,400+</span></div>
+          <div class="stat-label">经过验证的智能体</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span data-count="210" data-suffix="k">210k</span></div>
+          <div class="stat-label">在线 GPU</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span data-count="9" data-suffix="">9</span></div>
+          <div class="stat-label">算力区域</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span data-count="1.24" data-decimals="2" data-prefix="$" data-suffix="B">$1.24B</span></div>
+          <div class="stat-label">年化交易额</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="float-card float-a">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 20 6v6.1c0 4.7-3.4 8-8 9.1-4.6-1.1-8-4.4-8-9.1V6z"/><path d="m8.6 12 2.4 2.4 4.4-4.6"/></svg>
+        <div><div class="fc-main">Verified Agent</div><div class="fc-sub">通过 42 项安全与行为审计</div></div>
+      </div>
+      <div class="float-card float-b">
+        <span class="dot-live"></span>
+        <div><div class="fc-main">H200 · 东京</div><div class="fc-sub">$3.49/h · 余量 41% · 12 ms</div></div>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <div class="mock-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <div class="mock-url">apex.run / store</div>
+        </div>
+        <div class="mock-body">
+          <div class="mock-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+            <span>为下周董事会准备一份竞争格局分析</span><span class="caret"></span>
+            <span class="kbd">↵</span>
+          </div>
+          <div class="mock-chips">
+            <span>深度研究</span><span>财报数据</span><span>演示文稿</span><span>预算 &lt; $50</span>
+          </div>
+          <div class="mock-list">
+            <div class="mock-item">
+              <span class="mi-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3.1"/><ellipse cx="12" cy="12" rx="9" ry="4.3" transform="rotate(-24 12 12)"/></svg></span>
+              <div class="mi-body"><div class="mi-name">Atlas Research</div><div class="mi-meta">深度研究 · 4.9 ★ · 82k 安装</div></div>
+              <div class="mi-price">$29/月</div><div class="mi-install">部署</div>
+            </div>
+            <div class="mock-item">
+              <span class="mi-icon g8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 12.4h4.2l2.1-6.2 4 12.2 2.6-6h6.1"/></svg></span>
+              <div class="mi-body"><div class="mi-name">Ledger</div><div class="mi-meta">金融分析 · 4.8 ★ · 46k 安装</div></div>
+              <div class="mi-price">$0.80/次</div><div class="mi-install">部署</div>
+            </div>
+            <div class="mock-item">
+              <span class="mi-icon g3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3 3.4 7.4 12 11.8l8.6-4.4z"/><path d="m3.4 12.2 8.6 4.4 8.6-4.4"/><path d="m3.4 16.8 8.6 4.4 8.6-4.4"/></svg></span>
+              <div class="mi-body"><div class="mi-name">Deck</div><div class="mi-meta">演示文稿 · 4.8 ★ · 52k 安装</div></div>
+              <div class="mi-price">$16/月</div><div class="mi-install">部署</div>
+            </div>
+          </div>
+          <div class="mock-foot">
+            <span class="dot-live" style="width:5px;height:5px"></span>
+            <span>2,184 个任务正在运行</span>
+            <span class="right">H200 $3.49/h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="marquee">
+      <div class="marquee-label">兼容并运行于主流模型与算力 · 生态示意</div>
+      <div class="marquee-track">
+        <span class="marquee-item">OpenAI<span class="sep">·</span></span>
+        <span class="marquee-item">Anthropic<span class="sep">·</span></span>
+        <span class="marquee-item">Google DeepMind<span class="sep">·</span></span>
+        <span class="marquee-item">Meta Llama<span class="sep">·</span></span>
+        <span class="marquee-item">Mistral<span class="sep">·</span></span>
+        <span class="marquee-item">DeepSeek<span class="sep">·</span></span>
+        <span class="marquee-item">Qwen<span class="sep">·</span></span>
+        <span class="marquee-item">NVIDIA<span class="sep">·</span></span>
+        <span class="marquee-item">AMD<span class="sep">·</span></span>
+        <span class="marquee-item">OpenAI<span class="sep">·</span></span>
+        <span class="marquee-item">Anthropic<span class="sep">·</span></span>
+        <span class="marquee-item">Google DeepMind<span class="sep">·</span></span>
+        <span class="marquee-item">Meta Llama<span class="sep">·</span></span>
+        <span class="marquee-item">Mistral<span class="sep">·</span></span>
+        <span class="marquee-item">DeepSeek<span class="sep">·</span></span>
+        <span class="marquee-item">Qwen<span class="sep">·</span></span>
+        <span class="marquee-item">NVIDIA<span class="sep">·</span></span>
+        <span class="marquee-item">AMD<span class="sep">·</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED ================= -->
+<section class="section" id="featured">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> CURATED · 每周精选</div>
+        <h2 class="h2">被验证过的智能体，<br>才配上架。</h2>
+        <p class="lead">不是抓取的目录。每一个上架智能体都经过身份核验、权限审查与真实任务评测，并持续接受运行时分监控。</p>
+      </div>
+      <div class="rail-nav">
+        <button class="rail-btn" data-rail-dir="-1" aria-label="上一组">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="rail-btn" data-rail-dir="1" aria-label="下一组">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="rail-wrap">
+      <div class="rail" id="featuredRail" data-rail></div>
+    </div>
+    <div class="mt-24" data-reveal>
+      <a class="link-arrow" href="agents.html">查看全部 12,400+ 个智能体
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section section-hair" id="browse">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> BROWSE BY JOB</div>
+        <h2 class="h2">按任务找，<br>而不是按模型找。</h2>
+      </div>
+      <p class="lead" style="max-width:360px">用户不关心背后是哪个模型。他们只关心：这件事，能不能被可靠地完成。</p>
+    </div>
+    <div class="cat-grid" id="catGrid" data-reveal></div>
+  </div>
+</section>
+
+<!-- ================= COMPUTE ================= -->
+<section class="section band-dark" id="compute">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot-live"></span> COMPUTE · 现货 / 预留 / 边缘</div>
+        <h2 class="h2">算力不该是瓶颈。</h2>
+        <p class="lead">从 B200 到 RTX 4090，9 个区域，按秒计费。预留实例省 42%，现货最高省 65%，调度失败自动跨区重试。</p>
+      </div>
+      <a class="btn btn-outline-dark" href="compute.html">进入算力市场</a>
+    </div>
+
+    <div class="gpu-panel" data-reveal>
+      <div class="gpu-panel-head">
+        <span class="live"><span class="dot-live"></span> 实时供给快照 · 2 秒前更新</span>
+        <span class="right"><span>按秒计费</span><span>跨区自动重试</span></span>
+      </div>
+      <a class="gpu-row" href="compute.html#gpu-b200">
+        <span class="gpu-name">NVIDIA B200 <span class="chip-mini">FLAGSHIP</span></span>
+        <span class="gpu-spec">192 GB · 4.5 PFLOPS</span>
+        <span class="gpu-price">$5.99 <small>/GPU·h</small></span>
+        <span class="gpu-avail"><span class="avail-bar"><i style="width:14%"></i></span><span>72 卡</span></span>
+        <span class="gpu-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="gpu-row" href="compute.html#gpu-h200">
+        <span class="gpu-name">NVIDIA H200 <span class="chip-mini">POPULAR</span></span>
+        <span class="gpu-spec">141 GB · 1.98 PFLOPS</span>
+        <span class="gpu-price">$3.49 <small>/GPU·h</small></span>
+        <span class="gpu-avail"><span class="avail-bar"><i style="width:40%"></i></span><span>412 卡</span></span>
+        <span class="gpu-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="gpu-row" href="compute.html#gpu-mi300x">
+        <span class="gpu-name">AMD MI300X <span class="chip-mini">VALUE</span></span>
+        <span class="gpu-spec">192 GB · 1.3 PFLOPS</span>
+        <span class="gpu-price">$1.99 <small>/GPU·h</small></span>
+        <span class="gpu-avail"><span class="avail-bar"><i style="width:37%"></i></span><span>288 卡</span></span>
+        <span class="gpu-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="gpu-row" href="compute.html#gpu-l40s">
+        <span class="gpu-name">NVIDIA L40S</span>
+        <span class="gpu-spec">48 GB · 0.73 PFLOPS</span>
+        <span class="gpu-price">$0.89 <small>/GPU·h</small></span>
+        <span class="gpu-avail"><span class="avail-bar"><i style="width:43%"></i></span><span>520 卡</span></span>
+        <span class="gpu-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="gpu-row" href="compute.html#gpu-rtx4090">
+        <span class="gpu-name">NVIDIA RTX 4090 <span class="chip-mini">EDGE</span></span>
+        <span class="gpu-spec">24 GB · 12 个边缘节点</span>
+        <span class="gpu-price">$0.39 <small>/GPU·h</small></span>
+        <span class="gpu-avail"><span class="avail-bar"><i style="width:12%"></i></span><span>240 卡</span></span>
+        <span class="gpu-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+
+    <div class="mini-metrics" data-reveal>
+      <div class="mini-metric"><div class="v"><span data-count="210000" data-suffix="">210,000</span></div><div class="l">GPU 实时在线，跨 6 家供应商</div></div>
+      <div class="mini-metric"><div class="v"><span data-count="99.98" data-decimals="2" data-suffix="%">99.98%</span></div><div class="l">调度成功率 · 过去 90 天</div></div>
+      <div class="mini-metric"><div class="v"><span data-count="38" data-suffix="s">38s</span></div><div class="l">平均冷启动到可服务</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="section" id="trust">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> THE TRUST LAYER</div>
+        <h2 class="h2">上架很难，<br>使用很安心。</h2>
+        <p class="lead">智能体不是网页。它会读文件、调工具、花钱、代表你说话。APEX 把「权限、证据、责任」做成基础设施。</p>
+      </div>
+      <a class="link-arrow" href="blueprint.html#trust">阅读信任架构
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="pillars" data-reveal>
+      <div class="pillar">
+        <div class="n">01 / IDENTITY</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 20 6v6.1c0 4.7-3.4 8-8 9.1-4.6-1.1-8-4.4-8-9.1V6z"/><path d="m8.6 12 2.4 2.4 4.4-4.6"/></svg></div>
+        <h3 class="h4">Agent Passport</h3>
+        <p>每个智能体都有可验证身份：开发者主体、模型版本、工具清单、数据边界，一页看清。</p>
+      </div>
+      <div class="pillar">
+        <div class="n">02 / SANDBOX</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4"/><path d="M3.2 9.4h17.6M9.4 9.4v11.4"/></svg></div>
+        <h3 class="h4">默认隔离</h3>
+        <p>无网络或白名单沙箱、临时文件系统、逐次工具调用审批。敏感动作必须二次确认。</p>
+      </div>
+      <div class="pillar">
+        <div class="n">03 / EVIDENCE</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
+        <h3 class="h4">全程留痕</h3>
+        <p>每次检索、写入、支付都生成可导出证据链。出问题能回放，而不是只看聊天记录。</p>
+      </div>
+      <div class="pillar">
+        <div class="n">04 / LIABILITY</div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-3 7h6zM17 7l-3 7h6z"/></svg></div>
+        <h3 class="h4">责任与赔付</h3>
+        <p>明确平台、开发者、部署方的责任边界。SLA 未达标自动抵扣，安全事件 72 小时披露。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEVELOPER ================= -->
+<section class="section section-hair" id="developers">
+  <div class="wrap split">
+    <div data-reveal>
+      <div class="eyebrow"><span class="dot"></span> DEVELOPER ECONOMY</div>
+      <h2 class="h2 mt-16">你造智能体，<br>我们负责其余。</h2>
+      <p class="lead mt-16">分发、算力、支付、税务、合规、客服——平台接管所有与「把智能体交给陌生人使用」相关的脏活。你保留 85%。</p>
+      <div class="steps-mini mt-32">
+        <div class="step-mini">
+          <span class="idx">01</span>
+          <div><div class="t">描述你的智能体</div><div class="d">一个 manifest 文件，声明模型、工具与权限</div></div>
+          <span class="r">5 min</span>
+        </div>
+        <div class="step-mini">
+          <span class="idx">02</span>
+          <div><div class="t">在沙箱里跑评测</div><div class="d">自动生成 200 个真实任务，行为全程录屏</div></div>
+          <span class="r">2 h</span>
+        </div>
+        <div class="step-mini">
+          <span class="idx">03</span>
+          <div><div class="t">选择上架区域与定价</div><div class="d">订阅、按任务、按席位，或企业私有报价</div></div>
+          <span class="r">10 min</span>
+        </div>
+        <div class="step-mini">
+          <span class="idx">04</span>
+          <div><div class="t">全球上线</div><div class="d">自动扩容，按秒计量，月中结算</div></div>
+          <span class="r">4 min</span>
+        </div>
+      </div>
+      <div class="flex gap-12 mt-32" style="flex-wrap:wrap">
+        <a class="btn" href="developers.html">开始发布</a>
+        <a class="btn btn-ghost" href="developers.html#pricing">查看分成计划</a>
+      </div>
+    </div>
+
+    <div data-reveal>
+      <div class="code-window">
+        <div class="code-head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="file">apex.yaml</span>
+          <span class="lang">YAML</span>
+        </div>
+<pre class="code"><span class="c"># 声明式上架：运行时、权限、算力、定价</span>
+<span class="k">name</span>: atlas-research
+<span class="k">runtime</span>: agent@2
+<span class="k">model</span>: auto          <span class="c"># 按区域与成本自动路由</span>
+
+<span class="k">compute</span>:
+  <span class="k">gpu</span>: h200
+  <span class="k">autoscale</span>: <span class="n">2..64</span>
+  <span class="k">regions</span>: [us-east, eu-north, ap-northeast]
+
+<span class="k">permissions</span>:
+  - web.read
+  - files.workspace
+  - memory.longterm
+
+<span class="k">pricing</span>:
+  <span class="k">model</span>: subscription
+  <span class="k">amount</span>: <span class="n">29</span>
+  <span class="k">trial</span>: <span class="n">14</span>d</pre>
+      </div>
+      <div class="code-window" style="margin-top:12px">
+        <div class="code-head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="file">terminal</span>
+          <span class="lang">SHELL</span>
+        </div>
+<pre class="code"><span class="c">$</span> apex publish
+<span class="ok" style="color:#6ee7b7">✓</span> manifest validated
+<span class="ok" style="color:#6ee7b7">✓</span> 42 security checks passed
+<span class="ok" style="color:#6ee7b7">✓</span> eval suite 94.2 / 100
+<span class="ok" style="color:#6ee7b7">✓</span> live in 9 regions · 4m 12s</pre>
+      </div>
+      <div class="rev-bars">
+        <div class="rev-bar">
+          <div class="top"><span>开发者分成</span><b>85%</b></div>
+          <div class="track"><i style="width:85%"></i></div>
+        </div>
+        <div class="rev-bar">
+          <div class="top"><span>平台服务费（含支付、税务、算力调度）</span><b>15%</b></div>
+          <div class="track"><i style="width:15%;background:#b9b3a6"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GLOBAL ================= -->
+<section class="section" id="global">
+  <div class="wrap split">
+    <div class="globe-stage" data-reveal>
+      <div class="globe">
+        <span class="globe-ring"></span>
+        <span class="globe-ring r2"></span>
+        <span class="globe-ring r3"></span>
+        <span class="pin" style="top:38%;left:26%"><span class="pin-label">US-E · 12ms</span></span>
+        <span class="pin p2" style="top:31%;left:48%"><span class="pin-label">EU-N · 24ms</span></span>
+        <span class="pin" style="top:44%;left:72%"><span class="pin-label">AP-NE · 28ms</span></span>
+        <span class="pin p2" style="top:56%;left:66%"><span class="pin-label">AP-SE · 31ms</span></span>
+        <span class="pin" style="top:62%;left:34%"><span class="pin-label">SA-E · 62ms</span></span>
+        <span class="pin p2" style="top:47%;left:80%"><span class="pin-label">ME-S · 48ms</span></span>
+      </div>
+    </div>
+
+    <div data-reveal>
+      <div class="eyebrow"><span class="dot"></span> GLOBAL BY DEFAULT</div>
+      <h2 class="h2 mt-16">从弗吉尼亚到新加坡，<br>同一套 API。</h2>
+      <p class="lead mt-16">数据驻留、模型路由、故障切换、汇率与税——平台处理。你只需要决定：哪些区域可以运行我的智能体。</p>
+      <div class="region-cards mt-32">
+        <div class="region-card"><span class="code">US-E</span><span class="city">弗吉尼亚</span><span class="ms">12 ms</span></div>
+        <div class="region-card"><span class="code">US-W</span><span class="city">俄勒冈</span><span class="ms">18 ms</span></div>
+        <div class="region-card"><span class="code">EU-C</span><span class="city">法兰克福</span><span class="ms">21 ms</span></div>
+        <div class="region-card"><span class="code">EU-N</span><span class="city">斯德哥尔摩</span><span class="ms">24 ms</span></div>
+        <div class="region-card"><span class="code">AP-NE</span><span class="city">东京</span><span class="ms">28 ms</span></div>
+        <div class="region-card"><span class="code">AP-SE</span><span class="city">新加坡</span><span class="ms">31 ms</span></div>
+        <div class="region-card"><span class="code">CN-N</span><span class="city">北京 · 隔离域</span><span class="ms">35 ms</span></div>
+        <div class="region-card"><span class="code">ME-S</span><span class="city">迪拜</span><span class="ms">48 ms</span></div>
+      </div>
+      <div class="flex gap-12 mt-24" style="flex-wrap:wrap">
+        <a class="link-arrow" href="compute.html">查看全部 9 个区域
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-band" id="join">
+  <div class="wrap">
+    <div class="eyebrow on-dark"><span class="dot-live"></span> BUILD THE NEXT ONE</div>
+    <h2 class="cta-title mt-16">下一个伟大的智能体，<br>应该被<em>全世界</em>用到。</h2>
+    <div class="cta-row">
+      <a class="btn btn-on-dark btn-lg" href="developers.html">成为开发者</a>
+      <a class="btn btn-outline-dark btn-lg" href="console.html">进入控制台</a>
+    </div>
+    <div class="cta-note">开发者分成 85% · 新上架 12 个月算力补贴 · 最高 $50,000</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html" style="color:#f5f2ea">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" style="color:#f5f2ea"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+          <span class="brand-word">APEX</span>
+        </a>
+        <p class="footer-tag">智能体与算力的全球市场。发现、部署、计量、结算，在一个地方完成。</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h5>市场</h5>
+          <a href="agents.html">智能体商店</a>
+          <a href="compute.html">算力市场</a>
+          <a href="agents.html?sort=popular">热门榜单</a>
+          <a href="console.html">企业采购</a>
+        </div>
+        <div>
+          <h5>开发者</h5>
+          <a href="developers.html">发布智能体</a>
+          <a href="developers.html#pricing">分成计划</a>
+          <a href="developers.html#sdk">SDK 与文档</a>
+          <a href="compute.html#supply">成为算力供应商</a>
+        </div>
+        <div>
+          <h5>信任</h5>
+          <a href="blueprint.html#trust">安全架构</a>
+          <a href="blueprint.html#governance">合规与治理</a>
+          <a href="#">状态页</a>
+          <a href="#">透明度报告</a>
+        </div>
+        <div>
+          <h5>公司</h5>
+          <a href="blueprint.html">平台规划</a>
+          <a href="#">关于 APEX</a>
+          <a href="#">加入我们</a>
+          <a href="#">联系</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-word">APEX</div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> APEX Systems · 概念设计与演示</span>
+      <span>数据为示意，不构成真实报价</span>
+      <div class="right">
+        <a href="#">隐私</a><a href="#">条款</a><a href="#">服务状态</a><a href="#">简体中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/index.js" defer></script>
+</body>
+</html>
+
+

@@ -1,0 +1,72 @@
+/* 深圳 批量抽取评分 >=7 的记录 */
+window.BULK_VERIFIED = Object.assign(window.BULK_VERIFIED || {}, {
+  "赢时胜": {
+    "name": "深圳市赢时胜信息技术股份有限公司",
+    "city": "深圳",
+    "district": "福田区",
+    "website": "http://ysstech.com.cn/",
+    "description": "金融行业专业软件开发商，领先的金融行业IT综合服务商，深交所创业板上市，代码：300377",
+    "sector": "金融科技",
+    "founded": 0,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "0755-88265110",
+    "email": "",
+    "address": "深圳市福田区皇岗路5001号深业上城南区二期37楼",
+    "confidence": 0.9,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：http://ysstech.com.cn/"
+  },
+  "兆威机电": {
+    "name": "深圳市兆威机电股份有限公司",
+    "city": "深圳",
+    "district": "宝安区",
+    "website": "https://www.zwgear.com/",
+    "description": "成立于2001年，是一家集设计、研发、制造于一体的微型驱动系统方案解决商，专注于研发、生产精密传动系统及汽车精密注塑零组件的制造型企业，为客户提供传动方案设计、零件的生产与组装的定制化服务。",
+    "sector": "微型驱动系统",
+    "founded": 2001,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "400-066-2287",
+    "email": "sales@szzhaowei.net",
+    "address": "深圳市宝安区燕罗街道燕川社区燕湖路88号",
+    "confidence": 0.9,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：https://www.zwgear.com/"
+  },
+  "领益智造": {
+    "name": "广东领益智造股份有限公司",
+    "city": "深圳",
+    "district": "龙岗区",
+    "website": "https://www.lingyiitech.com",
+    "description": "作为值得信赖的AI终端硬件核心供应商，领益智造在全球范围内为客户提供精密功能件、结构件、模组等一站式智能制造服务及解决方案。",
+    "sector": "AI终端硬件制造",
+    "founded": 2006,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "",
+    "email": "LY.public@lingyiitech.com",
+    "address": "",
+    "confidence": 0.8,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：https://www.lingyiitech.com"
+  },
+  "新产业生物": {
+    "name": "新产业生物",
+    "city": "深圳",
+    "district": "Pingshan District",
+    "website": "https://www.snibe.com/en/",
+    "description": "Shenzhen New Industries Biomedical Engineering Co., Ltd. (Snibe Co.,Ltd.) is a bio-medical company specialized in clinical laboratory instruments and in vitro diagnostic reagents, offering the MAGLUMI® Chemiluminescence Immunoassay (CLIA) System with a test menu covering up to 278 parameters.",
+    "sector": "In vitro diagnostics",
+    "founded": 1995,
+    "team": 0,
+    "funding": "未披露",
+    "phone": "86-755-26501514",
+    "email": "sales@snibe.com",
+    "address": "Snibe Building, No.23, Jinxiu East Road, Pingshan District, 518122 Shenzhen, P.R. China",
+    "confidence": 0.9,
+    "verifiedAt": "2026-11-06",
+    "source": "官网公开：https://www.snibe.com/en/"
+  }
+});
+window.PILOT_VERIFIED = Object.assign(window.PILOT_VERIFIED || {}, window.BULK_VERIFIED);

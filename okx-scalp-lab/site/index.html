@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCALP//LAB — OKX 永续合约 30 分钟策略榜</title>
+<meta name="description" content="10 个 TradingView 指标策略，在 OKX BTC/ETH/SOL/DOGE 永续合约 30 分钟 K 线上的 90 天真实回测。按净收益排名，附 Pine Script 代码与最新指标数据。">
+<meta name="theme-color" content="#070908">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c9ff4a'/%3E%3Cpath d='M16 21h20c7 0 11 4 11 10s-4 10-11 10H22l-4 10H8l14-30z' fill='%23070908'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="index.html" aria-label="SCALP LAB 首页">
+      <span class="brand-mark">S//L</span>
+      <span class="brand-word"><b>SCALP//LAB</b><small>OKX PERP · 30M RESEARCH</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航"><a class="active" href="index.html"><span class="n">01</span>首页</a><a class="" href="ranking.html"><span class="n">02</span>排名</a><a class="" href="strategies.html"><span class="n">03</span>策略库</a><a class="" href="data.html"><span class="n">04</span>指标数据</a><a class="" href="method.html"><span class="n">05</span>方法</a></nav>
+    <div class="status"><span class="dot"></span><span>DATA · 2026-11-04 15:00 UTC</span></div>
+    <button class="nav-toggle" type="button" aria-expanded="false">MENU</button>
+  </div>
+</header>
+<div class="tape">
+  <div class="shell tape-in">
+    <div class="tape-label">LIVE TAPE / UTC</div>
+    <div class="tape-items" data-tape><span class="tape-sym muted">LOADING MARKET DATA…</span></div>
+  </div>
+</div>
+<main >
+
+<section class="hero"><div class="shell">
+  <div class="hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">TRADINGVIEW STRATEGY INDEX / OKX PERP / 30M</div>
+      <h1>30 分钟。<br><span class="lime">10 个策略。</span><br><span class="stroke">90 天真实盘口。</span></h1>
+      <p class="hero-lede">把 TradingView 上最常被复制的 10 类指标策略，放进 <b>OKX BTC / ETH / SOL / DOGE 永续合约</b>的 30 分钟 K 线里。同一套手续费、滑点、执行规则、同一段样本，只让策略逻辑说话。<b>按净收益排名。</b></p>
+      <p class="hero-result">结果先说：10 个策略扣费后<b>全部为负</b>。最高净收益 -0.48%，毛收益 +17.32%，成本拖累 17.8pp。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="ranking.html"><span>查看完整排名</span><span class="arr">↗</span></a>
+        <a class="btn ghost" href="method.html"><span>先读方法与局限</span><span class="arr">→</span></a>
+      </div>
+    </div>
+    <div class="reveal d2"><a class="top-card" href="strategy-supertrend.html">
+  <div class="top-kicker"><span>BEST NET RETURN</span><span class="live">VIEW ↗</span></div>
+  <div class="top-rank"><span class="num">#01</span><span class="fam">趋势 / TREND</span></div>
+  <h3 class="top-name">Supertrend 趋势带</h3>
+  <div class="top-en">Supertrend 10/3 · 30M · 4 INSTRUMENTS</div>
+  <div class="top-return">
+    <div><div class="lbl">84D NET RETURN / 1X</div><div class="big down">-0.48%</div><div class="top-gross">GROSS +17.32% · COST 17.8pp</div></div>
+    <canvas class="top-spark" data-top-spark></canvas>
+  </div>
+  <div class="top-meta">
+    <div><span>PROFIT FACTOR</span><b>1.06</b></div>
+    <div><span>MAX DRAWDOWN</span><b class="down">-21.62%</b></div>
+    <div><span>TRADES</span><b>536</b></div>
+  </div>
+</a></div>
+  </div>
+  <div class="stat-strip reveal d3">
+    <div class="stat-cell"><div class="k">SAMPLE / 样本</div><div class="v">84 DAYS</div><div class="s">2026-08-12 → 2026-11-04 UTC</div></div>
+    <div class="stat-cell"><div class="k">BARS / K 线</div><div class="v">17,280</div><div class="s">30m × 4 品种 · 4,320 根/品种</div></div>
+    <div class="stat-cell"><div class="k">COST / 成本</div><div class="v">6 BP</div><div class="s">单边 · 5bp taker + 1bp 滑点</div></div>
+    <div class="stat-cell"><div class="k">TESTS / 回测</div><div class="v">40</div><div class="s">10 策略 × 4 品种 · 1x 名义本金</div></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head">
+    <div class="l"><span class="sec-index">01 / RANKING</span><h2>盈利能力排名 <span class="thin">/ NET RETURN</span></h2></div>
+    <div class="sec-sub">10 个策略扣费后全部为负。这张表按亏损从小到大排列，同时列出毛收益，看看成本吃掉了多少。</div>
+  </div>
+  <div class="table-wrap">
+    <table class="rank-table">
+      <thead><tr><th>#</th><th>策略 / STRATEGY</th><th class="hide-sm">类型</th><th>净收益 / 84D</th><th class="hide-sm">盈亏比</th><th>最大回撤</th><th class="hide-sm">胜率</th><th class="hide-sm">交易</th><th class="hide-sm">净值</th><th class="hide-sm"></th></tr></thead>
+      <tbody><tr>
+  <td class="r">01</td>
+  <td><a class="st-name" href="strategy-supertrend.html"><b>Supertrend 趋势带</b><span>SUPERTREND 10/3</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-0.48%<small>GROSS +17.32%</small></span><span class="bar"><i class="neg" style="width:3%"></i></span></div></td>
+  <td class="metric hide-sm">1.06</td>
+  <td class="metric down">-21.62%</td>
+  <td class="metric hide-sm">18.7%</td>
+  <td class="metric hide-sm">536</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="supertrend"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-supertrend.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">02</td>
+  <td><a class="st-name" href="strategy-keltner-squeeze.html"><b>肯特纳挤压突破</b><span>KELTNER SQUEEZE</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">波动率</span></td>
+  <td><div class="ret-bar"><span class="ret down">-3.43%<small>GROSS +4.45%</small></span><span class="bar"><i class="neg" style="width:11%"></i></span></div></td>
+  <td class="metric hide-sm">0.96</td>
+  <td class="metric down">-16.74%</td>
+  <td class="metric hide-sm">26.8%</td>
+  <td class="metric hide-sm">257</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="keltner-squeeze"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-keltner-squeeze.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">03</td>
+  <td><a class="st-name" href="strategy-donchian-breakout.html"><b>唐奇安 20 突破</b><span>DONCHIAN 20 BREAKOUT</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">突破</span></td>
+  <td><div class="ret-bar"><span class="ret down">-5.68%<small>GROSS +10.96%</small></span><span class="bar"><i class="neg" style="width:19%"></i></span></div></td>
+  <td class="metric hide-sm">0.97</td>
+  <td class="metric down">-21.97%</td>
+  <td class="metric hide-sm">23.5%</td>
+  <td class="metric hide-sm">531</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="donchian-breakout"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-donchian-breakout.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">04</td>
+  <td><a class="st-name" href="strategy-bollinger-rsi2.html"><b>布林带 + RSI(2) 回踩</b><span>BOLLINGER + RSI(2)</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">均值回归</span></td>
+  <td><div class="ret-bar"><span class="ret down">-7.58%<small>GROSS -3.11%</small></span><span class="bar"><i class="neg" style="width:26%"></i></span></div></td>
+  <td class="metric hide-sm">0.59</td>
+  <td class="metric down">-10.80%</td>
+  <td class="metric hide-sm">39.7%</td>
+  <td class="metric hide-sm">156</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="bollinger-rsi2"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-bollinger-rsi2.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">05</td>
+  <td><a class="st-name" href="strategy-vwap-reclaim.html"><b>VWAP 回收 + 放量</b><span>VWAP RECLAIM</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">日内</span></td>
+  <td><div class="ret-bar"><span class="ret down">-9.97%<small>GROSS -2.01%</small></span><span class="bar"><i class="neg" style="width:34%"></i></span></div></td>
+  <td class="metric hide-sm">0.66</td>
+  <td class="metric down">-15.95%</td>
+  <td class="metric hide-sm">21.6%</td>
+  <td class="metric hide-sm">278</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="vwap-reclaim"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-vwap-reclaim.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">06</td>
+  <td><a class="st-name" href="strategy-utbot-atr.html"><b>UT Bot ATR 追踪</b><span>UT BOT ATR TRAILING</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-14.98%<small>GROSS +1.88%</small></span><span class="bar"><i class="neg" style="width:51%"></i></span></div></td>
+  <td class="metric hide-sm">0.78</td>
+  <td class="metric down">-23.28%</td>
+  <td class="metric hide-sm">12.7%</td>
+  <td class="metric hide-sm">598</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="utbot-atr"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-utbot-atr.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">07</td>
+  <td><a class="st-name" href="strategy-ema-ribbon.html"><b>EMA 三线动量</b><span>EMA RIBBON MOMENTUM</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-18.12%<small>GROSS +2.81%</small></span><span class="bar"><i class="neg" style="width:62%"></i></span></div></td>
+  <td class="metric hide-sm">0.83</td>
+  <td class="metric down">-32.87%</td>
+  <td class="metric hide-sm">18.3%</td>
+  <td class="metric hide-sm">745</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="ema-ribbon"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-ema-ribbon.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">08</td>
+  <td><a class="st-name" href="strategy-ichimoku-cloud.html"><b>一目均衡表云层突破</b><span>ICHIMOKU CLOUD BREAKOUT</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">趋势</span></td>
+  <td><div class="ret-bar"><span class="ret down">-18.76%<small>GROSS +4.01%</small></span><span class="bar"><i class="neg" style="width:65%"></i></span></div></td>
+  <td class="metric hide-sm">0.83</td>
+  <td class="metric down">-34.66%</td>
+  <td class="metric hide-sm">20.0%</td>
+  <td class="metric hide-sm">814</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="ichimoku-cloud"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-ichimoku-cloud.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">09</td>
+  <td><a class="st-name" href="strategy-stochrsi-pullback.html"><b>Stoch RSI 趋势回踩</b><span>STOCH RSI PULLBACK</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">均值回归</span></td>
+  <td><div class="ret-bar"><span class="ret down">-22.24%<small>GROSS -2.02%</small></span><span class="bar"><i class="neg" style="width:77%"></i></span></div></td>
+  <td class="metric hide-sm">0.61</td>
+  <td class="metric down">-25.25%</td>
+  <td class="metric hide-sm">26.5%</td>
+  <td class="metric hide-sm">767</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="stochrsi-pullback"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-stochrsi-pullback.html">DETAIL <span>↗</span></a></td>
+</tr>
+<tr>
+  <td class="r">10</td>
+  <td><a class="st-name" href="strategy-macd-momentum.html"><b>MACD 柱状动量</b><span>MACD HISTOGRAM MOMENTUM</span></a></td>
+  <td class="hide-sm"><span class="fam-tag">动量</span></td>
+  <td><div class="ret-bar"><span class="ret down">-28.85%<small>GROSS -4.04%</small></span><span class="bar"><i class="neg" style="width:100%"></i></span></div></td>
+  <td class="metric hide-sm">0.71</td>
+  <td class="metric down">-37.51%</td>
+  <td class="metric hide-sm">24.4%</td>
+  <td class="metric hide-sm">986</td>
+  <td class="spark-cell hide-sm"><canvas class="spark" data-curve="macd-momentum"></canvas></td>
+  <td class="hide-sm"><a class="row-link" href="strategy-macd-momentum.html">DETAIL <span>↗</span></a></td>
+</tr></tbody>
+    </table>
+  </div>
+  <div style="margin-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap" class="mono tiny dim">
+    <span>RANKED BY NET RETURN · 1X NOTIONAL · 6 BP/SIDE</span>
+    <a class="link-more" href="ranking.html">全部指标与分品种矩阵 →</a>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head">
+    <div class="l"><span class="sec-index">02 / EQUITY</span><h2>净值曲线 <span class="thin">/ TOP 5 VS HOLD</span></h2></div>
+    <div class="sec-sub">初始净值 = 100。灰色虚线是四品种等权买入持有；前五名策略用各自颜色。</div>
+  </div>
+  <div class="panel">
+    <div class="panel-head"><div class="panel-title">EQUITY / <b>84 天组合净值</b></div><div class="mono tiny dim">UTC · 1X · NET OF FEES</div></div>
+    <div class="chart-box tall"><canvas id="home-equity"></canvas></div>
+    <div class="legend" id="home-equity-legend"></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head">
+    <div class="l"><span class="sec-index">03 / FINDINGS</span><h2>数据说了什么 <span class="thin">/ WHAT WORKED</span></h2></div>
+    <div class="sec-sub">不是“哪个指标最神”，而是这套样本里，什么逻辑活了下来。</div>
+  </div>
+  <div class="grid-3">
+    <div class="insight reveal"><div class="idx">FINDING 01</div><div class="big">4 / 10</div><h3>趋势跟踪仍然占主导</h3><p>趋势类策略占据前十中的 4 席。表现最好的策略族是「波动率」，平均净收益 -3.43%。30 分钟级别噪声很大，但一旦走出单边，ATR 追踪与通道突破仍然是最稳定的收益来源。</p></div>
+    <div class="insight reveal d1"><div class="idx">FINDING 02</div><div class="big">17.3 pp</div><h3>成本是超短线的第一杀手</h3><p>这是 10 个策略“零成本净值”与“扣费净值”差距的中位数。30 分钟级别的信号很便宜，但交易很贵：每一次反手都是一次 12bp 的往返。高频策略的毛收益经常被手续费吃光。</p></div>
+    <div class="insight reveal d2"><div class="idx">FINDING 03</div><div class="big">0 / 10</div><h3>跑赢等权买入持有</h3><p>同期四品种等权买入持有净收益为 +24.09%，最大回撤 -21.55%。只有 0 个策略跑赢它。择时策略真正的价值，往往不是更高的收益，而是更低的回撤与更稳定的复利路径。</p></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head">
+    <div class="l"><span class="sec-index">04 / FREQUENCY</span><h2>周期越长，成本越薄 <span class="thin">/ FREQUENCY LADDER</span></h2></div>
+    <div class="sec-sub">同一批策略、同一段 90 天数据，只改 K 线周期。5m 不是“更灵敏”，而是把同一笔 edge 交给手续费更多次。</div>
+  </div>
+  <div class="split">
+    <div><div class="table-wrap"><table class="sym-table">
+  <thead><tr><th>周期</th><th>最优净收益</th><th>最优策略</th><th>正收益数</th><th>成本拖累 / 中位</th><th>买入持有</th></tr></thead>
+  <tbody><tr>
+  <td><b>5m</b><span class="sub">25,917 根 · 89.3 天</span></td>
+  <td class="down">-20.88%</td>
+  <td>布林带 + RSI(2) 回踩</td>
+  <td>0 / 10</td>
+  <td>62.3 pp</td>
+  <td>+24.57%</td>
+</tr><tr>
+  <td><b>15m</b><span class="sub">8,640 根 · 87.9 天</span></td>
+  <td class="down">-8.00%</td>
+  <td>肯特纳挤压突破</td>
+  <td>0 / 10</td>
+  <td>32.3 pp</td>
+  <td>+21.65%</td>
+</tr><tr>
+  <td><b>30m</b><span class="sub">4,320 根 · 85.8 天</span></td>
+  <td class="down">-0.28%</td>
+  <td>Supertrend 趋势带</td>
+  <td>0 / 10</td>
+  <td>17.6 pp</td>
+  <td>+23.54%</td>
+</tr><tr>
+  <td><b>1h</b><span class="sub">2,160 根 · 81.6 天</span></td>
+  <td class="up">+6.35%</td>
+  <td>肯特纳挤压突破</td>
+  <td>3 / 10</td>
+  <td>8.6 pp</td>
+  <td>+24.20%</td>
+</tr></tbody>
+</table></div></div>
+    <div class="insight">
+      <div class="idx">THE COST CURVE</div>
+      <div class="big">-20.88% → +6.35%</div>
+      <h3>从 5m 到 1h，最优策略的净收益</h3>
+      <p>5m 上最好的策略仍然亏损 20.9%；30m 把亏损压到 -0.28%，接近打平；到 1h 才出现 +6.35% 的正收益，并且 3/10 个策略转正。指标没有变，变的是交易频率与成本占比。</p>
+      <div class="bar"></div>
+      <p style="font-size:11px">这也是本站把主排名放在 30m 的原因：它是“超短线”与“成本可承受”之间最接近的折中点。真正的 5m 高频版本在成本后全线为负。周期实验统一用 200 根预热；主榜用 300 根，因此 30m 的 -0.28% 与主榜 -0.48% 有轻微差异。</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head">
+    <div class="l"><span class="sec-index">05 / TAPE</span><h2>最新指标切片 <span class="thin">/ MARKET SNAPSHOT</span></h2></div>
+    <div class="sec-sub">截至 2026-11-04 15:00 UTC 的 30m 收盘读数。完整读数与 K 线图在「指标数据」。</div>
+  </div>
+  <div class="tape-cards"><div class="asset-card">
+  <div class="asset-top"><span class="asset-sym">BTC<small>/USDT</small></span><span class="mono tiny muted">SWAP</span></div>
+  <div class="asset-px">80,133.10</div>
+  <div class="asset-chg down">-1.56% <span class="dim">24H</span></div>
+  <canvas class="asset-spark" data-sym-spark="BTC"></canvas>
+  <div class="asset-meta">
+    <div><span>RSI 14</span><b>78.7</b></div>
+    <div><span>ATR %</span><b>0.53%</b></div>
+    <div><span>ST</span><b class="up">多</b></div>
+  </div>
+</div><div class="asset-card">
+  <div class="asset-top"><span class="asset-sym">ETH<small>/USDT</small></span><span class="mono tiny muted">SWAP</span></div>
+  <div class="asset-px">2,439.63</div>
+  <div class="asset-chg up">+3.53% <span class="dim">24H</span></div>
+  <canvas class="asset-spark" data-sym-spark="ETH"></canvas>
+  <div class="asset-meta">
+    <div><span>RSI 14</span><b>84.4</b></div>
+    <div><span>ATR %</span><b>0.83%</b></div>
+    <div><span>ST</span><b class="up">多</b></div>
+  </div>
+</div><div class="asset-card">
+  <div class="asset-top"><span class="asset-sym">SOL<small>/USDT</small></span><span class="mono tiny muted">SWAP</span></div>
+  <div class="asset-px">97.35</div>
+  <div class="asset-chg down">-4.53% <span class="dim">24H</span></div>
+  <canvas class="asset-spark" data-sym-spark="SOL"></canvas>
+  <div class="asset-meta">
+    <div><span>RSI 14</span><b>77.4</b></div>
+    <div><span>ATR %</span><b>0.91%</b></div>
+    <div><span>ST</span><b class="up">多</b></div>
+  </div>
+</div><div class="asset-card">
+  <div class="asset-top"><span class="asset-sym">DOGE<small>/USDT</small></span><span class="mono tiny muted">SWAP</span></div>
+  <div class="asset-px">0.07779</div>
+  <div class="asset-chg down">-2.53% <span class="dim">24H</span></div>
+  <canvas class="asset-spark" data-sym-spark="DOGE"></canvas>
+  <div class="asset-meta">
+    <div><span>RSI 14</span><b>77.8</b></div>
+    <div><span>ATR %</span><b>0.79%</b></div>
+    <div><span>ST</span><b class="up">多</b></div>
+  </div>
+</div></div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="sec-head">
+    <div class="l"><span class="sec-index">06 / METHOD</span><h2>先看尺子，再看分数 <span class="thin">/ THE RULER</span></h2></div>
+    <a class="link-more" href="method.html">完整方法 →</a>
+  </div>
+  <div class="grid-2">
+    <div class="insight"><div class="idx">EXECUTION</div><h3>收盘出信号，下一根开盘成交</h3><p>所有策略在 30m K 线收盘时计算条件，在下一根开盘价成交；止损也用收盘确认，避免“同一根 K 线先打止损还是先到止盈”的未来函数。1x 名义本金，不加杠杆。</p></div>
+    <div class="insight"><div class="idx">COST</div><h3>5bp taker + 1bp 滑点，单边 6bp</h3><p>OKX 永续 VIP0 taker 为 0.05%，再加 1bp 滑点近似。反手按两次成交计费。没有计资金费率、盘口冲击与强平，这些都会让真实结果更差。</p></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="shell" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+  <div><h2>十个策略，十份 Pine 代码。<br><span class="muted">不神化任何一条均线。</span></h2><p>每一页都附完整规则、分品种结果、当前信号、指标读数与可复制的 Pine Script v6 代码。</p></div>
+  <a class="btn primary" href="strategies.html"><span>进入策略库</span><span class="arr">↗</span></a>
+</div></section>
+
+</main>
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">S//L</span>
+        <div><b>SCALP//LAB</b><small>OKX PERPETUAL · 30M STRATEGY INDEX</small></div>
+      </div>
+      <div class="footer-links">
+        <a href="ranking.html">完整排名</a>
+        <a href="strategies.html">策略库</a>
+        <a href="data.html">指标数据</a>
+        <a href="method.html">方法与局限</a>
+        <a href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noopener">Pine 文档 ↗</a>
+        <a href="https://www.okx.com/docs-v5/en/" target="_blank" rel="noopener">OKX API ↗</a>
+      </div>
+    </div>
+    <p class="disclaimer">风险提示：本站所有收益、回撤、胜率均为历史回测统计，不是实盘业绩，也不构成任何投资建议。加密永续合约具有高杠杆、强平、资金费率与流动性风险；历史表现不代表未来收益。Pine Script 代码用于研究与教学，实盘前请在 TradingView 策略测试器中独立验证，并从小仓位开始。本站未使用杠杆、未计资金费率、未模拟盘口冲击，真实交易结果通常更差。</p>
+    <div class="footer-meta">
+      <span>数据：OKX 公共行情 API · 30m K 线 · 4,320 根/品种 · 抓取于 2026-11-04 15:00 UTC</span>
+      <span>构建：2026-11-04 15:34 UTC · 静态站点 · 无外部依赖</span>
+      <span>© <span id="year">2026</span> SCALP//LAB</span>
+    </div>
+  </div>
+</footer>
+<script src="data/lab.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

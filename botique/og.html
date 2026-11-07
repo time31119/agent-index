@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap');
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { background: #F4EFE6; color: #15130F; font-family: 'Manrope', 'Segoe UI', sans-serif; position: relative; }
+  .noise { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E"); pointer-events: none; }
+  .frame { position: absolute; inset: 22px; border: 1.5px solid #15130F; border-radius: 26px; overflow: hidden; }
+  .left { position: absolute; left: 52px; top: 44px; width: 600px; }
+  .brand { display: flex; align-items: flex-start; font-size: 28px; font-weight: 800; letter-spacing: .05em; }
+  .dot { width: 9px; height: 9px; background: #D8FF3F; border: 1.5px solid #15130F; border-radius: 50%; margin: 3px 0 0 4px; }
+  .kicker { margin-top: 52px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+  h1 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 118px; line-height: .83; letter-spacing: -.045em; margin-top: 18px; }
+  h1 em { font-style: italic; color: #FF5D3A; display: block; }
+  p { margin-top: 26px; font-size: 18px; line-height: 1.5; max-width: 470px; color: #4A443A; }
+  .meta { position: absolute; left: 52px; bottom: 42px; display: flex; gap: 28px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #6E6659; }
+  .meta b { color: #15130F; }
+  .stage { position: absolute; right: 40px; top: 40px; width: 490px; height: 550px; background: #D8FF3F; border: 1.5px solid #15130F; border-radius: 34px; overflow: hidden; }
+  .stage::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 55% 22%, rgba(255,255,255,.5), transparent 55%); }
+  #art { position: absolute; width: 96%; left: 2%; bottom: -4%; }
+  .tag { position: absolute; left: 20px; bottom: 18px; z-index: 4; background: #F4EFE6; border: 1.5px solid #15130F; border-radius: 999px; padding: 7px 13px 7px 8px; display: flex; gap: 9px; align-items: center; }
+  .tag b { font-family: 'JetBrains Mono', monospace; font-size: 9px; background: #15130F; color: #D8FF3F; border-radius: 999px; padding: 4px 7px; }
+  .tag span { font-size: 12px; font-weight: 800; }
+  .tag em { font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #6E6659; }
+  .sticker { position: absolute; right: 26px; top: 24px; z-index: 4; width: 150px; padding: 12px; background: #FFFDF8; border: 1.5px solid #15130F; border-radius: 14px; box-shadow: 6px 6px 0 #15130F; transform: rotate(3deg); }
+  .sticker b { display: block; font-family: 'Instrument Serif', Georgia, serif; font-size: 25px; line-height: .95; }
+  .sticker span { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; color: #6E6659; }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="frame">
+  <div class="left">
+    <div class="brand">BOTIQUE<span class="dot"></span></div>
+    <div class="kicker">The BOTIQUE 100 · 2026 edition</div>
+    <h1>Small robots.<em>Big feelings.</em></h1>
+    <p>The 100 small robots people are actually buying — ranked, tested and shipped worldwide.</p>
+  </div>
+  <div class="stage"><div id="art"></div><div class="tag"><b>No.03</b><span>Eilik</span><em>$139</em></div><div class="sticker"><b>100 bots.<br>56 brands.</b><span>One very good shelf</span></div></div>
+  <div class="meta"><span><b>100</b> curated bots</span><span><b>9</b> currencies</span><span><b>3</b> platforms</span><span><b>30-day</b> returns</span></div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/robot.js"></script>
+<script>document.getElementById('art').innerHTML = BOTIQUE_ART.art(BOTIQUE_DATA.byId('eilik'));</script>
+</body>
+</html>

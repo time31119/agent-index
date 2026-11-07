@@ -1,0 +1,782 @@
+[
+  {
+    "name": "新华三（H3C）",
+    "district": "杭州",
+    "sector": "基础模型与算力",
+    "site": "https://www.h3c.com/cn/",
+    "candidates": [
+      "https://www.h3c.com/cn/",
+      "https://www.h3c.com/cn/BizPortal/ChannelPartner/AuthAgent/RegisterDealer.aspx",
+      "http://wsso.h3c.com/Login.aspx?Culture=zh-cn",
+      "https://www.h3c.com/cn/Products_And_Solution/InterConnect/Intelligent_connection/",
+      "https://www.h3c.com/cn/About_H3C/Company_Information/Company_Introduce/"
+    ]
+  },
+  {
+    "name": "趣拍云",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.chinaz.com/news/2017/0329/680188.shtml",
+    "candidates": [
+      "https://www.chinaz.com/news/2017/0329/680188.shtml",
+      "http://tech.sina.com.cn/i/2016-08-09/doc-ifxutfpc4893906.shtml",
+      "https://www.prnasia.com/lightnews/lightnews-1-63-11702.shtml"
+    ]
+  },
+  {
+    "name": "联汇科技",
+    "district": "杭州",
+    "sector": "基础模型与算力",
+    "site": "https://www.hzlh.com/",
+    "candidates": [
+      "https://www.hzlh.com/",
+      "https://jy.hzvtc.edu.cn/company/view/id/621686",
+      "http://www.cngzlh.com/",
+      "https://www.shxylh.com/",
+      "http://www.cniteyes.com/index.php?act=taglists&app=index&mod=Article&tag_id=8803"
+    ]
+  },
+  {
+    "name": "芯翼科技",
+    "district": "杭州",
+    "sector": "基础模型与算力",
+    "site": "https://www.chipwing.com/",
+    "candidates": [
+      "https://www.chipwing.com/",
+      "https://www.xinyisemi.com/",
+      "http://www.icflying.com/index.php",
+      "http://qydb.leshanvc.com/34406.html",
+      "https://www.shuididp.cn/yp-54b63852dad8bb564ef02eecd340fb7a.html"
+    ]
+  },
+  {
+    "name": "医准智能",
+    "district": "杭州",
+    "sector": "智能物联与机器视觉",
+    "site": "https://www.yizhun-ai.com/",
+    "candidates": [
+      "https://www.yizhun-ai.com/",
+      "http://www.yuegekeji.com/Phone/Case/content/html/1677.html",
+      "https://www.zbytb.com/c-2JSXC/",
+      "https://www.yizhun-ai.com/join",
+      "https://www.yizhun-ai.com/news/"
+    ]
+  },
+  {
+    "name": "中奥科技",
+    "district": "杭州",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.chinaoly.com/",
+    "candidates": [
+      "http://www.chinaoly.com/",
+      "http://www.zakj2012.com/",
+      "http://wydb.leshanvc.com/20767.html",
+      "https://www.saasruanjian.com/t_19194-question-recommend.html",
+      "http://m.zakj2012.com/"
+    ]
+  },
+  {
+    "name": "排列科技",
+    "district": "杭州",
+    "sector": "产业智能与金融科技",
+    "site": null,
+    "candidates": []
+  },
+  {
+    "name": "宇链科技",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容",
+    "site": "http://www.vastchain.cn/",
+    "candidates": [
+      "http://www.vastchain.cn/",
+      "https://www.vastchain.cn/about/",
+      "https://www.vastchain.cn/category/news/",
+      "http://www.lianmenhu.com/qukuailian-19819",
+      "https://linkutec.com/"
+    ]
+  },
+  {
+    "name": "托普云农",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.tpynkj.com/",
+    "candidates": [
+      "https://www.tpynkj.com/",
+      "https://www.tpyn.net/",
+      "https://www.tpynkj.net/",
+      "https://www.nongjitong.com/company/tuopusn/",
+      "https://www.instrument.com.cn/netshow/SH101490/"
+    ]
+  },
+  {
+    "name": "果麦文化",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.guomai.cn/",
+    "candidates": [
+      "https://www.guomai.cn/",
+      "https://www.guomai.cn/secondaryPage/aboutGuomai",
+      "https://www.guomai.cn/secondaryPage/talentRecruitment",
+      "http://www.guomai.cc/",
+      "https://www.haozhan8.cn/cooldir/haozhan4255.asp"
+    ]
+  },
+  {
+    "name": "半云科技",
+    "district": "杭州",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.saasruanjian.com/t_16703.html",
+    "candidates": [
+      "https://www.saasruanjian.com/t_16703.html",
+      "https://www.shuididp.cn/yp-6a0f0e40ecb8c242a885aea9f7c29261.html",
+      "https://www.trjcn.com/cyxm/66286.html"
+    ]
+  },
+  {
+    "name": "金通科技",
+    "district": "杭州",
+    "sector": "智能终端与出行",
+    "site": "http://www.jtit.com.cn/",
+    "candidates": [
+      "http://www.jtit.com.cn/",
+      "http://www.jintongkj68.com/",
+      "http://www.dingdatech.com/"
+    ]
+  },
+  {
+    "name": "虚谷科技",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.xugudb.com/",
+    "candidates": [
+      "https://www.xugudb.com/",
+      "https://www.shuididp.cn/yp-3cac9a46522f39622e6d37d17bc51101.html"
+    ]
+  },
+  {
+    "name": "西湖心辰",
+    "district": "杭州",
+    "sector": "基础模型与算力",
+    "site": "https://xinchenai.com/",
+    "candidates": [
+      "https://xinchenai.com/",
+      "https://gqdh.cn/sites/23256.html",
+      "https://www.bgrdh.com/sites/30595.html",
+      "https://www.sbrdh.com/sites/1633.html",
+      "https://openi.cn/sites/134449.html"
+    ]
+  },
+  {
+    "name": "讯酷科技",
+    "district": "杭州",
+    "sector": "产业智能与金融科技",
+    "site": "http://xunkuyun.com/",
+    "candidates": [
+      "http://xunkuyun.com/",
+      "https://www.xunkukeji.com/"
+    ]
+  },
+  {
+    "name": "青塔科技",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.cingta.com/",
+    "candidates": [
+      "https://www.cingta.com/",
+      "https://jy.zjhzcc.edu.cn/campus/view/id/861829",
+      "https://jyb.zstu.edu.cn/company/view/id/160551",
+      "http://f1.cingta.com/"
+    ]
+  },
+  {
+    "name": "数政科技",
+    "district": "杭州",
+    "sector": "产业智能与金融科技",
+    "site": null,
+    "candidates": []
+  },
+  {
+    "name": "云器科技",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容",
+    "site": "http://yunqi.tech/documents",
+    "candidates": [
+      "http://yunqi.tech/documents",
+      "https://www.yunqi.tech/product/one-year-package?msclkid=0d1ce0ebdaef1a2e983b897464b4551f&utm_AD=73805058492654&utm_keywordID=73805296678165&utm_sou=etl",
+      "https://yunqi.tech/",
+      "https://tech.chinadaily.com.cn/a/202608/25/WS6a8d4214e4b09dff9814f01a.html"
+    ]
+  },
+  {
+    "name": "连信科技",
+    "district": "杭州",
+    "sector": "医疗与生命科学",
+    "site": "https://www.lx-tech.com/",
+    "candidates": [
+      "https://www.lx-tech.com/",
+      "http://www.liaisonquartz.com/"
+    ]
+  },
+  {
+    "name": "好络维医疗",
+    "district": "滨江区",
+    "sector": "医疗与生命科学",
+    "site": "http://mp.ppsj.com.cn/brand1/HELOWIN.html",
+    "candidates": [
+      "http://mp.ppsj.com.cn/brand1/HELOWIN.html",
+      "https://www.iotku.com/Company/26955.html"
+    ]
+  },
+  {
+    "name": "中威电子",
+    "district": "滨江区",
+    "sector": "智能物联与机器视觉",
+    "site": "http://www.joyware.com/",
+    "candidates": [
+      "http://www.joyware.com/",
+      "http://www.cdzw98.com/",
+      "http://www.leshanvc.net/12722.html",
+      "http://mp.ppsj.com.cn/300270.html"
+    ]
+  },
+  {
+    "name": "数库科技",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.chinascope.com/",
+    "candidates": [
+      "https://www.chinascope.com/",
+      "http://chinascope.com/index.html",
+      "https://www.huahom.cn/",
+      "https://www.zbytb.com/c-NWG9m/",
+      "http://wydb.leshanvc.com/21775.html"
+    ]
+  },
+  {
+    "name": "恒生聚源",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.gildata.com/",
+    "candidates": [
+      "https://www.gildata.com/",
+      "https://website.gildata.com/",
+      "https://zb.gildata.com/home",
+      "http://www.gildata.com/products/apply-data.html",
+      "http://www.gildata.com/cpzx"
+    ]
+  },
+  {
+    "name": "中正数服",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技",
+    "site": null,
+    "candidates": []
+  },
+  {
+    "name": "英飞特",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技",
+    "site": "https://guba.eastmoney.com/list,300582.html",
+    "candidates": [
+      "https://guba.eastmoney.com/list,300582.html",
+      "http://infi-test.com/"
+    ]
+  },
+  {
+    "name": "华澜微",
+    "district": "滨江区",
+    "sector": "基础模型与算力",
+    "site": "http://www.dostor.com/tag/%E5%8D%8E%E6%BE%9C%E5%BE%AE",
+    "candidates": [
+      "http://www.dostor.com/tag/%E5%8D%8E%E6%BE%9C%E5%BE%AE"
+    ]
+  },
+  {
+    "name": "中策橡胶",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.zcrubber.com/",
+    "candidates": [
+      "http://www.zcrubber.com/",
+      "https://www.chaoyang.com/",
+      "http://hzzhongce.com/",
+      "https://www.zcrubber.com/index.php/gyinfo/1649.html",
+      "https://www.ygrubber.com.cn/"
+    ]
+  },
+  {
+    "name": "数澜科技",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.dtwave.com/",
+    "candidates": [
+      "http://www.dtwave.com/",
+      "https://www.dtwave.com/about/resume?type=2",
+      "https://www.dtwave.com/about/contact",
+      "https://wap.dtwave.com/"
+    ]
+  },
+  {
+    "name": "数梦工场",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "https://partner.aliyun.com/shumeng",
+    "candidates": [
+      "https://partner.aliyun.com/shumeng",
+      "https://www.adinnet.cn/caseinfo/2016_06/case_104.html",
+      "http://wydb.leshanvc.com/21004-wydb.html",
+      "http://wydb.leshanvc.com/21004.html",
+      "https://huaban.com/pins/893748281/"
+    ]
+  },
+  {
+    "name": "城云科技",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "http://liuyaofa.cn.b2b168.com/",
+    "candidates": [
+      "http://liuyaofa.cn.b2b168.com/",
+      "http://qydb.leshanvc.com/40308.html",
+      "http://mail.citycloud.com.cn/"
+    ]
+  },
+  {
+    "name": "华立科技",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.wahlap.com/",
+    "candidates": [
+      "https://www.wahlap.com/",
+      "http://www.holleymeter.com/",
+      "http://www.holleymeter.com/about.html",
+      "https://ee.seu.edu.cn/2024/1005/c25267a505259/pagem.htm",
+      "https://www.igswl.com/"
+    ]
+  },
+  {
+    "name": "中电海康",
+    "district": "余杭区",
+    "sector": "智能物联与机器视觉",
+    "site": "http://www.hikyour.com/",
+    "candidates": [
+      "http://www.hikyour.com/",
+      "http://qydb.leshanvc.com/36810.html",
+      "http://www.cetc.com.cn/cethik/334151/334097/1554449/index.html"
+    ]
+  },
+  {
+    "name": "南方中金",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.nanfangzj.com/",
+    "candidates": [
+      "http://www.nanfangzj.com/",
+      "https://sns.wanfangdata.com.cn/perio/nfjr"
+    ]
+  },
+  {
+    "name": "天地数码",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.todaytec.com.cn/",
+    "candidates": [
+      "https://www.todaytec.com.cn/",
+      "https://jy.zjhzcc.edu.cn/campus/view/id/862324",
+      "https://www.yyxtiandi.com/",
+      "https://51sole596504.51sole.com/"
+    ]
+  },
+  {
+    "name": "中金环境",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "https://guba.eastmoney.com/list,300145.html?from=BaiduAladdin",
+    "candidates": [
+      "https://guba.eastmoney.com/list,300145.html?from=BaiduAladdin",
+      "http://quote.eastmoney.com/changes/stocks/sz300145.html",
+      "http://data.eastmoney.com/rzrq/detail/300145.html"
+    ]
+  },
+  {
+    "name": "兴源环境",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.xingyuan.com/",
+    "candidates": [
+      "http://www.xingyuan.com/",
+      "https://epaper.cs.com.cn/zgzqb/html/2017-12/09/nw.D110000zgzqb_20171209_4-B015.htm?div=-1",
+      "https://epaper.cs.com.cn/zgzqb/html/2017-12/19/nw.D110000zgzqb_20171219_6-B012.htm?div=-1",
+      "https://epaper.cs.com.cn/zgzqb/html/2017-12/07/nw.D110000zgzqb_20171207_6-B016.htm?div=-1",
+      "https://top.chinaz.com/site_www.xingyuan.com.html"
+    ]
+  },
+  {
+    "name": "博拓生物",
+    "district": "余杭区",
+    "sector": "医疗与生命科学",
+    "site": "https://www.biotests.com.cn/",
+    "candidates": [
+      "https://www.biotests.com.cn/",
+      "https://oss.aplust.cn/01CSH/BoTuo/index.html",
+      "http://oss.aplust.cn/01CSH/BoTuo/about.html"
+    ]
+  },
+  {
+    "name": "奥泰生物",
+    "district": "余杭区",
+    "sector": "医疗与生命科学",
+    "site": "https://cn.alltests.com.cn/",
+    "candidates": [
+      "https://cn.alltests.com.cn/",
+      "https://www.alltests.com.cn/",
+      "http://jy.zjiet.edu.cn/company/view/id/674368",
+      "https://www.huaota.com/"
+    ]
+  },
+  {
+    "name": "安旭生物",
+    "district": "余杭区",
+    "sector": "医疗与生命科学",
+    "site": "http://www.assuretech.com.cn/",
+    "candidates": [
+      "http://www.assuretech.com.cn/",
+      "http://www.diareagent.com/",
+      "http://www.assuretech.com.cn/news.php?types=3",
+      "https://anrobio-tech.company.lookchem.cn/",
+      "http://www.assuretech.com.cn/details.php?id=4&types=1"
+    ]
+  },
+  {
+    "name": "华光新材",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.cn-huaguang.com/",
+    "candidates": [
+      "http://www.cn-huaguang.com/",
+      "http://mp.ppsj.com.cn/brand1/huaguangxincai.html",
+      "https://quote.eastmoney.com/kcb/688379.html",
+      "http://jx.hc23.com/company/65940.html"
+    ]
+  },
+  {
+    "name": "中达新材",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.zhongda.cn/industry/",
+    "candidates": [
+      "https://www.zhongda.cn/industry/",
+      "https://www.zhongdasteel.com/",
+      "https://www.zbytb.com/c-IH0Yh/",
+      "http://mp.ppsj.com.cn/600074.html",
+      "https://epaper.cs.com.cn/zgzqb/html/2011-08/13/nw.D110000zgzqb_20110813_1-B019.htm?div=0"
+    ]
+  },
+  {
+    "name": "知衣科技",
+    "district": "萧山区",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.zhiyitech.cn/home",
+    "candidates": [
+      "https://www.zhiyitech.cn/home",
+      "http://www.zhiyitech.cn/technology/line",
+      "https://data.zhiyitech.cn/",
+      "https://www.zhiyitech.cn/technology/img",
+      "http://wydb.leshanvc.com/36839.html"
+    ]
+  },
+  {
+    "name": "传播大脑",
+    "district": "萧山区",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.zbytb.com/c-2CFGK/",
+    "candidates": [
+      "https://www.zbytb.com/c-2CFGK/",
+      "https://www.commind.com/commindindex/products/",
+      "https://www.zjol.com.cn/rexun/202301/t20230118_25319595.shtml",
+      "https://zjnews.zjol.com.cn/zjnews/202301/t20230119_25322960.shtml",
+      "https://www.bidizhaobiao.com/qyjc_852069.html"
+    ]
+  },
+  {
+    "name": "惠瀜网络",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.zbytb.com/c-M41Ia/",
+    "candidates": [
+      "https://www.zbytb.com/c-M41Ia/",
+      "http://www.zk71.com/qiye/3139119.html"
+    ]
+  },
+  {
+    "name": "座头鲸科技",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.zuotoujing.net/",
+    "candidates": [
+      "http://www.zuotoujing.net/",
+      "http://whaleisdapp.com/",
+      "https://w.zuotoujing.net/"
+    ]
+  },
+  {
+    "name": "北大信研院",
+    "district": "萧山区",
+    "sector": "基础模型与算力",
+    "site": "http://yanjiusheng.bistu.edu.cn/",
+    "candidates": [
+      "http://yanjiusheng.bistu.edu.cn/",
+      "http://aiit.org.cn/",
+      "http://eecs.pku.edu.cn/xxkxjsxy/info/1060/11833.htm",
+      "https://www.aiitcxzx.com/",
+      "http://www.ece.pku.edu.cn/"
+    ]
+  },
+  {
+    "name": "大胜达",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.sdpack.cn/",
+    "candidates": [
+      "https://www.sdpack.cn/",
+      "http://m.dashengdaqian.b2b168.com/",
+      "https://www.shuididp.cn/yp-3eed45da8ca5942b1116a4c907ece795.html",
+      "http://bz.hc23.com/company/41549.html",
+      "https://dashengdaqian.cn.b2b168.com/"
+    ]
+  },
+  {
+    "name": "万向一二三",
+    "district": "萧山区",
+    "sector": "智能终端与出行",
+    "site": "https://cn.a123systems.com/",
+    "candidates": [
+      "https://cn.a123systems.com/",
+      "http://www.kuaifanacc.mobi/%E4%B8%87%E5%90%91%E4%B8%80%E4%BA%8C%E4%B8%89%E6%8B%9B%E8%81%98%E5%AE%98%E7%BD%91_2018.html",
+      "http://www.kuaifanacc.mobi"
+    ]
+  },
+  {
+    "name": "亚太机电",
+    "district": "萧山区",
+    "sector": "智能终端与出行",
+    "site": "https://www.apg.cn/",
+    "candidates": [
+      "https://www.apg.cn/",
+      "http://irm.p5w.net/ssgs/S002284/?code=002284",
+      "http://www.apg.cn/products_list.html",
+      "http://www.apg.cn/about.html",
+      "http://www.chinaapg.com/"
+    ]
+  },
+  {
+    "name": "兆丰机电",
+    "district": "萧山区",
+    "sector": "智能终端与出行",
+    "site": "https://www.hzfb.com/",
+    "candidates": [
+      "https://www.hzfb.com/",
+      "http://www.hzfb.com/about.html",
+      "http://wjgj.hc23.com/company/222211.html"
+    ]
+  },
+  {
+    "name": "国泰环保",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.hzgthb.com/",
+    "candidates": [
+      "http://www.hzgthb.com/",
+      "https://www.51sole.com/company/detail_10652160.html",
+      "http://www.sdgthuanbao.com/"
+    ]
+  },
+  {
+    "name": "荣盛石化",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.cnrspc.com/",
+    "candidates": [
+      "https://www.cnrspc.com/",
+      "https://www.zbytb.com/c-HGKCi/",
+      "http://www.zk71.com/rsshgfyx/",
+      "https://epaper.cs.com.cn/zgzqb/html/2011-04/20/nw.D110000zgzqb_20110420_5-B021.htm?div=0"
+    ]
+  },
+  {
+    "name": "东南网架",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://epaper.cs.com.cn/zgzqb/html/2014-04/29/nw.D110000zgzqb_20140429_5-B089.htm?div=-1",
+    "candidates": [
+      "https://epaper.cs.com.cn/zgzqb/html/2014-04/29/nw.D110000zgzqb_20140429_5-B089.htm?div=-1",
+      "http://jz.hc23.com/company/87222.html",
+      "http://fwol.cn/show_sc.php?urlid=16716881"
+    ]
+  },
+  {
+    "name": "杭萧钢构",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.hxss.com.cn/manage12/50.html",
+    "candidates": [
+      "https://www.hxss.com.cn/manage12/50.html",
+      "https://www.55188.com/keywords-%E6%9D%AD%E8%90%A7%E9%92%A2%E6%9E%84%E9%9B%86%E5%9B%A2%E5%AE%98%E7%BD%91.html",
+      "https://hkjum1340699.51sole.com/",
+      "https://www.shihuantong.com/com-BC-HXGG/introduce/",
+      "http://jjxy.hfut.edu.cn/xsgz/2013/0916/c8658a176656/page.psp"
+    ]
+  },
+  {
+    "name": "易现科技",
+    "district": "萧山区",
+    "sector": "AI 原生应用与数字内容",
+    "site": "https://www.ezxr.com/",
+    "candidates": [
+      "https://www.ezxr.com/",
+      "https://ezxr.com/about",
+      "https://ezxr.com/join",
+      "https://www.yikinai.com/index"
+    ]
+  },
+  {
+    "name": "光珀智能",
+    "district": "萧山区",
+    "sector": "智能物联与机器视觉",
+    "site": "http://www.genius-pros.com/",
+    "candidates": [
+      "http://www.genius-pros.com/",
+      "https://career.cup.edu.cn/news/view/aid/86663/tag/xwzp"
+    ]
+  },
+  {
+    "name": "开元旅业",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.kaiyuangroup.com/",
+    "candidates": [
+      "https://www.kaiyuangroup.com/",
+      "https://cg.kaiyuangroup.com/portal/index.do",
+      "http://www.kaytrip.com/",
+      "http://cg.kaiyuangroup.com/",
+      "https://www.prestigeuganda.com/"
+    ]
+  },
+  {
+    "name": "万向钱潮",
+    "district": "萧山区",
+    "sector": "智能终端与出行",
+    "site": "https://www.wxqc.com.cn/",
+    "candidates": [
+      "https://www.wxqc.com.cn/",
+      "https://www.zbytb.com/c-K86Xj/",
+      "https://www.cnev.cn/shop/1063493/",
+      "https://67493.51sole.com/",
+      "http://www.85384.com/qiye-339827.html"
+    ]
+  },
+  {
+    "name": "科百特",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.cobetter.com.cn/",
+    "candidates": [
+      "https://www.cobetter.com.cn/",
+      "https://cbthr.company.lookchem.cn/",
+      "https://www.cobetter.com.cn/about-us.html",
+      "https://zh.cobetterfiltration.com/",
+      "https://cobetterfiltration.com/"
+    ]
+  },
+  {
+    "name": "正强传动",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.zhengqiang.com/",
+    "candidates": [
+      "https://www.zhengqiang.com/",
+      "http://qydb.leshanvc.com/43631.html",
+      "http://www.cgedt.com/gp/m20014/",
+      "https://i.gasgoo.com/supplier/35261583/"
+    ]
+  },
+  {
+    "name": "之江有机硅",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.chinazhijiang.com/",
+    "candidates": [
+      "https://www.chinazhijiang.com/",
+      "http://alwindoor.com/qiye_zy/zhijiang/",
+      "https://b2b.huangye88.com/gongsi/882076/",
+      "https://b2b.alighting.com/headline/hzzjyjg.html"
+    ]
+  },
+  {
+    "name": "中新电力",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://www.zbytb.com/c-2DPP3/",
+    "candidates": [
+      "https://www.zbytb.com/c-2DPP3/",
+      "https://www.bidchance.com/company-279035.html"
+    ]
+  },
+  {
+    "name": "盛达铁塔",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "http://www.bidchance.com/company-276376.html",
+    "candidates": [
+      "http://www.bidchance.com/company-276376.html",
+      "https://b2b.huangye88.com/gongsi/3409669/",
+      "https://jz.hc23.com/company/92692.html",
+      "http://cjyw.ypc.edu.cn/company/view/id/913183/tab/4"
+    ]
+  },
+  {
+    "name": "杭州湾信息港",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技",
+    "site": "https://zj.zhaoshang.net/yuanqu/detail/13853",
+    "candidates": [
+      "https://zj.zhaoshang.net/yuanqu/detail/13853",
+      "https://www.hxss.com.cn/caseshow/4237.html",
+      "https://www.zbytb.com/c-2DQQR/"
+    ]
+  },
+  {
+    "name": "浙江大学杭州国际科创中心",
+    "district": "萧山区",
+    "sector": "基础模型与算力",
+    "site": "https://hic.zju.edu.cn/",
+    "candidates": [
+      "https://hic.zju.edu.cn/",
+      "https://ehr.hic.zju.edu.cn/",
+      "https://hic.zju.edu.cn/main.psp",
+      "https://www.zbytb.com/c-EV18l"
+    ]
+  },
+  {
+    "name": "西电杭州研究院",
+    "district": "萧山区",
+    "sector": "基础模型与算力",
+    "site": "https://hz.xidian.edu.cn/",
+    "candidates": [
+      "https://hz.xidian.edu.cn/",
+      "https://www.xidian.edu.cn/info/1075/49059.htm",
+      "https://hyyzp.xidian.edu.cn/portal/download",
+      "https://hz.xidian.edu.cn/kxyj.htm",
+      "https://hz.xidian.edu.cn/kxyj/kyjd/sbjpt.htm"
+    ]
+  },
+  {
+    "name": "北大信息技术高等研究院",
+    "district": "萧山区",
+    "sector": "基础模型与算力",
+    "site": "https://www.zbytb.com/c-K68Qo/",
+    "candidates": [
+      "https://www.zbytb.com/c-K68Qo/",
+      "https://career.nankai.edu.cn/company/index/id/16785.html"
+    ]
+  }
+]

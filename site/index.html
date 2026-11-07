@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>讲义 LECTURE — AI 知识解说视频的 6 种范式、8 种竖屏版式、4 种幻灯片版式</title>
+<meta name="description" content="把知识做成视频，不做成短剧。6 种叙事范式 + 12 种版式（8 竖屏 / 4 幻灯片），每种都带样板、参数与引用规范。">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="layouts.css">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+
+<header class="site-head">
+  <a class="wordmark" href="#top">
+    <span class="wm-cn">讲义</span>
+    <span class="wm-en">LECTURE / INDEX</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#contrast">对照</a>
+    <a href="#method">方法</a>
+    <a href="#paradigms">范式</a>
+    <a href="#layouts">版式</a>
+    <a href="#cite">引用</a>
+  </nav>
+  <div class="head-meta">2026 · 第 03 版</div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-eyebrow">AI 知识解说 · 范式与版式索引</div>
+    <h1>把知识做成视频，<br><em>不做成短剧。</em></h1>
+    <p class="lead">
+      六种叙事范式，十二种版式——八种竖屏、四种幻灯片。范式决定语气，版式决定结构，
+      两者正交，可以自由组合。每一种都配样板、可抄的参数，以及它自己的引用规范。
+    </p>
+    <ul class="stats">
+      <li><b>6</b><span>叙事范式</span></li>
+      <li><b>12</b><span>版式</span></li>
+      <li><b>3–6<span class="unit">秒</span></b><span>每屏停留</span></li>
+      <li><b>0</b><span>剧情反转</span></li>
+    </ul>
+  </section>
+
+  <section class="contrast" id="contrast">
+    <div class="rail"><span>01 · 对照 / CONTRAST</span><span>01 / 06</span></div>
+    <div class="section-head">
+      <h2>两种视频，两种目标</h2>
+      <p class="section-note">同样 60 秒：短剧要你继续看下去，讲解要你记住一件事。混着做，两头都做不好。</p>
+    </div>
+    <table class="compare">
+      <thead>
+        <tr><th>维度</th><th>短剧式</th><th>知识式</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>时间单位</td><td>3 秒一个钩子</td><td>3–6 秒一个论点</td></tr>
+        <tr><td>驱动力</td><td>情绪与反转</td><td>证据与因果</td></tr>
+        <tr><td>一屏信息</td><td>一个梗</td><td>一个完整句子</td></tr>
+        <tr><td>引用</td><td>不存在</td><td>常驻、可截图、可查证</td></tr>
+        <tr><td>结尾</td><td>反转或悬念</td><td>结论或行动</td></tr>
+        <tr><td>失败方式</td><td>无聊</td><td>看不懂</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="manifesto" id="method">
+    <div class="rail"><span>02 · 方法 / METHOD</span><span>02 / 06</span></div>
+    <div class="manifesto-grid">
+      <article>
+        <span class="num">01</span>
+        <h3>一屏一个论点</h3>
+        <p>幻灯片的问题不是"页"，是"每页塞了四件事"。短视频的问题反过来：每 1.2 秒换一次刺激。我们要的是中间那个位置——一屏一件事，停 3 到 6 秒。</p>
+      </article>
+      <article>
+        <span class="num">02</span>
+        <h3>节奏服务理解</h3>
+        <p>屏幕停留时长应该由句子长度决定，不由音乐重拍决定。读完一行字需要 2 秒，那就给它 2 秒，而不是切在鼓点上。</p>
+      </article>
+      <article>
+        <span class="num">03</span>
+        <h3>引用留在画面上</h3>
+        <p>知识视频和短剧的分界线在这里：观众能暂停、截图、查到出处。所以每个范式都规定了引用长什么样、待多久、放哪儿。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="catalog" id="paradigms">
+    <div class="rail"><span>03 · 范式 / PARADIGMS</span><span>03 / 06</span></div>
+    <div class="section-head">
+      <h2>六种范式</h2>
+      <p class="section-note">按"讲什么内容"选，不按"好不好看"选。悬停播放样板，点击看完整拆解。</p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="筛选范式">
+      <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">全部</button>
+      <button class="chip" data-filter="collage" role="tab" aria-selected="false">拼贴</button>
+      <button class="chip" data-filter="minimal" role="tab" aria-selected="false">极简</button>
+      <button class="chip" data-filter="blueprint" role="tab" aria-selected="false">蓝图</button>
+      <button class="chip" data-filter="data" role="tab" aria-selected="false">数据</button>
+      <button class="chip" data-filter="cards" role="tab" aria-selected="false">卡片</button>
+      <button class="chip" data-filter="book" role="tab" aria-selected="false">书页</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="layouts" id="layouts">
+    <div class="rail"><span>04 · 版式 / LAYOUTS</span><span>04 / 06</span></div>
+    <div class="section-head">
+      <h2>十二种版式</h2>
+      <p class="section-note">上面八格是竖屏（9:16）骨架，用于视频；下面四格是幻灯片（16:9）骨架，用于路演、提案与月报——取自四套实战 deck。</p>
+    </div>
+
+    <h3 class="group-label"><span>竖屏 · 9:16</span><em>视频 · 3–6 秒一屏</em></h3>
+    <div class="layout-grid" id="layoutGrid"></div>
+
+    <h3 class="group-label"><span>幻灯片 · 16:9</span><em>路演 · 提案 · 月报 · 内容排期</em></h3>
+    <div class="layout-grid layout-grid-deck" id="deckGrid"></div>
+
+    <p class="layout-foot">
+      统一约束：12 栏网格 · 8px 基线 · 安全区上下各 220px（1080×1920）/ 左右 80px（1920×1080）· 单屏文字不超过 42 字 · 每屏只允许一个视觉重心。
+      幻灯片版式沿用 deck 的做法：顶部发丝线 + 页码 + 页眉元信息，底部来源行与 <code>05 / 14</code> 页码。
+    </p>
+  </section>
+
+  <section class="closing" id="cite">
+    <div class="rail"><span>05 · 引用 / CITATION</span><span>05 / 06</span></div>
+    <h2>引用不是装饰</h2>
+    <blockquote class="pullquote">
+      <span class="qmark" aria-hidden="true">“</span>
+      <p>单独截下这一帧，观众也应该能查到这句话是谁说的。</p>
+      <cite>— 本索引的引用原则</cite>
+    </blockquote>
+    <ol class="rules">
+      <li><b>01</b><span><strong>常驻 ≥3 秒</strong>：短于这个时长等于没有。</span></li>
+      <li><b>02</b><span><strong>字号 ≥ 正文 70%</strong>：不做"免责声明式"的缩小。</span></li>
+      <li><b>03</b><span><strong>可独立截图</strong>：单帧也要能看出出处。</span></li>
+    </ol>
+    <p class="closing-note">四种范式的引用写法各不相同：拼贴用"来源贴纸"，蓝图用图号与修订号，书页用上标加脚注，数据用常驻的 Source 行。形式不同，这三条约束相同。</p>
+  </section>
+
+  <section class="about" id="about">
+    <div class="rail"><span>06 · 关于 / ABOUT</span><span>06 / 06</span></div>
+    <div class="about-grid">
+      <div>
+        <h2>关于这份索引</h2>
+        <p>这是一份实践性的范式与版式清单，不是排行榜。每条都从一个真实做法里抽出来，再退回成可复用的参数：色值、字重、停留时长、引用位置。<br>样板全部由程序化渲染生成（Python + ffmpeg），因此可以逐帧复现，也可以改文案重跑。</p>
+      </div>
+      <dl class="facts">
+        <div><dt>样板规格</dt><dd>720×1280 / 24fps / 5s / 无音轨</dd></div>
+        <div><dt>渲染方式</dt><dd>Pillow 逐帧 + libx264</dd></div>
+        <div><dt>版式来源</dt><dd>自建 8 种 + 四套 deck 归纳 4 种</dd></div>
+        <div><dt>不建议用于</dt><dd>剧情、情绪流、纯带货</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <span>讲义 LECTURE / INDEX · 2026 · 第 03 版</span>
+  <span>样板为程序化示意，非真实素材；引用示例中的文献仅作格式演示。</span>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" data-close aria-label="关闭">×</button>
+    <div class="modal-media">
+      <video id="mVideo" playsinline loop muted></video>
+      <div class="m-media-note">样板 · 720×1280 · 5 秒循环 · 无音轨</div>
+    </div>
+    <div class="modal-body" id="mBody"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>拆解：榜单为什么没有预测力 · LeadScope</title>
+<meta name="description" content="从 ROI 口径、幸存者偏差、持续性检验、收益结构、跟单损耗五个角度，拆解币安合约带单榜前十名。">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236ea8ff'/%3E%3Cpath d='M9 21l5-10 4 7 5-4' stroke='%2305070d' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="analysis">
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LS</span>
+      <span>LeadScope<small style="display:block">带单透视</small></span>
+    </a>
+    <nav class="nav">
+      <a data-nav="home" href="index.html">结论</a>
+      <a data-nav="board" href="board.html">榜单</a>
+      <a data-nav="analysis" href="analysis.html">拆解</a>
+      <a data-nav="simulator" href="simulator.html">模拟器</a>
+      <a data-nav="playbook" href="playbook.html">学习</a>
+      <a data-nav="method" href="method.html">方法</a>
+    </nav>
+    <span class="pill-live"><i class="dot"></i><span id="asOf">—</span></span>
+  </div>
+</header>
+
+<main>
+<div class="wrap" style="padding-top:52px">
+  <div class="eyebrow">拆解 · 六节</div>
+  <h1 style="font-size:clamp(30px,3.6vw,46px);max-width:22ch;margin-bottom:16px">榜单为什么给不了你答案</h1>
+  <p class="lede" style="max-width:70ch">
+    一个排行榜如果只看收益率，它衡量的其实是「谁在最近 30 天最敢下注并且恰好押中」。
+    下面六节，从口径到结构，把这个结论拆开验证。
+  </p>
+</div>
+
+<!-- 01 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">01 / 口径</div><h2>ROI 不是你的收益率</h2></div></div>
+  <div class="grid-2">
+    <div class="prose">
+      <p>币安合约带单的「收益率」是该组合净值的区间涨跌幅：<code>ROI = (期末净值 − 期初净值) / 期初净值</code>。这个数字有三个天然漏洞：</p>
+      <ul>
+        <li><strong>不反映资金规模。</strong>一个 2,000 USDT 的组合做出 300%，赚的是 6,000 USDT；一个 200 万 USDT 的组合做出 30%，赚的是 60 万。榜单把两者按同一列排序。</li>
+        <li><strong>不含未实现盈亏的风险。</strong>浮盈可以让净值曲线很好看，直到某一根针把它全部打回去。回撤列才是真实的疼痛值。</li>
+        <li><strong>30 天太短。</strong>高杠杆策略在 90 天里出现一段「连对」的概率并不低。恰好被截到这一段的人，就成了榜首。</li>
+      </ul>
+      <div class="callout">判断一个带单员，至少要同时看三个数：<b>30 天收益</b>（他赚了多少）、<b>最大回撤</b>（跟的人要扛多少）、<b>前 60 天收益</b>（这份收益有没有前史）。单看第一个，等于只看广告。</div>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:16px">同一份 30 天收益，三种完全不同的账户</div>
+      <div style="display:grid;gap:14px">
+        <div style="border-left:2px solid var(--up);padding-left:14px">
+          <div class="mono up" style="font-size:19px">+135% / 回撤 37%</div>
+          <div class="note" style="margin-top:4px">前期 +8%，全期 +152%。收益有前史，回撤可承受 —— 这是<b style="color:#cfd8ea">可讨论</b>的一类。</div>
+        </div>
+        <div style="border-left:2px solid var(--amber);padding-left:14px">
+          <div class="mono up" style="font-size:19px">+135% / 回撤 50%</div>
+          <div class="note" style="margin-top:4px">胜率 90%、盈亏比 0.12 —— 小赢大亏结构。要么是马丁，要么在扛单。<b style="color:#cfd8ea">观察</b>。</div>
+        </div>
+        <div style="border-left:2px solid var(--down);padding-left:14px">
+          <div class="mono down" style="font-size:19px">+493% / 回撤 88%</div>
+          <div class="note" style="margin-top:4px">前期 −80%，全期 +20%。这是从废墟里抢回来的收益，<b style="color:#cfd8ea">不可跟</b>。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">02 / 样本</div><h2>你看到的榜单，是被筛过三遍的</h2></div></div>
+  <div class="grid-2" style="grid-template-columns:1fr 1.1fr">
+    <div class="prose">
+      <p>币安跟单生态里被第三方持续跟踪的带单员约 <strong>11,942</strong> 位；其中通过平台基础门槛（历史长度、交易笔数、数据质量、活跃度）的约 <strong>2,114</strong> 位；我们这次拿到完整 30 天数据的 <strong>931</strong> 位。</p>
+      <p>每一层筛选都在做同一件事：<strong>把难看的结果移出视野</strong>。爆仓的组合会被关闭，关闭的组合不再出现在榜单上；新开的组合从第一天开始重新计分。所以你看到的「平均收益」，从来不包含那些归零的人。</p>
+      <div class="callout warn">在通过门槛的 931 位里，<b>47.5% 全期收益为负</b>，<b>52.1% 夏普为负</b>。也就是说：即使平台已经帮你筛过一轮，「活着的」里面仍有接近一半在亏钱。</div>
+    </div>
+    <div class="card" id="funnel"></div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="wrap reveal">
+  <div class="sec-head">
+    <div><div class="sec-no">03 / 持续性</div><h2>−0.03：榜单没有预测力</h2>
+      <p>如果收益来自策略，那么「上一期表现好」应该能预测「下一期表现好」。我们把 30 天收益与它之前 60 天的收益做秩相关，结果是 −0.03。</p>
+    </div>
+  </div>
+  <div class="grid-2" style="grid-template-columns:1.25fr 1fr">
+    <div class="chart-box">
+      <div class="chart-title"><h3>前十名：前 60 天 vs 近 30 天</h3><span>红线 = 前 60 天 · 绿点 = 近 30 天</span></div>
+      <p class="chart-sub">10 位里有 8 位在更早的两个月是亏的（中位 −72%），其中 4 位全期仍为负。这不是「延续」，是「反弹」。</p>
+      <canvas id="dumbbell"></canvas>
+    </div>
+    <div class="prose">
+      <p><strong>这个 −0.03 意味着什么？</strong>意味着你从榜单上挑人的行为，和一个随机抽签的行为，在统计上没有区别。一个真正有 alpha 的策略，两段窗口的秩相关通常在 0.2–0.5。</p>
+      <p><strong>为什么会出现负相关？</strong>因为「回本」这个行为本身有数学惯性：亏损 80% 后，剩余资金必须用极高杠杆才能把曲线拉回来。这类账户天然会在「大亏 → 暴力反弹 → 再大亏」之间循环。榜单恰好截取反弹段。</p>
+      <p><strong>对我们的意义：</strong>「最近 30 天赚最多」不但不是加分项，在极端值区间反而是<b>减分项</b>——它标记的是「刚刚经历过大亏并且上了高杠杆」。</p>
+      <div class="callout bad">如果把「前 60 天为正」作为硬性条件，前十名里只剩 <b>2 位</b>。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">04 / 风险</div><h2>跟单人要先扛住的那一刀</h2>
+    <p>回撤是跟单体验里最真实的部分：带单员的净值曲线回到新高时，跟单人可能已经因为追加保证金或心理崩溃而离场。</p>
+  </div></div>
+  <div class="table-wrap scroll-x">
+    <table id="flagTable">
+      <thead><tr><th style="width:44px">#</th><th class="l">带单员</th><th>前 60 天</th><th>最大回撤</th><th>账面逐笔期望</th><th class="l">标签</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="grid-3" style="margin-top:18px">
+    <div class="card"><div class="kpi"><div class="v down">−78%</div><div class="k">前十名回撤中位数</div></div><p class="note" style="margin-top:10px">全样本回撤中位数是 −19%。榜单把它放大到了 4 倍。</p></div>
+    <div class="card"><div class="kpi"><div class="v down">6 / 10</div><div class="k">回撤超过 75%</div></div><p class="note" style="margin-top:10px">按 50% 回撤后需要 +100% 才能回本计算，75% 回撤需要 +300%。</p></div>
+    <div class="card"><div class="kpi"><div class="v">4 / 10</div><div class="k">全期收益仍为负</div></div><p class="note" style="margin-top:10px">他们 30 天赚了很多，但把时间拉长到 90 天，依然是亏的。</p></div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">05 / 结构</div><h2>胜率 90% 的账户，为什么更危险</h2></div></div>
+  <div class="grid-2">
+    <div class="prose">
+      <p>高胜率本身不是优点，它只是收益分布的一种形状。要判断好坏，必须同时看<strong>盈亏比</strong>（平均盈利 ÷ 平均亏损）：</p>
+      <ul>
+        <li><strong>正偏（盈亏比 &gt; 1.1）：</strong>错的时候亏得少，对的时候赚得多。胜率 40% 也能赚钱，这是趋势/波段策略的典型形状。</li>
+        <li><strong>负偏（盈亏比 &lt; 0.5 + 胜率 &gt; 75%）：</strong>平时一直小赚，偶尔一次亏光。这是马丁格尔、网格、扛单的典型形状——它把爆仓概率从「每天」推迟到「某一天」。</li>
+      </ul>
+      <p>在前十名里，有 <strong>4 位</strong>属于第二种：胜率 75%–90%，盈亏比 0.12–0.42，回撤 78%–84%。他们的净值曲线在前 29 天都很漂亮。</p>
+      <div class="callout bad">榜单第 9 名：胜率 90%，盈亏比 0.12，回撤 50%。这意味着他平均每赚 1 元要冒 8 元的风险。连续 10 次顺利之后，第 11 次会把前 10 次全部还回去。</div>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:16px">两种收益形状的对比</div>
+      <div style="display:grid;gap:18px">
+        <div>
+          <div class="mono" style="font-size:13px;color:var(--up);margin-bottom:6px">正偏 · 盈亏比 1.9 / 胜率 46%</div>
+          <div class="payoff-viz"><i style="width:76%;background:var(--up)"></i><i style="width:40%;background:rgba(46,230,168,.35)"></i></div>
+          <div class="note" style="margin-top:6px">赢的时候拿走 76 格，输的时候只吐 40 格。</div>
+        </div>
+        <div>
+          <div class="mono" style="font-size:13px;color:var(--down);margin-bottom:6px">负偏 · 盈亏比 0.12 / 胜率 90%</div>
+          <div class="payoff-viz"><i style="width:9%;background:var(--down)"></i><i style="width:75%;background:rgba(255,92,122,.35)"></i></div>
+          <div class="note" style="margin-top:6px">十次小赢（9 格 × 10），一次大亏（75 格）全部抹平。</div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <p class="note">判断方法：把「胜率 × 平均盈利」和「(1−胜率) × 平均亏损」相比。前者更小，就是负偏——无论胜率多高。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">06 / 损耗</div><h2>跟单人拿到的，永远比榜单少</h2></div></div>
+  <div class="grid-2">
+    <div class="prose">
+      <p>跟单是一笔有摩擦的复制。四道损耗依次发生：</p>
+      <ol>
+        <li><strong>利润分成：</strong>公开组合默认 10%，部分最高 30%。只在盈利时收，但收的是「你赚的那部分」。</li>
+        <li><strong>手续费：</strong>每笔开平共 0.1% 名义价值（taker 0.05% × 2），跟单通常不享受 BNB 抵扣。</li>
+        <li><strong>滑点：</strong>带单员成交与你成交之间有 5–30 秒延迟，波动大时滑点 0.1%–0.3%；超过你设的保护阈值则直接不成交。</li>
+        <li><strong>最低下单额：</strong>小资金跟多仓位时，低于最小名义价值的订单会被跳过，导致你的组合与带单员逐渐偏离。</li>
+      </ol>
+      <p>把这四项写成公式：</p>
+      <code style="display:block;padding:12px 14px;line-height:1.9">跟单人 ≈ (1 − 分成) × 策略毛收益<br>− 笔数 × 杠杆 × (2×手续费 + 2×滑点)</code>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:14px">月度成本占权益比例（估算）</div>
+      <table style="font-size:12.5px">
+        <thead><tr><th class="l">每月笔数</th><th>3x</th><th>5x</th><th>10x</th></tr></thead>
+        <tbody>
+          <tr><td class="l">30 笔</td><td class="num">27%</td><td class="num">45%</td><td class="num down">90%</td></tr>
+          <tr><td class="l">100 笔</td><td class="num">90%</td><td class="num down">150%</td><td class="num down">300%</td></tr>
+          <tr><td class="l">300 笔</td><td class="num down">270%</td><td class="num down">450%</td><td class="num down">900%</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:12px">按 0.05% 手续费 + 0.1% 滑点、双边、满仓轮换估算。实际仓位通常小于满仓，但量级足以说明：<b>高频 + 高杠杆的组合，跟单人几乎不可能复制</b>。931 位里 34% 月交易超过 200 笔。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">07 / 例外</div><h2>如果一定要跟，跟谁</h2>
+    <p>把「可跟单指数」放到最大，前十名里只有 1 位及格。真正该看的，是另一批人。</p>
+  </div></div>
+  <div class="table-wrap scroll-x">
+    <table id="byScore">
+      <thead><tr><th style="width:44px">#</th><th class="l">带单员</th><th>指数</th><th>30 天</th><th>前 60 天</th><th>回撤</th><th>笔/月</th><th class="l">为什么</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:12px">这批人的共同点：30 天收益只有 +15%–45%（不惊人），但回撤普遍在 10% 以内，且前 60 天为正。他们的价值不在「赚得快」，而在「活得久、可复制」。</p>
+</section>
+
+<section class="wrap reveal">
+  <div class="card" style="display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <div>
+      <h2 style="margin:0 0 6px;font-size:22px">下一步：把你的跟单参数代进去算一遍</h2>
+      <p class="note" style="margin:0;max-width:56ch">分成、滑点、杠杆、交易频率，四个参数一变，结论可能完全不同。模拟器用蒙特卡洛跑 3,000 条路径，给你一个分布而不是一个承诺。</p>
+    </div>
+    <a href="simulator.html" class="tag good" style="padding:11px 20px;font-size:13.5px">打开跟单模拟器 →</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="color:#95a2bd;margin-bottom:8px">LeadScope · 带单透视</div>
+      <div>数据快照 <span id="asOf3">—</span>（UTC+8）· 仅供研究，不构成投资建议。</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">结论</a><a href="board.html">榜单</a><a href="simulator.html">模拟器</a><a href="playbook.html">学习</a><a href="method.html">方法与局限</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

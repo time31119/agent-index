@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>指标测试台 · 28 个技术指标独立回测 · 技术分析研究实验室</title><meta name="description" content="28个技术指标（SMA、EMA、MACD、RSI、布林带、ATR、ADX、KDJ、唐奇安、Aroon、一目均衡表、Supertrend等）的独立回测页面，含净值曲线与参数实验。">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9b26a%22/><text x=%2216%22 y=%2222%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23151009%22 font-family=%22Arial%22 font-weight=%22bold%22>T</text></svg>">
+
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="logo" href="index.html"><span class="mark">T</span>技术分析研究实验室</a>
+  <div class="nav-links">
+    <a href="index.html" class="">首页</a>
+    <a href="books.html" class="">权威书单</a>
+    <a href="indicators.html" class="on">指标测试</a>
+    <a href="ranking.html" class="">收益率排名</a>
+    <a href="summary.html" class="">归纳总结</a>
+    <a href="method.html" class="">方法与数据</a>
+  </div>
+</div></nav>
+<header class="hero" style="padding-bottom:26px"><div class="wrap">
+  <div class="kicker">INDICATOR TEST BENCH</div>
+  <h1><span class="n">28</span> 个指标的<br>独立测试台</h1>
+  <p class="lede">每个指标一个专属页面：净值曲线与买入持有对比、分市场统计、逐年收益、参数敏感性散点、交易记录，以及可在浏览器里实时重算的“参数实验室”。</p>
+  <div class="btn-row" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+    <a class="btn gold" href="ranking.html">收益率排名 →</a>
+    <a class="btn" href="compare.html">多指标对比</a>
+    <a class="btn" href="method.html">回测方法</a>
+  </div>
+</div></header>
+<section style="padding-top:0"><div class="wrap">
+  <div class="cat-tabs" id="tabs"><button class="on" data-cat="all">全部 28</button><button data-cat="trend">趋势与系统交易 7</button><button data-cat="volume">量价与订单流 3</button><button data-cat="osc">震荡与均值回归 5</button><button data-cat="ma">结构与心理价位 2</button><button data-cat="breakout">突破与趋势启动 2</button><button data-cat="momentum">动量与相对强弱 3</button><button data-cat="vol">波动率与通道 4</button><button data-cat="combo">组合与自适应 2</button></div>
+  <div class="grid g3" id="cards"><a class="card ind-card" href="ind-aroon.html" data-cat="trend">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div><h3>Aroon</h3></div><div class="rank">01</div></div>
+    <div class="idea">Aroon-Up 衡量“距离最近 N 日最高点过去了多少天”，用来判断趋势的新鲜度。Aroon-Up &gt; 70 且 &gt; Aroon-Down 视为上升趋势。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v up">+0.8%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-1.5%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.61</div></div></div>
+  </a><a class="card ind-card" href="ind-sma.html" data-cat="trend">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div><h3>SMA 均线</h3></div><div class="rank">02</div></div>
+    <div class="idea">价格在均线之上视为上升趋势，之下视为下降趋势。均线的本质是“平滑噪音后的趋势方向”，单均线用价格与均线的相对位置做多空判断。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v up">+0.6%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.1%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.56</div></div></div>
+  </a><a class="card ind-card" href="ind-ichimoku.html" data-cat="trend">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div><h3>一目均衡表</h3></div><div class="rank">03</div></div>
+    <div class="idea">转换线/基准线/先行带构成“云图”。价格站上云图且转换线在基准线上方代表多头结构；云图同时给出支撑阻力与趋势方向。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-0.4%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.1%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.55</div></div></div>
+  </a><a class="card ind-card" href="ind-ema.html" data-cat="trend">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div><h3>EMA 均线</h3></div><div class="rank">04</div></div>
+    <div class="idea">EMA 对近期价格赋予更高权重，转折比 SMA 更早；代价是震荡市里假信号更多。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-0.6%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-4.1%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.47</div></div></div>
+  </a><a class="card ind-card" href="ind-donchian.html" data-cat="breakout">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">突破与趋势启动</div><h3>唐奇安通道</h3></div><div class="rank">05</div></div>
+    <div class="idea">价格创 N 日新高做多、创 M 日新低离场（海龟 System 1/2 的简化版）。突破的本质是“用规则强制在趋势启动时上车”，代价是震荡市连续小亏。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-0.7%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-2.3%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.49</div></div></div>
+  </a><a class="card ind-card" href="ind-supertrend.html" data-cat="trend">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div><h3>Supertrend</h3></div><div class="rank">06</div></div>
+    <div class="idea">ATR 通道 + 趋势翻转规则：收盘价突破上轨转多、跌破下轨转空。本质是“带波动率自适应带宽的唐奇安通道”。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-0.8%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-2.8%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.46</div></div></div>
+  </a><a class="card ind-card" href="ind-roc.html" data-cat="momentum">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">动量与相对强弱</div><h3>ROC 动量</h3></div><div class="rank">07</div></div>
+    <div class="idea">N 日涨跌幅，最朴素的动量指标。动量效应（强者继续强）在跨市场长期存在，但在 A 股高波动环境下回撤更大。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-0.9%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-2.9%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.44</div></div></div>
+  </a><a class="card ind-card" href="ind-voltarget.html" data-cat="combo">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">组合与自适应</div><h3>波动率择时</h3></div><div class="rank">08</div></div>
+    <div class="idea">仓位 ∝ 目标波动率 / 已实现波动率，下跌波动放大时自动减仓。海龟法则的“按波动率等风险配置”与风险平价的简化版。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-0.9%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.0%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.51</div></div></div>
+  </a><a class="card ind-card" href="ind-cci.html" data-cat="osc">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">震荡与均值回归</div><h3>CCI</h3></div><div class="rank">09</div></div>
+    <div class="idea">典型价格偏离其均值的程度，用平均绝对偏差归一化。CCI &gt; +100 视为强势启动（顺势），&lt; -100 视为弱势。Elder 用 CCI 做“脉冲系统”。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-1.1%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-2.7%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.49</div></div></div>
+  </a><a class="card ind-card" href="ind-tsmom.html" data-cat="momentum">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">动量与相对强弱</div><h3>时序动量</h3></div><div class="rank">10</div></div>
+    <div class="idea">学术与实务都验证过的“时序动量”：过去 12 个月（跳过最近 1 个月）为正则持有，否则空仓。Faber 的“10 月均线”与 Asness 的动量因子同源。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-1.1%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.0%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.38</div></div></div>
+  </a><a class="card ind-card" href="ind-boll.html" data-cat="vol">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">波动率与通道</div><h3>布林带</h3></div><div class="rank">11</div></div>
+    <div class="idea">均线 ± k 倍标准差构成通道，宽度反映波动。Bollinger 本人强调“价格触及上轨不是卖出信号”，真正有用的是带宽收缩后的突破与 %b 的均值回归。此处测试中轨趋势跟随（收盘站上…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-1.2%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-4.4%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.47</div></div></div>
+  </a><a class="card ind-card" href="ind-adx.html" data-cat="trend">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div><h3>ADX 趋向</h3></div><div class="rank">12</div></div>
+    <div class="idea">Wilder 的 DMI 用 +DI/-DI 判断方向、ADX 判断趋势强度。经典规则：ADX &gt; 20~25 且 +DI 在 -DI 上方才做多，过滤掉无趋势的震荡期。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-1.4%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-5.0%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.50</div></div></div>
+  </a><a class="card ind-card" href="ind-pivot.html" data-cat="ma">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">结构与心理价位</div><h3>结构突破</h3></div><div class="rank">13</div></div>
+    <div class="idea">用左右各 5 根 K 线确认摆动高点，收盘突破最近一个确认高点即“结构突破”，跌破最近确认低点离场。这是道氏理论“高低点抬高”的可计算版本。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-1.7%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-5.3%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.30</div></div></div>
+  </a><a class="card ind-card" href="ind-keltner.html" data-cat="vol">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">波动率与通道</div><h3>肯特纳通道</h3></div><div class="rank">14</div></div>
+    <div class="idea">EMA 中轨 ± ATR 带宽。收盘突破上轨做多、跌破中轨离场；比布林带更平滑，适合捕捉中等趋势。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-1.8%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-4.4%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.45</div></div></div>
+  </a><a class="card ind-card" href="ind-high52.html" data-cat="breakout">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">突破与趋势启动</div><h3>52周新高</h3></div><div class="rank">15</div></div>
+    <div class="idea">O'Neil 的 CAN SLIM 与 Darvas 箱体都强调“创新高的股票最强”。测试收盘创 250 日新高做多、跌破 50 日低点离场。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-1.9%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-5.1%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.37</div></div></div>
+  </a><a class="card ind-card" href="ind-macd.html" data-cat="momentum">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">动量与相对强弱</div><h3>MACD</h3></div><div class="rank">16</div></div>
+    <div class="idea">快慢 EMA 之差衡量动量方向与强度，信号线交叉提供进出场；零轴之上金叉胜率通常更高。此处测试“MACD 上穿信号线做多、下穿离场”。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-2.0%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.7%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.34</div></div></div>
+  </a><a class="card ind-card" href="ind-trendmom.html" data-cat="combo">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">组合与自适应</div><h3>趋势+动量</h3></div><div class="rank">17</div></div>
+    <div class="idea">Elder 的“三重滤网”思想：大周期趋势向上（价格 &gt; MA200）且中周期动量向上（MACD 柱 &gt; 0）才做多。双条件过滤减少单一指标的假信号。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-2.2%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-5.6%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.37</div></div></div>
+  </a><a class="card ind-card" href="ind-atr.html" data-cat="vol">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">波动率与通道</div><h3>ATR 波动过滤</h3></div><div class="rank">18</div></div>
+    <div class="idea">ATR 本身无方向，Wilder 用它做止损与仓位。此处用“EMA20 方向 + ATR 确认波动放大”组合：当日均线向上且 ATR 高于其 20 日均值（波动扩张）时持有，代表“趋势…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-2.3%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-4.8%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.39</div></div></div>
+  </a><a class="card ind-card" href="ind-obv.html" data-cat="volume">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">量价与订单流</div><h3>OBV 能量潮</h3></div><div class="rank">19</div></div>
+    <div class="idea">Granville 的“量在价先”：把涨跌日的成交量累加，OBV 领先于价格突破。测试 OBV 相对其均线走强时持有。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-2.8%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-5.2%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.34</div></div></div>
+  </a><a class="card ind-card" href="ind-volratio.html" data-cat="volume">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">量价与订单流</div><h3>量比</h3></div><div class="rank">20</div></div>
+    <div class="idea">成交量 / 20 日均量 &gt; 1.5 代表资金异动；配合价格站上 MA20，代表“放量上涨”。这是 O'Neil 与 Weinstein 共同强调的量价确认。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-4.1%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.6%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.27</div></div></div>
+  </a><a class="card ind-card" href="ind-psar.html" data-cat="trend">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div><h3>抛物线 SAR</h3></div><div class="rank">21</div></div>
+    <div class="idea">Wilder 的止损转向系统：SAR 在价格下方为多头，在价格上方为空头。它把“止损”机械化，适合强趋势，不适合宽幅震荡。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-4.2%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-4.4%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.24</div></div></div>
+  </a><a class="card ind-card" href="ind-stoch.html" data-cat="osc">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">震荡与均值回归</div><h3>KDJ 随机指标</h3></div><div class="rank">22</div></div>
+    <div class="idea">收盘价在最近 N 日高低区间中的相对位置；K 上穿 D 且处于低位为买入信号，高位死叉为卖出信号。对震荡市敏感，趋势市中容易钝化。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-4.4%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.0%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.21</div></div></div>
+  </a><a class="card ind-card" href="ind-round.html" data-cat="ma">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">结构与心理价位</div><h3>整数关口</h3></div><div class="rank">23</div></div>
+    <div class="idea">整数位（如 3000、4000 点）聚集订单与情绪，常成为支撑阻力。测试“站上最近整数关口做多、跌破离场”，检验心理价位是否有统计意义。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-4.7%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-7.4%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.11</div></div></div>
+  </a><a class="card ind-card" href="ind-mfi.html" data-cat="volume">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">量价与订单流</div><h3>MFI</h3></div><div class="rank">24</div></div>
+    <div class="idea">把“价+量”合成 RSI 式的 0-100 指标，衡量资金流入流出。MFI &lt; 20 视为超卖，&gt; 80 视为超买。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-5.2%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-1.3%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.16</div></div></div>
+  </a><a class="card ind-card" href="ind-rsi.html" data-cat="osc">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">震荡与均值回归</div><h3>RSI</h3></div><div class="rank">25</div></div>
+    <div class="idea">Wilder 用平均涨幅/跌幅衡量多空力量。经典用法是超卖买入、回归中枢卖出；Elder 强调 RSI 与价格的背离比阈值更重要。此处测试“RSI 自下而上穿越 30 买入，上穿 70…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-5.2%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-1.3%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.16</div></div></div>
+  </a><a class="card ind-card" href="ind-willr.html" data-cat="osc">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">震荡与均值回归</div><h3>Williams %R</h3></div><div class="rank">26</div></div>
+    <div class="idea">与随机指标同源但取负值。Larry Williams 强调“短期极端值反转”，-80 以下超卖买入、-20 以上超买卖出。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-5.4%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-3.9%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.14</div></div></div>
+  </a><a class="card ind-card" href="ind-bollrev.html" data-cat="vol">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">波动率与通道</div><h3>布林带回归</h3></div><div class="rank">27</div></div>
+    <div class="idea">收盘跌破下轨视为短期超卖，回到中轨即离场。与趋势跟随相反的假设：震荡市中“低吸”优于“追涨”。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-5.8%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-2.6%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.13</div></div></div>
+  </a><a class="card ind-card" href="ind-stochrsi.html" data-cat="osc">
+    <div class="top"><div><div class="dim" style="font-size:12px;margin-bottom:6px">震荡与均值回归</div><h3>StochRSI</h3></div><div class="rank">28</div></div>
+    <div class="idea">对 RSI 再做一次随机指标，放大超买超卖的敏感度。适合短线均值回归，噪音也更大。…</div>
+    <div class="foot"><div class="metric"><div class="k">全样本超额</div><div class="v down">-6.7%</div></div>
+      <div class="metric"><div class="k">样本外超额</div><div class="v down">-4.5%</div></div>
+      <div class="metric"><div class="k">夏普</div><div class="v">0.08</div></div></div>
+  </a></div>
+</div></section>
+<script>
+document.getElementById('tabs').addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  const c=b.dataset.cat;
+  document.querySelectorAll('#cards .ind-card').forEach(el=>{ el.style.display=(c==='all'||el.dataset.cat===c)?'':'none'; });
+});
+</script><footer class="footer"><div class="wrap"><div class="row">
+  <div><b style="color:var(--muted)">技术分析研究实验室</b> · 33 本权威著作 × 28 个技术指标 × 4 大市场 × 21 年历史数据</div>
+  <div>数据：东方财富公开日线 · 回测口径见 <a href="method.html" style="color:var(--gold)">方法与数据</a></div>
+</div><div style="margin-top:14px;max-width:900px">风险声明：本站所有回测结果均为历史统计，不构成任何投资建议。历史表现不代表未来收益；技术指标在样本外经常失效，实盘还需考虑流动性、税费、涨跌停与执行滑点。市场有风险，决策需独立。</div></div></footer></body></html>

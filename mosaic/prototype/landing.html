@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mosaic 万象 — 把一句话，变成能上架的 App</title>
+<meta name="description" content="Mosaic 把顶尖模型矩阵、Mobbin 的真实设计库与原生 App 交付流水线，合成一间 AI 工作室。">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 3c3 1.5 5 4.5 5 8l-3 3H10L7 11c0-3.5 2-6.5 5-8z"/><path d="M9 14l-3 3M15 14l3 3M12 9v4"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9.5 20v-6h5v6"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V11M10 20V5M16 20v-6M22 20H2"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c.7-4 3.8-6 7.5-6s6.8 2 7.5 6"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5v14z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 01-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2" width="11" height="20" rx="3"/><path d="M10.5 18.5h3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 018 0v3.5"/></symbol>
+</svg>
+
+<div class="landing">
+  <header class="lnav">
+    <a class="logo" href="index.html" aria-label="Mosaic">
+      <span class="logo__mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="logo__type">mosaic</span>
+    </a>
+    <nav class="lnav__links" aria-label="营销导航">
+      <a href="#product">产品</a>
+      <a href="#design">设计库</a>
+      <a href="#models">模型</a>
+      <a href="#pricing">定价</a>
+      <a href="index.html#ship">发布</a>
+    </nav>
+    <div class="lnav__spacer"></div>
+    <a class="lnav__login" href="index.html">登录</a>
+    <a class="btn btn--dark" href="index.html">打开工作室 <svg class="i"><use href="#i-arrow-up-right"/></svg></a>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__copy">
+        <div class="hero__eyebrow"><span class="dot"></span> AI APP STUDIO · 2026</div>
+        <h1>把一句话，<br>变成<span class="hl">能上架</span>的 App。</h1>
+        <p class="hero__sub">Mosaic 把 <b>顶尖模型矩阵</b>、<b>Mobbin 的真实设计库</b> 与 <b>原生交付流水线</b> 合成一间 AI 工作室。你负责判断，剩下的交给它。</p>
+        <div class="hero__cta">
+          <a class="btn btn--accent" href="index.html">免费开始构建 <svg class="i"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn btn--ghost" href="#product"><svg class="i"><use href="#i-play"/></svg> 看它怎么工作</a>
+        </div>
+        <div class="hero__micro">
+          <span>无需信用卡</span><span class="sep"></span><span>首屏 90 秒</span><span class="sep"></span><span>可导出 Expo 工程</span>
+        </div>
+        <div class="hero__proof">
+          <div class="avatars"><i></i><i></i><i></i></div>
+          <p><b>2,300+ 位构建者</b>本周交付了 418 个可安装的 App</p>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-phone">
+          <div class="phone">
+            <div class="phone__screen">
+              <div class="island"></div>
+              <div class="app-ui">
+                <div class="statusbar">
+                  <span>9:41</span>
+                  <div class="statusbar__icons"><i></i><i></i><i></i><span class="statusbar__battery"></span></div>
+                </div>
+                <div class="app-scroll">
+                  <div class="app-top">
+                    <div><div class="app-date">11月6日 · 周五</div><h2>早上好，Lin</h2></div>
+                    <div class="app-avatar">L</div>
+                  </div>
+                  <div class="streak">✦ 连续 <b>12</b> 天</div>
+                  <div class="progress-card">
+                    <div>
+                      <div class="pc__label">今日完成度</div>
+                      <div class="pc__big">3<span>/5</span></div>
+                      <div class="pc__sub">再完成 2 项，保持连胜</div>
+                    </div>
+                    <div class="ring">
+                      <svg viewBox="0 0 64 64" aria-hidden="true">
+                        <circle cx="32" cy="32" r="27" stroke="#2f2f29" stroke-width="5" fill="none"/>
+                        <circle cx="32" cy="32" r="27" stroke="#d5f23f" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="67.8"/>
+                      </svg>
+                      <div class="ring__txt">60%</div>
+                    </div>
+                  </div>
+                  <div class="list-head"><span>今日习惯</span><button type="button">编辑</button></div>
+                  <div class="habits">
+                    <div class="habit habit--done">
+                      <div class="habit__icon"><svg class="i"><use href="#i-zap"/></svg></div>
+                      <div class="habit__body"><div class="habit__title">晨跑 5 公里</div><div class="habit__sub">07:30 · 已连续 12 天</div></div>
+                      <div class="habit__check done"><svg class="i"><use href="#i-check"/></svg></div>
+                    </div>
+                    <div class="habit habit--done">
+                      <div class="habit__icon"><svg class="i"><use href="#i-book"/></svg></div>
+                      <div class="habit__body"><div class="habit__title">阅读 30 分钟</div><div class="habit__sub">已完成 · 《禅与摩托车维修艺术》</div></div>
+                      <div class="habit__check done"><svg class="i"><use href="#i-check"/></svg></div>
+                    </div>
+                    <div class="habit">
+                      <div class="habit__icon"><svg class="i"><use href="#i-target"/></svg></div>
+                      <div class="habit__body"><div class="habit__title">冥想 10 分钟</div><div class="habit__sub">睡前 · 建议 22:30</div></div>
+                      <div class="habit__check"><svg class="i"><use href="#i-check"/></svg></div>
+                    </div>
+                    <div class="habit">
+                      <div class="habit__icon"><svg class="i"><use href="#i-droplet"/></svg></div>
+                      <div class="habit__body"><div class="habit__title">喝水 8 杯</div><div class="habit__sub">5 / 8 杯 · 还差 3 杯</div></div>
+                      <div class="habit__bar"><i style="width:62%"></i></div>
+                      <div class="habit__check"><svg class="i"><use href="#i-check"/></svg></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabbar">
+                  <button class="on" type="button"><svg class="i"><use href="#i-home"/></svg>今日</button>
+                  <button type="button"><svg class="i"><use href="#i-chart"/></svg>统计</button>
+                  <button type="button"><svg class="i"><use href="#i-compass"/></svg>探索</button>
+                  <button type="button"><svg class="i"><use href="#i-user"/></svg>我的</button>
+                </div>
+                <div class="home-indicator"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="float float--prompt">
+          <div class="float__label">PROMPT</div>
+          <p>做一个帮上班族坚持晨跑的习惯 App，安静克制，不要游戏化。</p>
+          <div class="float__foot">
+            <span class="model-dots"><i></i><i></i><i></i><i></i></span>
+            Auto · 12 模型
+            <span class="kbd">↵</span>
+          </div>
+        </div>
+
+        <div class="float float--route">
+          <div class="float__label">ROUTING</div>
+          <div class="route-row"><span>首屏</span><b><i></i>Fable 5</b></div>
+          <div class="route-row"><span>微调</span><b><i></i>V4.1</b></div>
+          <div class="route-row"><span>截图</span><b><i></i>Gemini 4</b></div>
+        </div>
+
+        <div class="float float--refs">
+          <div class="float__label">DESIGN REFS · 128</div>
+          <div class="refrow">
+            <div class="refcard"></div>
+            <div class="refcard"></div>
+            <div class="refcard"></div>
+          </div>
+        </div>
+
+        <div class="float float--dna">
+          <div class="float__label">DESIGN DNA</div>
+          <div class="dna-mini">
+            <i style="background:#f4f1e8"></i>
+            <i style="background:#171714"></i>
+            <i style="background:#d5f23f"></i>
+            <i style="background:#e9e4d3"></i>
+          </div>
+          <p>大数字 + 环形进度，低密度，纸感底色。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <div class="logos">
+      <div class="logos__inner">
+        <span class="logos__label">Connected models</span>
+        <b>ANTHROPIC</b>
+        <b>OPENAI</b>
+        <b>GOOGLE DEEPMIND</b>
+        <b>DEEPSEEK</b>
+        <b>MOONSHOT AI</b>
+        <b>ALIBABA</b>
+        <b>BLACK FOREST LABS</b>
+      </div>
+    </div>
+
+    <!-- Pillars -->
+    <section class="l-section" id="product">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Why Mosaic</div>
+          <h2>不是又一个<br>套壳生成器。</h2>
+        </div>
+        <p class="section-lead">会写代码的模型很多。能把「什么已经有效」带进生成回路、并且真的把 App 送上架的，很少。</p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar">
+          <div class="pillar__num">01 / MODEL MESH</div>
+          <h3>不选模型，<br>选结果。</h3>
+          <p>同一个 App 会经过 30–80 次调用。首屏交给 Claude Fable 5，微调交给 DeepSeek V4.1，截图理解交给 Gemini 4。你只看结果，不看账单。</p>
+          <div class="pillar__art">
+            <div class="mini-stack">
+              <div class="mini-stack__row"><i style="--mc:#d97757"></i><b>Fable 5</b><span class="mini-stack__bar" style="--w:28%;--mc:#d97757"></span><span>18%</span></div>
+              <div class="mini-stack__row"><i style="--mc:#d97757"></i><b>Opus 5.5</b><span class="mini-stack__bar" style="--w:58%;--mc:#d97757"></span><span>31%</span></div>
+              <div class="mini-stack__row"><i style="--mc:#10a37f"></i><b>GPT-6.1 Sol</b><span class="mini-stack__bar" style="--w:46%;--mc:#10a37f"></span><span>21%</span></div>
+              <div class="mini-stack__row"><i style="--mc:#4d6bfe"></i><b>DeepSeek V4.1</b><span class="mini-stack__bar" style="--w:18%;--mc:#4d6bfe"></span><span>9%</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pillar">
+          <div class="pillar__num">02 / DESIGN INTELLIGENCE</div>
+          <h3>不靠猜，<br>靠证据。</h3>
+          <p>每次生成关键界面前，先从 60 万+ 真实产品界面里找出 3–5 个同品类参考，拆成布局、组件与 token，再作为硬约束注入。</p>
+          <div class="pillar__art">
+            <div class="mini-refs"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </article>
+
+        <article class="pillar">
+          <div class="pillar__num">03 / NATIVE SHIP</div>
+          <h3>不停在预览，<br>停在商店。</h3>
+          <p>Expo + TypeScript 生成，真实接相机、推送、健康、支付。自动构建、TestFlight、商店素材、隐私清单与审核备注。</p>
+          <div class="pillar__art">
+            <div class="terminal">
+              <div>→ route 24 screens · 3 models</div>
+              <div><span class="ok">✓</span> 2,418 lines · 0 type errors</div>
+              <div><span class="ok">✓</span> 12/12 e2e passed</div>
+              <div><span class="ok">✓</span> EAS build · 42.8 MB</div>
+              <div class="dim">→ waiting for review note<span class="cursor"></span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Design library -->
+    <section class="lib-dark" id="design">
+      <div class="lib-dark__inner">
+        <div>
+          <div class="section-kicker">Design Intelligence · Powered by Mobbin</div>
+          <h2>设计，<br>不再靠<span style="color:#9a9a92">猜</span>。</h2>
+          <p>接住 Mobbin 的真实界面库，把它从「灵感墙」变成「约束系统」。你选中的不是一张图，而是一套可执行的布局、组件、token 与动效。</p>
+          <div class="lib-stats">
+            <div><b>612k</b><span>真实界面</span></div>
+            <div><b>4,200</b><span>产品</span></div>
+            <div><b>128</b><span>平均参考 / 项目</span></div>
+          </div>
+          <div style="margin-top:26px">
+            <a class="btn btn--ghost" href="index.html#library">浏览设计库 <svg class="i"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+
+        <div class="refgrid">
+          <div class="rcard">
+            <div class="rcard__screen rcard__screen--a">
+              <div class="rs">
+                <div class="rs__status"><i></i><i></i></div>
+                <div class="rs__top"></div>
+                <div class="rs__sub"></div>
+                <div class="rs__art"></div>
+                <div class="rs__card"></div>
+                <div class="rs__cta"></div>
+              </div>
+            </div>
+            <div class="rcard__meta"><b>Rise</b><span>ONBOARDING</span></div>
+          </div>
+
+          <div class="rcard">
+            <div class="rcard__screen rcard__screen--b">
+              <div class="rs">
+                <div class="rs__status"><i></i><i></i></div>
+                <div class="rs__top"></div>
+                <div class="rs__sub"></div>
+                <div class="rs__card" style="margin-top:14%"></div>
+                <div class="rs__card"></div>
+                <div class="rs__cta"></div>
+              </div>
+            </div>
+            <div class="rcard__meta"><b>Northwind</b><span>PAYWALL</span></div>
+          </div>
+
+          <div class="rcard">
+            <div class="rcard__screen rcard__screen--c">
+              <div class="rs">
+                <div class="rs__status"><i></i><i></i></div>
+                <div class="rs__top" style="width:42%"></div>
+                <div class="rs__art" style="width:34%;border-radius:50%;margin-top:14%"></div>
+                <div class="rs__card"></div>
+                <div class="rs__cta"></div>
+              </div>
+            </div>
+            <div class="rcard__meta"><b>Bloom</b><span>TODAY</span></div>
+          </div>
+
+          <div class="rcard">
+            <div class="rcard__screen rcard__screen--d">
+              <div class="rs">
+                <div class="rs__status"><i></i><i></i></div>
+                <div class="rs__top" style="width:64%"></div>
+                <div class="rs__sub"></div>
+                <div class="rs__card" style="height:34%;margin-top:10%"></div>
+                <div class="rs__cta"></div>
+              </div>
+            </div>
+            <div class="rcard__meta"><b>Atlas</b><span>TRIP MAP</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Models -->
+    <section class="l-section" id="models">
+      <div class="models-wrap">
+        <div>
+          <div class="section-kicker">Model Mesh</div>
+          <h2 style="margin:0;font-size:clamp(32px,3.4vw,50px);line-height:1.05;letter-spacing:-.048em;font-weight:500">每个任务，<br>交给最合适的大脑。</h2>
+          <p class="section-lead" style="margin-top:17px">不绑定单一供应商。按任务路由，按结果评估；某家断供时，50ms 内切换，用户无感。</p>
+          <div class="model-chips">
+            <span class="mchip"><i style="--mc:#d97757"></i>Opus 5.5</span>
+            <span class="mchip"><i style="--mc:#d97757"></i>Fable 5</span>
+            <span class="mchip"><i style="--mc:#10a37f"></i>GPT-6.1 Sol</span>
+            <span class="mchip"><i style="--mc:#4285f4"></i>Gemini 4</span>
+            <span class="mchip"><i style="--mc:#4d6bfe"></i>DeepSeek V4.1</span>
+            <span class="mchip"><i style="--mc:#7c5cfc"></i>Kimi K2.7</span>
+            <span class="mchip"><i style="--mc:#615ced"></i>Qwen4</span>
+            <span class="mchip"><i style="--mc:#10a37f"></i>GPT Image 2.5</span>
+          </div>
+          <div class="model-note"><b>成本不是事后账单，而是路由参数。</b> 一个中等复杂度 App 的首次生成约 $4.1；同样的质量，全部用旗舰模型要约 $18。差额就是毛利。</div>
+          <div style="margin-top:20px">
+            <a class="btn btn--ghost" href="index.html#models">查看完整矩阵 <svg class="i"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+
+        <div class="routing">
+          <div class="routing__head"><b>今日路由策略</b><span>AUTO · 88 QUALITY FLOOR</span></div>
+          <div class="routing__row"><span>产品规划 / 信息架构</span><b><i style="--mc:#d97757"></i>Claude Opus 5.5</b><span class="routing__tag">QUALITY</span></div>
+          <div class="routing__row"><span>首屏与关键页面</span><b><i style="--mc:#d97757"></i>Claude Fable 5</b><span class="routing__tag">QUALITY</span></div>
+          <div class="routing__row"><span>截图转代码</span><b><i style="--mc:#4285f4"></i>Gemini 4</b><span class="routing__tag">VISION</span></div>
+          <div class="routing__row"><span>高频组件微调</span><b><i style="--mc:#4d6bfe"></i>DeepSeek V4.1</b><span class="routing__tag">COST</span></div>
+          <div class="routing__row"><span>设计评审</span><b><i style="--mc:#111110"></i>3 模型投票</b><span class="routing__tag">CONSENSUS</span></div>
+          <div class="routing__row"><span>商店素材</span><b><i style="--mc:#10a37f"></i>GPT Image 2.5</b><span class="routing__tag">BALANCED</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="l-section l-section--tight">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">How it works</div>
+          <h2>从灵感到上架，<br>只有四步。</h2>
+        </div>
+        <p class="section-lead">每一步都可以停下来改。先生成 3 页，90 秒后在手机上看到；不满意就重来，而不是等 10 分钟。</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3>描述</h3>
+          <p>一句话、一张截图，或一个 Figma 链接。系统只问 5 个会改变架构的问题。</p>
+        </div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3>选方向</h3>
+          <p>从真实产品里给出 3 个设计方向，每个都说明「为什么适合你」。</p>
+        </div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <h3>真机预览</h3>
+          <p>Expo Go 扫码即看。改组件、改文案、改交互，都是实时 diff。</p>
+        </div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <h3>构建上架</h3>
+          <p>自动接后端、跑测试、出商店素材，推到 TestFlight，再交给审核。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="l-section" id="pricing">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Pricing</div>
+          <h2>先做出来，<br>再决定付多少。</h2>
+        </div>
+        <p class="section-lead">所有计划都可以导出干净工程。算力点数透明计价，用完再充，不自动升级。</p>
+      </div>
+
+      <div class="pricing">
+        <article class="price">
+          <div class="price__name">Free</div>
+          <p class="price__desc">先验证一个念头。</p>
+          <div class="price__amount"><b>$0</b><span>/ 永久</span></div>
+          <div class="price__list">
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 1 个 App</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 50 credits / 月</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 交互预览</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 设计库检索</div>
+          </div>
+          <a class="btn btn--ghost" href="index.html">开始使用</a>
+        </article>
+
+        <article class="price price--featured">
+          <div class="price__badge">MOST POPULAR</div>
+          <div class="price__name">Maker</div>
+          <p class="price__desc">一个人，把产品做出来。</p>
+          <div class="price__amount"><b>$19</b><span>/ 月 · 年付 $15</span></div>
+          <div class="price__list">
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 3 个 App</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 1,500 credits / 月</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> TestFlight 构建</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 代码导出 · 无锁定</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 自动路由 + 设计库</div>
+          </div>
+          <a class="btn btn--accent" href="index.html">选择 Maker <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        </article>
+
+        <article class="price">
+          <div class="price__name">Studio</div>
+          <p class="price__desc">一个小团队，同时推进多个方向。</p>
+          <div class="price__amount"><b>$49</b><span>/ 月 · 3 席位</span></div>
+          <div class="price__list">
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 10 个 App</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 5,000 credits / 月</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 协作、评论、版本历史</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 私有设计库</div>
+            <div class="price__item"><svg class="i"><use href="#i-check"/></svg> 优先构建队列</div>
+          </div>
+          <a class="btn btn--ghost" href="index.html">选择 Studio</a>
+        </article>
+      </div>
+      <div class="pricing-note"><svg class="i" style="width:11px;height:11px"><use href="#i-lock"/></svg> 企业版支持私有部署、SSO 与自托管模型 · 联系 sales@mosaic.app</div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div>
+        <h2>你的下一个 App，<br>不该停在草图里。</h2>
+        <p>从一句话开始。90 秒后，它在你的手机上。</p>
+      </div>
+      <a class="btn btn--accent" href="index.html">免费开始构建 <svg class="i"><use href="#i-arrow-right"/></svg></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <span class="logo__mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="logo__type">mosaic</span>
+        </a>
+        <p>一间由 AI 组成的 App 工作室。设计有据，模型有选，交付有终。</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="index.html">工作室</a>
+        <a href="index.html#library">设计库</a>
+        <a href="index.html#models">模型矩阵</a>
+        <a href="index.html#ship">发布</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#product">产品说明</a>
+        <a href="#pricing">定价</a>
+        <a href="palettes.html">配色方案</a>
+        <a href="../docs/product-plan.md">产品规划</a>
+        <a href="index.html">Changelog</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">关于</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Mosaic Labs</span>
+      <span>Made with 12 models, 612k references, and a lot of taste.</span>
+    </div>
+  </footer>
+</div>
+
+<script src="landing.js"></script>
+</body>
+</html>

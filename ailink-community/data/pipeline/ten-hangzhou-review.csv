@@ -1,0 +1,11 @@
+﻿企业,官网,城市,区县,成立年,电话,邮箱,人工评分/10,结论
+聚光科技,https://www.fpi-inc.com/,杭州市,滨江区,2002,400-7007-555,fpi_market@fpi-inc.com,10,全字段可用；官网/电话/邮箱/地址来自官网
+丁香园,https://www.dxy.cn/,杭州,,2000,,hr@dxy.cn,7,缺区县/总机；hr@dxy.cn 是招聘邮箱，不是商务邮箱
+魔点科技,https://www.moredian.com/,杭州,余杭区,2016,400-033-7675,marketing@moredian.com,10,全字段可用；官网/电话/邮箱/地址准确
+浙江讯飞,https://www.iflytek.com/,杭州,萧山区,,,,7,无独立官网；用母公司官网 + 公开报道人工核验，缺总机/邮箱
+顺网科技,https://www.shunwang.com/,杭州市,拱墅区,2005,400-8851-678,marketing@shunwang.com,9,区县正确；成立年已补 2005
+电魂网络,https://www.dianhun.cn/,杭州,,2008,,,6,缺区县/总机/邮箱；联系页仍未抓到有效联系方式
+宏杉科技,https://www.macrosan.com/,杭州,滨江区,2010,+86400-650-5527,service@macrosan.com,8,抓到英文站；电话格式错误，缺中文地址
+迪普科技,https://www.dptech.com/,杭州,滨江区,,400-6100-598,,8,联系页补齐总机/地址/描述；缺成立年/邮箱
+连连数字,https://www.lianlian.com/,杭州,滨江区,2009,400-091-0999,service@lianlianpay.com,10,全字段可用；官网/电话/邮箱/地址准确
+博联智能,https://www.broadlink.com.cn/,杭州,滨江区,,400-0900-955,support@broadlink.com.cn,8,JS 壳已绕过，补齐电话/邮箱/地址/描述；缺成立年

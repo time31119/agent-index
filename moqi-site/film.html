@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>品牌故事片 · 记得住，也懂分寸 | 默契 MOQI</title>
+  <meta name="description" content="默契 MOQI 48 秒品牌故事片：一支关于“可以吗”的短片。没有旁白，只有一句话从消失到被留下。支持 9:16 / 16:9 预览，一键导出成片。">
+  <meta name="theme-color" content="#0b0c09">
+  <meta property="og:type" content="video.other">
+  <meta property="og:title" content="默契 MOQI · 品牌故事片《记得住，也懂分寸》">
+  <meta property="og:description" content="有些话，说完就消失了。但有些话，会在第二天决定一件事。">
+  <meta property="og:image" content="assets/film-poster.svg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/film.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="film-page">
+  <a class="skip-link" href="#film-main">跳至品牌片</a>
+
+  <header class="film-top">
+    <div class="film-top-inner">
+      <a class="brand" href="index.html" aria-label="默契 MOQI 首页">
+        <span class="brand-seal" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <rect width="32" height="32" rx="7" fill="#C8402C"/>
+            <path d="M12 8.5c-2.8 1.8-4.2 4-4.2 7.5s1.4 5.7 4.2 7.5" fill="none" stroke="#F4EFE4" stroke-width="2" stroke-linecap="round"/>
+            <path d="M20 8.5c2.8 1.8 4.2 4 4.2 7.5s-1.4 5.7-4.2 7.5" fill="none" stroke="#F4EFE4" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="1.8" fill="#F4EFE4"/>
+          </svg>
+        </span>
+        <span class="brand-type"><span class="cn">默契</span><span class="en">MOQI</span></span>
+      </a>
+      <div class="film-top-meta">
+        <span>MOQI ORIGINAL / 2026</span>
+        <span class="film-top-tag"><i aria-hidden="true"></i> A FILM ABOUT “可以吗”</span>
+      </div>
+      <a class="film-back" href="index.html">← 回到网站</a>
+    </div>
+  </header>
+
+  <main id="film-main">
+    <section class="film-intro">
+      <div class="film-wrap">
+        <div class="film-intro-grid">
+          <div>
+            <p class="film-kicker"><span>01 / SCREENING ROOM</span><span>48 SEC · 30 FPS · SOUND ON</span></p>
+            <h1>记得住，<br><em>也懂分寸。</em></h1>
+          </div>
+          <div class="film-intro-copy">
+            <p>一支关于“可以吗”的品牌片。没有旁白，只有一句话从消失到被留下。</p>
+            <p class="film-intro-small">建议开启声音。它不是一条功能片，是一段 48 秒的沉默。</p>
+          </div>
+        </div>
+
+        <div class="film-layout">
+          <section class="player-panel" aria-label="品牌片播放器">
+            <div class="player-meta">
+              <span class="player-now"><i aria-hidden="true"></i> NOW SCREENING</span>
+              <span data-format-label>9:16 VERTICAL / 1080 × 1920</span>
+            </div>
+
+            <div class="canvas-shell is-vertical" data-canvas-shell data-format="vertical">
+              <canvas id="filmCanvas" width="1080" height="1920" role="img" aria-label="默契 MOQI 品牌故事片画面：一张先征得同意、再开始记录的记忆卡"></canvas>
+              <div class="canvas-corner tl" aria-hidden="true"></div>
+              <div class="canvas-corner tr" aria-hidden="true"></div>
+              <div class="canvas-corner bl" aria-hidden="true"></div>
+              <div class="canvas-corner br" aria-hidden="true"></div>
+
+              <button class="canvas-play" type="button" data-play-overlay aria-label="播放品牌片">
+                <span class="canvas-play-icon" aria-hidden="true"></span>
+                <span>播放品牌片</span>
+                <small>48 SEC / SOUND ON</small>
+              </button>
+
+              <div class="export-overlay" data-export-overlay hidden>
+                <span class="export-kicker">RENDERING THE FILM</span>
+                <strong data-export-percent>0%</strong>
+                <div class="export-bar"><i data-export-bar></i></div>
+                <p>正在实时渲染。请保持此页在前台，不要切换标签页。</p>
+              </div>
+            </div>
+
+            <div class="player-controls">
+              <button class="player-play" type="button" data-play aria-label="播放品牌片">
+                <span class="icon-play" aria-hidden="true"></span>
+                <span class="icon-pause" aria-hidden="true"></span>
+                <span data-play-label>播放</span>
+              </button>
+              <button class="player-icon" type="button" data-restart aria-label="从头播放">
+                <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M3.5 8.2A6.8 6.8 0 1 1 3.7 12"/>
+                  <path d="M3.2 3.8v4.8h4.8"/>
+                </svg>
+              </button>
+              <div class="player-timeline">
+                <input type="range" min="0" max="48" step="0.01" value="0" data-timeline aria-label="播放进度">
+              </div>
+              <span class="player-time" data-time>00:00 / 00:48</span>
+              <button class="player-icon" type="button" data-mute aria-label="静音" aria-pressed="false">
+                <svg class="icon-sound" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <path d="M3 7.5h3l4-3.2v11.4l-4-3.2H3z"/>
+                  <path d="M13 7.2a4 4 0 0 1 0 5.6M15.2 5a7 7 0 0 1 0 10"/>
+                </svg>
+                <svg class="icon-muted" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3">
+                  <path d="M3 7.5h3l4-3.2v11.4l-4-3.2H3z"/>
+                  <path d="M13 8l4 4M17 8l-4 4"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="player-options">
+              <div class="segment-group" role="group" aria-label="画幅">
+                <button type="button" data-format="vertical" aria-pressed="true">9:16 竖屏</button>
+                <button type="button" data-format="horizontal" aria-pressed="false">16:9 横屏</button>
+              </div>
+              <div class="segment-group" role="group" aria-label="版本">
+                <button type="button" data-cut="film" aria-pressed="true">48s 品牌片</button>
+                <button type="button" data-cut="short" aria-pressed="false">15s 投放版</button>
+              </div>
+              <button class="export-btn" type="button" data-export>
+                <span>导出成片</span>
+                <span aria-hidden="true">↓</span>
+              </button>
+            </div>
+
+            <a class="export-download" data-export-download download hidden>下载成片 <span aria-hidden="true">↓</span></a>
+
+            <p class="player-note">
+              这是逐帧渲染的成片页，不是录屏。预览与导出共用同一套画面与合成声音。导出时请保持页面在前台；Chrome / Edge 可能直接导出 MP4，其他浏览器为 WebM。若浏览器没有自动下载，使用导出后出现的「下载成片」链接。
+            </p>
+          </section>
+
+          <aside class="film-notes">
+            <div class="notes-head">
+              <span class="film-kicker">THE STORY</span>
+              <span class="notes-no">MQ / FILM 01</span>
+            </div>
+            <h2>有些话，<br>不应该<em>说完就没了</em>。</h2>
+            <p class="notes-lead">我们花了 48 秒，讲一件比录音更重要的事：在记录之前，先问一句“可以吗”。</p>
+
+            <div class="chapter-list" data-chapters="film">
+              <button type="button" data-chapter="0"><span>01</span><b>00:00</b><em>消失</em></button>
+              <button type="button" data-chapter="5"><span>02</span><b>00:05</b><em>第二天</em></button>
+              <button type="button" data-chapter="10.5"><span>03</span><b>00:10</b><em>承诺</em></button>
+              <button type="button" data-chapter="16"><span>04</span><b>00:16</b><em>卡片</em></button>
+              <button type="button" data-chapter="23"><span>05</span><b>00:23</b><em>共识</em></button>
+              <button type="button" data-chapter="30"><span>06</span><b>00:30</b><em>回执</em></button>
+              <button type="button" data-chapter="37"><span>07</span><b>00:37</b><em>本地</em></button>
+              <button type="button" data-chapter="43"><span>08</span><b>00:43</b><em>落款</em></button>
+            </div>
+
+            <div class="chapter-list" data-chapters="short" hidden>
+              <button type="button" data-chapter="0"><span>01</span><b>00:00</b><em>消失</em></button>
+              <button type="button" data-chapter="3.2"><span>02</span><b>00:03</b><em>卡片</em></button>
+              <button type="button" data-chapter="7.2"><span>03</span><b>00:07</b><em>共识</em></button>
+              <button type="button" data-chapter="11.2"><span>04</span><b>00:11</b><em>落款</em></button>
+            </div>
+
+            <dl class="film-specs">
+              <div><dt>FORMAT</dt><dd data-spec-format>1080 × 1920 / 9:16</dd></div>
+              <div><dt>DURATION</dt><dd data-spec-duration>48 秒 / 30fps</dd></div>
+              <div><dt>AUDIO</dt><dd>Web Audio 合成 / 无版权素材</dd></div>
+              <div><dt>VOICE</dt><dd>无旁白 / 画面内字幕叙事</dd></div>
+            </dl>
+
+            <a class="notes-download" href="promo-script.md" download>下载分镜与旁白稿 <span aria-hidden="true">↓</span></a>
+            <a class="notes-download" href="assets/film-poster.svg" download>下载竖版海报 <span aria-hidden="true">↓</span></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-storyboard" aria-labelledby="storyboard-title">
+      <div class="film-wrap">
+        <div class="storyboard-head">
+          <div>
+            <span class="film-kicker dark">02 / STORYBOARD</span>
+            <h2 id="storyboard-title">八个镜头，<br>一句“可以吗”。</h2>
+          </div>
+          <p>这支片子的镜头表不是“功能演示”，而是一条情绪曲线：从失去，到被留下。你可以按这一页直接拍真人版，也可以用它来改 15 秒投放版。</p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <div class="story-top"><span>01</span><b>00:00—00:05</b></div>
+            <h3>消失</h3>
+            <p class="story-copy">有些话，<br>说完就消失了。</p>
+            <p class="story-visual">近黑。声波一根根退去。不要任何产品。</p>
+          </article>
+          <article class="story-card">
+            <div class="story-top"><span>02</span><b>00:05—00:10</b></div>
+            <h3>第二天</h3>
+            <p class="story-copy">但有些话，<br>会在第二天<br>决定一件事。</p>
+            <p class="story-visual">日历网格。一个红色时间点落下，像心跳。</p>
+          </article>
+          <article class="story-card">
+            <div class="story-top"><span>03</span><b>00:10—00:16</b></div>
+            <h3>承诺</h3>
+            <p class="story-copy">你答应过什么？</p>
+            <p class="story-visual">纸面，未完成的回执线条。大字压上，留白。</p>
+          </article>
+          <article class="story-card">
+            <div class="story-top"><span>04</span><b>00:16—00:23</b></div>
+            <h3>卡片</h3>
+            <p class="story-copy">一张先征得同意，<br>再开始记录的记忆卡。</p>
+            <p class="story-visual">默契卡从暗处浮到桌面，缓缓转正。唯一主角。</p>
+          </article>
+          <article class="story-card">
+            <div class="story-top"><span>05</span><b>00:23—00:30</b></div>
+            <h3>共识</h3>
+            <p class="story-copy">先问一句：<br>可以吗？<br>双方确认，才开始。</p>
+            <p class="story-visual">e-ink 0/2 → 2/2；红色共识键两次脉冲；两次轻触声。</p>
+          </article>
+          <article class="story-card">
+            <div class="story-top"><span>06</span><b>00:30—00:37</b></div>
+            <h3>回执</h3>
+            <p class="story-copy">每一次对话，<br>都有一张回执。</p>
+            <p class="story-visual">回执从卡片下方打印出来。红章落下，停半秒。</p>
+          </article>
+          <article class="story-card">
+            <div class="story-top"><span>07</span><b>00:37—00:43</b></div>
+            <h3>本地</h3>
+            <p class="story-copy">记忆的默认值，<br>是不上云。</p>
+            <p class="story-visual">MIC → NPU → VAULT；CLOUD 被划掉。开关“咔哒”。</p>
+          </article>
+          <article class="story-card">
+            <div class="story-top"><span>08</span><b>00:43—00:48</b></div>
+            <h3>落款</h3>
+            <p class="story-copy">记得住，<br>也懂分寸。</p>
+            <p class="story-visual">印章红底。巨大“默契”。三音钟声，尾音留白。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-cut" aria-labelledby="cut-title">
+      <div class="film-wrap">
+        <div class="cut-head">
+          <div>
+            <span class="film-kicker">03 / THE 15-SECOND CUT</span>
+            <h2 id="cut-title">信息流里，<br>只留<em>四拍</em>。</h2>
+          </div>
+          <p>同一支片子，剪成 15 秒投放版：先给损失，再给产品，再给差异，最后只留品牌。没有口播，静音也成立。</p>
+        </div>
+
+        <div class="cut-timeline">
+          <div class="cut-row">
+            <span class="cut-time">00—03</span>
+            <span class="cut-line" aria-hidden="true"></span>
+            <div><h3>话，消失了。</h3><p>黑底白字。声波退去。不要产品。</p></div>
+          </div>
+          <div class="cut-row">
+            <span class="cut-time">03—07</span>
+            <span class="cut-line" aria-hidden="true"></span>
+            <div><h3>默契，出现。</h3><p>卡片转正。一句话说清品类：先征得同意，再开始记录。</p></div>
+          </div>
+          <div class="cut-row">
+            <span class="cut-time">07—11</span>
+            <span class="cut-line" aria-hidden="true"></span>
+            <div><h3>双方确认，才开始。</h3><p>两次轻触，e-ink 从 0/2 到 2/2。这是全片唯一的“功能点”。</p></div>
+          </div>
+          <div class="cut-row">
+            <span class="cut-time">11—15</span>
+            <span class="cut-line" aria-hidden="true"></span>
+            <div><h3>记得住，也懂分寸。</h3><p>红底收束。只留品牌、承诺、Founding 500。</p></div>
+          </div>
+        </div>
+
+        <div class="cut-actions">
+          <button class="film-btn film-btn-light" type="button" data-jump-cut="short">预览 15s 投放版 <span aria-hidden="true">↗</span></button>
+          <span class="cut-note">适合抖音 / 视频号 / 小红书 / Reels。竖屏 1080 × 1920。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-production" aria-labelledby="production-title">
+      <div class="film-wrap">
+        <div class="production-head">
+          <span class="film-kicker dark">04 / PRODUCTION NOTES</span>
+          <h2 id="production-title">没有素材，<br>也能有一条<em>能投的片</em>。</h2>
+        </div>
+
+        <div class="production-grid">
+          <article>
+            <span>01 / NO VOICE</span>
+            <h3>无旁白</h3>
+            <p>不依赖配音演员和录音棚。画面里的字就是旁白，静音信息流也能完整叙事。</p>
+          </article>
+          <article>
+            <span>02 / SYNTHETIC SOUND</span>
+            <h3>全合成声音</h3>
+            <p>铺底、脉冲、纸声、按键、盖章、钟声全部由 Web Audio 合成，不涉及第三方音乐版权。</p>
+          </article>
+          <article>
+            <span>03 / ONE BUTTON</span>
+            <h3>一键导出</h3>
+            <p>逐帧 Canvas 渲染 + MediaRecorder。支持 9:16 / 16:9、48s / 15s，四种组合直接出片。</p>
+          </article>
+        </div>
+
+        <div class="production-cta">
+          <div>
+            <h3>要改文案？</h3>
+            <p>分镜、逐字稿、15 秒剪辑原则都在这里。改完后再回来重录一遍。</p>
+          </div>
+          <div class="production-actions">
+            <a class="film-btn" href="promo-script.md" download>下载完整分镜 <span aria-hidden="true">↓</span></a>
+            <a class="film-btn film-btn-ghost" href="index.html#waitlist">加入首批 500 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="film-footer">
+    <div class="film-wrap film-footer-inner">
+      <a class="brand" href="index.html" aria-label="默契 MOQI 首页">
+        <span class="brand-seal" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <rect width="32" height="32" rx="7" fill="#C8402C"/>
+            <path d="M12 8.5c-2.8 1.8-4.2 4-4.2 7.5s1.4 5.7 4.2 7.5" fill="none" stroke="#F4EFE4" stroke-width="2" stroke-linecap="round"/>
+            <path d="M20 8.5c2.8 1.8 4.2 4 4.2 7.5s-1.4 5.7-4.2 7.5" fill="none" stroke="#F4EFE4" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="1.8" fill="#F4EFE4"/>
+          </svg>
+        </span>
+        <span class="brand-type"><span class="cn">默契</span><span class="en">MOQI</span></span>
+      </a>
+      <p>记得住，也懂分寸。 / MEMORY, WITH MANNERS.</p>
+      <span>© <span data-year>2026</span> MOQI LAB · CONCEPT FILM</span>
+    </div>
+  </footer>
+
+  <div class="film-toast" data-toast role="status" aria-live="polite"></div>
+  <script src="assets/film.js" defer></script>
+</body>
+</html>

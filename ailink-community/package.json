@@ -1,0 +1,11 @@
+{
+  "name": "ailink-community",
+  "version": "0.9.0",
+  "private": true,
+  "type": "module",
+  "description": "AILink 智链 · AI 创业社区：项目库、资金库、人才库、会员订阅与 AI 邮件引擎",
+  "scripts": {
+    "dev": "node serve.mjs",
+    "start": "node serve.mjs"
+  }
+}

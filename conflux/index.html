@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合流 Conflux · 机器人与 AI 产品的融资与合伙撮合平台</title>
+<meta name="description" content="合流是面向机器人与 AI 产品团队的融资与合伙撮合平台。用 TRL 验证、第三方技术尽调、里程碑托管与匿名意向，把一次融资变成一次可验证的交割。">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B1B2B'/%3E%3Cpath d='M6 9l10 7M6 23l10-7M16 16h10' stroke='%23C6A15B' stroke-width='1.6' fill='none'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23C6A15B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="合流 Conflux 首页">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M5 8.5 16 16M5 23.5 16 16M16 16h11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="16" cy="16" r="2.1" fill="currentColor"/>
+      </svg>
+      <span class="brand-name">合流</span>
+      <span class="brand-en">CONFLUX</span>
+    </a>
+
+    <nav class="nav" aria-label="主导航">
+      <a href="#projects">项目</a>
+      <a href="#verify">验证</a>
+      <a href="#escrow">交割</a>
+      <a href="#partners">合伙人</a>
+      <a href="#trust">信任</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="link-quiet" href="#cta">登录</a>
+      <a class="btn btn-gold btn-sm" href="#cta">发布项目</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="打开菜单">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="wrap">
+      <a href="#projects">项目</a>
+      <a href="#verify">验证</a>
+      <a href="#escrow">交割</a>
+      <a href="#partners">合伙人</a>
+      <a href="#trust">信任</a>
+      <a href="#cta">登录</a>
+      <a class="btn btn-gold mobile-cta" href="#cta">发布项目</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <svg class="hero-blueprint" viewBox="0 0 700 700" fill="none" aria-hidden="true">
+      <g stroke="rgba(198,161,91,.45)" stroke-width="1">
+        <circle cx="350" cy="350" r="286" stroke-dasharray="1 9"/>
+        <circle cx="350" cy="350" r="214" opacity=".65"/>
+        <circle cx="350" cy="350" r="118" stroke-dasharray="1 7" opacity=".55"/>
+        <path d="M40 350h620M350 40v620" stroke-dasharray="2 10" opacity=".45"/>
+        <path d="M140 560A260 260 0 0 1 350 90" opacity=".45"/>
+        <path d="M560 140A260 260 0 0 1 610 350" opacity=".25"/>
+      </g>
+      <g stroke="rgba(198,161,91,.45)" stroke-width="1">
+        <path d="M350 46v18M350 636v18M46 350h18M636 350h18"/>
+      </g>
+      <circle cx="350" cy="350" r="2.5" fill="rgba(198,161,91,.75)"/>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-light">首发垂直 · 机器人与 AI 产品</p>
+        <h1>把下一个机器人，<br><span class="accent">送进真实的产线。</span></h1>
+        <p class="hero-lede">
+          合流连接机器人与 AI 产品团队、产业资本与合伙人。用 TRL 验证替代空泛叙事，
+          用第三方技术尽调替代口头承诺，用里程碑托管承接每一次交割。
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#cta">发布项目 <span class="btn-arrow">→</span></a>
+          <a class="btn btn-ghost" href="#projects">浏览项目</a>
+        </div>
+
+        <dl class="hero-stats">
+          <div>
+            <dt>认证项目</dt>
+            <dd><span data-count="218">218</span></dd>
+          </div>
+          <div>
+            <dt>合作机构</dt>
+            <dd><span data-count="76">76</span></dd>
+          </div>
+          <div>
+            <dt>累计交割</dt>
+            <dd><span data-count="9.4" data-decimals="1">9.4</span><small>亿元</small></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-visual">
+        <div class="deal-chip chip-a">TRL 7 · 已认证</div>
+        <div class="deal-chip chip-b">资金托管中</div>
+
+        <article class="deal-card" aria-label="示例项目卡片：澜行智能">
+          <div class="deal-head">
+            <span class="pill pill-gold">精选 · 机器人本体</span>
+            <span class="live"><i></i>意向开放</span>
+          </div>
+
+          <h2 class="deal-title">澜行智能 <span>LANXING ROBOTICS</span></h2>
+          <p class="deal-sub">重载移动机器人底盘与整线调度系统，已进入汽车焊装产线中试。</p>
+
+          <div class="deal-body">
+            <div class="ring" id="dealRing">
+              <svg viewBox="0 0 84 84" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#D9B77A"/>
+                    <stop offset="1" stop-color="#8F6F35"/>
+                  </linearGradient>
+                </defs>
+                <circle class="ring-bg" cx="42" cy="42" r="34"/>
+                <circle class="ring-fg" cx="42" cy="42" r="34" style="--p:62"/>
+              </svg>
+              <div class="ring-txt"><strong>62%</strong><span>融资进度</span></div>
+            </div>
+
+            <dl class="deal-kv">
+              <div><dt>技术就绪度</dt><dd>TRL 7</dd></div>
+              <div><dt>核心专利</dt><dd>23 项</dd></div>
+              <div><dt>验证分</dt><dd class="jade">86</dd></div>
+            </dl>
+          </div>
+
+          <div class="deal-intents">
+            <div class="avatars" aria-hidden="true">
+              <span>产</span><span>产</span><span>产</span><span>财</span><span>财</span>
+            </div>
+            <p>5 家机构已匿名表达意向<em>3 产业资本 · 2 财务投资人</em></p>
+          </div>
+
+          <div class="deal-foot"><span class="dot-live"></span>中试验收通过 · 第二期款项已拨付</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST BAR ================= -->
+  <div class="trustbar">
+    <div class="wrap">
+      <p class="trustbar-label">生态合作（示意）</p>
+      <ul class="trustbar-list">
+        <li>国家实验室 · 成果转化办</li>
+        <li>产业资本 CVC</li>
+        <li>政府引导基金</li>
+        <li>机器人产业园</li>
+        <li>高校技术转移中心</li>
+        <li>第三方检测机构</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================= ENTRIES ================= -->
+  <section class="section entries">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span class="idx">01</span> 三种需求，一个入口</p>
+        <h2>为项目找资金，为创意找资金，<br>为项目找合伙人。</h2>
+        <p class="lede">
+          三件事看起来相似，卡点却完全不同。合流用三套独立的结构、同一套信任基建来处理。
+        </p>
+      </div>
+
+      <div class="entry-grid">
+        <a class="entry reveal" href="#cta">
+          <span class="entry-num">01</span>
+          <h3>为项目找资金</h3>
+          <p>从技术叙事到数据室，从匿名意向到里程碑拨付。让产业资本在两周内看懂你的 TRL 与量产路径。</p>
+          <span class="entry-link">了解融资流程 <i>→</i></span>
+        </a>
+        <a class="entry reveal d1" href="#verify">
+          <span class="entry-num">02</span>
+          <h3>为创意找资金</h3>
+          <p>不是把想法直接挂出来卖。先过验证关卡：样机、首个付费客户、产业命题采纳，再谈估值。</p>
+          <span class="entry-link">了解验证机制 <i>→</i></span>
+        </a>
+        <a class="entry reveal d2" href="#partners">
+          <span class="entry-num">03</span>
+          <h3>为项目找合伙人</h3>
+          <p>大多数硬科技团队不缺技术，缺的是产业与商业化。补齐那一角，再用 90 天确认彼此。</p>
+          <span class="entry-link">了解合伙机制 <i>→</i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section projects" id="projects">
+    <div class="wrap">
+      <div class="sec-head sec-head--row">
+        <div>
+          <p class="eyebrow"><span class="idx">02</span> 精选项目</p>
+          <h2>只有拿到证据的项目，<br>才能进入这里。</h2>
+        </div>
+        <p class="lede" style="margin:0; max-width:300px; font-size:13.5px;">
+          每周三更新。所有项目均通过主体核验与至少一项技术验证。
+        </p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="按赛道筛选项目">
+        <button class="tab is-active" data-filter="all" role="tab" aria-selected="true">全部</button>
+        <button class="tab" data-filter="robot" role="tab" aria-selected="false">机器人本体</button>
+        <button class="tab" data-filter="part" role="tab" aria-selected="false">核心零部件</button>
+        <button class="tab" data-filter="embodied" role="tab" aria-selected="false">具身智能</button>
+        <button class="tab" data-filter="ai" role="tab" aria-selected="false">工业 AI</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <article class="p-card reveal" data-cat="robot">
+          <div class="p-card-top">
+            <div class="p-tags">
+              <span class="pill pill-line">机器人本体</span>
+              <span class="pill pill-line">Pre-A</span>
+            </div>
+            <div class="score"><span>验证分</span><strong>86</strong></div>
+          </div>
+          <h3>澜行智能 <em>LANXING</em></h3>
+          <p class="p-desc">重载移动机器人底盘与整线调度系统，已进入汽车焊装产线中试。</p>
+          <dl class="p-metrics">
+            <div><dt>TRL</dt><dd>7</dd></div>
+            <div><dt>核心专利</dt><dd>23</dd></div>
+            <div><dt>产业背书</dt><dd>2 家</dd></div>
+          </dl>
+          <div class="p-raise">
+            <div class="p-raise-head"><span>融资 ¥3,000 万 · 出让 10%</span><span>62%</span></div>
+            <div class="bar"><i style="--w:62%"></i></div>
+          </div>
+          <div class="p-foot">
+            <span>苏州 · 3 天前更新</span>
+            <a href="project.html">查看项目 <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="p-card reveal d1" data-cat="part">
+          <div class="p-card-top">
+            <div class="p-tags">
+              <span class="pill pill-line">核心零部件</span>
+              <span class="pill pill-line">天使</span>
+            </div>
+            <div class="score"><span>验证分</span><strong>74</strong></div>
+          </div>
+          <h3>枢界科技 <em>PIVOTX</em></h3>
+          <p class="p-desc">一体化关节模组与谐波减速器，扭矩密度较同类提升 18%，已小批量交付。</p>
+          <dl class="p-metrics">
+            <div><dt>TRL</dt><dd>5</dd></div>
+            <div><dt>核心专利</dt><dd>14</dd></div>
+            <div><dt>产业背书</dt><dd>1 家</dd></div>
+          </dl>
+          <div class="p-raise">
+            <div class="p-raise-head"><span>融资 ¥1,500 万 · 出让 12%</span><span>38%</span></div>
+            <div class="bar"><i style="--w:38%"></i></div>
+          </div>
+          <div class="p-foot">
+            <span>深圳 · 5 天前更新</span>
+            <a href="project.html">查看项目 <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="p-card reveal" data-cat="embodied">
+          <div class="p-card-top">
+            <div class="p-tags">
+              <span class="pill pill-line">具身智能</span>
+              <span class="pill pill-line">天使+</span>
+            </div>
+            <div class="score"><span>验证分</span><strong>69</strong></div>
+          </div>
+          <h3>见微具身 <em>MICRO-EMBODIED</em></h3>
+          <p class="p-desc">双臂协作具身智能平台，面向 3C 精密装配场景，已完成 200 小时连续作业测试。</p>
+          <dl class="p-metrics">
+            <div><dt>TRL</dt><dd>4</dd></div>
+            <div><dt>核心专利</dt><dd>9</dd></div>
+            <div><dt>产业背书</dt><dd>2 家</dd></div>
+          </dl>
+          <div class="p-raise">
+            <div class="p-raise-head"><span>融资 ¥2,000 万 · 出让 15%</span><span>45%</span></div>
+            <div class="bar"><i style="--w:45%"></i></div>
+          </div>
+          <div class="p-foot">
+            <span>北京 · 1 周前更新</span>
+            <a href="project.html">查看项目 <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="p-card reveal d1" data-cat="ai">
+          <div class="p-card-top">
+            <div class="p-tags">
+              <span class="pill pill-line">工业 AI</span>
+              <span class="pill pill-line">A 轮</span>
+            </div>
+            <div class="score"><span>验证分</span><strong>91</strong></div>
+          </div>
+          <h3>铸鉴工业 <em>CASTINSIGHT</em></h3>
+          <p class="p-desc">铸件缺陷视觉检测大模型，覆盖 12 类缺陷，已在 3 家主机厂产线部署。</p>
+          <dl class="p-metrics">
+            <div><dt>TRL</dt><dd>8</dd></div>
+            <div><dt>核心专利</dt><dd>17</dd></div>
+            <div><dt>产业背书</dt><dd>3 家</dd></div>
+          </dl>
+          <div class="p-raise">
+            <div class="p-raise-head"><span>融资 ¥5,000 万 · 出让 8%</span><span>80%</span></div>
+            <div class="bar"><i style="--w:80%"></i></div>
+          </div>
+          <div class="p-foot">
+            <span>宁波 · 2 天前更新</span>
+            <a href="project.html">查看项目 <span>→</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid-foot">
+        <span>共 4 个精选项目 · 数据每周三更新</span>
+        <a class="btn btn-outline btn-sm" href="#cta">成为认证投资人，查看全部 218 个项目</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VERIFY ================= -->
+  <section class="section verify" id="verify">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span class="idx">03</span> 验证关卡</p>
+        <h2>硬科技不缺故事，<br>缺的是证据。</h2>
+        <p class="lede">
+          在合流，一个项目要进入资本池，至少要通过四道关卡之一。验证不是打分游戏，
+          而是把“能不能做出来”变成可被第三方复核的事实。
+        </p>
+      </div>
+
+      <div class="verify-grid">
+        <div class="v-card reveal">
+          <span class="v-num">01</span>
+          <h3>TRL 技术就绪度</h3>
+          <p>由第三方工程机构出具 TRL 1–9 级评估，替代创始人自述的“国内领先”。</p>
+        </div>
+        <div class="v-card reveal d1">
+          <span class="v-num">02</span>
+          <h3>样机与中试</h3>
+          <p>样机运行视频、中试报告、良率与可靠性数据，统一归档进数据室。</p>
+        </div>
+        <div class="v-card reveal d2">
+          <span class="v-num">03</span>
+          <h3>首个付费客户</h3>
+          <p>真实订单与验收单，取代“意向客户 20 家”这类无法核验的表述。</p>
+        </div>
+        <div class="v-card reveal d3">
+          <span class="v-num">04</span>
+          <h3>产业命题采纳</h3>
+          <p>龙头企业或政府榜单正式采纳，用需求侧的事实反向验证技术价值。</p>
+        </div>
+      </div>
+
+      <p class="verify-note">通过任一道关卡，项目才会获得“验证分”与定向曝光资格。</p>
+    </div>
+  </section>
+
+  <!-- ================= ESCROW ================= -->
+  <section class="section escrow" id="escrow">
+    <div class="wrap">
+      <div class="escrow-head">
+        <div>
+          <p class="eyebrow eyebrow-light"><span class="idx">04</span> 交割机制</p>
+          <h2>钱不一次性给，<br>按证据分批走。</h2>
+        </div>
+        <p class="lede">
+          融资失败常常不是“没谈成”，而是“谈成之后失控”。合流把资金拆成节点，
+          由持牌机构托管，第三方验收后才拨付——对投资人是风控，对创始人是纪律。
+        </p>
+      </div>
+
+      <div class="milestones">
+        <div class="ms reveal">
+          <div class="ms-amount">30%<small>启动</small></div>
+          <h3>签约托管</h3>
+          <p>三方协议签署，资金进入持牌机构托管账户，项目方提交研发与采购清单。</p>
+        </div>
+        <div class="ms reveal d1">
+          <div class="ms-amount">40%<small>中试</small></div>
+          <h3>中试验收</h3>
+          <p>第三方检测报告与投资方验收通过后拨付，覆盖产线与可靠性投入。</p>
+        </div>
+        <div class="ms reveal d2">
+          <div class="ms-amount">30%<small>交付</small></div>
+          <h3>首台交付</h3>
+          <p>客户验收单与回款凭证确认后拨付尾款，项目进入投后月报体系。</p>
+        </div>
+      </div>
+
+      <p class="escrow-foot">
+        <strong>平台不经手资金、不设资金池</strong>
+        资金托管与划付由持牌机构执行，合流仅提供节点核验与信息披露。
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= TRUST ================= -->
+  <section class="section trust" id="trust">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span class="idx">05</span> 信任基建</p>
+        <h2>四层机制，<br>让陌生人敢下注。</h2>
+        <p class="lede">
+          早期投资本质是判断人。平台不能替你判断，但可以让判断所需的信息更真实、更便宜。
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="t-card reveal">
+          <div class="t-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/>
+            </svg>
+          </div>
+          <h3>三层披露</h3>
+          <p>公开概览、NDA 后方案、约谈后数据室。信息逐层解锁，创意与技术不必一次裸奔。</p>
+        </div>
+        <div class="t-card reveal d1">
+          <div class="t-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l7 3v6c0 4.2-2.9 7.4-7 9-4.1-1.6-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>第三方技术尽调</h3>
+          <p>专利 FTO、供应链可得性、量产良率，由外部机构出具，平台不做“自证”。</p>
+        </div>
+        <div class="t-card reveal d2">
+          <div class="t-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/><circle cx="12" cy="12" r="2.6"/><path d="M4 4l16 16"/>
+            </svg>
+          </div>
+          <h3>双向匿名意向</h3>
+          <p>投资人匿名示好，创始人只看到结构而非名单。互选后才解锁身份，避免骚扰与压价。</p>
+        </div>
+        <div class="t-card reveal d3">
+          <div class="t-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="3" width="14" height="18" rx="1.6"/><circle cx="12" cy="10" r="2.4"/><path d="M9 16h6"/>
+            </svg>
+          </div>
+          <h3>履约护照</h3>
+          <p>里程碑、回购、合伙履约记录跨项目累积，形成早期创新者的第一份信用档案。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PARTNERS ================= -->
+  <section class="section partners" id="partners">
+    <div class="wrap partners-grid">
+      <div>
+        <p class="eyebrow"><span class="idx">06</span> 合伙人匹配</p>
+        <h2>你缺的不是合伙人，<br>是缺失的那一角。</h2>
+        <p class="lede">
+          技术、产业、商业化，硬科技团队的三种能力往往只具备两种。
+          合流先做能力缺口诊断，再匹配人，最后用一份提前写好的协议保护双方。
+        </p>
+        <ul class="partner-points">
+          <li>能力缺口诊断：先定义“缺什么”，再定义“找谁”</li>
+          <li>90 天试婚期：预设目标、退出与股权成熟条款</li>
+          <li>协议与调解：股权成熟、回购、分手条款模板化</li>
+        </ul>
+      </div>
+
+      <div class="tri" aria-label="技术、产业、商业化三角模型">
+        <svg class="tri-lines" viewBox="0 0 360 331" aria-hidden="true">
+          <path d="M180 50 50 252"/>
+          <path d="M180 50 310 252"/>
+          <path d="M50 252h260" stroke-dasharray="6 8"/>
+        </svg>
+        <div class="tri-node n1">技术</div>
+        <div class="tri-node n2">产业</div>
+        <div class="tri-node n3">商业化</div>
+        <div class="tri-core"><strong>90</strong><span>天试婚期</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VOICES ================= -->
+  <section class="section voices">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow eyebrow-light"><span class="idx">07</span> 他们怎么说</p>
+        <h2>把“说不清”，<br>变成“看得懂”。</h2>
+      </div>
+
+      <div class="voice-grid">
+        <figure class="voice reveal">
+          <blockquote>
+            我们把 TRL 评估和第三方检测报告放进数据室之后，约谈的性质变了。
+            投资人不再问“你们能不能做出来”，而是问“多久能交付、能交付多少台”。
+          </blockquote>
+          <figcaption><strong>周昀</strong>澜行智能 创始人（示例）</figcaption>
+        </figure>
+        <figure class="voice reveal d1">
+          <blockquote>
+            匿名意向这个设计很关键。我们可以在不暴露身份的前提下先看项目结构，
+            避免被项目方反复围猎，也避免过早释放信号影响定价。
+          </blockquote>
+          <figcaption><strong>某产业资本</strong>投资总监，应要求匿名（示例）</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPLIANCE ================= -->
+  <section class="section-tight compliance">
+    <div class="wrap compliance-inner">
+      <p class="compliance-label">合规底线</p>
+      <ul class="compliance-list">
+        <li>合格投资人认证</li>
+        <li>不面向公众公开募集</li>
+        <li>不承诺任何回报</li>
+        <li>不设资金池</li>
+        <li>资金由持牌机构托管</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section cta" id="cta">
+    <div class="wrap">
+      <div class="cta-panel">
+        <div>
+          <p class="eyebrow eyebrow-light">首批入驻</p>
+          <h2>如果你的机器人<br>已经走出了实验室，<br>我们聊聊。</h2>
+          <p>首批仅开放 50 个项目与 30 家机构。提交后 2 个工作日内，我们会先做一次 20 分钟的能力缺口诊断。</p>
+        </div>
+
+        <form class="cta-form" id="demoForm" novalidate>
+          <div class="field">
+            <input type="email" name="email" placeholder="工作邮箱" aria-label="工作邮箱" required>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <input type="text" name="company" placeholder="项目 / 机构名称" aria-label="项目或机构名称">
+            </div>
+            <div class="field">
+              <select name="role" aria-label="你的身份">
+                <option value="founder">我是创始人</option>
+                <option value="investor">我是投资人</option>
+                <option value="partner">我想成为合伙人</option>
+              </select>
+              <span class="field-arrow">▾</span>
+            </div>
+          </div>
+          <button class="btn btn-gold" type="submit">申请入驻 <span class="btn-arrow">→</span></button>
+          <p class="form-note">提交即表示同意《服务条款》与《隐私政策》。当前为概念演示，不会真实发送。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="合流 Conflux 首页">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M5 8.5 16 16M5 23.5 16 16M16 16h11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="2.1" fill="currentColor"/>
+          </svg>
+          <span class="brand-name">合流</span>
+          <span class="brand-en">CONFLUX</span>
+        </a>
+        <p>机器人与 AI 产品的融资与合伙撮合平台。用证据替代叙事，用机制替代信任。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>平台</h4>
+        <a href="#projects">发现项目</a>
+        <a href="#verify">验证机制</a>
+        <a href="#escrow">交割机制</a>
+        <a href="#partners">合伙人匹配</a>
+      </div>
+      <div class="footer-col">
+        <h4>资源</h4>
+        <a href="#trust">信任基建</a>
+        <a href="#cta">融资指南</a>
+        <a href="#cta">条款词典</a>
+        <a href="#cta">TRL 自评工具</a>
+      </div>
+      <div class="footer-col">
+        <h4>公司</h4>
+        <a href="#cta">关于合流</a>
+        <a href="#cta">联系我们</a>
+        <a href="#cta">加入我们</a>
+        <a href="project.html">项目详情示例</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 合流 Conflux · 机器人与 AI 产品</span>
+      <span class="demo">概念设计演示 · 页面中的项目、机构与数据均为虚构示例</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

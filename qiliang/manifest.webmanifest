@@ -1,0 +1,19 @@
+{
+  "name": "起量 QILIANG",
+  "short_name": "起量",
+  "description": "给中小业主的自动化营销短视频工具",
+  "start_url": "mobile.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F1E8",
+  "theme_color": "#F5F1E8",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

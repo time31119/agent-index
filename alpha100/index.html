@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ALPHA 100：100 条可实盘的 AI 交易策略。逐条规则、历史回测、证据等级与复盘台。">
+  <meta name="theme-color" content="#07090b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2307090b'/%3E%3Cpath d='M12 48 26 16h10l14 32H41l-2.5-7H23.5L21 48zM27 33h8l-4-11z' fill='%23c9f56b'/%3E%3C/svg%3E">
+  <title>ALPHA 100 · 100 条可实盘的 AI 交易策略</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-glow ambient-glow-a"></div>
+    <div class="ambient-glow ambient-glow-b"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#/" aria-label="ALPHA 100 首页">
+      <span class="brand-mark">A<span>100</span></span>
+      <span class="brand-copy"><strong>ALPHA 100</strong><small>AI TRADING DOSSIERS</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#/library" data-nav="library">策略库</a>
+      <a href="#/lab" data-nav="lab">求证实验室</a>
+      <a href="#/journal" data-nav="journal">复盘台</a>
+      <a href="#/method" data-nav="method">方法论</a>
+    </nav>
+    <div class="header-tools">
+      <span class="desk-status"><i></i> RESEARCH DESK</span>
+      <button class="command-trigger" id="open-command" type="button" aria-label="搜索策略">
+        <span>搜索</span><kbd>⌘K</kbd>
+      </button>
+    </div>
+  </header>
+
+  <div class="market-strip" id="market-strip" aria-label="历史收盘行情">
+    <div class="market-strip-label">HISTORICAL CLOSE <span>非实时</span></div>
+    <div class="market-ticker" id="market-ticker"></div>
+  </div>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="brand-mark">A<span>100</span></span>
+        <div><strong>ALPHA 100</strong><p>100 条可实盘的 AI 交易策略。先证伪，再实盘。</p></div>
+      </div>
+      <div class="footer-links">
+        <a href="#/library">策略库</a>
+        <a href="#/lab">回测实验室</a>
+        <a href="#/journal">复盘台</a>
+        <a href="#/method">方法与免责声明</a>
+      </div>
+    </div>
+    <div class="footer-fine">
+      <p>本站为研究与教育工具，不构成投资建议。历史回测不代表未来收益。实盘前请完成样本外验证、纸面跟踪与独立风控审查。</p>
+      <p>数据：Yahoo Finance 调整后日线（2017–2026），嵌入本地；回测成本 2–5 bps，不含融资、借券与税。</p>
+    </div>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/market-data.js"></script>
+  <script src="assets/js/strategies.js"></script>
+  <script src="assets/js/results.js"></script>
+  <script src="assets/js/engine.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

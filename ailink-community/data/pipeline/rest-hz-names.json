@@ -1,0 +1,404 @@
+[
+  {
+    "name": "新华三（H3C）",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "趣拍云",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "联汇科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "芯翼科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "医准智能",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "智能物联与机器视觉"
+  },
+  {
+    "name": "中奥科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "排列科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "宇链科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "托普云农",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "果麦文化",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "半云科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "金通科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "虚谷科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "西湖心辰",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "讯酷科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "青塔科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "数政科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "云器科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "连信科技",
+    "city": "杭州",
+    "district": "杭州",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "好络维医疗",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "中威电子",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "智能物联与机器视觉"
+  },
+  {
+    "name": "数库科技",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "恒生聚源",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "中正数服",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "英飞特",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "华澜微",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "中策橡胶",
+    "city": "杭州",
+    "district": "滨江区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "数澜科技",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "数梦工场",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "城云科技",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "华立科技",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "中电海康",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "智能物联与机器视觉"
+  },
+  {
+    "name": "南方中金",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "天地数码",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "中金环境",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "兴源环境",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "博拓生物",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "奥泰生物",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "安旭生物",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "医疗与生命科学"
+  },
+  {
+    "name": "华光新材",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "中达新材",
+    "city": "杭州",
+    "district": "余杭区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "知衣科技",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "传播大脑",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "惠瀜网络",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "座头鲸科技",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "北大信研院",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "大胜达",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "万向一二三",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "亚太机电",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "兆丰机电",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "国泰环保",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "荣盛石化",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "东南网架",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "杭萧钢构",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "易现科技",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "AI 原生应用与数字内容"
+  },
+  {
+    "name": "光珀智能",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "智能物联与机器视觉"
+  },
+  {
+    "name": "开元旅业",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "万向钱潮",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "智能终端与出行"
+  },
+  {
+    "name": "科百特",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "正强传动",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "之江有机硅",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "中新电力",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "盛达铁塔",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "杭州湾信息港",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "产业智能与金融科技"
+  },
+  {
+    "name": "浙江大学杭州国际科创中心",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "西电杭州研究院",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "基础模型与算力"
+  },
+  {
+    "name": "北大信息技术高等研究院",
+    "city": "杭州",
+    "district": "萧山区",
+    "sector": "基础模型与算力"
+  }
+]

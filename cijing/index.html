@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="dark" />
+<title>词镜 · 说到哪，动到哪的 9:16 短视频生成器</title>
+<!--
+  词镜 —— 单文件、零依赖的 9:16 短视频生成器原型
+  ────────────────────────────────────────────────
+  直接双击本文件即可运行；所有交互都在前端完成，不联网、不需要构建。
+
+  已实现的链路
+    需求输入 → 结构化口播稿（演示数据）→ 词级时间戳 → 9:16 预览 → 时间线微调 → 导出（分镜 JSON / SRT）
+
+  真实接口该接在哪
+    API.rewrite()  把自然语言需求交给大模型，返回 { duration, segments[] }
+    API.tts()      TTS 返回音频 + 词级时间戳，回填 segment.words
+    API.render()   把 storyboard 交给 Remotion / 云端渲染，返回 { url }
+    三个函数都在 <script> 顶部，返回 null 时自动走本地演示数据。
+-->
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#141821; --panel2:#1b202b; --line:#2a3140;
+    --txt:#e8ecf3; --sub:#8b95a7; --accent:#ffd43b; --accent2:#3ddc97; --danger:#ff6b6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--bg); color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    display:flex;flex-direction:column;height:100vh;overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  button{font-family:inherit}
+
+  /* ---------- 顶栏 ---------- */
+  header{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    padding:12px 22px;border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:rgba(11,13,18,.92);backdrop-filter:blur(8px);z-index:50;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:.5px}
+  .logo .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+  .logo small{color:var(--sub);font-weight:400;font-size:12px;margin-left:6px;letter-spacing:0}
+  .header-actions{display:flex;gap:10px}
+  .btn{
+    border:1px solid var(--line);background:var(--panel2);color:var(--txt);text-decoration:none;
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:9px 16px;border-radius:9px;font-size:13px;cursor:pointer;transition:.18s;white-space:nowrap;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:var(--accent);color:#111;border-color:var(--accent);font-weight:700}
+  .btn.primary:hover{filter:brightness(1.08);color:#111}
+  .btn.ghost{background:transparent}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btn:disabled:hover{border-color:var(--line);color:var(--txt)}
+  .btn.sm{padding:7px 12px;font-size:12px;border-radius:8px}
+
+  /* ---------- 三栏 ---------- */
+  .layout{
+    flex:1 1 auto;min-height:0;display:grid;
+    grid-template-columns:340px minmax(0,1fr) 340px;
+  }
+  .col-left{border-right:1px solid var(--line);padding:18px;overflow-y:auto;min-height:0;background:var(--panel)}
+  .col-right{border-left:1px solid var(--line);padding:18px;overflow-y:auto;min-height:0;background:var(--panel)}
+  .col-center{
+    display:flex;flex-direction:column;align-items:center;padding:20px 20px 26px;overflow-y:auto;min-height:0;
+    background:radial-gradient(ellipse at 50% 0%,#161b26 0%,var(--bg) 62%);
+  }
+  .col-center > *{flex:0 0 auto}
+  @media(max-width:1080px){
+    body{height:auto;overflow:auto}
+    .layout{grid-template-columns:1fr}
+    .col-left{border-right:none;border-bottom:1px solid var(--line)}
+    .col-right{border-left:none;border-top:1px solid var(--line)}
+    .col-center{overflow:visible}
+    .col-left,.col-right{overflow:visible}
+  }
+
+  /* ---------- 左栏 ---------- */
+  .sec-title{font-size:12px;color:var(--sub);letter-spacing:1.5px;text-transform:uppercase;margin:0 0 10px}
+  .sec-title + .sec-title{margin-top:24px}
+  textarea{
+    width:100%;min-height:126px;background:var(--panel2);border:1px solid var(--line);
+    border-radius:10px;color:var(--txt);padding:12px;font-size:13.5px;line-height:1.7;resize:vertical;
+    font-family:inherit;
+  }
+  textarea:focus{outline:none;border-color:var(--accent)}
+  textarea::placeholder{color:#5c6679}
+  .hint{font-size:11.5px;color:var(--sub);margin-top:7px;line-height:1.55}
+  .tag-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+  .tag{
+    font-size:11.5px;padding:5px 10px;border-radius:20px;border:1px solid var(--line);
+    background:var(--panel2);color:var(--sub);cursor:pointer;transition:.15s;user-select:none;
+  }
+  .tag:hover{border-color:var(--accent2);color:var(--accent2)}
+  .tag.active{background:rgba(61,220,151,.12);border-color:var(--accent2);color:var(--accent2)}
+
+  .voice-row{display:flex;gap:8px;margin-top:10px}
+  .voice-row select{
+    flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--txt);
+    padding:9px 10px;border-radius:9px;font-size:13px;font-family:inherit;
+  }
+  .voice-row select:focus{outline:none;border-color:var(--accent)}
+
+  .script-list{margin-top:10px;display:flex;flex-direction:column;gap:6px}
+  .script-line{
+    display:flex;gap:8px;text-align:left;background:var(--panel2);border:1px solid var(--line);
+    border-radius:8px;padding:7px 9px;color:var(--txt);font-size:12px;line-height:1.5;
+    cursor:pointer;transition:.15s;
+  }
+  .script-line:hover{border-color:var(--accent2)}
+  .script-line .sl-t{color:var(--accent2);font-variant-numeric:tabular-nums;flex:none;font-size:11px;padding-top:1px}
+  .status-line{font-size:11px;color:var(--accent2);margin-top:8px;min-height:16px;line-height:1.5}
+
+  /* ---------- 中栏：9:16 预览 ---------- */
+  .preview-tag{font-size:10.5px;color:var(--sub);letter-spacing:1.2px;margin-bottom:8px}
+  .phone-wrap{
+    position:relative;width:min(300px,74vw);aspect-ratio:9/16;
+    background:#000;border-radius:26px;border:1px solid #333;
+    box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 0 6px #0e1117;
+    overflow:hidden;
+  }
+  .phone-screen{
+    position:absolute;inset:0;overflow:hidden;
+    background:linear-gradient(180deg,#12161f 0%,#0a0c11 70%);
+  }
+  .phone-screen::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(circle at 50% 12%,rgba(255,212,59,.08),transparent 55%);
+  }
+  .caption{
+    position:absolute;bottom:12%;left:7%;right:7%;text-align:center;z-index:3;
+    font-size:clamp(12px,3.4vw,15px);font-weight:700;line-height:1.6;
+    color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.85);
+  }
+  .caption .w{display:inline-block;padding:1px 1px;border-radius:5px;transition:color .1s,background .1s}
+  .caption .w.cur{color:#111;background:var(--accent)}
+  .caption.long{font-size:13px}
+
+  .stage-el{
+    position:absolute;left:50%;transform:translateX(-50%) scale(.62);
+    opacity:0;transition:opacity .26s ease, transform .3s cubic-bezier(.2,1.35,.4,1);
+    pointer-events:none;z-index:2;
+  }
+  .stage-el.show{opacity:1;transform:translateX(-50%) scale(1)}
+
+  /* ---------- 场景通用 ---------- */
+  .sc{width:86%}
+  .panel-title{font-size:10px;color:var(--sub);margin-bottom:8px;letter-spacing:1.5px}
+
+  /* 01 标题：说到哪 → 动到哪 */
+  .sc-hero{top:36%;width:92%}
+  .hero-row{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    font-size:23px;font-weight:800;letter-spacing:1px;white-space:nowrap;
+  }
+  .hero-word{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+  .hero-word.accent{color:var(--accent)}
+  .hero-arrow{
+    color:var(--accent2);font-size:26px;line-height:1;opacity:.35;
+    transform:translateX(-10px);transition:.25s;text-shadow:0 0 14px rgba(61,220,151,.7);
+  }
+  .sc-hero.launch .hero-arrow{
+    opacity:1;transform:translateX(0);
+    animation:arrowPop .5s cubic-bezier(.2,1.7,.4,1);
+  }
+  @keyframes arrowPop{
+    0%{transform:translateX(-16px) scale(.7);opacity:0}
+    60%{transform:translateX(2px) scale(1.15);opacity:1}
+    100%{transform:translateX(0) scale(1);opacity:1}
+  }
+
+  /* 02 数据：柱状图 */
+  .sc-bars{
+    top:22%;width:76%;background:rgba(27,32,43,.96);border:1px solid #3a4356;
+    border-radius:12px;padding:12px 14px;
+  }
+  .bars{display:flex;align-items:flex-end;gap:10px}
+  .bars > div{flex:1;text-align:center}
+  .barcol{height:76px;display:flex;align-items:flex-end}
+  .bar{
+    width:100%;height:0;border-radius:4px 4px 0 0;
+    background:linear-gradient(180deg,var(--accent),#b8920f);
+    transition:height .5s cubic-bezier(.2,1.2,.4,1);
+  }
+  .bars .lbl{font-size:8px;color:var(--sub);margin-top:4px}
+
+  /* 02 步骤：三节点流程 */
+  .sc-flow{top:38%;width:92%}
+  .flow-line{display:flex;align-items:center;justify-content:center;gap:4px}
+  .flow-node{
+    width:52px;height:52px;border-radius:50%;flex:none;
+    border:1px solid rgba(61,220,151,.55);background:rgba(61,220,151,.12);color:var(--accent2);
+    font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;
+    opacity:0;transform:scale(.6);transition:.3s cubic-bezier(.2,1.5,.4,1);
+  }
+  .flow-connector{
+    width:0;height:1px;flex:none;
+    background:linear-gradient(90deg,rgba(61,220,151,.2),var(--accent2));
+    transition:width .3s ease;
+  }
+  .sc-flow.show .flow-node{opacity:1;transform:scale(1)}
+  .sc-flow.show .flow-node:nth-of-type(2){transition-delay:.28s}
+  .sc-flow.show .flow-node:nth-of-type(3){transition-delay:.56s}
+  .sc-flow.show .flow-connector{width:22px}
+  .sc-flow.show .flow-connector:nth-of-type(1){transition-delay:.18s}
+  .sc-flow.show .flow-connector:nth-of-type(2){transition-delay:.46s}
+
+  /* 03 引用：浏览器 + 荧光笔 */
+  .sc-browser{
+    top:19%;width:86%;background:#fff;border-radius:10px;overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
+  }
+  .q-bar{background:#eef1f5;padding:6px 9px;display:flex;gap:5px;align-items:center}
+  .q-bar .d{width:7px;height:7px;border-radius:50%;background:#ff5f57;flex:none}
+  .q-bar .d:nth-child(2){background:#febc2e}
+  .q-bar .d:nth-child(3){background:#28c840}
+  .q-url{
+    flex:1;background:#fff;border-radius:4px;font-size:7px;color:#999;padding:2px 6px;
+    margin-left:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .q-body{padding:10px 12px 12px;color:#222;font-size:9.5px;line-height:1.75}
+  .q-line{position:relative}
+  .q-line.dim{color:#9aa3b0}
+  .q-hl{
+    position:absolute;left:-2px;top:0;height:100%;width:0;border-radius:2px;
+    background:rgba(255,212,59,.62);transition:width .6s ease;
+  }
+  .sc-browser.sweep .q-hl{width:calc(100% + 4px)}
+  .q-text{position:relative}
+
+  /* 04 产品：名称 + logo */
+  .sc-product{top:40%;width:84%;display:flex;align-items:center;justify-content:center;gap:12px}
+  .prod-name{font-size:26px;font-weight:800;letter-spacing:.5px}
+  .prod-logo{
+    width:40px;height:40px;border-radius:50%;flex:none;
+    background:#fff;color:#111;font-size:18px;font-weight:900;
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;transform:scale(.3);transition:.35s cubic-bezier(.2,1.7,.4,1);
+  }
+  .sc-product.logo-on .prod-logo{opacity:1;transform:scale(1)}
+
+  /* 05 原理：波形 + 播放头 */
+  .sc-formula{top:25%;width:88%;text-align:center}
+  .f-line{font-size:21px;font-weight:800;letter-spacing:1px}
+  .f-line.accent{color:var(--accent)}
+  .f-eq{font-size:15px;color:var(--sub);margin:4px 0}
+  .wave-wrap{position:relative;height:34px;margin-top:14px;opacity:0;transition:.3s}
+  .sc-formula.wave-on .wave-wrap{opacity:1}
+  .wave{display:flex;align-items:center;gap:2px;height:100%}
+  .wave i{flex:1;background:var(--accent2);border-radius:1px;opacity:.85}
+  .playhead{
+    position:absolute;left:0;top:-5px;bottom:-5px;width:2px;opacity:0;
+    background:#ff5b5b;box-shadow:0 0 8px #ff5b5b;
+  }
+  .sc-formula.wave-on .playhead{opacity:1;animation:playheadMove 2.4s linear forwards}
+  @keyframes playheadMove{from{left:0}to{left:100%}}
+  .playdot{
+    position:absolute;left:100%;top:50%;width:9px;height:9px;border-radius:50%;opacity:0;
+    background:#ff5b5b;box-shadow:0 0 12px #ff5b5b;
+    transform:translate(-50%,-50%) scale(.4);transition:.25s;
+  }
+  .sc-formula.dot-on .playdot{opacity:1;transform:translate(-50%,-50%) scale(1)}
+
+  /* 06 两种做法 */
+  .sc-compare{top:26%;width:86%;display:flex;flex-direction:column;gap:10px}
+  .cmp-row{
+    border:1px solid var(--line);border-radius:10px;padding:8px 10px;
+    background:rgba(27,32,43,.92);opacity:.4;transition:.3s;
+  }
+  .cmp-row.on{opacity:1;border-color:rgba(61,220,151,.6);background:rgba(61,220,151,.08)}
+  .cmp-tag{font-size:9px;color:var(--sub);letter-spacing:.5px}
+  .cmp-row.on .cmp-tag{color:var(--accent2)}
+  .cmp-steps{
+    display:flex;align-items:center;gap:3px;flex-wrap:wrap;
+    margin-top:4px;font-size:8.5px;color:#dfe6f2;
+  }
+  .cmp-steps i{font-style:normal;color:#5d6b80;font-size:7px}
+
+  /* 07 时间线 */
+  .sc-editor{
+    top:23%;width:88%;padding:10px;border-radius:12px;
+    background:rgba(18,22,30,.96);border:1px solid #303a4c;
+  }
+  .ed-head{font-size:8px;color:var(--sub);letter-spacing:1px;margin-bottom:7px}
+  .ed-track{position:relative;height:16px;background:#161b25;border-radius:4px;margin-bottom:4px}
+  .ed-track.subs{display:flex;gap:2px;background:transparent;overflow:visible}
+  .ed-sub{
+    flex:1;height:14px;background:#243044;border-radius:3px;
+    font-size:7px;color:#9fb0cc;display:flex;align-items:center;justify-content:center;
+  }
+  .ed-track.assets{height:22px;background:transparent;margin-bottom:0;overflow:visible}
+  .ed-clip{
+    position:absolute;top:2px;height:12px;border-radius:3px;
+    font-size:7px;color:#0b0d12;display:flex;align-items:center;justify-content:center;
+  }
+  .ed-clip.audio{left:2%;width:96%;background:var(--accent2)}
+  .ed-clip.asset{
+    top:0;height:16px;padding:0 5px;background:var(--accent);opacity:0;transform:translateX(-14px);
+    transition:.35s cubic-bezier(.2,1.5,.4,1);
+  }
+  .sc-editor.snap .ed-clip.asset{opacity:1;transform:none}
+  .ed-clip.a1{left:2%}
+  .ed-clip.a2{left:35%}
+  .ed-clip.a3{left:68%}
+  .sc-editor.snap .a2{transition-delay:.08s}
+  .sc-editor.snap .a3{transition-delay:.16s}
+
+  /* 08 结尾三连弹 */
+  .sc-outro-icon{
+    left:12%;top:44%;width:44px;height:44px;border-radius:14px;
+    background:rgba(61,220,151,.14);border:1px solid rgba(61,220,151,.5);
+    display:flex;align-items:center;justify-content:center;font-size:20px;
+  }
+  .stage-el.sc-outro-icon{transform:scale(.4)}
+  .stage-el.sc-outro-icon.show{transform:scale(1)}
+
+  .sc-outro-chart{
+    left:auto;right:8%;top:32%;width:86px;height:64px;padding:8px;
+    background:rgba(27,32,43,.96);border:1px solid #3a4356;border-radius:10px;
+    display:flex;align-items:flex-end;justify-content:center;gap:5px;
+  }
+  .stage-el.sc-outro-chart{transform:scale(.5)}
+  .stage-el.sc-outro-chart.show{transform:scale(1)}
+  .sc-outro-chart span{width:14px;background:var(--accent);border-radius:2px 2px 0 0}
+
+  .sc-outro-text{
+    top:auto;bottom:22%;width:86%;padding:9px 10px;text-align:center;
+    font-size:12.5px;font-weight:700;color:var(--accent);
+    background:rgba(255,212,59,.14);border:1px solid rgba(255,212,59,.45);border-radius:10px;
+  }
+  .sc-outro-text .slogan{
+    display:block;margin-top:5px;font-size:8.5px;font-weight:400;
+    color:var(--sub);letter-spacing:1.5px;
+  }
+
+  /* 播放条 */
+  .player-bar{width:100%;max-width:520px;margin-top:18px;display:flex;align-items:center;gap:12px}
+  .play-btn{
+    width:42px;height:42px;border-radius:50%;background:var(--accent);border:none;
+    color:#111;font-size:15px;cursor:pointer;flex:none;display:flex;align-items:center;justify-content:center;
+  }
+  .play-btn:hover{filter:brightness(1.08)}
+  .progress{
+    flex:1;height:6px;background:var(--panel2);border-radius:4px;overflow:hidden;
+    position:relative;cursor:pointer;touch-action:none;
+  }
+  .progress .fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:4px}
+  .time{font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums;min-width:78px;text-align:right}
+  .voice-btn{
+    width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--panel2);
+    color:var(--sub);cursor:pointer;font-size:14px;flex:none;
+    display:flex;align-items:center;justify-content:center;transition:.15s;
+  }
+  .voice-btn:hover{color:var(--txt);border-color:#3f4a5e}
+  .voice-btn.on{color:var(--accent);border-color:rgba(255,212,59,.45);background:rgba(255,212,59,.08)}
+  .voice-btn:disabled{opacity:.35;cursor:not-allowed}
+
+  /* 词级条 */
+  .word-strip{
+    width:100%;max-width:520px;margin-top:12px;display:flex;flex-wrap:wrap;gap:4px;
+    justify-content:center;min-height:26px;
+  }
+  .word-strip .wchip{
+    font-size:11px;color:var(--sub);padding:2px 6px;border-radius:6px;
+    background:var(--panel2);transition:.12s;
+  }
+  .word-strip .wchip.cur{color:#111;background:var(--accent);font-weight:700}
+  .word-strip .wchip.blank{background:transparent;color:#465065}
+
+  /* ---------- 右栏 ---------- */
+  .tpl-card{
+    border:1px solid var(--line);background:var(--panel2);border-radius:12px;padding:12px;
+    margin-bottom:10px;cursor:pointer;transition:.18s;
+  }
+  .tpl-card:hover{border-color:#3f4a5e}
+  .tpl-card.active{border-color:var(--accent);background:rgba(255,212,59,.07)}
+  .tpl-card .tt{font-size:13.5px;font-weight:700;margin-bottom:4px}
+  .tpl-card .td{font-size:11.5px;color:var(--sub);line-height:1.55}
+  .tpl-card .badges{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
+  .tpl-card .badge{font-size:9.5px;padding:2px 7px;border-radius:20px;background:#252b38;color:#9aa5b8}
+  .tpl-card.active .badge{background:rgba(255,212,59,.15);color:var(--accent)}
+
+  .timeline{margin-top:4px}
+  .tl-item{
+    display:flex;gap:9px;align-items:flex-start;padding:9px 4px;border-bottom:1px dashed #232a37;
+    cursor:pointer;border-radius:6px;
+  }
+  .tl-item:hover{background:rgba(255,255,255,.025)}
+  .tl-item:last-child{border-bottom:none}
+  .tl-dot{
+    width:9px;height:9px;border-radius:50%;background:var(--accent2);margin-top:5px;flex:none;
+    box-shadow:0 0 8px rgba(61,220,151,.55);transition:.15s;
+  }
+  .tl-dot.now{background:var(--accent);box-shadow:0 0 10px var(--accent);transform:scale(1.25)}
+  .tl-txt{font-size:12px;line-height:1.5}
+  .tl-time{
+    font-size:10.5px;color:var(--sub);font-variant-numeric:tabular-nums;
+    display:flex;align-items:center;gap:6px;margin-top:1px;
+  }
+  .nudge{display:inline-flex;gap:2px;opacity:.55;transition:.15s}
+  .tl-item:hover .nudge{opacity:1}
+  .nudge button{
+    width:16px;height:16px;border:1px solid var(--line);background:var(--panel2);color:var(--sub);
+    border-radius:4px;cursor:pointer;font-size:11px;line-height:1;padding:0;
+  }
+  .nudge button:hover{border-color:var(--accent);color:var(--accent)}
+
+  .export-box{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+  .export-box .row{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);margin-bottom:7px}
+  .export-box .row b{color:var(--txt);font-weight:600}
+
+  /* ---------- 导出弹窗 ---------- */
+  .modal{
+    position:fixed;inset:0;background:rgba(5,7,10,.74);backdrop-filter:blur(4px);
+    display:flex;align-items:center;justify-content:center;padding:20px;z-index:120;
+    opacity:0;pointer-events:none;transition:.2s;
+  }
+  .modal.show{opacity:1;pointer-events:auto}
+  .sheet{
+    width:min(430px,100%);background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.6);
+  }
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:14px;font-weight:700}
+  .sheet-head .x{background:none;border:none;color:var(--sub);font-size:15px;cursor:pointer;padding:4px}
+  .sheet-head .x:hover{color:var(--txt)}
+  .export-step{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:12px;color:var(--sub)}
+  .export-step .ico{
+    width:16px;height:16px;border-radius:50%;border:1px solid var(--line);flex:none;
+    display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--sub);
+  }
+  .export-step.done{color:var(--txt)}
+  .export-step.done .ico{background:var(--accent2);border-color:var(--accent2);color:#04301f}
+  .export-bar{height:6px;background:var(--panel2);border-radius:4px;overflow:hidden;margin:14px 0 4px}
+  .export-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width .32s}
+  .export-done{margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
+  .export-done .file{font-size:12.5px;font-weight:700;margin-bottom:5px;word-break:break-all}
+  .export-done .meta{font-size:11px;color:var(--sub);line-height:1.7;margin-bottom:12px}
+  .export-done code{background:var(--panel2);padding:1px 5px;border-radius:4px;color:var(--accent2);font-size:10.5px}
+  .export-actions{display:flex;gap:8px;flex-wrap:wrap}
+
+  /* ---------- toast ---------- */
+  .toast{
+    position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);
+    background:var(--accent);color:#111;padding:11px 20px;border-radius:10px;font-size:13px;
+    font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:200;max-width:80vw;text-align:center;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="dot"></span>词镜 <small>说到哪 · 动到哪</small></div>
+  <div class="header-actions">
+    <button class="btn ghost" id="btnDemo" type="button">载入示例</button>
+    <button class="btn primary" id="btnExport" type="button">导出 9:16 成片</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ================= 左栏 ================= -->
+  <aside class="col-left">
+    <div class="sec-title">① 说出你的文案需求</div>
+    <textarea id="scriptInput" placeholder="例如：我要做一条 45 秒的知识口播，讲「说到哪、动到哪」：先抛标题，再分别演示数据、步骤、引用、产品四种元素，然后讲原理，对比两种做法，最后回到口播收尾。"></textarea>
+    <div class="hint">大模型会把书面语改写成口播稿，并自动标注触发词（标题 / 数据 / 流程 / 引用 / 产品 / 原理）。</div>
+
+    <div class="tag-row" id="eventTags">
+      <span class="tag active" data-ev="title">标题 / 结尾</span>
+      <span class="tag active" data-ev="chart">数据图表</span>
+      <span class="tag active" data-ev="flow">流程 / 时间线</span>
+      <span class="tag active" data-ev="quote">网页引用</span>
+      <span class="tag active" data-ev="product">产品露出</span>
+      <span class="tag active" data-ev="formula">原理解释</span>
+    </div>
+
+    <div class="sec-title" style="margin-top:26px">② 配音音色</div>
+    <div class="voice-row">
+      <select id="voiceSel">
+        <option value="hailuo">海螺 AI · 中文男声（稳重）</option>
+        <option value="hailuo-f">海螺 AI · 中文女声（亲和）</option>
+        <option value="edge">Edge TTS · 云希</option>
+        <option value="fish">Fish Audio · 自定义音色</option>
+      </select>
+    </div>
+    <div class="hint">TTS 返回音频的同时会给出词级时间戳——这是「说到哪、动到哪」的数据基础。原型用浏览器本地语音试听，音色选择要接入 TTS 后才生效。</div>
+
+    <div class="sec-title" style="margin-top:26px">③ 生成</div>
+    <button class="btn primary" style="width:100%;padding:12px" id="btnGenerate" type="button">生成口播稿 + 词级时间戳</button>
+    <div class="status-line" id="statusLine" aria-live="polite"></div>
+
+    <div class="sec-title" style="margin-top:22px">口播稿</div>
+    <div class="script-list" id="scriptList">
+      <div class="hint">生成后这里会列出每一句口播稿，点一句可以跳到对应画面。</div>
+    </div>
+  </aside>
+
+  <!-- ================= 中栏 ================= -->
+  <main class="col-center">
+    <div class="preview-tag">8 个分镜 · 45 秒 · 1080 × 1920</div>
+    <div class="phone-wrap">
+      <div class="phone-screen" id="screen">
+        <!-- 01 标题：说到哪 → 动到哪 -->
+        <div class="stage-el sc sc-hero" id="sc-hero">
+          <div class="hero-row">
+            <span class="hero-word">说到哪</span>
+            <span class="hero-arrow">→</span>
+            <span class="hero-word accent">动到哪</span>
+          </div>
+        </div>
+
+        <!-- 02 数据：三根柱子依次升起 -->
+        <div class="stage-el sc sc-bars" id="sc-bars">
+          <div class="panel-title">数据</div>
+          <div class="bars">
+            <div><div class="barcol"><div class="bar" data-h="44%"></div></div><div class="lbl">播放</div></div>
+            <div><div class="barcol"><div class="bar" data-h="68%"></div></div><div class="lbl">完播</div></div>
+            <div><div class="barcol"><div class="bar" data-h="92%"></div></div><div class="lbl">转化</div></div>
+          </div>
+        </div>
+
+        <!-- 02 步骤：三节点流程图 -->
+        <div class="stage-el sc sc-flow" id="sc-flow">
+          <div class="flow-line">
+            <div class="flow-node">数据</div>
+            <span class="flow-connector"></span>
+            <div class="flow-node">步骤</div>
+            <span class="flow-connector"></span>
+            <div class="flow-node">画面</div>
+          </div>
+        </div>
+
+        <!-- 03 引用：浏览器截图 + 荧光笔 -->
+        <div class="stage-el sc sc-browser" id="sc-browser">
+          <div class="q-bar">
+            <span class="d"></span><span class="d"></span><span class="d"></span>
+            <span class="q-url">example.com/report/2024</span>
+          </div>
+          <div class="q-body">
+            <div class="q-line dim">2024 短视频内容报告</div>
+            <div class="q-line">口播视频的完播率，和画面信息密度高度相关。</div>
+            <div class="q-line">
+              <span class="q-hl"></span>
+              <span class="q-text">说到哪个词，画面就在那一刻出现。</span>
+            </div>
+            <div class="q-line dim">—— 示例数据，仅用于演示</div>
+          </div>
+        </div>
+
+        <!-- 04 产品：名称 + logo -->
+        <div class="stage-el sc sc-product" id="sc-product">
+          <span class="prod-name">Notion</span>
+          <span class="prod-logo">N</span>
+        </div>
+
+        <!-- 05 原理：语音时间戳 = 画面开关 -->
+        <div class="stage-el sc sc-formula" id="sc-formula">
+          <div class="f-line">语音时间戳</div>
+          <div class="f-eq">=</div>
+          <div class="f-line accent">画面开关</div>
+          <div class="wave-wrap">
+            <div class="wave" id="waveBars"></div>
+            <span class="playhead"></span>
+            <span class="playdot"></span>
+          </div>
+        </div>
+
+        <!-- 06 两种做法对照 -->
+        <div class="stage-el sc sc-compare" id="sc-compare">
+          <div class="cmp-row">
+            <div class="cmp-tag">第一种</div>
+            <div class="cmp-steps"><span>先配音</span><i>→</i><span>词级时间戳</span><i>→</i><span>绑定画面事件</span></div>
+          </div>
+          <div class="cmp-row">
+            <div class="cmp-tag">第二种</div>
+            <div class="cmp-steps"><span>先拍口播</span><i>→</i><span>语音转字幕</span><i>→</i><span>元素对齐</span></div>
+          </div>
+        </div>
+
+        <!-- 07 时间线：素材吸附到词 -->
+        <div class="stage-el sc sc-editor" id="sc-editor">
+          <div class="ed-head">时间线 · 按词对齐</div>
+          <div class="ed-track"><span class="ed-clip audio">口播音轨</span></div>
+          <div class="ed-track subs">
+            <span class="ed-sub">说到</span><span class="ed-sub">哪个</span><span class="ed-sub">词</span>
+          </div>
+          <div class="ed-track assets">
+            <span class="ed-clip asset a1">图表</span>
+            <span class="ed-clip asset a2">截图</span>
+            <span class="ed-clip asset a3">logo</span>
+          </div>
+        </div>
+
+        <!-- 08 结尾三连弹 -->
+        <div class="stage-el sc sc-outro-icon" id="sc-outro-icon">💬</div>
+        <div class="stage-el sc sc-outro-chart" id="sc-outro-chart">
+          <span style="height:36%"></span><span style="height:64%"></span><span style="height:88%"></span>
+        </div>
+        <div class="stage-el sc sc-outro-text" id="sc-outro-text">
+          说到那个词，它就在那一刻出现
+          <span class="slogan">词镜 · 说到哪，动到哪</span>
+        </div>
+
+        <div class="caption" id="caption"></div>
+      </div>
+    </div>
+
+    <div class="player-bar">
+      <button class="play-btn" id="btnPlay" type="button" aria-label="播放 / 暂停">▶</button>
+      <div class="progress" id="progress"><div class="fill" id="fill"></div></div>
+      <div class="time" id="timeText">00:00 / 00:00</div>
+      <button class="voice-btn on" id="btnVoice" type="button" title="配音开关（浏览器本地语音）" aria-pressed="true">🔊</button>
+    </div>
+
+    <div class="word-strip" id="wordStrip"></div>
+
+    <div class="hint" style="max-width:520px;text-align:center;margin-top:6px">
+      画面按词级时间戳触发；配音用浏览器本地语音试听（🔊 开关）。接上真实 TTS 后，音频与词级时间戳同源，导出的成片才有声。
+    </div>
+  </main>
+
+  <!-- ================= 右栏 ================= -->
+  <aside class="col-right">
+    <div class="sec-title">④ 模板包</div>
+    <div id="tplList"></div>
+
+    <div class="sec-title" style="margin-top:22px">词级触发时间线</div>
+    <div class="timeline" id="timeline">
+      <div class="hint">生成后这里会列出每个触发词及其时间点，可用 − / ＋ 微调。</div>
+    </div>
+
+    <div class="export-box">
+      <div class="row"><span>画幅</span><b>1080 × 1920（9:16）</b></div>
+      <div class="row"><span>编码</span><b>H.264 / MP4</b></div>
+      <div class="row"><span>平台</span><b>抖音 · 视频号</b></div>
+      <button class="btn primary" style="width:100%;margin-top:12px" id="btnExport2" type="button">导出成片</button>
+    </div>
+  </aside>
+
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+  <div class="sheet">
+    <div class="sheet-head">
+      <span id="modalTitle">导出 9:16 成片</span>
+      <button class="x" id="modalClose" type="button" aria-label="关闭">✕</button>
+    </div>
+    <div id="exportBody"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* =========================================================================
+     0. 接口预留：真实产品把这三个函数换掉即可
+        - rewrite：自然语言需求 → 结构化脚本（含视觉事件）
+        - tts：口播文本 → 音频 URL + 词级时间戳
+        - render：storyboard → 视频 URL（Remotion / 云端渲染）
+     三个函数返回 null 时，原型自动使用内置演示数据。
+     ========================================================================= */
+  var API = {
+    rewrite: async function (brief, events) {
+      // TODO: POST /api/rewrite  { brief, events } → { duration, segments:[{t0,t1,text,events:[{ev,at,step}]}] }
+      return null;
+    },
+    tts: async function (text, voice) {
+      // TODO: POST /api/tts { text, voice } → { audioUrl, words:[{w,t0,t1}] }
+      return null;
+    },
+    render: async function (storyboard) {
+      // TODO: POST /api/render { storyboard } → { url }
+      return null;
+    }
+  };
+
+  /* =========================================================================
+     1. 数据层：模板、事件、示例脚本
+     ========================================================================= */
+  var EVENT_META = {
+    hero:       { label: '标题：说到哪 → 动到哪', el: 'sc-hero',        group: 'title' },
+    bars:       { label: '数据柱状图',            el: 'sc-bars',        group: 'chart' },
+    flow:       { label: '三节点流程',            el: 'sc-flow',        group: 'flow' },
+    browser:    { label: '网页截图 + 荧光笔',      el: 'sc-browser',     group: 'quote' },
+    product:    { label: '产品名 + Logo',         el: 'sc-product',     group: 'product' },
+    formula:    { label: '时间戳 = 开关 + 波形',   el: 'sc-formula',     group: 'formula' },
+    compare:    { label: '两种做法对照',          el: 'sc-compare',     group: 'flow' },
+    editor:     { label: '时间线吸附示意',         el: 'sc-editor',      group: 'flow' },
+    outroIcon:  { label: '结尾图标',              el: 'sc-outro-icon',  group: 'title' },
+    outroChart: { label: '结尾缩略图表',          el: 'sc-outro-chart', group: 'chart' },
+    outroText:  { label: '结尾高亮句',            el: 'sc-outro-text',  group: 'title' }
+  };
+
+  var TEMPLATES = [
+    { id: 'full', name: '完整叙事包 · 8 镜全开',
+      desc: '标题 / 柱状图 / 流程图 / 网页高亮 / 产品 / 原理 / 对照 / 时间线 / 结尾，完整跑一遍分镜脚本。',
+      badges: ['9 类元素', '45 秒'],
+      enabled: ['hero', 'bars', 'flow', 'browser', 'product', 'formula', 'compare', 'editor', 'outroIcon', 'outroChart', 'outroText'] },
+    { id: 'light', name: '口播轻量包',
+      desc: '只留标题、流程图、产品与结尾三连弹，节奏更快，适合纯口播。',
+      badges: ['标题', '流程', '产品'],
+      enabled: ['hero', 'flow', 'product', 'outroIcon', 'outroChart', 'outroText'] },
+    { id: 'proof', name: '证据演示包',
+      desc: '数据与引用为主：柱状图、网页荧光笔、原理波形、时间线吸附。',
+      badges: ['数据', '引用', '时间线'],
+      enabled: ['bars', 'browser', 'formula', 'editor'] }
+  ];
+
+  // 8 个分镜、11 段口播字幕。事件不写死秒数，而是绑定触发词，
+  // buildWords() 之后再换算成时间点——这就是「说到哪，动到哪」。
+  var DEMO_SCRIPT = {
+    title: '说到哪、动到哪，一条视频讲清楚',
+    duration: 45,
+    segments: [
+      { t0: 0, t1: 4,
+        text: '你有没有刷到过这种视频：说到哪，画面就动到哪。',
+        events: [
+          { ev: 'hero', word: '说到哪', step: 0, hideAt: 4 },
+          { ev: 'hero', word: '动到哪', step: 1, hideAt: 4 }
+        ] },
+      { t0: 4, t1: 7,
+        text: '讲数据，图表直接弹出来；',
+        events: [{ ev: 'bars', word: '数据', hideAt: 7 }] },
+      { t0: 7, t1: 10,
+        text: '讲步骤，流程图自己长出来。',
+        events: [{ ev: 'flow', word: '步骤', hideAt: 10 }] },
+      { t0: 10, t1: 16,
+        text: '引用别人原话，就截一张真实网页，荧光笔划过去。',
+        events: [
+          { ev: 'browser', word: '截', step: 0, hideAt: 16 },
+          { ev: 'browser', word: '荧光笔', step: 1, hideAt: 16 }
+        ] },
+      { t0: 16, t1: 21,
+        text: '提到某个产品，logo 直接放在旁边。',
+        events: [
+          { ev: 'product', word: '产品', step: 0, hideAt: 21 },
+          { ev: 'product', word: 'logo', step: 1, hideAt: 21 }
+        ] },
+      { t0: 21, t1: 27,
+        text: '原理就一句话：语音的时间戳，就是画面的开关。',
+        events: [
+          { ev: 'formula', word: '一句话', step: 0, hideAt: 27 },
+          { ev: 'formula', word: '时间戳', step: 1, hideAt: 27 },
+          { ev: 'formula', word: '开关', step: 2, hideAt: 27 }
+        ] },
+      { t0: 27, t1: 30.5,
+        text: '做法有两种。第一种，先配音，再拿词级时间戳，每个词对应一个画面事件。',
+        events: [
+          { ev: 'compare', word: '做法', step: 0, hideAt: 34 },
+          { ev: 'compare', word: '第一种', step: 1, hideAt: 34 }
+        ] },
+      { t0: 30.5, t1: 34,
+        text: '第二种，先拍口播，用剪映或 Premiere 识别字幕，再让元素对齐字幕出现。',
+        events: [{ ev: 'compare', word: '第二种', step: 2, hideAt: 34 }] },
+      { t0: 34, t1: 37.2,
+        text: '我用的是第二种。录完口播，字幕一识别，每个词都有了精确到帧的时间点。',
+        events: [{ ev: 'editor', word: '字幕一识别', step: 0, hideAt: 40 }] },
+      { t0: 37.2, t1: 40,
+        text: '然后我把图表、截图、logo 拖到对应词的位置，完事。',
+        events: [{ ev: 'editor', word: '拖到对应词', step: 1, hideAt: 40 }] },
+      { t0: 40, t1: 45,
+        text: '不用手动卡点，不用一帧一帧对。说到那个词，那个东西就在那一刻出现。',
+        events: [
+          { ev: 'outroIcon', word: '那个词', hideAt: 46 },
+          { ev: 'outroChart', word: '那一刻', hideAt: 46 },
+          { ev: 'outroText', word: '出现', hideAt: 46 }
+        ] }
+    ]
+  };
+
+  // 示例需求（首次打开时预填，便于直接点「生成」）
+  var DEMO_BRIEF = '我要做一条 45 秒的知识口播，讲「说到哪、动到哪」：先抛标题，再分别演示数据、步骤、' +
+    '引用、产品四种元素，然后讲原理，对比两种做法，最后回到口播收尾。语气干脆一点。';
+
+  /* =========================================================================
+     2. 状态
+     ========================================================================= */
+  var state = {
+    script: null,
+    template: TEMPLATES[0],
+    voice: 'hailuo',
+    playing: false,
+    currentTime: 0,
+    rafId: null,
+    lastTs: null,
+    active: {},          // 当前已显示的画面元素
+    captionSeg: -99,     // 当前字幕对应的段落下标
+    stripSeg: -99,       // 词级条缓存
+    curWord: -1,
+    exporting: false,
+    generating: false,
+    voiceOn: true,       // 浏览器本地语音试听
+    speaking: false,
+    spokenSeg: -1,
+    speechSeg: -1,
+    speechStarted: false,
+    holdSince: 0
+  };
+
+  /* =========================================================================
+     3. 工具
+     ========================================================================= */
+  function $(id) { return document.getElementById(id); }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function fmt(sec) {
+    sec = Math.max(0, sec || 0);
+    var m = Math.floor(sec / 60);
+    var s = Math.floor(sec % 60);
+    return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+  }
+
+  function pad(n, len) { return String(n).padStart(len, '0'); }
+
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  function duration() { return state.script ? state.script.duration : 0; }
+
+  function toast(msg) {
+    var t = $('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._tid);
+    t._tid = setTimeout(function () { t.classList.remove('show'); }, 2200);
+  }
+
+  function setStatus(text) { $('statusLine').textContent = text; }
+
+  /* =========================================================================
+     3.5 试听配音：浏览器本地语音（Web Speech API）
+         无依赖、不需要 key，仅用于原型演示；真实产品用 API.tts() 返回的音频。
+     ========================================================================= */
+  var synth = (typeof window !== 'undefined' && window.speechSynthesis) ? window.speechSynthesis : null;
+
+  function ttsAvailable() {
+    return !!(synth && typeof window.SpeechSynthesisUtterance === 'function');
+  }
+
+  function pickChineseVoice() {
+    if (!synth || !synth.getVoices) return null;
+    var voices = synth.getVoices() || [];
+    if (!voices.length) return null;
+    var zh = voices.filter(function (v) { return /^zh([-_]|$)/i.test(v.lang || ''); });
+    if (!zh.length) return null;
+    var local = zh.filter(function (v) { return v.localService; });
+    var pool = local.length ? local : zh;
+    var named = pool.filter(function (v) {
+      return /Xiaoxiao|Yunxi|Yunyang|Huihui|Kangkang|Yaoyao|Tingting|Meijia|Natural/i.test(v.name || '');
+    });
+    return named[0] || pool[0];
+  }
+
+  // 按句子密度估一个语速，尽量在分镜给的时长内念完
+  function speechRate(seg) {
+    var chars = 0;
+    (seg.words || []).forEach(function (w) {
+      if (isSpeakable(w.text)) chars += w.text.length;
+    });
+    var slot = Math.max(1.5, seg.t1 - seg.t0);
+    return Math.max(0.9, Math.min(1.8, chars / (slot * 5.2)));
+  }
+
+  function speakSegment(segIndex) {
+    if (!ttsAvailable() || !state.script) return;
+    var seg = state.script.segments[segIndex];
+    if (!seg || !seg.text) return;
+    try {
+      var u = new window.SpeechSynthesisUtterance(seg.text);
+      u.lang = 'zh-CN';
+      u.rate = speechRate(seg);
+      u.pitch = 1;
+      var v = pickChineseVoice();
+      if (v) u.voice = v;
+      state.speaking = true;
+      state.speechSeg = segIndex;
+      state.speechStarted = false;
+      state.holdSince = 0;
+      u.onstart = function () {
+        if (state.speechSeg === segIndex) state.speechStarted = true;
+      };
+      u.onend = function () {
+        if (state.speechSeg === segIndex) state.speaking = false;
+      };
+      u.onerror = function () {
+        if (state.speechSeg === segIndex) state.speaking = false;
+      };
+      synth.speak(u);
+
+      // 兜底：2.2 秒还没开始朗读，说明这台机器上没有可用语音，关掉配音别把画面卡住
+      clearTimeout(state.speechWatchdog);
+      state.speechWatchdog = setTimeout(function () {
+        if (state.speaking && !state.speechStarted && state.speechSeg === segIndex) {
+          state.speaking = false;
+          state.voiceOn = false;
+          syncVoiceButton();
+          try { synth.cancel(); } catch (e) {}
+          toast('没有检测到朗读声音，已自动关闭配音');
+        }
+      }, 2200);
+    } catch (err) {
+      state.speaking = false;
+    }
+  }
+
+  function stopSpeech() {
+    state.speaking = false;
+    state.speechSeg = -1;
+    state.spokenSeg = -1;
+    state.speechStarted = false;
+    state.holdSince = 0;
+    clearTimeout(state.speechWatchdog);
+    if (synth) {
+      try { synth.cancel(); } catch (err) {}
+    }
+  }
+
+  function maybeSpeak(segIndex) {
+    if (!state.playing || !state.voiceOn || !state.script) return;
+    if (segIndex < 0 || state.spokenSeg === segIndex) return;
+    state.spokenSeg = segIndex;
+    speakSegment(segIndex);
+  }
+
+  function syncVoiceButton() {
+    var b = $('btnVoice');
+    if (!b) return;
+    b.textContent = state.voiceOn ? '🔊' : '🔇';
+    b.classList.toggle('on', state.voiceOn);
+    b.setAttribute('aria-pressed', state.voiceOn ? 'true' : 'false');
+  }
+
+  /* =========================================================================
+     4. 词级时间戳：把一句话切成词，并按字/词权重分配到 [t0, t1]
+        （真实产品直接使用 TTS 返回的 words，不需要这一步）
+     ========================================================================= */
+  function tokenize(text) {
+    var out = [];
+    var buf = '';
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      if (/[A-Za-z0-9]/.test(ch)) { buf += ch; continue; }
+      if (buf) { out.push(buf); buf = ''; }
+      if (!/\s/.test(ch)) out.push(ch);
+    }
+    if (buf) out.push(buf);
+    return out;
+  }
+
+  function tokenWeight(tok) {
+    if (/^[A-Za-z0-9]+$/.test(tok)) return Math.max(2.4, tok.length * 1.7);
+    if (/[，。！？、；：""''（）《》…—,.!?;:"'()\-]/.test(tok)) return 0.9;
+    return 2.6;
+  }
+
+  function buildWords(seg) {
+    var toks = tokenize(seg.text);
+    var total = 0;
+    var weights = toks.map(function (t) { return tokenWeight(t); });
+    weights.forEach(function (w) { total += w; });
+    total = total || 1;
+    var t = seg.t0;
+    var span = seg.t1 - seg.t0;
+    return toks.map(function (tok, i) {
+      var d = span * (weights[i] / total);
+      var w = { text: tok, t0: t, t1: t + d };
+      t += d;
+      return w;
+    });
+  }
+
+  function isSpeakable(text) { return /[\u4e00-\u9fa5A-Za-z0-9]/.test(text); }
+
+  // 在词序列里找一句话中的触发词，返回它开始的时间点
+  function findWordTime(words, target) {
+    var buf = '';
+    var marks = [];
+    for (var i = 0; i < words.length; i++) {
+      if (!isSpeakable(words[i].text)) continue;
+      marks.push({ pos: buf.length, t: words[i].t0 });
+      buf += words[i].text;
+    }
+    var idx = buf.indexOf(target);
+    if (idx < 0) return null;
+    var hit = null;
+    for (var k = 0; k < marks.length; k++) {
+      if (marks[k].pos <= idx) hit = marks[k].t;
+      else break;
+    }
+    return hit;
+  }
+
+  // 把 events 里的 word / hideAt 落成具体秒数
+  function resolveEvents(seg) {
+    seg.events.forEach(function (ev) {
+      if (ev.word) {
+        var t = findWordTime(seg.words, ev.word);
+        if (t != null) ev.at = Math.max(seg.t0, t - 0.02);
+      }
+      if (typeof ev.at !== 'number') ev.at = seg.t0;
+      if (typeof ev.hideAt !== 'number') ev.hideAt = seg.t1;
+    });
+  }
+
+  // 波形条（纯装饰）
+  function buildWave() {
+    var wave = $('waveBars');
+    if (!wave) return;
+    var hs = [28, 46, 64, 38, 74, 52, 88, 60, 42, 78, 56, 34, 48, 70, 84, 44, 58, 76, 36, 54, 66, 40, 58, 50];
+    wave.innerHTML = hs.map(function (h) {
+      return '<i style="height:' + h + '%"></i>';
+    }).join('');
+  }
+
+  /* =========================================================================
+     5. 模板包
+     ========================================================================= */
+  function renderTemplates() {
+    var box = $('tplList');
+    box.innerHTML = '';
+    TEMPLATES.forEach(function (tp) {
+      var d = document.createElement('div');
+      d.className = 'tpl-card' + (state.template.id === tp.id ? ' active' : '');
+      d.innerHTML = '<div class="tt">' + escapeHtml(tp.name) + '</div>' +
+        '<div class="td">' + escapeHtml(tp.desc) + '</div>' +
+        '<div class="badges">' + tp.badges.map(function (b) {
+          return '<span class="badge">' + escapeHtml(b) + '</span>';
+        }).join('') + '</div>';
+      d.onclick = function () { applyTemplate(tp); };
+      box.appendChild(d);
+    });
+  }
+
+  function applyTemplate(tp) {
+    state.template = tp;
+    renderTemplates();
+    renderTimeline();
+    if (state.script) renderAt(state.currentTime);
+    toast('已切换模板：' + tp.name);
+  }
+
+  /* =========================================================================
+     6. 时间线（含 ±0.1s 微调）
+     ========================================================================= */
+  function renderTimeline() {
+    var box = $('timeline');
+    if (!state.script) {
+      box.innerHTML = '<div class="hint">生成后这里会列出每个触发词及其时间点，可用 − / ＋ 微调。</div>';
+      return;
+    }
+    var html = '';
+    state.script.segments.forEach(function (seg, si) {
+      seg.events.forEach(function (ev, ei) {
+        if (state.template.enabled.indexOf(ev.ev) < 0) return;
+        var meta = EVENT_META[ev.ev];
+        if (!meta) return;
+        var extra = (typeof ev.step === 'number' && ev.step > 0) ? ' · 第 ' + (ev.step + 1) + ' 步' : '';
+        html += '<div class="tl-item" data-key="' + si + '-' + ei + '">' +
+          '<div class="tl-dot"></div>' +
+          '<div>' +
+            '<div class="tl-txt">' + escapeHtml(meta.label) + extra + '</div>' +
+            '<div class="tl-time">' + ev.at.toFixed(2) + 's' +
+              '<span class="nudge">' +
+                '<button type="button" data-nudge="-0.1" aria-label="提前 0.1 秒">−</button>' +
+                '<button type="button" data-nudge="0.1" aria-label="延后 0.1 秒">＋</button>' +
+              '</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      });
+    });
+    box.innerHTML = html || '<div class="hint">这个模板下没有可触发的视觉点，换一个模板试试。</div>';
+  }
+
+  /* =========================================================================
+     7. 画面元素
+     ========================================================================= */
+  function showElement(key, ev) {
+    var el = $(EVENT_META[key].el);
+    if (!el) return;
+    ev = ev || {};
+    var isNew = !state.active[key];
+    state.active[key] = true;
+    el.classList.add('show');
+
+    if (key === 'bars' && isNew) {
+      el.querySelectorAll('.bar').forEach(function (bar, i) {
+        bar.style.height = '0';
+        setTimeout(function () { bar.style.height = bar.dataset.h; }, 80 + 110 * i);
+      });
+    }
+    if (key === 'hero') el.classList.toggle('launch', ev.step >= 1);
+    if (key === 'browser') el.classList.toggle('sweep', ev.step >= 1);
+    if (key === 'product') el.classList.toggle('logo-on', ev.step >= 1);
+    if (key === 'formula') {
+      el.classList.toggle('wave-on', ev.step >= 1);
+      el.classList.toggle('dot-on', ev.step >= 2);
+    }
+    if (key === 'compare') {
+      var rows = el.querySelectorAll('.cmp-row');
+      if (rows[0]) rows[0].classList.toggle('on', ev.step >= 1);
+      if (rows[1]) rows[1].classList.toggle('on', ev.step >= 2);
+    }
+    if (key === 'editor') el.classList.toggle('snap', ev.step >= 1);
+  }
+
+  function resetScene(key) {
+    var el = $(EVENT_META[key].el);
+    if (!el) return;
+    el.classList.remove('show', 'launch', 'sweep', 'logo-on', 'wave-on', 'dot-on', 'snap');
+    if (key === 'bars') {
+      el.querySelectorAll('.bar').forEach(function (b) { b.style.height = '0'; });
+    }
+    if (key === 'compare') {
+      el.querySelectorAll('.cmp-row').forEach(function (r) { r.classList.remove('on'); });
+    }
+  }
+
+  function hideElement(key) {
+    if (!state.active[key]) return;
+    state.active[key] = false;
+    resetScene(key);
+  }
+
+  function clearStage() {
+    state.active = {};
+    Object.keys(EVENT_META).forEach(resetScene);
+  }
+
+  /* =========================================================================
+     8. 字幕 + 词级高亮
+     ========================================================================= */
+  function renderCaption(segIndex) {
+    var cap = $('caption');
+    if (!state.script || segIndex < 0) {
+      if (state.captionSeg !== -99) {
+        cap.innerHTML = '';
+        cap.classList.remove('long');
+        state.captionSeg = -99;
+        state.stripSeg = -999;
+        state.curWord = -1;
+      }
+      return;
+    }
+    if (state.captionSeg === segIndex) return;
+    state.captionSeg = segIndex;
+    var seg = state.script.segments[segIndex];
+    cap.classList.toggle('long', seg.text.length > 28);
+    cap.innerHTML = seg.words.map(function (w, i) {
+      var cls = isSpeakable(w.text) ? 'w' : 'p';
+      return '<span class="' + cls + '" data-i="' + i + '">' + escapeHtml(w.text) + '</span>';
+    }).join('');
+    state.curWord = -1;
+    state.stripSeg = -999;
+  }
+
+  function highlightWord(segIndex) {
+    var cap = $('caption');
+    if (segIndex < 0) {
+      if (state.curWord !== -1) {
+        var prev = cap.querySelector('.w.cur');
+        if (prev) prev.classList.remove('cur');
+        state.curWord = -1;
+      }
+      return;
+    }
+    var words = state.script.segments[segIndex].words;
+    var idx = -1;
+    for (var i = 0; i < words.length; i++) {
+      if (state.currentTime >= words[i].t0 && state.currentTime < words[i].t1) { idx = i; break; }
+    }
+    if (idx < 0) return;
+    while (idx > 0 && !isSpeakable(words[idx].text)) idx--;  // 标点不抢高亮
+
+    if (state.curWord === idx) return;
+    state.curWord = idx;
+    cap.querySelectorAll('.w').forEach(function (n) { n.classList.remove('cur'); });
+    var node = cap.querySelector('.w[data-i="' + idx + '"]');
+    if (node) node.classList.add('cur');
+  }
+
+  function updateWordStrip(segIndex) {
+    var strip = $('wordStrip');
+    if (segIndex !== state.stripSeg) {
+      state.stripSeg = segIndex;
+      if (segIndex < 0 || !state.script) { strip.innerHTML = ''; return; }
+      strip.innerHTML = state.script.segments[segIndex].words.map(function (w, i) {
+        return '<span class="wchip' + (isSpeakable(w.text) ? '' : ' blank') + '" data-i="' + i + '">' +
+          escapeHtml(w.text) + '</span>';
+      }).join('');
+    }
+    var cur = strip.querySelector('.wchip.cur');
+    if (cur) cur.classList.remove('cur');
+    var node = strip.querySelector('.wchip[data-i="' + state.curWord + '"]');
+    if (node) node.classList.add('cur');
+  }
+
+  /* =========================================================================
+     9. 播放引擎：画面 = f(t)
+     ========================================================================= */
+  function segIndexAt(t) {
+    if (!state.script) return -1;
+    var segs = state.script.segments;
+    for (var i = 0; i < segs.length; i++) {
+      if (t >= segs[i].t0 && t < segs[i].t1) return i;
+    }
+    return -1;
+  }
+
+  function renderAt(t) {
+    if (!state.script) return;
+    var script = state.script;
+    state.currentTime = Math.max(0, Math.min(t, script.duration));
+
+    var segIndex = segIndexAt(state.currentTime);
+
+    renderCaption(segIndex);
+
+    // 场景 = f(t)：全局扫一遍所有事件，取每个场景「最近一次触发且未到隐藏点」的那条
+    var wanted = {};
+    script.segments.forEach(function (seg) {
+      seg.events.forEach(function (ev) {
+        if (state.currentTime < ev.at) return;
+        if (typeof ev.hideAt === 'number' && state.currentTime >= ev.hideAt) return;
+        if (state.template.enabled.indexOf(ev.ev) < 0) return;
+        if (!wanted[ev.ev] || ev.at >= wanted[ev.ev].at) wanted[ev.ev] = ev;
+      });
+    });
+
+    Object.keys(EVENT_META).forEach(function (key) {
+      if (wanted[key]) showElement(key, wanted[key]);
+      else hideElement(key);
+    });
+
+    highlightWord(segIndex);
+    updateWordStrip(segIndex);
+
+    // 进度条 + 时间
+    $('fill').style.width = (script.duration ? state.currentTime / script.duration * 100 : 0) + '%';
+    $('timeText').textContent = fmt(state.currentTime) + ' / ' + fmt(script.duration);
+
+    // 时间线高亮点
+    document.querySelectorAll('#timeline .tl-item').forEach(function (item) {
+      var parts = item.dataset.key.split('-');
+      var seg = script.segments[Number(parts[0])];
+      var ev = seg && seg.events[Number(parts[1])];
+      var dot = item.querySelector('.tl-dot');
+      if (!ev || !dot) return;
+      dot.classList.toggle('now', state.currentTime >= ev.at && state.currentTime < ev.at + 1.8);
+    });
+
+    maybeSpeak(segIndex);
+  }
+
+  function seekTo(t) {
+    if (!state.script) return;
+    renderAt(t);
+  }
+
+  function loop(ts) {
+    if (!state.playing) return;
+    if (state.lastTs == null) state.lastTs = ts;
+    var dt = Math.min(0.1, (ts - state.lastTs) / 1000);
+    state.lastTs = ts;
+
+    var segIndex = segIndexAt(state.currentTime);
+    var next = state.currentTime + dt;
+
+    // 配音还没念完时停在句尾等一等，别让下一句把上一句切断
+    if (state.voiceOn && state.speaking && segIndex >= 0) {
+      var seg = state.script.segments[segIndex];
+      var holdAt = Math.max(seg.t0, seg.t1 - 0.04);
+      if (next > holdAt) {
+        next = holdAt;
+        if (!state.holdSince) state.holdSince = ts;
+        if (ts - state.holdSince > 9000) state.speaking = false; // 兜底：语音事件没回来
+      }
+    } else {
+      state.holdSince = 0;
+    }
+
+    if (next >= duration()) {
+      state.playing = false;
+      state.rafId = null;
+      $('btnPlay').textContent = '▶';
+      stopSpeech();
+      // 定格在最后一帧：结尾三个元素留在画面上
+      renderAt(Math.max(0, duration() - 0.02));
+      $('fill').style.width = '100%';
+      $('timeText').textContent = fmt(duration()) + ' / ' + fmt(duration());
+      return;
+    }
+    renderAt(next);
+    state.rafId = requestAnimationFrame(loop);
+  }
+
+  function play() {
+    if (!state.script) { toast('请先生成口播稿'); return; }
+    if (state.playing) return;
+    if (state.currentTime >= duration() - 0.02) {
+      clearStage();
+      state.captionSeg = -99;
+      state.stripSeg = -999;
+      state.curWord = -1;
+      state.currentTime = 0;
+      renderAt(0);
+    }
+    // 配音开启时从句子开头念，避免“音频重头、字幕却在中段”的错位
+    if (state.voiceOn && ttsAvailable()) {
+      var si = segIndexAt(state.currentTime);
+      if (si >= 0) {
+        var seg = state.script.segments[si];
+        if (state.currentTime - seg.t0 > 0.15) {
+          state.currentTime = seg.t0;
+          renderAt(seg.t0);
+        }
+      }
+    }
+
+    state.playing = true;
+    state.lastTs = null;
+    state.spokenSeg = -1;
+    $('btnPlay').textContent = '❚❚';
+    maybeSpeak(segIndexAt(state.currentTime));
+    state.rafId = requestAnimationFrame(loop);
+  }
+
+  function pause() {
+    state.playing = false;
+    if (state.rafId) cancelAnimationFrame(state.rafId);
+    state.rafId = null;
+    state.lastTs = null;
+    stopSpeech();
+    $('btnPlay').textContent = '▶';
+  }
+
+  function resetPlayback() {
+    pause();
+    state.currentTime = 0;
+    state.captionSeg = -99;
+    state.stripSeg = -999;
+    state.curWord = -1;
+    clearStage();
+    $('fill').style.width = '0%';
+    $('timeText').textContent = '00:00 / ' + fmt(duration());
+    $('caption').innerHTML = '';
+    $('wordStrip').innerHTML = '';
+    document.querySelectorAll('#timeline .tl-dot').forEach(function (d) { d.classList.remove('now'); });
+  }
+
+  /* =========================================================================
+     10. 生成：需求 → 口播稿 → 词级时间戳
+     ========================================================================= */
+  function enabledEvents() {
+    var out = [];
+    document.querySelectorAll('#eventTags .tag.active').forEach(function (t) { out.push(t.dataset.ev); });
+    return out;
+  }
+
+  function renderScriptList() {
+    var box = $('scriptList');
+    if (!state.script) {
+      box.innerHTML = '<div class="hint">生成后这里会列出每一句口播稿，点一句可以跳到对应画面。</div>';
+      return;
+    }
+    box.innerHTML = state.script.segments.map(function (seg, i) {
+      return '<button class="script-line" type="button" data-i="' + i + '">' +
+        '<span class="sl-t">' + seg.t0.toFixed(1) + 's</span>' +
+        '<span class="sl-x">' + escapeHtml(seg.text) + '</span>' +
+      '</button>';
+    }).join('');
+  }
+
+  async function generate() {
+    if (state.generating) return;
+    var brief = $('scriptInput').value.trim();
+    if (!brief) { toast('先说说你的文案需求'); return; }
+    var enabled = enabledEvents();
+    if (!enabled.length) { toast('至少选一类视觉事件'); return; }
+
+    state.generating = true;
+    pause();
+    resetPlayback();
+    var btn = $('btnGenerate');
+    btn.disabled = true;
+    btn.textContent = '生成中…';
+    setStatus('① 大模型改写口播稿…');
+
+    try {
+      // 真实接口：把 brief 交给大模型，返回结构化脚本
+      var remote = await API.rewrite(brief, enabled);
+      await sleep(620);
+
+      setStatus('② TTS 合成配音 + 词级时间戳…');
+      // 真实接口：把口播文本交给 TTS，返回音频与词级时间戳
+      await API.tts(brief, state.voice);
+      await sleep(760);
+
+      var data = remote ? JSON.parse(JSON.stringify(remote)) : JSON.parse(JSON.stringify(DEMO_SCRIPT));
+
+      data.segments.forEach(function (seg) {
+        seg.events = (seg.events || []).filter(function (e) {
+          var meta = EVENT_META[e.ev];
+          return meta && enabled.indexOf(meta.group) >= 0;
+        });
+        seg.words = (seg.words && seg.words.length) ? seg.words : buildWords(seg);
+        resolveEvents(seg);
+      });
+
+      state.script = data;
+      resetPlayback();
+      renderTimeline();
+      renderScriptList();
+      renderAt(0);
+
+      var points = data.segments.reduce(function (n, s) { return n + s.events.length; }, 0);
+      setStatus('完成：' + data.segments.length + ' 句 · ' + points + ' 个触发点' +
+        (remote ? '' : '（演示数据）'));
+      toast(remote ? '生成完成，点播放预览' : '生成完成（演示数据）');
+    } catch (err) {
+      setStatus('生成失败：' + (err && err.message ? err.message : err));
+      toast('生成失败，请重试');
+    } finally {
+      state.generating = false;
+      btn.disabled = false;
+      btn.textContent = '生成口播稿 + 词级时间戳';
+    }
+  }
+
+  /* =========================================================================
+     11. 导出
+     ========================================================================= */
+  function srtTime(t) {
+    var h = Math.floor(t / 3600);
+    var m = Math.floor((t % 3600) / 60);
+    var s = Math.floor(t % 60);
+    var ms = Math.round((t - Math.floor(t)) * 1000);
+    if (ms === 1000) { ms = 0; s += 1; }
+    return pad(h, 2) + ':' + pad(m, 2) + ':' + pad(s, 2) + ',' + pad(ms, 3);
+  }
+
+  function buildSRT() {
+    return state.script.segments.map(function (seg, i) {
+      return pad(i + 1, 2) + '\n' + srtTime(seg.t0) + ' --> ' + srtTime(seg.t1) + '\n' + seg.text + '\n';
+    }).join('\n');
+  }
+
+  function buildStoryboard() {
+    var s = state.script;
+    return {
+      project: '词镜',
+      createdAt: new Date().toISOString(),
+      template: state.template.id,
+      voice: state.voice,
+      width: 1080,
+      height: 1920,
+      fps: 30,
+      duration: Number(s.duration.toFixed(2)),
+      brief: $('scriptInput').value.trim(),
+      segments: s.segments.map(function (seg) {
+        return {
+          start: Number(seg.t0.toFixed(2)),
+          end: Number(seg.t1.toFixed(2)),
+          text: seg.text,
+          words: seg.words.map(function (w) {
+            return { w: w.text, s: Number(w.t0.toFixed(2)), e: Number(w.t1.toFixed(2)) };
+          }),
+          events: seg.events.map(function (e) {
+            return {
+              type: e.ev,
+              word: e.word || null,
+              at: Number(e.at.toFixed(2)),
+              hideAt: Number((typeof e.hideAt === 'number' ? e.hideAt : seg.t1).toFixed(2)),
+              step: typeof e.step === 'number' ? e.step : 0
+            };
+          })
+        };
+      })
+    };
+  }
+
+  function download(filename, text, mime) {
+    var blob = new Blob([text], { type: mime || 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1200);
+  }
+
+  function exportFilename() {
+    var base = (state.script && state.script.title) ? state.script.title : '成片';
+    var safe = base.replace(/[^\w\u4e00-\u9fa5-]+/g, '_').replace(/^_+|_+$/g, '');
+    return '词镜_' + (safe || '成片').slice(0, 24);
+  }
+
+  function openModal() {
+    $('modal').classList.add('show');
+    $('modal').setAttribute('aria-hidden', 'false');
+  }
+
+  function closeModal() {
+    $('modal').classList.remove('show');
+    $('modal').setAttribute('aria-hidden', 'true');
+  }
+
+  async function runExport() {
+    if (!state.script || state.exporting) return;
+    state.exporting = true;
+    pause();
+
+    var body = $('exportBody');
+    var steps = [
+      '读取分镜与词级时间戳',
+      '打包模板资源（字体 / 图形 / 素材）',
+      'Remotion 逐帧渲染 1080 × 1920',
+      '对齐 TTS 音轨与字幕',
+      '封装 H.264 / MP4'
+    ];
+
+    body.innerHTML =
+      '<div id="expSteps">' + steps.map(function (s, i) {
+        return '<div class="export-step" data-i="' + i + '"><span class="ico">' + (i + 1) + '</span><span>' + s + '</span></div>';
+      }).join('') + '</div>' +
+      '<div class="export-bar"><span id="expFill"></span></div>' +
+      '<div class="hint">演示模式：不会真正编码视频，产物为分镜 JSON 与字幕 SRT。</div>';
+
+    try {
+      var rendered = await API.render(buildStoryboard());
+
+      for (var i = 0; i < steps.length; i++) {
+        await sleep(400);
+        var row = body.querySelector('.export-step[data-i="' + i + '"]');
+        if (row) {
+          row.classList.add('done');
+          row.querySelector('.ico').textContent = '✓';
+        }
+        var fillEl = $('expFill');
+        if (fillEl) fillEl.style.width = Math.round((i + 1) / steps.length * 100) + '%';
+      }
+      await sleep(240);
+
+      var realUrl = rendered && rendered.url ? rendered.url : '';
+      var html =
+        '<div class="export-done">' +
+          '<div class="file">' + escapeHtml(exportFilename()) + '_1080x1920.mp4</div>' +
+          '<div class="meta">' +
+            '模拟产物 · ' + duration().toFixed(1) + 's · 30fps · H.264 · 音轨已对齐<br>' +
+            '真实导出：在 <code>API.render()</code> 里接 Remotion 或云端渲染，把文件地址回填即可。' +
+          '</div>' +
+          '<div class="export-actions">' +
+            (realUrl ? '<a class="btn sm primary" href="' + escapeHtml(realUrl) + '" target="_blank" rel="noreferrer">下载视频</a>' : '') +
+            '<button class="btn sm" type="button" data-act="json">分镜 JSON</button>' +
+            '<button class="btn sm" type="button" data-act="srt">字幕 SRT</button>' +
+            '<button class="btn sm ghost" type="button" data-act="close">完成</button>' +
+          '</div>' +
+        '</div>';
+
+      body.insertAdjacentHTML('beforeend', html);
+    } catch (err) {
+      body.insertAdjacentHTML('beforeend',
+        '<div class="export-done"><div class="meta">渲染失败：' +
+        escapeHtml(String((err && err.message) || err)) + '</div></div>');
+      toast('导出失败，请重试');
+    } finally {
+      state.exporting = false;
+    }
+  }
+
+  function openExport() {
+    if (!state.script) { toast('请先生成口播稿'); return; }
+    openModal();
+    runExport();
+  }
+
+  /* =========================================================================
+     12. 事件绑定
+     ========================================================================= */
+  function bindEvents() {
+    $('btnGenerate').addEventListener('click', generate);
+    $('btnDemo').addEventListener('click', function () {
+      $('scriptInput').value = DEMO_BRIEF;
+      try { localStorage.setItem('cijing.brief', $('scriptInput').value); } catch (e) {}
+      toast('已载入示例文案');
+    });
+
+    $('btnPlay').addEventListener('click', function () {
+      if (state.playing) pause();
+      else play();
+    });
+
+    $('btnVoice').addEventListener('click', function () {
+      if (!ttsAvailable()) { toast('当前浏览器不支持语音合成'); return; }
+      state.voiceOn = !state.voiceOn;
+      syncVoiceButton();
+      if (!state.voiceOn) {
+        stopSpeech();
+        toast('配音已关');
+      } else {
+        state.spokenSeg = -1;
+        if (state.playing) maybeSpeak(segIndexAt(state.currentTime));
+        toast('配音已开（浏览器本地语音）');
+      }
+    });
+
+    $('btnExport').addEventListener('click', openExport);
+    $('btnExport2').addEventListener('click', openExport);
+    $('modalClose').addEventListener('click', closeModal);
+    $('modal').addEventListener('click', function (e) {
+      if (e.target === $('modal')) closeModal();
+    });
+
+    $('modal').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-act]');
+      if (!btn) return;
+      var act = btn.dataset.act;
+      if (act === 'json') {
+        download(exportFilename() + '_storyboard.json',
+          JSON.stringify(buildStoryboard(), null, 2), 'application/json;charset=utf-8');
+        toast('分镜 JSON 已下载');
+      } else if (act === 'srt') {
+        download(exportFilename() + '.srt', buildSRT(), 'text/plain;charset=utf-8');
+        toast('字幕 SRT 已下载');
+      } else if (act === 'close') {
+        closeModal();
+      }
+    });
+
+    $('eventTags').addEventListener('click', function (e) {
+      var tag = e.target.closest('.tag');
+      if (!tag) return;
+      tag.classList.toggle('active');
+      if (state.script) { renderTimeline(); renderAt(state.currentTime); }
+    });
+
+    $('voiceSel').addEventListener('change', function (e) {
+      state.voice = e.target.value;
+      toast('音色：' + e.target.options[e.target.selectedIndex].text);
+    });
+
+    $('timeline').addEventListener('click', function (e) {
+      if (!state.script) return;
+      var item = e.target.closest('.tl-item');
+      if (!item) return;
+      var parts = item.dataset.key.split('-');
+      var seg = state.script.segments[Number(parts[0])];
+      var ev = seg && seg.events[Number(parts[1])];
+      if (!ev) return;
+
+      var nudge = e.target.closest('[data-nudge]');
+      if (nudge) {
+        e.stopPropagation();
+        var d = parseFloat(nudge.dataset.nudge);
+        var limit = (typeof ev.hideAt === 'number' ? ev.hideAt : seg.t1) - 0.1;
+        ev.at = Math.max(seg.t0, Math.min(limit, Math.round((ev.at + d) * 100) / 100));
+        renderTimeline();
+        renderAt(state.currentTime);
+        toast('触发点：' + ev.at.toFixed(2) + 's');
+        return;
+      }
+      pause();
+      seekTo(ev.at + 0.01);
+    });
+
+    $('scriptList').addEventListener('click', function (e) {
+      var line = e.target.closest('.script-line');
+      if (!line || !state.script) return;
+      var seg = state.script.segments[Number(line.dataset.i)];
+      if (!seg) return;
+      pause();
+      seekTo(seg.t0 + 0.01);
+    });
+
+    // 进度条拖拽
+    var bar = $('progress');
+    var dragging = false;
+    function seekFromEvent(e) {
+      if (!state.script) return;
+      var r = bar.getBoundingClientRect();
+      var p = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+      seekTo(p * state.script.duration);
+    }
+    bar.addEventListener('pointerdown', function (e) {
+      if (!state.script) return;
+      dragging = true;
+      pause();
+      try { bar.setPointerCapture(e.pointerId); } catch (err) {}
+      seekFromEvent(e);
+    });
+    bar.addEventListener('pointermove', function (e) { if (dragging) seekFromEvent(e); });
+    bar.addEventListener('pointerup', function () { dragging = false; });
+    bar.addEventListener('pointercancel', function () { dragging = false; });
+
+    // 快捷键
+    document.addEventListener('keydown', function (e) {
+      var tag = document.activeElement ? document.activeElement.tagName : '';
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(tag)) return;
+      if (e.code === 'Space') {
+        e.preventDefault();
+        if (state.playing) pause(); else play();
+      } else if (e.code === 'ArrowLeft') {
+        e.preventDefault();
+        pause();
+        seekTo(state.currentTime - 1);
+      } else if (e.code === 'ArrowRight') {
+        e.preventDefault();
+        pause();
+        seekTo(state.currentTime + 1);
+      }
+    });
+
+    // 记住上次的需求描述
+    try {
+      var saved = localStorage.getItem('cijing.brief');
+      if (saved) $('scriptInput').value = saved;
+    } catch (e) {}
+    $('scriptInput').addEventListener('input', function () {
+      try { localStorage.setItem('cijing.brief', this.value); } catch (e) {}
+    });
+  }
+
+  /* =========================================================================
+     13. 启动
+     ========================================================================= */
+  function init() {
+    buildWave();
+    renderTemplates();
+    renderTimeline();
+    renderScriptList();
+    resetPlayback();
+    bindEvents();
+
+    if (!ttsAvailable()) {
+      state.voiceOn = false;
+      $('btnVoice').disabled = true;
+      $('btnVoice').title = '当前浏览器不支持语音合成，接 API.tts() 即可出声';
+      syncVoiceButton();
+    } else {
+      syncVoiceButton();
+    }
+
+    window.addEventListener('pagehide', stopSpeech);
+
+    // 预热语音列表（部分浏览器首次 getVoices() 为空）
+    if (ttsAvailable() && synth.getVoices) {
+      synth.getVoices();
+      synth.onvoiceschanged = function () { synth.getVoices(); };
+    }
+
+    // 首次打开：预填示例需求并自动生成一次，让预览立刻可看
+    if (!$('scriptInput').value.trim()) {
+      $('scriptInput').value = DEMO_BRIEF;
+      setTimeout(function () { generate(); }, 300);
+    }
+  }
+
+  // 方便在控制台调试 / 接入真实数据
+  window.CIJING = {
+    state: state,
+    api: API,
+    loadScript: function (data) {
+      data.segments.forEach(function (seg) {
+        seg.words = (seg.words && seg.words.length) ? seg.words : buildWords(seg);
+        resolveEvents(seg);
+      });
+      state.script = data;
+      resetPlayback();
+      renderTimeline();
+      renderScriptList();
+      renderAt(0);
+    }
+  };
+
+  init();
+})();
+</script>
+</body>
+</html>

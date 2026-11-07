@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登录 / 注册 · ASTER</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<div class="auth-wrap">
+  <aside class="auth-side">
+    <a class="logo" href="/"><span class="logo-mark"></span> ASTER</a>
+
+    <div>
+      <h1>全球开发者的<br><span class="grad">AI API 网关</span></h1>
+      <p class="lede" style="font-size:15px;max-width:32ch">统一协议、统一账单、统一可观测性。一个端点接入全部主流模型。</p>
+
+      <ul>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>OpenAI 与 Anthropic 双协议原生兼容</span></li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>人民币充值，余额长期有效，可开票</span></li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>每次请求返回费用与上游渠道，账单可核对</span></li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span>默认零内容留存，支持私有化部署</span></li>
+      </ul>
+    </div>
+
+    <p class="tiny dim">© 2026 星芒智能科技有限公司</p>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="auth-switch">
+        <button id="tabLogin" class="on" type="button">登录</button>
+        <button id="tabRegister" type="button">注册</button>
+      </div>
+
+      <h2 id="authTitle">欢迎回来</h2>
+      <p class="sub" id="authSub">登录你的 ASTER 账号，继续管理令牌与用量。</p>
+
+      <div id="authError" class="form-error" style="display:none"></div>
+
+      <form id="authForm" autocomplete="on">
+        <div class="field" id="nameField" style="display:none">
+          <label for="name">昵称</label>
+          <input class="input" id="name" name="name" placeholder="例如：小星" autocomplete="nickname">
+        </div>
+        <div class="field">
+          <label for="email">邮箱</label>
+          <input class="input" id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="password">密码</label>
+          <input class="input" id="password" name="password" type="password" required placeholder="至少 8 位" autocomplete="current-password">
+          <div class="hint" id="pwHint" style="display:none">建议使用 12 位以上、包含大小写与符号的密码。</div>
+        </div>
+        <button class="btn btn-primary btn-block btn-lg" id="submitBtn" type="submit" style="margin-top:6px">登录</button>
+      </form>
+
+      <div class="divider">演示环境</div>
+
+      <div class="card" style="padding:14px;border-radius:10px">
+        <div class="tiny dim" style="margin-bottom:8px">可直接使用预置账号体验完整控制台</div>
+        <div class="mono tiny" style="line-height:1.9">
+          demo@aster.dev / Aster@2026<br>
+          admin@aster.dev / Aster@2026（管理员）
+        </div>
+        <button class="btn btn-sm" id="fillDemo" type="button" style="margin-top:10px">填入演示账号</button>
+      </div>
+
+      <p class="tiny dim" style="margin-top:18px">
+        继续即表示同意 <a href="/docs#terms" style="color:var(--muted)">服务条款</a> 与
+        <a href="/docs#privacy" style="color:var(--muted)">隐私政策</a>。
+      </p>
+    </div>
+  </main>
+</div>
+
+<script src="/assets/auth.js"></script>
+</body>
+</html>

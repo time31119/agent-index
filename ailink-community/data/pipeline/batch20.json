@@ -1,0 +1,1538 @@
+[
+  {
+    "company": "启明医疗",
+    "url": "https://www.venusmedtech.com/",
+    "pages": [
+      {
+        "url": "https://www.venusmedtech.com/",
+        "title": "启明医疗-杭州启明医疗器械股份有限公司是中国领先的经导管心脏瓣膜医疗器械企业。",
+        "chars": 2202,
+        "error": null
+      },
+      {
+        "url": "https://www.venusmedtech.com/index.php/about/aboutus",
+        "title": "公司简介-启明医疗-杭州启明医疗器械股份有限公司是中国领先的经导管心脏瓣膜医疗器械企业。",
+        "chars": 6477,
+        "error": null
+      },
+      {
+        "url": "https://www.venusmedtech.com/index.php/about/joinus",
+        "title": "招贤纳士-启明医疗-杭州启明医疗器械股份有限公司是中国领先的经导管心脏瓣膜医疗器械企业。",
+        "chars": 1764,
+        "error": null
+      },
+      {
+        "url": "https://www.venusmedtech.com/index.php/about/aboutus",
+        "title": "公司简介-启明医疗-杭州启明医疗器械股份有限公司是中国领先的经导管心脏瓣膜医疗器械企业。",
+        "chars": 6477,
+        "error": null
+      },
+      {
+        "url": "https://www.venusmedtech.com/about/privacy-cn",
+        "title": "隐私声明-启明医疗-杭州启明医疗器械股份有限公司是中国领先的经导管心脏瓣膜医疗器械企业。",
+        "chars": 5056,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州启明医疗器械股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.venusmedtech.com/",
+      "description": "中国领先的心脏瓣膜微创介入治疗领域的领军企业，致力于结构性心脏病经导管治疗产品的研发和产业化，已建立覆盖主动脉瓣、肺动脉瓣、二尖瓣、三尖瓣等心脏瓣膜疾病以及手术配套产品的完整管线。",
+      "sector": "医疗器械",
+      "founded_year": 2009,
+      "team_size": "近700人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-87772180",
+      "email": "venus@venusmedtech.com",
+      "address": "浙江省杭州市滨江区江陵路 88 号 2 幢 3 楼 311 室",
+      "products": [
+        "VenusA-Valve",
+        "VenusA-Plus",
+        "VenusA-Pro",
+        "VenusA-Deluxe",
+        "Venus Vitae",
+        "Venus-PowerX",
+        "VenusP-Valve",
+        "G Sheath可扩张导管鞘",
+        "TAV0球囊扩张导管",
+        "Cardiovalve"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "微泰医疗",
+    "url": "https://microtechmd.com/cn/",
+    "pages": [
+      {
+        "url": "https://microtechmd.com/cn/",
+        "title": "首页-微泰医疗器械（杭州）股份有限公司【官网】",
+        "chars": 3942,
+        "error": null
+      },
+      {
+        "url": "https://microtechmd.com/cn/support/contact-us",
+        "title": "联系我们-微泰医疗器械（杭州）股份有限公司【官网】",
+        "chars": 1671,
+        "error": null
+      },
+      {
+        "url": "https://microtechmd.com/cn/about/company-profile",
+        "title": "公司简介-微泰医疗器械（杭州）股份有限公司【官网】",
+        "chars": 2788,
+        "error": null
+      },
+      {
+        "url": "https://microtechmd.com/cn/about/news",
+        "title": "新闻与活动-微泰医疗器械（杭州）股份有限公司【官网】",
+        "chars": 1519,
+        "error": null
+      },
+      {
+        "url": "https://microtechmd.com/cn/investor-relaitons/investor-relations-contacts",
+        "title": "投资者查询-微泰医疗器械（杭州）股份有限公司【官网】",
+        "chars": 937,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "微泰医疗器械（杭州）股份有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "https://microtechmd.com/cn/",
+      "description": "微泰医疗器械（杭州）股份有限公司是糖尿病管理医疗器械领域的先行者，通过对糖尿病治疗和监测技术的创新和整合，成为目前市场上唯一一家同时具备糖尿病领域监测设备+治疗设备+软件平台的全体系产品公司，并且希望通过创新的产品、人工智能和大数据云平台为糖尿病患者提供全病程、全场景的闭环管理服务。",
+      "sector": "糖尿病管理医疗器械",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "4000-831-811/4000-811-831",
+      "email": "ir@microtechmd.com",
+      "address": "浙江省杭州市余杭区仓前街道留泽街108号",
+      "products": [
+        "Equil® 贴敷式智能胰岛素泵",
+        "AiDEX®X 持续葡萄糖监测系统",
+        "AiDEX®动泰 持续葡萄糖监测系统",
+        "倍稳® 系列血糖仪",
+        "人工胰脏",
+        "IVocare 荧光免疫分析仪",
+        "AiDEX API",
+        "检棠® 医生信息化血糖管理系统"
+      ],
+      "customers": [
+        "糖尿病患者",
+        "医疗保健从业者",
+        "医院"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "贝达药业",
+    "url": "https://www.bettapharma.com/",
+    "pages": [
+      {
+        "url": "https://www.bettapharma.com/",
+        "title": "贝达药业股份有限公司【官网】",
+        "chars": 537,
+        "error": null
+      },
+      {
+        "url": "https://www.bettapharma.com/Contact/feedback",
+        "title": "在线留言-贝达药业股份有限公司【官网】",
+        "chars": 676,
+        "error": null
+      },
+      {
+        "url": "https://www.bettapharma.com/About/",
+        "title": "公司简介-贝达药业股份有限公司【官网】",
+        "chars": 2077,
+        "error": null
+      },
+      {
+        "url": "https://www.bettapharma.com/Contact/",
+        "title": "联系方式-贝达药业股份有限公司【官网】",
+        "chars": 672,
+        "error": null
+      },
+      {
+        "url": "https://www.bettapharma.com/About/directors",
+        "title": "董事会-贝达药业股份有限公司【官网】",
+        "chars": 4054,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "贝达药业股份有限公司",
+      "city": "杭州",
+      "district": "临平区",
+      "website": "https://www.bettapharma.com/",
+      "description": "贝达药业股份有限公司成立于2003年，总部位于浙江杭州，是一家由海归高层次人才团队创办的、以自主知识产权创新药物研究和开发为核心，集研发、生产、市场销售于一体的高新制药企业。2016年11月7日，贝达药业在深圳证券交易所挂牌上市，股票代码：300558.SZ。",
+      "sector": "生物医药",
+      "founded_year": 2003,
+      "team_size": "1700余人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86-571-86130357",
+      "email": "betta@bettapharma.com",
+      "address": "浙江省杭州市临平区经济技术开发区兴中路355号",
+      "products": [
+        "凯美纳",
+        "贝美纳",
+        "贝安汀",
+        "赛美纳",
+        "伏美纳",
+        "康美纳",
+        "安瑞泽",
+        "奥福民",
+        "贝泽汀"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "老板电器",
+    "url": "https://www.robam.com/",
+    "pages": [
+      {
+        "url": "https://www.robam.com/",
+        "title": "老板电器官网  你的AI烹饪伙伴",
+        "chars": 681,
+        "error": null
+      },
+      {
+        "url": "https://www.robam.com/about/index",
+        "title": "企业介绍-老板厨房电器官方网站",
+        "chars": 681,
+        "error": null
+      },
+      {
+        "url": "https://www.robam.com/about/globals.html",
+        "title": "全球布局-老板厨房电器官方网站",
+        "chars": 681,
+        "error": null
+      },
+      {
+        "url": "https://www.robam.com/contact/index",
+        "title": "联系我们-老板厨房电器官方网站",
+        "chars": 681,
+        "error": null
+      },
+      {
+        "url": "https://www.robam.com/about/investor",
+        "title": "投资者关系-老板厨房电器官方网站",
+        "chars": 682,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "老板电器",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.robam.com/",
+      "description": "老板电器以47年专研烹饪的专业积淀，首创行业领先的AI数字厨电与“食神”烹饪大模型。在烹饪过程中与每一位创造者一起，实现烹饪自由，享受创造。",
+      "sector": "厨房电器",
+      "founded_year": 1979,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "9510-5855",
+      "email": null,
+      "address": null,
+      "products": [
+        "AI未来厨房解决方案i1 Pro",
+        "AI未来厨房解决方案i7",
+        "AI未来厨房解决方案i1",
+        "盐系套装G2",
+        "盐系套装G1",
+        "玫瑰盐系套装G30",
+        "松露盐系套装G50",
+        "乐龄厨房解決方案",
+        "油烟机",
+        "洗碗机",
+        "燃气灶",
+        "蒸烤微一体机",
+        "消毒柜",
+        "燃气热水器",
+        "薄嵌系列冰箱",
+        "水槽",
+        "净水机"
+      ],
+      "customers": [],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "春风动力",
+    "url": "https://cn.cfmoto.com/",
+    "pages": [
+      {
+        "url": "https://cn.cfmoto.com/",
+        "title": "CFMOTO春风动力中文官网",
+        "chars": 1629,
+        "error": null
+      },
+      {
+        "url": "https://cn.cfmoto.com/contact-us",
+        "title": "联系我们",
+        "chars": 695,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江春风动力股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://cn.cfmoto.com/",
+      "description": "浙江春风动力股份有限公司创立于1989年，总部位于浙江杭州，是一家专注于摩托车、全地形车、新能源两轮车及核心零部件研发、制造与销售的大型国际化企业。",
+      "sector": "摩托车、全地形车、新能源两轮车及核心零部件研发、制造与销售",
+      "founded_year": 1989,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "4001606097",
+      "email": "media@cfmoto.com",
+      "address": null,
+      "products": [
+        "摩托车",
+        "全地形车",
+        "新能源两轮车",
+        "核心零部件",
+        "公务车",
+        "精品改件"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "正元智慧",
+    "url": "https://www.hzsun.com/",
+    "pages": [
+      {
+        "url": "https://www.hzsun.com/",
+        "title": "正元智慧集团股份有限公司-首页",
+        "chars": 9410,
+        "error": null
+      },
+      {
+        "url": "https://www.hzsun.com/about",
+        "title": "正元智慧集团股份有限公司-联系我们",
+        "chars": 4063,
+        "error": null
+      },
+      {
+        "url": "https://www.hzsun.com/about#d1",
+        "title": "正元智慧集团股份有限公司-联系我们",
+        "chars": 4063,
+        "error": null
+      },
+      {
+        "url": "https://www.hzsun.com/about#d2",
+        "title": "正元智慧集团股份有限公司-联系我们",
+        "chars": 4063,
+        "error": null
+      },
+      {
+        "url": "https://www.hzsun.com/about#d3",
+        "title": "正元智慧集团股份有限公司-联系我们",
+        "chars": 4063,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "正元智慧集团股份有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "https://www.hzsun.com",
+      "description": "正元智慧（股票代码：300645）以“用卓越的技术和服务，伴随用户共生共长”为使命，致力于成为国内领先的数字化服务提供商和运营商。公司自1994年创建以来，通过不断地创新技术、产品与解决方案助力教育行业从信息化到数字化的发展变革，为数千家高校、企事业单位及数千万师生、企事业员工带来智慧体验，让智慧之美无处不在。",
+      "sector": "数字化服务",
+      "founded_year": 1994,
+      "team_size": "2000人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-860-6625",
+      "email": "sales@hzsun.com",
+      "address": "浙江省杭州市余杭区舒心路359号正元智慧大厦",
+      "products": [
+        "物联中台",
+        "数据中台",
+        "AI中台",
+        "认证中台",
+        "支付中台",
+        "协同中台",
+        "智付终端 YT241",
+        "智付终端YT237",
+        "智付终端YT235",
+        "智付终端YT223",
+        "智付终端YT224",
+        "易付终端YT215",
+        "易付终端YT216",
+        "易付终端YT213",
+        "易付终端YT214",
+        "视觉结算台S20",
+        "视觉结算台S30",
+        "无感出品备餐台",
+        "安卓自助结算台",
+        "智通终端YT325",
+        "智通终端YT327-L",
+        "智通终端YT328",
+        "智通终端YT327",
+        "闸机嵌入式人脸识别终端BS695G",
+        "智能二维码锁LFWS-A1",
+        "智能卡密锁LFTS-A1",
+        "智能人脸锁LFC-A1",
+        "智能刷卡锁LFS-A1",
+        "智能门锁ZY151系列",
+        "智能门锁ZY152系列",
+        "智能门锁ZY153系列",
+        "智能门锁ZY154系列",
+        "门禁读卡器73系列",
+        "物联网智能网关YT312",
+        "门禁读卡器75系列",
+        "门禁读卡器76系列",
+        "门禁控制器605系列",
+        "门禁控制器S系列",
+        "电梯控制器ZY610P-4L",
+        "智慧云盒YT805",
+        "智慧元盒YT815",
+        "智慧屏YT806",
+        "智慧屏YT804系列",
+        "物联网智控终端YT403系列",
+        "物联网分体水控器YT408系列",
+        "物联网一体水控器YT407系列",
+        "智能验货机",
+        "智慧晨检仪",
+        "智能留样柜"
+      ],
+      "customers": [
+        "杭州市教育局",
+        "宁波市教育局",
+        "湖州市教育局",
+        "衢州市教育局",
+        "绍兴市教育局",
+        "台州市教育局",
+        "温州市教育局",
+        "金华市教育局",
+        "舟山市教育局",
+        "东阳市教育局",
+        "恩施州教育局",
+        "神农架教育局",
+        "青岛即墨区教体局",
+        "宁波市教育考试院",
+        "绍兴市教育发展中心",
+        "江山市教育技术中心",
+        "诸暨市教育技术中心",
+        "普陀区教育技术中心",
+        "杭州市教育发展服务中心",
+        "平湖市教育考试管理中心",
+        "杭州第二中学",
+        "杭州学军中学",
+        "宁波镇海中学",
+        "南京中华中学",
+        "四川省旺苍中学",
+        "湖北省仙桃中学",
+        "山东省济南中学",
+        "舜城新区省示范高中",
+        "武汉市官士墩中学",
+        "山东省济钢高级中学",
+        "东北师范大学附属中学",
+        "南京师范大学附属中学",
+        "华东师范大学希平双语学校",
+        "汉川市第二中学",
+        "郑州市第一中学",
+        "连云港龙盛双语学校",
+        "义乌市实验小学",
+        "拱墅区文澜小学",
+        "常山县实验小学",
+        "浙江省公安厅",
+        "浙江省人民政府",
+        "云南省人民政府",
+        "安徽省人民政府",
+        "江西省人民政府",
+        "河南省人民政府",
+        "哈尔滨市人民政府",
+        "浙江省教育厅",
+        "江西省财政厅",
+        "浙江省证监局",
+        "浙江省税务局",
+        "浙江省监狱管理局",
+        "浙江省人民检察院",
+        "浙江省高级人民法院",
+        "福建省高级人民法院",
+        "浙江省市场监督管理局",
+        "江西省市场监督管理局",
+        "浙江省公安消防总队",
+        "美团",
+        "小红书",
+        "台积电",
+        "樟宜机场",
+        "萧山机场",
+        "恒生银行",
+        "振石控股",
+        "桐昆集团",
+        "胜利油田",
+        "酒钢集团",
+        "赛轮轮胎",
+        "玲珑轮胎",
+        "云南白药",
+        "华海药业",
+        "英科医疗",
+        "海信集团",
+        "九阳股份",
+        "湘雅医院",
+        "浙一医院",
+        "浙二医院",
+        "中国重汽",
+        "上汽通用",
+        "秦山核电站",
+        "中广核集团",
+        "上海科技馆",
+        "国网浙江电力",
+        "国网甘肃电力",
+        "杭州地铁集团",
+        "浙江省交投集团",
+        "中国国家图书馆",
+        "山东省科学院",
+        "上海环球金融中心",
+        "青海大茂奥特莱斯",
+        "中央广播电视总台",
+        "西溪谷蚂蚁链创新中心",
+        "水利部长江水利委员会",
+        "江西省检验检测认证总院",
+        "中国核工业"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "蓝芯科技",
+    "url": "https://www.lanxincn.com/",
+    "pages": [
+      {
+        "url": "https://www.lanxincn.com/",
+        "title": "蓝芯机器人-让机器人“看懂”世界，服务世界",
+        "chars": 2820,
+        "error": null
+      },
+      {
+        "url": "https://www.lanxincn.com/about.html",
+        "title": "蓝芯机器人-让机器人“看懂”世界，服务世界！",
+        "chars": 1981,
+        "error": null
+      },
+      {
+        "url": "https://www.lanxincn.com/contact.html",
+        "title": "蓝芯机器人-让机器人“看懂”世界，服务世界！",
+        "chars": 1502,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州蓝芯机器人技术股份有限公司",
+      "city": "杭州市",
+      "district": "余杭区",
+      "website": "https://www.lanxincn.com/",
+      "description": "杭州蓝芯机器人技术股份有限公司（简称“蓝芯机器人”）成立于2016年。公司致力于通过3D视觉感知技术赋能移动机器人，并以工业移动机器人作为载体，为终端客户提供价值，实现从AI到物理世界的闭环。产品涵盖3D视觉传感器、3D视觉工业移动机器人、AMR核心零部件及智能化软件系统，为制造业提供更安全、更稳定、更智能的智能场内物流解决方案。",
+      "sector": "3D视觉感知与移动机器人",
+      "founded_year": 2016,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-800-6709",
+      "email": "marketing@lanxincn.com",
+      "address": "杭州市余杭区文一西路1818-2号中国人工智能小镇7-802",
+      "products": [
+        "S系列避障相机",
+        "M系列对接相机",
+        "V系列导航相机",
+        "工业AMR",
+        "潜伏机器人",
+        "无人叉取机器人",
+        "移载机器人",
+        "（AMR）核心控制器",
+        "人形机器人底盘",
+        "人形头部模组",
+        "软件平台",
+        "人形机器人VB1",
+        "VB1-I",
+        "VB2",
+        "智能搬运机器人",
+        "无人叉车机器人",
+        "SMT上下料机器人",
+        "印刷机上下料机器人",
+        "点到点搬运机器人"
+      ],
+      "customers": [
+        "华为",
+        "比亚迪"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "微策生物",
+    "url": "https://www.vivachek.com/",
+    "pages": [
+      {
+        "url": "https://www.vivachek.com/",
+        "title": "Home | VivaChek",
+        "chars": 1642,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "微策生物",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.vivachek.com/",
+      "description": "VivaChek Biotech (Hangzhou) Co., Ltd is a high-tech enterprise located in Hangzhou China. Since its establishment in August 2013, it has been specializing in the research and development, production and sales of POCT products.",
+      "sector": "POCT",
+      "founded_year": 2013,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "blood glucose monitoring systems",
+        "multi-function monitoring systems",
+        "professional use glucose monitoring system",
+        "total solution for wireless data connectivity",
+        "nebulizers",
+        "blood pressure monitoring systems",
+        "thermometers",
+        "urine reagent test strips",
+        "urine analyzers",
+        "hand held devices for the measurement of cholesterol, coagulation and hemoglobin"
+      ],
+      "customers": [
+        "diabetic patients"
+      ],
+      "confidence": 0.8
+    },
+    "error": null
+  },
+  {
+    "company": "迪安诊断",
+    "url": "https://www.dazd.cn/",
+    "pages": [
+      {
+        "url": "https://www.dazd.cn/",
+        "title": "迪安诊断",
+        "chars": 2626,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/index.html",
+        "title": "迪安诊断",
+        "chars": 3093,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/development.html",
+        "title": "迪安诊断",
+        "chars": 1219,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/quality.html",
+        "title": "迪安诊断",
+        "chars": 1120,
+        "error": null
+      },
+      {
+        "url": "https://www.dazd.cn/home/aboutus/culture.html",
+        "title": "迪安诊断",
+        "chars": 1254,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "迪安诊断技术集团股份有限公司",
+      "city": null,
+      "district": null,
+      "website": "https://www.dazd.cn/",
+      "description": "以第三方诊断服务为核心业务，致力提供医学诊断整体化解决方案。业务涵盖医学诊断服务、诊断技术研发、诊断产品生产及营销、司法鉴定、健康管理、冷链物流等领域。",
+      "sector": "医学诊断服务",
+      "founded_year": 1996,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-711-8000",
+      "email": null,
+      "address": null,
+      "products": [
+        "医学诊断服务",
+        "诊断技术研发",
+        "诊断产品生产及营销",
+        "司法鉴定",
+        "健康管理",
+        "冷链物流",
+        "迪安生物",
+        "凯莱谱",
+        "迪谱诊断"
+      ],
+      "customers": [
+        "医疗机构"
+      ],
+      "confidence": 0
+    },
+    "error": null
+  },
+  {
+    "company": "士兰微",
+    "url": "https://www.silan.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.silan.com.cn/",
+        "title": "杭州士兰微电子股份有限公司-杭州士兰微电子中英文官网",
+        "chars": 6686,
+        "error": null
+      },
+      {
+        "url": "https://www.silan.com.cn/index.php/about.html",
+        "title": "公司介绍-士兰微电子中文官网",
+        "chars": 4706,
+        "error": null
+      },
+      {
+        "url": "https://www.silan.com.cn/index.php/about/social.html",
+        "title": "社会招聘-士兰微电子中文官网",
+        "chars": 3042,
+        "error": null
+      },
+      {
+        "url": "https://www.silan.com.cn/index.php/about/join.html",
+        "title": "加入士兰微-士兰微电子中文官网",
+        "chars": 2998,
+        "error": null
+      },
+      {
+        "url": "https://www.silan.com.cn/index.php/about/post.html",
+        "title": "校招岗位-士兰微电子中文官网",
+        "chars": 3024,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州士兰微电子股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.silan.com.cn/",
+      "description": "杭州士兰微电子股份有限公司（600460）坐落于杭州高新技术产业开发区，是专业从事集成电路芯片设计以及半导体微电子相关产品生产的高新技术企业。公司成立于1997年9月，总部在中国杭州。2003年3月公司股票在上海证券交易所挂牌交易，是第一家在中国境内上市的集成电路芯片设计企业。士兰微电子已成为国内规模最大的集成电路芯片设计与制造一体（IDM）的企业之一。",
+      "sector": "半导体",
+      "founded_year": 1997,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-88210880",
+      "email": null,
+      "address": "杭州市黄姑山路4号",
+      "products": [
+        "LVMOS",
+        "HVMOS",
+        "IGBT",
+        "SiC",
+        "Diode",
+        "IPM智能功率模块",
+        "IGBT及其他功率模块",
+        "AC-DC电路",
+        "快充电路",
+        "DC-DC电路",
+        "LED照明驱动电路",
+        "栅极驱动集成电路",
+        "MEMS传感器电路",
+        "MCU电路",
+        "数字音视频电路",
+        "专用ASIC电路",
+        "LED芯片",
+        "智能功率开关",
+        "低压电机驱动"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "国芯科技",
+    "url": "https://www.nationalchip.com/",
+    "pages": [
+      {
+        "url": "https://www.nationalchip.com/",
+        "title": "杭州国芯微电子股份有限公司",
+        "chars": 381,
+        "error": null
+      },
+      {
+        "url": "https://www.nationalchip.com/index.php/about",
+        "title": "杭州国芯微电子股份有限公司-关于我们",
+        "chars": 1238,
+        "error": null
+      },
+      {
+        "url": "https://www.nationalchip.com/index.php/about/agent",
+        "title": "杭州国芯微电子股份有限公司-合作伙伴",
+        "chars": 326,
+        "error": null
+      },
+      {
+        "url": "https://www.nationalchip.com/index.php/about/contact ",
+        "title": "",
+        "chars": 0,
+        "error": "Remote end closed connection without response; curl failed: curl: (3) URL rejected: Malformed input to a URL function\r\n"
+      }
+    ],
+    "extracted": {
+      "name": "杭州国芯微电子股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.nationalchip.com/",
+      "description": "公司专注于数字电视及物联网人工智能领域的芯片设计和系统方案开发。公司开发的数字电视芯片产品已遍布全球，是全球领先的机顶盒芯片供应商。同时公司深耕人工智能领域，率先推出多款面向物联网的人工智能芯片，覆盖家庭、车载和穿戴场景，拥有自主研发的神经网络处理器、指令集及编译器等核心技术。",
+      "sector": "芯片设计",
+      "founded_year": 2001,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-88156080",
+      "email": null,
+      "address": "杭州文三路90号东部软件园科技大厦5层",
+      "products": [
+        "数字电视芯片",
+        "机顶盒芯片",
+        "人工智能芯片",
+        "GX8008C 智能语音前端芯片",
+        "Canopus芯片"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "广立微",
+    "url": "https://www.semitronix.com/",
+    "pages": [
+      {
+        "url": "https://www.semitronix.com/",
+        "title": "广立微电子 - EDA|成品率提升|WAT|测试芯片|大数据分析平台",
+        "chars": 3067,
+        "error": null
+      },
+      {
+        "url": "https://www.semitronix.com/about/",
+        "title": "关于我们 | 广立微",
+        "chars": 3794,
+        "error": null
+      },
+      {
+        "url": "https://www.semitronix.com/about/#intro",
+        "title": "关于我们 | 广立微",
+        "chars": 3794,
+        "error": null
+      },
+      {
+        "url": "https://www.semitronix.com/about/#culture",
+        "title": "关于我们 | 广立微",
+        "chars": 3794,
+        "error": null
+      },
+      {
+        "url": "https://www.semitronix.com/about/#history",
+        "title": "关于我们 | 广立微",
+        "chars": 3794,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州广立微电子股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.semitronix.com/",
+      "description": "杭州广立微电子股份有限公司是领先的集成电路EDA软件与晶圆级电性测试设备供应商，公司专注于芯片成品率提升和电性测试快速监控技术，是国内外多家大型集成电路制造与设计企业的重要合作伙伴。公司提供EDA软件、PDA软件、大数据分析软件、电路IP、WAT电性测试设备以及与芯片成品率提升技术相结合的整套解决方案，在集成电路设计到量产的整个产品周期内实现芯片性能、成品率、稳定性的提升，成功案例覆盖多个集成电路工艺节点。",
+      "sector": "集成电路EDA软件与晶圆级电性测试设备",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "SmtCell",
+        "TCMagic",
+        "ATCompiler",
+        "Addressable IP",
+        "ICSpider",
+        "Dense Array",
+        "HDYS",
+        "DE-G",
+        "DE-YMS",
+        "DE-DMS",
+        "INF-AI",
+        "INF-ADC",
+        "INF-WPA",
+        "DE-RF",
+        "DE-FDC",
+        "DE-SPC",
+        "DE-Alarm",
+        "DE-iCASE",
+        "DE-DN",
+        "SemiMind",
+        "DE-FBM",
+        "INF-TPC",
+        "QuickRoot",
+        "AutoInk",
+        "INF-iMetrology",
+        "AI DE-G",
+        "SemiAgent",
+        "AI-YMS",
+        "CMPEXP",
+        "Virtual Yield",
+        "PatternScan",
+        "LayoutVision",
+        "LayoutInsight",
+        "QuanTest",
+        "QuanTest-YAD",
+        "QuanTest-SiliconVision",
+        "Next-Gen Digital Pattern Studio（NPS）",
+        "Agentic DFT",
+        "晶圆级WAT测试设备",
+        "晶圆级WLR测试设备",
+        "工艺开发测试设备",
+        "广立微晶圆级老化测试系统",
+        "成品率提升服务（Yield Ramp Service)",
+        "DFT 设计服务 （DFT Design Service）",
+        "LayoutVision Lite",
+        "YMS Lite一体机"
+      ],
+      "customers": [
+        "格科微"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "税友软件",
+    "url": "https://www.servyou.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.servyou.com.cn/",
+        "title": "税友软件集团股份有限公司",
+        "chars": 1698,
+        "error": null
+      },
+      {
+        "url": "https://www.servyou.com.cn/About",
+        "title": "关于我们-税友软件集团股份有限公司",
+        "chars": 3492,
+        "error": null
+      },
+      {
+        "url": "https://www.servyou.com.cn/About#toptar",
+        "title": "关于我们-税友软件集团股份有限公司",
+        "chars": 3492,
+        "error": null
+      },
+      {
+        "url": "https://www.servyou.com.cn/About#desirtar",
+        "title": "关于我们-税友软件集团股份有限公司",
+        "chars": 3492,
+        "error": null
+      },
+      {
+        "url": "https://www.servyou.com.cn/About#devltar",
+        "title": "关于我们-税友软件集团股份有限公司",
+        "chars": 3492,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "税友软件集团股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.servyou.com.cn/",
+      "description": "国内领先的财税信息化综合服务提供商，为税务机关提供税务系统开发与运维，以亿企赢品牌为纳税企业和财税中介提供互联网财税综合服务。",
+      "sector": "财税信息化",
+      "founded_year": 1999,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-56688188",
+      "email": null,
+      "address": "杭州市滨江区浦沿街道西浦路1015号",
+      "products": [
+        "智慧电子税务局",
+        "自然人税收管理",
+        "社保费征管与缴费系统",
+        "税务大数据平台",
+        "风险管理系统",
+        "纳税信用管理系统",
+        "稽查指挥平台",
+        "大企业税务审计平台",
+        "亿企财税",
+        "亿企代账",
+        "亿企PTS",
+        "亿企GTS",
+        "亿企政务",
+        "亿企学会",
+        "亿企咨询"
+      ],
+      "customers": [
+        "税务机关",
+        "纳税企业",
+        "财税中介"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "宏华数科",
+    "url": "https://www.atexco.com/",
+    "pages": [
+      {
+        "url": "https://en.atexco.com/",
+        "title": "Atexco",
+        "chars": 3018,
+        "error": null
+      },
+      {
+        "url": "https://en.atexco.com/contact",
+        "title": "Atexco - Contact Us",
+        "chars": 1712,
+        "error": null
+      },
+      {
+        "url": "https://en.atexco.com/about-us",
+        "title": "Atexco - About Us",
+        "chars": 2736,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "Hangzhou Honghua Digital Technology Stock Co., Ltd",
+      "city": "Hangzhou",
+      "district": "Binjiang District",
+      "website": "https://en.atexco.com/",
+      "description": "Global leader in digital printing equipment, committed to advancing the digital transformation of the printing industry with a focus on environmental sustainability.",
+      "sector": "digital printing equipment",
+      "founded_year": 1992,
+      "team_size": "over 1,000 people",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "+86 5718673 1907",
+      "email": "textile@atexco.cn, info@atexco.cn",
+      "address": "No.3911, Binsheng Road, Binjiang District, Hangzhou, China",
+      "products": [
+        "Vega x1(ix1)",
+        "Vega x3(ix3)",
+        "Vega x5(ix5)",
+        "Vega 8000DI",
+        "Vega 9000DI",
+        "Vega Vision",
+        "VegaOne Hybrid",
+        "Model X plus",
+        "Model H",
+        "Eco Print",
+        "Vega One",
+        "WebMaster",
+        "VegaPress",
+        "VegaPress Mini",
+        "Decor-Y",
+        "Reactive Ink",
+        "Sublimation Ink",
+        "Disperse Ink",
+        "Pigment Ink",
+        "Acid Ink",
+        "Reactive Dyes"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "远方信息",
+    "url": "https://www.everfine.cn/",
+    "pages": [
+      {
+        "url": "https://www.everfine.cn/",
+        "title": "杭州远方光电信息股份有限公司",
+        "chars": 42821,
+        "error": null
+      },
+      {
+        "url": "https://www.everfine.cn/pro_desc_484.html",
+        "title": "激光光束尺寸分析仪（激光光斑分析仪）|产品中心|杭州远方光电信息股份有限公司",
+        "chars": 43071,
+        "error": null
+      },
+      {
+        "url": "https://www.everfine.cn/pro_desc_494.html",
+        "title": "激光光束尺寸分析仪（激光光斑分析仪）|产品中心|杭州远方光电信息股份有限公司",
+        "chars": 43076,
+        "error": null
+      },
+      {
+        "url": "https://www.everfine.cn/about.html",
+        "title": "关于我们|杭州远方光电信息股份有限公司",
+        "chars": 43831,
+        "error": null
+      },
+      {
+        "url": "https://www.everfine.cn/about.html#d1",
+        "title": "关于我们|杭州远方光电信息股份有限公司",
+        "chars": 43831,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州远方光电信息股份有限公司",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.everfine.cn/",
+      "description": "杭州远方光电信息股份有限公司（股票代码：300306，简称“远方信息”）是智能检测识别信息技术和服务提供商，布局涉及光电检测、核磁共振、红外紫外、生物识别、基因检测诊断等专业，拥有自主核心技术，广泛服务于工业、交通、金融、军工、公共、医疗等领域。拥有专利150余项，包括中、美、德发明专利50余项。积极参与国际标准化活动，主导或参与了40余项技术规范的制修订。",
+      "sector": "智能检测识别信息技术和服务",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "LED光色电综合性能测量系统",
+        "LED光强角度测量系统",
+        "LED近场分布测量",
+        "LED加速老化试验及寿命测量系统",
+        "LED热学（结温、热阻）测量系统",
+        "LED光辐射安全测量（IEC62471测量）系统",
+        "LED近场分布光度计",
+        "电磁兼容（EMC）试验系统",
+        "在线测量系统",
+        "配光性能测量系统",
+        "零电压开启光源启动/上升时间测量系统",
+        "光源频闪测量系统",
+        "植物灯手持式测量设备",
+        "植物灯光色电测量系统",
+        "植物光子通量密度分布测量系统",
+        "光量子传感器",
+        "荧光粉及荧光材料测试仪",
+        "CX系列成像（彩色）亮度计",
+        "SRC系列光谱彩色亮度计",
+        "MAT系列汽车光源和氛围灯在线测量系统",
+        "HUD系列抬头显示器光学特性测量系统",
+        "紫外光源的辐照度测量系统",
+        "紫外LED及光源光谱辐通量测量系统",
+        "紫外光源辐射强度分布测量系统",
+        "紫外检定装置",
+        "准分子灯测量系统",
+        "红外辐射照度计",
+        "红外光谱仪",
+        "红外LED及模组光色电测量系统",
+        "红外LED及模组辐射强度和辐射通量测量系统",
+        "VCSEL光电测量分析系统",
+        "VCSEL辐射角分布测量系统",
+        "VCSEL近场特性分析仪",
+        "VCSEL远场分布快速直测仪",
+        "光功率计",
+        "VCSEL光电性能自动在线测量系统",
+        "电功率分析仪",
+        "数字功率计",
+        "可编程交直流电源",
+        "综合测试系统",
+        "激光光束尺寸分析仪（激光光斑分析仪）"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "大立科技",
+    "url": "https://www.dali-tech.com/",
+    "pages": [
+      {
+        "url": "https://www.dali-tech.com/",
+        "title": "大立科技 - 专注红外三十年 - 专业红外热像仪,红外热成像,红外测温仪,人体测温仪厂家",
+        "chars": 2370,
+        "error": null
+      },
+      {
+        "url": "https://www.dali-tech.com/about",
+        "title": "公司简介 - 专业红外热像仪,红外热成像,红外测温仪,人体测温仪厂家",
+        "chars": 3644,
+        "error": null
+      },
+      {
+        "url": "https://www.dali-tech.com/contact",
+        "title": "联系我们 - 专业红外热像仪,红外热成像,红外测温仪,人体测温仪厂家",
+        "chars": 2409,
+        "error": null
+      },
+      {
+        "url": "https://www.dali-tech.com/about#Abo",
+        "title": "公司简介 - 专业红外热像仪,红外热成像,红外测温仪,人体测温仪厂家",
+        "chars": 3644,
+        "error": null
+      },
+      {
+        "url": "https://www.dali-tech.com/about#Phi",
+        "title": "公司简介 - 专业红外热像仪,红外热成像,红外测温仪,人体测温仪厂家",
+        "chars": 3644,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "浙江大立科技股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.dali-tech.com/",
+      "description": "浙江大立科技股份有限公司前身为1984年成立的浙江省测试技术研究所，2001年完成改制，2008年2月在深圳证券交易所挂牌上市（股票代码002214）。公司专业从事红外核心器件、红外热成像整机、光电惯性导航及复杂光电系统研制，是国内少数拥有完全自主知识产权、实现全产业链布局的国家高新技术企业，并获工信部专精特新\"小巨人\"企业认定。",
+      "sector": "红外热成像",
+      "founded_year": 1984,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-887-1897",
+      "email": "market@dali-tech.com",
+      "address": "浙江省杭州市滨江区滨康路639号",
+      "products": [
+        "非制冷焦平面探测器",
+        "热像仪机芯模组",
+        "手持测温型热像仪",
+        "红外望远镜",
+        "在线测温型热像仪",
+        "在线监控型热像仪",
+        "黑体标定设备",
+        "工业巡检机器人",
+        "车载型红外热像仪"
+      ],
+      "customers": [],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "乒乓智能",
+    "url": "https://www.pingpongx.com/",
+    "pages": [
+      {
+        "url": "https://www.pingpongx.com/global",
+        "title": "PingPong Payments: Cross-Border Payment Infrastructure",
+        "chars": 7567,
+        "error": null
+      },
+      {
+        "url": "https://www.pingpongx.com/global/contact",
+        "title": "Contact PingPong Payments | Sales, Support and Partnerships",
+        "chars": 25364,
+        "error": null
+      },
+      {
+        "url": "https://www.pingpongx.com/global/about",
+        "title": "About PingPong | Global Payments Company",
+        "chars": 5560,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "乒乓智能",
+      "city": "杭州",
+      "district": null,
+      "website": "https://www.pingpongx.com/global",
+      "description": "PingPong is payment infrastructure for global businesses: global accounts, payouts, FX, checkout and APIs on one platform, across 200+ markets and regions.",
+      "sector": "跨境支付",
+      "founded_year": 2015,
+      "team_size": "1700+ Employees",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": null,
+      "email": null,
+      "address": null,
+      "products": [
+        "Global Accounts",
+        "Global Payouts",
+        "FX",
+        "Checkout",
+        "Get a Card",
+        "Platform API",
+        "Managed Accounts",
+        "Embedded FX",
+        "Card Issuing",
+        "Checkout API"
+      ],
+      "customers": [
+        "E-commerce Sellers",
+        "Travel",
+        "Marketplace",
+        "Digital Services",
+        "Logistics",
+        "Offline Retail",
+        "Wholesale and Trades",
+        "Cross-border Services",
+        "AI Enterprise"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "明度智云",
+    "url": "https://www.mingdutech.com/",
+    "pages": [
+      {
+        "url": "https://www.mingdutech.com/",
+        "title": "明度（浙江）数智科技股份有限公司",
+        "chars": 1426,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "明度（浙江）数智科技股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.mingdutech.com/",
+      "description": "生命科学领域数智未来引领者，提供AI平台Atlas及端到端场景化应用，贯穿药物研发、制造、监管注册及商业化。",
+      "sector": "生命科学数智化",
+      "founded_year": null,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "400-600-9163",
+      "email": "mingdu@mingdutech.com",
+      "address": "杭州市滨江区建业路599号华业发展中心",
+      "products": [
+        "AI平台Atlas",
+        "APPs&Agents",
+        "智慧研发",
+        "智慧质量",
+        "智慧生产",
+        "智能体矩阵",
+        "数智工厂",
+        "供应链控制塔",
+        "先进疗法智慧追溯"
+      ],
+      "customers": [
+        "复宏汉霖",
+        "人福医药集团"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "鸿泉物联",
+    "url": "https://www.hopechart.com/",
+    "pages": [
+      {
+        "url": "https://www.hopechart.com/",
+        "title": "杭州鸿泉物联网技术股份有限公司",
+        "chars": 1748,
+        "error": null
+      },
+      {
+        "url": "https://hopechart.com/contact.html",
+        "title": "杭州鸿泉物联网技术股份有限公司-杭州鸿泉物联网技术股份有限公司",
+        "chars": 1116,
+        "error": null
+      },
+      {
+        "url": "https://www.hopechart.com/about",
+        "title": "杭州鸿泉物联网技术股份有限公司-杭州鸿泉物联网技术股份有限公司",
+        "chars": 1980,
+        "error": null
+      },
+      {
+        "url": "https://www.hopechart.com/about.html",
+        "title": "杭州鸿泉物联网技术股份有限公司-杭州鸿泉物联网技术股份有限公司",
+        "chars": 1980,
+        "error": null
+      },
+      {
+        "url": "https://www.hopechart.com/contact.html",
+        "title": "杭州鸿泉物联网技术股份有限公司-杭州鸿泉物联网技术股份有限公司",
+        "chars": 1116,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "杭州鸿泉物联网技术股份有限公司",
+      "city": "杭州市",
+      "district": "滨江区",
+      "website": "https://www.hopechart.com/",
+      "description": "利用人工智能和大数据技术，提供增强驾驶和辅助驾驶系统，优化交通运输全产业链的国家级高新技术企业",
+      "sector": "商用车智能网联",
+      "founded_year": 2009,
+      "team_size": "700多人",
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-88963816",
+      "email": "hr@hopechart.com",
+      "address": "浙江省杭州市滨江区启智街35号",
+      "products": [
+        "【斑马】行驶记录仪",
+        "【灵狐】T-BOX",
+        "【孔雀】智能座舱",
+        "【章鱼】控制器",
+        "【喜鹊】仪表",
+        "OTA车联网系统",
+        "新能源车联网系统",
+        "智能渣土车车联网系统",
+        "车队数字化运营服务",
+        "摩贩（MFAN）"
+      ],
+      "customers": [
+        "中国重汽集团"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  },
+  {
+    "company": "安恒信息",
+    "url": "https://www.dbappsecurity.com.cn/",
+    "pages": [
+      {
+        "url": "https://www.dbappsecurity.com.cn/",
+        "title": "安恒信息-数字安全和数据要素领军企业",
+        "chars": 9632,
+        "error": null
+      },
+      {
+        "url": "https://www.dbappsecurity.com.cn/about/",
+        "title": "安恒信息-数字安全和数据要素领军企业",
+        "chars": 9509,
+        "error": null
+      },
+      {
+        "url": "https://www.dbappsecurity.com.cn/about/contact.html",
+        "title": "安恒信息-数字安全和数据要素领军企业",
+        "chars": 11379,
+        "error": null
+      },
+      {
+        "url": "https://www.dbappsecurity.com.cn/about/report.html",
+        "title": "安恒信息-数字安全和数据要素领军企业",
+        "chars": 7727,
+        "error": null
+      },
+      {
+        "url": "https://www.dbappsecurity.com.cn/about/privacy.html",
+        "title": "安恒信息-数字安全和数据要素领军企业",
+        "chars": 13816,
+        "error": null
+      }
+    ],
+    "extracted": {
+      "name": "安恒信息",
+      "city": "杭州",
+      "district": "滨江区",
+      "website": "https://www.dbappsecurity.com.cn/",
+      "description": "安恒信息是一家AI引领的数字安全和数据要素领军企业，入选科创板创新力30强，以DAS（数据保护和利用、AI、安全服务）为核心战略，以安全AI智能体恒脑3.0驱动，为逾10万家政企单位客户提供安全产品及服务。",
+      "sector": "网络安全、数据安全",
+      "founded_year": 2007,
+      "team_size": null,
+      "funding_stage": null,
+      "funding_amount": null,
+      "phone": "0571-88380999",
+      "email": "info@dbappsecurity.com.cn",
+      "address": "浙江省杭州市滨江区西兴街道联慧街188号安恒大厦",
+      "products": [
+        "防火墙",
+        "办公智盾",
+        "EDR",
+        "API安全网关系统",
+        "WAF",
+        "零信任VPN",
+        "数据安全管理平台",
+        "数据分类分级",
+        "数据库安全网关",
+        "API风险监测",
+        "数据防泄漏",
+        "数据脱敏",
+        "网闸",
+        "堡垒机",
+        "数据库审计",
+        "日志审计",
+        "上网行为管理",
+        "智能安全运营平台",
+        "安全分析与管理平台",
+        "安全编排与协同响应管理平台",
+        "网络安全协调指挥平台",
+        "关键信息基础设施安全保卫平台",
+        "智能风险评估系统",
+        "APT攻击预警平台",
+        "XDR安全大脑（AXDR）",
+        "漏洞扫描系统",
+        "资产脆弱性扫描与管理平台(AVM)",
+        "密码服务管理平台",
+        "服务器密码机",
+        "云服务器密码机",
+        "签名验签服务器",
+        "SSL VPN安全网关",
+        "IPsec VPN网关",
+        "明御鉴安网络靶场",
+        "工控靶场",
+        "安全运维靶场",
+        "天池云安全管理平台",
+        "等保一体机",
+        "云原生容器安全管理平台",
+        "安全托管运营服务MSS",
+        "安恒数盾数据安全解决方案",
+        "数由器",
+        "AiLand数据安全岛（TEE）平台",
+        "AiLand数据安全岛（MPC&FL）平台",
+        "数据运河",
+        "数据合规流通数字证书",
+        "ClawdSecbot",
+        "AI智盾",
+        "AI智鉴",
+        "量御后量子VPN安全网关",
+        "量御后量子服务器密码机",
+        "量御后量子签名验签服务器",
+        "量御后量子云服务器密码机",
+        "工业安全管理平台",
+        "工业互联网安全态势感知平台",
+        "工业防火墙",
+        "工控安全监测审计平台",
+        "工业安全隔离与信息交换系统",
+        "工业控制系统安全检查工具箱",
+        "物联网安全监测平台",
+        "物联网安全感知与管理平台",
+        "恒脑安全智能体",
+        "AI安服数字员工"
+      ],
+      "customers": [
+        "政府",
+        "金融",
+        "医疗",
+        "教育",
+        "运营商",
+        "公安",
+        "企业",
+        "能源电力",
+        "交通",
+        "智慧城市"
+      ],
+      "confidence": 0.9
+    },
+    "error": null
+  }
+]

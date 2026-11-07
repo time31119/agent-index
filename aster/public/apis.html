@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API 目录 · 46 家上游模型接入方式｜ASTER</title>
+<meta name="description" content="全球 46 家主要大模型上游的 API 接入目录：代表模型、接入方式、Base URL、鉴权方式、协议兼容性，与《全球大模型与API接入总表》一一对应。">
+<meta name="theme-color" content="#06070b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .dir-hero { padding: 76px 0 36px; }
+  .dir-hero h1 { font-size: clamp(30px, 4.4vw, 54px); margin: 18px 0 16px; }
+  .dir-hero .lede { max-width: 70ch; }
+  .dir-stats { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 30px; }
+  .dir-stats b { display: block; font-size: 26px; letter-spacing: -0.02em; }
+  .dir-stats span { color: var(--muted); font-size: 12.5px; }
+  .dir-section { border-top: 0; padding-top: 10px; }
+  .dir-toolbar { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .dir-toolbar .chips { margin-bottom: 0; }
+  .search {
+    flex: 1; min-width: 240px; padding: 10px 14px; border-radius: 10px;
+    background: var(--panel); border: 1px solid var(--line-strong); color: var(--text); outline: none;
+  }
+  .search::placeholder { color: var(--dim); }
+  .search:focus { border-color: rgba(124, 107, 255, 0.6); box-shadow: 0 0 0 3px rgba(124, 107, 255, 0.12); }
+  .dir-count { font-size: 12px; color: var(--dim); margin-left: auto; white-space: nowrap; }
+  .dir-table { min-width: 1080px; }
+  .dir-table .badge { white-space: nowrap; }
+  .dir-table .col-auth { white-space: nowrap; }
+  table.tbl td.url { max-width: 340px; }
+  .url-cell { display: flex; align-items: center; gap: 8px; }
+  .url-cell code {
+    font-family: var(--mono); font-size: 12px; color: #cfd6e6;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 290px;
+  }
+  .copy-btn {
+    flex: none; width: 24px; height: 24px; border-radius: 6px; cursor: pointer;
+    border: 1px solid var(--line); background: rgba(255, 255, 255, 0.03); color: var(--dim);
+    font-size: 12px; line-height: 1; display: grid; place-items: center;
+  }
+  .copy-btn:hover { color: var(--text); border-color: var(--line-strong); }
+  .copy-btn.done { color: var(--ok); border-color: rgba(52, 227, 164, 0.45); }
+  .vendor-cell b { font-weight: 550; font-size: 13.4px; display: block; white-space: nowrap; }
+  .vendor-cell small { color: var(--dim); font-size: 11.5px; }
+  .tier { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .empty-row { text-align: center; color: var(--dim); padding: 40px 0 !important; }
+  @media (max-width: 760px) {
+    .col-auth, .col-tier { display: none; }
+    .dir-table { min-width: 0; }
+    .url-cell code { max-width: 180px; }
+    .dir-stats { gap: 22px; }
+    .dir-hero h1 { font-size: 30px; }
+    .dir-toolbar .search { min-width: 0; width: 100%; flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/">
+      <span class="logo-mark"></span>
+      ASTER
+    </a>
+    <nav class="nav-links">
+      <a href="/">首页</a>
+      <a href="/#models">模型与价格</a>
+      <a href="/apis">API 目录</a>
+      <a href="/docs">文档</a>
+      <a href="/status">状态</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/login">登录</a>
+      <a class="btn btn-primary btn-sm" href="/register">免费试用</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="dir-hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> API Directory · 2026-11</span>
+    <h1>46 家上游，<span class="grad">一条一条列清楚</span></h1>
+    <p class="lede">
+      每个模型的接入入口、鉴权方式、协议兼容性，与《全球大模型与API接入总表》一一对应。
+      找到你要的模型，复制 Base URL；要统一计费和故障转移，就把它接到 ASTER。
+    </p>
+    <div class="dir-stats">
+      <div><b id="stTotal">46</b><span>上游厂商</span></div>
+      <div><b id="stCn">24</b><span>中国厂商</span></div>
+      <div><b id="stCompat">36</b><span>兼容 OpenAI</span></div>
+      <div><b id="stForms">3</b><span>接入形态</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dir-section">
+  <div class="wrap">
+    <div class="dir-toolbar">
+      <input class="search" id="q" type="search" placeholder="搜索厂商、模型或 Base URL…" aria-label="搜索厂商、模型或 Base URL">
+      <div class="chips" id="regionChips"></div>
+      <span class="dir-count" id="dirCount">加载中…</span>
+    </div>
+
+    <div class="table-wrap">
+      <table class="tbl compact dir-table">
+        <thead>
+          <tr>
+            <th style="min-width:150px">厂商</th>
+            <th style="min-width:180px">代表模型</th>
+            <th style="min-width:150px">接入方式</th>
+            <th style="min-width:300px">Base URL / 入口</th>
+            <th class="col-auth">鉴权</th>
+            <th>兼容</th>
+            <th class="col-tier">定位</th>
+          </tr>
+        </thead>
+        <tbody id="dirRows">
+          <tr><td colspan="7" class="empty-row">正在加载目录…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="tiny dim" style="margin-top:14px;line-height:1.8">
+      数据版本 <span id="dirVersion">2026-11</span>，共 <span id="dirTotal">46</span> 条，与工作簿《全球大模型与API接入总表》逐条对应。
+      表中为各厂公开入口，具体版本、上下文与价格以官网为准；“—”表示无官方公开 API，需第三方托管或自行部署。
+      <a href="/downloads/global-models-api-2026-11.xlsx" style="color:#b9b2ff;text-decoration:underline">下载完整表格（XLSX）</a>
+    </p>
+    <p class="tiny dim" style="margin-top:6px">
+      标「已上架」的厂商已接入 ASTER 统一计费，可直接用同一把 Key 调用；其余条目为接入目录信息，可在控制台「渠道」里自行添加。
+      目录覆盖头部 46 家；400+ 长尾模型可通过 OpenRouter、硅基流动等聚合器接入。
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="/"><span class="logo-mark"></span> ASTER</a>
+        <p class="tiny" style="margin-top:14px;max-width:30ch">全球模型统一网关。为开发者提供稳定、透明、可审计的 AI 接口层。</p>
+      </div>
+      <div>
+        <h4>产品</h4>
+        <a href="/#watch">60 秒看懂</a>
+        <a href="/#models">模型与价格</a>
+        <a href="/apis">API 目录</a>
+        <a href="/status">服务状态</a>
+      </div>
+      <div>
+        <h4>开发者</h4>
+        <a href="/docs#openai">OpenAI 兼容</a>
+        <a href="/docs#anthropic">Anthropic 兼容</a>
+        <a href="/docs#claude-code">Claude Code</a>
+        <a href="/docs#errors">错误码</a>
+      </div>
+      <div>
+        <h4>公司</h4>
+        <a href="/#faq">常见问题</a>
+        <a href="/console">控制台</a>
+        <a href="mailto:support@aster.dev">联系客服</a>
+        <a href="/docs#privacy">隐私政策</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> 星芒智能科技有限公司 · 保留所有权利</span>
+      <span>沪ICP备2026000000号 · 增值电信业务经营许可证（示例）</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/apis.js"></script>
+</body>
+</html>

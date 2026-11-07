@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 620" role="img" aria-label="Bauhaus geometric poster">
+  <defs>
+    <pattern id="b-grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M46 0H0V46" fill="none" stroke="#171717" stroke-opacity=".08" stroke-width=".7"/>
+    </pattern>
+    <filter id="b-grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".055"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="460" height="620" fill="#eee8d9"/>
+  <rect width="460" height="620" fill="url(#b-grid)"/>
+  <path d="M0 0h460v620H0z" fill="none" stroke="#171717" stroke-opacity=".28"/>
+
+  <text x="28" y="43" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="2.6">BAUHAUS</text>
+  <text x="432" y="43" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" text-anchor="end">NO. 01</text>
+
+  <path d="M28 92h404" stroke="#171717" stroke-width="1.4"/>
+
+  <circle cx="304" cy="222" r="118" fill="#d63a2f"/>
+  <path d="M186 222a118 118 0 0 1 236 0z" fill="#171717"/>
+  <rect x="28" y="300" width="138" height="138" fill="#1e3a8a"/>
+  <path d="M186 438l69-138 69 138z" fill="#d8a520"/>
+
+  <g fill="none" stroke="#171717" stroke-width="1.4">
+    <circle cx="174" cy="222" r="146"/>
+    <path d="M28 438h404"/>
+  </g>
+
+  <g>
+    <text x="28" y="502" fill="#171717" font-family="Georgia, 'Times New Roman', serif" font-size="55" font-style="italic" letter-spacing="-3">Geometry</text>
+    <text x="28" y="551" fill="#171717" font-family="Georgia, 'Times New Roman', serif" font-size="55" font-style="italic" letter-spacing="-3">of joy.</text>
+    <text x="28" y="586" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2.2">FORM FOLLOWS FEELING — 1923 / 2026</text>
+  </g>
+  <rect width="460" height="620" filter="url(#b-grain)" opacity=".8"/>
+</svg>

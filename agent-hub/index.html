@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的 Agent 档案馆 · Agent Index</title>
+<meta name="description" content="44 个独立站点，按交易与投研、短剧与视频、行业图谱、AI 产品与硬件、商业与撮合、创意与工具六类归档，可搜索、可筛选。">
+<meta name="theme-color" content="#f6f7f9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Cpath d='M9 9h6v14H9z' fill='%23ffffff'/%3E%3Cpath d='M18 9h5v5h-5z' fill='%23bfdbfe'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css?v=51">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="bar-inner">
+    <a class="brand" href="#">
+      <span class="logo" aria-hidden="true"></span>
+      Agent Index
+    </a>
+    <span class="bar-meta">32 个站点 · 2026</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="hero">
+    <p class="eyebrow">Personal Agent Index · 2026</p>
+    <h1>我的 <em>Agent</em> 档案馆</h1>
+    <p class="lede"><span id="siteCount">44</span> 个独立站点，归成 6 类。搜名字、标签，或直接输入端口号。</p>
+
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16.2 16.2 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input id="searchInput" type="search" autocomplete="off" spellcheck="false"
+             placeholder="搜索站点、标签，或输入端口 8787" aria-label="搜索站点">
+      <span class="key-hint" aria-hidden="true">/</span>
+      <button class="search-clear" id="searchClear" type="button" aria-label="清空搜索" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="tabs" id="tabs" aria-label="按分类筛选"></div>
+  </section>
+
+  <div class="section-head">
+    <h2 class="section-title"><span class="section-bar" id="sectionBar" aria-hidden="true"></span><span id="sectionLabel">全部站点</span></h2>
+    <p class="result-meta" id="resultMeta" aria-live="polite"></p>
+  </div>
+
+  <section class="grid" id="grid" aria-label="站点列表"></section>
+
+  <section class="empty" id="empty" hidden>
+    <h2>没有找到匹配的站点</h2>
+    <p>换个关键词，或者回到全部分类。</p>
+    <button class="btn ghost" type="button" data-reset>清除筛选</button>
+  </section>
+
+  <footer class="footer">
+    <span>整理自 <b>我的Agent.txt</b> · 2026-11-06</span>
+    <span><b>/</b> 搜索 · <b>Esc</b> 关闭或清空</span>
+  </footer>
+
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-bg" data-close></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" tabindex="-1">
+    <button class="modal-close" id="modalClose" type="button" aria-label="关闭详情">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+    <div id="sheetContent"></div>
+  </div>
+</div>
+
+<script src="app.js?v=51"></script>
+</body>
+</html>

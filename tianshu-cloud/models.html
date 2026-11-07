@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>模型广场 — 天枢云 TIANSHU CLOUD</title>
+  <meta name="description" content="天枢云模型广场：GLM、Kimi、Qwen、DeepSeek、豆包、混元、MiniMax、Claude、GPT、Gemini、Grok 等 100+ 模型的统一 API 目录与参考价格。">
+  <meta name="theme-color" content="#06080f">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="模型广场 — 天枢云">
+  <meta property="og:description" content="一个接口，调用 100+ 文本、图像、视频与多模态模型。">
+  <meta property="og:image" content="assets/img/og-cover.svg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add("js");window.setTimeout(function(){if(!window.__TS_OK){document.documentElement.classList.remove("js");}},2500);</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="天枢云首页">
+        <img class="brand-mark" src="assets/img/logo-mark.svg" width="34" height="34" alt="">
+        <span class="brand-text">
+          <span class="brand-name">天枢云</span>
+          <span class="brand-sub">Tianshu Cloud</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="主导航">
+        <a class="nav-link" href="index.html">首页</a>
+        <a class="nav-link is-active" href="models.html">模型广场</a>
+        <a class="nav-link" href="pricing.html">价格</a>
+        <a class="nav-link" href="docs.html">开发文档</a>
+        <a class="nav-link" href="partners.html">渠道合作</a>
+        <a class="nav-link" href="about.html">关于我们</a>
+        <div class="nav-cta">
+          <a class="btn btn-quiet btn-sm" href="https://token.quanxiyun.cloud/console" data-outbound>登录控制台</a>
+          <a class="btn btn-primary btn-sm" href="https://token.quanxiyun.cloud/r/HyicS5" data-outbound>免费注册</a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Model Catalog</p>
+        <h1>模型广场</h1>
+        <p>
+          一个账号，调用全球主流模型。所有模型共用 OpenAI 兼容协议、同一套密钥与账单，
+          切换模型只需修改 <code class="mono">model</code> 字段。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:40px">
+      <div class="container">
+        <div class="callout" style="margin-top:0">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            文本模型展示 <b>¥ / 百万 tokens</b> 的官方基准价折算，实际扣费会叠加实时渠道折扣与汇率，通常低于展示价。
+            图像与视频模型按张 / 按秒计费，单价以控制台为准。本页收录 39 个常用模型，控制台可查看全部模型。价格快照：2026-11-06。
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5" stroke-linecap="round"/></svg>
+            <input id="model-search" type="search" placeholder="搜索模型、厂商或能力，如 代码 / Kimi" aria-label="搜索模型">
+          </div>
+          <div class="pill-group" role="group" aria-label="按类型筛选">
+            <button class="pill is-active" type="button" data-filter="all">全部</button>
+            <button class="pill" type="button" data-filter="text">文本</button>
+            <button class="pill" type="button" data-filter="image">图像</button>
+            <button class="pill" type="button" data-filter="video">视频</button>
+          </div>
+          <span class="filter-count" id="model-count">—</span>
+        </div>
+
+        <div class="model-grid" id="model-grid">
+          <noscript><p class="muted">模型目录需要启用 JavaScript 才能筛选展示。</p></noscript>
+        </div>
+
+        <div class="cta-band" style="margin-top:56px">
+          <h2>没找到需要的模型？</h2>
+          <p>控制台内可查看完整模型列表与实时价格，也可以直接告诉我们你的业务场景。</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://token.quanxiyun.cloud/pricing" data-outbound>查看实时价格</a>
+            <a class="btn btn-ghost" href="about.html#contact">联系商务</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="天枢云首页">
+          <img class="brand-mark" src="assets/img/logo-mark.svg" width="34" height="34" alt="">
+          <span class="brand-text">
+            <span class="brand-name">天枢云</span>
+            <span class="brand-sub">Tianshu Cloud</span>
+          </span>
+        </a>
+        <p>面向企业与开发者的 AI 模型 API 聚合网关。一个接口，接入文本、图像、视频与多模态能力。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="models.html">模型广场</a></li>
+          <li><a href="pricing.html">价格与计费</a></li>
+          <li><a href="docs.html">开发文档</a></li>
+          <li><a href="https://token.quanxiyun.cloud/pricing" data-outbound>实时价格</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>开发者</h4>
+        <ul>
+          <li><a href="docs.html#quickstart">快速开始</a></li>
+          <li><a href="docs.html#auth">鉴权方式</a></li>
+          <li><a href="docs.html#errors">错误码</a></li>
+          <li><a href="docs.html#clients">客户端接入</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>公司</h4>
+        <ul>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="partners.html">渠道合作</a></li>
+          <li><a href="about.html#contact">联系我们</a></li>
+          <li><a href="about.html#compliance">合规与安全</a></li>
+          <li><a href="https://token.quanxiyun.cloud/console" data-outbound>控制台</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 杭州天枢云智科技有限公司</p>
+      <div class="footer-legal">
+        <span>浙ICP备2026XXXXXX号-1（备案中）</span>
+        <span>增值电信业务经营许可证（办理中）</span>
+        <span>模型与算力服务由上游合作平台提供</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/models-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F2EEE5">
+  <meta name="description" content="礼序 LIXU 企业礼品定制所。上传品牌 Logo，在线预览 13 件常用促销品上的真实效果。50 件起订，支持丝印、刺绣、激光雕刻与 UV 彩印。">
+  <title>礼序 LIXU · 企业礼品定制所</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2317382F'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='serif' font-size='30' fill='%23F4EFE4'%3E礼%3C/text%3E%3Ccircle cx='51' cy='13' r='4' fill='%23D9ED8A'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="products.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m0 0L7 9m5-5 5 5M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v12m0 0 5-5m-5 5-5-5M4 20h16"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c.6 6 4 9.4 10 10-6 .6-9.4 4-10 10-.6-6-4-9.4-10-10 6-.6 9.4-4 10-10Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#top" aria-label="礼序 LIXU 首页">
+        <span class="brand-mark" aria-hidden="true">礼</span>
+        <span class="brand-name">礼序<small>LIXU GIFTING STUDIO</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#collection">选品库</a>
+        <a href="#studio">在线定制</a>
+        <a href="#bundles">组合灵感</a>
+        <a href="#process">定制流程</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-button" id="open-quote" type="button" aria-label="打开选品单">
+          <span class="cart-label">选品单</span> <span class="quote-count" id="quote-count" aria-live="polite">0</span>
+        </button>
+        <a class="btn btn--dark header-cta" href="#studio">开始定制 <svg class="icon"><use href="#i-arrow"></use></svg></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span class="kicker-dot"></span> 企业礼赠 · 2026 COLLECTION</p>
+          <h1 id="hero-title">让品牌，<br>被每天<span class="highlight">使用</span>。</h1>
+          <p class="hero-lede">从一只帆布袋，到一套入职礼盒。上传品牌 Logo，在线预览它在 13 件常用促销品上的真实效果。50 件起订，小批量也体面。</p>
+          <div class="hero-actions">
+            <a class="btn btn--dark btn--lg" href="#studio">上传 Logo，立即预览 <svg class="icon"><use href="#i-arrow"></use></svg></a>
+            <a class="text-link" href="#collection">先逛逛选品库 <svg class="icon"><use href="#i-arrow-right"></use></svg></a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>13+</dt><dd>常用礼品品类</dd></div>
+            <div><dt>3 min</dt><dd>看见定制效果</dd></div>
+            <div><dt>50</dt><dd>件即可起订</dd></div>
+          </dl>
+          <p class="hero-footnote"><span class="avatar-stack" aria-hidden="true"><i>N</i><i>M</i><i>A</i></span> 已服务 200+ 成长型企业，把品牌送进日常。</p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-canvas">
+            <div class="hero-blob"></div>
+            <div class="hero-item hero-tote" data-hero-product="tote"></div>
+            <div class="hero-item hero-cap" data-hero-product="cap"></div>
+            <div class="hero-item hero-mug" data-hero-product="mug"></div>
+            <div class="hero-item hero-notebook" data-hero-product="notebook"></div>
+
+            <div class="hero-chip hero-chip--live"><span class="live-dot"></span> LIVE PREVIEW <b>01</b></div>
+            <div class="hero-chip hero-chip--craft">LOGO IN / MAGIC OUT <span>↗</span></div>
+
+            <div class="hero-stamp">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <defs><path id="stamp-path" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
+                <text><textPath href="#stamp-path">UPLOAD · PREVIEW · PRODUCE · </textPath></text>
+              </svg>
+              <b>礼序</b>
+            </div>
+
+            <span class="hero-reg hero-reg--br">+</span>
+            <span class="hero-coord">31°14′N / 121°28′E</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="可定制礼品品类">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>马克杯</span><i>✳</i><span>帆布袋</span><i>✳</i><span>保温杯</span><i>✳</i><span>棒球帽</span><i>✳</i><span>卫衣</span><i>✳</i><span>笔记本</span><i>✳</i><span>折叠伞</span><i>✳</i><span>双肩包</span><i>✳</i><span>充电宝</span><i>✳</i><span>钥匙扣</span><i>✳</i><span>桌垫</span><i>✳</i><span>签字笔</span><i>✳</i>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span>马克杯</span><i>✳</i><span>帆布袋</span><i>✳</i><span>保温杯</span><i>✳</i><span>棒球帽</span><i>✳</i><span>卫衣</span><i>✳</i><span>笔记本</span><i>✳</i><span>折叠伞</span><i>✳</i><span>双肩包</span><i>✳</i><span>充电宝</span><i>✳</i><span>钥匙扣</span><i>✳</i><span>桌垫</span><i>✳</i><span>签字笔</span><i>✳</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <p class="trust-copy reveal">把品牌送进日常的团队，<em>已经超过 200 家。</em></p>
+        <div class="trust-logos reveal" style="--delay:.1s" aria-label="示意客户品牌">
+          <span class="client-mark client-mark--serif">NOVA</span>
+          <span class="client-mark client-mark--wide">MORII</span>
+          <span class="client-mark client-mark--mono">AER°</span>
+          <span class="client-mark client-mark--serif">POLLEN</span>
+          <span class="client-mark client-mark--wide">NORTH/8</span>
+          <span class="client-mark client-mark--mono">STUDIO 8</span>
+        </div>
+        <p class="trust-note">* 示意客户标识，不构成真实合作背书</p>
+      </div>
+    </section>
+
+    <section class="studio-section" id="studio" aria-labelledby="studio-title">
+      <div class="container">
+        <div class="studio-head reveal">
+          <div>
+            <p class="kicker kicker--light">02 / LIVE STUDIO</p>
+            <h2 id="studio-title">Logo 放上去，<br><span class="serif-italic">效果马上出来。</span></h2>
+          </div>
+          <div class="studio-head-aside">
+            <p>不用等设计稿，不用来回改邮件。上传、拖拽、换色，看到的即是打样依据。</p>
+            <p class="privacy-note"><svg class="icon"><use href="#i-lock"></use></svg> 图片仅在你的浏览器本地处理</p>
+          </div>
+        </div>
+
+        <div class="studio-app reveal" style="--delay:.08s">
+          <aside class="studio-panel" aria-label="定制选项">
+            <div class="panel-head">
+              <span>定制设置</span>
+              <span class="live-pill"><i></i> LIVE</span>
+            </div>
+
+            <div class="control-step">
+              <div class="step-title">
+                <span class="step-num">01</span>
+                <div><strong>上传品牌 Logo</strong><small>透明底 PNG 或 SVG 效果最佳</small></div>
+              </div>
+              <label class="dropzone" id="dropzone" for="logo-input">
+                <input class="visually-hidden" id="logo-input" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp">
+                <span class="upload-thumb"><img id="upload-thumb-img" alt=""></span>
+                <span class="upload-copy">
+                  <strong id="upload-title">示例品牌 MONO</strong>
+                  <span id="upload-meta">SVG · 示例文件 · 点击上传你的 Logo</span>
+                </span>
+                <span class="sample-pill" id="sample-pill">示例</span>
+              </label>
+              <div class="upload-tools">
+                <span>PNG / JPG / SVG · ≤ 8MB</span>
+                <button class="text-button" id="use-sample" type="button" hidden>恢复示例</button>
+              </div>
+            </div>
+
+            <div class="control-step">
+              <div class="step-title">
+                <span class="step-num">02</span>
+                <div><strong>产品颜色</strong><small id="color-name">本白 · Natural</small></div>
+              </div>
+              <div class="swatches" id="color-swatches" role="group" aria-label="选择产品颜色"></div>
+            </div>
+
+            <div class="control-step">
+              <div class="step-title">
+                <span class="step-num">03</span>
+                <div><strong>Logo 呈现</strong><small>原色、纯白或单黑</small></div>
+              </div>
+              <div class="finish-tabs" id="finish-tabs" role="group" aria-label="选择 Logo 呈现方式">
+                <button type="button" data-finish="original" aria-pressed="true">原色</button>
+                <button type="button" data-finish="white" aria-pressed="false">纯白</button>
+                <button type="button" data-finish="dark" aria-pressed="false">单黑</button>
+              </div>
+            </div>
+
+            <div class="control-step control-step--last">
+              <div class="step-title">
+                <span class="step-num">04</span>
+                <div><strong>细节微调</strong><small>也可直接拖动画面中的 Logo</small></div>
+              </div>
+              <div class="range-control">
+                <div class="range-label"><label for="logo-size">大小</label><output id="size-output" for="logo-size">100%</output></div>
+                <input id="logo-size" type="range" min="40" max="180" value="100" step="1">
+              </div>
+              <div class="range-control">
+                <div class="range-label"><label for="logo-rotation">旋转</label><output id="rotation-output" for="logo-rotation">0°</output></div>
+                <input id="logo-rotation" type="range" min="-45" max="45" value="0" step="1">
+              </div>
+              <button class="reset-button" id="reset-logo" type="button">
+                <svg class="icon"><use href="#i-arrow-right"></use></svg> 重置位置与大小
+              </button>
+            </div>
+          </aside>
+
+          <div class="studio-main">
+            <div class="studio-toolbar">
+              <div class="current-product">
+                <span class="product-index" id="product-index">01</span>
+                <div><strong id="stage-name">原色帆布袋</strong><span id="stage-craft">12oz 加厚帆布 · 单面丝印</span></div>
+              </div>
+              <div class="toolbar-right">
+                <span class="mockup-tag">REAL-TIME MOCKUP</span>
+                <div class="bg-toggle" role="group" aria-label="预览背景">
+                  <button type="button" data-bg="light" aria-pressed="true">浅色</button>
+                  <button type="button" data-bg="dark" aria-pressed="false">深色</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="stage-wrap">
+              <div class="stage" id="stage">
+                <span class="stage-label">MOCKUP / 01</span>
+                <span class="stage-label stage-label--right">1000 × 1000</span>
+                <div class="stage-art" id="stage-art"></div>
+                <div class="stage-logo" id="stage-logo" role="img" aria-label="你的 Logo 在商品上的预览，可拖动调整位置">
+                  <img id="stage-logo-img" alt="">
+                </div>
+                <div class="stage-hint" id="stage-hint">拖动 Logo 调整位置</div>
+                <span class="crop crop--tl"></span><span class="crop crop--tr"></span><span class="crop crop--bl"></span><span class="crop crop--br"></span>
+              </div>
+              <div class="stage-caption">
+                <span id="stage-caption">12oz 加厚帆布 · 单面丝印</span>
+                <span>效果图仅供参考，实际以打样为准</span>
+              </div>
+            </div>
+
+            <div class="studio-footer">
+              <div class="stage-price">
+                <span>参考价</span>
+                <strong>¥<b id="stage-price">38</b></strong>
+                <small>起 / <span id="stage-moq">50</span> 件</small>
+              </div>
+              <div class="stage-actions">
+                <button class="btn btn--ghost" id="add-quote" type="button"><svg class="icon"><use href="#i-plus"></use></svg> 加入选品单</button>
+                <button class="btn btn--dark" id="download-mockup" type="button"><svg class="icon"><use href="#i-download"></use></svg> 下载效果图</button>
+              </div>
+            </div>
+
+            <div class="product-strip-wrap">
+              <div class="product-strip-head"><span>快速切换产品</span><span id="strip-count">13 款</span></div>
+              <div class="product-strip" id="product-strip" role="list" aria-label="产品快速切换"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker">03 / THE CATALOG</p>
+            <h2 id="collection-title">13 件日常物件，<br><em>件件为 Logo 而生。</em></h2>
+          </div>
+          <div class="section-head-aside">
+            <p>从展会随手礼，到员工入职包。优先选择“会被留下、会被使用”的东西，品牌才有机会被记住。</p>
+            <p class="section-counter"><span id="catalog-count">13</span> 件常备现货 · 均可小批量定制</p>
+          </div>
+        </div>
+
+        <div class="catalog-bar reveal">
+          <div class="filters" id="filters" role="group" aria-label="按场景筛选">
+            <button class="filter" type="button" data-filter="全部" aria-pressed="true">全部</button>
+            <button class="filter" type="button" data-filter="办公" aria-pressed="false">办公</button>
+            <button class="filter" type="button" data-filter="穿戴" aria-pressed="false">穿戴</button>
+            <button class="filter" type="button" data-filter="出行" aria-pressed="false">出行</button>
+            <button class="filter" type="button" data-filter="数码" aria-pressed="false">数码</button>
+            <button class="filter" type="button" data-filter="生活" aria-pressed="false">生活</button>
+          </div>
+          <label class="search-box">
+            <svg class="icon"><use href="#i-search"></use></svg>
+            <input id="catalog-search" type="search" placeholder="搜索礼品 / 材质 / 工艺" autocomplete="off" aria-label="搜索礼品">
+          </label>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+        <div class="catalog-empty" id="catalog-empty" hidden>
+          <span>没有找到匹配的礼品</span>
+          <button class="text-button" id="clear-filters" type="button">清除筛选</button>
+        </div>
+        <p class="catalog-footnote">所有价格含基础单色印刷与标准包装；特殊工艺、数量与交期会影响最终报价。</p>
+      </div>
+    </section>
+
+    <section class="bundles" id="bundles" aria-labelledby="bundles-title">
+      <div class="container">
+        <div class="section-head section-head--compact reveal">
+          <div>
+            <p class="kicker">04 / READY-TO-GO</p>
+            <h2 id="bundles-title">不想一件件挑？<br><em>从组合开始。</em></h2>
+          </div>
+          <div class="section-head-aside">
+            <p>我们按场景配好了三套方案，价格、数量、工艺都替你想过。先载入，再换成你的 Logo。</p>
+          </div>
+        </div>
+        <div class="bundle-grid" id="bundle-grid"></div>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head section-head--compact reveal">
+          <div>
+            <p class="kicker">05 / HOW IT WORKS</p>
+            <h2 id="process-title">从上传，<br><em>到送到手上。</em></h2>
+          </div>
+          <div class="section-head-aside">
+            <p>把复杂的事留给我们。你只需要确认：送给谁、什么时候要、预算多少。</p>
+          </div>
+        </div>
+        <div class="steps reveal">
+          <article class="step">
+            <span class="step-index">01</span>
+            <h3>上传 Logo</h3>
+            <p>支持 PNG、JPG、SVG，透明底最佳。没有矢量文件也能处理。</p>
+            <span class="step-time">1 min</span>
+          </article>
+          <article class="step">
+            <span class="step-index">02</span>
+            <h3>在线预览</h3>
+            <p>换产品、换颜色、调位置。截图就能直接发给老板确认。</p>
+            <span class="step-time">3 min</span>
+          </article>
+          <article class="step">
+            <span class="step-index">03</span>
+            <h3>确认工艺</h3>
+            <p>丝印、刺绣、激光、UV。顾问会根据数量与预算给出建议。</p>
+            <span class="step-time">24 h</span>
+          </article>
+          <article class="step">
+            <span class="step-index">04</span>
+            <h3>打样交付</h3>
+            <p>48 小时出样，确认后 7–15 天交付，全国配送。</p>
+            <span class="step-time">7–15 d</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head section-head--compact reveal">
+          <div>
+            <p class="kicker">06 / WHY LIXU</p>
+            <h2 id="why-title">把“赠品”，<br><em>做成“品牌资产”。</em></h2>
+          </div>
+        </div>
+        <div class="bento-grid reveal">
+          <article class="bento bento--hero">
+            <span class="bento-eyebrow">SMALL BATCH FRIENDLY</span>
+            <div class="bento-big">50<small>件</small></div>
+            <h3>小批量，也值得被认真对待。</h3>
+            <p>没有 1000 件的预算，也能做出不廉价的品牌礼物。50 件起订，不额外收版费。</p>
+            <div class="bento-mark" aria-hidden="true">礼</div>
+          </article>
+          <article class="bento bento--stat">
+            <span class="bento-eyebrow">SAMPLING</span>
+            <strong>48<small>h</small></strong>
+            <p>快速打样<br>确认后再批量</p>
+          </article>
+          <article class="bento bento--stat bento--lime">
+            <span class="bento-eyebrow">CATEGORIES</span>
+            <strong>13<small>+</small></strong>
+            <p>常备品类<br>40+ 种表面工艺</p>
+          </article>
+          <article class="bento bento--quote">
+            <svg class="icon"><use href="#i-spark"></use></svg>
+            <blockquote>“好礼物不是成本，<br>是一次安静的品牌曝光。”</blockquote>
+            <span>— 礼序选品原则</span>
+          </article>
+          <article class="bento bento--wide">
+            <div>
+              <span class="bento-eyebrow">ONE-ON-ONE</span>
+              <h3>一对一礼赠顾问</h3>
+              <p>从选品、预算分配到包装与贺卡，一个人跟到底。不用在三个供应商之间传话。</p>
+            </div>
+            <div class="advisor-tags">
+              <span>选品建议</span><span>预算规划</span><span>包装定制</span><span>全国配送</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <div class="reveal">
+          <p class="kicker">READY WHEN YOU ARE</p>
+          <h2 id="cta-title">下一次见面，<br>带点能被记住的。</h2>
+        </div>
+        <div class="cta-aside reveal" style="--delay:.08s">
+          <p>上传 Logo，先做一张不花钱的效果图。剩下的，交给你的礼赠顾问。</p>
+          <a class="btn btn--dark btn--lg" href="#studio">进入定制工作室 <svg class="icon"><use href="#i-arrow"></use></svg></a>
+          <a class="cta-link" href="#collection">浏览全部 13 件礼品 <svg class="icon"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#top" aria-label="礼序 LIXU 首页">
+          <span class="brand-mark" aria-hidden="true">礼</span>
+          <span class="brand-name">礼序<small>LIXU GIFTING STUDIO</small></span>
+        </a>
+        <p>把品牌，送进每天的生活里。<br>企业礼品策划 · 定制 · 交付。</p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">选品</span>
+        <a href="#collection">办公用品</a>
+        <a href="#collection">穿戴服饰</a>
+        <a href="#collection">出行户外</a>
+        <a href="#collection">数码生活</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">服务</span>
+        <a href="#studio">在线定制</a>
+        <a href="#bundles">组合方案</a>
+        <a href="#process">定制流程</a>
+        <a href="#contact">企业采购</a>
+      </div>
+      <div class="footer-col footer-col--contact">
+        <span class="footer-label">联系</span>
+        <a href="mailto:hello@lixu.studio">hello@lixu.studio</a>
+        <span>400-000-0000</span>
+        <span>周一至周五 09:00–18:00</span>
+        <span class="footer-city"><svg class="icon"><use href="#i-pin"></use></svg> 上海 · 杭州 · 深圳</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 LIXU GIFTING STUDIO</span>
+      <span>本站为品牌概念演示 · 所有产品与价格为示意</span>
+      <a href="#top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="quote-drawer" id="quote-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+    <div class="drawer-head">
+      <div><span class="kicker">YOUR SELECTION</span><h2 id="drawer-title">选品单 <sup id="drawer-count">0</sup></h2></div>
+      <button class="icon-button" id="close-quote" type="button" aria-label="关闭选品单"><svg class="icon"><use href="#i-close"></use></svg></button>
+    </div>
+    <div class="drawer-scroll" id="drawer-scroll">
+      <div class="quote-items" id="quote-items"></div>
+      <div class="quote-empty" id="quote-empty">
+        <span class="empty-mark">+</span>
+        <h3>还没有选中的礼品</h3>
+        <p>去选品库挑几件，或从组合方案开始。每一件都会带上你刚刚设置的 Logo 与颜色。</p>
+        <button class="btn btn--ghost" id="empty-browse" type="button">去逛逛选品库</button>
+      </div>
+
+      <div class="quote-form-wrap" id="quote-form-wrap" hidden>
+        <div class="quote-summary">
+          <div><span>预估合计</span><strong id="quote-total">¥0</strong></div>
+          <button class="text-button" id="download-quote" type="button">导出清单</button>
+        </div>
+        <p class="quote-disclaimer">预估金额不含特殊工艺、包装与运费，最终以正式报价为准。</p>
+        <form class="quote-form" id="quote-form">
+          <div class="field-row">
+            <label class="field"><span>公司名称 *</span><input name="company" required autocomplete="organization" placeholder="例如：诺瓦科技"></label>
+            <label class="field"><span>联系人 *</span><input name="contact" required autocomplete="name" placeholder="怎么称呼你"></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>手机 / 微信 *</span><input name="phone" required autocomplete="tel" placeholder="方便联系的号码"></label>
+            <label class="field"><span>期望交期</span><input name="date" type="date"></label>
+          </div>
+          <label class="field"><span>补充说明</span><textarea name="note" rows="2" placeholder="预算、数量、使用场景、包装要求……"></textarea></label>
+          <button class="btn btn--dark btn--full" type="submit">提交询价 <svg class="icon"><use href="#i-arrow"></use></svg></button>
+          <p class="demo-note">演示站点：提交后将在本机生成需求单，不会发送到服务器。</p>
+        </form>
+      </div>
+
+      <div class="quote-success" id="quote-success" hidden>
+        <span class="success-mark"><svg class="icon"><use href="#i-check"></use></svg></span>
+        <p class="kicker">REQUEST CREATED</p>
+        <h3>需求单已生成</h3>
+        <p id="success-copy">我们已记录你的选品与联系方式。</p>
+        <div class="success-ref">编号 <strong id="success-ref">LX-000000</strong></div>
+        <p class="demo-note">演示环境：信息仅保存在本机。正式上线后可接入邮件、企业微信或 CRM。</p>
+        <button class="btn btn--ghost" id="success-close" type="button">继续选品</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast-stack" id="toast-stack" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">请开启 JavaScript 以使用 Logo 实时预览与在线选品功能。</div>
+  </noscript>
+</body>
+</html>

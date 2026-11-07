@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>算力市场 — APEX</title>
+<meta name="description" content="B200、H200、MI300X 与边缘 GPU，9 个区域，按秒计费。预留省 42%，现货最高省 65%。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230B0C0E'/%3E%3Cpath d='M12 4.5 19.5 19h-4.2L12 11.2 8.7 19H4.5z' fill='%23F4F2EC'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#08090b">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="APEX 首页">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+      <span class="brand-word">APEX</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="agents.html" data-nav="agents">智能体</a>
+      <a href="compute.html" data-nav="compute">算力</a>
+      <a href="console.html" data-nav="console">控制台</a>
+      <a href="developers.html" data-nav="developers">开发者</a>
+      <a href="blueprint.html" data-nav="blueprint">平台规划</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="搜索（Ctrl K）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+      </button>
+      <a class="nav-signin" href="console.html">登录</a>
+      <a class="btn btn-sm" href="console.html">开始使用</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="agents.html">智能体市场</a>
+  <a href="compute.html">算力市场</a>
+  <a href="console.html">控制台</a>
+  <a href="developers.html">开发者中心</a>
+  <a href="blueprint.html">平台规划</a>
+  <a class="btn btn-block" href="console.html">进入控制台</a>
+</div>
+
+<section class="compute-hero">
+  <div class="wrap">
+    <div class="eyebrow on-dark"><span class="dot-live"></span> COMPUTE MARKET · 实时供给</div>
+    <h1 class="display">算力，像电力一样<br>即取即用。</h1>
+    <p class="lead">从旗舰 B200 到边缘 RTX 4090，9 个区域、6 家供应商。按秒计费，预留省 42%，现货最高省 65%。价格透明到每一度电。</p>
+    <div class="ticker">
+      <span class="ticker-item"><b>H200</b> $3.49/h <span class="up">▲ 2.1%</span></span>
+      <span class="ticker-item"><b>B200</b> $5.99/h <span class="down">▼ 0.8%</span></span>
+      <span class="ticker-item"><b>MI300X</b> $1.99/h <span class="up">▲ 5.4%</span></span>
+      <span class="ticker-item"><b>RTX 4090</b> $0.39/h <span class="down">▼ 1.2%</span></span>
+    </div>
+    <div class="mini-metrics" style="max-width:760px">
+      <div class="mini-metric"><div class="v"><span data-count="210000">210,000</span></div><div class="l">GPU 实时在线</div></div>
+      <div class="mini-metric"><div class="v"><span data-count="99.98" data-decimals="2" data-suffix="%">99.98%</span></div><div class="l">调度成功率</div></div>
+      <div class="mini-metric"><div class="v"><span data-count="38" data-suffix="s">38s</span></div><div class="l">平均冷启动</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="market">
+  <div class="wrap">
+    <div class="region-bar">
+      <span class="label">选择区域</span>
+      <div class="chips" id="regionChips"></div>
+    </div>
+
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> AVAILABLE NOW · 按需价</div>
+        <h2 class="h2">8 种型号，今天就能跑。</h2>
+        <p class="lead">价格为按需实例（未含税），现货价随供给浮动。所有实例含 400G 互联、本地 NVMe 与免费出站流量。</p>
+      </div>
+      <div class="small" style="text-align:right;line-height:1.6">
+        <span class="dot-live" style="display:inline-block;margin-right:6px"></span>供给每 30 秒刷新<br>
+        <span class="mono" style="font-size:10px;color:var(--muted-2)">LAST SYNC 02:31:08 CST</span>
+      </div>
+    </div>
+
+    <div class="gpu-grid" id="gpuGrid"></div>
+
+    <p class="small mt-32" style="max-width:680px">价格按秒计算，最低计费 10 秒。预留实例需承诺 1 / 3 / 12 个月；现货实例可能被回收，回收前 30 秒发出信号，可自动迁移至同区域按需实例。</p>
+  </div>
+</section>
+
+<section class="section band-dark" id="calculator">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot-live"></span> ESTIMATOR</div>
+        <h2 class="h2">先算清楚，<br>再开始跑。</h2>
+      </div>
+      <p class="lead" style="max-width:380px">不需要销售报价。拖动滑块，看到含网络、存储与调度的真实月度成本。</p>
+    </div>
+
+    <div class="calc-wrap" data-reveal>
+      <div>
+        <div class="calc-title">成本估算器</div>
+        <div class="calc-sub">按秒计费 · 无最低消费 · 含 400G 网络与本地存储</div>
+        <div class="calc-fields">
+          <div class="field-row">
+            <div class="field"><label for="calcGpu">GPU 型号</label><select id="calcGpu"></select></div>
+            <div class="field"><label for="calcRegion">区域</label><select id="calcRegion"></select></div>
+          </div>
+          <div class="field">
+            <label for="calcCount">GPU 数量</label>
+            <input type="range" id="calcCount" min="1" max="64" step="1" value="8">
+            <div class="range-meta"><span>1 卡</span><b id="calcCountVal">8 卡</b><span>64 卡</span></div>
+          </div>
+          <div class="field">
+            <label for="calcHours">每日运行时长</label>
+            <input type="range" id="calcHours" min="1" max="24" step="1" value="24">
+            <div class="range-meta"><span>1 小时</span><b id="calcHoursVal">24 小时 / 天</b><span>24 小时</span></div>
+          </div>
+          <label class="switch-row"><input type="checkbox" id="calcSpot"><span class="switch"></span><span>使用现货实例（可被抢占，最高省 65%）</span></label>
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="label">预估月度成本</div>
+        <div class="calc-total" id="calcTotal">$0<small> / 月</small></div>
+        <div class="calc-lines" id="calcLines"></div>
+        <div class="calc-save" id="calcSave"></div>
+        <a class="btn btn-on-dark btn-block mt-24" href="console.html">按此配置部署</a>
+        <p class="small" style="color:#77736c;margin-top:10px;font-size:10px">估算不含税与模型授权费用。预留实例可再省 42%。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="left">
+        <div class="eyebrow"><span class="dot"></span> SUPPLY MODES</div>
+        <h2 class="h2">供给，不止一种买法。</h2>
+      </div>
+      <a class="link-arrow" href="#supply">成为供应商
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="supply-grid" data-reveal>
+      <div class="supply">
+        <div class="k">01 / RESERVED</div>
+        <h3 class="h4">合约预留</h3>
+        <p>锁定 1 / 3 / 12 个月容量，价格固定，适合稳定推理负载与训练排期。</p>
+        <div class="meta"><span>最高省 42%</span><span>SLA 99.99%</span></div>
+      </div>
+      <div class="supply">
+        <div class="k">02 / SPOT</div>
+        <h3 class="h4">现货实例</h3>
+        <p>利用闲置容量，价格随供需浮动。被回收前 30 秒发出信号，自动迁移。</p>
+        <div class="meta"><span>最高省 65%</span><span>可中断</span></div>
+      </div>
+      <div class="supply">
+        <div class="k">03 / EDGE</div>
+        <h3 class="h4">边缘节点</h3>
+        <p>12 个城市节点，RTX 4090 / L40S，面向低于 20ms 的端侧智能体。</p>
+        <div class="meta"><span>12 个节点</span><span>按秒计费</span></div>
+      </div>
+    </div>
+
+    <div class="mt-48" data-reveal>
+      <div class="eyebrow"><span class="dot"></span> PROVIDERS</div>
+      <h3 class="h3 mt-8">一个调度层，六家供应商。</h3>
+      <p class="body mt-8" style="max-width:620px">平台统一做容量承诺、健康检查与故障切换。你不需要分别注册六家云，也不需要在六张账单之间对账。</p>
+      <div class="table-wrap mt-24">
+        <table class="spec-table">
+          <thead><tr><th>供应商</th><th>区域</th><th>可用型号</th><th>在线容量</th><th>SLA</th></tr></thead>
+          <tbody id="providerRows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-48" data-reveal>
+      <div class="eyebrow"><span class="dot"></span> GUARANTEES</div>
+      <h3 class="h3 mt-8">写进合同里的数字。</h3>
+      <div class="table-wrap mt-24">
+        <table class="spec-table">
+          <thead><tr><th>指标</th><th>承诺</th><th>未达标补偿</th></tr></thead>
+          <tbody>
+            <tr><td>实例可用性</td><td class="num">99.95% / 月</td><td>按分钟返还 10× 费用</td></tr>
+            <tr><td>调度成功率</td><td class="num">99.98%</td><td>自动跨区重试，免调度费</td></tr>
+            <tr><td>冷启动到可服务</td><td class="num">≤ 90 秒（P95）</td><td>超出部分不计费</td></tr>
+            <tr><td>故障迁移</td><td class="num">≤ 60 秒</td><td>当月账单 5% 抵扣</td></tr>
+            <tr><td>网络</td><td class="num">400G IB / 25G 公网</td><td>—</td></tr>
+            <tr><td>数据删除</td><td class="num">实例释放即擦除</td><td>审计报告可查</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="supply">
+  <div class="wrap">
+    <div class="eyebrow on-dark"><span class="dot-live"></span> SUPPLY SIDE</div>
+    <h2 class="cta-title mt-16">有闲置 GPU？<br>让它开始<em>赚钱</em>。</h2>
+    <p class="lead mt-24" style="color:#b1ada4;max-width:520px">接入 APEX 调度网络，触达 12,400+ 智能体开发者。我们负责计量、结算、合规与客服。</p>
+    <div class="cta-row">
+      <a class="btn btn-on-dark btn-lg" href="developers.html">提交容量</a>
+      <a class="btn btn-outline-dark btn-lg" href="blueprint.html#architecture">了解调度架构</a>
+    </div>
+    <div class="cta-note">供应商分成 88% · 月度结算 · 最低 100 GPU 起</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html" style="color:#f5f2ea">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" style="color:#f5f2ea"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+          <span class="brand-word">APEX</span>
+        </a>
+        <p class="footer-tag">智能体与算力的全球市场。发现、部署、计量、结算，在一个地方完成。</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h5>市场</h5>
+          <a href="agents.html">智能体商店</a>
+          <a href="compute.html">算力市场</a>
+          <a href="agents.html?sort=popular">热门榜单</a>
+          <a href="console.html">企业采购</a>
+        </div>
+        <div>
+          <h5>开发者</h5>
+          <a href="developers.html">发布智能体</a>
+          <a href="developers.html#pricing">分成计划</a>
+          <a href="developers.html#sdk">SDK 与文档</a>
+          <a href="compute.html#supply">成为算力供应商</a>
+        </div>
+        <div>
+          <h5>信任</h5>
+          <a href="blueprint.html#trust">安全架构</a>
+          <a href="blueprint.html#governance">合规与治理</a>
+          <a href="#">状态页</a>
+          <a href="#">透明度报告</a>
+        </div>
+        <div>
+          <h5>公司</h5>
+          <a href="blueprint.html">平台规划</a>
+          <a href="#">关于 APEX</a>
+          <a href="#">加入我们</a>
+          <a href="#">联系</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-word">APEX</div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> APEX Systems · 概念设计与演示</span>
+      <span>数据为示意，不构成真实报价</span>
+      <div class="right">
+        <a href="#">隐私</a><a href="#">条款</a><a href="#">服务状态</a><a href="#">简体中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/compute.js" defer></script>
+</body>
+</html>
+

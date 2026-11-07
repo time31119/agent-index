@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>平台规划 2026—2030 — APEX</title>
+<meta name="description" content="APEX 平台规划：市场机会、双边模型、五层架构、信任与治理、商业模式、冷启动、路线图与指标。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230B0C0E'/%3E%3Cpath d='M12 4.5 19.5 19h-4.2L12 11.2 8.7 19H4.5z' fill='%23F4F2EC'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f4f2ec">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="APEX 首页">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+      <span class="brand-word">APEX</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="agents.html" data-nav="agents">智能体</a>
+      <a href="compute.html" data-nav="compute">算力</a>
+      <a href="console.html" data-nav="console">控制台</a>
+      <a href="developers.html" data-nav="developers">开发者</a>
+      <a href="blueprint.html" data-nav="blueprint">平台规划</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="搜索（Ctrl K）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m15.8 15.8 4.4 4.4"/></svg>
+      </button>
+      <a class="nav-signin" href="console.html">登录</a>
+      <a class="btn btn-sm" href="developers.html">成为开发者</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="agents.html">智能体市场</a>
+  <a href="compute.html">算力市场</a>
+  <a href="console.html">控制台</a>
+  <a href="developers.html">开发者中心</a>
+  <a href="blueprint.html">平台规划</a>
+  <a class="btn btn-block" href="developers.html">成为开发者</a>
+</div>
+
+<section class="doc-hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> PLATFORM BLUEPRINT · 2026 — 2030</div>
+    <h1 class="display" style="font-size:clamp(38px,5vw,66px)">不是又一个目录，<br>是智能体经济的<span class="serif">交易所</span>。</h1>
+    <p class="lead" style="max-width:640px">APEX 把智能体的发现、算力、计量、结算与信任，收进同一套基础设施。这份文件说明：市场有多大、为什么是现在、怎么建、怎么赚钱、以及前 90 天做什么。</p>
+    <div class="doc-meta">
+      <span class="chip" style="cursor:default">版本 1.0</span>
+      <span class="chip" style="cursor:default">2026-11</span>
+      <span class="chip" style="cursor:default">内部规划草案</span>
+      <span class="chip" style="cursor:default">站点展示为目标态（2029）</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap doc-layout">
+  <nav class="toc" aria-label="目录">
+    <div class="label">CONTENTS</div>
+    <a href="#thesis">01 · 定位</a>
+    <a href="#market">02 · 市场机会</a>
+    <a href="#why-now">03 · 为什么是现在</a>
+    <a href="#model">04 · 平台模型</a>
+    <a href="#architecture">05 · 技术架构</a>
+    <a href="#product">06 · 产品矩阵</a>
+    <a href="#trust">07 · 信任层</a>
+    <a href="#governance">08 · 治理与合规</a>
+    <a href="#business">09 · 商业模式</a>
+    <a href="#coldstart">10 · 冷启动</a>
+    <a href="#roadmap">11 · 路线图</a>
+    <a href="#metrics">12 · 指标体系</a>
+    <a href="#competition">13 · 竞争与护城河</a>
+    <a href="#risk">14 · 风险</a>
+    <a href="#org">15 · 前 90 天</a>
+  </nav>
+
+  <article class="doc-body">
+
+    <section class="doc-section" id="thesis">
+      <div class="kicker">01 / THESIS</div>
+      <h2 class="h3">平台不是目录，是交易与信任的基础设施。</h2>
+      <p class="lead">App Store 的成功从来不是「软件很多」。它把三件事绑进了同一块玻璃：发现、支付、信任。开发者因此只需要做产品，用户因此敢把信用卡交给陌生人。</p>
+      <p>智能体时代，这三件事重新碎片化了。模型厂有自己的商店，云厂有自己的市场，agent 框架有自己的 hub，企业则在内部拼装权限、审计与账单。开发者要对接五个平台，用户要在六个入口之间比价，企业法务无法回答一个基本问题：<strong>这个智能体到底能碰我的什么数据？</strong></p>
+      <p>APEX 的机会，是把「发现、算力、计量、结算、信任」重新打包成一层中立基础设施——不站队模型，不站队云，只对交易双方负责。</p>
+      <div class="callout"><b>如果只能做一件事：</b>让一家企业敢把一个生产任务，交给一个从未合作过的开发者所做的智能体。其余所有功能，都服务于降低这笔交易的信誉成本。</div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="v">PTC</div><div class="l">北极星指标：每周完成的付费任务数（Paid Task Completions）</div></div>
+        <div class="stat-box"><div class="v">18%</div><div class="l">三年目标混合抽成率（智能体佣金 + 算力价差）</div></div>
+        <div class="stat-box"><div class="v">65%</div><div class="l">企业客户任务成功率门槛，低于此不进入推荐池</div></div>
+      </div>
+      <p class="small" style="margin-top:10px">为什么不是 GMV 或安装量：安装可以刷，GMV 可以补贴。只有「付费且被判定完成」的任务，同时证明需求真实、供给可靠、结算闭环。</p>
+    </section>
+
+    <section class="doc-section" id="market">
+      <div class="kicker">02 / MARKET</div>
+      <h2 class="h3">三个市场正在合并成一个。</h2>
+      <p class="lead">智能体分发、推理算力、企业编排——过去由三类公司分别服务。当智能体成为软件的主要形态，它们必须出现在同一张账单上。</p>
+      <div class="table-wrap">
+        <table class="dtable">
+          <thead><tr><th>市场层</th><th>2026</th><th>2030E</th><th>CAGR</th><th>可交易比例</th></tr></thead>
+          <tbody>
+            <tr><td>智能体分发与订阅</td><td class="num">$18B</td><td class="num">$180B</td><td class="num">78%</td><td class="num">55%</td></tr>
+            <tr><td>推理与训练算力</td><td class="num">$210B</td><td class="num">$620B</td><td class="num">31%</td><td class="num">35%</td></tr>
+            <tr><td>企业智能体编排与治理</td><td class="num">$6B</td><td class="num">$48B</td><td class="num">68%</td><td class="num">70%</td></tr>
+            <tr><td><strong>合计 TAM</strong></td><td class="num"><strong>$234B</strong></td><td class="num"><strong>$848B</strong></td><td class="num">—</td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">数字为示意性估算，用于说明量级与结构，不构成预测。</p>
+      <p><strong>SAM</strong>（跨供应商、可标准化交易的部分）约 $180B；<strong>SOM</strong>（三年内可触达）约 $12B GMV。我们不需要赢下整个市场，只需要成为「企业愿意把生产任务交出去」的那个默认入口。</p>
+      <h4>钱在哪里</h4>
+      <ul class="bullets">
+        <li><strong>订阅之外：</strong>智能体的成本大头是推理与工具调用，单纯 15% 佣金无法覆盖平台价值，必须同时赚算力与运行时。</li>
+        <li><strong>企业预算：</strong>企业不按「席位」买智能体，而按「完成的工作」与「合规等级」买。预算归属 IT 与业务双方。</li>
+        <li><strong>长尾供给：</strong>12,400 个智能体里，Top 50 贡献 60% GMV，但长尾决定「任何任务都能被满足」的网络效应。</li>
+      </ul>
+    </section>
+
+    <section class="doc-section" id="why-now">
+      <div class="kicker">03 / WHY NOW</div>
+      <h2 class="h3">五个条件同时成熟。</h2>
+      <ul class="bullets">
+        <li><strong>模型商品化。</strong>头部模型的能力差距缩小到几个百分点，路由、成本与合规开始比「谁的模型更强」更重要。中立层因此有价值。</li>
+        <li><strong>推理成本骤降。</strong>过去 18 个月单位 token 成本下降约 92%，让「按任务收费」第一次具备正毛利空间。</li>
+        <li><strong>协议标准化。</strong>MCP 与 A2A 让工具、记忆与智能体之间可以组合，供给不再被单一框架锁定。</li>
+        <li><strong>企业从 POC 走向生产。</strong>试点预算已经花完，2027 年的预算要求权限、审计、SLA 与赔付——这些恰好是平台能提供、单个开发者提供不了的东西。</li>
+        <li><strong>算力供给碎片化。</strong>Neocloud 产能时而过剩、时而短缺，跨区调度与现货撮合存在明确的套利与效率空间。</li>
+      </ul>
+      <div class="callout"><b>窗口期判断：</b>未来 18—24 个月，模型厂会尝试纵向整合商店与算力，云厂会尝试纵向整合智能体市场。中立第三方的窗口，取决于能否在此之前建立双边流动性与企业信任资产。</div>
+    </section>
+
+    <section class="doc-section" id="model">
+      <div class="kicker">04 / MARKETPLACE MODEL</div>
+      <h2 class="h3">双边飞轮，外加一层运行时。</h2>
+      <p>大多数「智能体商店」只有目录：供给是抓来的，需求是买来的，交易在平台外完成。APEX 的差异是<strong>运行时在平台内</strong>——只有真正跑任务，才能计量、评测、审计与结算。</p>
+      <div class="flywheel">
+        <div class="fw-item"><div class="n">01 / SUPPLY</div><div class="t">更多可靠供给</div><div class="d">开发者上架智能体，算力商上架 GPU。平台提供运行时、支付与合规，降低上架成本。</div></div>
+        <div class="fw-item"><div class="n">02 / MATCH</div><div class="t">更准的匹配</div><div class="d">按任务、预算、区域与合规要求匹配智能体 + 算力组合，而不是只按关键词搜索。</div></div>
+        <div class="fw-item"><div class="n">03 / OUTCOME</div><div class="t">更高的完成率</div><div class="d">平台复跑评测、监控运行时行为，把「能演示」变成「能交付」。</div></div>
+        <div class="fw-item"><div class="n">04 / DEMAND</div><div class="t">更多付费需求</div><div class="d">企业敢把生产任务放进来，复购与客单价上升，反哺供给端收入。</div></div>
+      </div>
+      <h4>数据飞轮：任务—模型—算力—结果</h4>
+      <p>每一次运行都会产生四元组：任务类型、所选模型、算力配置、结果质量与真实成本。积累到百万级后，平台可以做三件别人做不到的事：动态路由（同等质量下成本最低）、动态定价（按成功付费）、供给预测（提前 14 天预置容量）。</p>
+      <p><strong>边界：</strong>平台不自营智能体，不与开发者争抢头部品类；不自建大规模 GPU 云，保持轻资产；不做通用聊天入口，避免与需求方正面竞争。</p>
+    </section>
+
+    <section class="doc-section" id="architecture">
+      <div class="kicker">05 / ARCHITECTURE</div>
+      <h2 class="h3">五层架构，三个不可替代的服务。</h2>
+      <div class="arch">
+        <div class="arch-layer"><div class="l">体验层</div><div class="r"><span class="arch-box">智能体商店</span><span class="arch-box">算力市场</span><span class="arch-box">部署控制台</span><span class="arch-box">开发者工作室</span><span class="arch-box">企业后台</span></div></div>
+        <div class="arch-layer"><div class="l">商业层</div><div class="r"><span class="arch-box">目录与版本</span><span class="arch-box">搜索与推荐</span><span class="arch-box">定价与促销</span><span class="arch-box">计费与发票</span><span class="arch-box">分账与税务</span></div></div>
+        <div class="arch-layer"><div class="l">信任层</div><div class="r"><span class="arch-box hot">Agent Passport</span><span class="arch-box hot">策略引擎</span><span class="arch-box">APEX Bench</span><span class="arch-box">审计与回放</span><span class="arch-box">风控</span></div></div>
+        <div class="arch-layer"><div class="l">运行时</div><div class="r"><span class="arch-box hot">Agent Runtime</span><span class="arch-box">工具网关</span><span class="arch-box">记忆</span><span class="arch-box">多智能体编排</span><span class="arch-box">可观测性</span></div></div>
+        <div class="arch-layer"><div class="l">算力层</div><div class="r"><span class="arch-box hot">调度器</span><span class="arch-box">GPU 池</span><span class="arch-box">模型服务</span><span class="arch-box">KV 缓存</span><span class="arch-box">边缘节点</span></div></div>
+        <div class="arch-layer"><div class="l">数据层</div><div class="r"><span class="arch-box">事件流</span><span class="arch-box hot">计量账本</span><span class="arch-box">特征库</span><span class="arch-box">对账</span><span class="arch-box">数据驻留</span></div></div>
+      </div>
+
+      <h4>① 计量账本（Metering Ledger）</h4>
+      <p>每一次模型调用、工具调用、GPU 秒都写成不可变事件，带任务 ID、智能体版本、区域与价目表版本。账本同时服务于四件事：向用户收费、向开发者分账、向算力商结算、向监管证明。没有账本，双边市场会在第一个月就对不上账。</p>
+      <h4>② 调度器（Scheduler）</h4>
+      <p>多目标优化：成本、延迟、合规（数据驻留）、供给稳定性。支持现货抢占前的 30 秒信号、跨区迁移、模型与硬件的联合选型。调度器是算力价差的来源，也是 SLA 的兜底。</p>
+      <h4>③ Agent Passport</h4>
+      <p>由平台签名的 manifest：开发者主体、代码哈希、模型清单、工具与权限、数据边界、评测成绩。运行时每次启动都校验签名，防止「上架的是一个，跑的是另一个」。</p>
+      <p class="small">技术选型原则：运行时契约开源，避免开发者锁定；账本与 Passport 闭源，构成信任资产；算力层轻资产，优先聚合而非自建。</p>
+    </section>
+
+    <section class="doc-section" id="product">
+      <div class="kicker">06 / PRODUCT</div>
+      <h2 class="h3">六个模块，一条主线。</h2>
+      <div class="table-wrap">
+        <table class="dtable">
+          <thead><tr><th>模块</th><th>服务对象</th><th>核心价值</th><th>变现</th></tr></thead>
+          <tbody>
+            <tr><td>智能体商店</td><td>个人 / 团队 / 企业</td><td>按任务发现、试用、订阅经过验证的智能体</td><td>交易佣金 15%</td></tr>
+            <tr><td>算力市场</td><td>开发者 / 企业</td><td>按秒购买 GPU，现货与预留，跨区调度</td><td>价差 8—12%</td></tr>
+            <tr><td>部署控制台</td><td>企业 IT / 业务</td><td>智能体 + 算力 + 权限的一站式部署与成本管理</td><td>企业平台费</td></tr>
+            <tr><td>开发者工作室</td><td>开发者</td><td>声明式上架、评测、定价、分账与增长工具</td><td>佣金 + 算力</td></tr>
+            <tr><td>信任中心</td><td>法务 / 安全 / 合规</td><td>Passport、审计日志、评测报告、事件披露</td><td>认证服务费</td></tr>
+            <tr><td>企业私有市场</td><td>大型企业</td><td>内部智能体目录、SSO、数据边界、专属容量</td><td>年费 $50k+</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>关键用户旅程</h4>
+      <p><strong>发现 → 试用 → 部署 → 计量 → 续费</strong>。每一步都必须留在平台内：试用产生真实任务数据，部署绑定算力与权限，计量生成账单，续费由使用数据驱动。任何一步跳出平台，飞轮就断了。</p>
+      <p><strong>企业采购旅程：</strong>需求描述 → 合规预检 → 沙箱验证 → 合同与数据协议 → 私有目录上线 → 季度业务复盘。销售周期 6—10 周，客单价 $80k—$500k。</p>
+    </section>
+
+    <section class="doc-section" id="trust">
+      <div class="kicker">07 / TRUST</div>
+      <h2 class="h3">信任不是徽章，是可验证的证据。</h2>
+      <p>智能体与 App 的根本区别：App 只能读它被授权的数据，智能体会<em>行动</em>——发邮件、改数据库、花钱、代表你承诺。因此信任层必须回答四个问题：它是谁、它能碰什么、它做了什么、出了问题谁负责。</p>
+      <div class="pri-grid">
+        <div class="pri"><b>身份</b>开发者主体实名核验，代码哈希与签名版本绑定，模型与工具清单公开可查。</div>
+        <div class="pri"><b>权限</b>最小权限 scopes；高风险动作（支付、终端、摄像头）默认关闭，运行时二次确认。</div>
+        <div class="pri"><b>证据</b>每次工具调用记录参数、结果、耗时与费用；支持按任务回放与导出审计包。</div>
+        <div class="pri"><b>责任</b>平台、开发者、部署方三方责任矩阵；SLA 未达标自动抵扣；安全事件 72 小时披露。</div>
+      </div>
+      <h4>上架三道门</h4>
+      <ul class="bullets">
+        <li><strong>静态扫描：</strong>依赖漏洞、密钥泄漏、恶意网络目标、提示注入特征。</li>
+        <li><strong>动态沙箱：</strong>200 个真实任务，观察越权尝试、数据外传、成本失控与欺骗行为。</li>
+        <li><strong>人工复核：</strong>金融、医疗、法律等高风险品类，以及所有申请支付权限的智能体。</li>
+      </ul>
+      <p><strong>评测独立于开发者：</strong>APEX Bench 每季度轮换 30% 任务，平台复跑，开发者无法自报成绩。评测成绩与真实运行时数据共同决定推荐位，而不是出价。</p>
+    </section>
+
+    <section class="doc-section" id="governance">
+      <div class="kicker">08 / GOVERNANCE</div>
+      <h2 class="h3">区域合规是产品需求，不是法务附件。</h2>
+      <p>平台从第一天就按「多法域」设计：数据驻留、模型准入、内容政策、审计披露都作为可配置策略，而不是事后补丁。</p>
+      <div class="table-wrap">
+        <table class="dtable">
+          <thead><tr><th>法域</th><th>核心要求</th><th>产品化动作</th></tr></thead>
+          <tbody>
+            <tr><td>欧盟</td><td>AI Act 分级义务、GPAI 透明度、GDPR 数据最小化</td><td>高风险品类强制人工复核；模型卡与训练数据披露；EU 独立区域</td></tr>
+            <tr><td>中国</td><td>生成式 AI 服务备案、内容安全、数据出境</td><td>隔离域与本地持牌主体；内容过滤与人工巡查；境内模型优先</td></tr>
+            <tr><td>美国</td><td>州级隐私法、行业监管（金融 / 医疗）</td><td>行业牌照校验；消费者数据删除权；各州隐私附录</td></tr>
+            <tr><td>海湾 / 新加坡</td><td>数据本地化、伊斯兰金融合规</td><td>本地机房合作；金融智能体额外审计</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>治理结构</h4>
+      <ul class="bullets">
+        <li><strong>审核委员会：</strong>平台 + 外部专家（安全、法律、消费者权益），对争议下架拥有最终表决权。</li>
+        <li><strong>申诉机制：</strong>开发者可在 5 个工作日内申诉，处理过程与理由公开（脱敏）。</li>
+        <li><strong>利益冲突：</strong>平台不自营同类智能体；推荐位若含商业合作，必须标注「推广」；排序逻辑每年由第三方审计。</li>
+        <li><strong>可迁移：</strong>manifest 与评测数据可导出，开发者不被平台锁定——这是长期信任的前提。</li>
+      </ul>
+    </section>
+
+    <section class="doc-section" id="business">
+      <div class="kicker">09 / BUSINESS MODEL</div>
+      <h2 class="h3">佣金只是入口，算力与治理才是利润。</h2>
+      <div class="table-wrap">
+        <table class="dtable">
+          <thead><tr><th>收入流</th><th>计价</th><th>毛利率</th><th>三年占比</th></tr></thead>
+          <tbody>
+            <tr><td>智能体交易佣金</td><td>GMV 的 15%（企业 10—20%）</td><td class="num">~92%</td><td class="num">38%</td></tr>
+            <tr><td>算力撮合与转售</td><td>GPU 小时价差 8—12%</td><td class="num">~22%</td><td class="num">41%</td></tr>
+            <tr><td>企业平台订阅</td><td>$50k—$500k / 年</td><td class="num">~80%</td><td class="num">12%</td></tr>
+            <tr><td>评测与认证</td><td>$5k—$50k / 次</td><td class="num">~70%</td><td class="num">5%</td></tr>
+            <tr><td>推理 API 加价</td><td>模型成本 + 5—8%</td><td class="num">~15%</td><td class="num">4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>单位经济（示意）</h4>
+      <p>一个年 GMV $1.2M 的头部智能体：平台佣金 $180k；其算力消耗 $420k，平台价差约 $46k；合计净收入 $226k。分摊运行时、支付、客服与合规成本 $70k，贡献毛利 $156k（69%）。</p>
+      <p>一个企业客户年付 $180k 平台费 + $600k 算力：净收入约 $240k，CAC $60k，回收期 3 个月，三年 NRR 目标 135%。</p>
+      <div class="table-wrap">
+        <table class="dtable">
+          <thead><tr><th>三年财务（示意）</th><th>Y1 · 2027</th><th>Y2 · 2028</th><th>Y3 · 2029</th></tr></thead>
+          <tbody>
+            <tr><td>GMV</td><td class="num">$80M</td><td class="num">$620M</td><td class="num">$2.4B</td></tr>
+            <tr><td>净收入</td><td class="num">$14M</td><td class="num">$112M</td><td class="num">$432M</td></tr>
+            <tr><td>混合抽成率</td><td class="num">17.5%</td><td class="num">18.1%</td><td class="num">18.0%</td></tr>
+            <tr><td>毛利</td><td class="num">$8.4M</td><td class="num">$71M</td><td class="num">$294M</td></tr>
+            <tr><td>经营现金流</td><td class="num">−$18M</td><td class="num">−$6M</td><td class="num">+$74M</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">以上为规划用示意模型，假设：头部供给留存 85%、算力价差 9%、企业客户 180 家（Y3）、退款与坏账 2.5%。</p>
+    </section>
+
+    <section class="doc-section" id="coldstart">
+      <div class="kicker">10 / COLD START</div>
+      <h2 class="h3">先做窄，再做深，最后做宽。</h2>
+      <p>双边市场最常见的死法是「全品类 + 全区域 + 补贴 C 端」。APEX 的顺序相反：先在一个高价值、可验证的品类里做出流动性，再扩品类与区域。</p>
+      <div class="pri-grid">
+        <div class="pri"><b>Wedge 品类</b>企业级深度研究与代码智能体。任务价值高、结果可验证、愿意为可靠性付费。</div>
+        <div class="pri"><b>供给侧</b>签 100 家设计伙伴：12 个月 0 佣金、算力补贴、联合打磨评测，换取 3 个月品类 exclusivity。</div>
+        <div class="pri"><b>需求侧</b>不买流量。与 IDE、浏览器、模型厂做分发合作；用「任务完成率」做 SEO 与案例，而不是「AI 很强大」。</div>
+        <div class="pri"><b>流动性指标</b>90% 的付费需求在 10 分钟内被满足；否则补供给，而不是继续拉需求。</div>
+      </div>
+      <h4>为什么供给先行</h4>
+      <p>需求侧可以瞬间被补贴点燃，但如果没有可靠的供给，第一波用户会永久流失。供给侧的打磨周期是 6—9 个月，必须提前启动。平台的早期团队应该更像「制片人」：一个个谈下头部智能体，帮它们把评测、定价与企业部署跑通。</p>
+      <div class="callout"><b>前 100 个智能体决定平台的气质。</b>如果它们都是「聊天玩具」，企业不会来；如果它们是「能完成工作并留下证据的工具」，企业会自己找上门。</div>
+    </section>
+
+    <section class="doc-section" id="roadmap">
+      <div class="kicker">11 / ROADMAP</div>
+      <h2 class="h3">四个阶段，每个阶段只证明一件事。</h2>
+      <div class="timeline">
+        <div class="phase done">
+          <div class="when">PHASE 0 · 2026 Q4 — 2027 Q2</div>
+          <div class="t">证明有人愿意为「完成的任务」付费</div>
+          <p>单一品类（研究 / 编程）+ 现货 GPU + 单区域。50 个设计伙伴智能体，100 家企业种子客户。手动运营，重点是把计量、评测、结算跑通。</p>
+          <div class="tags"><span class="tag">50 agents</span><span class="tag">1 region</span><span class="tag">$2M GMV</span></div>
+        </div>
+        <div class="phase">
+          <div class="when">PHASE 1 · 2027 Q3 — 2028 Q2</div>
+          <div class="t">证明平台可以自助规模化</div>
+          <p>开放自助上架、自动评测与计量结算；扩展到 3 个区域；算力市场接入 3 家供应商。停止手工运营，开始用数据做推荐。</p>
+          <div class="tags"><span class="tag">1,000 agents</span><span class="tag">3 regions</span><span class="tag">$60M GMV</span></div>
+        </div>
+        <div class="phase">
+          <div class="when">PHASE 2 · 2028 Q3 — 2029 Q4</div>
+          <div class="t">证明企业愿意把生产负载放进来</div>
+          <p>企业私有市场、SSO / 审计、区域合规、专属容量；算力扩至 9 个区域与 100k GPU；建立渠道与系统集成商生态。</p>
+          <div class="tags"><span class="tag">10k agents</span><span class="tag">9 regions</span><span class="tag">$600M GMV</span></div>
+        </div>
+        <div class="phase">
+          <div class="when">PHASE 3 · 2030 →</div>
+          <div class="t">成为智能体经济的默认分发与结算层</div>
+          <p>操作系统级入口、跨平台身份、按结果付费的保险与信贷产品。平台不再需要「被打开」，而是成为其他软件调用智能体的默认协议。</p>
+          <div class="tags"><span class="tag">100k agents</span><span class="tag">$5B GMV</span><span class="tag">18% take</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-section" id="metrics">
+      <div class="kicker">12 / METRICS</div>
+      <h2 class="h3">只看能让飞轮转得更快的指标。</h2>
+      <div class="table-wrap">
+        <table class="dtable">
+          <thead><tr><th>层级</th><th>指标</th><th>Y1 目标</th><th>Y3 目标</th></tr></thead>
+          <tbody>
+            <tr><td>北极星</td><td>每周付费完成任务数（PTC）</td><td class="num">40k</td><td class="num">2.8M</td></tr>
+            <tr><td>供给</td><td>月活上架智能体 / 已验证占比</td><td class="num">1,000 / 70%</td><td class="num">10,000 / 85%</td></tr>
+            <tr><td>供给</td><td>在线 GPU 容量 / 调度成功率</td><td class="num">8k / 99.5%</td><td class="num">100k / 99.9%</td></tr>
+            <tr><td>需求</td><td>付费买家数 / 30 天复购率</td><td class="num">3,000 / 38%</td><td class="num">120k / 61%</td></tr>
+            <tr><td>流动性</td><td>10 分钟内被满足的需求占比</td><td class="num">72%</td><td class="num">92%</td></tr>
+            <tr><td>质量</td><td>任务成功率 / P95 首响应</td><td class="num">81% / 2.4s</td><td class="num">93% / 0.9s</td></tr>
+            <tr><td>经济</td><td>混合抽成率 / CAC 回收期</td><td class="num">17.5% / 14m</td><td class="num">18% / 7m</td></tr>
+            <tr><td>信任</td><td>安全事件数 / 平均披露时长</td><td class="num">&lt;6 / 48h</td><td class="num">&lt;12 / 24h</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>反指标：</strong>我们不把「智能体总数」当作核心 KPI。没有运行、没有付费、没有复购的供给，只是目录噪音。</p>
+    </section>
+
+    <section class="doc-section" id="competition">
+      <div class="kicker">13 / COMPETITION</div>
+      <h2 class="h3">不站队模型，不站队云。</h2>
+      <div class="table-wrap">
+        <table class="dtable">
+          <thead><tr><th>玩家类型</th><th>多模型</th><th>多算力</th><th>统一计量</th><th>信任审计</th><th>企业治理</th></tr></thead>
+          <tbody>
+            <tr><td>模型厂商店（GPT Store 类）</td><td>否</td><td>否</td><td>部分</td><td>弱</td><td>弱</td></tr>
+            <tr><td>云市场（AWS / Azure 类）</td><td>部分</td><td>自家</td><td>部分</td><td>中</td><td>强</td></tr>
+            <tr><td>开源模型 / Agent Hub</td><td>是</td><td>否</td><td>否</td><td>弱</td><td>弱</td></tr>
+            <tr><td>算力聚合平台</td><td>否</td><td>是</td><td>是</td><td>弱</td><td>弱</td></tr>
+            <tr><td><strong>APEX</strong></td><td><strong>是</strong></td><td><strong>是</strong></td><td><strong>是</strong></td><td><strong>是</strong></td><td><strong>是</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>护城河的四层结构</h4>
+      <ul class="bullets">
+        <li><strong>流动性：</strong>双边同时在线，且供需匹配效率随规模提升。这是最硬、也最难复制的资产。</li>
+        <li><strong>数据：</strong>任务—模型—算力—结果四元组，形成路由与定价的专有优势。</li>
+        <li><strong>信任：</strong>审计记录、评测历史与事故处理声誉，需要时间积累，无法用钱买到。</li>
+        <li><strong>工作流嵌入：</strong>企业的权限、账单、合规流程一旦接入，迁移成本高，但必须保持可导出以避免反噬。</li>
+      </ul>
+    </section>
+
+    <section class="doc-section" id="risk">
+      <div class="kicker">14 / RISK</div>
+      <h2 class="h3">最危险的，不是竞争。</h2>
+      <div class="pri-grid">
+        <div class="pri"><b>模型厂纵向整合</b>它们可能把商店、算力与身份全部自营。<br><em>对策：</em>多模型中立、企业治理、跨云算力，做它们不愿做的「脏活」。</div>
+        <div class="pri"><b>云厂价格战</b>算力价差被压到 3% 以下。<br><em>对策：</em>轻资产聚合；收入向佣金与企业软件倾斜；用调度效率而非低价取胜。</div>
+        <div class="pri"><b>安全事件</b>一个头部智能体越权，可能摧毁平台信任。<br><em>对策：</em>默认沙箱、权限最小化、保险池、24 小时披露、快速下架与回滚。</div>
+        <div class="pri"><b>供给质量失控</b>长尾智能体刷安装、刷好评、演示造假。<br><em>对策：</em>平台复跑评测、按任务结果排序、运行时行为监控、黑名单共享。</div>
+        <div class="pri"><b>监管碎片化</b>9 个区域的合规成本拖慢扩张。<br><em>对策：</em>区域隔离架构、本地持牌伙伴、合规即代码，先进入 3 个法域。</div>
+        <div class="pri"><b>双边冷启动失败</b>供给与需求互相等待。<br><em>对策：</em>供给先行、单品类 wedge、设计伙伴 exclusivity、以流动性而非规模为里程碑。</div>
+      </div>
+    </section>
+
+    <section class="doc-section" id="org">
+      <div class="kicker">15 / FIRST 90 DAYS</div>
+      <h2 class="h3">前 90 天，只做三件事。</h2>
+      <div class="timeline">
+        <div class="phase done">
+          <div class="when">WEEK 1—2</div>
+          <div class="t">定边界</div>
+          <p>确定 wedge 品类、三个首发区域、责任矩阵与上架标准。完成 Agent Passport 与计量账本的数据模型设计。</p>
+        </div>
+        <div class="phase">
+          <div class="when">WEEK 3—6</div>
+          <div class="t">签下前 20 个供给</div>
+          <p>逐个谈头部研究 / 编程智能体，帮它们接入运行时与评测；同时锁定 1 家 GPU 供应商的 2,000 卡容量。</p>
+        </div>
+        <div class="phase">
+          <div class="when">WEEK 7—10</div>
+          <div class="t">跑通一笔完整交易</div>
+          <p>从搜索、试用、部署、计量、开票到分账，端到端跑通 100 笔真实付费任务；把失败案例做成产品需求。</p>
+        </div>
+        <div class="phase">
+          <div class="when">WEEK 11—13</div>
+          <div class="t">50 家企业私有 Beta</div>
+          <p>用真实生产任务验证权限、审计与 SLA；确定企业定价与合同模板；准备公测。</p>
+        </div>
+      </div>
+      <h4>团队配置（18 人）</h4>
+      <p>平台运行时 5 人 · 计量与结算 3 人 · 信任与安全 3 人 · 市场与供给运营 4 人 · 企业与商务 2 人 · 设计 1 人。前 6 个月不设独立销售团队，创始人直接谈下前 100 个供给。</p>
+      <div class="callout"><b>90 天的成功标准只有一个：</b>有一家企业，把一项真实的生产任务，交给了平台上素未谋面的开发者，并且愿意再付一次钱。</div>
+    </section>
+
+  </article>
+</div>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div class="eyebrow on-dark"><span class="dot-live"></span> START HERE</div>
+    <h2 class="cta-title mt-16">从第一个 <em>100</em> 个智能体开始。</h2>
+    <div class="cta-row">
+      <a class="btn btn-on-dark btn-lg" href="developers.html">申请成为设计伙伴</a>
+      <a class="btn btn-outline-dark btn-lg" href="agents.html">浏览当前市场</a>
+    </div>
+    <div class="cta-note">设计伙伴 · 12 个月 0 佣金 · 算力补贴 · 联合打磨评测</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html" style="color:#f5f2ea">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" style="color:#f5f2ea"><path d="M12 2.4 22.2 21.6h-5.3L12 10.6 7.1 21.6H1.8z"/></svg>
+          <span class="brand-word">APEX</span>
+        </a>
+        <p class="footer-tag">智能体与算力的全球市场。发现、部署、计量、结算，在一个地方完成。</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h5>市场</h5>
+          <a href="agents.html">智能体商店</a>
+          <a href="compute.html">算力市场</a>
+          <a href="agents.html?sort=popular">热门榜单</a>
+          <a href="console.html">企业采购</a>
+        </div>
+        <div>
+          <h5>开发者</h5>
+          <a href="developers.html">发布智能体</a>
+          <a href="developers.html#pricing">分成计划</a>
+          <a href="developers.html#sdk">SDK 与文档</a>
+          <a href="compute.html#supply">成为算力供应商</a>
+        </div>
+        <div>
+          <h5>信任</h5>
+          <a href="#trust">安全架构</a>
+          <a href="#governance">合规与治理</a>
+          <a href="#">状态页</a>
+          <a href="#">透明度报告</a>
+        </div>
+        <div>
+          <h5>公司</h5>
+          <a href="blueprint.html">平台规划</a>
+          <a href="#">关于 APEX</a>
+          <a href="#">加入我们</a>
+          <a href="#">联系</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-word">APEX</div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> APEX Systems · 概念设计与演示</span>
+      <span>数据为示意，不构成真实报价</span>
+      <div class="right">
+        <a href="#">隐私</a><a href="#">条款</a><a href="#">服务状态</a><a href="#">简体中文</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  var ticking = false;
+  function update() {
+    var y = window.scrollY + 140, active = 0;
+    secs.forEach(function (s, i) { if (s && s.offsetTop <= y) active = i; });
+    links.forEach(function (a, i) { a.classList.toggle('is-active', i === active); });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
+})();
+</script>
+</body>
+</html>
+

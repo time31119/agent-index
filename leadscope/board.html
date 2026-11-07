@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>完整榜单 · LeadScope</title>
+<meta name="description" content="931 位币安 USDT-M 合约带单员的 30 天收益、回撤、胜率、盈亏比与可跟单指数，可排序筛选。">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236ea8ff'/%3E%3Cpath d='M9 21l5-10 4 7 5-4' stroke='%2305070d' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="board">
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LS</span>
+      <span>LeadScope<small style="display:block">带单透视</small></span>
+    </a>
+    <nav class="nav">
+      <a data-nav="home" href="index.html">结论</a>
+      <a data-nav="board" href="board.html">榜单</a>
+      <a data-nav="analysis" href="analysis.html">拆解</a>
+      <a data-nav="simulator" href="simulator.html">模拟器</a>
+      <a data-nav="playbook" href="playbook.html">学习</a>
+      <a data-nav="method" href="method.html">方法</a>
+    </nav>
+    <span class="pill-live"><i class="dot"></i><span id="asOf">—</span></span>
+  </div>
+</header>
+
+<main>
+<div class="wrap" style="padding-top:52px">
+  <div class="eyebrow">全部样本 · 按 30 天收益降序</div>
+  <h1 style="font-size:clamp(30px,3.4vw,42px);max-width:24ch;margin-bottom:14px">931 位带单员，逐条摊开</h1>
+  <p class="lede" style="font-size:15.5px;max-width:70ch">
+    默认按 30 天收益排序，但真正该看的是后面几列：<b>前 60 天</b>是不是正的、<b>回撤</b>有多深、<b>笔/月</b>跟不跟得上。
+    点任意一行看逐项拆解，点 ☆ 加入自选。
+  </p>
+</div>
+
+<section class="wrap" style="padding-top:16px">
+  <div class="controls">
+    <input class="search" id="q" type="search" placeholder="搜索昵称或 bn 编号…" autocomplete="off">
+    <button class="chip on" data-filter="all">全部</button>
+    <button class="chip" data-filter="pos">30 天为正</button>
+    <button class="chip" data-filter="lowdd">回撤 &lt; 25%</button>
+    <button class="chip" data-filter="copyable">可小额试跟</button>
+    <button class="chip" data-filter="watch">★ 自选</button>
+  </div>
+
+  <div class="table-wrap scroll-x">
+    <table id="board">
+      <thead>
+        <tr>
+          <th style="width:44px">#</th>
+          <th class="l" data-key="n" style="min-width:170px">带单员</th>
+          <th data-key="m">30 天</th>
+          <th data-key="w">7 天</th>
+          <th data-key="prior">前 60 天</th>
+          <th data-key="dd">回撤</th>
+          <th data-key="sh">夏普</th>
+          <th data-key="wr">胜率</th>
+          <th data-key="payoff">盈亏比</th>
+          <th data-key="tpm">笔/月</th>
+          <th data-key="score">指数</th>
+          <th style="text-align:left">判定</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:16px;flex-wrap:wrap">
+    <span class="note" id="boardStat">—</span>
+    <button class="btn ghost" id="more" style="width:auto;padding:9px 22px">加载更多</button>
+  </div>
+
+  <div class="callout" style="margin-top:26px">
+    <b>看表顺序建议：</b>先看「前 60 天」是否为负（负 = 这次是回本不是延续）→ 再看「回撤」是否超过 30%（超过说明跟单人要先扛住这一刀）→ 再看「笔/月」（超过 200 笔，滑点和手续费会吃掉大部分收益）→ 最后才看「30 天」。
+  </div>
+</section>
+</main>
+
+<div class="sheet-mask" id="mask"></div>
+<aside class="sheet" id="sheet"></aside>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="color:#95a2bd;margin-bottom:8px">LeadScope · 带单透视</div>
+      <div>数据快照 <span id="asOf3">—</span>（UTC+8）· 收益未扣除跟单人滑点、手续费与分成。</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">结论</a><a href="analysis.html">拆解</a><a href="simulator.html">模拟器</a><a href="playbook.html">学习</a><a href="method.html">方法与局限</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

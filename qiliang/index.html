@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="起量 QILIANG — 给大量中小业主的自动化营销短视频 AI 工具。说一句话，AI 做成片，直接发抖音、视频号、小红书。会员制软件，699/月。">
+  <meta name="theme-color" content="#F5F1E8">
+  <meta property="og:title" content="起量 QILIANG · 中小业主的短视频营销工具">
+  <meta property="og:description" content="不会拍，也能持续有视频。会员制软件，699/月，商家自己操作。">
+  <meta property="og:type" content="website">
+  <title>起量 QILIANG · 中小业主的短视频营销工具</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+<svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 6V4h16v2M12 4v16M8 20h8"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M7 4v16M17 4v16M2 9h5M17 9h5M2 15h5M17 15h5"/></symbol>
+  <symbol id="i-voice" viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 10v10h16V10"/><path d="M3 10 5 4h14l2 6"/><path d="M3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 13H5Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-service" viewBox="0 0 24 24"><path d="M4 14a8 8 0 0 1 16 0"/><rect x="3" y="14" width="4" height="6" rx="2"/><rect x="17" y="14" width="4" height="6" rx="2"/><path d="M12 21h4a3 3 0 0 0 3-3"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#" aria-label="起量首页">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M8 23V17M14 23V13M20 23V9M26 23V5" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="26" cy="5" r="2.4" fill="#C84222"/>
+        </svg>
+      </span>
+      <span class="brand-word"><strong>起量</strong><span>QILIANG</span></span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="#product">产品</a>
+      <a href="#templates">模板</a>
+      <a href="#app">App</a>
+      <a href="#pricing">价格</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-ghost btn-sm" type="button" data-login>登录</button>
+      <button class="btn btn-primary btn-sm" type="button" data-login>免费试用 7 天</button>
+      <button class="mobile-nav-toggle" id="mobileNav" type="button" aria-label="打开导航" aria-expanded="false">
+        <svg class="ic"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#product">产品</a>
+  <a href="#templates">模板</a>
+  <a href="#app">App</a>
+  <a href="#pricing">价格</a>
+  <a href="#faq">常见问题</a>
+  <a href="app.html">进入工作台</a>
+  <button class="btn btn-primary" type="button" data-login>免费试用 7 天</button>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">给中小业主的短视频营销工具</div>
+        <h1>不会拍，<br>也能<em>持续有视频。</em></h1>
+        <p class="hero-lead">说一句话，AI 做成片，直接发抖音、视频号、小红书。会员制软件，商家自己操作。</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" type="button" data-login>免费试用 7 天</button>
+          <a class="btn btn-ghost btn-lg" href="app.html">
+            看产品演示
+            <svg class="ic"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span><svg class="ic"><use href="#i-check"/></svg> 不需要会剪辑</span>
+          <span><svg class="ic"><use href="#i-check"/></svg> 不需要代运营</span>
+          <span><svg class="ic"><use href="#i-check"/></svg> 699 / 月起</span>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="float-card float-one">
+          <div class="float-dots"><i></i><i></i><i></i></div>
+          <strong>三平台版本已生成</strong>
+          <span>抖音 · 视频号 · 小红书</span>
+        </div>
+        <div class="float-card float-two">
+          <strong>配音完成</strong>
+          <span>老板娘 · 自然女声</span>
+        </div>
+        <div class="hero-phone">
+          <div class="hero-screen">
+            <div class="screen-top">
+              <span class="screen-pill">杭州 · 拱墅</span>
+              <span class="screen-follow">关注</span>
+            </div>
+            <div class="screen-copy">
+              <span class="screen-kicker">一家开了 12 年的小店</span>
+              <h2>只卖 3 样菜<br>却天天排队</h2>
+              <p>老板说：多的，我也做不过来。</p>
+            </div>
+            <div class="screen-bottom">
+              <span class="screen-avatar">巷</span>
+              <div><strong>巷子口小馆</strong><small>杭州 · 人均 ¥28</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="wrap proof-inner">
+      <div class="proof-item"><strong>3 个平台</strong><span>抖音 / 视频号 / 小红书</span></div>
+      <div class="proof-item"><strong>4 个模板</strong><span>本地生活 / 带货 / 口播 / 小红书</span></div>
+      <div class="proof-item"><strong>15 条 / 月</strong><span>会员每月可生成</span></div>
+      <div class="proof-item"><strong>0 人工代做</strong><span>商家自己操作</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="product">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">HOW IT WORKS</div>
+          <h2>一句话，三步。</h2>
+          <p>不需要学拍摄，不需要写脚本，也不需要等设计师排期。</p>
+        </div>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <h3>说一句</h3>
+          <p>给谁看、想要什么。比如：「给社区小馆做一条 30 秒到店视频」。</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <h3>选模板</h3>
+          <p>脚本、画面、配音、字幕自动生成。你只需要选一个方向。</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <h3>发布</h3>
+          <p>三平台版本一次生成。抖音直发，视频号 / 小红书确认后发。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap feature-grid">
+      <div class="feature-list">
+        <div class="feature-card">
+          <svg class="ic"><use href="#i-text"/></svg>
+          <h3>一句话出脚本</h3>
+          <p>不用写文案。系统按平台和行业生成口播、标题和 CTA。</p>
+        </div>
+        <div class="feature-card">
+          <svg class="ic"><use href="#i-film"/></svg>
+          <h3>5 个镜头自动补</h3>
+          <p>实拍不够，AI 补空镜。门头、菜品、环境、客人反应都能生成。</p>
+        </div>
+        <div class="feature-card">
+          <svg class="ic"><use href="#i-voice"/></svg>
+          <h3>3 种声音配音</h3>
+          <p>老板、老板娘、旁白。字幕按语义断句，不用逐字改。</p>
+        </div>
+        <div class="feature-card">
+          <svg class="ic"><use href="#i-send"/></svg>
+          <h3>三平台适配</h3>
+          <p>9:16、3:4、标题、封面、话题自动重写，不是简单裁切。</p>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div class="eyebrow">ONE TAKE</div>
+        <h3>从一句话<br>到可发布成片。</h3>
+        <p>默认 8 分钟。你只做选择，机器做重复劳动。</p>
+        <div class="mini-phone">
+          <div class="mini-screen">
+            <strong>只卖 3 样菜<br>却天天排队</strong>
+            <span>巷子口小馆 · 杭州</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="product-frame">
+        <div class="browser-bar"><i></i><i></i><i></i><span>app.qiliang.ai / 创作</span></div>
+        <div class="mock-app">
+          <aside class="mock-side">
+            <div class="mock-brand"><i></i>起量</div>
+            <div class="mock-nav">
+              <span>工作台</span>
+              <span class="active">创作</span>
+              <span>发布</span>
+              <span>数据</span>
+            </div>
+          </aside>
+          <div class="mock-main">
+            <div class="mock-phone">
+              <div class="mock-phone-screen">
+                <strong>只卖 3 样菜<br>却天天排队</strong>
+                <span>杭州 · 人均 ¥28</span>
+              </div>
+            </div>
+          </div>
+          <aside class="mock-panel">
+            <h4>画面</h4>
+            <div class="mock-row"><b>1</b><span>门头推近</span><span>3s</span></div>
+            <div class="mock-row"><b>2</b><span>菜单特写</span><span>3s</span></div>
+            <div class="mock-row"><b>3</b><span>老板炒菜</span><span>6s</span></div>
+            <div class="mock-row"><b>4</b><span>菜品上桌</span><span>8s</span></div>
+            <div class="mock-row"><b>5</b><span>客人反应</span><span>10s</span></div>
+            <div class="mock-cta">生成成片</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="templates">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">TEMPLATES</div>
+          <h2>不用从空白开始。</h2>
+          <p>选一个结构，换成你的店、你的产品、你的话。</p>
+        </div>
+        <div class="section-action"><a class="btn btn-ghost btn-sm" href="app.html">在软件里看全部</a></div>
+      </div>
+      <div class="template-grid">
+        <div class="template-card"><div class="template-art ta1"><strong>老板口述<br>到店引流</strong></div><div class="template-meta"><span>本地生活</span><small>30 秒 · 视频号</small></div></div>
+        <div class="template-card"><div class="template-art ta2"><strong>3 个细节<br>卖出产品</strong></div><div class="template-meta"><span>电商带货</span><small>28 秒 · 抖音</small></div></div>
+        <div class="template-card"><div class="template-art ta3"><strong>一句话<br>讲清楚</strong></div><div class="template-meta"><span>知识口播</span><small>45 秒 · 三平台</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="app" style="padding-top:0">
+    <div class="wrap app-band">
+      <div>
+        <div class="eyebrow">MOBILE APP</div>
+        <h2>手机上，<br>30 秒发一条。</h2>
+        <p>首页、创作、发布、数据、我的。把整条流水线装进口袋，等位、通勤、关店后都能发。</p>
+        <div class="app-band-actions">
+          <a class="btn btn-primary" href="mobile.html">体验移动版 App</a>
+          <span class="app-band-note">无需下载 · 浏览器直接打开</span>
+        </div>
+      </div>
+      <div class="app-band-visual">
+        <div class="app-mini">
+          <div class="app-mini-status"><span>9:41</span><span>5G ▮▮▮</span></div>
+          <div class="app-mini-screen">
+            <strong>只卖 3 样菜<br>却天天排队</strong>
+            <span>巷子口小馆 · 杭州</span>
+          </div>
+          <div class="app-mini-tabs">
+            <span>首页</span>
+            <span>发布</span>
+            <span class="mini-create">+</span>
+            <span>数据</span>
+            <span>我的</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">WHO IT'S FOR</div>
+          <h2>给没有内容团队的人。</h2>
+          <p>不是给专业剪辑师，是给每天做生意、还要自己发视频的老板。</p>
+        </div>
+      </div>
+      <div class="case-grid">
+        <div class="case-card">
+          <span class="case-icon"><svg class="ic"><use href="#i-store"/></svg></span>
+          <h3>本地生活</h3>
+          <p>餐饮、美业、亲子、休闲娱乐。</p>
+          <ul><li>到店 / 团购核销</li><li>老板本人出镜</li><li>视频号优先</li></ul>
+        </div>
+        <div class="case-card">
+          <span class="case-icon"><svg class="ic"><use href="#i-bag"/></svg></span>
+          <h3>电商带货</h3>
+          <p>抖音小店、视频号小店、小商家。</p>
+          <ul><li>3 个卖点快速测</li><li>千川素材</li><li>低成本迭代</li></ul>
+        </div>
+        <div class="case-card">
+          <span class="case-icon"><svg class="ic"><use href="#i-service"/></svg></span>
+          <h3>服务门店</h3>
+          <p>维修、家政、教培、咨询。</p>
+          <ul><li>信任型内容</li><li>问答口播</li><li>私域承接</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">MEMBERSHIP</div>
+          <h2>成为会员，自己操作。</h2>
+          <p>只卖软件。没有代运营，没有拍摄，没有设计外包。</p>
+        </div>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-name">免费体验</div>
+          <div class="price">¥0<small>/月</small></div>
+          <p class="price-desc">先跑通一条</p>
+          <ul class="price-list">
+            <li>3 条 / 月</li>
+            <li>1 个账号</li>
+            <li>带水印</li>
+            <li>基础模板</li>
+          </ul>
+          <button class="btn btn-ghost btn-block" type="button" data-login>免费开始</button>
+        </div>
+        <div class="price-card featured">
+          <div class="price-name">起量会员 · 最受欢迎</div>
+          <div class="price">¥699<small>/月</small></div>
+          <p class="price-desc">每周更新，自己运营</p>
+          <ul class="price-list">
+            <li>15 条 / 月</li>
+            <li>3 个平台账号</li>
+            <li>1080P 无水印</li>
+            <li>全部模板</li>
+            <li>三平台适配</li>
+            <li>数据复盘</li>
+          </ul>
+          <button class="btn btn-primary btn-block" type="button" data-login>免费试用 7 天</button>
+        </div>
+        <div class="price-card">
+          <div class="price-name">年付会员</div>
+          <div class="price">¥6,710<small>/年</small></div>
+          <p class="price-desc">省 20%，适合稳定使用</p>
+          <ul class="price-list">
+            <li>会员全部权益</li>
+            <li>12 个月</li>
+            <li>年付折扣</li>
+            <li>优先支持</li>
+          </ul>
+          <button class="btn btn-ghost btn-block" type="button" data-login>选择年付</button>
+        </div>
+      </div>
+      <p class="price-note">会员是软件订阅，不含代运营、拍摄、设计外包。商家自己操作，平台不承接后期服务。</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">FAQ</div>
+          <h2>开始之前，先弄清楚。</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q" type="button">需要会剪辑吗？<svg class="ic"><use href="#i-plus"/></svg></button>
+          <div class="faq-a">不需要。默认流程是脚本、画面、配音、成片自动生成，你只做选择和确认。专业用户也可以逐镜调整。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">三个平台能全自动发布吗？<svg class="ic"><use href="#i-plus"/></svg></button>
+          <div class="faq-a">抖音开放平台支持创建视频接口，可以 API 直发。视频号和小红书目前用半自动：生成发布包，打开官方页面确认，不做模拟点击。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">会员包含代运营或设计吗？<svg class="ic"><use href="#i-plus"/></svg></button>
+          <div class="faq-a">不包含。平台只提供软件、模板和自动化。没有代运营、拍摄、设计外包，也没有人工代做。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">适合哪些商家？<svg class="ic"><use href="#i-plus"/></svg></button>
+          <div class="faq-a">本地生活、电商带货、服务门店。只要你每周需要发内容、但没有内容团队，就适合。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">可以先用免费版吗？<svg class="ic"><use href="#i-plus"/></svg></button>
+          <div class="faq-a">可以。免费体验每月 3 条、1 个账号、带水印；满意后再升级会员。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <div>
+        <h2>把下一条视频，<br>交给起量。</h2>
+        <p>会员制软件，商家自己操作。699/月，免费试用 7 天。</p>
+      </div>
+      <button class="btn btn-lg" type="button" data-login>免费试用 7 天</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 23V17M14 23V13M20 23V9M26 23V5" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+              <circle cx="26" cy="5" r="2.4" fill="#C84222"/>
+            </svg>
+          </span>
+          <span class="brand-word"><strong>起量</strong><span>QILIANG</span></span>
+        </a>
+        <p>给大量中小业主的自动化营销短视频工具。只卖软件，商家自己操作。</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col"><strong>产品</strong><a href="#product">功能</a><a href="#templates">模板</a><a href="app.html">进入工作台</a><a href="mobile.html">移动版 App</a></div>
+        <div class="footer-col"><strong>价格</strong><a href="#pricing">会员方案</a><a href="#faq">常见问题</a><a href="#" data-login>登录</a></div>
+        <div class="footer-col"><strong>关于</strong><a href="#faq">服务边界</a><a href="#pricing">只卖软件</a><a href="#faq">联系我们</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 起量 QILIANG · 杭州</span>
+      <span>会员制软件 · 不含代运营 / 拍摄 / 设计外包</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="loginModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="modal-head">
+      <div>
+        <div class="eyebrow" style="font-size:12px;color:var(--muted);letter-spacing:.08em">WELCOME</div>
+        <h2 id="loginTitle">登录起量</h2>
+        <p>免费试用 7 天。商家自己操作，不需要后期服务。</p>
+      </div>
+      <button class="modal-close" type="button" data-close aria-label="关闭"><svg class="ic"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="field">
+      <label for="phone">手机号</label>
+      <input id="phone" type="tel" placeholder="输入手机号" autocomplete="tel">
+    </div>
+    <div class="field">
+      <label for="code">验证码</label>
+      <div class="code-row">
+        <input id="code" type="text" placeholder="6 位验证码" autocomplete="one-time-code">
+        <button class="btn btn-ghost" id="sendCode" type="button">获取验证码</button>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-block btn-lg" id="loginBtn" type="button">登录并进入工作台</button>
+    <div class="modal-note">演示站点：不发送真实短信。点击登录会直接进入产品原型。</div>
+    <div style="margin-top:14px;text-align:center"><a class="btn btn-ghost btn-sm" href="app.html">先看看演示</a></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>方法与局限 · LeadScope</title>
+<meta name="description" content="LeadScope 的数据来源、字段定义、可跟单指数构成、已知局限与复现方式。">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236ea8ff'/%3E%3Cpath d='M9 21l5-10 4 7 5-4' stroke='%2305070d' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="method">
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LS</span>
+      <span>LeadScope<small style="display:block">带单透视</small></span>
+    </a>
+    <nav class="nav">
+      <a data-nav="home" href="index.html">结论</a>
+      <a data-nav="board" href="board.html">榜单</a>
+      <a data-nav="analysis" href="analysis.html">拆解</a>
+      <a data-nav="simulator" href="simulator.html">模拟器</a>
+      <a data-nav="playbook" href="playbook.html">学习</a>
+      <a data-nav="method" href="method.html">方法</a>
+    </nav>
+    <span class="pill-live"><i class="dot"></i><span id="asOf">—</span></span>
+  </div>
+</header>
+
+<main>
+<div class="wrap" style="padding-top:52px">
+  <div class="eyebrow">方法与局限</div>
+  <h1 style="font-size:clamp(30px,3.4vw,44px);max-width:24ch;margin-bottom:14px">这份数据是怎么来的</h1>
+  <p class="lede" style="max-width:72ch">
+    一个诚实的数据产品，必须把「哪里可能错」写在最显眼的地方。下面是完整的口径、局限与复现步骤。
+  </p>
+</div>
+
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">01 / 来源</div><h2>抓取链路</h2></div></div>
+  <div class="grid-2">
+    <div class="prose">
+      <p><strong>原始数据：</strong>Binance Copy Trading（USDT-M 永续合约带单组合）的公开档案，包含组合净值收益、最大回撤、胜率、平均盈亏、交易笔数、跟踪天数等字段。</p>
+      <p><strong>获取方式：</strong>通过 Meror 的公开接口读取其镜像档案（源标注为 <code>Binance Copy Trading (lead traders)</code>，典型延迟 30 秒）。抓取时间见页头。</p>
+      <p><strong>为什么不直连币安：</strong>币安现货与合约页面对非登录会话返回 Cloudflare 挑战（HTTP 202 / 403），跟单类 bapi 需要登录态；从本机直连时，<code>/bapi/copy-trading/*</code> 返回 403、<code>/bapi/futures/*</code> 的旧路径已全部 404。镜像接口是目前唯一可批量取到结构化字段的路径。</p>
+      <div class="callout warn">这意味着：<b>字段口径由镜像方定义</b>，与币安页面上显示的数字可能存在轻微差异。我们把它当作「同口径的相对排序」使用，而不是当作审计级账本。</div>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:14px">样本漏斗</div>
+      <table style="font-size:12.5px">
+        <tbody>
+          <tr><td class="l">被持续跟踪的带单员</td><td class="num">11,942</td></tr>
+          <tr><td class="l">通过平台基础门槛</td><td class="num">2,114</td></tr>
+          <tr><td class="l">本次取得完整 30 天数据</td><td class="num">931</td></tr>
+          <tr><td class="l">其中跟踪满 90 天</td><td class="num">931</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:12px">覆盖率：合格样本的 44.0%，全量的 7.8%。抓取采用「多排序键 × 分页」的并集方式（按 30 天/7 天/全期/夏普/胜率/回撤/交易数等排序各取前 800），以尽量逼近全量，但仍有缺口。</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">02 / 口径</div><h2>字段定义</h2></div></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="l" style="width:170px">字段</th><th class="l">定义</th></tr></thead>
+      <tbody>
+        <tr><td class="l">30 天收益</td><td class="l">组合净值近 30 天涨跌幅，对应币安榜单的 30D ROI。</td></tr>
+        <tr><td class="l">7 天收益</td><td class="l">近 7 天净值涨跌幅。</td></tr>
+        <tr><td class="l">前 60 天收益</td><td class="l">由全期收益与 30 天收益反推：<code>(1+全期) / (1+30天) − 1</code>。用于判断收益是延续还是回本。</td></tr>
+        <tr><td class="l">最大回撤</td><td class="l">跟踪期内净值峰值到谷底的最大跌幅（负数）。</td></tr>
+        <tr><td class="l">胜率 / 盈亏比</td><td class="l">盈利笔数占比；平均盈利 ÷ |平均亏损|。盈亏比 &gt; 1 为正偏结构。</td></tr>
+        <tr><td class="l">笔/月</td><td class="l">月均交易笔数，用于估计跟单人的滑点与手续费负担。</td></tr>
+        <tr><td class="l">账面逐笔期望</td><td class="l"><code>胜率 × 平均盈利 − (1−胜率) × |平均亏损|</code>，仅作结构诊断，不含未平仓头寸。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">03 / 指数</div><h2>可跟单指数（0–100）</h2>
+    <p>它不是「收益率评分」，而是一个「跟单人能不能活着拿到这份收益」的代理变量。权重刻意偏向风险与延续性，而不是收益。</p>
+  </div></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="l" style="width:150px">分项</th><th style="width:70px">权重</th><th class="l">规则</th></tr></thead>
+      <tbody>
+        <tr><td class="l">生存（回撤）</td><td class="num">30</td><td class="l"><code>30 × e^(−|回撤| / 22)</code>。回撤 10% ≈ 19 分，25% ≈ 10 分，50% ≈ 3 分。</td></tr>
+        <tr><td class="l">延续性</td><td class="num">20</td><td class="l">前 60 天与近 7 天都为正 = 20；只有一个为正 = 8；都为负 = 0。</td></tr>
+        <tr><td class="l">风险调整收益</td><td class="num">20</td><td class="l">30 天收益 / (回撤 + 8)，封顶 20 分；回撤 &gt; 50% 打 0.45 折，&gt; 70% 打 0.2 折。</td></tr>
+        <tr><td class="l">收益结构</td><td class="num">15</td><td class="l">盈亏比 ≥ 1.1 且胜率 33–70% 得满分；小赢大亏（盈亏比 &lt; 0.45 且胜率 &gt; 72%）得 2 分。</td></tr>
+        <tr><td class="l">成本 / 频率</td><td class="num">8</td><td class="l">≤60 笔/月得 8 分，&gt;400 笔得 0 分。另对 &gt;500 笔/月整体乘 0.75、&gt;1000 笔乘 0.55。</td></tr>
+        <tr><td class="l">记录长度</td><td class="num">7</td><td class="l">≥180 天 7 分，≥90 天 5 分，&lt;60 天 1 分。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:12px">阈值：≥65 可小额试跟，45–65 先观察，&lt;45 不建议跟。931 位中三者分别占 6.9%、27.2%、65.9%。</p>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">04 / 局限</div><h2>七个必须知道的偏差</h2></div></div>
+  <div class="grid-2">
+    <div class="prose">
+      <ol>
+        <li><strong>跟踪期只有 90 天。</strong>所有账户的「全期」都不超过 90 天，无法覆盖一轮完整牛熊；「前 60 天」也只是同一段短历史的切片。</li>
+        <li><strong>只包含存活组合。</strong>爆仓、关闭、隐藏的组合不在样本里。这是最严重的偏差，方向明确：让我们低估亏损面。</li>
+        <li><strong>覆盖率 44%。</strong>931 / 2,114，缺口部分可能包含未被抓到的极端值。</li>
+        <li><strong>平均盈亏口径未披露。</strong>镜像方的 <code>avgWin / avgLoss</code> 未说明是按仓位还是按权益计，因此「逐笔期望」只能作结构参考。</li>
+        <li><strong>回撤可能被低估。</strong>若回撤基于日频净值，日内插针可能未计入。</li>
+        <li><strong>缺少跟单人实际盈亏。</strong>我们没有拿到「跟随者 PnL」字段，这是判断跟单价值最直接的证据，只能通过模拟器近似。</li>
+        <li><strong>无资金费率与借贷成本。</strong>永续合约的资金费率在持仓周期长时会显著影响结果。</li>
+      </ol>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:14px">这些偏差会不会推翻结论？</div>
+      <p class="note" style="color:var(--muted);font-size:13.2px;line-height:1.8">
+        大部分偏差的方向是<b style="color:#ffb6c3">让带单员看起来更好</b>（存活者偏差、回撤低估、缺跟单人 PnL）。
+        也就是说，真实情况大概率比本文更差，而不是更好。
+      </p>
+      <div class="hr"></div>
+      <p class="note" style="color:var(--muted);font-size:13.2px;line-height:1.8">
+        唯一可能反向的偏差是「覆盖率 44%」：如果未抓到的样本恰好更健康，收益分布会被低估。
+        但 −0.03 的持续性与 8/10 的前期亏损，很难用这一点解释。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head"><div><div class="sec-no">05 / 复现</div><h2>自己跑一遍</h2></div></div>
+  <div class="grid-2">
+    <div class="prose">
+      <p>数据文件在 <code>assets/data.js</code>，字段为短键（<code>h</code> 编号、<code>m</code> 30 天、<code>dd</code> 回撤、<code>p</code> 前 60 天…）。刷新只需替换该文件。</p>
+      <p>抓取与清洗脚本：<code>data/fetch.py</code>（多排序键并集 + 分页），统计口径：<code>data/build_data.py</code>。分析逻辑（指数、模拟器）在 <code>assets/engine.js</code>，纯函数，可在 Node 中直接调用。</p>
+      <p class="note">如果你有币安登录态，可直接调用 <code>/bapi/copy-trading/v1/…/lead-portfolio/list</code> 取官方口径数据，届时 <code>avgWin/avgLoss</code> 与「跟单人 PnL」都会更可靠。</p>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:10px">镜像接口</div>
+      <pre style="margin:0;overflow:auto;font-family:var(--mono);font-size:11.5px;line-height:1.75;color:#c3cde0"><code>GET https://meror.ca/api/traders
+    ?sourceId=binance_copy
+    &amp;sort=return_month
+    &amp;limit=200&amp;offset=0
+
+# 排序键：return_today | return_week
+#         return_month | return_m3
+#         return_all | sharpe | win_rate
+#         drawdown | trades | score</code></pre>
+      <p class="note" style="margin-top:10px">单次上限 200 条、offset 上限约 800，因此需多排序键取并集。</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="card" style="border-color:rgba(255,92,122,.25);background:linear-gradient(180deg,rgba(255,92,122,.05),var(--panel))">
+    <div class="badge avoid" style="margin-bottom:10px">免责声明</div>
+    <p class="note" style="color:var(--muted);font-size:13.2px;line-height:1.85;margin:0">
+      本站为研究与教育项目，不提供交易建议、不代客理财、不构成任何形式的要约。
+      合约交易与跟单交易具有高杠杆风险，可能导致本金全部损失；历史收益不代表未来表现，排行榜数据不构成收益承诺。
+      文中所有数字来自第三方镜像，可能存在误差，请以币安官方页面为准。请仅使用可承受损失的资金，并遵守所在司法辖区的法律法规。
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="color:#95a2bd;margin-bottom:8px">LeadScope · 带单透视</div>
+      <div>数据快照 <span id="asOf3">—</span>（UTC+8）</div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">结论</a><a href="board.html">榜单</a><a href="analysis.html">拆解</a><a href="simulator.html">模拟器</a><a href="playbook.html">学习</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

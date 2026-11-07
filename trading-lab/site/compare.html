@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多指标对比 · 净值曲线叠加 · 技术分析研究实验室</title><meta name="description" content="将多个技术指标的净值曲线与买入持有叠加对比，支持四个市场与全样本/样本外区间切换。">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9b26a%22/><text x=%2216%22 y=%2222%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23151009%22 font-family=%22Arial%22 font-weight=%22bold%22>T</text></svg>">
+
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="logo" href="index.html"><span class="mark">T</span>技术分析研究实验室</a>
+  <div class="nav-links">
+    <a href="index.html" class="">首页</a>
+    <a href="books.html" class="">权威书单</a>
+    <a href="indicators.html" class="on">指标测试</a>
+    <a href="ranking.html" class="">收益率排名</a>
+    <a href="summary.html" class="">归纳总结</a>
+    <a href="method.html" class="">方法与数据</a>
+  </div>
+</div></nav>
+<header class="hero" style="padding-bottom:24px"><div class="wrap">
+  <div class="kicker">COMPARE INDICATORS</div>
+  <h1>多指标<span class="n">同台</span>对比</h1>
+  <p class="lede">勾选 2–6 个指标，在同一张图上比较它们的净值曲线与买入持有的差距。默认已选沪深300，可切换市场。</p>
+  <div class="hero-cta"><a class="btn" href="ranking.html">← 返回排名</a><a class="btn" href="indicators.html">指标测试台</a></div>
+</div></header>
+<section style="padding-top:0"><div class="wrap">
+  <div class="controls" style="margin-bottom:18px">
+    <div class="ctrl"><label>市场</label><select id="cmp-market"><option value="csi300">沪深300</option><option value="sse">上证指数</option><option value="sp500">标普500</option><option value="ndx">纳斯达克100</option></select></div>
+    <div class="ctrl"><label>区间</label><select id="cmp-range"><option value="full">全样本 2005–2026</option><option value="oos">样本外 2016–2026</option></select></div>
+    <button class="btn gold" id="cmp-run" style="padding:8px 16px">更新图表</button>
+    <button class="btn" id="cmp-clear" style="padding:8px 14px">清空</button>
+  </div>
+  <div class="grid" style="grid-template-columns:280px 1fr;gap:20px;align-items:start">
+    <div class="card" style="max-height:640px;overflow:auto"><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">趋势与系统交易</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="aroon"> Aroon</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="sma"> SMA 均线</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="ichimoku"> 一目均衡表</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="ema"> EMA 均线</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="supertrend"> Supertrend</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="adx"> ADX 趋向</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="psar"> 抛物线 SAR</label></div></div><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">量价与订单流</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="obv"> OBV 能量潮</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="volratio"> 量比</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="mfi"> MFI</label></div></div><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">震荡与均值回归</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="cci"> CCI</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="stoch"> KDJ 随机指标</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="rsi"> RSI</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="willr"> Williams %R</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="stochrsi"> StochRSI</label></div></div><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">结构与心理价位</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="pivot"> 结构突破</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="round"> 整数关口</label></div></div><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">突破与趋势启动</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="donchian"> 唐奇安通道</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="high52"> 52周新高</label></div></div><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">动量与相对强弱</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="roc"> ROC 动量</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="tsmom"> 时序动量</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="macd"> MACD</label></div></div><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">波动率与通道</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="boll"> 布林带</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="keltner"> 肯特纳通道</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="atr"> ATR 波动过滤</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="bollrev"> 布林带回归</label></div></div><div style="margin-bottom:14px"><div class="dim" style="font-size:12px;margin-bottom:6px">组合与自适应</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="voltarget"> 波动率择时</label><label class="chip" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line2);border-radius:8px;font-size:12.5px;cursor:pointer">
+        <input type="checkbox" value="trendmom"> 趋势+动量</label></div></div>
+      <button class="btn" id="cmp-top" style="width:100%;justify-content:center;margin-top:8px">选择排名前 5</button>
+    </div>
+    <div>
+      <div class="chart-card"><div class="chart-head"><h3 id="cmp-title">净值对比</h3><div class="legend" id="cmp-legend"></div></div>
+        <div id="cmp-chart" style="height:380px"></div>
+      </div>
+      <div class="table-wrap" style="margin-top:16px"><table><thead><tr><th class="l">指标</th><th>年化</th><th>基准</th><th>超额</th><th>最大回撤</th><th>夏普</th><th>交易</th></tr></thead>
+        <tbody id="cmp-table"><tr><td colspan="7" class="l dim">请选择指标</td></tr></tbody></table></div>
+      <div class="note blue" style="margin-top:14px">曲线均为归一化净值（起点 = 1）。同一套成本假设下，曲线越平、回撤越小，通常代表风险控制越好，而不是收益越高。</div>
+    </div>
+  </div>
+</div></section>
+<script src="data/brief.js"></script>
+<script src="data/curves-all.js"></script>
+<script src="data/markets.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/compare.js"></script><footer class="footer"><div class="wrap"><div class="row">
+  <div><b style="color:var(--muted)">技术分析研究实验室</b> · 33 本权威著作 × 28 个技术指标 × 4 大市场 × 21 年历史数据</div>
+  <div>数据：东方财富公开日线 · 回测口径见 <a href="method.html" style="color:var(--gold)">方法与数据</a></div>
+</div><div style="margin-top:14px;max-width:900px">风险声明：本站所有回测结果均为历史统计，不构成任何投资建议。历史表现不代表未来收益；技术指标在样本外经常失效，实盘还需考虑流动性、税费、涨跌停与执行滑点。市场有风险，决策需独立。</div></div></footer></body></html>

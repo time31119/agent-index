@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeadScope · 币安合约带单员收益榜的真相</title>
+<meta name="description" content="抓取 931 位币安 USDT-M 合约带单员的 30 天收益、回撤与逐笔结构，检验榜单前十名到底是策略还是运气，并给出可执行的跟单判断框架。">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236ea8ff'/%3E%3Cpath d='M9 21l5-10 4 7 5-4' stroke='%2305070d' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home">
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">LS</span>
+      <span>LeadScope<small style="display:block">带单透视</small></span>
+    </a>
+    <nav class="nav">
+      <a data-nav="home" href="index.html">结论</a>
+      <a data-nav="board" href="board.html">榜单</a>
+      <a data-nav="analysis" href="analysis.html">拆解</a>
+      <a data-nav="simulator" href="simulator.html">模拟器</a>
+      <a data-nav="playbook" href="playbook.html">学习</a>
+      <a data-nav="method" href="method.html">方法</a>
+    </nav>
+    <span class="pill-live"><i class="dot"></i><span id="asOf">—</span></span>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div class="eyebrow">Binance · USDT-M 永续合约跟单 · 快照 <span id="asOfTop">2026-11-05</span></div>
+  <h1>30 天赚 <em>493%</em> 的带单员，<br>前两个月先亏了 <em>80%</em></h1>
+  <p class="lede">
+    我们把币安合约带单区 <b>931 个可核验账户</b>的收益、回撤和逐笔结构全部摊开。
+    结论有点刺眼：<b>30 天收益榜前十名里，8 位在此之前是亏损的</b>，6 位回撤超过 75%；
+    榜单收益与前 60 天表现的相关性是 <b>−0.03</b>——也就是说，排行榜对你未来 30 天的收益，几乎没有预测力。
+  </p>
+  <div class="verdict">
+    <span class="tag bad">✕ 照 ROI 榜无脑跟单 · 不建议</span>
+    <span class="tag good">✓ 值得学：仓位、止损、期望值</span>
+    <span class="tag warn">! 可跟类型：低回撤 + 前期正收益</span>
+  </div>
+  <aside class="hero-meta">
+    <div class="hm-title">数据快照</div>
+    <div class="hm-row"><span>数据源</span><b>Binance Copy Trading</b></div>
+    <div class="hm-row"><span>获取方式</span><b>Meror 镜像接口</b></div>
+    <div class="hm-row"><span>样本</span><b>931 / 2,114 合格</b></div>
+    <div class="hm-row"><span>跟踪窗口</span><b>30 天 · 最长 90 天</b></div>
+    <div class="hm-row"><span>收益口径</span><b>净值，未扣滑点</b></div>
+    <div class="hm-row"><span>抓取时间</span><b id="asOfH">—</b></div>
+    <a class="hm-link" href="method.html">方法与局限 →</a>
+  </aside>
+  <div class="tiles" id="tiles"></div>
+  <p class="note" style="margin-top:10px">
+    样本：Meror 镜像的 Binance Copy Trading 带单员档案，抓取于 <span id="asOf2">—</span>（UTC+8）。
+    收益为组合净值口径，<b>未扣除</b>跟单人的滑点、手续费与利润分成。详见 <a href="method.html" style="color:#95a2bd;border-bottom:1px solid #232d42">方法与局限</a>。
+  </p>
+</div>
+
+<section class="wrap reveal" id="board-preview">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">01 / 榜单</div>
+      <h2>30 天收益率前十名</h2>
+      <p>按合约跟单组合的近 30 天净值收益率排序。第 5 列「前 60 天」是由全期收益反推的同一账户在更早两个月的表现——它决定了这份收益是延续，还是回本。</p>
+    </div>
+    <a href="board.html" class="tag ghost" style="flex:none">查看全部 931 位 →</a>
+  </div>
+  <div class="table-wrap scroll-x">
+    <table id="top10">
+      <thead>
+        <tr>
+          <th style="width:44px">#</th><th class="l">带单员</th>
+          <th>30 天</th><th>7 天</th><th>前 60 天</th><th>最大回撤</th><th>指数</th><th style="text-align:left">判定</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:12px">
+    「指数」= LeadScope 可跟单指数（0–100），由回撤 30 分、延续性 20 分、风险调整收益 20 分、收益结构 15 分、成本 8 分、记录长度 7 分构成，详见 <a href="method.html" style="color:#95a2bd">方法</a>。
+  </p>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">02 / 证据</div>
+      <h2>先看形状，再看分布</h2>
+      <p>横轴是 30 天收益（平方根刻度，避免小数值挤成一团），纵轴是历史最大回撤。黄色高亮的是榜单前十名。</p>
+    </div>
+  </div>
+  <div class="grid-2" style="grid-template-columns:1.35fr 1fr">
+    <div class="chart-box" style="padding-bottom:6px">
+      <div class="chart-title"><h3>收益 vs 回撤</h3><span>n = 931</span></div>
+      <p class="chart-sub">越靠右收益越高，越靠上回撤越小。真正值得跟的人应该在右上角；而榜单前十名几乎全部落在右下角。</p>
+      <canvas id="scatter"></canvas>
+      <div class="legend">
+        <span><i style="background:#2ee6a8"></i>可小额试跟</span>
+        <span><i style="background:#ffc857"></i>先观察</span>
+        <span><i style="background:#ff5c7a"></i>不建议跟</span>
+        <span><i style="background:#ffc857;border-radius:50%"></i>榜单前十</span>
+      </div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title"><h3>30 天收益分布</h3><span>n = 931</span></div>
+      <p class="chart-sub">中位数只有 +0.25%：一半的带单员在最近 30 天里没有为跟单人赚到钱。</p>
+      <canvas id="hist"></canvas>
+      <p class="note" style="margin-top:6px">★ 黄色 = 30 天收益 ≥ 50% 的区间；前十名全部落在最右两档（133%–493%）。</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">03 / 判断</div>
+      <h2>这不是策略，是一次反弹</h2>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="prose">
+      <p><strong>冠军账户的收益结构，是典型的「亏损后加杠杆抢回本」。</strong>排名第一的账户 30 天 +493%，但在此之前的两个月亏掉约 80%，历史最大回撤 88%。这种曲线的数学特征是：先输掉大部分本金，再用剩下的零头去博高杠杆——回本需要的涨幅被杠杆放大，恰好押对方向就能做出惊人的月度收益，押错就归零。</p>
+      <p><strong>榜单只截取了它最好的 30 天。</strong>币安按 30 天 ROI 排序，而 30 天是一个极短的窗口：任何高杠杆策略在 90 天里有很大概率出现一段「运气窗口」。我们测了同一批账户 30 天收益与更早 60 天收益的秩相关，结果是 −0.03，统计上等于「毫无关系」。</p>
+      <p><strong>跟单人还要再打一次折。</strong>利润分成 10%–30%、双边手续费、滑点、低于最小下单额被跳过的订单，这四项全部由跟单人承担。带单员 +135% 的 30 天，跟单人拿到的往往只有一半，而回撤是 100% 承受。</p>
+      <div class="callout bad">
+        <strong>最危险的一类：</strong>胜率 85%+、平均盈利极小、平均亏损极大、回撤 80%+ —— 这不是「稳」，是把爆仓概率往后推。榜单里有 4 位属于这种结构。
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:14px">931 位带单员的跟单判定</div>
+        <div id="distBars"></div>
+        <div class="hr" style="margin:22px 0"></div>
+        <div class="kpi-row">
+          <div class="kpi"><div class="v down">47.5%</div><div class="k">全期收益为负</div></div>
+          <div class="kpi"><div class="v down">52.1%</div><div class="k">夏普为负</div></div>
+          <div class="kpi"><div class="v">34%</div><div class="k">月交易 &gt;200 笔</div></div>
+        </div>
+        <p class="note" style="margin-top:16px">在「通过平台门槛」的带单员里，接近一半本身是亏钱的。平台展示的是存活者，不是胜者。</p>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <div style="font-size:12px;color:var(--dim);letter-spacing:.08em;margin-bottom:10px">如果你只想记住一句话</div>
+        <p style="margin:0;font-size:15.5px;line-height:1.8;color:#d8e0f0">
+          榜单回答的是「谁最近赚得最多」，<br>而跟单需要回答的是「<b style="color:#fff">谁在下一个 30 天不会先把我打残</b>」。<br>这两个问题的答案，通常不是同一个人。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">04 / 那还剩下什么</div>
+      <h2>有学习价值，但不是抄单</h2>
+      <p>这份数据真正能变现的地方，是把「高手的仓位管理」拆成可以照着做的规则，而不是复制他的开平仓。</p>
+    </div>
+  </div>
+  <div class="grid-3">
+    <a class="card" href="playbook.html" style="display:block">
+      <div class="badge ok" style="margin-bottom:12px">可复制</div>
+      <h3 style="margin:0 0 8px;font-size:17px">仓位与止损的 7 条硬规则</h3>
+      <p class="note" style="color:var(--muted);font-size:13.5px">从 931 份档案里反推出来的共性：活得久的账户，单笔风险几乎都锁在 1–2%，且都有明确的失效条件。</p>
+      <span style="color:#6ea8ff;font-size:13px">打开学习手册 →</span>
+    </a>
+    <a class="card" href="simulator.html" style="display:block">
+      <div class="badge warn" style="margin-bottom:12px">可量化</div>
+      <h3 style="margin:0 0 8px;font-size:17px">先算清楚跟单损耗</h3>
+      <p class="note" style="color:var(--muted);font-size:13.5px">把你选中的带单员的胜率、盈亏比、交易频率输进去，用蒙特卡洛跑 3000 条路径，看分成和滑点之后你还剩多少。</p>
+      <span style="color:#6ea8ff;font-size:13px">打开模拟器 →</span>
+    </a>
+    <a class="card" href="analysis.html" style="display:block">
+      <div class="badge ghost" style="margin-bottom:12px">可验证</div>
+      <h3 style="margin:0 0 8px;font-size:17px">六节拆解：从口径到幸存者</h3>
+      <p class="note" style="color:var(--muted);font-size:13.5px">ROI 口径为什么会骗人、样本是怎么被筛掉的、持续性为什么测出来是 0、以及那 2 个例外凭什么例外。</p>
+      <span style="color:#6ea8ff;font-size:13px">阅读拆解 →</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div style="color:#95a2bd;margin-bottom:8px">LeadScope · 带单透视</div>
+      <div>数据快照 <span id="asOf3">—</span>（UTC+8）· 仅供研究，不构成投资建议。</div>
+    </div>
+    <div class="foot-links">
+      <a href="board.html">榜单</a><a href="analysis.html">拆解</a><a href="simulator.html">模拟器</a><a href="playbook.html">学习</a><a href="method.html">方法与局限</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

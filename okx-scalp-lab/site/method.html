@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>方法与局限 — SCALP//LAB</title>
+<meta name="description" content="OKX 永续 30 分钟策略回测的方法：数据源、成交假设、6bp 成本、1x 名义本金、排名口径、已知局限与复现步骤。">
+<meta name="theme-color" content="#070908">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c9ff4a'/%3E%3Cpath d='M16 21h20c7 0 11 4 11 10s-4 10-11 10H22l-4 10H8l14-30z' fill='%23070908'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="method">
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="index.html" aria-label="SCALP LAB 首页">
+      <span class="brand-mark">S//L</span>
+      <span class="brand-word"><b>SCALP//LAB</b><small>OKX PERP · 30M RESEARCH</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航"><a class="" href="index.html"><span class="n">01</span>首页</a><a class="" href="ranking.html"><span class="n">02</span>排名</a><a class="" href="strategies.html"><span class="n">03</span>策略库</a><a class="" href="data.html"><span class="n">04</span>指标数据</a><a class="active" href="method.html"><span class="n">05</span>方法</a></nav>
+    <div class="status"><span class="dot"></span><span>DATA · 2026-11-04 15:00 UTC</span></div>
+    <button class="nav-toggle" type="button" aria-expanded="false">MENU</button>
+  </div>
+</header>
+<div class="tape">
+  <div class="shell tape-in">
+    <div class="tape-label">LIVE TAPE / UTC</div>
+    <div class="tape-items" data-tape><span class="tape-sym muted">LOADING MARKET DATA…</span></div>
+  </div>
+</div>
+<main >
+
+<section class="data-lead"><div class="shell">
+  <div>
+    <div class="eyebrow">METHOD / DATA / LIMITS</div>
+    <h1>先看尺子，<br><span class="lime">再看分数。</span></h1>
+    <p class="hero-lede" style="max-width:760px">回测最容易骗人的地方，不是策略逻辑，而是执行假设。这个页面把所有会影响结果的细节摊开：数据、成交、成本、排名口径、已知局限。读完再决定要不要相信上面的排名。</p>
+  </div>
+  <div class="data-stamp">SAMPLE<br><b>4,320 BARS/SYMBOL</b><br>4 SYMBOLS · 30M<br>1X · 6BP/SIDE</div>
+</div></section>
+
+<section class="section"><div class="shell">
+  <div class="method-grid">
+    <nav class="method-nav">
+      <a href="#data">01 / 数据</a>
+      <a href="#ladder">01B / 周期实验</a>
+      <a href="#execution">02 / 执行</a>
+      <a href="#cost">03 / 成本</a>
+      <a href="#ranking">04 / 排名口径</a>
+      <a href="#limits">05 / 已知局限</a>
+      <a href="#reproduce">06 / 复现</a>
+      <a href="#references">07 / 参考</a>
+    </nav>
+    <div class="method-body">
+      <h2 id="data">01 / 数据</h2>
+      <p>数据来自 <b>OKX 公共行情 API</b> 的 <code>/api/v5/market/history-candles</code>，抓取时间为 2026-11-04 15:00 UTC。四个品种：BTC、ETH、SOL、DOGE 的 USDT 本位永续合约（<code>*-USDT-SWAP</code>），30 分钟周期。每个品种 4,320 根 K 线，覆盖 83.7 天；四个品种取时间戳交集后对齐，确保同一根 K 线在所有品种上都能交易。</p>
+      <p>OHLCV 使用 OKX 返回的已确认 K 线（<code>confirm=1</code>），不使用未收盘的当前 K 线。成交量字段为合约张数，未做币本位换算；策略信号只使用价格与成交量相对变化，不依赖绝对单位。</p>
+      <div class="note-box">样本区间：2026-08-12 21:30 → 2026-11-04 15:00 UTC。理论 4,020 根，实际 4,020 根，缺失 0 根。前 300 根用于指标预热（EMA200 / Supertrend 等），有效回测约 83.7 天，不计入收益统计。</div>
+
+      <h2 id="ladder">01B / 周期实验</h2>
+      <p>为了回答“是不是周期越短越好”，同一批策略、同一段 90 天原始数据，分别在 5m / 15m / 30m / 1h 上重跑。每组使用 200 根预热，四品种等权，成本仍为 6bp/边。</p>
+      <div class="table-wrap"><table class="sym-table">
+  <thead><tr><th>周期</th><th>最优净收益</th><th>最优策略</th><th>正收益数</th><th>成本拖累 / 中位</th><th>买入持有</th></tr></thead>
+  <tbody><tr>
+  <td><b>5m</b><span class="sub">25,917 根 · 89.3 天</span></td>
+  <td class="down">-20.88%</td>
+  <td>布林带 + RSI(2) 回踩</td>
+  <td>0 / 10</td>
+  <td>62.3 pp</td>
+  <td>+24.57%</td>
+</tr><tr>
+  <td><b>15m</b><span class="sub">8,640 根 · 87.9 天</span></td>
+  <td class="down">-8.00%</td>
+  <td>肯特纳挤压突破</td>
+  <td>0 / 10</td>
+  <td>32.3 pp</td>
+  <td>+21.65%</td>
+</tr><tr>
+  <td><b>30m</b><span class="sub">4,320 根 · 85.8 天</span></td>
+  <td class="down">-0.28%</td>
+  <td>Supertrend 趋势带</td>
+  <td>0 / 10</td>
+  <td>17.6 pp</td>
+  <td>+23.54%</td>
+</tr><tr>
+  <td><b>1h</b><span class="sub">2,160 根 · 81.6 天</span></td>
+  <td class="up">+6.35%</td>
+  <td>肯特纳挤压突破</td>
+  <td>3 / 10</td>
+  <td>8.6 pp</td>
+  <td>+24.20%</td>
+</tr></tbody>
+</table></div>
+      <p style="margin-top:12px">结论很直接：<b>5m 上 0/10 为正，15m 上 0/10，30m 上 0/10，到 1h 才有 3/10 转正。</b>这不是指标突然变聪明，而是交易次数下降、成本占比下降。5m 的“灵敏”是用更高的换手买来的。</p>
+
+      <h2 id="execution">02 / 执行</h2>
+      <ul>
+        <li><b>信号时点：</b>每根 30m K 线收盘后计算指标与条件。</li>
+        <li><b>成交时点：</b>下一根 K 线开盘价成交，不使用当前收盘价，避免未来函数。</li>
+        <li><b>仓位：</b>1x 名义本金，只做多或做空，不叠加、不金字塔加仓。组合层面四品种等权，每根 K 线再平衡。</li>
+        <li><b>离场：</b>收盘确认的止损/止盈/通道离场；反向信号在下一根开盘直接反手。没有盘中触价成交，因此不会出现“同一根 K 线先止损还是先止盈”的路径歧义。</li>
+        <li><b>强平：</b>不模拟。1x 名义本金下，理论上不会被强平；若使用更高杠杆，结果不适用。</li>
+      </ul>
+
+      <h2 id="cost">03 / 成本</h2>
+      <p>单边成本 <b>0.06bp</b>：OKX 永续 VIP0 taker 手续费 0.05%（5bp）+ 1bp 滑点近似。每次反手按两次成交计费，即 12bp 往返。成本按成交名义金额扣除，直接计入现金。</p>
+      <p>没有计入：资金费率（8 小时一次，方向随市场变化）、盘口冲击、延迟、滑点随波动率放大、API 限频、强平罚金。对 30 分钟级别策略，这些项目通常会让真实结果比回测更差，而不是更好。</p>
+      <div class="note-box warn">零成本净值只用于诊断“成本拖累”，不是可实现的收益。若一个策略的毛收益很高、扣费后转负，说明它的边际优势不足以覆盖交易摩擦。</div>
+
+      <h2 id="ranking">04 / 排名口径</h2>
+      <p>主排名使用 <b>四品种等权组合的有效样本净收益（约 84 天）</b>。每个品种独立回测，组合净值按每根 K 线等权平均；不是把四段收益简单相加。这样单一品种的极端行情不会淹没其他品种。</p>
+      <div class="table-wrap"><table class="assume-table">
+        <tbody>
+          <tr><td>主指标</td><td>Net Return / 净收益（扣 6bp/边）</td></tr>
+          <tr><td>辅助指标</td><td>Profit Factor、Max Drawdown、Sharpe、Win Rate、Trades、Avg Hold</td></tr>
+          <tr><td>基准</td><td>四品种等权买入持有，同样扣一次期末平仓成本</td></tr>
+          <tr><td>年化</td><td>不展示年化。约 84 天的有效样本年化会放大噪声，容易制造不切实际的预期。</td></tr>
+          <tr><td>杠杆</td><td>1x。2x/3x 只是把收益与回撤同比例放大，不改变排名逻辑。</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2 id="limits">05 / 已知局限</h2>
+      <ul>
+        <li><b>样本只有 90 天数据窗口：</b>覆盖不了一轮完整牛熊，有效回测约 84 天。2026 年 8–11 月的波动结构不代表未来。</li>
+        <li><b>只测四个主流品种：</b>没有覆盖小市值 alt，结论不能直接外推到流动性差的合约。</li>
+        <li><b>参数是标准值：</b>没有做大规模参数寻优，避免过拟合；但也意味着每个策略都没有被“调到最优”。</li>
+        <li><b>没有强制日内平仓：</b>30m 策略的平均持仓约 8–12 小时，部分趋势单会持有过夜。若你要求严格日内，请在 Pine 代码中加入 UTC 会话收盘前平仓。</li>
+        <li><b>没有资金费率：</b>长期持仓的策略会被资金费率影响；超短线影响较小，但不是零。</li>
+        <li><b>没有盘口与延迟：</b>30m 策略对执行速度敏感，真实滑点可能高于 1bp，尤其是在插针与新闻行情。</li>
+        <li><b>Pine 代码不是逐行复刻：</b>社区脚本常有隐藏的 repaint、安全函数与默认参数差异；本站代码按页面规则重写，需在 TradingView 中独立验证。</li>
+      </ul>
+
+      <h2 id="reproduce">06 / 复现</h2>
+      <p>项目是一个纯静态站点，回测与建站脚本在 <code>scripts/</code>。需要 Python 3 与 numpy / pandas：</p>
+      <ol>
+        <li><code>python scripts/fetch_data.py</code> — 抓取 OKX 30m K 线到 <code>data/raw/</code>。</li>
+        <li><code>python scripts/fetch_extra.py</code> — 抓取最新 ticker / funding（可选）。</li>
+        <li><code>python scripts/backtest.py</code> — 生成 <code>data/results.json</code> 与 <code>site/data/lab.js</code>。</li>
+        <li><code>python scripts/build_site.py</code> — 生成全部 HTML 页面与 CSV。</li>
+        <li>直接双击 <code>site/index.html</code>，或用任意静态服务器指向 <code>site/</code>。</li>
+      </ol>
+      <p>所有页面通过 <code>&lt;script&gt;</code> 加载数据，没有 <code>fetch</code> 依赖，因此 <code>file://</code> 协议下也能正常显示图表。</p>
+
+      <h2 id="references">07 / 参考</h2>
+      <ul>
+        <li><a class="link-more" href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noopener">TradingView Pine Script v6 文档 ↗</a></li>
+        <li><a class="link-more" href="https://www.tradingview.com/scripts/" target="_blank" rel="noopener">TradingView 社区指标与策略库 ↗</a></li>
+        <li><a class="link-more" href="https://www.okx.com/docs-v5/en/" target="_blank" rel="noopener">OKX V5 API 文档 ↗</a></li>
+        <li><a class="link-more" href="https://www.okx.com/fees" target="_blank" rel="noopener">OKX 手续费说明 ↗</a></li>
+        <li>John Bollinger, <i>Bollinger on Bollinger Bands</i>；Perry Kaufman, <i>Trading Systems and Methods</i>；Connors &amp; Alvarez, <i>Short Term Trading Strategies That Work</i>。</li>
+      </ul>
+      <div class="note-box warn" style="margin-top:22px">本站是研究项目，不是信号服务。任何策略都可能失效；任何回测都可以被过度解读。先控制单笔风险，再谈收益率。</div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">S//L</span>
+        <div><b>SCALP//LAB</b><small>OKX PERPETUAL · 30M STRATEGY INDEX</small></div>
+      </div>
+      <div class="footer-links">
+        <a href="ranking.html">完整排名</a>
+        <a href="strategies.html">策略库</a>
+        <a href="data.html">指标数据</a>
+        <a href="method.html">方法与局限</a>
+        <a href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noopener">Pine 文档 ↗</a>
+        <a href="https://www.okx.com/docs-v5/en/" target="_blank" rel="noopener">OKX API ↗</a>
+      </div>
+    </div>
+    <p class="disclaimer">风险提示：本站所有收益、回撤、胜率均为历史回测统计，不是实盘业绩，也不构成任何投资建议。加密永续合约具有高杠杆、强平、资金费率与流动性风险；历史表现不代表未来收益。Pine Script 代码用于研究与教学，实盘前请在 TradingView 策略测试器中独立验证，并从小仓位开始。本站未使用杠杆、未计资金费率、未模拟盘口冲击，真实交易结果通常更差。</p>
+    <div class="footer-meta">
+      <span>数据：OKX 公共行情 API · 30m K 线 · 4,320 根/品种 · 抓取于 2026-11-04 15:00 UTC</span>
+      <span>构建：2026-11-04 15:34 UTC · 静态站点 · 无外部依赖</span>
+      <span>© <span id="year">2026</span> SCALP//LAB</span>
+    </div>
+  </div>
+</footer>
+<script src="data/lab.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

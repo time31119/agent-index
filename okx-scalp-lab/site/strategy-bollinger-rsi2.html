@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>布林带 + RSI(2) 回踩 — SCALP//LAB</title>
+<meta name="description" content="布林带 + RSI(2) 回踩：只在 200 EMA 顺势方向，等价格刺破布林带且 RSI(2) 极端。 90 天净收益 -7.58%，最大回撤 -10.80%，156 笔交易。附 Pine Script v6 代码与分品种回测。">
+<meta name="theme-color" content="#070908">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c9ff4a'/%3E%3Cpath d='M16 21h20c7 0 11 4 11 10s-4 10-11 10H22l-4 10H8l14-30z' fill='%23070908'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="strategies">
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="index.html" aria-label="SCALP LAB 首页">
+      <span class="brand-mark">S//L</span>
+      <span class="brand-word"><b>SCALP//LAB</b><small>OKX PERP · 30M RESEARCH</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航"><a class="" href="index.html"><span class="n">01</span>首页</a><a class="" href="ranking.html"><span class="n">02</span>排名</a><a class="active" href="strategies.html"><span class="n">03</span>策略库</a><a class="" href="data.html"><span class="n">04</span>指标数据</a><a class="" href="method.html"><span class="n">05</span>方法</a></nav>
+    <div class="status"><span class="dot"></span><span>DATA · 2026-11-04 15:00 UTC</span></div>
+    <button class="nav-toggle" type="button" aria-expanded="false">MENU</button>
+  </div>
+</header>
+<div class="tape">
+  <div class="shell tape-in">
+    <div class="tape-label">LIVE TAPE / UTC</div>
+    <div class="tape-items" data-tape><span class="tape-sym muted">LOADING MARKET DATA…</span></div>
+  </div>
+</div>
+<main data-strategy="bollinger-rsi2">
+
+<section class="detail-hero"><div class="shell">
+  <div class="breadcrumb"><a href="index.html">INDEX</a><span>/</span><a href="strategies.html">STRATEGIES</a><span>/</span><span class="muted">#04 BOLLINGER + RSI(2)</span></div>
+  <div class="detail-grid">
+    <aside class="detail-aside">
+      <div class="aside-rank"><span class="n">#04</span><span class="of">/ 10 · NET RETURN</span></div>
+      <h2 class="aside-name">布林带 + RSI(2) 回踩</h2>
+      <div class="aside-en">Bollinger + RSI(2) · 30M · OKX PERP</div>
+      <div class="aside-tags"><span class="fam-tag">均值回归</span><span class="fam-tag">1X</span><span class="fam-tag">LONG / SHORT</span></div>
+      <div class="aside-metrics">
+        <div><span>NET RETURN</span><b class="down">-7.58%</b></div>
+        <div><span>MAX DRAWDOWN</span><b class="down">-10.80%</b></div>
+        <div><span>PROFIT FACTOR</span><b>0.59</b></div>
+        <div><span>WIN RATE</span><b>39.7%</b></div>
+        <div><span>TRADES</span><b>156</b></div>
+        <div><span>AVG HOLD</span><b>7.4 <small class="dim">bars / 3.7h</small></b></div>
+        <div><span>SHARPE</span><b>-3.56</b></div>
+        <div><span>EXPOSURE</span><b>7.2%</b></div>
+      </div>
+      <div class="aside-signals"><h4>LATEST SIGNAL / 下一根 K 线</h4><div class="signal-row"><span>BTC/USDT</span><span class="signal flat">空仓</span></div><div class="signal-row"><span>ETH/USDT</span><span class="signal flat">空仓</span></div><div class="signal-row"><span>SOL/USDT</span><span class="signal flat">空仓</span></div><div class="signal-row"><span>DOGE/USDT</span><span class="signal flat">空仓</span></div></div>
+      <p class="aside-note">信号在 2026-11-04 15:00 UTC 的 30m 收盘生成，尚未成交。数据快照仅用于研究，不是实时交易指令。</p>
+    </aside>
+    <div class="detail-main">
+      <div class="eyebrow">STRATEGY #04 / 均值回归 / 30M</div>
+      <h1 class="detail-title">布林带 + RSI(2) 回踩</h1>
+      <p class="detail-tagline">只在 200 EMA 顺势方向，等价格刺破布林带且 RSI(2) 极端。</p>
+      <div class="detail-actions">
+        <a class="btn primary" href="https://www.tradingview.com/chart/?symbol=OKX%3ABTCUSDT.P&amp;interval=30" target="_blank" rel="noopener"><span>在 TradingView 打开</span><span class="arr">↗</span></a>
+        <a class="btn ghost" href="#code"><span>跳到 Pine 代码</span><span class="arr">↓</span></a>
+        <a class="btn ghost" href="https://www.okx.com/trade-swap/btc-usdt-swap" target="_blank" rel="noopener"><span>OKX 合约</span><span class="arr">↗</span></a>
+      </div>
+      <div class="detail-stats">
+        <div class="detail-stat"><span>NET RETURN / 84D</span><b class="down">-7.58%</b><small>四品种等权 · 扣费</small></div>
+        <div class="detail-stat"><span>MAX DRAWDOWN</span><b class="down">-10.80%</b><small>收盘净值口径</small></div>
+        <div class="detail-stat"><span>PROFIT FACTOR</span><b>0.59</b><small>毛盈利 / 毛亏损</small></div>
+        <div class="detail-stat"><span>COST DRAG</span><b class="down">4.5 pp</b><small>零成本净值 − 净净值</small></div>
+      </div>
+
+      <section class="detail-section">
+        <div class="panel">
+          <div class="panel-head"><div class="panel-title">EQUITY / <b>策略 vs 买入持有</b></div><div class="chart-tools">
+            <button class="chip on" data-series="net">策略</button>
+            <button class="chip" data-series="gross">零成本</button>
+            <button class="chip on" data-series="bh">买入持有</button>
+          </div></div>
+          <div class="chart-box"><canvas id="equity-chart"></canvas></div>
+          <div class="legend" id="equity-legend"></div>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <div class="panel">
+          <div class="panel-head"><div class="panel-title">DRAWDOWN / <b>水下曲线</b></div><div class="mono tiny dim">PEAK-TO-TROUGH · %</div></div>
+          <div class="chart-box" style="height:180px"><canvas id="dd-chart"></canvas></div>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h3><span class="no">01</span>策略逻辑</h3>
+        <p class="prose">布林带定义“短期偏离”，RSI(2) 定义“情绪极端”，200 EMA 定义“不要逆大势”。三条件同时满足才接回踩，回到中轨即走。</p>
+        <div class="split" style="margin-top:14px">
+          <div class="note-box"><b style="color:var(--lime)">优势 / EDGE.</b> 入场位置精确，止损天然清晰；RSI(2) 比 RSI(14) 更灵敏，适合 30 分钟级别的快速回归。</div>
+          <div class="note-box warn"><b style="color:var(--amber)">风险 / RISK.</b> 强趋势中“极端可以更极端”，逆势抄底容易被连续止损；固定 12 根 K 线的时间止损会砍掉慢回归。</div>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h3><span class="no">02</span>入场与离场规则</h3>
+        <div class="rule-cols">
+          <div class="rule-col long"><h4><i>L</i>做多 / LONG</h4><ul><li>收盘价 &lt; 布林下轨</li><li>RSI(2) &lt; 10</li><li>收盘价 &gt; EMA200</li></ul></div>
+          <div class="rule-col short"><h4><i>S</i>做空 / SHORT</h4><ul><li>收盘价 &gt; 布林上轨</li><li>RSI(2) &gt; 90</li><li>收盘价 &lt; EMA200</li></ul></div>
+          <div class="rule-col exit"><h4><i>X</i>离场 / EXIT</h4><ul><li>回到布林中轨</li><li>跌破 EMA200（多）/ 升破 EMA200（空）</li><li>持仓满 12 根</li></ul></div>
+        </div>
+        <div class="split" style="margin-top:10px">
+          <div class="table-wrap"><table class="param-table"><thead><tr><th>参数</th><th>取值</th></tr></thead><tbody><tr><td>布林带</td><td>20, 2.0</td></tr><tr><td>RSI</td><td>2</td></tr><tr><td>趋势过滤</td><td>EMA 200</td></tr><tr><td>最长持仓</td><td>12 根 / 1 小时</td></tr></tbody></table></div>
+          <div class="note-box">执行口径：30m 收盘计算信号 → 下一根开盘成交；反向信号直接反手；止损/止盈均以收盘确认。每次换手按 6bp/边计费。策略默认只做 1x 名义本金。</div>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h3><span class="no">03</span>分品种表现</h3>
+        <div class="table-wrap"><table class="sym-table">
+          <thead><tr><th>品种</th><th>策略净收益</th><th>买入持有</th><th>超额</th><th>盈亏比</th><th>胜率</th><th>交易</th><th>平均持仓</th></tr></thead>
+          <tbody><tr>
+  <td><b>BTC</b><span class="sub">BTC-USDT-SWAP</span></td>
+  <td class="down">-6.05%</td>
+  <td class="muted">+26.19%</td>
+  <td class="down">-32.24%</td>
+  <td>0.51</td>
+  <td>36.6%</td>
+  <td>41</td>
+  <td>7.2 <span class="dim">/ 3.6h</span></td>
+</tr><tr>
+  <td><b>ETH</b><span class="sub">ETH-USDT-SWAP</span></td>
+  <td class="down">-9.53%</td>
+  <td class="muted">+29.84%</td>
+  <td class="down">-39.37%</td>
+  <td>0.41</td>
+  <td>38.9%</td>
+  <td>36</td>
+  <td>7.2 <span class="dim">/ 3.6h</span></td>
+</tr><tr>
+  <td><b>SOL</b><span class="sub">SOL-USDT-SWAP</span></td>
+  <td class="down">-6.38%</td>
+  <td class="muted">+28.88%</td>
+  <td class="down">-35.26%</td>
+  <td>0.68</td>
+  <td>44.4%</td>
+  <td>36</td>
+  <td>7.3 <span class="dim">/ 3.6h</span></td>
+</tr><tr>
+  <td><b>DOGE</b><span class="sub">DOGE-USDT-SWAP</span></td>
+  <td class="down">-8.36%</td>
+  <td class="muted">+11.44%</td>
+  <td class="down">-19.80%</td>
+  <td>0.68</td>
+  <td>39.5%</td>
+  <td>43</td>
+  <td>8.0 <span class="dim">/ 4.0h</span></td>
+</tr></tbody>
+        </table></div>
+        <p class="prose" style="margin-top:12px;font-size:12px">最好：<b class="up">BTC</b>（-6.05%）；最差：<b class="down">ETH</b>（-9.53%）。同一套参数在不同品种上的差异，往往比策略本身的选择更重要。</p>
+      </section>
+
+      <section class="detail-section">
+        <h3><span class="no">04</span>月度收益</h3>
+        <div class="grid-4"><div class="insight" style="padding:16px"><div class="idx">2026-08</div><div class="big up" style="font-size:24px">+2.66%</div><p style="font-size:10px">组合净值月度变化</p></div><div class="insight" style="padding:16px"><div class="idx">2026-09</div><div class="big down" style="font-size:24px">-4.38%</div><p style="font-size:10px">组合净值月度变化</p></div><div class="insight" style="padding:16px"><div class="idx">2026-10</div><div class="big down" style="font-size:24px">-4.97%</div><p style="font-size:10px">组合净值月度变化</p></div><div class="insight" style="padding:16px"><div class="idx">2026-11</div><div class="big down" style="font-size:24px">-0.92%</div><p style="font-size:10px">组合净值月度变化</p></div></div>
+      </section>
+
+      <section class="detail-section">
+        <h3><span class="no">05</span>当前指标读数</h3>
+        <div class="table-wrap"><table class="sym-table">
+<thead><tr><th>指标 / INDICATOR</th><th>BTC</th><th>ETH</th><th>SOL</th><th>DOGE</th></tr></thead>
+<tbody><tr><td>最新价</td><td>80,133.10</td><td>2,439.63</td><td>97.35</td><td>0.07779</td></tr><tr><td>24H 涨跌</td><td>-1.56%</td><td>+3.53%</td><td>-4.53%</td><td>-2.53%</td></tr><tr><td>RSI 14</td><td>78.7</td><td>84.4</td><td>77.4</td><td>77.8</td></tr><tr><td>ATR 14 / %</td><td>421.83 <span class="dim">/ 0.53%</span></td><td>20.35 <span class="dim">/ 0.83%</span></td><td>0.88518 <span class="dim">/ 0.91%</span></td><td>0.00061 <span class="dim">/ 0.79%</span></td></tr><tr><td>ADX 14</td><td>32.0</td><td>36.3</td><td>20.1</td><td>20.8</td></tr><tr><td>Supertrend</td><td><span class="up">多</span> <span class="dim">78,372.19</span></td><td><span class="up">多</span> <span class="dim">2,342.33</span></td><td><span class="up">多</span> <span class="dim">93.33</span></td><td><span class="up">多</span> <span class="dim">0.07521</span></td></tr><tr><td>VWAP 偏离</td><td>+3.03%</td><td>+5.29%</td><td>+4.83%</td><td>+4.19%</td></tr><tr><td>MACD 柱</td><td><span class="up">114.8</span></td><td><span class="up">8.514</span></td><td><span class="up">0.3161</span></td><td><span class="up">0.000226</span></td></tr><tr><td>布林带宽</td><td>2.54%</td><td>5.49%</td><td>4.52%</td><td>3.92%</td></tr><tr><td>量比 / 20MA</td><td>1.99×</td><td>3.33×</td><td>2.21×</td><td>1.85×</td></tr></tbody></table></div>
+      </section>
+
+      <section class="detail-section" id="code">
+        <h3><span class="no">06</span>Pine Script v6 代码</h3>
+        <p class="prose" style="font-size:12px;margin-bottom:12px">以下代码是本站按上述规则重写的可运行版本，不是对某个 TradingView 社区脚本的逐行复制。默认佣金 0.06%/边、滑点 2 tick、1x 名义本金；把 <code>commission_value</code> 改成你的实际费率后再看结果。</p>
+        <div class="code-card">
+          <div class="code-head"><div class="l"><span class="lamp"></span><span class="lang">PINE SCRIPT / v6</span><span class="lines"></span></div><button class="copy-btn" data-copy="pine-code" type="button">COPY</button></div>
+          <pre><code id="pine-code" data-pine>//@version=6
+strategy(&quot;Bollinger + RSI(2) Pullback&quot;, overlay=true, initial_capital=10000,
+     default_qty_type=strategy.percent_of_equity, default_qty_value=100,
+     commission_type=strategy.commission.percent, commission_value=0.06,
+     slippage=2, pyramiding=0, calc_on_every_tick=false)
+
+basis = ta.sma(close, 20)
+dev   = 2.0 * ta.stdev(close, 20)
+upper = basis + dev
+lower = basis - dev
+r2    = ta.rsi(close, 2)
+ema200 = ta.ema(close, 200)
+
+longEntry  = close &lt; lower and r2 &lt; 10 and close &gt; ema200
+shortEntry = close &gt; upper and r2 &gt; 90 and close &lt; ema200
+longExit   = close &gt;= basis or close &lt; ema200
+shortExit  = close &lt;= basis or close &gt; ema200
+barsInTrade = strategy.opentrades &gt; 0 ? bar_index - strategy.opentrades.entry_bar_index(0) : 0
+
+if longEntry
+    strategy.entry(&quot;Long&quot;, strategy.long)
+if shortEntry
+    strategy.entry(&quot;Short&quot;, strategy.short)
+if longExit or shortExit or barsInTrade &gt;= 12
+    strategy.close_all()
+
+plot(basis, color=color.gray)
+plot(upper, color=color.red)
+plot(lower, color=color.green)
+</code></pre>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h3><span class="no">07</span>怎么用</h3>
+        <ol class="prose" style="padding-left:18px">
+          <li>在 TradingView 打开 <b>OKX:BTCUSDT.P</b> 或对应合约的 30 分钟图表。</li>
+          <li>打开 Pine 编辑器，新建策略，粘贴上面的代码，保存并添加到图表。</li>
+          <li>在「策略测试器」里把佣金设为 <b>0.06%</b>、滑点设为 <b>2 tick</b>，时间范围选最近 90 天。</li>
+          <li>先看回撤和交易次数，再看收益。若交易次数 &lt; 20，统计意义很弱；若成本拖累 &gt; 10pp，换手过高。</li>
+          <li>实盘前至少做一次样本外验证（例如最近 30 天）和一次参数扰动（±20%），不要只看最优参数。</li>
+        </ol>
+        <div class="note-box warn" style="margin-top:12px">当前 BTC 信号：<b>空仓</b>。这是研究信号，不是交易建议。加密永续合约有资金费率、强平与插针风险；30 分钟策略尤其依赖执行速度与滑点控制。</div>
+      </section>
+
+      <div class="cta" style="margin-top:44px;padding:24px 0">
+        <div><div class="mono tiny dim">PREV / NEXT</div><div style="margin-top:6px"><a class="link-more" href="strategy-donchian-breakout.html">← #03 唐奇安 20 突破</a></div></div>
+        <div style="text-align:right"><div class="mono tiny dim">NEXT RANK</div><div style="margin-top:6px"><a class="link-more" href="strategy-vwap-reclaim.html">#05 VWAP 回收 + 放量 →</a></div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">S//L</span>
+        <div><b>SCALP//LAB</b><small>OKX PERPETUAL · 30M STRATEGY INDEX</small></div>
+      </div>
+      <div class="footer-links">
+        <a href="ranking.html">完整排名</a>
+        <a href="strategies.html">策略库</a>
+        <a href="data.html">指标数据</a>
+        <a href="method.html">方法与局限</a>
+        <a href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noopener">Pine 文档 ↗</a>
+        <a href="https://www.okx.com/docs-v5/en/" target="_blank" rel="noopener">OKX API ↗</a>
+      </div>
+    </div>
+    <p class="disclaimer">风险提示：本站所有收益、回撤、胜率均为历史回测统计，不是实盘业绩，也不构成任何投资建议。加密永续合约具有高杠杆、强平、资金费率与流动性风险；历史表现不代表未来收益。Pine Script 代码用于研究与教学，实盘前请在 TradingView 策略测试器中独立验证，并从小仓位开始。本站未使用杠杆、未计资金费率、未模拟盘口冲击，真实交易结果通常更差。</p>
+    <div class="footer-meta">
+      <span>数据：OKX 公共行情 API · 30m K 线 · 4,320 根/品种 · 抓取于 2026-11-04 15:00 UTC</span>
+      <span>构建：2026-11-04 15:34 UTC · 静态站点 · 无外部依赖</span>
+      <span>© <span id="year">2026</span> SCALP//LAB</span>
+    </div>
+  </div>
+</footer>
+<script src="data/lab.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

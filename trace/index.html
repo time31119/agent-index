@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>循迹 TRACE · 链上永续合约跟单执行层</title>
+  <meta name="description" content="循迹是面向加密永续合约的跟单执行层。以 Hyperliquid 原生 WebSocket 捕获信号，用硬性滑点、杠杆与日亏熔断，把链上仓位复制到你的规则之内。">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#070a09">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="循迹 TRACE · 跟得快，更要跟得稳">
+  <meta property="og:description" content="链上永续合约跟单执行层。毫秒级信号，硬风控阀门，高水位分润。">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    window.addEventListener('error', function () {
+      document.documentElement.classList.remove('js');
+    });
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="utility-bar">
+      <div class="container utility-inner">
+        <span class="utility-brand">TRACE / 循迹 · COPY EXECUTION LAYER</span>
+        <span class="utility-center">ON-CHAIN PERPETUALS · SIGNAL → RISK → EXECUTION · DEMO</span>
+        <span class="utility-status"><i class="live-dot" aria-hidden="true"></i> 信号链路运行中 <span class="utility-time" id="clock">00:00:00</span> CST</span>
+      </div>
+    </div>
+
+    <nav class="main-nav container" aria-label="主导航">
+      <a class="brand" href="index.html" aria-label="循迹 TRACE 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 26L12 8L18 19L28 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/>
+          <circle cx="12" cy="8" r="2.2" fill="currentColor"/>
+          <circle cx="18" cy="19" r="2.2" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">循迹</span>
+        <span class="brand-wordmark">TRACE</span>
+      </a>
+
+      <div class="nav-links" id="siteMenu">
+        <a href="#sources">信号源</a>
+        <a href="#execution">执行链路</a>
+        <a href="#risk">风控阀门</a>
+        <a href="#profit">高水位分润</a>
+        <a href="compliance.html">合规边界</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="nav-login" href="terminal.html">工作台 / TERMINAL</a>
+        <button class="btn btn-primary btn-small" type="button" data-open-seed>预约种子名额 <span class="arrow" aria-hidden="true">↗</span></button>
+        <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="siteMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal"><span class="kicker-tag">PERP COPY</span> 链上信号 · 硬风控执行</p>
+          <h1 class="hero-title reveal" id="hero-title">
+            <span class="line">跟得快，</span>
+            <span class="line">更要<em>跟得稳</em>。</span>
+          </h1>
+          <p class="hero-sub reveal">以 <strong>Hyperliquid 原生 WebSocket</strong> 捕获链上永续仓位，把每一笔交易复制进你的滑点、杠杆与日亏熔断规则里。执行层不做收益承诺，只负责让跟随发生在边界之内。</p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="terminal.html">进入跟单工作台 <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost" href="#sources">查看信号源</a>
+          </div>
+
+          <dl class="hero-meta reveal">
+            <div>
+              <dt>Signal → Order / P95</dt>
+              <dd>186 <span>ms</span></dd>
+            </div>
+            <div>
+              <dt>Median Slippage</dt>
+              <dd>0.06 <span>%</span></dd>
+            </div>
+            <div>
+              <dt>Reconciliation Bias</dt>
+              <dd>0.31 <span>%</span></dd>
+            </div>
+          </dl>
+          <p class="hero-disclaimer reveal">产品原型 · 页面数据为演示样本 · 不构成投资建议</p>
+        </div>
+
+        <div class="console-wrap reveal" style="--delay:.12s">
+          <aside class="console" aria-label="实时信号执行面板演示">
+            <div class="console-head">
+              <span class="console-title"><i class="live-dot" aria-hidden="true"></i> Execution Console</span>
+              <span class="console-ref">SAMPLE FEED / DEMO</span>
+            </div>
+            <div class="console-body">
+              <div class="latency">
+                <div>
+                  <div class="latency-label">Signal arrival → order sent</div>
+                  <div class="latency-num">186<span>ms</span></div>
+                  <div class="latency-dist">P50 92ms / P99 340ms</div>
+                </div>
+                <div class="latency-side">
+                  <span class="tag tag-live">P95 · PASS</span>
+                  <div class="signal-bars" aria-hidden="true">
+                    <i style="--h:32%;--o:1;--d:.1s"></i>
+                    <i style="--h:48%;--o:2;--d:.25s"></i>
+                    <i style="--h:40%;--o:3;--d:.4s"></i>
+                    <i style="--h:64%;--o:4;--d:.55s"></i>
+                    <i style="--h:52%;--o:5;--d:.7s"></i>
+                    <i style="--h:78%;--o:6;--d:.85s"></i>
+                    <i style="--h:69%;--o:7;--d:1s"></i>
+                    <i style="--h:92%;--o:8;--d:1.15s"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="console-timeline">
+                <div class="event">
+                  <span class="event-time">14:32:08.412</span>
+                  <div class="event-main">
+                    <div class="event-title">BTC-PERP <span class="side side-long">OPEN LONG</span> 3.0x</div>
+                    <div class="event-sub">HL · ATLAS-07 · 0x7A3F…9C21 · Δ 0.50 BTC</div>
+                  </div>
+                  <span class="event-state ok">SIGNAL</span>
+                </div>
+                <div class="event">
+                  <span class="event-time">14:32:08.590</span>
+                  <div class="event-main">
+                    <div class="event-title">RISK ENGINE <span class="side side-long">PASS</span></div>
+                    <div class="event-sub">滑点 0.03% / 杠杆 3.0x / 日亏额度充足</div>
+                  </div>
+                  <span class="event-state ok">8 ms</span>
+                </div>
+                <div class="event">
+                  <span class="event-time">14:32:08.598</span>
+                  <div class="event-main">
+                    <div class="event-title">ORDER SENT <span class="side side-long">LIMIT GUARD</span></div>
+                    <div class="event-sub">0.0600 BTC @ 68,420.0 · MAX SLIP 0.30%</div>
+                  </div>
+                  <span class="event-state ok">41 ms</span>
+                </div>
+                <div class="event">
+                  <span class="event-time">14:32:09.071</span>
+                  <div class="event-main">
+                    <div class="event-title">FILLED <span class="side side-long">0.0600 BTC</span></div>
+                    <div class="event-sub">成交均价 68,441.5 · 实际滑点 +0.031%</div>
+                  </div>
+                  <span class="event-state ok">+0.031%</span>
+                </div>
+              </div>
+            </div>
+            <div class="console-foot">
+              <span class="ok">● HL: CONNECTED</span>
+              <span>OKX: POLLING 2S</span>
+              <span>QUEUE: 0 PENDING</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="metric-strip" aria-label="平台核心指标演示">
+      <div class="container metric-strip-grid">
+        <div class="metric-strip-item">
+          <div class="metric-strip-label"><i class="live-dot" aria-hidden="true"></i> 信号到达 → 下单发送</div>
+          <div class="metric-strip-value">186<small> ms</small><span class="metric-strip-delta">P95</span></div>
+        </div>
+        <div class="metric-strip-item">
+          <div class="metric-strip-label">实际滑点中位数</div>
+          <div class="metric-strip-value">0.06<small> %</small><span class="metric-strip-delta">24H</span></div>
+        </div>
+        <div class="metric-strip-item">
+          <div class="metric-strip-label">跟单成功率</div>
+          <div class="metric-strip-value">97.8<small> %</small><span class="metric-strip-delta">30D</span></div>
+        </div>
+        <div class="metric-strip-item">
+          <div class="metric-strip-label">仓位对账偏差</div>
+          <div class="metric-strip-value">0.31<small> %</small><span class="metric-strip-delta">30S</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="sources" aria-labelledby="sources-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-no">01 / SIGNALS</span>
+          <div>
+            <h2 class="section-title" id="sources-title">先有可信的信号，<br>再谈<em>跟随</em>。</h2>
+            <p class="section-desc">冷启动不追求“全球顶尖”，以技术链路验证为优先。每个信号源必须同时通过实盘时长、最大回撤与平均持仓时长的硬门槛，才允许出现在这里。</p>
+          </div>
+          <a class="section-link" href="terminal.html">打开信号工作台 ↗</a>
+        </div>
+
+        <div class="source-grid">
+          <article class="source-card featured reveal">
+            <div class="source-top">
+              <div class="source-id">
+                <span class="source-mark">HL</span>
+                <div>
+                  <h3 class="source-name">Hyperliquid / 链上原生</h3>
+                  <div class="source-alias">ATLAS-07 · 0x7A3F…9C21</div>
+                </div>
+              </div>
+              <span class="tag tag-live">P0 · LIVE</span>
+            </div>
+            <p class="source-note">订阅 <span class="mono">userEvents</span> 与 <span class="mono">clearinghouseState</span>，成交、资金费与持仓变化直接进入标准化层。自建重连与消息缺口补偿。</p>
+
+            <dl class="source-stats">
+              <div class="source-stat"><dt>实盘记录</dt><dd>14 <small>个月</small></dd></div>
+              <div class="source-stat"><dt>累计收益</dt><dd>+184.2<small>%</small></dd></div>
+              <div class="source-stat"><dt>最大回撤</dt><dd>-18.6<small>%</small></dd></div>
+              <div class="source-stat"><dt>夏普比率</dt><dd>2.41</dd></div>
+              <div class="source-stat"><dt>历史胜率</dt><dd>58.7<small>%</small></dd></div>
+              <div class="source-stat"><dt>平均持仓</dt><dd>6h 42m</dd></div>
+            </dl>
+
+            <div class="source-spark" aria-hidden="true">
+              <svg viewBox="0 0 300 40" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="hlFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c6f75a" stop-opacity=".26"/>
+                    <stop offset="1" stop-color="#c6f75a" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 34L22 31L44 33L66 27L88 29L110 22L132 24L154 17L176 21L198 14L220 16L242 9L264 12L286 5L300 7V40H0Z" fill="url(#hlFill)"/>
+                <path d="M0 34L22 31L44 33L66 27L88 29L110 22L132 24L154 17L176 21L198 14L220 16L242 9L264 12L286 5L300 7" fill="none" stroke="#c6f75a" stroke-width="1.4"/>
+                <circle cx="300" cy="7" r="2" fill="#c6f75a"/>
+              </svg>
+            </div>
+            <div class="source-foot">
+              <span>延迟 &lt; 200ms · 推送</span>
+              <a href="terminal.html">业绩档案 ↗</a>
+            </div>
+          </article>
+
+          <article class="source-card reveal" style="--delay:.08s">
+            <div class="source-top">
+              <div class="source-id">
+                <span class="source-mark">OK</span>
+                <div>
+                  <h3 class="source-name">OKX 公开带单</h3>
+                  <div class="source-alias">NOVA-03 · 公开端点</div>
+                </div>
+              </div>
+              <span class="tag tag-warm">P1 · BETA</span>
+            </div>
+            <p class="source-note">公开排名、当前持仓与历史仓位端点，无需鉴权。快照数据按 2 秒轮询，增量比对后入队，作为 Hyperliquid 的补充与备用。</p>
+
+            <dl class="source-stats">
+              <div class="source-stat"><dt>最大回撤</dt><dd>-22.1<small>%</small></dd></div>
+              <div class="source-stat"><dt>夏普比率</dt><dd>1.78</dd></div>
+              <div class="source-stat"><dt>历史胜率</dt><dd>55.2<small>%</small></dd></div>
+              <div class="source-stat"><dt>平均持仓</dt><dd>3h 18m</dd></div>
+            </dl>
+
+            <div class="source-spark" aria-hidden="true">
+              <svg viewBox="0 0 300 40" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="okxFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#5ee0bd" stop-opacity=".2"/>
+                    <stop offset="1" stop-color="#5ee0bd" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 36L24 32L48 34L72 25L96 28L120 20L144 26L168 19L192 23L216 13L240 18L264 10L288 14L300 9V40H0Z" fill="url(#okxFill)"/>
+                <path d="M0 36L24 32L48 34L72 25L96 28L120 20L144 26L168 19L192 23L216 13L240 18L264 10L288 14L300 9" fill="none" stroke="#5ee0bd" stroke-width="1.4"/>
+                <circle cx="300" cy="9" r="2" fill="#5ee0bd"/>
+              </svg>
+            </div>
+            <div class="source-foot">
+              <span>实盘 9 个月 · 2s 轮询</span>
+              <a href="terminal.html">加入观察列表 ↗</a>
+            </div>
+          </article>
+
+          <article class="source-card seed reveal" style="--delay:.16s">
+            <div class="source-top">
+              <div class="source-id">
+                <span class="source-mark">S</span>
+                <div>
+                  <h3 class="source-name">种子交易员</h3>
+                  <div class="source-alias">INVITE ONLY · Q1</div>
+                </div>
+              </div>
+              <span class="tag tag-soft">P2 · NEXT</span>
+            </div>
+            <p class="source-note">邀请制引入。用真实跟单记录验证执行链路，而不是先用业绩做营销。种子期零分润，跑通后进入 15%–20% 成长期分润。</p>
+
+            <ul class="seed-list">
+              <li>实盘记录 ≥ 6 个月</li>
+              <li>最大回撤 ≤ 40%</li>
+              <li>平均持仓时长 &gt; 1 小时</li>
+              <li>接受成交时间差与频率监控</li>
+            </ul>
+
+            <div class="seed-foot">
+              <button class="btn btn-ghost btn-small" type="button" data-open-seed data-seed-role="trader">申请成为种子信号源 <span class="arrow" aria-hidden="true">↗</span></button>
+            </div>
+            <div class="source-foot" style="margin-top:18px">
+              <span>零分润 · 技术对接支持</span>
+              <span>名额 5–8</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="threshold reveal">
+          <span class="threshold-label">准入硬门槛 / HARD FILTER</span>
+          <span class="threshold-item">实盘 ≥ 6 个月</span>
+          <span class="threshold-item">最大回撤 ≤ 40%</span>
+          <span class="threshold-item">平均持仓 &gt; 1h</span>
+          <span class="threshold-note">展示页强制呈现夏普、回撤、胜率与持仓时长 · 样本数据</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pipeline-band" id="execution" aria-labelledby="execution-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-no">02 / PIPELINE</span>
+          <div>
+            <h2 class="section-title" id="execution-title">从一笔链上成交，<br>到<em>你的订单</em>。</h2>
+            <p class="section-desc">信号读取与订单执行彻底解耦。至少一次送达配合事件 ID 幂等去重，让丢失与重复都停在队列之外。</p>
+          </div>
+          <span class="section-link" aria-hidden="true">SIGNAL → ORDER / 6 STEPS</span>
+        </div>
+
+        <div class="pipeline">
+          <span class="packet" aria-hidden="true"></span>
+          <div class="pipe-step">
+            <span class="pipe-no">01 / CAPTURE</span>
+            <h3>信号捕获</h3>
+            <p>订阅用户事件与持仓状态，记录到达时间戳。</p>
+            <span class="pipe-tech">Hyperliquid WS<br>OKX POLL 2S</span>
+          </div>
+          <div class="pipe-step">
+            <span class="pipe-no">02 / NORMALIZE</span>
+            <h3>标准化</h3>
+            <p>统一为内部 OrderEvent，附带唯一事件 ID。</p>
+            <span class="pipe-tech">ORDER EVENT v1<br>EVENT_ID / TS</span>
+          </div>
+          <div class="pipe-step">
+            <span class="pipe-no">03 / QUEUE</span>
+            <h3>持久化队列</h3>
+            <p>至少一次送达，执行端按 ID 去重。</p>
+            <span class="pipe-tech">KAFKA / RABBITMQ<br>AT-LEAST-ONCE</span>
+          </div>
+          <div class="pipe-step">
+            <span class="pipe-no">04 / SIZE</span>
+            <h3>仓位换算</h3>
+            <p>按资金比例换算，处理最小单位与精度。</p>
+            <span class="pipe-tech">CAPITAL RATIO<br>LOT / TICK ROUND</span>
+          </div>
+          <div class="pipe-step">
+            <span class="pipe-no">05 / RISK</span>
+            <h3>风控检查</h3>
+            <p>滑点、杠杆、保证金与熔断状态。</p>
+            <span class="pipe-tech">SLIPPAGE GUARD<br>CIRCUIT BREAKER</span>
+          </div>
+          <div class="pipe-step">
+            <span class="pipe-no">06 / EXECUTE</span>
+            <h3>执行与对账</h3>
+            <p>限价保护下单，回报同步，30 秒比对。</p>
+            <span class="pipe-tech">LIMIT PROTECTION<br>RECONCILE 30S</span>
+          </div>
+        </div>
+
+        <div class="pipeline-notes">
+          <article class="pipeline-note reveal">
+            <span class="note-no">A / IDEMPOTENCY</span>
+            <h4>重复执行是灾难，丢失也不可接受</h4>
+            <p>每条信号写入队列时生成唯一事件 ID。执行端以“事件 ID + 账户”为幂等键，重复消息只会命中已处理记录，不会产生第二笔订单。</p>
+          </article>
+          <article class="pipeline-note reveal" style="--delay:.06s">
+            <span class="note-no">B / PRECISION</span>
+            <h4>不足最小下单量，就明确失败</h4>
+            <p>换算结果低于交易所最小单位时不强行下单，标记失败并通知跟随者。部分平仓按相同比例镜像，同时对数量取整，避免长期偏差累积。</p>
+          </article>
+          <article class="pipeline-note reveal" style="--delay:.12s">
+            <span class="note-no">C / RECONCILE</span>
+            <h4>每 30 秒，仓位必须对得上</h4>
+            <p>拉取交易员持仓并与跟随者仓位汇总比对。系统性偏差超过 5% 时告警，暂停该信号源的新开仓，等待人工排查。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="risk" aria-labelledby="risk-title">
+      <div class="container risk-grid">
+        <div class="risk-copy">
+          <span class="eyebrow">03 / RISK VALVES</span>
+          <h2 id="risk-title">你的阀门，<br>不是<em>交易员的</em>。</h2>
+          <p>跟随者拥有独立于信号源的硬性风控参数。它们不参与收益预测，只在执行前做最后一道判断：该不该发这笔单，发多大，发到什么价格。</p>
+
+          <div class="risk-rules">
+            <div class="risk-rule">
+              <span class="idx">01</span>
+              <div>
+                <strong>单笔滑点容忍度</strong>
+                <p>开仓超出阈值直接取消；平仓超出阈值转市价，确保仓位退出。</p>
+              </div>
+            </div>
+            <div class="risk-rule">
+              <span class="idx">02</span>
+              <div>
+                <strong>单日最大亏损熔断</strong>
+                <p>触及后停止跟单并平仓，可选择保留现有仓位，次日手动恢复。</p>
+              </div>
+            </div>
+            <div class="risk-rule">
+              <span class="idx">03</span>
+              <div>
+                <strong>自定义杠杆上限</strong>
+                <p>允许以低于交易员的杠杆复制，保证金占用与强平距离由你决定。</p>
+              </div>
+            </div>
+            <div class="risk-rule">
+              <span class="idx">04</span>
+              <div>
+                <strong>定比 / 定额跟单</strong>
+                <p>定比为默认，按保证金比例复制；定额适合固定风险预算的进阶用户。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="risk-console reveal">
+          <div class="risk-console-head">
+            <span><i class="live-dot" aria-hidden="true"></i> Risk Valve / 风控阀门</span>
+            <span class="mono" style="color:var(--faint)">LIVE PREVIEW</span>
+          </div>
+          <div class="risk-console-body">
+            <div class="range-row">
+              <div class="range-head">
+                <span class="range-label">单笔最大滑点 <small>超过阈值的开仓单将被取消</small></span>
+                <span class="range-value" id="slipValue">0.30%</span>
+              </div>
+              <input id="slipRange" type="range" min="0.05" max="1" step="0.05" value="0.30" aria-label="单笔最大滑点百分比">
+              <div class="range-scale"><span>0.05%</span><span>1.00%</span></div>
+            </div>
+
+            <div class="range-row">
+              <div class="range-head">
+                <span class="range-label">杠杆上限 <small>可低于交易员，不可高于其设置</small></span>
+                <span class="range-value" id="levValue">3.0x</span>
+              </div>
+              <input id="levRange" type="range" min="1" max="3" step="0.1" value="3" aria-label="杠杆上限">
+              <div class="range-scale"><span>1x</span><span>3x</span></div>
+            </div>
+
+            <div class="range-row">
+              <div class="range-head">
+                <span class="range-label">单日亏损熔断 <small>按跟单账户权益计算</small></span>
+                <span class="range-value" id="lossValue">8%</span>
+              </div>
+              <input id="lossRange" type="range" min="2" max="20" step="1" value="8" aria-label="单日亏损熔断百分比">
+              <div class="range-scale"><span>2%</span><span>20%</span></div>
+            </div>
+
+            <div class="mode-row">
+              <span class="mode-label">跟单模式 / COPY MODE</span>
+              <div class="mode-toggle" role="group" aria-label="跟单模式">
+                <button type="button" data-mode="ratio" aria-pressed="true">定比跟单</button>
+                <button type="button" data-mode="fixed" aria-pressed="false">定额跟单</button>
+              </div>
+            </div>
+
+            <p class="risk-assumptions">示例输入 · LONG 示例 / 跟随资金 $12,500 / 交易员权益 $250,000 / 仓位变动 1.20 BTC / 信号价 $68,420 / 交易员杠杆 3.0x</p>
+
+            <dl class="risk-readout" aria-live="polite">
+              <div class="readout-cell"><dt>跟随比例</dt><dd id="outRatio">5.00%</dd></div>
+              <div class="readout-cell"><dt>下单数量</dt><dd id="outQty">0.0600 BTC</dd></div>
+              <div class="readout-cell"><dt>名义价值</dt><dd id="outNotional">$4,105</dd></div>
+              <div class="readout-cell"><dt>滑点限价</dt><dd id="outLimit">$68,625</dd></div>
+              <div class="readout-cell"><dt>所需保证金</dt><dd id="outMargin">$1,368</dd></div>
+              <div class="readout-cell"><dt>日亏熔断额</dt><dd id="outDaily">$1,000</dd></div>
+            </dl>
+
+            <div class="risk-alert">
+              <span>若市价偏离信号价 &gt; <b id="outSlip">0.30%</b>：开仓单取消并记录失败原因；平仓单转市价成交，确保仓位退出。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profit-wrap" id="profit" aria-labelledby="profit-title">
+      <div class="container profit-grid">
+        <div class="profit-copy">
+          <span class="eyebrow">04 / PROFIT SHARING</span>
+          <h2 id="profit-title">只为<em>新高</em><br>付费。</h2>
+          <p>高水位线模型：仅当跟随者账户总盈亏突破历史已分润高点，才对新增盈利抽成。回撤期间不收费，回到前高也不重复收费。跟随者停止跟单或交易员关闭带单项目时触发提前结算。</p>
+
+          <dl class="profit-facts">
+            <div class="profit-fact"><dt>结算频率</dt><dd>每日 · UTC+8 00:00</dd></div>
+            <div class="profit-fact"><dt>冷启动期</dt><dd>10%</dd></div>
+            <div class="profit-fact"><dt>成长期</dt><dd>15%–20%</dd></div>
+            <div class="profit-fact"><dt>亏损</dt><dd>不抽成</dd></div>
+          </dl>
+        </div>
+
+        <div class="profit-card reveal">
+          <div class="profit-card-head">
+            <span><i class="live-dot" aria-hidden="true"></i> High-water Mark / 高水位结算</span>
+            <div class="profit-tabs" role="group" aria-label="选择结算日">
+              <button type="button" data-day="1" aria-pressed="true">第 1 天</button>
+              <button type="button" data-day="2" aria-pressed="false">第 2 天</button>
+              <button type="button" data-day="3" aria-pressed="false">第 3 天</button>
+            </div>
+          </div>
+
+          <div class="profit-chart">
+            <svg viewBox="0 0 680 280" role="img" aria-label="高水位分润示例：初始 1000 USDT，第 1 天 1200，第 2 天 900，第 3 天 1300">
+              <defs>
+                <linearGradient id="profitArea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#c6f75a" stop-opacity=".16"/>
+                  <stop offset="1" stop-color="#c6f75a" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line class="chart-grid" x1="70" y1="36" x2="575" y2="36"/>
+              <line class="chart-grid" x1="70" y1="84" x2="575" y2="84"/>
+              <line class="chart-grid" x1="70" y1="132" x2="575" y2="132"/>
+              <line class="chart-grid" x1="70" y1="180" x2="575" y2="180"/>
+              <line class="chart-grid" x1="70" y1="228" x2="575" y2="228"/>
+              <text x="592" y="39">1400</text>
+              <text x="592" y="87">1250</text>
+              <text x="592" y="135">1100</text>
+              <text x="592" y="183">950</text>
+              <text x="592" y="231">800</text>
+
+              <path class="chart-area" d="M90 164L240 100L400 196L560 68L560 228L90 228Z"/>
+              <path class="chart-line" d="M90 164L240 100L400 196L560 68"/>
+              <line class="chart-hwm" x1="90" y1="100" x2="560" y2="100"/>
+              <text x="90" y="92" style="fill:#c6f75a">HWM 1200</text>
+
+              <circle class="chart-point" data-chart-day="1" cx="240" cy="100" r="3.5"/>
+              <circle class="chart-point" data-chart-day="2" cx="400" cy="196" r="3.5"/>
+              <circle class="chart-point" data-chart-day="3" cx="560" cy="68" r="3.5"/>
+              <circle class="chart-point active" data-chart-day="0" cx="90" cy="164" r="3.5"/>
+
+              <text x="90" y="252" text-anchor="middle">初始</text>
+              <text x="240" y="252" text-anchor="middle">第 1 天</text>
+              <text x="400" y="252" text-anchor="middle">第 2 天</text>
+              <text x="560" y="252" text-anchor="middle">第 3 天</text>
+            </svg>
+          </div>
+
+          <dl class="profit-readout" aria-live="polite">
+            <div><dt>结算后权益</dt><dd id="profitEquity">$1,200.00</dd></div>
+            <div><dt>当前高水位</dt><dd id="profitHwm">$1,200.00</dd></div>
+            <div><dt>本次分润 10%</dt><dd class="fee-value" id="profitFee">$20.00</dd></div>
+          </dl>
+          <p class="profit-note" id="profitNote">第 1 天：账户从 $1,000 升至 $1,200，新增盈利 $200，按 10% 收取 $20。高水位更新为 $1,200。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="compliance" aria-labelledby="compliance-title">
+      <div class="container compliance-grid">
+        <div class="compliance-copy">
+          <span class="eyebrow">05 / BOUNDARIES</span>
+          <h2 id="compliance-title">先划线，<br>再<em>开门</em>。</h2>
+          <p>初期不面向美国、加拿大、英国、中国大陆与香港零售用户开放。地域屏蔽在注册环节通过 IP 与证件签发地双重校验；上线前仍需当地法律意见。</p>
+
+          <div class="region-panel">
+            <div class="region-panel-head">
+              <span>地域策略 / REGION POLICY</span>
+              <span>SAMPLE</span>
+            </div>
+            <div class="region-row"><span>美国 / United States</span><span class="status status-blocked">不开放</span></div>
+            <div class="region-row"><span>加拿大 / Canada</span><span class="status status-blocked">不开放</span></div>
+            <div class="region-row"><span>英国 / United Kingdom</span><span class="status status-blocked">不开放</span></div>
+            <div class="region-row"><span>中国大陆 / Mainland China</span><span class="status status-blocked">不开放</span></div>
+            <div class="region-row"><span>香港（零售）/ Hong Kong Retail</span><span class="status status-blocked">不开放</span></div>
+            <div class="region-row"><span>香港（专业投资者）/ PI</span><span class="status status-limited">单独审核</span></div>
+            <div class="region-row"><span>其他司法辖区 / Other</span><span class="status status-limited">逐项评估</span></div>
+            <div class="region-foot">专业投资者认定与保证金要求以当地持牌法律意见为准。此表为产品原型演示，不构成展业依据。</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="kyc">
+            <div class="kyc-head">
+              <span>入金前必须完成 / PRE-TRADE GATE</span>
+              <span class="tag tag-live">3 STEPS</span>
+            </div>
+            <div class="kyc-steps">
+              <div class="kyc-step">
+                <span class="kyc-no">01 / KYC</span>
+                <h4>身份与活体</h4>
+                <p>证件 OCR、活体检测与签发地校验，确认人、证、地区一致。</p>
+              </div>
+              <div class="kyc-step">
+                <span class="kyc-no">02 / SUITABILITY</span>
+                <h4>衍生品适当性</h4>
+                <p>评估杠杆、保证金与强平机制理解。未通过者不得开启跟单。</p>
+              </div>
+              <div class="kyc-step">
+                <span class="kyc-no">03 / DISCLOSURE</span>
+                <h4>风险披露确认</h4>
+                <p>明确跟单不保证收益、滑点导致偏离、极端行情可能穿仓。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="monitor">
+            <div class="monitor-item">
+              <span class="mono">CONFLICT / 5S</span>
+              <strong>老鼠仓识别</strong>
+              <p>比对交易员个人账户与带单账户成交时间差，开仓前 5 秒内同方向成交标记可疑。</p>
+            </div>
+            <div class="monitor-item">
+              <span class="mono">FREQUENCY / 50</span>
+              <strong>异常频率检测</strong>
+              <p>单日开平仓超过 50 次触发人工审核，防止以刷量制造分润。</p>
+            </div>
+            <div class="monitor-item">
+              <span class="mono">HUMAN / REVIEW</span>
+              <strong>人工复核</strong>
+              <p>可疑信号源暂停新开仓，保留只读数据，复核通过后才恢复。</p>
+            </div>
+          </div>
+
+          <p class="legal-note">加密永续合约具有高杠杆与强平风险，可能导致本金全部损失。本站为产品原型，页面数据为演示样本，不构成投资建议、要约或收益承诺。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-no">06 / ROADMAP</span>
+          <div>
+            <h2 class="section-title" id="roadmap-title">先跑通链路，<br>再谈<em>生态</em>。</h2>
+            <p class="section-desc">每个阶段都有可验证的验收标准。数据不达标，不进入下一阶段；这比“上线时间表”更重要。</p>
+          </div>
+          <span class="section-link" aria-hidden="true">9 WEEKS + / STAGED</span>
+        </div>
+
+        <div class="roadmap">
+          <article class="roadmap-item done reveal">
+            <div class="roadmap-top">
+              <span class="roadmap-week">WEEK 01–02</span>
+              <span class="roadmap-status done">DONE</span>
+            </div>
+            <h3>信号链路验证</h3>
+            <p>接入 3–5 个已知地址的 <span class="mono">userEvents</span>，记录到达时间戳，与盘口理论成交价对比。</p>
+            <ul class="roadmap-list">
+              <li>P95 延迟 &lt; 500ms</li>
+              <li>理论滑点中位数 &lt; 0.1%</li>
+              <li>输出延迟与滑点分布</li>
+            </ul>
+            <div class="roadmap-bar"><span style="width:100%"></span></div>
+            <span class="roadmap-pct">100%</span>
+          </article>
+
+          <article class="roadmap-item active reveal" style="--delay:.06s">
+            <div class="roadmap-top">
+              <span class="roadmap-week">WEEK 03–04</span>
+              <span class="roadmap-status active">IN PROGRESS</span>
+            </div>
+            <h3>执行引擎与滑点保护</h3>
+            <p>加入仓位换算、滑点熔断、部分平仓镜像，回放极端行情下的快速开平。</p>
+            <ul class="roadmap-list">
+              <li>跟单失败率 &lt; 5%</li>
+              <li>24h 仓位偏离 &lt; 2%</li>
+              <li>最小单位失败可解释</li>
+            </ul>
+            <div class="roadmap-bar amber"><span style="width:68%"></span></div>
+            <span class="roadmap-pct">68%</span>
+          </article>
+
+          <article class="roadmap-item reveal" style="--delay:.12s">
+            <div class="roadmap-top">
+              <span class="roadmap-week">WEEK 05–08</span>
+              <span class="roadmap-status">NEXT</span>
+            </div>
+            <h3>种子用户与真实结算</h3>
+            <p>20–50 名种子用户，每人 ≤ 500 USDT，跑通入金、KYC、跟单、分润与出金。</p>
+            <ul class="roadmap-list">
+              <li>完整结算链路闭环</li>
+              <li>真实滑点与失败原因分布</li>
+              <li>可复用的跟单记录素材</li>
+            </ul>
+            <div class="roadmap-bar"><span style="width:0%"></span></div>
+            <span class="roadmap-pct">0%</span>
+          </article>
+
+          <article class="roadmap-item reveal" style="--delay:.18s">
+            <div class="roadmap-top">
+              <span class="roadmap-week">WEEK 09+</span>
+              <span class="roadmap-status">PLANNED</span>
+            </div>
+            <h3>逐步开放</h3>
+            <p>优化滑点阈值、对账频率与分润比例，引入 OKX 信号源，测试多源并发。</p>
+            <ul class="roadmap-list">
+              <li>邀请制 / 限额制</li>
+              <li>控制早期跟单资金规模</li>
+              <li>多信号源并发压测</li>
+            </ul>
+            <div class="roadmap-bar"><span style="width:0%"></span></div>
+            <span class="roadmap-pct">0%</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="metrics" aria-labelledby="metrics-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-no">07 / METRICS</span>
+          <div>
+            <h2 class="section-title" id="metrics-title">不看口号，<br>只看<em>仪表盘</em>。</h2>
+            <p class="section-desc">上线后持续监控的六个核心指标。以下为演示样本，不是实际运营数据。</p>
+          </div>
+          <a class="section-link" href="terminal.html">进入实时看板 ↗</a>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="metric-table">
+            <thead>
+              <tr>
+                <th scope="col">指标 / Metric</th>
+                <th scope="col">目标值</th>
+                <th scope="col">当前样本</th>
+                <th scope="col">监控频率</th>
+                <th scope="col">状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>信号到达 → 下单发送延迟（P95）</td>
+                <td class="num target">&lt; 500ms</td>
+                <td class="num">186ms</td>
+                <td class="num target">实时</td>
+                <td><div class="bar-cell"><span class="bar"><span style="--w:37%"></span></span><span class="status-pill">达标</span></div></td>
+              </tr>
+              <tr>
+                <td>实际滑点中位数</td>
+                <td class="num target">&lt; 0.15%</td>
+                <td class="num">0.06%</td>
+                <td class="num target">每小时</td>
+                <td><div class="bar-cell"><span class="bar"><span style="--w:40%"></span></span><span class="status-pill">达标</span></div></td>
+              </tr>
+              <tr>
+                <td>跟单失败率（最小单位 / 保证金不足）</td>
+                <td class="num target">&lt; 3%</td>
+                <td class="num">2.2%</td>
+                <td class="num target">每日</td>
+                <td><div class="bar-cell"><span class="bar"><span style="--w:70%"></span></span><span class="status-pill">达标</span></div></td>
+              </tr>
+              <tr>
+                <td>仓位对账偏差率</td>
+                <td class="num target">&lt; 1%</td>
+                <td class="num">0.31%</td>
+                <td class="num target">每 30 秒</td>
+                <td><div class="bar-cell"><span class="bar"><span style="--w:31%"></span></span><span class="status-pill">达标</span></div></td>
+              </tr>
+              <tr>
+                <td>分润结算争议数</td>
+                <td class="num target">0</td>
+                <td class="num">0</td>
+                <td class="num target">每日</td>
+                <td><div class="bar-cell"><span class="bar"><span style="--w:100%"></span></span><span class="status-pill">达标</span></div></td>
+              </tr>
+              <tr>
+                <td>用户 7 日留存（跟单活跃）</td>
+                <td class="num target">&gt; 40%</td>
+                <td class="num">46.2%</td>
+                <td class="num target">每周</td>
+                <td><div class="bar-cell"><span class="bar"><span style="--w:46%"></span></span><span class="status-pill">达标</span></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">样本数据仅用于界面演示。正式上线后由监控系统写入，不在此页手工维护。</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-grid">
+        <div>
+          <p class="cta-kicker">SEED ACCESS / 邀请制 · 限额跟单</p>
+          <h2 id="cta-title">链路已经跑通。<br>现在，调你的阀门。</h2>
+          <p class="cta-note">种子期单个账户 ≤ 500 USDT。先完成 KYC 与衍生品适当性评估，再选择信号源。</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="terminal.html">进入工作台 <span class="arrow" aria-hidden="true">↗</span></a>
+          <button class="btn btn-ghost" type="button" data-open-seed>预约种子名额</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="回到顶部">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M4 26L12 8L18 19L28 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"/>
+              <circle cx="12" cy="8" r="2.2" fill="currentColor"/>
+              <circle cx="18" cy="19" r="2.2" fill="currentColor"/>
+            </svg>
+            <span class="brand-name">循迹</span>
+            <span class="brand-wordmark">TRACE</span>
+          </a>
+          <p>链上永续合约跟单执行层。把信号、风控与结算拆开做，让每一次跟随都有据可循。</p>
+          <span class="footer-status"><i class="live-dot" aria-hidden="true"></i> SIGNAL LAYER OPERATIONAL · DEMO</span>
+        </div>
+        <div class="footer-col">
+          <h3>产品</h3>
+          <ul>
+            <li><a href="terminal.html">跟单工作台</a></li>
+            <li><a href="#sources">信号源</a></li>
+            <li><a href="#risk">风控阀门</a></li>
+            <li><a href="#profit">高水位分润</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>透明</h3>
+          <ul>
+            <li><a href="#metrics">指标看板</a></li>
+            <li><a href="#roadmap">冷启动路线</a></li>
+            <li><a href="compliance.html">合规边界</a></li>
+            <li><a href="compliance.html#disclosure">风险披露</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>联系</h3>
+          <ul>
+            <li><a href="#" data-open-seed>种子用户申请</a></li>
+            <li><a href="#" data-open-seed data-seed-role="trader">信号源合作</a></li>
+            <li><a href="compliance.html#faq">常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-legal">本网站为产品原型演示，不构成投资建议、招揽或任何形式的收益承诺。加密永续合约交易具有高杠杆风险，可能导致本金全部损失；历史业绩不代表未来表现，跟单结果可能因滑点、延迟与执行差异偏离信号源。演示数据非真实运营数据。上线前须完成目标司法辖区的法律与监管评估。本原型与 Hyperliquid、OKX 无隶属或背书关系。</p>
+        <span class="footer-copy">© 2026 TRACE / 循迹 · PROTOTYPE</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="seedModal" role="dialog" aria-modal="true" aria-labelledby="seedTitle" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" type="button" aria-label="关闭" data-close-modal>×</button>
+      <p class="modal-kicker">SEED ACCESS / 2026 Q1</p>
+      <h2 id="seedTitle">预约种子名额</h2>
+      <p>首期 20–50 名跟随者，单账户 ≤ 500 USDT；同时开放 5–8 个信号源名额。提交后我们会按地区与适当性条件人工联系。</p>
+
+      <form class="seed-form" id="seedForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="seedName">称呼</label>
+            <input id="seedName" name="name" type="text" placeholder="如何称呼你" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="seedRole">身份</label>
+            <select id="seedRole" name="role">
+              <option value="follower">跟随者</option>
+              <option value="trader">信号源 / 交易员</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="seedEmail">邮箱</label>
+          <input id="seedEmail" name="email" type="email" placeholder="name@domain.com" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="seedRegion">居住地</label>
+            <select id="seedRegion" name="region">
+              <option value="">请选择</option>
+              <option value="sg">新加坡</option>
+              <option value="jp">日本</option>
+              <option value="ae">阿联酋</option>
+              <option value="eu">欧盟</option>
+              <option value="hk-pi">香港（专业投资者）</option>
+              <option value="other">其他</option>
+              <option value="restricted">美国 / 加拿大 / 英国 / 中国大陆 / 香港零售</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="seedCapital">计划跟单资金</label>
+            <select id="seedCapital" name="capital">
+              <option value="500">≤ 500 USDT</option>
+              <option value="1000">500–1,000 USDT</option>
+              <option value="5000">1,000–5,000 USDT</option>
+              <option value="5000+">5,000 USDT 以上</option>
+            </select>
+          </div>
+        </div>
+        <p class="form-note">提交即表示你理解：本页面为演示，不会存储或发送任何数据；正式产品需完成 KYC 与衍生品适当性评估。</p>
+        <button class="btn btn-primary" type="submit">提交预约 <span class="arrow" aria-hidden="true">↗</span></button>
+      </form>
+
+      <div class="form-success" id="seedSuccess" role="status">
+        <span class="success-mark" id="successMark" aria-hidden="true">✓</span>
+        <h3>已记录（演示）</h3>
+        <p>这是一次前端演示提交，没有数据离开你的浏览器。正式种子招募会通过已验证邮箱发送 KYC 与适当性评估入口。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

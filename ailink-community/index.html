@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AILink 智链 · AI 创业者的项目、资本与人才网络</title>
+  <meta name="description" content="AILink 智链是面向 AI 创业者的社区型数据平台：项目库、资金库、人才库，会员可查看核验联系方式，并用 AI 邮件引擎完成精准触达。首站覆盖杭州、深圳、上海、广州。">
+  <meta name="theme-color" content="#0B1914">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1914'/%3E%3Ccircle cx='20' cy='22' r='6' fill='%23D8F26A'/%3E%3Ccircle cx='44' cy='20' r='4' fill='%23F6F2E9'/%3E%3Ccircle cx='42' cy='44' r='6' fill='%23D8F26A'/%3E%3Cpath d='M25 23l14-2M24 27l14 13' stroke='%23D8F26A' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#/home" aria-label="AILink 智链首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <rect width="44" height="44" rx="12" fill="currentColor"/>
+            <circle cx="13" cy="15" r="4.2" fill="#D8F26A"/>
+            <circle cx="31" cy="13" r="2.8" fill="#F6F2E9"/>
+            <circle cx="29" cy="30" r="4.2" fill="#D8F26A"/>
+            <path d="M16.6 16.2 28.4 13.6M16.2 18.6l10.2 9.2" stroke="#D8F26A" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>AILink<span class="brand-cn">智链</span></strong>
+          <small>AI 创业社区</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#/projects" data-nav="projects">项目库</a>
+        <a href="#/capital" data-nav="capital">资金库</a>
+        <a href="#/talents" data-nav="talents">人才库</a>
+        <a href="#/outreach" data-nav="outreach">邮件引擎</a>
+        <a href="#/data" data-nav="data">数据方法</a>
+        <a href="#/pricing" data-nav="pricing">会员方案</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger" type="button" data-action="open-search" aria-label="搜索全站">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span>搜索</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div class="header-auth" id="header-auth"></div>
+        <a class="btn btn-sm btn-dark header-cta" id="header-cta" href="#/pricing">成为会员</a>
+        <button class="mobile-toggle" type="button" data-action="toggle-mobile" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="移动端导航">
+        <a href="#/projects">项目库 <span>Projects</span></a>
+        <a href="#/capital">资金库 <span>Capital</span></a>
+        <a href="#/talents">人才库 <span>Talents</span></a>
+        <a href="#/outreach">邮件引擎 <span>Outreach</span></a>
+        <a href="#/data">数据方法 <span>Method</span></a>
+        <a href="#/pricing">会员方案 <span>Membership</span></a>
+      </nav>
+      <div class="mobile-menu-main" id="mobile-auth"></div>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="#/home" aria-label="AILink 智链首页">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none">
+                <rect width="44" height="44" rx="12" fill="#D8F26A"/>
+                <circle cx="13" cy="15" r="4.2" fill="#0B1914"/>
+                <circle cx="31" cy="13" r="2.8" fill="#0B1914"/>
+                <circle cx="29" cy="30" r="4.2" fill="#0B1914"/>
+                <path d="M16.6 16.2 28.4 13.6M16.2 18.6l10.2 9.2" stroke="#0B1914" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="brand-text"><strong>AILink<span class="brand-cn">智链</span></strong><small>AI 创业社区</small></span>
+          </a>
+          <p>把 AI 创业者、资本与人才连成一张可被检索、可被信任、可被触达的网络。</p>
+          <div class="footer-note">
+            <span class="status-dot"></span>
+            华东 / 华南首批开放，数据持续核验
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>数据库</h4>
+          <a href="#/projects">AI 项目库</a>
+          <a href="#/capital">投资资金库</a>
+          <a href="#/talents">AI 人才库</a>
+          <a href="#/data">数据获取方法</a>
+        </div>
+        <div class="footer-col">
+          <h4>产品</h4>
+          <a href="#/pricing">会员订阅</a>
+          <a href="#/outreach">AI 邮件引擎</a>
+          <a href="#/pricing#email-packs">邮件额度与计费</a>
+          <a href="#/data#templates">CSV 数据模板</a>
+        </div>
+        <div class="footer-col">
+          <h4>关于</h4>
+          <a href="#/data">数据合规</a>
+          <button type="button" data-action="open-legal" data-legal="privacy">隐私政策</button>
+          <button type="button" data-action="open-legal" data-legal="terms">会员服务条款</button>
+          <button type="button" data-action="open-contact">联系我们</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AILink 智链 · AI 创业社区基础设施</span>
+        <span class="footer-disclaimer">数据说明：杭州、深圳各 42 家企业来自公开资料图谱；深圳 Batch 02 的 100 家为待核验批量导入；其余企业与人物为虚构，联系方式为占位，支付与发信为模拟。</span>
+        <span>杭州 · 深圳 · 上海 · 广州</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="drawer-root"></div>
+  <div id="toast-root" class="toast-root" role="status" aria-live="polite"></div>
+
+  <script src="assets/hangzhou-ai.js"></script>
+  <script src="assets/hangzhou-batch.js"></script>
+  <script src="assets/hangzhou-batch2.js"></script>
+  <script src="assets/shenzhen-ai.js"></script>
+  <script src="assets/shenzhen-batch.js"></script>
+  <script src="assets/shenzhen-batch2.js"></script>
+  <script src="assets/pilot-verified.js"></script>
+  <script src="assets/batch100-verified.js"></script>
+  <script src="assets/sz100-verified.js"></script>
+  <script src="assets/hzrest68-verified.js"></script>
+  <script src="assets/rest-hz-verified.js"></script>
+  <script src="assets/rest-sz-verified.js"></script>
+  <script src="assets/sz-key-verified.js"></script>
+  <script src="assets/region-fixes.js"></script>
+  <script src="assets/pending-enrichment.js"></script>
+  <script src="assets/hz-public30-pending.js"></script>
+  <script src="assets/capital-v2.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

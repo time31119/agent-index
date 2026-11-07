@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>交易系统与方法 · 核心观点提炼 · 技术分析研究实验室</title><meta name="description" content="量化交易的百科书：从趋势、均值回归到波动率、套利，系统化比较各种策略的有效性。">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9b26a%22/><text x=%2216%22 y=%2222%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23151009%22 font-family=%22Arial%22 font-weight=%22bold%22>T</text></svg>">
+
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="logo" href="index.html"><span class="mark">T</span>技术分析研究实验室</a>
+  <div class="nav-links">
+    <a href="index.html" class="">首页</a>
+    <a href="books.html" class="on">权威书单</a>
+    <a href="indicators.html" class="">指标测试</a>
+    <a href="ranking.html" class="">收益率排名</a>
+    <a href="summary.html" class="">归纳总结</a>
+    <a href="method.html" class="">方法与数据</a>
+  </div>
+</div></nav>
+  <div class="wrap"><div class="breadcrumb"><a href="index.html">首页</a> / <a href="books.html">权威书单</a> / <span>交易系统与方法</span></div></div>
+  <article class="wrap book-detail">
+    <div class="book-hero">
+      <div>
+        <div class="cover"><img src="assets/covers/kaufman.jpg" alt="《交易系统与方法》封面" width="230" height="345" loading="lazy"></div>
+        <div class="cover-credit">封面图片：豆瓣图书，仅用于书目识别</div>
+      </div>
+      <div>
+        <div class="cat" style="color:var(--gold);font-size:12px;letter-spacing:2px">量化与组合配置 · 核心原典</div>
+        <h1>交易系统与方法</h1>
+        <div class="muted" style="margin-top:2px;font-size:15px">Trading Systems and Methods</div>
+        <div class="meta"><span class="tag gold">Perry J. Kaufman</span><span class="tag ">1998</span><span class="tag blue">5 条技术观点</span><span class="tag green">4 个可测试指标</span></div>
+        <div class="note blue" style="margin:18px 0 20px"><b>核心命题：</b>量化交易的百科书：从趋势、均值回归到波动率、套利，系统化比较各种策略的有效性。</div>
+        <div class="book-quote" style="margin:0">“任何系统都有适用与失效的时期，关键是知道它为什么有效。”</div>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:34px">
+      <div>
+        <h2 style="font-size:22px;margin:0 0 6px">最有价值的技术观点</h2>
+        <p class="muted" style="font-size:14px;margin-bottom:18px">以下 5 条按“可直接用于交易决策”的标准筛选，而不是按书中的篇幅。</p>
+        <div class="insight"><h4><span class="n">01</span>趋势系统的本质</h4><p>趋势跟踪通过“截断亏损、让利润奔跑”获得正期望；胜率低但盈亏比高。</p></div><div class="insight"><h4><span class="n">02</span>均值回归的边界</h4><p>均值回归在区间市有效，在趋势市会遭遇连续亏损；需要趋势过滤器。</p></div><div class="insight"><h4><span class="n">03</span>波动率标准化</h4><p>用 ATR 或历史波动率对价格进行标准化，让不同品种、不同时期的策略可比较。</p></div><div class="insight"><h4><span class="n">04</span>参数敏感性</h4><p>好系统的参数在合理范围内变化时，绩效不应剧烈波动；过度敏感意味着过拟合。</p></div><div class="insight"><h4><span class="n">05</span>多策略组合</h4><p>趋势 + 均值回归 + 套利组合，可平滑收益曲线、降低单一策略失效的风险。</p></div>
+        <h2 style="font-size:22px;margin:34px 0 12px">可执行要点</h2>
+        <ul class="takeaways"><li>用参数敏感性检验系统是否过拟合。</li><li>趋势与均值回归组合使用。</li><li>用波动率标准化比较不同市场。</li></ul>
+      </div>
+      <aside class="sticky">
+        <div class="card" style="margin-bottom:16px"><h3 style="font-size:16px;margin-bottom:12px">对应指标测试</h3>
+          <div style="display:grid;gap:8px"><a href="ind-donchian.html" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px">
+            <span style="font-size:14px">唐奇安通道</span><span class="mono down" style="font-size:12.5px">-0.7%</span></a><a href="ind-bollrev.html" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px">
+            <span style="font-size:14px">布林带回归</span><span class="mono down" style="font-size:12.5px">-5.8%</span></a><a href="ind-atr.html" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px">
+            <span style="font-size:14px">ATR 波动过滤</span><span class="mono down" style="font-size:12.5px">-2.3%</span></a><a href="ind-voltarget.html" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px">
+            <span style="font-size:14px">波动率择时</span><span class="mono down" style="font-size:12.5px">-0.9%</span></a></div>
+          <div class="dim" style="font-size:12px;margin-top:10px">数值为跨市场全样本年化超额收益中位数</div></div>
+        <div class="card"><h3 style="font-size:16px;margin-bottom:12px">同类别其他著作</h3>
+          <div><a class="mini-book" href="book-faber.html">
+            <img src="assets/covers/faber.jpg" alt="《战术资产配置》封面" loading="lazy" width="38" height="57">
+            <span style="min-width:0"><span style="display:block;font-size:13.5px;color:var(--txt)">战术资产配置</span><span class="dim" style="font-size:11.5px">Mebane Faber</span></span></a><a class="mini-book" href="book-asness.html">
+            <img src="assets/covers/asness.jpg" alt="《预期收益与因子投资》封面" loading="lazy" width="38" height="57">
+            <span style="min-width:0"><span style="display:block;font-size:13.5px;color:var(--txt)">预期收益与因子投资</span><span class="dim" style="font-size:11.5px">Antti Ilmanen（含 Asness 动量研究）</span></span></a></div>
+          <a class="btn" style="margin-top:16px;width:100%;justify-content:center" href="books.html#quant">查看本类全部 →</a></div>
+      </aside>
+    </div>
+  </article><footer class="footer"><div class="wrap"><div class="row">
+  <div><b style="color:var(--muted)">技术分析研究实验室</b> · 33 本权威著作 × 28 个技术指标 × 4 大市场 × 21 年历史数据</div>
+  <div>数据：东方财富公开日线 · 回测口径见 <a href="method.html" style="color:var(--gold)">方法与数据</a></div>
+</div><div style="margin-top:14px;max-width:900px">风险声明：本站所有回测结果均为历史统计，不构成任何投资建议。历史表现不代表未来收益；技术指标在样本外经常失效，实盘还需考虑流动性、税费、涨跌停与执行滑点。市场有风险，决策需独立。</div></div></footer></body></html>

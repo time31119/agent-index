@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop the Top 100 — BOTIQUE</title>
+<meta name="description" content="Browse all 100 small robots, AI companions, robot pets and STEM kits, ranked by estimated demand. Filter by category, budget, platform and rating.">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="canonical" href="https://botique.shop/shop.html">
+<meta property="og:title" content="The BOTIQUE 100 — every small robot worth knowing">
+<meta property="og:description" content="100 bots, ranked by what the world is actually buying. Filter by mood, budget and platform.">
+<meta property="og:url" content="https://botique.shop/shop.html">
+<meta property="og:image" content="https://botique.shop/assets/og.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">BOTIQUE</a><span class="ic-slot" data-icon="chevron"></span><span data-i18n="shop.h1">The Top 100</span></nav>
+      <span class="kicker" data-i18n="shop.kicker">The complete index</span>
+      <h1 data-i18n="shop.h1">The Top 100</h1>
+      <p class="lede" data-i18n="shop.lede">Every small robot worth knowing in 2026, ranked by estimated demand. Filter by mood, budget, platform or category.</p>
+      <div class="hero-meta">
+        <span><span class="ic-slot" data-icon="spark"></span> <span data-i18n="shop.updated">Updated November 2026</span></span>
+        <span><span class="ic-slot" data-icon="info"></span> <span data-i18n="shop.rankNote">Ranks are editorial estimates, not official platform charts.</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="shop-toolbar">
+    <div class="wrap">
+      <div class="toolbar-row">
+        <div class="chips" id="cat-chips"></div>
+        <div class="toolbar-tools">
+          <label class="shop-search"><span class="ic-slot" data-icon="search"></span><input id="shop-search" type="search" placeholder="Search the 100…" data-i18n-ph="shop.search" aria-label="Search the 100"></label>
+          <div class="select-wrap"><select class="select" id="sort-select" aria-label="Sort products">
+            <option value="rank" data-i18n="shop.sortRank">Rank: best sellers</option>
+            <option value="price-asc" data-i18n="shop.sortPriceLow">Price: low to high</option>
+            <option value="price-desc" data-i18n="shop.sortPriceHigh">Price: high to low</option>
+            <option value="rating" data-i18n="shop.sortRating">Rating: highest</option>
+            <option value="new" data-i18n="shop.sortNew">Newest first</option>
+          </select><span class="ic-slot" data-icon="chevron"></span></div>
+          <div class="select-wrap"><select class="select" id="platform-select" aria-label="Platform">
+            <option value="" data-i18n="shop.platformAll">All platforms</option>
+            <option value="amazon">Amazon</option>
+            <option value="tiktok">TikTok Shop</option>
+            <option value="meta">Meta Shops</option>
+          </select><span class="ic-slot" data-icon="chevron"></span></div>
+          <div class="select-wrap"><select class="select" id="price-select" aria-label="Price">
+            <option value="" data-i18n="shop.priceAll">Any price</option>
+            <option value="p1" data-i18n="shop.price1">Under $50</option>
+            <option value="p2" data-i18n="shop.price2">$50 – $150</option>
+            <option value="p3" data-i18n="shop.price3">$150 – $300</option>
+            <option value="p4" data-i18n="shop.price4">$300 – $1,000</option>
+            <option value="p5" data-i18n="shop.price5">$1,000+</option>
+          </select><span class="ic-slot" data-icon="chevron"></span></div>
+        </div>
+      </div>
+      <div class="results-bar">
+        <span id="result-count" data-i18n="shop.results">100 bots</span>
+        <div class="active-filters" id="active-filters"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="wrap">
+    <div class="shop-grid" id="shop-grid"></div>
+    <div class="empty-shop" id="empty-shop" hidden>
+      <h3 data-i18n="shop.empty">No bots match those filters. Try clearing one.</h3>
+      <p>There are 100 of them. One has to be your type.</p>
+      <button class="btn btn-dark" data-clear-all data-i18n="common.clear">Clear all</button>
+    </div>
+    <div class="load-wrap" id="load-wrap">
+      <button class="btn btn-ghost" id="load-more" data-i18n="shop.loadMore">Load more bots</button>
+      <p id="load-note"></p>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/robot.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/shop.js"></script>
+</body>
+</html>

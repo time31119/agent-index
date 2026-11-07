@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>策略库 — SCALP//LAB</title>
+<meta name="description" content="10 个 TradingView 风格的加密永续合约超短线策略：EMA、Supertrend、布林带、VWAP、唐奇安、MACD、肯特纳、Stoch RSI、UT Bot、一目均衡表。">
+<meta name="theme-color" content="#070908">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c9ff4a'/%3E%3Cpath d='M16 21h20c7 0 11 4 11 10s-4 10-11 10H22l-4 10H8l14-30z' fill='%23070908'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="strategies">
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="index.html" aria-label="SCALP LAB 首页">
+      <span class="brand-mark">S//L</span>
+      <span class="brand-word"><b>SCALP//LAB</b><small>OKX PERP · 30M RESEARCH</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航"><a class="" href="index.html"><span class="n">01</span>首页</a><a class="" href="ranking.html"><span class="n">02</span>排名</a><a class="active" href="strategies.html"><span class="n">03</span>策略库</a><a class="" href="data.html"><span class="n">04</span>指标数据</a><a class="" href="method.html"><span class="n">05</span>方法</a></nav>
+    <div class="status"><span class="dot"></span><span>DATA · 2026-11-04 15:00 UTC</span></div>
+    <button class="nav-toggle" type="button" aria-expanded="false">MENU</button>
+  </div>
+</header>
+<div class="tape">
+  <div class="shell tape-in">
+    <div class="tape-label">LIVE TAPE / UTC</div>
+    <div class="tape-items" data-tape><span class="tape-sym muted">LOADING MARKET DATA…</span></div>
+  </div>
+</div>
+<main >
+
+<section class="data-lead"><div class="shell">
+  <div>
+    <div class="eyebrow">STRATEGY LIBRARY / 010</div>
+    <h1>十种逻辑，<br><span class="lime">同一把尺子。</span></h1>
+    <p class="hero-lede" style="max-width:720px">趋势、均值回归、突破、动量、日内、波动率——每一类只保留一个最典型的 TradingView 范式。点开任意策略，查看完整规则、分品种表现、当前信号和 Pine Script v6 代码。</p>
+  </div>
+  <div class="data-stamp">10 STRATEGIES<br><b>4 SYMBOLS · 30M · 84D</b><br>NET OF 6BP/SIDE</div>
+</div></section>
+<section class="section"><div class="shell">
+  <div class="strategy-grid"><a class="strategy-card" href="strategy-supertrend.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #01</div><h3 class="sc-name">Supertrend 趋势带</h3><div class="sc-en">SUPERTREND 10/3</div></div>
+    <span class="sc-tag">趋势</span>
+  </div>
+  <p class="sc-tagline">ATR 趋势带翻向，叠加 200 EMA 只做顺势那一边。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-0.48%</span></div>
+    <canvas class="sc-spark" data-curve="supertrend"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>1.06</b></div>
+    <div>MAX DD<b class="down">-21.62%</b></div>
+    <div>TRADES<b>536</b></div>
+    <div>WIN RATE<b>18.7%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-keltner-squeeze.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #02</div><h3 class="sc-name">肯特纳挤压突破</h3><div class="sc-en">KELTNER SQUEEZE</div></div>
+    <span class="sc-tag">波动率</span>
+  </div>
+  <p class="sc-tagline">布林带收进肯特纳通道后，向通道外突破。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-3.43%</span></div>
+    <canvas class="sc-spark" data-curve="keltner-squeeze"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.96</b></div>
+    <div>MAX DD<b class="down">-16.74%</b></div>
+    <div>TRADES<b>257</b></div>
+    <div>WIN RATE<b>26.8%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-donchian-breakout.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #03</div><h3 class="sc-name">唐奇安 20 突破</h3><div class="sc-en">DONCHIAN 20 BREAKOUT</div></div>
+    <span class="sc-tag">突破</span>
+  </div>
+  <p class="sc-tagline">突破 20 根最高/最低价，10 根反向通道或 EMA55 离场。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-5.68%</span></div>
+    <canvas class="sc-spark" data-curve="donchian-breakout"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.97</b></div>
+    <div>MAX DD<b class="down">-21.97%</b></div>
+    <div>TRADES<b>531</b></div>
+    <div>WIN RATE<b>23.5%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-bollinger-rsi2.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #04</div><h3 class="sc-name">布林带 + RSI(2) 回踩</h3><div class="sc-en">BOLLINGER + RSI(2)</div></div>
+    <span class="sc-tag">均值回归</span>
+  </div>
+  <p class="sc-tagline">只在 200 EMA 顺势方向，等价格刺破布林带且 RSI(2) 极端。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-7.58%</span></div>
+    <canvas class="sc-spark" data-curve="bollinger-rsi2"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.59</b></div>
+    <div>MAX DD<b class="down">-10.80%</b></div>
+    <div>TRADES<b>156</b></div>
+    <div>WIN RATE<b>39.7%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-vwap-reclaim.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #05</div><h3 class="sc-name">VWAP 回收 + 放量</h3><div class="sc-en">VWAP RECLAIM</div></div>
+    <span class="sc-tag">日内</span>
+  </div>
+  <p class="sc-tagline">价格重新站上当日 VWAP，且成交量放大 20% 以上。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-9.97%</span></div>
+    <canvas class="sc-spark" data-curve="vwap-reclaim"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.66</b></div>
+    <div>MAX DD<b class="down">-15.95%</b></div>
+    <div>TRADES<b>278</b></div>
+    <div>WIN RATE<b>21.6%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-utbot-atr.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #06</div><h3 class="sc-name">UT Bot ATR 追踪</h3><div class="sc-en">UT BOT ATR TRAILING</div></div>
+    <span class="sc-tag">趋势</span>
+  </div>
+  <p class="sc-tagline">ATR 追踪止损翻向，叠加 200 EMA 过滤。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-14.98%</span></div>
+    <canvas class="sc-spark" data-curve="utbot-atr"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.78</b></div>
+    <div>MAX DD<b class="down">-23.28%</b></div>
+    <div>TRADES<b>598</b></div>
+    <div>WIN RATE<b>12.7%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-ema-ribbon.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #07</div><h3 class="sc-name">EMA 三线动量</h3><div class="sc-en">EMA RIBBON MOMENTUM</div></div>
+    <span class="sc-tag">趋势</span>
+  </div>
+  <p class="sc-tagline">用 9/21 EMA 交叉定方向，55 EMA 与 ADX 过滤震荡。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-18.12%</span></div>
+    <canvas class="sc-spark" data-curve="ema-ribbon"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.83</b></div>
+    <div>MAX DD<b class="down">-32.87%</b></div>
+    <div>TRADES<b>745</b></div>
+    <div>WIN RATE<b>18.3%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-ichimoku-cloud.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #08</div><h3 class="sc-name">一目均衡表云层突破</h3><div class="sc-en">ICHIMOKU CLOUD BREAKOUT</div></div>
+    <span class="sc-tag">趋势</span>
+  </div>
+  <p class="sc-tagline">价格站上云层且转换线在基准线上方，顺势做多。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-18.76%</span></div>
+    <canvas class="sc-spark" data-curve="ichimoku-cloud"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.83</b></div>
+    <div>MAX DD<b class="down">-34.66%</b></div>
+    <div>TRADES<b>814</b></div>
+    <div>WIN RATE<b>20.0%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-stochrsi-pullback.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #09</div><h3 class="sc-name">Stoch RSI 趋势回踩</h3><div class="sc-en">STOCH RSI PULLBACK</div></div>
+    <span class="sc-tag">均值回归</span>
+  </div>
+  <p class="sc-tagline">趋势方向不变，Stoch RSI 在超卖/超买区金叉/死叉。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-22.24%</span></div>
+    <canvas class="sc-spark" data-curve="stochrsi-pullback"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.61</b></div>
+    <div>MAX DD<b class="down">-25.25%</b></div>
+    <div>TRADES<b>767</b></div>
+    <div>WIN RATE<b>26.5%</b></div>
+  </div>
+</a>
+<a class="strategy-card" href="strategy-macd-momentum.html">
+  <div class="sc-top">
+    <div><div class="sc-rank">RANK #10</div><h3 class="sc-name">MACD 柱状动量</h3><div class="sc-en">MACD HISTOGRAM MOMENTUM</div></div>
+    <span class="sc-tag">动量</span>
+  </div>
+  <p class="sc-tagline">MACD 柱状图同向加速时入场，柱体翻色即离场。</p>
+  <div class="sc-bottom">
+    <div class="sc-ret"><small>NET RETURN / 84D</small><span class="down">-28.85%</span></div>
+    <canvas class="sc-spark" data-curve="macd-momentum"></canvas>
+  </div>
+  <div class="sc-metrics">
+    <div>PROFIT FACTOR<b>0.71</b></div>
+    <div>MAX DD<b class="down">-37.51%</b></div>
+    <div>TRADES<b>986</b></div>
+    <div>WIN RATE<b>24.4%</b></div>
+  </div>
+</a></div>
+</div></section>
+
+</main>
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark">S//L</span>
+        <div><b>SCALP//LAB</b><small>OKX PERPETUAL · 30M STRATEGY INDEX</small></div>
+      </div>
+      <div class="footer-links">
+        <a href="ranking.html">完整排名</a>
+        <a href="strategies.html">策略库</a>
+        <a href="data.html">指标数据</a>
+        <a href="method.html">方法与局限</a>
+        <a href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noopener">Pine 文档 ↗</a>
+        <a href="https://www.okx.com/docs-v5/en/" target="_blank" rel="noopener">OKX API ↗</a>
+      </div>
+    </div>
+    <p class="disclaimer">风险提示：本站所有收益、回撤、胜率均为历史回测统计，不是实盘业绩，也不构成任何投资建议。加密永续合约具有高杠杆、强平、资金费率与流动性风险；历史表现不代表未来收益。Pine Script 代码用于研究与教学，实盘前请在 TradingView 策略测试器中独立验证，并从小仓位开始。本站未使用杠杆、未计资金费率、未模拟盘口冲击，真实交易结果通常更差。</p>
+    <div class="footer-meta">
+      <span>数据：OKX 公共行情 API · 30m K 线 · 4,320 根/品种 · 抓取于 2026-11-04 15:00 UTC</span>
+      <span>构建：2026-11-04 15:34 UTC · 静态站点 · 无外部依赖</span>
+      <span>© <span id="year">2026</span> SCALP//LAB</span>
+    </div>
+  </div>
+</footer>
+<script src="data/lab.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今日 · 工作台 — 掌柜 ZHANGGUI</title>
+  <meta name="description" content="掌柜工作台：昨夜经营晨报、Agent 运行状态、待你确认的三件事。">
+  <meta name="theme-color" content="#08090d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/base.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+
+  <div class="app">
+    <!-- 侧栏 -->
+    <aside class="side">
+      <a class="brand side-brand" href="index.html" aria-label="返回首页">
+        <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3.5 10.2 12 3.6l8.5 6.6"/>
+          <path d="M5.7 10.4V20h12.6v-9.6"/>
+          <path d="M10 20v-4.5h4V20"/>
+        </svg>
+        <span class="brand-word">掌柜</span>
+      </a>
+
+      <nav class="side-nav" aria-label="工作台导航">
+        <a href="console.html" class="is-active">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11" rx="1.6"/><path d="M2 6.2h12"/></svg>
+          今日
+          <span class="count" id="sideCount">3</span>
+        </a>
+        <a href="#queue">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 13V8m5 5V3m5 10V6"/></svg>
+          投放
+        </a>
+        <a href="#agents-panel">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2.5 4h11M2.5 8h7M2.5 12h9"/></svg>
+          内容
+        </a>
+        <a href="#agents-panel">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M13.5 8.6c0 2.4-2.5 4.3-5.5 4.3-.7 0-1.4-.1-2-.3L3 14l.8-2.3C2.7 10.9 2 9.8 2 8.6 2 6.2 4.5 4.3 7.5 4.3s6 1.9 6 4.3Z"/></svg>
+          客服
+        </a>
+        <a href="#brief">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 1.8 13 4v4.2c0 3-2.2 5.2-5 6-2.8-.8-5-3-5-6V4l5-2.2Z"/></svg>
+          合规
+        </a>
+        <a href="#trend">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 13h12M4 11V7m4 4V4m4 7V6"/></svg>
+          账本
+        </a>
+      </nav>
+
+      <p class="side-label">项目</p>
+      <nav class="side-nav" aria-label="项目列表">
+        <a href="#">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="5.4"/></svg>
+          山野茶事
+        </a>
+        <a href="#">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="5.4"/><path d="M8 5v6"/></svg>
+          七日茶器
+        </a>
+        <a href="#">
+          <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 2.5v11M2.5 8h11"/></svg>
+          新开一间
+        </a>
+      </nav>
+
+      <div class="side-foot">
+        <div class="side-user">
+          <span class="avatar" aria-hidden="true">陈</span>
+          <div style="line-height:1.4">
+            <div style="color:var(--text);font-size:12.5px">陈默</div>
+            <div style="font-size:11px;color:var(--faint)">掌柜版 · 试用第 6 天</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主区 -->
+    <div class="main" id="main">
+      <div class="topbar">
+        <div class="crumb">
+          <span>工作台</span><span class="sep">/</span><b>今日</b>
+        </div>
+        <div class="topbar-right">
+          <span class="chip">演示数据</span>
+          <span class="chip chip--jade"><i class="live-dot" aria-hidden="true"></i> 3 位掌柜在岗</span>
+          <span class="avatar" aria-hidden="true">陈</span>
+        </div>
+      </div>
+
+      <div class="main-inner">
+        <div class="page-head">
+          <div>
+            <h1>早安，陈默。</h1>
+            <p class="sub">昨夜 <b>23:00 — 06:00</b> 共完成 214 次经营动作，<b>3 件事</b>等你点头。</p>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button class="btn btn--ghost btn--sm" type="button" data-toast="晨报已导出为 PDF（演示）">导出晨报</button>
+            <a class="btn btn--primary btn--sm" href="agents.html">调整班底</a>
+          </div>
+        </div>
+
+        <!-- KPI -->
+        <div class="kpi-grid">
+          <div class="kpi">
+            <div class="kpi-label"><span>昨日成交</span><span>GMV</span></div>
+            <div class="kpi-value">¥18,420</div>
+            <div class="kpi-delta up">▲ 12.4% <span class="vs">较前日</span></div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label"><span>广告花费</span><span>SPEND</span></div>
+            <div class="kpi-value">¥3,180</div>
+            <div class="kpi-delta up">ROI 2.7 <span class="vs">↑ 0.3</span></div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label"><span>净利</span><span>NET</span></div>
+            <div class="kpi-value">¥4,180</div>
+            <div class="kpi-delta up">▲ 9.1% <span class="vs">较前日</span></div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label"><span>待确认</span><span>QUEUE</span></div>
+            <div class="kpi-value" id="kpiQueue">3<small>件</small></div>
+            <div class="kpi-delta down">1 件涉及预算超额</div>
+          </div>
+        </div>
+
+        <div class="layout-main">
+          <!-- 左列 -->
+          <div class="col-stack">
+            <section class="panel" id="trend" aria-labelledby="trendTitle">
+              <div class="panel-head">
+                <span class="panel-title" id="trendTitle">近 14 天 成交 / 花费</span>
+                <div class="right">
+                  <span class="chart-legend">
+                    <span class="l1"><i></i>成交额</span>
+                    <span class="l2"><i></i>广告花费</span>
+                  </span>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div class="chart-wrap">
+                  <svg class="chart" id="trendChart" viewBox="0 0 760 250" role="img" aria-label="近十四天成交额与广告花费趋势：成交额由一万一千元升至一万八千元，花费稳定在三千元左右"></svg>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel" id="agents-panel" aria-labelledby="agentsTitle">
+              <div class="panel-head">
+                <span class="panel-title" id="agentsTitle">在岗掌柜</span>
+                <div class="right"><span class="chip">共 7 位 · 3 位在跑</span></div>
+              </div>
+              <div>
+                <div class="agent-row">
+                  <span class="g" aria-hidden="true">引</span>
+                  <div>
+                    <div class="agent-name">投流掌柜 <span class="status status--run"><i class="dot"></i>运行中</span></div>
+                    <div class="agent-task">正在把「茶具套装-中秋」第 4 组素材加入计划，已消耗 62% 日预算</div>
+                    <div class="progress"><i style="width:62%"></i></div>
+                  </div>
+                  <span class="agent-time">01:08 起</span>
+                </div>
+
+                <div class="agent-row">
+                  <span class="g" aria-hidden="true">言</span>
+                  <div>
+                    <div class="agent-name">内容掌柜 <span class="status status--wait"><i class="dot"></i>等放行</span></div>
+                    <div class="agent-task">12 条脚本 ×3 个版本已写完，卡在发布闸，等你勾选</div>
+                    <div class="progress"><i style="width:88%;background:linear-gradient(90deg,rgba(231,185,104,.35),var(--gold))"></i></div>
+                  </div>
+                  <span class="agent-time">00:26 起</span>
+                </div>
+
+                <div class="agent-row">
+                  <span class="g" aria-hidden="true">应</span>
+                  <div>
+                    <div class="agent-name">跑堂掌柜 <span class="status status--run"><i class="dot"></i>运行中</span></div>
+                    <div class="agent-task">早高峰咨询排队 4 条，平均首响 8 秒；退款类已自动转人工</div>
+                    <div class="progress"><i style="width:34%"></i></div>
+                  </div>
+                  <span class="agent-time">07:30 起</span>
+                </div>
+
+                <div class="agent-row">
+                  <span class="g" aria-hidden="true">察</span>
+                  <div>
+                    <div class="agent-name">市场侦察 <span class="status status--done"><i class="dot"></i>已完成</span></div>
+                    <div class="agent-task">完成 42 个竞品扫描，输出 3 条调价建议（2 条已被你采纳）</div>
+                  </div>
+                  <span class="agent-time">昨夜</span>
+                </div>
+
+                <div class="agent-row">
+                  <span class="g" aria-hidden="true">选</span>
+                  <div>
+                    <div class="agent-name">货品掌柜 <span class="status status--done"><i class="dot"></i>已完成</span></div>
+                    <div class="agent-task">建议下架 7 个滞销 SKU，可释放库存资金 ¥6,400</div>
+                  </div>
+                  <span class="agent-time">昨夜</span>
+                </div>
+
+                <div class="agent-row">
+                  <span class="g" aria-hidden="true">筑</span>
+                  <div>
+                    <div class="agent-name">门面掌柜 <span class="status status--err"><i class="dot"></i>受阻</span></div>
+                    <div class="agent-task">详情页第 3 屏图片素材缺失，已沿用旧图，等待补拍</div>
+                  </div>
+                  <span class="agent-time">昨夜</span>
+                </div>
+
+                <div class="agent-row">
+                  <span class="g" aria-hidden="true">账</span>
+                  <div>
+                    <div class="agent-name">账房 <span class="status status--done"><i class="dot"></i>已交账</span></div>
+                    <div class="agent-task">晨报已生成 · 06:00 · 含 2 项异常提示</div>
+                  </div>
+                  <span class="agent-time">06:00</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="logTitle">
+              <div class="panel-head">
+                <span class="panel-title" id="logTitle">执行流水</span>
+                <div class="right"><span class="chip">最近 12 条</span></div>
+              </div>
+              <div class="logs">
+                <div class="log-line"><span class="log-t">06:00</span><span class="log-tag">账</span><span class="log-msg">晨报已生成，推送至微信：<b>净利 ¥4,180</b></span></div>
+                <div class="log-line"><span class="log-t">05:12</span><span class="log-tag ok">应</span><span class="log-msg">夜间咨询 87 条已全部回复，转人工 3 条</span></div>
+                <div class="log-line"><span class="log-t">04:40</span><span class="log-tag warn">引</span><span class="log-msg">计划 A-219 触发熔断：ROI 1.4 &lt; 1.8，<b>已暂停</b></span></div>
+                <div class="log-line"><span class="log-t">03:15</span><span class="log-tag">引</span><span class="log-msg">新建计划 4 条，日预算合计 ¥600</span></div>
+                <div class="log-line"><span class="log-t">02:58</span><span class="log-tag ok">筑</span><span class="log-msg">落地页 LCP 1.4s，通过性能门槛</span></div>
+                <div class="log-line"><span class="log-t">02:10</span><span class="log-tag">察</span><span class="log-msg">竞品「山雾」主推款降价 8%，已生成应对方案</span></div>
+                <div class="log-line"><span class="log-t">01:44</span><span class="log-tag">选</span><span class="log-msg">重算毛利模型：组合装毛利率 54.2%</span></div>
+                <div class="log-line"><span class="log-t">01:08</span><span class="log-tag">引</span><span class="log-msg">素材第 4 组通过初筛，进入小额测投</span></div>
+                <div class="log-line"><span class="log-t">00:26</span><span class="log-tag">言</span><span class="log-msg">生成脚本 12 条，<b>违禁词命中 2 处已改写</b></span></div>
+                <div class="log-line"><span class="log-t">23:58</span><span class="log-tag ok">合规</span><span class="log-msg">全部内容已加 AI 生成标识（显式 + 元数据）</span></div>
+                <div class="log-line"><span class="log-t">23:41</span><span class="log-tag">察</span><span class="log-msg">竞品扫描完成，42 个链接 / 3 条建议</span></div>
+                <div class="log-line"><span class="log-t">23:00</span><span class="log-tag ok">系统</span><span class="log-msg">夜班启动，加载店铺记忆 1.2 万条</span></div>
+              </div>
+            </section>
+          </div>
+
+          <!-- 右列 -->
+          <div class="col-stack">
+            <section class="panel" id="queue" aria-labelledby="queueTitle">
+              <div class="panel-head">
+                <span class="panel-title" id="queueTitle">等你点头 · 3</span>
+                <div class="right">
+                  <button class="btn btn--ghost btn--sm" type="button" data-approve-all>全部批准</button>
+                </div>
+              </div>
+              <div class="queue">
+                <article class="queue-card" data-queue-item>
+                  <div class="queue-meta"><span>来自 引</span><span>·</span><span>预算闸</span><span class="risk">超额 30%</span></div>
+                  <h4>「茶具套装」计划申请把日预算从 ¥600 提到 ¥900</h4>
+                  <p>连续 3 天 ROI 2.6 以上，素材衰减不明显。建议批准，但设定 3 天后复核。</p>
+                  <div class="queue-nums">
+                    <span>预估日增收益 <b>+¥540</b></span>
+                    <span>新增风险敞口 <b>¥300/日</b></span>
+                  </div>
+                  <div class="queue-actions">
+                    <button class="btn btn--primary btn--sm" type="button" data-approve>批准</button>
+                    <button class="btn btn--ghost btn--sm" type="button" data-reject>驳回</button>
+                  </div>
+                  <div class="queue-result" data-result></div>
+                </article>
+
+                <article class="queue-card" data-queue-item>
+                  <div class="queue-meta"><span>来自 言</span><span>·</span><span>发布闸</span><span>·</span><span>12 条 × 3 版</span></div>
+                  <h4>中秋主题的 12 条短视频脚本，等你放行后进入拍摄排队</h4>
+                  <p>其中 2 条含「最便宜」类比较级表述，已被自动改写为「同价位更划算」。其余无风险项。</p>
+                  <div class="queue-nums">
+                    <span>预计产出 <b>12 条</b></span>
+                    <span>拍摄成本 <b>¥0（数字人）</b></span>
+                  </div>
+                  <div class="queue-actions">
+                    <button class="btn btn--primary btn--sm" type="button" data-approve>批准</button>
+                    <button class="btn btn--ghost btn--sm" type="button" data-reject>驳回</button>
+                  </div>
+                  <div class="queue-result" data-result></div>
+                </article>
+
+                <article class="queue-card" data-queue-item>
+                  <div class="queue-meta"><span>来自 选</span><span>·</span><span>货盘</span><span class="risk">影响毛利</span></div>
+                  <h4>建议下架 7 个滞销 SKU，并把库存并入「入门三件套」</h4>
+                  <p>这 7 个 SKU 近 30 天动销为 0，占库存资金 ¥6,400。合并后组合装毛利率从 48% 升至 54%。</p>
+                  <div class="queue-nums">
+                    <span>释放资金 <b>¥6,400</b></span>
+                    <span>毛利率 <b>+6.2pt</b></span>
+                  </div>
+                  <div class="queue-actions">
+                    <button class="btn btn--primary btn--sm" type="button" data-approve>批准</button>
+                    <button class="btn btn--ghost btn--sm" type="button" data-reject>驳回</button>
+                  </div>
+                  <div class="queue-result" data-result></div>
+                </article>
+              </div>
+            </section>
+
+            <section class="panel" id="brief" aria-labelledby="briefTitle">
+              <div class="panel-head">
+                <span class="panel-title" id="briefTitle">今晨交账 · 06:00</span>
+                <div class="right"><span class="chip chip--jade">已推送微信</span></div>
+              </div>
+              <div class="brief">
+                <h3>昨天多赚了 12%，但不是因为卖得多。</h3>
+                <p>成交 ¥18,420（+12.4%），花费 ¥3,180（持平），净利 ¥4,180（+9.1%）。增量主要来自 <span class="hl">客单价从 ¥86 提到 ¥94</span>——组合装的推荐位从第 4 屏挪到了第 2 屏。</p>
+                <p>需要你知道的两件事：计划 A-219 连续两天 ROI 低于 1.8，已自动暂停；详情页第 3 屏缺图，门面掌柜用了旧图，转化率比同页低 11%，建议今天补拍。</p>
+                <p class="faint" style="font-size:11.5px">明天想让我先做什么？直接回一句话，我会排在夜班第一顺位。</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    ZG.chart(document.getElementById('trendChart'), {
+      labels: ['10.20','10.21','10.22','10.23','10.24','10.25','10.26','10.27','10.28','10.29','10.30','10.31','11.01','11.02'],
+      gmv:    [11200, 10800, 12400, 11900, 13600, 13100, 14500, 14200, 15800, 14900, 16200, 17100, 16400, 18420],
+      spend:  [2600, 2450, 2800, 2700, 3050, 2900, 3200, 3150, 3300, 3080, 3350, 3420, 3160, 3180]
+    });
+    ZG.initQueue();
+    ZG.initToast();
+  </script>
+</body>
+</html>

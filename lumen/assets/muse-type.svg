@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 620" role="img" aria-label="Typographic poster">
+  <defs>
+    <pattern id="t-grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#efe9d9" stroke-opacity=".14" stroke-width=".75"/>
+    </pattern>
+    <linearGradient id="t-bg" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#1a2cc5"/>
+      <stop offset="1" stop-color="#0c1782"/>
+    </linearGradient>
+  </defs>
+  <rect width="460" height="620" fill="url(#t-bg)"/>
+  <rect width="460" height="620" fill="url(#t-grid)"/>
+  <text x="27" y="41" fill="#efe9d9" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2.5">TYPE SPECIMEN / 06</text>
+  <text x="433" y="41" fill="#d6ff58" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="1.4" text-anchor="end">VOL. C</text>
+
+  <circle cx="355" cy="152" r="70" fill="#d6ff58"/>
+  <text x="-8" y="455" fill="#efe9d9" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="475" font-weight="900" letter-spacing="-36">A</text>
+  <path d="M0 415h460" stroke="#efe9d9" stroke-opacity=".32"/>
+
+  <rect x="30" y="452" width="400" height="74" fill="#efe9d9"/>
+  <g fill="#111111" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="44" y="477" font-size="10" letter-spacing="2.2">LOUD &amp; CLEAR</text>
+    <text x="44" y="505" font-size="24" letter-spacing="-1">Every letter has a pulse.</text>
+  </g>
+  <text x="418" y="492" fill="#111" font-family="Arial Black, Arial, sans-serif" font-size="24" text-anchor="end">↗</text>
+
+  <text x="27" y="573" fill="#efe9d9" fill-opacity=".72" font-family="'Courier New', monospace" font-size="9" letter-spacing="1.2">DISPLAY / GROTESK / 900</text>
+  <text x="27" y="591" fill="#d6ff58" font-family="'Courier New', monospace" font-size="9" letter-spacing="1.2">TRACKING −40 / LEADING 0.8</text>
+</svg>

@@ -1,0 +1,10 @@
+﻿company,url,name,city,district,founded,phone,email,score,status,note
+赢时胜,http://ysstech.com.cn/,深圳市赢时胜信息技术股份有限公司,深圳市,福田区,,0755-88265110,,9,已核验,
+兆威机电,https://www.zwgear.com/,深圳市兆威机电股份有限公司,深圳市,宝安区,2001,400-066-2287,sales@szzhaowei.net,10,已核验,
+鹏鼎控股,http://www.avaryholding.com/,,,宝安区,,,,3,待补,主体名不匹配
+领益智造,http://www.lingyiitech.com/index.html,广东领益智造股份有限公司,,龙岗区,2006,,LY.public@lingyiitech.com,9,已核验,
+深南电路,https://www.scc.com.cn/,深南电路,,龙岗区,,86-755-89300000,,6,待补,字段不足
+贝仕达克,http://www.szbtk.com/,深圳贝仕达克技术股份有限公司,深圳,龙岗区,,,,5,待补,字段不足
+新产业生物,https://www.snibe.com/,新产业生物,Shenzhen,Pingshan District,1995,86-755-26501514,sales@snibe.com,10,已核验,
+基本半导体,https://www.basicsemi.com/,基本半导体,,坪山区,,,,5,待补,字段不足
+昂纳科技,http://www.angnakeji.com/,云南昂纳网络科技有限公司,昆明市,官渡区,2018,18988430616,shw@onnakeji.com,4,待补,城市缺失/不符

@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10201d">
+  <title>算力地理 · 中国算力中心公开档案</title>
+  <meta name="description" content="一份持续生长的中国算力中心公开档案：按省份整理国家超算、智算中心、数据中心与算力园区，记录地址、联系方式、机型、算力、规模与计费口径。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="算力地理 · 中国算力中心公开档案">
+  <meta property="og:description" content="按省份查阅国家超算、智算中心、数据中心与算力园区：地址、机型、算力、规模与计费口径，未知字段如实留白。">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#directory">跳到设施名录</a>
+  <noscript><div class="no-script">本站的筛选、详情与对比功能需要 JavaScript。请启用后重新打开页面。</div></noscript>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"></path></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="m3 6 5-2 8 3 5-2v13l-5 2-8-3-5 2Z"></path><path d="M8 4v13M16 7v13"></path></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.2 3.8 9.5 8 7.7 9.8c1.1 2.4 3.1 4.4 5.5 5.5l1.8-1.8 4.2 2.3-.6 3.1c-.2 1-1.1 1.7-2.1 1.6C9.1 19.9 4.1 14.9 3.5 7.5c-.1-1 .6-1.9 1.6-2.1Z"></path></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3.4 3 14.6 0 18M12 3c-3 3.4-3 14.6 0 18"></path></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2"></path></symbol>
+    <symbol id="i-compare" viewBox="0 0 24 24"><path d="M4 7h16M7 4 4 7l3 3M20 17H4M17 14l3 3-3 3"></path></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"></path></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"></path></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8 8M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"></rect><rect x="14" y="4" width="6" height="6"></rect><rect x="4" y="14" width="6" height="6"></rect><rect x="14" y="14" width="6" height="6"></rect></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"></path></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.4"></circle></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6"></path></symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="算力地理首页">
+      <span class="brand-seal" aria-hidden="true">算</span>
+      <span class="brand-word">
+        <strong>算力地理</strong>
+        <small>COMPUTE ATLAS · CHINA</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" id="siteNav" aria-label="主导航">
+      <a href="#atlas">省级覆盖</a>
+      <a href="#directory">设施名录</a>
+      <a href="#machines">机型</a>
+      <a href="#pricing">计费</a>
+      <a href="#method">说明</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-line btn-small" type="button" data-action="open-contribute">
+        <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+        补充资料
+      </button>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="打开导航" aria-expanded="false" aria-controls="siteNav">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <svg class="hero-contours" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M-80 170C180 30 360 270 590 170s370-220 590-80 310 20 400-60"/>
+          <path d="M-60 230C180 90 380 330 610 230s380-220 600-80 300 20 380-50"/>
+          <path d="M-40 300C190 150 400 390 630 290s390-210 610-70 280 20 350-30"/>
+          <path d="M-20 380C200 220 420 450 650 350s400-200 620-60 260 20 330 0"/>
+          <path d="M0 470C220 300 440 520 670 420s410-190 630-50 240 30 300 20"/>
+          <path d="M20 560C240 380 460 600 690 500s420-180 640-40 220 30 280 40"/>
+          <path d="M40 650C260 460 480 680 710 580s430-170 650-30 200 40 260 60"/>
+          <path d="M60 740C280 540 500 760 730 660s440-160 660-20 180 50 240 80"/>
+        </g>
+      </svg>
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> PUBLIC COMPUTE INFRASTRUCTURE · 2026</div>
+          <h1 id="heroTitle">把中国的算力<br><em>放回地图上</em></h1>
+          <p class="hero-lead">
+            从天津的“天河”、无锡的“神威”，到贵安的机架森林与庆阳的绿色机房——
+            一份关于中国算力中心的地址、机型、规模与接入方式的公开档案。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#directory">
+              翻阅设施名录
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+            <a class="btn btn-line" href="#atlas">先看省域版图</a>
+          </div>
+          <div class="hero-foot">
+            <div><span>数据快照</span><strong>2026.11</strong></div>
+            <div><span>已收录</span><strong><span data-bind="centerCount">64</span> 个设施样本</strong></div>
+            <div><span>覆盖</span><strong><span data-bind="provinceCount">31</span> 个省级行政区</strong></div>
+          </div>
+        </div>
+
+        <aside class="hero-plate" aria-label="设施索引与图例">
+          <div class="plate-head">
+            <span>设施索引 / INDEX</span>
+            <span><span data-bind="centerCount">64</span> 条</span>
+          </div>
+          <div class="hero-grid" id="heroGrid"></div>
+          <div class="plate-legend">
+            <span><i data-kind="国家超算"></i>国家超算</span>
+            <span><i data-kind="区域超算"></i>区域超算</span>
+            <span><i data-kind="智算中心"></i>智算中心</span>
+            <span><i data-kind="数据中心"></i>数据中心</span>
+            <span><i data-kind="算力园区"></i>园区 / 集群</span>
+          </div>
+          <div class="plate-foot">
+            <span>东经 73°–135°</span>
+            <span>北纬 18°–54°</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>向下翻阅</span>
+        <i></i>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>东数西算</span><i>◆</i><span>8 大枢纽</span><i>◆</i><span>10 大集群</span><i>◆</i>
+        <span>国家超算互联网</span><i>◆</i><span>国产算力</span><i>◆</i><span>液冷</span><i>◆</i>
+        <span>算力券</span><i>◆</i><span>公共算力</span><i>◆</i>
+        <span>东数西算</span><i>◆</i><span>8 大枢纽</span><i>◆</i><span>10 大集群</span><i>◆</i>
+        <span>国家超算互联网</span><i>◆</i><span>国产算力</span><i>◆</i><span>液冷</span><i>◆</i>
+        <span>算力券</span><i>◆</i><span>公共算力</span><i>◆</i>
+      </div>
+    </div>
+
+    <section class="stats-band" aria-label="档案概览">
+      <div class="stat-item">
+        <strong data-bind="centerCount">64</strong>
+        <span>设施档案</span>
+        <small>含国家超算、智算、数据中心与园区</small>
+      </div>
+      <div class="stat-item">
+        <strong data-bind="provinceCount">31</strong>
+        <span>省级行政区</span>
+        <small>港澳台暂列待补充</small>
+      </div>
+      <div class="stat-item">
+        <strong data-bind="nsccCount">11</strong>
+        <span>国家超算</span>
+        <small>按公开资料可核验的中心计</small>
+      </div>
+      <div class="stat-item">
+        <strong data-bind="contactCount">24</strong>
+        <span>个可联系设施</span>
+        <small>电话、邮箱或官网入口</small>
+      </div>
+      <p class="stats-note">所有数字只描述本站当前收录，不代表全国总量。算力口径混杂 FP16 / FP64，不做跨条目简单排名。</p>
+    </section>
+
+    <section class="section atlas-section" id="atlas" aria-labelledby="atlasTitle">
+      <div class="section-head">
+        <div>
+          <span class="kicker">01 / PROVINCIAL COVERAGE</span>
+          <h2 id="atlasTitle">省域算力版图</h2>
+        </div>
+        <p class="section-intro">
+          先按省份找，再按设施看。每个方块是一位“档案入口”，数字为本站收录的设施数。
+          空心方块代表尚未收录，不是没有算力。
+        </p>
+      </div>
+
+      <div class="atlas-toolbar">
+        <div class="atlas-legend">
+          <span><i class="legend-dot has"></i>已收录</span>
+          <span><i class="legend-dot empty"></i>待补充</span>
+          <span class="atlas-hint">点击省份筛选名录</span>
+        </div>
+        <button class="text-btn" type="button" data-action="reset-province">清除省份筛选</button>
+      </div>
+
+      <div class="province-board" id="provinceBoard"></div>
+
+      <div class="atlas-footnote">
+        <p><strong>为什么有空白？</strong> 公开地址、商务电话与在售机型并非同一种信息。我们宁可留下空格，也不把“某地有算力”写成一条看似完整的档案。</p>
+        <button class="text-btn" type="button" data-action="open-contribute">补一条线索 →</button>
+      </div>
+    </section>
+
+    <section class="section directory-section" id="directory" aria-labelledby="directoryTitle">
+      <div class="section-head">
+        <div>
+          <span class="kicker">02 / FACILITY DIRECTORY</span>
+          <h2 id="directoryTitle">设施名录</h2>
+        </div>
+        <p class="section-intro">
+          一条档案至少回答：在哪里、谁运营、有什么机器、能提供什么算力、怎么联系、怎么计费。
+          没有公开答案的字段，留白并标出。
+        </p>
+      </div>
+
+      <div class="toolbar" id="directoryToolbar">
+        <div class="search-wrap">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          <input id="searchInput" type="search" placeholder="搜设施、城市、机型或运营方，例如：昇腾 / 无锡 / 天河" autocomplete="off" aria-label="搜索设施">
+          <kbd>/</kbd>
+        </div>
+
+        <div class="filter-row">
+          <label class="field">
+            <span>省份</span>
+            <select id="provinceFilter">
+              <option value="全部">全部省份</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>类型</span>
+            <select id="typeFilter">
+              <option value="全部">全部类型</option>
+              <option value="国家超算">国家超算</option>
+              <option value="区域超算">区域超算</option>
+              <option value="智算中心">智算中心</option>
+              <option value="数据中心">数据中心</option>
+              <option value="算力园区">园区 / 集群</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>能力</span>
+            <select id="useFilter">
+              <option value="全部">全部能力</option>
+              <option value="大模型训练">大模型训练</option>
+              <option value="科学计算">科学计算</option>
+              <option value="推理">推理 / 微调</option>
+              <option value="数据存储">数据存储 / 灾备</option>
+              <option value="工业仿真">工业仿真</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>排序</span>
+            <select id="sortFilter">
+              <option value="relevance">默认顺序</option>
+              <option value="compute">公开算力（混合口径）</option>
+              <option value="completeness">资料完整度</option>
+              <option value="province">按省份</option>
+              <option value="name">按名称</option>
+            </select>
+          </label>
+          <label class="check-field">
+            <input id="completeOnly" type="checkbox">
+            <span>只看较完整</span>
+          </label>
+          <button class="btn btn-line btn-small" type="button" id="resetFilters">重置</button>
+          <button class="btn btn-line btn-small export-btn" type="button" id="exportCsv" title="导出当前筛选结果">
+            <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+            导出 CSV
+          </button>
+        </div>
+      </div>
+
+      <div class="results-bar">
+        <p id="resultsCount" aria-live="polite">正在读取档案…</p>
+        <div class="view-toggle" role="group" aria-label="切换视图">
+          <button class="is-active" type="button" data-view="grid" aria-label="卡片视图" aria-pressed="true">
+            <svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg>
+          </button>
+          <button type="button" data-view="list" aria-label="列表视图" aria-pressed="false">
+            <svg class="icon" aria-hidden="true"><use href="#i-list"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="active-filters" id="activeFilters"></div>
+      <div class="center-grid" id="directoryGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <span class="empty-no">∅</span>
+        <h3>这一组筛选暂时没有结果</h3>
+        <p>试试放宽省份或类型，或者直接提交一条线索。</p>
+        <div class="empty-actions">
+          <button class="btn btn-solid btn-small" type="button" data-action="reset-all">清空筛选</button>
+          <button class="btn btn-line btn-small" type="button" data-action="open-contribute">补充资料</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section machines-section" id="machines" aria-labelledby="machinesTitle">
+      <div class="section-head">
+        <div>
+          <span class="kicker">03 / MACHINES &amp; CHIPS</span>
+          <h2 id="machinesTitle">机型，不是黑箱</h2>
+        </div>
+        <p class="section-intro">
+          机型决定迁移成本、框架兼容性与实际吞吐。这里只统计档案中已登记的整机系统或加速卡；
+          待核实项会保留在设施详情中，但不应当作可租配置。
+        </p>
+      </div>
+
+      <div class="machine-layout">
+        <div class="model-grid" id="modelGrid"></div>
+        <aside class="machine-note">
+          <span class="note-index">NOTE / 01</span>
+          <h3>“有卡”不等于“能租”</h3>
+          <p>同一中心可能同时存在自用集群、科研机时、政务云与商业云。公开披露的机型，不保证对任意用户开放。</p>
+          <span class="note-index">NOTE / 02</span>
+          <h3>峰值不是体验</h3>
+          <p>PFLOPS 是理论或峰值口径；训练效率还取决于互联、存储、调度、框架适配和故障恢复。</p>
+          <span class="note-index">NOTE / 03</span>
+          <h3>精度要问清</h3>
+          <p>FP64、FP16、BF16、FP8 不可直接横比。看到“P”时，先问精度、稀疏性与实测口径。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricingTitle">
+      <div class="section-head">
+        <div>
+          <span class="kicker">04 / PRICING &amp; ACCESS</span>
+          <h2 id="pricingTitle">价格，为什么大多写着“询价”？</h2>
+        </div>
+        <p class="section-intro">
+          算力不是标准商品。卡型、卡数、互联、存储、时长、SLA 与补贴政策都会改变报价。
+          本站不编造单价，只记录计费口径与询价入口。
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card">
+          <span class="price-no">A</span>
+          <h3>按量计费</h3>
+          <p class="price-sub">核时 / 卡时 / 实例时</p>
+          <p>适合试验、短周期训练与推理。需要确认计费粒度、排队策略、存储与出网费用。</p>
+          <div class="price-tags"><span>科研机时</span><span>按卡时</span><span>按实例</span></div>
+        </article>
+        <article class="price-card">
+          <span class="price-no">B</span>
+          <h3>包年 / 整机柜</h3>
+          <p class="price-sub">专属集群 / 机柜租赁</p>
+          <p>适合稳定负载与数据合规要求高的团队。常见报价包含机柜、电力、带宽与运维，需逐项拆开。</p>
+          <div class="price-tags"><span>包年包月</span><span>整柜</span><span>专属集群</span></div>
+        </article>
+        <article class="price-card">
+          <span class="price-no">C</span>
+          <h3>项目制 / 算力券</h3>
+          <p class="price-sub">课题合作 / 地方补贴</p>
+          <p>公共算力平台常有科研合作、产业扶持或算力券。申请条件、可用机型与结算方式每年可能变化。</p>
+          <div class="price-tags"><span>项目合作</span><span>算力券</span><span>普惠算力</span></div>
+        </article>
+      </div>
+
+      <div class="pricing-detail">
+        <div class="pricing-lead">
+          <span class="kicker">PUBLIC PRICE CLUE</span>
+          <h3>一条可核验的价格线索</h3>
+          <p>
+            2023 年媒体报道，北京昇腾人工智能计算中心采用普惠定价，约为当时公有云算力价格的
+            <strong>1/2–1/3</strong>；门头沟区企业可低至 <strong>1/7</strong>。这是历史报道，不是今日报价。
+          </p>
+          <a class="source-link" href="https://www.163.com/dy/article/IF09OBJM0511AQHO.html" target="_blank" rel="noopener">
+            来源：机器之心 / 网易号（2023-09）
+            <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+          </a>
+        </div>
+
+        <div class="quote-list">
+          <span class="kicker">BEFORE YOU ASK</span>
+          <h3>询价时，把这 8 个问题带上</h3>
+          <ol>
+            <li>可用加速卡型号、显存与单卡算力，是否独占？</li>
+            <li>节点内 / 节点间互联规格，支持多大规模并行？</li>
+            <li>存储容量、吞吐与持久化怎么计费？</li>
+            <li>计费单位是卡时、核时、实例时还是包年？</li>
+            <li>排队、抢占、故障恢复与 SLA 如何约定？</li>
+            <li>是否支持 FP16 / BF16 / FP8，实测效率如何？</li>
+            <li>数据出网、专线、备份与合规要求？</li>
+            <li>是否有科研机时、算力券或地方补贴可用？</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="calculator" id="calculator">
+        <div class="calc-copy">
+          <span class="kicker">QUICK ARITHMETIC</span>
+          <h3>算一笔“卡时”账</h3>
+          <p>填入运营方给出的单价，只做乘法。它不是报价，也不包含存储、网络、运维与税费。</p>
+        </div>
+        <form class="calc-form" id="calcForm">
+          <label class="field">
+            <span>卡数</span>
+            <input id="calcCards" type="number" min="1" step="1" value="8" inputmode="numeric">
+          </label>
+          <label class="field">
+            <span>单价（元 / 卡时）</span>
+            <input id="calcRate" type="number" min="0" step="0.01" placeholder="填入报价" inputmode="decimal">
+          </label>
+          <label class="field">
+            <span>每天运行（小时）</span>
+            <input id="calcHours" type="number" min="0" max="24" step="1" value="24" inputmode="numeric">
+          </label>
+          <label class="field">
+            <span>天数</span>
+            <input id="calcDays" type="number" min="1" step="1" value="30" inputmode="numeric">
+          </label>
+          <output class="calc-output" id="calcOutput" for="calcCards calcRate calcHours calcDays">等待输入单价</output>
+        </form>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method" aria-labelledby="methodTitle">
+      <div class="section-head">
+        <div>
+          <span class="kicker">05 / METHOD &amp; GAPS</span>
+          <h2 id="methodTitle">一份未完成的档案</h2>
+        </div>
+        <p class="section-intro">
+          “所有”是一个很难被公开资料证明的词。我们能做的是：把已核验的骨架搭好，把未知留在明处，
+          让后来的人可以继续填。
+        </p>
+      </div>
+
+      <div class="method-grid">
+        <article class="method-card">
+          <span class="method-no">01</span>
+          <h3>收录边界</h3>
+          <p>国家超算、公共智算中心、大型数据中心、算力枢纽与园区。以已投运或公开宣布建设的设施为主，不收录纯概念规划。</p>
+        </article>
+        <article class="method-card">
+          <span class="method-no">02</span>
+          <h3>三种可信度</h3>
+          <p><strong>官方核验</strong>：地址/电话来自运营方官网；<strong>公开资料</strong>：来自媒体、政府新闻或公开资料库；<strong>待核实</strong>：仅有片区级定位或单一二手来源。</p>
+        </article>
+        <article class="method-card">
+          <span class="method-no">03</span>
+          <h3>算力口径</h3>
+          <p>智算优先记录 FP16 峰值，超算优先记录 FP64 峰值。口径不明时写“未披露”，不与其它条目强行相加。</p>
+        </article>
+        <article class="method-card">
+          <span class="method-no">04</span>
+          <h3>价格口径</h3>
+          <p>只记录计费方式和公开价格线索。没有公开标准价时标为“需询价”，不把市场传闻写成单价。</p>
+        </article>
+      </div>
+
+      <div class="gap-panel">
+        <div class="gap-copy">
+          <span class="kicker">COVERAGE GAPS</span>
+          <h3>目前最缺的，不是名单，而是字段</h3>
+          <p>
+            地址门牌、商务电话、在售机型、可用算力与计费单价，是五个最容易过期、也最难公开核验的字段。
+            下方是当前省份覆盖与空白清单。
+          </p>
+          <div class="gap-actions">
+            <button class="btn btn-solid btn-small" type="button" data-action="open-contribute">提交一条补充</button>
+            <button class="btn btn-line btn-small" type="button" id="downloadTemplate">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+              下载字段模板
+            </button>
+          </div>
+        </div>
+        <div class="gap-list" id="gapList"></div>
+      </div>
+
+      <div class="source-panel">
+        <div>
+          <span class="kicker">SOURCES &amp; CAVEATS</span>
+          <h3>资料来源与使用边界</h3>
+        </div>
+        <div class="source-copy">
+          <p>本站优先引用运营方官网、政府公开信息与主流媒体。每条档案在详情页列出可点击来源；来源冲突时保留较保守口径，并标注“待核实”。仅有区域政策来源的档案，会在详情页明确提示。</p>
+          <p>本站是公开资料整理，不构成采购、投资或法律建议。机房地址、接待规则与商务政策可能变化，访问或报价前请先与运营方确认。</p>
+          <div class="source-links">
+            <a href="https://www.ndrc.gov.cn/xxgk/jd/jd/202202/t20220217_1315795.html" target="_blank" rel="noopener">国家发改委 · “东数西算”八枢纽 <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg></a>
+            <a href="https://hcp.ac.cn/" target="_blank" rel="noopener">中国算力平台 <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="brand-seal" aria-hidden="true">算</span>
+        <div>
+          <strong>算力地理</strong>
+          <p>中国算力中心公开档案 · 持续更新</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#atlas">省级覆盖</a>
+        <a href="#directory">设施名录</a>
+        <a href="#pricing">计费说明</a>
+        <a href="#method">数据方法</a>
+        <button type="button" data-action="open-contribute">补充资料</button>
+      </div>
+      <div class="footer-meta">
+        <span>数据快照：2026-11-07</span>
+        <span>静态站点 · 无外部依赖</span>
+        <span>公开资料，非官方发布</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>以官方最新信息为准。若你是运营方并希望修正档案，请使用“补充资料”导出结构化字段。</p>
+      <a href="#top" class="back-top" aria-label="回到顶部">
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+      </a>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="detail-drawer" id="detailDrawer" aria-label="设施档案" aria-hidden="true" role="dialog" aria-modal="true" inert>
+    <div class="drawer-top">
+      <span>FACILITY FILE / 设施档案</span>
+      <button class="icon-btn" type="button" id="closeDrawer" aria-label="关闭档案">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="detail-content" id="detailContent"></div>
+  </aside>
+
+  <div class="compare-tray" id="compareTray" hidden>
+    <div class="tray-inner">
+      <div class="tray-label"><span>对比栏</span><small id="trayCount">0 / 3</small></div>
+      <div class="tray-list" id="trayList"></div>
+      <div class="tray-actions">
+        <button class="text-btn" type="button" id="clearCompare">清空</button>
+        <button class="btn btn-solid btn-small" type="button" id="openCompare">开始对比</button>
+      </div>
+    </div>
+  </div>
+
+  <dialog class="modal" id="compareDialog" aria-labelledby="compareTitle">
+    <div class="modal-head">
+      <div>
+        <span class="kicker">SIDE BY SIDE</span>
+        <h2 id="compareTitle">设施对比</h2>
+      </div>
+      <button class="icon-btn" type="button" data-close-dialog="compareDialog" aria-label="关闭对比">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="compareContent"></div>
+  </dialog>
+
+  <dialog class="modal contribute-modal" id="contributeDialog" aria-labelledby="contributeTitle">
+    <div class="modal-head">
+      <div>
+        <span class="kicker">CONTRIBUTE / 资料补充</span>
+        <h2 id="contributeTitle">把空格填上</h2>
+      </div>
+      <button class="icon-btn" type="button" data-close-dialog="contributeDialog" aria-label="关闭补充表单">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-intro">本站没有后端。你填写的内容只会暂存在本机浏览器，可导出为 JSON 后交给站点维护者，或作为你与运营方核对时的清单。</p>
+      <form id="contributeForm" class="contribute-form">
+        <div class="form-grid">
+          <label class="field">
+            <span>设施名称 *</span>
+            <input name="centerName" required maxlength="120" placeholder="例如：国家超级计算某中心">
+          </label>
+          <label class="field">
+            <span>省份 / 城市</span>
+            <input name="location" maxlength="80" placeholder="例如：江苏 / 无锡">
+          </label>
+          <label class="field">
+            <span>要补充的字段 *</span>
+            <select name="field" required>
+              <option value="地址门牌">地址门牌</option>
+              <option value="商务电话">商务电话</option>
+              <option value="邮箱 / 官网">邮箱 / 官网</option>
+              <option value="机型 / 芯片">机型 / 芯片</option>
+              <option value="算力规模">算力规模</option>
+              <option value="计费单价">计费单价</option>
+              <option value="机房规模 / PUE">机房规模 / PUE</option>
+              <option value="纠错">纠正现有信息</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>公开来源链接</span>
+            <input name="sourceUrl" type="url" maxlength="300" placeholder="https://…（优先运营方官网）">
+          </label>
+        </div>
+        <label class="field">
+          <span>补充内容 *</span>
+          <textarea name="value" required rows="4" maxlength="1200" placeholder="请写清口径、时间和适用范围。例如：2025年官网显示……"></textarea>
+        </label>
+        <div class="form-grid">
+          <label class="field">
+            <span>你的称呼（可选）</span>
+            <input name="submitter" maxlength="60" autocomplete="name">
+          </label>
+          <label class="field">
+            <span>备注（可选）</span>
+            <input name="notes" maxlength="200" placeholder="是否需要回访、可否公开署名">
+          </label>
+        </div>
+        <div class="form-actions">
+          <span class="form-note">不会自动上传；提交后暂存于 localStorage。</span>
+          <button class="btn btn-solid btn-small" type="submit">暂存这条补充</button>
+        </div>
+      </form>
+
+      <div class="submission-panel">
+        <div class="submission-head">
+          <div>
+            <span class="kicker">LOCAL QUEUE</span>
+            <h3>本机暂存 <span id="submissionCount">0</span> 条</h3>
+          </div>
+          <div class="submission-actions">
+            <button class="btn btn-line btn-small" type="button" id="copySubmissions">复制 JSON</button>
+            <button class="btn btn-line btn-small" type="button" id="downloadSubmissions">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+              导出 JSON
+            </button>
+            <button class="text-btn danger" type="button" id="clearSubmissions">清空</button>
+          </div>
+        </div>
+        <div class="submission-list" id="submissionList"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {"institution":"同创伟业","people":[{"name":"郑伟鹤","title":"创始合伙人、董事长","focus":"硬科技、AI"},{"name":"黄荔","title":"管理合伙人","focus":"医疗、科技"},{"name":"丁宝玉","title":"管理合伙人","focus":"硬科技"}]},
+  {"institution":"东方富海","people":[{"name":"陈玮","title":"董事长、创始合伙人","focus":"AI、硬科技"},{"name":"程厚博","title":"管理合伙人","focus":"半导体、医疗"}]},
+  {"institution":"松禾资本","people":[{"name":"厉伟","title":"创始合伙人","focus":"硬科技、AI"},{"name":"罗飞","title":"创始合伙人","focus":"生物医药、AI"}]},
+  {"institution":"基石资本","people":[{"name":"张维","title":"董事长","focus":"硬科技、AI"}]},
+  {"institution":"前海母基金","people":[{"name":"靳海涛","title":"首席执行合伙人","focus":"综合、AI"}]},
+  {"institution":"国中创投","people":[{"name":"马若鹏","title":"管理合伙人","focus":"半导体、AI"}]},
+  {"institution":"倚锋资本","people":[{"name":"朱湃","title":"CEO","focus":"生物医药、AI"}]},
+  {"institution":"普华资本","people":[{"name":"曹国熊","title":"董事长","focus":"医疗、硬科技"}]},
+  {"institution":"华睿投资","people":[{"name":"宗佩民","title":"创始合伙人","focus":"硬科技、AI"},{"name":"周干植","title":"电子信息事业部总经理","focus":"电子信息、AI"}]},
+  {"institution":"天堂硅谷","people":[{"name":"张晟","title":"总裁","focus":"AI、智能制造"}]},
+  {"institution":"深圳高新投","people":[{"name":"仲汝新","title":"蕾奥基金总经理","focus":"硬科技、AI"}]},
+  {"institution":"浙商创投","people":[{"name":"陈越孟","title":"创始合伙人","focus":"医疗、AI"}]},
+  {"institution":"元璟资本","people":[{"name":"吴泳铭","title":"创始合伙人","focus":"AI、企业服务"}]},
+  {"institution":"湖畔山南","people":[{"name":"谢世煌","title":"创始合伙人","focus":"AI、数字经济"}]},
+  {"institution":"银杏谷资本","people":[{"name":"陈向明","title":"创始合伙人","focus":"数据智能、AI"}]},
+  {"institution":"头头是道","people":[{"name":"姚臻","title":"管理合伙人","focus":"消费、AI"}]},
+  {"institution":"盈动资本","people":[{"name":"项建标","title":"创始合伙人","focus":"企业服务、AI"}]},
+  {"institution":"达晨财智","people":[{"name":"肖冰","title":"执行合伙人、首席投资官","focus":"AI、硬科技"}]},
+  {"institution":"深创投","people":[{"name":"倪泽望","title":"原董事长","focus":"综合、硬科技"}]},
+  {"institution":"腾讯投资","people":[{"name":"李朝晖","title":"管理合伙人","focus":"AI、企业服务"}]}
+]
