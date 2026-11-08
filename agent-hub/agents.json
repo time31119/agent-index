@@ -65,6 +65,8 @@
       "src": "http://127.0.0.1:8770/",
       "port": "8770",
       "start": "python -m paper_desk.server --port 8770（在 quant-runner 目录）",
+      "alt": "../paper-desk/index.html",
+      "altLabel": "静态快照",
       "no": 1,
       "path": "http://127.0.0.1:8770/"
     },
