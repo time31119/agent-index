@@ -24,15 +24,16 @@ const AGENTS = [
     name: "AI Paper Desk",
     en: "AUTO QUANT DESK",
     sub: "规则型 AI 组合 · 模拟交易台",
-    desc: "用真实 Binance USDT-M 永续行情驱动的模拟交易台：5 策略组合、1x、模拟撮合与 SSE 实时仪表盘，展示账户、持仓、信号与净值；不接真实交易所、不需要 API key。",
+    desc: "用真实 Binance USDT-M 永续行情驱动的模拟交易台：5 策略组合、1x、模拟撮合与 SSE 实时仪表盘；公网入口需 Basic Auth，本机 127.0.0.1:8770 免登录。",
     tags: [
       "模拟交易",
       "Binance 永续",
       "SSE 实时",
       "5 策略组合"
     ],
-    href: "http://127.0.0.1:8770/",
-    src: "http://127.0.0.1:8770/",
+    href: "https://contacting-discounts-placement-ant.trycloudflare.com/",
+    src: "https://contacting-discounts-placement-ant.trycloudflare.com/",
+    local: "http://127.0.0.1:8770/",
     port: "8770",
     start: "python -m paper_desk.server --port 8770（在 quant-runner 目录）",
     alt: "../paper-desk/index.html",
@@ -925,6 +926,7 @@ function detailHTML(a) {
     '<div class="d-actions">' +
       '<a class="btn" href="' + esc(a.href) + '">打开站点 ↗</a>' +
       (a.live ? '<a class="btn ghost" href="' + esc(a.live) + '" target="_blank" rel="noopener">实时服务 ↗</a>' : '') +
+      (a.local ? '<a class="btn ghost" href="' + esc(a.local) + '">本机入口 ↗</a>' : '') +
       (a.demo ? '<a class="btn ghost" href="' + esc(a.demo) + '">演示模式（示例数据）</a>' : '') +
       (a.alt ? '<a class="btn ghost" href="' + esc(a.alt) + '">' + esc(a.altLabel || '另一入口') + ' ↗</a>' : '') +
       '<button class="btn ghost" type="button" data-copy="' + esc(abs) + '">复制链接</button>' +
