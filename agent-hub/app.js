@@ -19,6 +19,25 @@ const CATS = [
 const AGENTS = [
   /* ---- 交易与投研 ---- */
   {
+    id: "moss",
+    cat: "trading",
+    name: "Moss 策略模拟看板",
+    en: "MOSS",
+    sub: "Hyperliquid 镜像跟单 · 策略模拟",
+    desc: "本地只读的 Hyperliquid 镜像跟单与 Moss 策略模拟看板：按净值占比复制持仓，带风控、熔断、拆单与绩效面板，支持地址与 agt_ 策略 ID 打分对比。",
+    tags: [
+      "Hyperliquid",
+      "镜像跟单",
+      "策略模拟",
+      "风控"
+    ],
+    href: "http://127.0.0.1:8900/",
+    src: "http://127.0.0.1:8900/",
+    port: "8900",
+    start: "python -m hl_mirror web --port 8900（在 hl-mirror 目录）",
+    no: 1
+  },
+  {
     id: "ai-paper-desk",
     cat: "trading",
     name: "AI Paper Desk",
@@ -37,7 +56,7 @@ const AGENTS = [
     start: "python -m paper_desk.server --port 8770（在 quant-runner 目录）",
     alt: "../paper-desk/index.html",
     altLabel: "静态快照",
-    no: 1
+    no: 2
   },
   {
     id: "agent-alpha",
@@ -58,11 +77,11 @@ const AGENTS = [
     altLabel: "静态入口",
     port: "8080",
     start: "在 agent-alpha 目录运行 python -m http.server 8080",
-    no: 2
+    no: 3
   },
   {
     id: "alpha100",
-    no: 3,
+    no: 4,
     cat: "trading",
     name: "ALPHA 100",
     en: "ALPHA 100",
@@ -81,7 +100,7 @@ const AGENTS = [
   },
   {
     id: "intraday100",
-    no: 4,
+    no: 5,
     cat: "trading",
     name: "INTRADAY 100",
     en: "INTRADAY 100",
@@ -94,13 +113,11 @@ const AGENTS = [
       "复盘"
     ],
     href: "../intraday100/index.html",
-    src: "http://127.0.0.1:8900/#/library",
-    port: "8900",
-    start: "intraday100\\start-server.bat"
+    src: "http://127.0.0.1:8900/#/library"
   },
   {
     id: "global-ai-trading",
-    no: 5,
+    no: 6,
     cat: "trading",
     name: "全球 AI 交易 TOP 100",
     en: "GLOBAL AI TRADING 100",
@@ -117,7 +134,7 @@ const AGENTS = [
   },
   {
     id: "trading-lab",
-    no: 6,
+    no: 7,
     cat: "trading",
     name: "技术分析研究实验室",
     en: "TRADING LAB",
@@ -134,7 +151,7 @@ const AGENTS = [
   },
   {
     id: "okx-scalp-lab",
-    no: 7,
+    no: 8,
     cat: "trading",
     name: "SCALP//LAB",
     en: "SCALP LAB",
@@ -151,7 +168,7 @@ const AGENTS = [
   },
   {
     id: "perp-atlas",
-    no: 8,
+    no: 9,
     cat: "trading",
     name: "PERP ATLAS",
     en: "PERP ATLAS",
@@ -168,7 +185,7 @@ const AGENTS = [
   },
   {
     id: "trace",
-    no: 9,
+    no: 10,
     cat: "trading",
     name: "循迹 TRACE",
     en: "TRACE",
@@ -185,7 +202,7 @@ const AGENTS = [
   },
   {
     id: "trading-desk",
-    no: 10,
+    no: 11,
     cat: "trading",
     name: "值班交易台",
     en: "TRADING DESK",
@@ -201,7 +218,7 @@ const AGENTS = [
   },
   {
     id: "leadscope",
-    no: 11,
+    no: 12,
     cat: "trading",
     name: "LeadScope",
     en: "LEADSCOPE",
@@ -236,12 +253,12 @@ const AGENTS = [
     demo: "../ai-trader-100u/static/index.html",
     port: "8777",
     start: "ai-trader-100u\\run.bat（实时行情版）",
-    no: 12
+    no: 13
   },
   /* ---- 短剧与视频 ---- */
   {
     id: "nextact",
-    no: 13,
+    no: 14,
     cat: "video",
     name: "次幕 NEXTACT",
     en: "NEXTACT",
@@ -258,7 +275,7 @@ const AGENTS = [
   },
   {
     id: "shortframe",
-    no: 14,
+    no: 15,
     cat: "video",
     name: "短幕 SHORTFRAME",
     en: "SHORTFRAME",
@@ -275,7 +292,7 @@ const AGENTS = [
   },
   {
     id: "shortdrama-top50",
-    no: 15,
+    no: 16,
     cat: "video",
     name: "全球短剧平台流量榜 TOP 50",
     en: "SHORT DRAMA TOP 50",
@@ -291,7 +308,7 @@ const AGENTS = [
   },
   {
     id: "cijing",
-    no: 16,
+    no: 17,
     cat: "video",
     name: "词镜",
     en: "CIJING",
@@ -308,7 +325,7 @@ const AGENTS = [
   },
   {
     id: "shortgen-2026",
-    no: 17,
+    no: 18,
     cat: "video",
     name: "短视频生成器索引 2026",
     en: "SHORTGEN 2026",
@@ -325,7 +342,7 @@ const AGENTS = [
   },
   {
     id: "lecture",
-    no: 18,
+    no: 19,
     cat: "video",
     name: "讲义 LECTURE",
     en: "LECTURE",
@@ -343,7 +360,7 @@ const AGENTS = [
   /* ---- 行业图谱 ---- */
   {
     id: "ai-atlas",
-    no: 19,
+    no: 20,
     cat: "atlas",
     name: "AI Atlas 2026",
     en: "AI ATLAS",
@@ -360,7 +377,7 @@ const AGENTS = [
   },
   {
     id: "hangzhou-ai-atlas",
-    no: 20,
+    no: 21,
     cat: "atlas",
     name: "杭州 AI 图谱",
     en: "HANGZHOU AI ATLAS",
@@ -377,7 +394,7 @@ const AGENTS = [
   },
   {
     id: "physical-ai-2056",
-    no: 21,
+    no: 22,
     cat: "atlas",
     name: "物理 AI 2056",
     en: "PHYSICAL AI 2056",
@@ -394,7 +411,7 @@ const AGENTS = [
   },
   {
     id: "edge32",
-    no: 22,
+    no: 23,
     cat: "atlas",
     name: "EDGE32",
     en: "EDGE32",
@@ -411,7 +428,7 @@ const AGENTS = [
   },
   {
     id: "ai-radar",
-    no: 23,
+    no: 24,
     cat: "atlas",
     name: "AI 雷达",
     en: "AI RADAR",
@@ -443,7 +460,7 @@ const AGENTS = [
     ],
     href: "../ai-big-data-100/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/ai-big-data-100/index.html",
-    no: 24
+    no: 25
   },
   {
     id: "china-compute-atlas",
@@ -460,12 +477,12 @@ const AGENTS = [
     ],
     href: "../china-compute-atlas/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/china-compute-atlas/index.html",
-    no: 25
+    no: 26
   },
   /* ---- AI 产品与硬件 ---- */
   {
     id: "lumen",
-    no: 26,
+    no: 27,
     cat: "product",
     name: "LUMEN",
     en: "LUMEN",
@@ -482,7 +499,7 @@ const AGENTS = [
   },
   {
     id: "botique",
-    no: 27,
+    no: 28,
     cat: "product",
     name: "BOTIQUE",
     en: "BOTIQUE",
@@ -499,7 +516,7 @@ const AGENTS = [
   },
   {
     id: "shitu",
-    no: 28,
+    no: 29,
     cat: "product",
     name: "识途 SHITU",
     en: "SHITU",
@@ -516,7 +533,7 @@ const AGENTS = [
   },
   {
     id: "moqi",
-    no: 29,
+    no: 30,
     cat: "product",
     name: "默契 MOQI",
     en: "MOQI",
@@ -533,7 +550,7 @@ const AGENTS = [
   },
   {
     id: "slide",
-    no: 30,
+    no: 31,
     cat: "product",
     name: "SLIDE 01",
     en: "SLIDE",
@@ -566,11 +583,11 @@ const AGENTS = [
     ],
     href: "../lansuan/index.html#top",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/lansuan/index.html#top",
-    no: 31
+    no: 32
   },
   {
     id: "conflux",
-    no: 32,
+    no: 33,
     cat: "business",
     name: "合流 Conflux",
     en: "CONFLUX",
@@ -587,7 +604,7 @@ const AGENTS = [
   },
   {
     id: "ailink",
-    no: 33,
+    no: 34,
     cat: "business",
     name: "AILink 智链",
     en: "AILINK",
@@ -607,7 +624,7 @@ const AGENTS = [
   },
   {
     id: "zhanggui",
-    no: 34,
+    no: 35,
     cat: "business",
     name: "掌柜 ZHANGGUI",
     en: "ZHANGGUI",
@@ -624,7 +641,7 @@ const AGENTS = [
   },
   {
     id: "gift-studio",
-    no: 35,
+    no: 36,
     cat: "business",
     name: "礼序 LIXU",
     en: "LIXU",
@@ -657,7 +674,7 @@ const AGENTS = [
     src: "http://127.0.0.1:3000/",
     port: "3000",
     start: "python app.py（在 nexusgate 目录运行）",
-    no: 36
+    no: 37
   },
   {
     id: "apex",
@@ -677,7 +694,7 @@ const AGENTS = [
     live: "http://127.0.0.1:8791/index.html",
     port: "8791",
     start: "python -m http.server 8791（在 apex 目录运行）",
-    no: 37
+    no: 38
   },
   {
     id: "mosaic",
@@ -696,11 +713,11 @@ const AGENTS = [
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/mosaic/prototype/index.html",
     alt: "../mosaic/prototype/landing.html",
     altLabel: "营销官网",
-    no: 38
+    no: 39
   },
   {
     id: "100ideas",
-    no: 39,
+    no: 40,
     cat: "toolbox",
     name: "蜂院长 · 100 个 AI 点子",
     en: "100 IDEAS",
@@ -717,7 +734,7 @@ const AGENTS = [
   },
   {
     id: "bookletai",
-    no: 40,
+    no: 41,
     cat: "toolbox",
     name: "AI 册子工具清单",
     en: "BOOKLETAI 71",
@@ -750,7 +767,7 @@ const AGENTS = [
     live: "http://localhost:8787/",
     port: "8787",
     start: "aster\\start.cmd（实时版）",
-    no: 41
+    no: 42
   },
   {
     id: "tianshu-cloud",
@@ -767,7 +784,7 @@ const AGENTS = [
     ],
     href: "../tianshu-cloud/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/tianshu-cloud/index.html",
-    no: 42
+    no: 43
   },
   {
     id: "qiliang",
@@ -784,7 +801,7 @@ const AGENTS = [
     ],
     href: "../qiliang/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/qiliang/index.html",
-    no: 43
+    no: 44
   },
   {
     id: "whiteboard-studio",
@@ -803,7 +820,7 @@ const AGENTS = [
     src: "http://localhost/",
     port: "80",
     start: "whiteboard-studio\\server.py 80",
-    no: 44
+    no: 45
   },
 ];
 
