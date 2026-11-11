@@ -658,6 +658,23 @@ const AGENTS = [
   },
   /* ---- 创意与工具 ---- */
   {
+    id: "luna-quiz",
+    cat: "toolbox",
+    name: "星语测试",
+    en: "LUNA QUIZ",
+    sub: "8 道题，生成你的星语人格报告",
+    desc: "不是星座运势，也不是性格标签：答 8 道题，生成一份只属于你的星语人格报告。纯前端互动原型，含落地页、分题问答、报告生成与订阅流程。",
+    tags: [
+      "人格测试",
+      "互动问答",
+      "星语",
+      "自我反思"
+    ],
+    href: "../luna-quiz/index.html",
+    src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/luna-quiz/index.html",
+    no: 37
+  },
+  {
     id: "nexusgate",
     cat: "toolbox",
     name: "NexusGate",
@@ -674,7 +691,7 @@ const AGENTS = [
     src: "http://127.0.0.1:3000/",
     port: "3000",
     start: "python app.py（在 nexusgate 目录运行）",
-    no: 37
+    no: 38
   },
   {
     id: "apex",
@@ -694,7 +711,7 @@ const AGENTS = [
     live: "http://127.0.0.1:8791/index.html",
     port: "8791",
     start: "python -m http.server 8791（在 apex 目录运行）",
-    no: 38
+    no: 39
   },
   {
     id: "mosaic",
@@ -713,11 +730,11 @@ const AGENTS = [
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/mosaic/prototype/index.html",
     alt: "../mosaic/prototype/landing.html",
     altLabel: "营销官网",
-    no: 39
+    no: 40
   },
   {
     id: "100ideas",
-    no: 40,
+    no: 41,
     cat: "toolbox",
     name: "蜂院长 · 100 个 AI 点子",
     en: "100 IDEAS",
@@ -734,7 +751,7 @@ const AGENTS = [
   },
   {
     id: "bookletai",
-    no: 41,
+    no: 42,
     cat: "toolbox",
     name: "AI 册子工具清单",
     en: "BOOKLETAI 71",
@@ -767,7 +784,7 @@ const AGENTS = [
     live: "http://localhost:8787/",
     port: "8787",
     start: "aster\\start.cmd（实时版）",
-    no: 42
+    no: 43
   },
   {
     id: "tianshu-cloud",
@@ -784,7 +801,7 @@ const AGENTS = [
     ],
     href: "../tianshu-cloud/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/tianshu-cloud/index.html",
-    no: 43
+    no: 44
   },
   {
     id: "qiliang",
@@ -801,7 +818,7 @@ const AGENTS = [
     ],
     href: "../qiliang/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/qiliang/index.html",
-    no: 44
+    no: 45
   },
   {
     id: "whiteboard-studio",
@@ -820,7 +837,7 @@ const AGENTS = [
     src: "http://localhost/",
     port: "80",
     start: "whiteboard-studio\\server.py 80",
-    no: 45
+    no: 46
   },
 ];
 
