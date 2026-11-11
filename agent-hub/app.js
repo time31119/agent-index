@@ -35,6 +35,8 @@ const AGENTS = [
     src: "http://127.0.0.1:8900/",
     port: "8900",
     start: "python -m hl_mirror web --port 8900（在 hl-mirror 目录）",
+    alt: "http://127.0.0.1:8900/pool",
+    altLabel: "候选池",
     no: 1
   },
   {
