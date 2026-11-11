@@ -359,8 +359,25 @@ const AGENTS = [
   },
   /* ---- 行业图谱 ---- */
   {
+    id: "uniscan",
+    cat: "atlas",
+    name: "UniScan",
+    en: "UNISCAN",
+    sub: "比特币 / Fractal 区块浏览器",
+    desc: "UniSat 出品的比特币与 Fractal Bitcoin 区块浏览器，支持 Ordinals、Runes、Alkanes，展示区块、地址、交易、网络活动与 BRC-20 数据。外部网站。",
+    tags: [
+      "区块浏览器",
+      "Ordinals",
+      "Runes",
+      "Alkanes"
+    ],
+    href: "https://uniscan.cc/",
+    src: "https://uniscan.cc/",
+    no: 20
+  },
+  {
     id: "ai-atlas",
-    no: 20,
+    no: 21,
     cat: "atlas",
     name: "AI Atlas 2026",
     en: "AI ATLAS",
@@ -377,7 +394,7 @@ const AGENTS = [
   },
   {
     id: "hangzhou-ai-atlas",
-    no: 21,
+    no: 22,
     cat: "atlas",
     name: "杭州 AI 图谱",
     en: "HANGZHOU AI ATLAS",
@@ -394,7 +411,7 @@ const AGENTS = [
   },
   {
     id: "physical-ai-2056",
-    no: 22,
+    no: 23,
     cat: "atlas",
     name: "物理 AI 2056",
     en: "PHYSICAL AI 2056",
@@ -411,7 +428,7 @@ const AGENTS = [
   },
   {
     id: "edge32",
-    no: 23,
+    no: 24,
     cat: "atlas",
     name: "EDGE32",
     en: "EDGE32",
@@ -428,7 +445,7 @@ const AGENTS = [
   },
   {
     id: "ai-radar",
-    no: 24,
+    no: 25,
     cat: "atlas",
     name: "AI 雷达",
     en: "AI RADAR",
@@ -460,7 +477,7 @@ const AGENTS = [
     ],
     href: "../ai-big-data-100/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/ai-big-data-100/index.html",
-    no: 25
+    no: 26
   },
   {
     id: "china-compute-atlas",
@@ -477,12 +494,12 @@ const AGENTS = [
     ],
     href: "../china-compute-atlas/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/china-compute-atlas/index.html",
-    no: 26
+    no: 27
   },
   /* ---- AI 产品与硬件 ---- */
   {
     id: "lumen",
-    no: 27,
+    no: 28,
     cat: "product",
     name: "LUMEN",
     en: "LUMEN",
@@ -499,7 +516,7 @@ const AGENTS = [
   },
   {
     id: "botique",
-    no: 28,
+    no: 29,
     cat: "product",
     name: "BOTIQUE",
     en: "BOTIQUE",
@@ -516,7 +533,7 @@ const AGENTS = [
   },
   {
     id: "shitu",
-    no: 29,
+    no: 30,
     cat: "product",
     name: "识途 SHITU",
     en: "SHITU",
@@ -533,7 +550,7 @@ const AGENTS = [
   },
   {
     id: "moqi",
-    no: 30,
+    no: 31,
     cat: "product",
     name: "默契 MOQI",
     en: "MOQI",
@@ -550,7 +567,7 @@ const AGENTS = [
   },
   {
     id: "slide",
-    no: 31,
+    no: 32,
     cat: "product",
     name: "SLIDE 01",
     en: "SLIDE",
@@ -583,11 +600,11 @@ const AGENTS = [
     ],
     href: "../lansuan/index.html#top",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/lansuan/index.html#top",
-    no: 32
+    no: 33
   },
   {
     id: "conflux",
-    no: 33,
+    no: 34,
     cat: "business",
     name: "合流 Conflux",
     en: "CONFLUX",
@@ -604,7 +621,7 @@ const AGENTS = [
   },
   {
     id: "ailink",
-    no: 34,
+    no: 35,
     cat: "business",
     name: "AILink 智链",
     en: "AILINK",
@@ -624,7 +641,7 @@ const AGENTS = [
   },
   {
     id: "zhanggui",
-    no: 35,
+    no: 36,
     cat: "business",
     name: "掌柜 ZHANGGUI",
     en: "ZHANGGUI",
@@ -641,7 +658,7 @@ const AGENTS = [
   },
   {
     id: "gift-studio",
-    no: 36,
+    no: 37,
     cat: "business",
     name: "礼序 LIXU",
     en: "LIXU",
@@ -672,7 +689,7 @@ const AGENTS = [
     ],
     href: "../luna-quiz/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/luna-quiz/index.html",
-    no: 37
+    no: 38
   },
   {
     id: "nexusgate",
@@ -691,7 +708,7 @@ const AGENTS = [
     src: "http://127.0.0.1:3000/",
     port: "3000",
     start: "python app.py（在 nexusgate 目录运行）",
-    no: 38
+    no: 39
   },
   {
     id: "apex",
@@ -711,7 +728,7 @@ const AGENTS = [
     live: "http://127.0.0.1:8791/index.html",
     port: "8791",
     start: "python -m http.server 8791（在 apex 目录运行）",
-    no: 39
+    no: 40
   },
   {
     id: "mosaic",
@@ -730,11 +747,11 @@ const AGENTS = [
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/mosaic/prototype/index.html",
     alt: "../mosaic/prototype/landing.html",
     altLabel: "营销官网",
-    no: 40
+    no: 41
   },
   {
     id: "100ideas",
-    no: 41,
+    no: 42,
     cat: "toolbox",
     name: "蜂院长 · 100 个 AI 点子",
     en: "100 IDEAS",
@@ -751,7 +768,7 @@ const AGENTS = [
   },
   {
     id: "bookletai",
-    no: 42,
+    no: 43,
     cat: "toolbox",
     name: "AI 册子工具清单",
     en: "BOOKLETAI 71",
@@ -784,7 +801,7 @@ const AGENTS = [
     live: "http://localhost:8787/",
     port: "8787",
     start: "aster\\start.cmd（实时版）",
-    no: 43
+    no: 44
   },
   {
     id: "tianshu-cloud",
@@ -801,7 +818,7 @@ const AGENTS = [
     ],
     href: "../tianshu-cloud/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/tianshu-cloud/index.html",
-    no: 44
+    no: 45
   },
   {
     id: "qiliang",
@@ -818,7 +835,7 @@ const AGENTS = [
     ],
     href: "../qiliang/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/qiliang/index.html",
-    no: 45
+    no: 46
   },
   {
     id: "whiteboard-studio",
@@ -837,7 +854,7 @@ const AGENTS = [
     src: "http://localhost/",
     port: "80",
     start: "whiteboard-studio\\server.py 80",
-    no: 46
+    no: 47
   },
 ];
 
