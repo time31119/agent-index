@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0917" />
+<title>星语测试 · 你的人格，藏在某颗星里</title>
+<meta name="description" content="答 8 道题，生成一份只属于你的星语人格报告。慢一点，诚实地看看自己。" />
+<meta property="og:title" content="星语测试 · 你的人格，藏在某颗星里" />
+<meta property="og:description" content="答 8 道题，生成一份只属于你的星语人格报告。" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0a17'/%3E%3Cpath d='M20.5 8.2a8.2 8.2 0 1 0 3.3 12.9 6.6 6.6 0 0 1-3.3-12.9z' fill='%23e8cf9f'/%3E%3Ccircle cx='23.5' cy='9' r='1.2' fill='%23e8cf9f'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="#/" aria-label="星语测试 首页">
+    <span class="brand-mark" aria-hidden="true">☾</span>
+    <span class="brand-name">星语测试</span>
+  </a>
+  <span class="brand-note">A QUIZ FOR SELF-REFLECTION</span>
+</header>
+
+<main id="main" class="stage">
+
+  <!-- ① 首页 -->
+  <section class="screen screen--hero is-active" id="screen-hero" data-screen="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">8 个问题 · 约 2 分钟</p>
+      <h1 id="hero-title">
+        你的人格，<br />
+        藏在<span class="glow">某颗星</span>里。
+      </h1>
+      <p class="lede">
+        不是星座运势，也不是性格标签。这 8 个问题会带你看见自己一直在用、
+        却从未命名的那个部分。
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn--primary" id="start-btn" type="button">
+          <span>开始测试</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </button>
+        <a class="btn btn--ghost" href="#how">先看看它是怎么运作的</a>
+      </div>
+
+      <dl class="fact-row">
+        <div><dt>问题</dt><dd>8</dd></div>
+        <div><dt>原型组合</dt><dd>20</dd></div>
+        <div><dt>需要</dt><dd>名字 + 生日</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-card" aria-hidden="true">
+      <div class="orbit">
+        <span class="orbit-ring orbit-ring--1"></span>
+        <span class="orbit-ring orbit-ring--2"></span>
+        <span class="orbit-ring orbit-ring--3"></span>
+        <span class="orbit-core">☾</span>
+        <span class="orbit-dot orbit-dot--a"></span>
+        <span class="orbit-dot orbit-dot--b"></span>
+        <span class="orbit-dot orbit-dot--c"></span>
+      </div>
+      <p class="hero-card-caption">「你不是在猜测未来，<br />你是在提前感受它。」</p>
+    </div>
+  </section>
+
+  <!-- ② 登记 -->
+  <section class="screen screen--intro" id="screen-intro" data-screen="intro" aria-labelledby="intro-title">
+    <div class="panel">
+      <p class="step-mark">第一步 · 校准坐标</p>
+      <h2 id="intro-title">先告诉我两件事</h2>
+      <p class="panel-lede">
+        名字会出现在报告里；生日用来定位你的太阳星座，让解读更贴近你。
+        信息只保存在你自己的浏览器里。
+      </p>
+
+      <form id="intro-form" class="form" novalidate>
+        <div class="field">
+          <label for="name">怎么称呼你</label>
+          <input id="name" name="name" type="text" maxlength="12" autocomplete="given-name"
+                 placeholder="例如：小满" />
+          <p class="hint">留空也可以，报告里会用「你」。</p>
+        </div>
+
+        <fieldset class="field field--split">
+          <legend>你的生日</legend>
+          <div class="date-inputs">
+            <div>
+              <label class="sr-only" for="birth-month">出生月份</label>
+              <input id="birth-month" name="month" type="number" inputmode="numeric"
+                     min="1" max="12" placeholder="月" />
+            </div>
+            <span aria-hidden="true">/</span>
+            <div>
+              <label class="sr-only" for="birth-day">出生日期</label>
+              <input id="birth-day" name="day" type="number" inputmode="numeric"
+                     min="1" max="31" placeholder="日" />
+            </div>
+          </div>
+          <p class="hint">只填月、日即可，不需要年份。</p>
+        </fieldset>
+
+        <p class="form-error" id="intro-error" role="alert" hidden></p>
+
+        <button class="btn btn--primary btn--block" type="submit">
+          进入第一题
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="fineprint">
+          继续即表示你同意本页面的
+          <a href="#privacy">隐私说明</a>。测试结果仅供自我探索与娱乐。
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ③ 答题 -->
+  <section class="screen screen--quiz" id="screen-quiz" data-screen="quiz" aria-labelledby="q-title">
+    <div class="quiz-head">
+      <div class="progress" role="progressbar" aria-label="答题进度"
+           aria-valuemin="1" aria-valuemax="8" aria-valuenow="1" id="progress-bar">
+        <span class="progress-fill" id="progress-fill"></span>
+      </div>
+      <div class="quiz-meta">
+        <span id="q-count">第 1 / 8 题</span>
+        <button class="linkish" id="back-btn" type="button">← 上一题</button>
+      </div>
+    </div>
+
+    <div class="question-wrap">
+      <div class="question" id="question-card" aria-live="polite">
+        <h2 id="q-title"></h2>
+        <p class="q-sub" id="q-sub"></p>
+        <div class="options" id="options" role="group" aria-labelledby="q-title"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 生成中 -->
+  <section class="screen screen--loading" id="screen-loading" data-screen="loading" aria-live="polite" aria-labelledby="loading-title">
+    <div class="loader">
+      <div class="loader-sky" aria-hidden="true">
+        <span class="loader-orbit"></span>
+        <span class="loader-core"></span>
+      </div>
+      <h2 id="loading-title">正在为你校准星图</h2>
+      <p class="loader-step" id="loading-step">读取你的答案…</p>
+      <div class="loader-bar" aria-hidden="true"><span id="loading-fill"></span></div>
+      <p class="loader-pct" id="loading-pct">0%</p>
+    </div>
+  </section>
+
+  <!-- ⑤ 结果 -->
+  <section class="screen screen--result" id="screen-result" data-screen="result" aria-labelledby="result-title">
+    <div class="result-hero">
+      <p class="eyebrow" id="result-eyebrow">你的星语人格</p>
+      <div class="sigil" id="result-sigil" aria-hidden="true">☾</div>
+      <h2 id="result-title"></h2>
+      <p class="result-sub" id="result-sub"></p>
+      <ul class="tag-row" id="result-tags"></ul>
+    </div>
+
+    <div class="report">
+      <article class="report-block">
+        <h3>我们读到的你</h3>
+        <div id="report-body"></div>
+      </article>
+
+      <div class="report-grid">
+        <article class="report-card">
+          <h3><span aria-hidden="true">✦</span> 你的天赋</h3>
+          <ul id="report-gifts"></ul>
+        </article>
+        <article class="report-card report-card--warn">
+          <h3><span aria-hidden="true">◐</span> 容易卡住的地方</h3>
+          <ul id="report-shadows"></ul>
+        </article>
+      </div>
+
+      <article class="report-block report-block--note">
+        <h3>我们注意到</h3>
+        <ul class="note-list" id="report-notes"></ul>
+      </article>
+
+      <article class="report-block">
+        <h3>这段时间的练习</h3>
+        <p class="practice" id="report-practice"></p>
+      </article>
+
+      <article class="report-block report-block--sign" id="sign-block" hidden>
+        <h3>你的太阳坐标</h3>
+        <p class="sign-line"><strong id="sign-name"></strong><span id="sign-element"></span></p>
+        <p id="sign-note"></p>
+      </article>
+    </div>
+
+    <aside class="offer" id="offer">
+      <div class="offer-copy">
+        <p class="step-mark">继续深入</p>
+        <h3>一份 21 页的《个人星图手册》</h3>
+        <p>
+          把这份报告展开成可执行的版本：你的能量节奏、关系模式、适合你的工作方式，
+          以及未来三个月的行动建议。
+        </p>
+        <ul class="offer-list">
+          <li>完整版人格解读（含组合原型深读）</li>
+          <li>你的年度节奏表与关键月份</li>
+          <li>关系与沟通模式拆解</li>
+        </ul>
+      </div>
+      <form class="offer-form" id="waitlist-form" novalidate>
+        <label for="email">留下邮箱，手册上线时先发给你</label>
+        <div class="inline-field">
+          <input id="email" name="email" type="email" autocomplete="email"
+                 placeholder="you@example.com" required />
+          <button class="btn btn--primary" type="submit">抢先订阅</button>
+        </div>
+        <p class="fineprint">原型演示：邮箱只保存在本机浏览器，不会真的发送。</p>
+        <p class="form-error" id="waitlist-error" role="alert" hidden></p>
+        <p class="waitlist-done" id="waitlist-done" role="status" hidden>
+          记下了。上线时第一个通知你 ✦
+        </p>
+      </form>
+    </aside>
+
+    <div class="result-actions">
+      <button class="btn btn--primary" id="share-btn" type="button">复制我的结果</button>
+      <button class="btn btn--ghost" id="retake-btn" type="button">重新测一次</button>
+    </div>
+
+    <p class="result-disclaimer">
+      这份报告由你的选项即时生成，不是预测，而是一面镜子。
+      结果仅供自我探索与娱乐（for entertainment purposes only），不构成医疗、心理或财务建议。
+    </p>
+  </section>
+
+  <!-- ⑥ 静态说明：运作方式 / 隐私 / 条款 -->
+  <section class="footer-info" id="how" aria-labelledby="how-title">
+    <div class="info-grid">
+      <article>
+        <p class="step-mark">怎么运作</p>
+        <h2 id="how-title">不是随机发一张牌</h2>
+        <p>
+          每个选项会为五种原型加权。八题之后，分数最高的两种原型构成你的组合人格——
+          共 5 × 4 = 20 种组合，每一种都有独立的标题与解读。
+        </p>
+        <p>
+          你的生日只影响太阳星座与元素那一段，不会改变主结果。所以同一份报告，
+          换一天出生，读起来会不一样——但你的原型不会因此被换掉。
+        </p>
+      </article>
+      <article>
+        <p class="step-mark">这里不做什么</p>
+        <h2>我们不用恐惧卖东西</h2>
+        <p>
+          没有倒计时，没有“最后 3 个名额”，也不会告诉你有厄运需要化解。
+          这套题的价值是让你停下来，认真看自己两分钟。
+        </p>
+        <p>
+          如果你只是想复刻一个获客漏斗，请保留这段克制——它是长期转化率的一部分，
+          也是你不被平台和用户反噬的原因。
+        </p>
+      </article>
+    </div>
+
+    <div class="legal" id="privacy">
+      <h2>隐私与条款（模板）</h2>
+      <p>
+        本页面是演示原型。姓名、生日、邮箱只写入你当前浏览器的 localStorage，
+        不会上传到任何服务器，也不会被第三方读取。清除浏览器数据即可删除。
+      </p>
+      <p>
+        正式上线前，你需要替换为真实的隐私政策、服务条款与 Cookie 声明，
+        并说明你将如何使用 Meta Pixel 等追踪工具、如何提供数据删除渠道。
+        如果面向欧盟用户，还需符合 GDPR；面向加州用户需符合 CCPA。
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>星语测试 · 演示原型</span>
+    <nav aria-label="页脚">
+      <a href="#how">怎么运作</a>
+      <a href="#privacy">隐私</a>
+      <a href="#privacy">条款</a>
+    </nav>
+    <span class="footer-note">For entertainment purposes only.</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="content.js"></script>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
