@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>无影手 V7.55 · 交易回测与模拟交易终端 | XAUUSDc</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23d4a637'/><text x='16' y='23' font-size='20' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='%231a1305'>无</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="scanline"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">无</div>
+    <div class="brand-txt">
+      <b>无影手 V7.55</b>
+      <span>交易回测与模拟交易终端</span>
+    </div>
+  </div>
+  <div class="top-meta">
+    <div class="chip"><i class="dot live"></i><span id="clock">--:--:--</span></div>
+    <div class="chip"><span class="k">品种</span><span class="v" id="m-symbol">XAUUSDc</span></div>
+    <div class="chip"><span class="k">服务器</span><span class="v" id="m-server">Exness-Real36</span></div>
+    <div class="chip"><span class="k">账号</span><span class="v" id="m-account">143195925</span></div>
+    <div class="chip"><span class="k">周期</span><span class="v">M15</span></div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <a href="#sec-overview" class="active">总览</a>
+  <a href="#sec-chart">行情与成交</a>
+  <a href="#sec-stats">统计分布</a>
+  <a href="#sec-trades">交易明细</a>
+  <a href="#sec-sens">参数敏感性</a>
+  <a href="#sec-sim">模拟交易</a>
+  <a href="#sec-method">数据与方法</a>
+</nav>
+
+<main>
+  <!-- ============ 总览 ============ -->
+  <section id="sec-overview">
+    <div class="sec-head">
+      <h2>回测总览</h2>
+      <div class="seg" id="strat-switch">
+        <button data-s="portfolio" class="on">组合 50/50</button>
+        <button data-s="trend">趋势引擎 A</button>
+        <button data-s="reversion">回归引擎 B</button>
+      </div>
+    </div>
+
+    <div class="verdict" id="verdict">
+      <div class="verdict-icon">!</div>
+      <div class="verdict-body">
+        <b id="verdict-title">样本内未取得正期望</b>
+        <p id="verdict-text">默认参数下 35 笔交易、净利润 −83.76 美元（−0.84%），盈亏比 1.46 无法弥补 37.1% 的胜率。这不是渲染性的结论——完整交易记录、参数扰动与样本外结果都在本页如实展开。</p>
+      </div>
+    </div>
+
+    <div class="kpi-grid" id="kpis"></div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>权益曲线与回撤</h3>
+        <div class="legend" id="eq-legend">
+          <span><i style="background:#d4a637"></i>权益</span>
+          <span><i style="background:#ef4444"></i>回撤</span>
+          <span><i style="background:rgba(212,166,55,.6);height:2px;width:14px"></i>初始资金</span>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="c-equity" height="260"></canvas></div>
+      <div class="chart-wrap dd"><canvas id="c-dd" height="90"></canvas></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-head"><h3>收益构成</h3></div>
+        <div class="stat-list" id="breakdown"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>多空与持仓结构</h3></div>
+        <div class="stat-list" id="structure"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>样本内 / 样本外对照</h3>
+        <span class="pill" id="oos-window">样本外区间</span>
+      </div>
+      <div class="table-scroll"><table id="tbl-oos" class="sens"></table></div>
+      <p class="hint">样本外区间不参与任何参数选择：规则与参数在样本内定好后，直接在末段行情上重跑一次。若样本外与样本内方向相反，说明前者只是拟合噪声。</p>
+    </div>
+  </section>
+
+  <!-- ============ 行情与成交 ============ -->
+  <section id="sec-chart">
+    <div class="sec-head">
+      <h2>行情与成交标记</h2>
+      <div class="seg small" id="range-switch">
+        <button data-r="200">近 200 根</button>
+        <button data-r="500">近 500 根</button>
+        <button data-r="0" class="on">全部</button>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <h3 id="chart-title">XAUUSDc · M15</h3>
+        <div class="legend">
+          <span><i class="tri up"></i>多头进场</span>
+          <span><i class="tri dn"></i>空头进场</span>
+          <span><i style="background:#22c55e"></i>盈利平仓</span>
+          <span><i style="background:#ef4444"></i>亏损平仓</span>
+        </div>
+      </div>
+      <div class="chart-wrap tall"><canvas id="c-candle"></canvas></div>
+      <p class="hint">三角标记为开仓方向，圆点为平仓盈亏。悬停查看逐笔成交。</p>
+    </div>
+  </section>
+
+  <!-- ============ 统计分布 ============ -->
+  <section id="sec-stats">
+    <div class="sec-head"><h2>统计分布</h2></div>
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-head"><h3>月度盈亏</h3></div>
+        <div class="chart-wrap"><canvas id="c-month" height="200"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>R 倍数分布</h3></div>
+        <div class="chart-wrap"><canvas id="c-rdist" height="200"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>按小时（UTC）</h3></div>
+        <div class="chart-wrap"><canvas id="c-hour" height="200"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>按星期</h3></div>
+        <div class="chart-wrap"><canvas id="c-weekday" height="200"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 交易明细 ============ -->
+  <section id="sec-trades">
+    <div class="sec-head">
+      <h2>交易明细</h2>
+      <div class="tools">
+        <select id="f-dir">
+          <option value="">全部方向</option>
+          <option value="long">仅多头</option>
+          <option value="short">仅空头</option>
+        </select>
+        <select id="f-res">
+          <option value="">全部结果</option>
+          <option value="win">仅盈利</option>
+          <option value="loss">仅亏损</option>
+        </select>
+        <button id="btn-csv" class="ghost">导出 CSV</button>
+      </div>
+    </div>
+    <div class="panel table-panel">
+      <div class="table-scroll">
+        <table id="tbl-trades">
+          <thead>
+            <tr>
+              <th data-k="id">#</th><th data-k="dir">方向</th>
+              <th data-k="open_time">开仓时间</th><th data-k="open_price">开仓价</th>
+              <th data-k="close_time">平仓时间</th><th data-k="close_price">平仓价</th>
+              <th data-k="lots">手数</th><th data-k="bars">持仓</th>
+              <th data-k="reason">平仓原因</th><th data-k="pnl">盈亏</th>
+              <th data-k="r">R</th><th data-k="balance">结余</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="table-foot" id="trade-foot"></div>
+    </div>
+  </section>
+
+  <!-- ============ 参数敏感性 ============ -->
+  <section id="sec-sens">
+    <div class="sec-head"><h2>参数敏感性</h2></div>
+    <div class="panel">
+      <p class="lead">把单一参数在合理区间内扰动，观察净利如何翻转。若结果随参数剧烈变号，说明样本内不存在稳健优势——不应把表现最好的格子当作预期收益。</p>
+      <div class="grid-2">
+        <div>
+          <h4 class="sub">趋势引擎 A · 止损 × 移动止损（ATR 倍数）</h4>
+          <div class="table-scroll"><table id="tbl-sens-trend" class="sens"></table></div>
+        </div>
+        <div>
+          <h4 class="sub">回归引擎 B · 布林带宽度 σ</h4>
+          <div class="table-scroll"><table id="tbl-sens-rev" class="sens"></table></div>
+          <div class="note" id="sens-note"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 模拟交易 ============ -->
+  <section id="sec-sim">
+    <div class="sec-head">
+      <h2>模拟交易 <span class="pill" id="sim-mode-label">组合 50/50</span></h2>
+      <div class="tools">
+        <button id="btn-start" class="primary">开始模拟交易</button>
+        <button id="btn-reset" class="ghost">重置</button>
+        <select id="sim-speed">
+          <option value="1000">1×</option>
+          <option value="250" selected>4×</option>
+          <option value="100">10×</option>
+          <option value="40">25×</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="sim-grid">
+      <div class="panel sim-main">
+        <div class="sim-status">
+          <div><span class="k">账户权益</span><b id="sim-equity">—</b></div>
+          <div><span class="k">可用结余</span><b id="sim-balance">—</b></div>
+          <div><span class="k">浮动盈亏</span><b id="sim-float">—</b></div>
+          <div><span class="k">已实现盈亏</span><b id="sim-pnl">—</b></div>
+          <div><span class="k">成交笔数</span><b id="sim-count">0</b></div>
+          <div><span class="k">最新报价</span><b id="sim-price">—</b></div>
+        </div>
+        <div class="chart-wrap"><canvas id="c-sim" height="190"></canvas></div>
+        <div class="sim-progress"><div class="bar"><i id="sim-progress"></i></div><span id="sim-phase">待启动</span></div>
+      </div>
+
+      <div class="panel sim-side">
+        <div class="panel-head"><h3>当前持仓</h3></div>
+        <div id="sim-positions" class="pos-list"><p class="empty">空仓</p></div>
+        <div class="panel-head mt"><h3>实时成交流</h3></div>
+        <div id="sim-feed" class="feed"><p class="empty">等待启动…</p></div>
+      </div>
+    </div>
+    <p class="hint" id="sim-hint">回放将从样本外区间（2026-11-03 起）逐根推进；真实数据用尽后进入「合成延伸行情」，用于持续观察规则行为，不代表真实市场。</p>
+  </section>
+
+  <!-- ============ 数据与方法 ============ -->
+  <section id="sec-method">
+    <div class="sec-head"><h2>数据与方法</h2></div>
+    <div class="grid-2">
+      <div class="panel">
+        <div class="panel-head"><h3>数据溯源</h3></div>
+        <div class="stat-list" id="data-src"></div>
+        <p class="hint">价格数据直接解析归档内 MetaTrader 4 二进制历史文件（148 字节文件头 + 每根 60 字节记录），未做任何平滑或插值。</p>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>成本与撮合假设</h3></div>
+        <div class="stat-list" id="costs"></div>
+        <p class="hint">单根 K 线内若同时触及止损与目标，一律按止损成交（保守处理）；进场用下一根开盘价加半个点差。</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><h3>策略规则</h3></div>
+      <div class="rules">
+        <div>
+          <h4><i style="background:#3b82f6"></i>趋势引擎 A</h4>
+          <ul>
+            <li><b>方向过滤</b>：日线收盘在 EMA50 之上且 EMA50 抬升做多；反之做空</li>
+            <li><b>结构确认</b>：H1 收盘 &gt; EMA50 &gt; EMA200（空头镜像）</li>
+            <li><b>入场触发</b>：3 根内收盘重新站上 EMA21，RSI &gt; 52，MACD 柱体上行，EMA21 &gt; EMA55</li>
+            <li><b>风险</b>：止损 1.8 × ATR(14)，盈利达 1R 后移到保本，其余用 2.5 × ATR 移动止损</li>
+            <li><b>约束</b>：最长持仓 120 根，21–22 时（UTC）与周五 19 时后不开新仓</li>
+          </ul>
+        </div>
+        <div>
+          <h4><i style="background:#f59e0b"></i>回归引擎 B</h4>
+          <ul>
+            <li><b>入场</b>：收盘跌破布林下轨且 RSI ≤ 30 做多；上破上轨且 RSI ≥ 70 做空</li>
+            <li><b>目标</b>：中轨（SMA20，按信号当根锁定）</li>
+            <li><b>风险</b>：止损 2.2 × ATR(14)，最长持仓 48 根</li>
+            <li><b>约束</b>：平仓后 3 根内不重复入场，避开 21–22 时（UTC）</li>
+          </ul>
+        </div>
+      </div>
+      <p class="hint">两套规则使用文献常用默认参数，未针对该样本调参——敏感性表正是为了说明这一点。</p>
+    </div>
+
+    <div class="panel warn">
+      <div class="panel-head"><h3>必须说明的局限</h3></div>
+      <ul class="limits">
+        <li><b>归档中没有厂商回测报告</b>：压缩包是 MT4 终端数据目录（终端、EA 编译档、历史行情），不含 .htm 回测报表。原始 EA 为加密 .ex4，无法反编译，因此以上规则是按公开参数体系<b>重建</b>的，不等于原 EA 的真实表现。</li>
+        <li><b>样本很短</b>：M15 仅 2064 根，样本内 1603 根约 16 个交易日、35 笔交易。不足以支撑统计显著性，任何胜率/盈亏比都带有很大抽样误差。</li>
+        <li><b>区间特征明显</b>：10 月自 4155 跌至 3875，11 月又急拉回 4140，属于「震荡下行 + 急反弹」，对趋势跟随极不友好。</li>
+        <li><b>未建模滑点、隔夜利息、断线跳空、流动性深度</b>；点差按固定 0.20 美元处理，真实黄金点差在数据发布时段会显著扩大。</li>
+        <li><b>合成延伸行情</b>仅用于演示规则在未知序列上的行为，不是预测。</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>无影手 V7.55 · 归档数据回测终端 · 数据区间 <span id="foot-range">—</span></div>
+  <div>仅供研究与复盘，不构成投资建议</div>
+</footer>
+
+<div id="tip" class="tip"></div>
+
+<script src="data/market.js"></script>
+<script src="data/appdata.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/sim.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

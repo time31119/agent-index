@@ -1,0 +1,63 @@
+{
+ "base": {
+  "symbol": "XAUUSDc",
+  "timeframe": "M15",
+  "initial_balance": 10000.0,
+  "risk_per_trade_pct": 0.75,
+  "max_lots": 5.0,
+  "min_lots": 0.01,
+  "lot_step": 0.01,
+  "contract_size": 100,
+  "spread": 0.2,
+  "commission_per_lot": 0.0,
+  "block_hours_utc": [
+   21,
+   22
+  ],
+  "friday_cutoff_hour_utc": 19
+ },
+ "strats": {
+  "trend": {
+   "name": "趋势引擎 A",
+   "tag": "TREND",
+   "color": "#3b82f6",
+   "desc": "日线 + 小时线双层趋势过滤, 15 分钟回踩均线后动能再入场, ATR 移动止损让利润奔跑",
+   "params": {
+    "ema_fast": 21,
+    "ema_slow": 55,
+    "macd": "12/26/9",
+    "rsi_len": 14,
+    "atr_len": 14,
+    "sl_atr": 1.8,
+    "trail_atr": 2.5,
+    "breakeven_r": 1.0,
+    "max_hold_bars": 120,
+    "d1_ema": 50,
+    "h1_ema": "50/200",
+    "reclaim_lookback": 3
+   }
+  },
+  "reversion": {
+   "name": "回归引擎 B",
+   "tag": "REVERSION",
+   "color": "#f59e0b",
+   "desc": "15 分钟布林带极值 + RSI 超买超卖反向入场, 目标回归中轨, ATR 固定止损",
+   "params": {
+    "bb_len": 20,
+    "bb_k": 2.0,
+    "rsi_len": 14,
+    "rsi_buy": 30,
+    "rsi_sell": 70,
+    "atr_len": 14,
+    "sl_atr": 2.2,
+    "max_hold_bars": 48,
+    "cooldown_bars": 3
+   }
+  }
+ },
+ "split": 1603,
+ "split_time": 1793706300,
+ "first_time": 1791507600,
+ "last_time": 1794311100,
+ "bars": 2064
+}
