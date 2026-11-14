@@ -38,22 +38,22 @@ const AGENTS = [
   {
     id: "moss",
     cat: "trading",
-    name: "Moss 策略模拟看板",
-    en: "MOSS",
-    sub: "Hyperliquid 镜像跟单 · 策略模拟",
-    desc: "本地只读的 Hyperliquid 镜像跟单与 Moss 策略模拟看板：按净值占比复制持仓，带风控、熔断、拆单与绩效面板，支持地址与 agt_ 策略 ID 打分对比。",
+    name: "Moss Mirror",
+    en: "MOSS MIRROR",
+    sub: "横截面动量 · 策略研究与订阅",
+    desc: "横截面动量策略的研究与订阅站：策略说明、业绩与回测展示、视频、价格与注册登录；配套的策略模拟看板在 8901。",
     tags: [
-      "Hyperliquid",
-      "镜像跟单",
-      "策略模拟",
-      "风控"
+      "横截面动量",
+      "策略研究",
+      "订阅",
+      "模拟看板"
     ],
     href: "http://127.0.0.1:8900/",
     src: "http://127.0.0.1:8900/",
     port: "8900",
-    start: "python -m hl_mirror web --port 8900（在 hl-mirror 目录）",
-    alt: "http://127.0.0.1:8900/pool",
-    altLabel: "候选池",
+    start: "python -m hl_mirror web --port 8900 --mode product（在 hl-mirror 目录）",
+    alt: "http://127.0.0.1:8901/",
+    altLabel: "策略看板",
     no: 2
   },
   {
