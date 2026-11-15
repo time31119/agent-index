@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>应用图谱 · 12 大领域 · 枢元智联 NEXUS EDGE</title>
+<meta name="description" content="ESP32 十二大应用领域完整图谱：智能家居、楼宇安防、工业能源、农业环境、可穿戴、出行、零售、教育、音频显示、机器人、边缘 AI、网关。每个品类标注成熟度与产品位。">
+<meta name="theme-color" content="#05070A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="应用图谱 · 12 大领域 · 枢元智联 NEXUS EDGE">
+<meta property="og:description" content="ESP32 十二大应用领域完整图谱：每个品类标注成熟度、推荐芯片与产品位。">
+<meta property="og:image" content="assets/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305070A'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%235BE7FF'/%3E%3Ccircle cx='16' cy='7' r='2' fill='%239C8CFF'/%3E%3Ccircle cx='16' cy='25' r='2' fill='%23C9F56A'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/main.css?v=20261115l">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="枢元智联首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 5.1v4.4M12 14.5v4.4M5.1 12h4.4M14.5 12h4.4" stroke="#5BE7FF" stroke-width="1" opacity=".5"/>
+          <circle cx="12" cy="12" r="2.4" fill="#5BE7FF"/>
+          <circle cx="12" cy="3.6" r="1.5" fill="#9C8CFF"/>
+          <circle cx="12" cy="20.4" r="1.5" fill="#C9F56A"/>
+          <circle cx="3.6" cy="12" r="1.2" fill="#5BE7FF" opacity=".65"/>
+          <circle cx="20.4" cy="12" r="1.2" fill="#9C8CFF" opacity=".65"/>
+        </svg>
+      </span>
+      <span class="brand-text"><b>枢元智联</b><span>NEXUS EDGE</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="applications.html">应用图谱</a>
+      <a href="capabilities.html">能力链</a>
+      <a href="vision.html">AI 愿景</a>
+      <a href="about.html">关于与合作</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="about.html#contact">预约方案沟通</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- 页头 -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">首页</a><i>/</i><span>应用图谱</span></div>
+    <span class="eyebrow"><i></i>APPLICATION MAP · 12 DOMAINS</span>
+    <h1>十二个应用领域，<br>一张可以<em style="font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">直接落地</em>的产品地图。</h1>
+    <p class="lede">
+      每个品类都写清了场景、技术栈、推荐芯片与在售 / 在研产品位，并各附 6 款「市面上还没有」的新品企划。
+      空白卡片不是没做完，而是我们主动留出的生态位——留给联合开发、客户定制与下一个品类。
+    </p>
+    <div class="hero-search">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.6" stroke="currentColor" stroke-width="1.4"/><path d="m10.6 10.6 3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <input id="appSearch" type="search" placeholder="搜索品类、场景、芯片或产品…" autocomplete="off" aria-label="搜索品类">
+    </div>
+  </div>
+</section>
+
+<!-- 筛选栏 -->
+<div class="toolbar">
+  <div class="wrap">
+    <div class="toolbar-row">
+      <div class="filters">
+        <div class="fgroup" role="group" aria-label="按成熟度筛选">
+          <span>成熟度</span>
+          <button class="chip" data-filter-mat="全部" aria-pressed="true">全部</button>
+          <button class="chip" data-filter-mat="量产级" aria-pressed="false">量产级</button>
+          <button class="chip" data-filter-mat="方案级" aria-pressed="false">方案级</button>
+          <button class="chip" data-filter-mat="在研" aria-pressed="false">在研</button>
+          <button class="chip" data-filter-mat="规划级" aria-pressed="false">规划级</button>
+        </div>
+        <div class="fgroup" role="group" aria-label="按芯片平台筛选">
+          <span>平台</span>
+          <button class="chip" data-filter-chip="全部" aria-pressed="true">全部</button>
+          <button class="chip" data-filter-chip="ESP32-C3" aria-pressed="false">C3</button>
+          <button class="chip" data-filter-chip="ESP32-C6" aria-pressed="false">C6</button>
+          <button class="chip" data-filter-chip="ESP32-S3" aria-pressed="false">S3</button>
+          <button class="chip" data-filter-chip="ESP32-P4" aria-pressed="false">P4</button>
+          <button class="chip" data-filter-chip="ESP32-H2" aria-pressed="false">H2</button>
+        </div>
+      </div>
+      <span class="count" id="resultCount"></span>
+    </div>
+  </div>
+</div>
+
+<!-- 用法说明 -->
+<section class="section-tight">
+  <div class="wrap">
+    <div class="grid-3">
+      <div class="reveal">
+        <span class="eyebrow" style="margin-bottom:10px"><i></i>PATH A</span>
+        <h3 style="font-size:.98rem">已有渠道，缺产品</h3>
+        <p class="dim" style="font-size:.84rem;margin-top:8px;line-height:1.75">从「量产级 / 方案级」里选品，贴牌或做外观与功能定制，8–12 周上架。</p>
+      </div>
+      <div class="reveal" data-d="1">
+        <span class="eyebrow" style="margin-bottom:10px"><i></i>PATH B</span>
+        <h3 style="font-size:.98rem">已有场景，缺技术</h3>
+        <p class="dim" style="font-size:.84rem;margin-top:8px;line-height:1.75">挑一个空白产品位，我们按你的场景联合定义，共享模具与认证成本。</p>
+      </div>
+      <div class="reveal" data-d="2">
+        <span class="eyebrow" style="margin-bottom:10px"><i></i>PATH C</span>
+        <h3 style="font-size:.98rem">只有想法，缺路径</h3>
+        <p class="dim" style="font-size:.84rem;margin-top:8px;line-height:1.75">从参考方案里选一个最接近的，60 分钟评审后给出选型、成本与时间表。</p>
+      </div>
+    </div>
+
+    <div class="legend" style="margin-top:30px">
+      <span><i style="background:var(--lime)"></i>量产</span>
+      <span><i style="background:var(--cyan)"></i>在研</span>
+      <span><i style="background:var(--violet)"></i>规划 / 企划</span>
+      <span><i style="background:var(--amber)"></i>可定制</span>
+      <span><i style="background:transparent;border:1px dashed var(--text-3)"></i>开放产品位</span>
+    </div>
+  </div>
+</section>
+
+<!-- 图谱主体 -->
+<div class="wrap">
+  <div id="appList"></div>
+  <noscript><p class="dim">应用图谱由脚本渲染，请启用 JavaScript 后查看。</p></noscript>
+
+  <div class="note reveal">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v5.5M12 7.6v.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <div>
+      <h4>关于「留白」：每个品类保留 1–2 个开放产品位</h4>
+      <p>我们不把图谱填满。空白位代表三件事：一是给联合开发伙伴留着，二是给客户定制留着，三是提醒自己不要什么都做。如果你手上的渠道或场景正好对应某个空白位，欢迎带着需求来谈——模具费、认证费可以分摊，产品可以联合品牌。</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="eyebrow" style="margin:0"><i></i>NEXT STEP</span>
+      <h2>选好品类了？<br>我们用 60 分钟给你一份可行性判断。</h2>
+      <p>包含：芯片选型建议、BOM 成本区间、认证清单、开发周期与风险点。</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="about.html#contact">预约产品评审</a>
+        <a class="btn btn-ghost" href="capabilities.html">了解交付流程</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="枢元智联首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5.1v4.4M12 14.5v4.4M5.1 12h4.4M14.5 12h4.4" stroke="#5BE7FF" stroke-width="1" opacity=".5"/>
+              <circle cx="12" cy="12" r="2.4" fill="#5BE7FF"/>
+              <circle cx="12" cy="3.6" r="1.5" fill="#9C8CFF"/>
+              <circle cx="12" cy="20.4" r="1.5" fill="#C9F56A"/>
+            </svg>
+          </span>
+          <span class="brand-text"><b>枢元智联</b><span>NEXUS EDGE</span></span>
+        </a>
+        <p>端侧智能硬件平台与整机品牌。以 ESP32 为底座，做 AI 在物理世界的神经末梢。</p>
+      </div>
+      <div class="foot-col">
+        <h5>应用</h5>
+        <a href="applications.html#home">智能家居</a>
+        <a href="applications.html#industry">工业与能源</a>
+        <a href="applications.html#edgeai">边缘 AI</a>
+        <a href="applications.html#gateway">网关与通信</a>
+      </div>
+      <div class="foot-col">
+        <h5>能力</h5>
+        <a href="capabilities.html#design">设计</a>
+        <a href="capabilities.html#develop">开发</a>
+        <a href="capabilities.html#integrate">整合</a>
+        <a href="capabilities.html#brand">品牌化销售</a>
+      </div>
+      <div class="foot-col">
+        <h5>公司</h5>
+        <a href="about.html">关于我们</a>
+        <a href="vision.html">AI 愿景</a>
+        <a href="about.html#contact">合作与联系</a>
+        <a href="origin.html">缘起</a>
+        <a href="concept.html">产品定义书</a>
+        <a href="about.html#faq">常见问题</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> 枢元智联 NEXUS EDGE · 保留所有权利</span>
+      <span>粤ICP备00000000号</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js?v=20261115l"></script>
+<script src="assets/js/data-pipeline.js?v=20261115l"></script>
+<script src="assets/js/site.js?v=20261115l"></script>
+</body>
+</html>

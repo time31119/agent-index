@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>枢元智联 NEXUS EDGE · 端侧智能硬件平台与整机品牌</title>
+<meta name="description" content="以 ESP32 系列为算力底座，覆盖 12 大应用领域的端侧智能硬件平台：设计、开发、整合、品牌化销售一体化交付。让每一台设备成为可被 AI 调用的智能体。">
+<meta name="theme-color" content="#05070A">
+<meta property="og:title" content="枢元智联 NEXUS EDGE · 让每一台设备成为智能体">
+<meta property="og:description" content="ESP32 端侧智能硬件平台：12 个应用领域、43 个可交付产品位，从模组到整机的一体化交付。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305070A'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%235BE7FF'/%3E%3Ccircle cx='16' cy='7' r='2' fill='%239C8CFF'/%3E%3Ccircle cx='16' cy='25' r='2' fill='%23C9F56A'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/main.css?v=20261115l">
+</head>
+<body>
+
+<!-- ============ 导航 ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="枢元智联首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 5.1v4.4M12 14.5v4.4M5.1 12h4.4M14.5 12h4.4" stroke="#5BE7FF" stroke-width="1" opacity=".5"/>
+          <circle cx="12" cy="12" r="2.4" fill="#5BE7FF"/>
+          <circle cx="12" cy="3.6" r="1.5" fill="#9C8CFF"/>
+          <circle cx="12" cy="20.4" r="1.5" fill="#C9F56A"/>
+          <circle cx="3.6" cy="12" r="1.2" fill="#5BE7FF" opacity=".65"/>
+          <circle cx="20.4" cy="12" r="1.2" fill="#9C8CFF" opacity=".65"/>
+        </svg>
+      </span>
+      <span class="brand-text"><b>枢元智联</b><span>NEXUS EDGE</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="applications.html">应用图谱</a>
+      <a href="capabilities.html">能力链</a>
+      <a href="vision.html">AI 愿景</a>
+      <a href="about.html">关于与合作</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="about.html#contact">预约方案沟通</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ 首屏 ============ -->
+<section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow"><i></i>端侧智能 · EDGE INTELLIGENCE</span>
+      <h1>让每一台设备，<br>成为可被 AI 调用的<br><em>智能体。</em></h1>
+      <p class="hero-sub">
+        枢元智联以 ESP32 系列为算力底座，把「设计 → 开发 → 整合 → 品牌化销售」做成一条可复用的产品流水线。
+        12 个应用领域、43 个可交付产品位——从一颗模组，到一个能上市销售的整机。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="applications.html">
+          浏览应用图谱
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="capabilities.html">看我们如何交付</a>
+      </div>
+      <div class="hero-meta">
+        <span class="pill"><span class="dot"></span>Matter / Thread Ready</span>
+        <span class="pill">C3 · C6 · S3 · P4 · H2</span>
+        <span class="pill">4 周打样 · 8 周小批</span>
+      </div>
+    </div>
+
+    <aside class="stack reveal" data-d="1" aria-label="端边云三层架构">
+      <div class="stack-head">
+        <span>DEVICE INTELLIGENCE STACK</span>
+        <span class="live"><i></i>LIVE</span>
+      </div>
+      <div class="layer">
+        <span class="layer-no">L3</span>
+        <div>
+          <h4>云 · 智能体 <small>AGENT</small></h4>
+          <p>大模型理解意图、编排跨设备任务，越用越懂场景</p>
+        </div>
+        <span class="layer-tag">LLM · MCP</span>
+      </div>
+      <div class="layer">
+        <span class="layer-no">L2</span>
+        <div>
+          <h4>边 · 网关 <small>GATEWAY</small></h4>
+          <p>多协议融合与本地规则，断网时场景照常运行</p>
+        </div>
+        <span class="layer-tag">EDGE RULE</span>
+      </div>
+      <div class="layer">
+        <span class="layer-no">L1</span>
+        <div>
+          <h4>端 · ESP32 <small>DEVICE</small></h4>
+          <p>感知、执行、毫秒级本地判断，隐私数据不出设备</p>
+        </div>
+        <span class="layer-tag">TINYML</span>
+      </div>
+      <div class="stack-foot">
+        <span>端侧判断</span><span>边缘协同</span><span>云端进化</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 关键词带 ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>MATTER</span><span>THREAD</span><span>WI-FI 6</span><span>BLE 5</span><span>ESP-DL</span><span>TINYML</span><span>LVGL</span><span>MQTT</span><span>OTA</span><span>EDGE AI</span><span>SENSOR FUSION</span><span>LOW POWER</span>
+    <span>MATTER</span><span>THREAD</span><span>WI-FI 6</span><span>BLE 5</span><span>ESP-DL</span><span>TINYML</span><span>LVGL</span><span>MQTT</span><span>OTA</span><span>EDGE AI</span><span>SENSOR FUSION</span><span>LOW POWER</span>
+  </div>
+</div>
+
+<!-- ============ 为什么是现在 ============ -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div class="reveal">
+        <span class="eyebrow"><i></i>为什么是现在 / WHY NOW</span>
+        <h2 class="sec-title">AI 正从屏幕里走出来，<br><em>设备重新值钱</em>。</h2>
+      </div>
+      <p class="lede reveal" data-d="1" style="max-width:34em">
+        过去十年，物联网卖的是「连接」；未来十年，卖的是「判断」。
+        当大模型学会调用设备，谁能把物理世界的感官与手脚做得便宜、稳定、可批量，谁就握住了 AI 的末端。
+      </p>
+    </div>
+
+    <div class="stats reveal" id="stats"></div>
+
+    <div class="grid-3" style="margin-top:18px">
+      <article class="card reveal">
+        <span class="icon-sq" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.5"/></svg>
+        </span>
+        <span class="num">01 / 机会</span>
+        <h3>设备开始「听得懂人话」</h3>
+        <p>云端大模型负责理解，端侧负责即时反应。一颗十几元的芯片，就能让开关、门锁、传感器变成 AI 可以调用的工具，而不是一堆需要人记的 App 按钮。</p>
+      </article>
+      <article class="card reveal" data-d="1">
+        <span class="icon-sq" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.5"/><path d="M17 13.5v7M13.5 17h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </span>
+        <span class="num">02 / 门槛</span>
+        <h3>互联标准终于收敛</h3>
+        <p>Matter 与 Thread 把「跨品牌互通」变成准入条件。对后来者是好事：不用再赌生态，只要把产品做好、把认证做齐，就能进入苹果、谷歌、亚马逊的家庭。</p>
+      </article>
+      <article class="card reveal" data-d="2">
+        <span class="icon-sq" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 17.5 8.5 12l3.5 3.5L20.5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 7h4.5v4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="num">03 / 优势</span>
+        <h3>中国供应链 + 成熟生态</h3>
+        <p>ESP32 的资料、工具链、模组供给与工程师储备全球最厚。同样的产品定义，在深圳可以做到对手一半的时间与成本——这是我们做品牌化销售的底气。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 应用图谱 ============ -->
+<section class="section" id="map" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div class="reveal">
+        <span class="eyebrow"><i></i>应用图谱 / APPLICATION MAP</span>
+        <h2 class="sec-title">十二个领域，<em>每个都留着产品位</em>。</h2>
+      </div>
+      <a class="link-arrow reveal" data-d="1" href="applications.html">查看完整图谱与筛选 →</a>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+    <noscript><p class="dim" style="margin-top:20px">应用图谱由脚本渲染，请启用 JavaScript 后查看。</p></noscript>
+  </div>
+</section>
+
+<!-- ============ 能力链 ============ -->
+<section class="section band-light" id="chain">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div class="reveal">
+        <span class="eyebrow"><i></i>能力链 / VALUE CHAIN</span>
+        <h2 class="sec-title">从一张草图，到货架上的<em>一个品牌</em>。</h2>
+      </div>
+      <p class="lede reveal" data-d="1" style="max-width:32em">
+        我们不卖「开发板 + 教程」，而是交付一条完整的产品线：结构、硬件、固件、云端、认证、包装、渠道，四段接力，每段都有明确的交付物与验收标准。
+      </p>
+    </div>
+
+    <div class="chain">
+      <div class="chain-step reveal">
+        <div class="chain-num">01 / DESIGN</div>
+        <div class="chain-body">
+          <h3>设计 <span>Design</span></h3>
+          <p>从场景反推产品：定义用户动作、成本上限与认证边界，再决定芯片、结构与交互。先算清 BOM 与良率，再画第一根线。</p>
+          <div class="chain-tags"><span class="tag">场景定义 / PRD</span><span class="tag">ID 与结构</span><span class="tag">原理图 / PCB</span><span class="tag">BOM 成本模型</span></div>
+        </div>
+        <div class="chain-side"><b>2–4 周</b>交付可评审方案</div>
+      </div>
+      <div class="chain-step reveal" data-d="1">
+        <div class="chain-num">02 / DEVELOP</div>
+        <div class="chain-body">
+          <h3>开发 <span>Develop</span></h3>
+          <p>ESP-IDF 组件化固件：配网、OTA、低功耗、日志、故障恢复全部复用平台层，只写场景逻辑。App / 小程序 / 云端同步开工，避免「硬件等软件」。</p>
+          <div class="chain-tags"><span class="tag">ESP-IDF 固件</span><span class="tag">Matter / MQTT</span><span class="tag">App 与小程序</span><span class="tag">产测工装</span></div>
+        </div>
+        <div class="chain-side"><b>4–8 周</b>可跑通全链路</div>
+      </div>
+      <div class="chain-step reveal" data-d="2">
+        <div class="chain-num">03 / INTEGRATE</div>
+        <div class="chain-body">
+          <h3>整合 <span>Integrate</span></h3>
+          <p>把样机变成能出货的商品：双供应链、SMT 与组装、老化与抽检、SRRC / CE / FCC / CCC 认证、包装与说明书。良率与一致性，是这一段的唯一 KPI。</p>
+          <div class="chain-tags"><span class="tag">供应链双供</span><span class="tag">试产与老化</span><span class="tag">射频与安规认证</span><span class="tag">包装与文档</span></div>
+        </div>
+        <div class="chain-side"><b>6–10 周</b>拿到量产件</div>
+      </div>
+      <div class="chain-step reveal" data-d="3">
+        <div class="chain-num">04 / BRAND</div>
+        <div class="chain-body">
+          <h3>品牌化销售 <span>Brand &amp; Sales</span></h3>
+          <p>产品只有被记住才能溢价。命名、视觉、包装、评测内容、众筹与渠道政策一起设计；售后与固件订阅，把一次性交易变成长期关系。</p>
+          <div class="chain-tags"><span class="tag">品牌叙事与视觉</span><span class="tag">内容与评测</span><span class="tag">渠道与经销</span><span class="tag">售后与订阅</span></div>
+        </div>
+        <div class="chain-side"><b>持续</b>复购与口碑</div>
+      </div>
+    </div>
+
+    <div style="margin-top:34px" class="reveal">
+      <a class="btn btn-ghost" href="capabilities.html">看四段的详细交付物 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 平台矩阵 ============ -->
+<section class="section" id="platform">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal"><i></i>平台矩阵 / PLATFORM</span>
+      <h2 class="sec-title reveal" data-d="1">五个可复用层，支撑<em>任何一个品类</em>。</h2>
+      <p class="lede reveal" data-d="2">换品类不换底座。客户要的是整机，我们给的是「模组 + 固件 + 云 + AI + 供应链」的组合能力。</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card reveal">
+        <span class="num">LAYER 01</span>
+        <h3>核心模组与开发板</h3>
+        <p>C3 / C6 / S3 / P4 / H2 全系覆盖，预认证射频、邮票孔与排针双形态，附参考设计与天线调试报告。</p>
+      </article>
+      <article class="card reveal" data-d="1">
+        <span class="num">LAYER 02</span>
+        <h3>行业整机</h3>
+        <p>门禁、网关、传感器、中控屏、教学套件——白牌、ODM 或联合品牌，含包装、说明书与合规文件。</p>
+      </article>
+      <article class="card reveal" data-d="2">
+        <span class="num">LAYER 03</span>
+        <h3>固件框架</h3>
+        <p>统一设备抽象层：配网、OTA、日志、低功耗、故障自恢复。Matter 与 MQTT 双栈，场景代码只占 20%。</p>
+      </article>
+      <article class="card reveal" data-d="1">
+        <span class="num">LAYER 04</span>
+        <h3>设备云</h3>
+        <p>设备管理、OTA 灰度、数据看板、告警工单。支持公有云与私有化部署，数据主权归客户。</p>
+      </article>
+      <article class="card reveal" data-d="2">
+        <span class="num">LAYER 05</span>
+        <h3>AI 能力</h3>
+        <p>离线语音、视觉检测、异常声音识别。端云协同：端侧 100ms 判断，云端复核与模型迭代。</p>
+      </article>
+      <article class="card reveal" data-d="3" style="justify-content:center;background:transparent;border-style:dashed">
+        <h3 style="color:var(--text-2)">你的品类，也可以在这里</h3>
+        <p>带着场景与渠道来，我们用这套底座把你的想法做成可量产的商品。</p>
+        <a class="link-arrow" href="about.html#contact" style="margin-top:auto">聊聊你的产品 →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI 愿景 ============ -->
+<section class="section" id="ai" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal" style="position:relative;padding:clamp(30px,5vw,60px);border-radius:var(--r-l);border:1px solid var(--line);background:
+      radial-gradient(70% 120% at 0% 0%,rgba(91,231,255,.12),transparent 55%),
+      radial-gradient(60% 120% at 100% 100%,rgba(156,140,255,.16),transparent 60%),
+      rgba(255,255,255,.02);">
+      <span class="eyebrow"><i></i>AI 愿景 / OUR BET</span>
+      <p class="statement" style="margin-top:8px">
+        我们不做大模型，我们做<em>大模型的手和眼</em>。
+      </p>
+      <p class="lede" style="margin-top:22px;max-width:44em">
+        算力会继续集中，但感知与执行必须发生在现场。枢元智联的赌注是：未来每个空间都有几十个廉价的智能节点，
+        它们不需要理解世界，只需要在 100 毫秒内回答「有人吗、正常吗、该动了吗」——然后把判断交给云端。
+      </p>
+      <div class="hero-meta" style="margin-top:26px">
+        <span class="pill">端侧推理 &lt; 100ms</span>
+        <span class="pill">隐私数据不出设备</span>
+        <span class="pill">断网可用</span>
+      </div>
+      <div style="margin-top:30px">
+        <a class="btn btn-ghost" href="vision.html">阅读 2026–2030 技术路线 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 参考方案 ============ -->
+<section class="section" id="cases" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div class="reveal">
+        <span class="eyebrow"><i></i>参考方案 / REFERENCE</span>
+        <h2 class="sec-title">三个已经跑通的<em>场景组合</em>。</h2>
+      </div>
+      <span class="badge b-plain reveal" data-d="1">方案示意 · 可定制</span>
+    </div>
+    <div class="grid-3">
+      <article class="card reveal">
+        <span class="badge b-dev">农业</span>
+        <h3>园区级智慧灌溉</h3>
+        <p>太阳能土壤节点 + 小型气象站 + LoRa 网关，按墒情与蒸发量自动配水。节点 IP67、续航 3 年，网关断网时本地继续执行灌溉计划。</p>
+        <div class="chain-tags" style="margin-top:auto"><span class="tag tag-line">ESP32-C3</span><span class="tag tag-line">LoRa</span><span class="tag tag-line">太阳能</span></div>
+      </article>
+      <article class="card reveal" data-d="1">
+        <span class="badge b-dev">工业</span>
+        <h3>老设备上云</h3>
+        <p>485 网关 + 振动节点，2 小时完成一台空压机的改造。本地缓存 7 天数据，断网恢复后自动补传，异常振动提前 2 周预警。</p>
+        <div class="chain-tags" style="margin-top:auto"><span class="tag tag-line">Modbus</span><span class="tag tag-line">MQTT</span><span class="tag tag-line">FFT</span></div>
+      </article>
+      <article class="card reveal" data-d="2">
+        <span class="badge b-dev">家居</span>
+        <h3>全屋智能中控</h3>
+        <p>4 寸触控屏 + Thread 边界路由，Matter 直连灯具与传感器。离线语音控制本地场景，云端只负责复杂编排与远程访问。</p>
+        <div class="chain-tags" style="margin-top:auto"><span class="tag tag-line">ESP32-S3</span><span class="tag tag-line">Matter</span><span class="tag tag-line">LVGL</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="eyebrow" style="margin:0"><i></i>START A PROJECT</span>
+      <h2>把你的下一个产品，<br>交给我们从 0 到 1。</h2>
+      <p>无论你已经有明确的品类，还是只有一个场景想法——我们先做一次 60 分钟的产品评审，免费给出芯片选型、成本区间与时间表。</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="about.html#contact">预约产品评审</a>
+        <a class="btn btn-ghost" href="applications.html">先看看能做什么</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="枢元智联首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5.1v4.4M12 14.5v4.4M5.1 12h4.4M14.5 12h4.4" stroke="#5BE7FF" stroke-width="1" opacity=".5"/>
+              <circle cx="12" cy="12" r="2.4" fill="#5BE7FF"/>
+              <circle cx="12" cy="3.6" r="1.5" fill="#9C8CFF"/>
+              <circle cx="12" cy="20.4" r="1.5" fill="#C9F56A"/>
+            </svg>
+          </span>
+          <span class="brand-text"><b>枢元智联</b><span>NEXUS EDGE</span></span>
+        </a>
+        <p>端侧智能硬件平台与整机品牌。以 ESP32 为底座，做 AI 在物理世界的神经末梢。</p>
+      </div>
+      <div class="foot-col">
+        <h5>应用</h5>
+        <a href="applications.html#home">智能家居</a>
+        <a href="applications.html#industry">工业与能源</a>
+        <a href="applications.html#edgeai">边缘 AI</a>
+        <a href="applications.html#gateway">网关与通信</a>
+      </div>
+      <div class="foot-col">
+        <h5>能力</h5>
+        <a href="capabilities.html#design">设计</a>
+        <a href="capabilities.html#develop">开发</a>
+        <a href="capabilities.html#integrate">整合</a>
+        <a href="capabilities.html#brand">品牌化销售</a>
+      </div>
+      <div class="foot-col">
+        <h5>公司</h5>
+        <a href="about.html">关于我们</a>
+        <a href="vision.html">AI 愿景</a>
+        <a href="about.html#contact">合作与联系</a>
+        <a href="origin.html">缘起</a>
+        <a href="concept.html">产品定义书</a>
+        <a href="about.html#faq">常见问题</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> 枢元智联 NEXUS EDGE · 保留所有权利</span>
+      <span>粤ICP备00000000号</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js?v=20261115l"></script>
+<script src="assets/js/data-pipeline.js?v=20261115l"></script>
+<script src="assets/js/site.js?v=20261115l"></script>
+</body>
+</html>
