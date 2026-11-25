@@ -1,8 +1,8 @@
 ﻿{
   "title": "我的 Agent 档案馆",
-  "generated": "2026-11-06",
+  "generated": "2026-11-26",
   "source": "我的Agent.txt",
-  "total": 49,
+  "total": 50,
   "categories": [
     {
       "id": "trading",
@@ -63,8 +63,7 @@
       ],
       "href": "../wuyingshou/index.html#sec-overview",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/wuyingshou/index.html#sec-overview",
-      "no": 1,
-      "path": "wuyingshou/index.html#sec-overview"
+      "no": 1
     },
     {
       "id": "moss",
@@ -83,8 +82,7 @@
       "src": "http://127.0.0.1:8900/",
       "port": "8900",
       "start": "python -m hl_mirror web --port 8900 --mode product（在 hl-mirror 目录）",
-      "no": 2,
-      "path": "http://127.0.0.1:8900/"
+      "no": 2
     },
     {
       "id": "moss-desk",
@@ -105,8 +103,7 @@
       "start": "python -m hl_mirror web --port 8901 --mode research（在 hl-mirror 目录）",
       "alt": "http://127.0.0.1:8901/pool",
       "altLabel": "候选池",
-      "no": 3,
-      "path": "http://127.0.0.1:8901/"
+      "no": 3
     },
     {
       "id": "ai-paper-desk",
@@ -127,8 +124,7 @@
       "start": "python -m paper_desk.server --port 8770（在 quant-runner 目录）",
       "alt": "../paper-desk/index.html",
       "altLabel": "静态快照",
-      "no": 4,
-      "path": "http://127.0.0.1:8770/"
+      "no": 4
     },
     {
       "id": "agent-alpha",
@@ -149,8 +145,7 @@
       "altLabel": "静态入口",
       "port": "8080",
       "start": "在 agent-alpha 目录运行 python -m http.server 8080",
-      "no": 5,
-      "path": "http://127.0.0.1:8080/index.html"
+      "no": 5
     },
     {
       "id": "alpha100",
@@ -169,8 +164,7 @@
       "href": "../alpha100/index.html",
       "src": "http://127.0.0.1:8899/#/library",
       "port": "8899",
-      "start": "alpha100\\start-server.bat",
-      "path": "alpha100/index.html"
+      "start": "alpha100\\start-server.bat"
     },
     {
       "id": "intraday100",
@@ -187,8 +181,7 @@
         "复盘"
       ],
       "href": "../intraday100/index.html",
-      "src": "http://127.0.0.1:8900/#/library",
-      "path": "intraday100/index.html"
+      "src": "http://127.0.0.1:8900/#/library"
     },
     {
       "id": "global-ai-trading",
@@ -205,8 +198,7 @@
         "全景图谱"
       ],
       "href": "../global-ai-trading-top100/site/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/global-ai-trading-top100/site/index.html",
-      "path": "global-ai-trading-top100/site/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/global-ai-trading-top100/site/index.html"
     },
     {
       "id": "trading-lab",
@@ -223,8 +215,7 @@
         "A 股 / 美股"
       ],
       "href": "../trading-lab/site/books.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/trading-lab/site/books.html",
-      "path": "trading-lab/site/books.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/trading-lab/site/books.html"
     },
     {
       "id": "okx-scalp-lab",
@@ -241,8 +232,7 @@
         "手续费"
       ],
       "href": "../okx-scalp-lab/site/data.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/okx-scalp-lab/site/data.html",
-      "path": "okx-scalp-lab/site/data.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/okx-scalp-lab/site/data.html"
     },
     {
       "id": "perp-atlas",
@@ -259,8 +249,7 @@
         "永续合约"
       ],
       "href": "../perp-atlas/index.html",
-      "src": "http://127.0.0.1:8765/perp-atlas/",
-      "path": "perp-atlas/index.html"
+      "src": "http://127.0.0.1:8765/perp-atlas/"
     },
     {
       "id": "trace",
@@ -277,8 +266,7 @@
         "WebSocket"
       ],
       "href": "../trace/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/trace/index.html",
-      "path": "trace/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/trace/index.html"
     },
     {
       "id": "trading-desk",
@@ -294,8 +282,7 @@
         "资金管理"
       ],
       "href": "../trading-desk/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/trading-desk/index.html",
-      "path": "trading-desk/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/trading-desk/index.html"
     },
     {
       "id": "leadscope",
@@ -314,8 +301,7 @@
       "href": "../leadscope/index.html",
       "src": "http://127.0.0.1:8788/index.html",
       "port": "8788",
-      "start": "python -m http.server 8788（纯静态，也可直接双击 index.html）",
-      "path": "leadscope/index.html"
+      "start": "python -m http.server 8788（纯静态，也可直接双击 index.html）"
     },
     {
       "id": "ai-trader-100u",
@@ -335,8 +321,7 @@
       "demo": "../ai-trader-100u/static/index.html",
       "port": "8777",
       "start": "ai-trader-100u\\run.bat（实时行情版）",
-      "no": 15,
-      "path": "http://127.0.0.1:8777/"
+      "no": 15
     },
     {
       "id": "nextact",
@@ -353,8 +338,7 @@
         "平台"
       ],
       "href": "../nextact/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/index.html",
-      "path": "index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/index.html"
     },
     {
       "id": "shortframe",
@@ -371,8 +355,7 @@
         "片单"
       ],
       "href": "../shortframe/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/shortframe/index.html",
-      "path": "shortframe/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/shortframe/index.html"
     },
     {
       "id": "shortdrama-top50",
@@ -388,8 +371,7 @@
         "市场覆盖"
       ],
       "href": "../shortdrama-top50/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/shortdrama-top50/index.html",
-      "path": "shortdrama-top50/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/shortdrama-top50/index.html"
     },
     {
       "id": "cijing",
@@ -406,8 +388,7 @@
         "分镜"
       ],
       "href": "../cijing/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/cijing/index.html",
-      "path": "cijing/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/cijing/index.html"
     },
     {
       "id": "shortgen-2026",
@@ -424,8 +405,7 @@
         "工作流"
       ],
       "href": "../shortgen-2026/index.html#compare",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/shortgen-2026/index.html#compare",
-      "path": "shortgen-2026/index.html#compare"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/shortgen-2026/index.html#compare"
     },
     {
       "id": "lecture",
@@ -442,8 +422,7 @@
         "样板"
       ],
       "href": "../site/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/site/index.html",
-      "path": "site/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/site/index.html"
     },
     {
       "id": "ai-atlas",
@@ -460,8 +439,7 @@
         "产品地图"
       ],
       "href": "../ai-atlas/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/ai-atlas/index.html",
-      "path": "ai-atlas/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/ai-atlas/index.html"
     },
     {
       "id": "hangzhou-ai-atlas",
@@ -478,8 +456,7 @@
         "企业名录"
       ],
       "href": "../hangzhou-ai-atlas/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/hangzhou-ai-atlas/index.html",
-      "path": "hangzhou-ai-atlas/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/hangzhou-ai-atlas/index.html"
     },
     {
       "id": "physical-ai-2056",
@@ -496,8 +473,7 @@
         "资本路径"
       ],
       "href": "../physical-ai-2056/index.html#horizon",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/physical-ai-2056/index.html#horizon",
-      "path": "physical-ai-2056/index.html#horizon"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/physical-ai-2056/index.html#horizon"
     },
     {
       "id": "edge32",
@@ -514,8 +490,7 @@
         "趋势"
       ],
       "href": "../edge32.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/edge32.html",
-      "path": "edge32.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/edge32.html"
     },
     {
       "id": "ai-radar",
@@ -532,8 +507,7 @@
         "监控"
       ],
       "href": "../ai-radar/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/ai-radar/index.html",
-      "path": "ai-radar/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/ai-radar/index.html"
     },
     {
       "id": "ai-big-data-100",
@@ -552,8 +526,7 @@
       ],
       "href": "../ai-big-data-100/index.html",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/ai-big-data-100/index.html",
-      "no": 27,
-      "path": "ai-big-data-100/index.html"
+      "no": 27
     },
     {
       "id": "china-compute-atlas",
@@ -570,8 +543,7 @@
       ],
       "href": "../china-compute-atlas/index.html",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/china-compute-atlas/index.html",
-      "no": 28,
-      "path": "china-compute-atlas/index.html"
+      "no": 28
     },
     {
       "id": "nexus-edge",
@@ -588,8 +560,7 @@
       ],
       "href": "../nexus-edge-site/index.html",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/nexus-edge-site/index.html",
-      "no": 29,
-      "path": "nexus-edge-site/index.html"
+      "no": 29
     },
     {
       "id": "lumen",
@@ -606,8 +577,7 @@
         "交付"
       ],
       "href": "../lumen/index.html#faq",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/lumen/index.html#faq",
-      "path": "lumen/index.html#faq"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/lumen/index.html#faq"
     },
     {
       "id": "botique",
@@ -624,8 +594,7 @@
         "英文站"
       ],
       "href": "../botique/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/botique/index.html",
-      "path": "botique/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/botique/index.html"
     },
     {
       "id": "shitu",
@@ -642,8 +611,7 @@
         "语音"
       ],
       "href": "../pendant-site/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/pendant-site/index.html",
-      "path": "pendant-site/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/pendant-site/index.html"
     },
     {
       "id": "moqi",
@@ -660,8 +628,7 @@
         "硬件"
       ],
       "href": "../moqi-site/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/moqi-site/index.html",
-      "path": "moqi-site/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/moqi-site/index.html"
     },
     {
       "id": "slide",
@@ -680,8 +647,24 @@
       "href": "../slide/index.html",
       "src": "http://127.0.0.1:8099/index.html#interaction",
       "port": "8099",
-      "start": "python -m http.server 8099（纯静态，也可直接双击 index.html）",
-      "path": "slide/index.html"
+      "start": "python -m http.server 8099（纯静态，也可直接双击 index.html）"
+    },
+    {
+      "id": "zhiyuan-partner",
+      "cat": "business",
+      "name": "智元科技 · 合伙人计划",
+      "en": "ZHIYUAN PARTNER",
+      "sub": "算力底座 × AI 出海 · 共建事业合伙人",
+      "desc": "杭州智元科技的共建事业合伙人招募站：以智算中心为确定性底座、AI 跨境电商为弹性变现，双轮驱动；含路演内容、合伙人层级、权益与加入流程。",
+      "tags": [
+        "事业合伙人",
+        "智算中心",
+        "AI出海",
+        "招商"
+      ],
+      "href": "../zhiyuan-partner-site/index.html#ch11",
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/zhiyuan-partner-site/index.html#ch11",
+      "no": 35
     },
     {
       "id": "lansuan",
@@ -698,12 +681,11 @@
       ],
       "href": "../lansuan/index.html#top",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/lansuan/index.html#top",
-      "no": 35,
-      "path": "lansuan/index.html#top"
+      "no": 36
     },
     {
       "id": "conflux",
-      "no": 36,
+      "no": 37,
       "cat": "business",
       "name": "合流 Conflux",
       "en": "CONFLUX",
@@ -716,12 +698,11 @@
         "托管"
       ],
       "href": "../conflux/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/conflux/index.html",
-      "path": "conflux/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/conflux/index.html"
     },
     {
       "id": "ailink",
-      "no": 37,
+      "no": 38,
       "cat": "business",
       "name": "AILink 智链",
       "en": "AILINK",
@@ -737,12 +718,11 @@
       "src": "http://127.0.0.1:4173/#/home",
       "port": "4173",
       "start": "node serve.mjs（或在 ailink-community 内 npm run dev）",
-      "serve": true,
-      "path": "ailink-community/index.html"
+      "serve": true
     },
     {
       "id": "zhanggui",
-      "no": 38,
+      "no": 39,
       "cat": "business",
       "name": "掌柜 ZHANGGUI",
       "en": "ZHANGGUI",
@@ -755,12 +735,11 @@
         "自动化"
       ],
       "href": "../zhanggui/index.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/zhanggui/index.html",
-      "path": "zhanggui/index.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/zhanggui/index.html"
     },
     {
       "id": "gift-studio",
-      "no": 39,
+      "no": 40,
       "cat": "business",
       "name": "礼序 LIXU",
       "en": "LIXU",
@@ -773,8 +752,7 @@
         "印刷工艺"
       ],
       "href": "../gift-studio/index.html#top",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/gift-studio/index.html#top",
-      "path": "gift-studio/index.html#top"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/gift-studio/index.html#top"
     },
     {
       "id": "luna-quiz",
@@ -791,8 +769,7 @@
       ],
       "href": "../luna-quiz/index.html",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/luna-quiz/index.html",
-      "no": 40,
-      "path": "luna-quiz/index.html"
+      "no": 41
     },
     {
       "id": "nexusgate",
@@ -811,8 +788,7 @@
       "src": "http://127.0.0.1:3000/",
       "port": "3000",
       "start": "python app.py（在 nexusgate 目录运行）",
-      "no": 41,
-      "path": "http://127.0.0.1:3000/"
+      "no": 42
     },
     {
       "id": "apex",
@@ -832,8 +808,7 @@
       "live": "http://127.0.0.1:8791/index.html",
       "port": "8791",
       "start": "python -m http.server 8791（在 apex 目录运行）",
-      "no": 42,
-      "path": "apex/index.html"
+      "no": 43
     },
     {
       "id": "mosaic",
@@ -852,12 +827,11 @@
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/mosaic/prototype/index.html",
       "alt": "../mosaic/prototype/landing.html",
       "altLabel": "营销官网",
-      "no": 43,
-      "path": "mosaic/prototype/index.html"
+      "no": 44
     },
     {
       "id": "100ideas",
-      "no": 44,
+      "no": 45,
       "cat": "toolbox",
       "name": "蜂院长 · 100 个 AI 点子",
       "en": "100 IDEAS",
@@ -870,12 +844,11 @@
         "复盘"
       ],
       "href": "../100ideas/index.html#ideas",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/100ideas/index.html#ideas",
-      "path": "100ideas/index.html#ideas"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/100ideas/index.html#ideas"
     },
     {
       "id": "bookletai",
-      "no": 45,
+      "no": 46,
       "cat": "toolbox",
       "name": "AI 册子工具清单",
       "en": "BOOKLETAI 71",
@@ -888,8 +861,7 @@
         "竞品"
       ],
       "href": "../bookletai-like-sites.html",
-      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/bookletai-like-sites.html",
-      "path": "bookletai-like-sites.html"
+      "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/bookletai-like-sites.html"
     },
     {
       "id": "aster",
@@ -909,8 +881,7 @@
       "live": "http://localhost:8787/",
       "port": "8787",
       "start": "aster\\start.cmd（实时版）",
-      "no": 46,
-      "path": "aster/stable/index.html"
+      "no": 47
     },
     {
       "id": "tianshu-cloud",
@@ -927,8 +898,7 @@
       ],
       "href": "../tianshu-cloud/index.html",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/tianshu-cloud/index.html",
-      "no": 47,
-      "path": "tianshu-cloud/index.html"
+      "no": 48
     },
     {
       "id": "qiliang",
@@ -945,8 +915,7 @@
       ],
       "href": "../qiliang/index.html",
       "src": "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/qiliang/index.html",
-      "no": 48,
-      "path": "qiliang/index.html"
+      "no": 49
     },
     {
       "id": "whiteboard-studio",
@@ -965,8 +934,7 @@
       "src": "http://localhost/",
       "port": "80",
       "start": "whiteboard-studio\\server.py 80",
-      "no": 49,
-      "path": "http://localhost/"
+      "no": 50
     }
   ]
 }

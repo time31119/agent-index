@@ -624,6 +624,23 @@ const AGENTS = [
   },
   /* ---- 商业与撮合 ---- */
   {
+    id: "zhiyuan-partner",
+    cat: "business",
+    name: "智元科技 · 合伙人计划",
+    en: "ZHIYUAN PARTNER",
+    sub: "算力底座 × AI 出海 · 共建事业合伙人",
+    desc: "杭州智元科技的共建事业合伙人招募站：以智算中心为确定性底座、AI 跨境电商为弹性变现，双轮驱动；含路演内容、合伙人层级、权益与加入流程。",
+    tags: [
+      "事业合伙人",
+      "智算中心",
+      "AI出海",
+      "招商"
+    ],
+    href: "../zhiyuan-partner-site/index.html#ch11",
+    src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/zhiyuan-partner-site/index.html#ch11",
+    no: 35
+  },
+  {
     id: "lansuan",
     cat: "business",
     name: "澜算 LANSUAN",
@@ -638,11 +655,11 @@ const AGENTS = [
     ],
     href: "../lansuan/index.html#top",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/lansuan/index.html#top",
-    no: 35
+    no: 36
   },
   {
     id: "conflux",
-    no: 36,
+    no: 37,
     cat: "business",
     name: "合流 Conflux",
     en: "CONFLUX",
@@ -659,7 +676,7 @@ const AGENTS = [
   },
   {
     id: "ailink",
-    no: 37,
+    no: 38,
     cat: "business",
     name: "AILink 智链",
     en: "AILINK",
@@ -679,7 +696,7 @@ const AGENTS = [
   },
   {
     id: "zhanggui",
-    no: 38,
+    no: 39,
     cat: "business",
     name: "掌柜 ZHANGGUI",
     en: "ZHANGGUI",
@@ -696,7 +713,7 @@ const AGENTS = [
   },
   {
     id: "gift-studio",
-    no: 39,
+    no: 40,
     cat: "business",
     name: "礼序 LIXU",
     en: "LIXU",
@@ -727,7 +744,7 @@ const AGENTS = [
     ],
     href: "../luna-quiz/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/luna-quiz/index.html",
-    no: 40
+    no: 41
   },
   {
     id: "nexusgate",
@@ -746,7 +763,7 @@ const AGENTS = [
     src: "http://127.0.0.1:3000/",
     port: "3000",
     start: "python app.py（在 nexusgate 目录运行）",
-    no: 41
+    no: 42
   },
   {
     id: "apex",
@@ -766,7 +783,7 @@ const AGENTS = [
     live: "http://127.0.0.1:8791/index.html",
     port: "8791",
     start: "python -m http.server 8791（在 apex 目录运行）",
-    no: 42
+    no: 43
   },
   {
     id: "mosaic",
@@ -785,11 +802,11 @@ const AGENTS = [
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/mosaic/prototype/index.html",
     alt: "../mosaic/prototype/landing.html",
     altLabel: "营销官网",
-    no: 43
+    no: 44
   },
   {
     id: "100ideas",
-    no: 44,
+    no: 45,
     cat: "toolbox",
     name: "蜂院长 · 100 个 AI 点子",
     en: "100 IDEAS",
@@ -806,7 +823,7 @@ const AGENTS = [
   },
   {
     id: "bookletai",
-    no: 45,
+    no: 46,
     cat: "toolbox",
     name: "AI 册子工具清单",
     en: "BOOKLETAI 71",
@@ -839,7 +856,7 @@ const AGENTS = [
     live: "http://localhost:8787/",
     port: "8787",
     start: "aster\\start.cmd（实时版）",
-    no: 46
+    no: 47
   },
   {
     id: "tianshu-cloud",
@@ -856,7 +873,7 @@ const AGENTS = [
     ],
     href: "../tianshu-cloud/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/tianshu-cloud/index.html",
-    no: 47
+    no: 48
   },
   {
     id: "qiliang",
@@ -873,7 +890,7 @@ const AGENTS = [
     ],
     href: "../qiliang/index.html",
     src: "file:///C:/Users/Administrator/Documents/deepseek-harness/default-workspace/qiliang/index.html",
-    no: 48
+    no: 49
   },
   {
     id: "whiteboard-studio",
@@ -892,7 +909,7 @@ const AGENTS = [
     src: "http://localhost/",
     port: "80",
     start: "whiteboard-studio\\server.py 80",
-    no: 49
+    no: 50
   },
 ];
 
